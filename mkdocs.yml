@@ -1,5 +1,5 @@
-site_name: Mkdocs Template Site
-site_description: 'DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: Mkdocs for Intelligent Textbooks
+site_description: 'Using the mkdocs build to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/'
