@@ -2,3 +2,4 @@
 
 This is a step-by-step tutorial on how to build intelligent textbooks with the mkdocs build tool.
 
+[Getting Started](getting-started.md)
