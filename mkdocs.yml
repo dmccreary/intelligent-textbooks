@@ -50,6 +50,7 @@ plugins:
 #  - social
 markdown_extensions:
   - admonition
+  - md_in_html # required for multiple-choce question numbering
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
