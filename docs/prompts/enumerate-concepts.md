@@ -36,6 +36,8 @@
 - CSS
 - HTML
 - social previews
-- open graph
+- open graph metadata
+- image standards
+- page metadata
 - social graph testing
 - Google Analytics
