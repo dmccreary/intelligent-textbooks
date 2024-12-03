@@ -14,7 +14,7 @@ nav:
     - Admonitions: tutorial/admonitions.md
     - Quizes: tutorial/quizes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
-    = Google Analytics: tutorial/google-analytics.md
+    - Google Analytics: tutorial/google-analytics.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
