@@ -11,6 +11,10 @@ nav:
   - About: about.md
   - Tutorial:
     - Introduction: tutorial/index.md
+    - Admonitions: tutorial/admonitions.md
+    - Quizes: tutorial/quizes.md
+    - Upper Alpha Lists: tutorial/upper-alpha-lists.md
+    = Google Analytics: tutorial/google-analytics.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
@@ -18,6 +22,7 @@ nav:
   - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md
   - Table of Contents: toc.md
+  - License: license.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
   - Contact: contact.md

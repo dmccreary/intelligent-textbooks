@@ -1,0 +1,41 @@
+# Enumerating Concepts
+
+- mkdocs
+- markdown
+- GitHub Pages
+- mkdocs material theme
+- mkdocs.yml
+- material features
+- navigation
+- navibation top
+- navigation footer
+- previous page
+- next page
+- color palette
+- primary color
+- accent color
+- content-code-copy
+- content-action-edit
+- screen regions
+- search
+- deep linking
+- yml config files
+- admonations
+- formatting equations
+- LaTeX
+- code highlighting
+- MicroSims
+- iframe
+- glossary
+- table of contents
+- quizes
+- multipe-choice questions
+- mk_in_html
+- logo
+- favicon
+- CSS
+- HTML
+- social previews
+- open graph
+- social graph testing
+- Google Analytics
