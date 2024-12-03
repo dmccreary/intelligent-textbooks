@@ -5,6 +5,10 @@
          <lastmod>2024-12-03</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/about/</loc>
+         <lastmod>2024-12-03</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/checklist/</loc>
          <lastmod>2024-12-03</lastmod>
     </url>
@@ -46,6 +50,18 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/tutorial/</loc>
+         <lastmod>2024-12-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/tutorial/admonitions/</loc>
+         <lastmod>2024-12-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/tutorial/quizes/</loc>
+         <lastmod>2024-12-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/tutorial/upper-alpha-lists/</loc>
          <lastmod>2024-12-03</lastmod>
     </url>
 </urlset>
