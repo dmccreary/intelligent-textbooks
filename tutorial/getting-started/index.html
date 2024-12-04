@@ -423,8 +423,26 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Structure of the mkdocs.yml file">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-local-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Local Build
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Local Build">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Conda
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#step-2-create-a-python-3-vertual-environment-for-mkdocs" class="md-nav__link">
@@ -845,8 +863,26 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Structure of the mkdocs.yml file">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-local-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Local Build
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Local Build">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Conda
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#step-2-create-a-python-3-vertual-environment-for-mkdocs" class="md-nav__link">
@@ -979,53 +1015,24 @@ nav:
 theme:
   name: material
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>    In the above, make sure you change YOURGITHUBID to your actual GitHub account id.
-
-When we finish this lesson, this will will render the following site:
-
-![](../img/tutorial-screen-shot-1.png)
-
-## Creating a Local Build
-
-We will use the conda system to create a virtual private environment for building our site.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the above, make sure you change YOURGITHUBID to your actual GitHub account id.</p>
+</div>
+<p>When we finish this lesson, this will will render the following site:</p>
+<p><img alt="" src="../../img/tutorial-screen-shot-1.png" /></p>
+<h2 id="creating-a-local-build">Creating a Local Build</h2>
+<p>We will use the conda system to create a virtual private environment for building our site.
 This envirment will make sure the versions of libraries we need for our site
-will not conflict with your other Python projects.
-
-### Step 1: Install Conda
-
-Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. 
-
-[https://docs.anaconda.com/miniconda/install/](https://docs.anaconda.com/miniconda/install/)
-
-Make sure you $PATH variable has conda on it.  If not, you can setup an ```alias``` or
-use the whereis program to find the full path:
-
-```sh
-$ whereis conda
-conda: /Users/dan/miniconda3/condabin/conda
+will not conflict with your other Python projects.</p>
+<h3 id="step-1-install-conda">Step 1: Install Conda</h3>
+<p>Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. </p>
+<p><a href="https://docs.anaconda.com/miniconda/install/">https://docs.anaconda.com/miniconda/install/</a></p>
+<p>Make sure you $PATH variable has conda on it.  If not, you can setup an <code>alias</code> or
+use the whereis program to find the full path:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>whereis<span class="w"> </span>conda
+conda:<span class="w"> </span>/Users/dan/miniconda3/condabin/conda
 </code></pre></div></td></tr></table></div>
 <p>To test that it is installed run conda with the <code>--version</code> option:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
