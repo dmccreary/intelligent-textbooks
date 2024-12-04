@@ -1,2 +1,160 @@
-# Getting Started
+# Getting Started Building a Intelligent Textbook with mkdocs-material
 
+## Sample Book Structure
+
+In our getting started section we will have the following pages of our book:
+
+1. home page
+2. list of chapters
+3. chapter 1
+4. chapter 2
+5. chapter 3
+
+## File structure
+
+Here are the paths to these documents relative to the base of your GitHub repository
+
+docs/index.md
+docs/chapters/index.md
+docs/chapters/chapter-1.md
+docs/chapters/chapter-2.md
+docs/chapters/chapter-3.md
+mkdocs.yml
+
+## Structure of the mkdocs.yml file
+
+```yml
+site_name: Mkdocs for Intelligent Textbooks
+
+nav:
+  - Home: index.md
+  - List of Chapters:
+    - Intro: chapters/index.md
+    - Chapter 1: chapters/chapter-1.md
+    - Chapter 2: chapters/chapter-2.md
+    - Chapter 3: chapters/chapter-3.md
+
+theme:
+  name: material
+```
+
+This will render the following site:
+
+![](../img/tutorial-screen-shot-1.png)
+
+## Creating a Local Build
+
+We will use the conda system to create a virtual private environment for building our site.
+This envirment will make sure the versions of libraries we need for our site
+will not conflict with your other Python projects.
+
+### Step 1: Install Conda
+
+Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. 
+
+[https://docs.anaconda.com/miniconda/install/](https://docs.anaconda.com/miniconda/install/)
+
+Make sure you $PATH variable has conda on it.  If not, you can setup an ```alias``` or
+use the whereis program to find the full path:
+
+```sh
+$ whereis conda
+conda: /Users/dan/miniconda3/condabin/conda
+```
+
+To test that it is installed run conda with the ```--version``` option:
+
+```sh
+$ conda --version
+conda 24.9.2
+```
+
+### Step 2: Create a Python 3 Vertual Environment for mkdocs
+
+```sh
+conda deactivate
+conda create -n mkdocs python=3
+conda activate mkdocs
+```
+
+Your prompt should now indicate that you are in the mkdocs environment:
+
+```sh
+(mkdocs) $
+```
+
+### Step 3: Install mkdocs and the mkdocs-materail
+
+We will use the Python pip command to install the right libraries:
+
+```sh
+(mkdocs) $ pip install mkdocs mkdocs-material
+```
+
+Test that mkdocs is working:
+
+```sh
+(mkdocs) $ mkdocs --version
+mkdocs, version 1.6.1 from /Users/YOURLOCALNAME/miniconda3/envs/mkdocs/lib/python3.13/site-packages/mkdocs (Python 3.13)
+```
+
+Where YOURLOCALNAME is the name of your local account on your local filesystem.
+
+### Step 4: Run A build
+
+```sh
+(mkdocs) $ mkdocs build
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory:
+           /Users/YOURLOCALNAME/Documents/ws/i-book-v1/site
+INFO    -  Documentation built in 0.15 seconds
+```
+
+### Step 5: Run a Local Server
+
+```sh
+(mkdocs) $ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.12 seconds
+INFO    -  [14:52:39] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [14:52:39] Serving on http://127.0.0.1:8000/
+```
+
+Now navigate to your localhost port 8000
+
+[http://localhost:8000](http://localhost:8000)
+
+You should see the first version of the book.
+
+### Step 6: Do a Deploy to GitHub Pages
+
+```sh
+(mkdocs) $ mkdocs gh-deploy
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory:
+           /Users/YOURLOCALNAME/Documents/ws/i-book-v1/site
+INFO    -  Documentation built in 0.13 seconds
+WARNING -  Version check skipped: No version specified in previous deployment.
+INFO    -  Copying '/Users/YOURLOCALNAME/Documents/ws/i-book-v1/site' to 'gh-pages' branch
+           and pushing to GitHub.
+Enumerating objects: 67, done.
+Counting objects: 100% (67/67), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (60/60), done.
+Writing objects: 100% (67/67), 577.48 KiB | 6.56 MiB/s, done.
+Total 67 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+remote: 
+remote: Create a pull request for 'gh-pages' on GitHub by visiting:
+remote:      https://github.com/YOURGITHUBID/i-book-v1/pull/new/gh-pages
+remote: 
+To https://github.com/YOURGITHUBID/i-book-v1.git
+ * [new branch]      gh-pages -> gh-pages
+INFO    -  Your documentation should shortly be available at:
+           https://YOURGITHUBID.github.io/i-book-v1/
+```
+
+Where YOURGITHUBID is your GitHub account ID.
+
+You can now go to your site to test the deployment.
