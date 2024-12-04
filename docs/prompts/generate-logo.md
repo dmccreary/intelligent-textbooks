@@ -44,3 +44,16 @@ We only need a single file called favicon.ico.  Place this file in the docs/img 
 The other files can also be copied with the exception of the site.webmanifest file.
 
 I typically rename the android-chrome-192x192.png to be site-logo-192x192.png.
+
+## CSS for the Logo in the Upper Left
+
+```css
+.md-header__button.md-logo {
+    margin: 0;
+    padding: 0;
+}
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    height: 50px;
+    width: 50px;
+}
+```
