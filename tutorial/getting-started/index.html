@@ -22,7 +22,7 @@
     
     
       
-        <title>Getting Started - Mkdocs for Intelligent Textbooks</title>
+        <title>Getting Started Building a Intelligent Textbook with mkdocs-material - Mkdocs for Intelligent Textbooks</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#getting-started-building-a-intelligent-textbook-with-mkdocs-material" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Getting Started Building a Intelligent Textbook with mkdocs-material
             
           </span>
         </div>
@@ -336,6 +336,8 @@
       
         
       
+        
+      
     
     
     
@@ -548,6 +550,110 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-book-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Book Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-of-the-mkdocsyml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure of the mkdocs.yml file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-local-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Local Build
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Local Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Conda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-python-3-vertual-environment-for-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create a Python 3 Vertual Environment for mkdocs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-install-mkdocs-and-the-mkdocs-materail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Install mkdocs and the mkdocs-materail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-run-a-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Run A build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-run-a-local-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Run a Local Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-do-a-deploy-to-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Do a Deploy to GitHub Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -569,7 +675,165 @@
   
 
 
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="getting-started-building-a-intelligent-textbook-with-mkdocs-material">Getting Started Building a Intelligent Textbook with mkdocs-material</h1>
+<h2 id="sample-book-structure">Sample Book Structure</h2>
+<p>In our getting started section we will have the following pages of our book:</p>
+<ol>
+<li>home page</li>
+<li>list of chapters</li>
+<li>chapter 1</li>
+<li>chapter 2</li>
+<li>chapter 3</li>
+</ol>
+<h2 id="file-structure">File structure</h2>
+<p>Here are the paths to these documents relative to the base of your GitHub repository</p>
+<p>docs/index.md
+docs/chapters/index.md
+docs/chapters/chapter-1.md
+docs/chapters/chapter-2.md
+docs/chapters/chapter-3.md
+mkdocs.yml</p>
+<h2 id="structure-of-the-mkdocsyml-file">Structure of the mkdocs.yml file</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>site_name: Mkdocs for Intelligent Textbooks
+
+nav:
+  - Home: index.md
+  - List of Chapters:
+    - Intro: chapters/index.md
+    - Chapter 1: chapters/chapter-1.md
+    - Chapter 2: chapters/chapter-2.md
+    - Chapter 3: chapters/chapter-3.md
+
+theme:
+  name: material
+</code></pre></div></td></tr></table></div>
+<p>This will render the following site:</p>
+<p><img alt="" src="../../img/tutorial-screen-shot-1.png" /></p>
+<h2 id="creating-a-local-build">Creating a Local Build</h2>
+<p>We will use the conda system to create a virtual private environment for building our site.
+This envirment will make sure the versions of libraries we need for our site
+will not conflict with your other Python projects.</p>
+<h3 id="step-1-install-conda">Step 1: Install Conda</h3>
+<p>Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. </p>
+<p><a href="https://docs.anaconda.com/miniconda/install/">https://docs.anaconda.com/miniconda/install/</a></p>
+<p>Make sure you $PATH variable has conda on it.  If not, you can setup an <code>alias</code> or
+use the whereis program to find the full path:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>whereis<span class="w"> </span>conda
+conda:<span class="w"> </span>/Users/dan/miniconda3/condabin/conda
+</code></pre></div></td></tr></table></div>
+<p>To test that it is installed run conda with the <code>--version</code> option:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>conda<span class="w"> </span>--version
+conda<span class="w"> </span><span class="m">24</span>.9.2
+</code></pre></div></td></tr></table></div>
+<h3 id="step-2-create-a-python-3-vertual-environment-for-mkdocs">Step 2: Create a Python 3 Vertual Environment for mkdocs</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>conda<span class="w"> </span>deactivate
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>mkdocs<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda<span class="w"> </span>activate<span class="w"> </span>mkdocs
+</code></pre></div></td></tr></table></div>
+<p>Your prompt should now indicate that you are in the mkdocs environment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$
+</code></pre></div></td></tr></table></div>
+<h3 id="step-3-install-mkdocs-and-the-mkdocs-materail">Step 3: Install mkdocs and the mkdocs-materail</h3>
+<p>We will use the Python pip command to install the right libraries:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</code></pre></div></td></tr></table></div>
+<p>Test that mkdocs is working:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>--version
+mkdocs,<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.6.1<span class="w"> </span>from<span class="w"> </span>/Users/YOURLOCALNAME/miniconda3/envs/mkdocs/lib/python3.13/site-packages/mkdocs<span class="w"> </span><span class="o">(</span>Python<span class="w"> </span><span class="m">3</span>.13<span class="o">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Where YOURLOCALNAME is the name of your local account on your local filesystem.</p>
+<h3 id="step-4-run-a-build">Step 4: Run A build</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>build
+INFO<span class="w">    </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
+INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:
+<span class="w">           </span>/Users/YOURLOCALNAME/Documents/ws/i-book-v1/site
+INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.15<span class="w"> </span>seconds
+</code></pre></div></td></tr></table></div>
+<h3 id="step-5-run-a-local-server">Step 5: Run a Local Server</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>serve
+INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation...
+INFO<span class="w">    </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
+INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.12<span class="w"> </span>seconds
+INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">14</span>:52:39<span class="o">]</span><span class="w"> </span>Watching<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>changes:<span class="w"> </span><span class="s1">&#39;docs&#39;</span>,<span class="w"> </span><span class="s1">&#39;mkdocs.yml&#39;</span>
+INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">14</span>:52:39<span class="o">]</span><span class="w"> </span>Serving<span class="w"> </span>on<span class="w"> </span>http://127.0.0.1:8000/
+</code></pre></div></td></tr></table></div>
+<p>Now navigate to your localhost port 8000</p>
+<p><a href="http://localhost:8000">http://localhost:8000</a></p>
+<p>You should see the first version of the book.</p>
+<h3 id="step-6-do-a-deploy-to-github-pages">Step 6: Do a Deploy to GitHub Pages</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+INFO<span class="w">    </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
+INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:
+<span class="w">           </span>/Users/YOURLOCALNAME/Documents/ws/i-book-v1/site
+INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.13<span class="w"> </span>seconds
+WARNING<span class="w"> </span>-<span class="w">  </span>Version<span class="w"> </span>check<span class="w"> </span>skipped:<span class="w"> </span>No<span class="w"> </span>version<span class="w"> </span>specified<span class="w"> </span><span class="k">in</span><span class="w"> </span>previous<span class="w"> </span>deployment.
+INFO<span class="w">    </span>-<span class="w">  </span>Copying<span class="w"> </span><span class="s1">&#39;/Users/YOURLOCALNAME/Documents/ws/i-book-v1/site&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>branch
+<span class="w">           </span>and<span class="w"> </span>pushing<span class="w"> </span>to<span class="w"> </span>GitHub.
+Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">67</span>,<span class="w"> </span><span class="k">done</span>.
+Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">67</span>/67<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Delta<span class="w"> </span>compression<span class="w"> </span>using<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span><span class="m">10</span><span class="w"> </span>threads
+Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">60</span>/60<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Writing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">67</span>/67<span class="o">)</span>,<span class="w"> </span><span class="m">577</span>.48<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">6</span>.56<span class="w"> </span>MiB/s,<span class="w"> </span><span class="k">done</span>.
+Total<span class="w"> </span><span class="m">67</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">8</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">8</span>/8<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>
+remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
+remote:<span class="w">      </span>https://github.com/YOURGITHUBID/i-book-v1/pull/new/gh-pages
+remote:<span class="w"> </span>
+To<span class="w"> </span>https://github.com/YOURGITHUBID/i-book-v1.git
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>gh-pages<span class="w"> </span>-&gt;<span class="w"> </span>gh-pages
+INFO<span class="w">    </span>-<span class="w">  </span>Your<span class="w"> </span>documentation<span class="w"> </span>should<span class="w"> </span>shortly<span class="w"> </span>be<span class="w"> </span>available<span class="w"> </span>at:
+<span class="w">           </span>https://YOURGITHUBID.github.io/i-book-v1/
+</code></pre></div></td></tr></table></div>
+<p>Where YOURGITHUBID is your GitHub account ID.</p>
+<p>You can now go to your site to test the deployment.</p>
 
 
 
