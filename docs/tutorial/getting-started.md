@@ -30,12 +30,14 @@ We will build a simple website with page navigation and search (turned on by def
 
 Here are the paths to these documents relative to the base of your GitHub repository
 
+```linenums="0"
 docs/index.md
 docs/chapters/index.md
 docs/chapters/chapter-1.md
 docs/chapters/chapter-2.md
 docs/chapters/chapter-3.md
 mkdocs.yml
+```
 
 You can find all of these files on a sample test GitHub repository here:
 
