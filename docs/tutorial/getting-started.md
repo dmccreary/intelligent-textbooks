@@ -117,7 +117,16 @@ We will use the Python pip command to install the right libraries:
 (mkdocs) $ pip install mkdocs mkdocs-material
 ```
 
-Test that mkdocs is working:
+This command will intall the latest version of the mkdocs and mkdocs-material libraries.  Alternatively,
+you can leverage our requirements.txt file and run the following command:
+
+```sh
+pip install -r requirements.txt
+```
+
+This will make sure you get at least the minimal versions of these libraries that we tested our site with.
+
+Next, test that the ```mkdocs`` is working:
 
 ```sh
 (mkdocs) $ mkdocs --version
