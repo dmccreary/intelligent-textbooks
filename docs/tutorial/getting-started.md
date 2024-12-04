@@ -1,14 +1,30 @@
 # Getting Started Building a Intelligent Textbook with mkdocs-material
 
+## Prerequsites
+
+This getting started guide assumes you have Python installed on your local system
+and you have the permissions to install conda and pip.
+
+You can test this by typing the ```python --version``` command into your terminal:
+
+```sh
+$ python --version
+Python 3.13.0
+```
+
+If this does not work, we suggest using ChatGPT with the prompt: "How do I install Python on my Windows 11 PC?" or similar.
+
 ## Sample Book Structure
 
-In our getting started section we will have the following pages of our book:
+In this getting started section we will have the following pages of our book:
 
 1. home page
 2. list of chapters
 3. chapter 1
 4. chapter 2
 5. chapter 3
+
+We will build a simple website with page navigation and search (turned on by default in mkdocs).
 
 ## File structure
 
@@ -21,10 +37,15 @@ docs/chapters/chapter-2.md
 docs/chapters/chapter-3.md
 mkdocs.yml
 
+You can find all of these files on a sample test GitHub repository here:
+
+[https://github.com/dmccreary/i-book-v1](https://github.com/dmccreary/i-book-v1)
+
 ## Structure of the mkdocs.yml file
 
 ```yml
 site_name: Mkdocs for Intelligent Textbooks
+repo_url: 'https://github.com/YOURGITHUBID/i-book-v1'
 
 nav:
   - Home: index.md
@@ -38,7 +59,10 @@ theme:
   name: material
 ```
 
-This will render the following site:
+``` Note
+    In the above, make sure you change YOURGITHUBID to your actual GitHub account id.
+
+When we finish this lesson, this will will render the following site:
 
 ![](../img/tutorial-screen-shot-1.png)
 
