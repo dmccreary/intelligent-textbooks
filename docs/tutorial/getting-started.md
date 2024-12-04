@@ -61,7 +61,7 @@ theme:
   name: material
 ```
 
-``` Note
+!!! Note
     In the above, make sure you change YOURGITHUBID to your actual GitHub account id.
 
 When we finish this lesson, this will will render the following site:
