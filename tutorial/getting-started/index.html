@@ -557,6 +557,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequsites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequsites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sample-book-structure" class="md-nav__link">
     <span class="md-ellipsis">
       Sample Book Structure
@@ -581,26 +590,8 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-local-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a Local Build
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating a Local Build">
+    <nav class="md-nav" aria-label="Structure of the mkdocs.yml file">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-install-conda" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Install Conda
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#step-2-create-a-python-3-vertual-environment-for-mkdocs" class="md-nav__link">
@@ -676,8 +667,17 @@
 
 
 <h1 id="getting-started-building-a-intelligent-textbook-with-mkdocs-material">Getting Started Building a Intelligent Textbook with mkdocs-material</h1>
+<h2 id="prerequsites">Prerequsites</h2>
+<p>This getting started guide assumes you have Python installed on your local system
+and you have the permissions to install conda and pip.</p>
+<p>You can test this by typing the <code>python --version</code> command into your terminal:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>--version
+Python<span class="w"> </span><span class="m">3</span>.13.0
+</code></pre></div></td></tr></table></div>
+<p>If this does not work, we suggest using ChatGPT with the prompt: "How do I install Python on my Windows 11 PC?" or similar.</p>
 <h2 id="sample-book-structure">Sample Book Structure</h2>
-<p>In our getting started section we will have the following pages of our book:</p>
+<p>In this getting started section we will have the following pages of our book:</p>
 <ol>
 <li>home page</li>
 <li>list of chapters</li>
@@ -685,6 +685,7 @@
 <li>chapter 2</li>
 <li>chapter 3</li>
 </ol>
+<p>We will build a simple website with page navigation and search (turned on by default in mkdocs).</p>
 <h2 id="file-structure">File structure</h2>
 <p>Here are the paths to these documents relative to the base of your GitHub repository</p>
 <p>docs/index.md
@@ -693,6 +694,8 @@ docs/chapters/chapter-1.md
 docs/chapters/chapter-2.md
 docs/chapters/chapter-3.md
 mkdocs.yml</p>
+<p>You can find all of these files on a sample test GitHub repository here:</p>
+<p><a href="https://github.com/dmccreary/i-book-v1">https://github.com/dmccreary/i-book-v1</a></p>
 <h2 id="structure-of-the-mkdocsyml-file">Structure of the mkdocs.yml file</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -705,7 +708,9 @@ mkdocs.yml</p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>site_name: Mkdocs for Intelligent Textbooks
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>site_name: Mkdocs for Intelligent Textbooks
+repo_url: &#39;https://github.com/YOURGITHUBID/i-book-v1&#39;
 
 nav:
   - Home: index.md
@@ -718,20 +723,53 @@ nav:
 theme:
   name: material
 </code></pre></div></td></tr></table></div>
-<p>This will render the following site:</p>
-<p><img alt="" src="../../img/tutorial-screen-shot-1.png" /></p>
-<h2 id="creating-a-local-build">Creating a Local Build</h2>
-<p>We will use the conda system to create a virtual private environment for building our site.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>    In the above, make sure you change YOURGITHUBID to your actual GitHub account id.
+
+When we finish this lesson, this will will render the following site:
+
+![](../img/tutorial-screen-shot-1.png)
+
+## Creating a Local Build
+
+We will use the conda system to create a virtual private environment for building our site.
 This envirment will make sure the versions of libraries we need for our site
-will not conflict with your other Python projects.</p>
-<h3 id="step-1-install-conda">Step 1: Install Conda</h3>
-<p>Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. </p>
-<p><a href="https://docs.anaconda.com/miniconda/install/">https://docs.anaconda.com/miniconda/install/</a></p>
-<p>Make sure you $PATH variable has conda on it.  If not, you can setup an <code>alias</code> or
-use the whereis program to find the full path:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>whereis<span class="w"> </span>conda
-conda:<span class="w"> </span>/Users/dan/miniconda3/condabin/conda
+will not conflict with your other Python projects.
+
+### Step 1: Install Conda
+
+Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. 
+
+[https://docs.anaconda.com/miniconda/install/](https://docs.anaconda.com/miniconda/install/)
+
+Make sure you $PATH variable has conda on it.  If not, you can setup an ```alias``` or
+use the whereis program to find the full path:
+
+```sh
+$ whereis conda
+conda: /Users/dan/miniconda3/condabin/conda
 </code></pre></div></td></tr></table></div>
 <p>To test that it is installed run conda with the <code>--version</code> option:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
