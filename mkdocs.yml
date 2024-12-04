@@ -18,6 +18,7 @@ nav:
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
+    - Enumerate Concepts: prompts/enumarate-concepts.md
   - Checklist: checklist.md
   - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md

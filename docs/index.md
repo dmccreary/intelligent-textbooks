@@ -1,6 +1,7 @@
 # Mkdocs for Intelligent Textbooks
 
-Welcome to the website for a step-by-step guild to using the [mkdocs](http://mkdocs.com) build system to create and maintain intelligent textbooks.
+Welcome to the website for a step-by-step guild to using the [mkdocs](http://mkdocs.com) build system 
+paried with generative AI to create and maintain intelligent textbooks.
 
 We feel that many courses today can benefit for high-quality online textbooks that have some of the following features:
 
@@ -18,3 +19,5 @@ We feel that many courses today can benefit for high-quality online textbooks th
 12. [Edit from GitHub](./glossary.md#edit-from-github)
 13. [Automatic Build](./glossary.md#automatic-build)
 14. [Quiz Management](./glossary.md#quiz-management)
+15. High quality website logo and [favicon](./glossary.md#favicon) generate for multiple environments
+16. An easy-to-visualize [Concept Graph](./glossary.md#concept-graph) that shows all the concepts in the class and their dependencies.
