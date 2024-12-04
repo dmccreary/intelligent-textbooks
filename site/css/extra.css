@@ -1,0 +1,27 @@
+.md-header__button.md-logo {
+    margin: 0;
+    padding: 0;
+}
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    height: 50px;
+    width: 150px;
+}
+
+/* Container to control the iframe size and scaling */
+.iframe-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Iframe styles */
+  iframe {
+    width: 100%;
+    border: solid 1px silver;
+  }
+
+  /* if a div with <div class="upper-alpha"> wraps a list, then number A.B.C.D etc */
+  /* this requires that the markdown extension md_in_html is enabled in the mkdocs.yml file */
+  .upper-alpha ol {
+    list-style-type: upper-alpha;
+  }
