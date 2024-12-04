@@ -18,9 +18,15 @@ Using an automatic build process that regnerates
 
 #### Code Highlighting
 
-#### Glossary of Terms
+#### Concept Graph
+
+#### Favicon
 
 #### Formulas
+
+#### GitHub Actions
+
+#### Glossary of Terms
 
 #### Edit from GitHub
 
