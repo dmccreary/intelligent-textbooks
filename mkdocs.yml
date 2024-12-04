@@ -11,6 +11,7 @@ nav:
   - About: about.md
   - Tutorial:
     - Introduction: tutorial/index.md
+    - Getting Started: tutorial/getting-started.md
     - Admonitions: tutorial/admonitions.md
     - Quizzes: tutorial/quizes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
