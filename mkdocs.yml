@@ -12,7 +12,7 @@ nav:
   - Tutorial:
     - Introduction: tutorial/index.md
     - Admonitions: tutorial/admonitions.md
-    - Quizes: tutorial/quizes.md
+    - Quizzes: tutorial/quizes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
     - Google Analytics: tutorial/google-analytics.md
   - Prompts:
@@ -34,6 +34,7 @@ theme:
   extra_css:
     - styles/custom.css
   logo: img/logo.png
+  favicon: img/favicon.ico
   # favicon: img/my-icon.png
   palette:
     primary: 'blue'
