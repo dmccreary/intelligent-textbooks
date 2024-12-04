@@ -1053,7 +1053,12 @@ conda<span class="w"> </span>activate<span class="w"> </span>mkdocs
 <p>We will use the Python pip command to install the right libraries:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
 </code></pre></div></td></tr></table></div>
-<p>Test that mkdocs is working:</p>
+<p>This command will intall the latest version of the mkdocs and mkdocs-material libraries.  Alternatively,
+you can leverage our requirements.txt file and run the following command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div></td></tr></table></div>
+<p>This will make sure you get at least the minimal versions of these libraries that we tested our site with.</p>
+<p>Next, test that the <code>`mkdocs</code> is working:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>--version
 mkdocs,<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.6.1<span class="w"> </span>from<span class="w"> </span>/Users/YOURLOCALNAME/miniconda3/envs/mkdocs/lib/python3.13/site-packages/mkdocs<span class="w"> </span><span class="o">(</span>Python<span class="w"> </span><span class="m">3</span>.13<span class="o">)</span>
