@@ -12,7 +12,8 @@ $ python --version
 Python 3.13.0
 ```
 
-If this does not work, we suggest using ChatGPT with the prompt: "How do I install Python on my Windows 11 PC?" or similar.
+If this does not work, we suggest using ChatGPT with the prompt: 
+"How do I install Python on my Windows 11 PC?" or similar.
 
 ## Sample Book Structure
 
@@ -47,7 +48,7 @@ You can find all of these files on a sample test GitHub repository here:
 
 ```yml
 site_name: Mkdocs for Intelligent Textbooks
-repo_url: 'https://github.com/YOURGITHUBID/i-book-v1'
+repo_url: 'https://github.com/YOUR_GITHUB_ID/i-book-v1'
 
 nav:
   - Home: index.md
@@ -62,7 +63,7 @@ theme:
 ```
 
 !!! Note
-    In the above, make sure you change YOURGITHUBID to your actual GitHub account id.
+    In the above, make sure you change YOUR_GITHUB_ID to your actual GitHub account id.
 
 When we finish this lesson, this will will render the following site:
 
@@ -71,7 +72,7 @@ When we finish this lesson, this will will render the following site:
 ## Creating a Local Build
 
 We will use the conda system to create a virtual private environment for building our site.
-This envirment will make sure the versions of libraries we need for our site
+This environment will make sure the versions of libraries we need for our site
 will not conflict with your other Python projects.
 
 ### Step 1: Install Conda
@@ -95,7 +96,7 @@ $ conda --version
 conda 24.9.2
 ```
 
-### Step 2: Create a Python 3 Vertual Environment for mkdocs
+### Step 2: Create a Python 3 Virtual Environment for mkdocs
 
 ```sh
 conda deactivate
@@ -109,9 +110,9 @@ Your prompt should now indicate that you are in the mkdocs environment:
 (mkdocs) $
 ```
 
-### Step 3: Install mkdocs and the mkdocs-materail
+### Step 3: Install mkdocs and the mkdocs-material Libraries
 
-We will use the Python pip command to install the right libraries:
+We will use the Python ```pip``` command to install the right libraries:
 
 ```sh
 (mkdocs) $ pip install mkdocs mkdocs-material
@@ -126,22 +127,33 @@ pip install -r requirements.txt
 
 This will make sure you get at least the minimal versions of these libraries that we tested our site with.
 
-Next, test that the ```mkdocs`` is working:
+Next, test that the ```mkdocs``` command is working:
 
 ```sh
 (mkdocs) $ mkdocs --version
-mkdocs, version 1.6.1 from /Users/YOURLOCALNAME/miniconda3/envs/mkdocs/lib/python3.13/site-packages/mkdocs (Python 3.13)
+mkdocs, version 1.6.1 from /Users/YOUR_LOCAL_NAME/miniconda3/envs/mkdocs/lib/python3.13/site-packages/mkdocs (Python 3.13)
 ```
 
-Where YOURLOCALNAME is the name of your local account on your local filesystem.
+Where YOUR_LOCAL_NAME is the name of your local account on your local filesystem.
 
-### Step 4: Run A build
+### Step 4: Run A mkdocs build
+
+The command ```mkdocs build``` will read all your markdown files and convert them
+into HTML.  It will place all the HTML files in a directory called ```site```.  You
+want to make sure not to check this into your GitHub main branch.  You can
+do this by adding site to the .gitignore file.  Here is an example:
+
+```
+site
+.DS_Store
+~$*
+```
 
 ```sh
 (mkdocs) $ mkdocs build
 INFO    -  Cleaning site directory
 INFO    -  Building documentation to directory:
-           /Users/YOURLOCALNAME/Documents/ws/i-book-v1/site
+           /Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site
 INFO    -  Documentation built in 0.15 seconds
 ```
 
@@ -168,10 +180,10 @@ You should see the first version of the book.
 (mkdocs) $ mkdocs gh-deploy
 INFO    -  Cleaning site directory
 INFO    -  Building documentation to directory:
-           /Users/YOURLOCALNAME/Documents/ws/i-book-v1/site
+           /Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site
 INFO    -  Documentation built in 0.13 seconds
 WARNING -  Version check skipped: No version specified in previous deployment.
-INFO    -  Copying '/Users/YOURLOCALNAME/Documents/ws/i-book-v1/site' to 'gh-pages' branch
+INFO    -  Copying '/Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site' to 'gh-pages' branch
            and pushing to GitHub.
 Enumerating objects: 67, done.
 Counting objects: 100% (67/67), done.
@@ -182,14 +194,21 @@ Total 67 (delta 8), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (8/8), done.
 remote: 
 remote: Create a pull request for 'gh-pages' on GitHub by visiting:
-remote:      https://github.com/YOURGITHUBID/i-book-v1/pull/new/gh-pages
+remote:      https://github.com/YOUR_GITHUB_ID/i-book-v1/pull/new/gh-pages
 remote: 
-To https://github.com/YOURGITHUBID/i-book-v1.git
+To https://github.com/YOUR_GITHUB_ID/i-book-v1.git
  * [new branch]      gh-pages -> gh-pages
 INFO    -  Your documentation should shortly be available at:
            https://YOURGITHUBID.github.io/i-book-v1/
 ```
 
-Where YOURGITHUBID is your GitHub account ID.
+Where YOUR_GITHUB_ID is your GitHub account ID.
 
-You can now go to your site to test the deployment.
+You can now go to your site to test the deployment.  You can also view
+the template used in this tutorial here:
+
+[https://dmccreary.github.io/i-book-v1/](https://dmccreary.github.io/i-book-v1/)
+
+Feel free to use the GitHub fork function to make your own copy of this GitHub repo.
+This will save you from having to create your own directory and file structures.
+
