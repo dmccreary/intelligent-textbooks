@@ -12,14 +12,17 @@ nav:
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
+    - Navigation: tutorial/navigation.md
     - Admonitions: tutorial/admonitions.md
-    - Quizzes: tutorial/quizes.md
+    - Quizzes: tutorial/quizzes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
     - Google Analytics: tutorial/google-analytics.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
-    - Enumerate Concepts: prompts/enumarate-concepts.md
+    - Enumerate Concepts: prompts/enumerate-concepts.md
+    - Generate Logo: prompts/generate-logo.md
+
   - Checklist: checklist.md
   - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md

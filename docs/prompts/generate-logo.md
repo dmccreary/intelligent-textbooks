@@ -1,12 +1,20 @@
 # Generate a Logo and Favicon
 
+In this section we will walk through the steps to create
+a logo for the book and use this logo as the
+[favicon](../glossary.md#favicon) for
+the website.
+
 ## Prompt
 
 ```linenums="0"
-Please generate a minimalistic image of a orange book with the lowercase letter "i" on it.  Use blue for the background.
+Please generate a minimalistic image of a orange book with the
+lowercase letter "i" on it.  Use blue for the background.
 ```
 
 ## Response
+
+![](../img/logo-512x512.png)
 
 
 ## Adding Logo to the Mkdocs.yml
@@ -42,6 +50,10 @@ of the icons for the book in both png and icon formats.
 We only need a single file called favicon.ico.  Place this file in the docs/img directory.
 
 The other files can also be copied with the exception of the site.webmanifest file.
+I often rename them using the logo-Widthxheight.png format.
+
+So for example, the ```apple-touch-icon.png``` file
+is renamed ```logo-180x180.png```.
 
 I typically rename the android-chrome-192x192.png to be site-logo-192x192.png.
 
