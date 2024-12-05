@@ -465,9 +465,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-run-a-mkdocs-build" class="md-nav__link">
+  <a href="#step-4-run-the-mkdocs-build-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Run A mkdocs build
+      Step 4: Run the mkdocs build command
     </span>
   </a>
   
@@ -937,9 +937,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-run-a-mkdocs-build" class="md-nav__link">
+  <a href="#step-4-run-the-mkdocs-build-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Run A mkdocs build
+      Step 4: Run the mkdocs build command
     </span>
   </a>
   
@@ -1108,7 +1108,7 @@ you can leverage our requirements.txt file and run the following command:</p>
 mkdocs,<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.6.1<span class="w"> </span>from<span class="w"> </span>/Users/YOUR_LOCAL_NAME/miniconda3/envs/mkdocs/lib/python3.13/site-packages/mkdocs<span class="w"> </span><span class="o">(</span>Python<span class="w"> </span><span class="m">3</span>.13<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Where YOUR_LOCAL_NAME is the name of your local account on your local filesystem.</p>
-<h3 id="step-4-run-a-mkdocs-build">Step 4: Run A mkdocs build</h3>
+<h3 id="step-4-run-the-mkdocs-build-command">Step 4: Run the mkdocs build command</h3>
 <p>The command <code>mkdocs build</code> will read all your markdown files and convert them
 into HTML.  It will place all the HTML files in a directory called <code>site</code>.  You
 want to make sure not to check this into your GitHub main branch.  You can
@@ -1193,6 +1193,10 @@ INFO<span class="w">    </span>-<span class="w">  </span>Your<span class="w"> </
 <span class="w">           </span>https://YOUR_GITHUB_ID.github.io/i-book-v1/
 </code></pre></div></td></tr></table></div>
 <p>Where YOUR_GITHUB_ID is your GitHub account ID.</p>
+<p>Note that you can got to your GitHub repository and view the
+<code>gh-pages</code> branch.  All of your HTML pages will be there.
+It is important that you don't check your <code>site</code> into your
+main branch since this is a duplicate of the gh-pages branch.</p>
 <h3 id="step-7-test-your-site">Step 7: Test Your Site</h3>
 <p>You can now go to your site to test the deployment.  The home will be
 in the GitHub pages domain that ends with <code>github.io</code>.  The format is like this:</p>
