@@ -1,6 +1,6 @@
 # Getting Started Building a Intelligent Textbook with mkdocs-material
 
-## Prerequsites
+## Prerequisites
 
 This getting started guide assumes you have Python installed on your local system
 and you have the permissions to install conda and pip.
@@ -77,7 +77,7 @@ will not conflict with your other Python projects.
 
 ### Step 1: Install Conda
 
-Follow the instuctions for your comptuer on the anaconda website for downloading miniconda. 
+Follow the instructions for your computer on the anaconda website for downloading miniconda. 
 
 [https://docs.anaconda.com/miniconda/install/](https://docs.anaconda.com/miniconda/install/)
 
@@ -110,7 +110,7 @@ Your prompt should now indicate that you are in the mkdocs environment:
 (mkdocs) $
 ```
 
-### Step 3: Install mkdocs and the mkdocs-material Libraries
+### Step 3: Install mkdocs and the mkdocs-material Libraries with pip
 
 We will use the Python ```pip``` command to install the right libraries:
 
@@ -199,13 +199,19 @@ remote:
 To https://github.com/YOUR_GITHUB_ID/i-book-v1.git
  * [new branch]      gh-pages -> gh-pages
 INFO    -  Your documentation should shortly be available at:
-           https://YOURGITHUBID.github.io/i-book-v1/
+           https://YOUR_GITHUB_ID.github.io/i-book-v1/
 ```
 
 Where YOUR_GITHUB_ID is your GitHub account ID.
 
-You can now go to your site to test the deployment.  You can also view
-the template used in this tutorial here:
+### Step 7: Test Your Site
+
+You can now go to your site to test the deployment.  The home will be
+in the GitHub pages domain that ends with ```github.io```.  The format is like this:
+
+https://YOUR_GITHUB_ID.github.io/i-book-v1/
+
+You can also view the template used in this tutorial here:
 
 [https://dmccreary.github.io/i-book-v1/](https://dmccreary.github.io/i-book-v1/)
 
