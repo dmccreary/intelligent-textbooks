@@ -136,7 +136,7 @@ mkdocs, version 1.6.1 from /Users/YOUR_LOCAL_NAME/miniconda3/envs/mkdocs/lib/pyt
 
 Where YOUR_LOCAL_NAME is the name of your local account on your local filesystem.
 
-### Step 4: Run A mkdocs build
+### Step 4: Run the mkdocs build command
 
 The command ```mkdocs build``` will read all your markdown files and convert them
 into HTML.  It will place all the HTML files in a directory called ```site```.  You
@@ -203,6 +203,12 @@ INFO    -  Your documentation should shortly be available at:
 ```
 
 Where YOUR_GITHUB_ID is your GitHub account ID.
+
+Note that you can got to your GitHub repository and view the
+```gh-pages``` branch.  All of your HTML pages will be there.
+It is important that you don't check your ```site``` into your
+main branch since this is a duplicate of the gh-pages branch.
+
 
 ### Step 7: Test Your Site
 
