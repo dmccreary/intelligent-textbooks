@@ -1,5 +1,5 @@
-site_name: Mkdocs for Intelligent Textbooks
-site_description: 'Using the mkdocs build to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: Creating Intelligent Textbooks with Mkdocs Material
+site_description: 'Using the mkdocs build system with the material theme to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/'
@@ -16,13 +16,16 @@ nav:
     - Admonitions: tutorial/admonitions.md
     - Quizzes: tutorial/quizzes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
+    - Adding a MicroSim: tutorial/adding-a-microsim.md
     - Google Analytics: tutorial/google-analytics.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
     - Enumerate Concepts: prompts/enumerate-concepts.md
     - Generate Logo: prompts/generate-logo.md
-
+  - Sims:
+    - Gallery: sims/index.md
+    - Sine Wave: sims/sine-wave/index.md
   - Checklist: checklist.md
   - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md

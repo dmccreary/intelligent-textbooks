@@ -17,7 +17,7 @@
   /* Iframe styles */
   iframe {
     width: 100%;
-    border: solid 1px silver;
+    border: solid 2px blue;
   }
 
   /* if a div with <div class="upper-alpha"> wraps a list, then number A.B.C.D etc */

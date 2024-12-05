@@ -37,13 +37,17 @@ in the ```docs``` directory change.  On GitHub, a GitHub action can be configure
 
 #### ISO Definition
 
-A term definition is considered to be consistent with ISO metadata registry guideline 11179 if it meets the following criteria:
+A term definition is considered to be consistent with ISO metadata registry guideline ISO/IEC 11179 if it meets the following criteria:
 
 1. Precise
 2. Concise
 3. Distinct
 4. Non-circular
 5. Unencumbered with business rules
+
+#### Learning Graph
+
+A directed graph of concepts that reflects the order that concepts should be learned to master a new concept.
 
 #### License
 
@@ -57,6 +61,19 @@ In our textbooks we focus on left-side navigation systems since these
 are the default navigation system and they are both intuitive and
 familiar by our users.  Our users also tend to be using
 screens that are wide landscape displays.  We discourage top navigation.
+
+#### p5.js
+
+The JavaScript library most commonly used to render MicroSims.
+
+Although there
+are many other JavaScript libraries that can be used, because there
+is a huge number of p5.js programs available for indexing by
+web crawlers used by generative AI tools, p5.js dominates
+the MicroSim ecosystems.
+
+Other specialized libraries such as vis.js are used for tasks such
+as simulating graph traversal algorithms.
 
 #### Quiz Management
 
@@ -79,4 +96,18 @@ way to find similar documents.
 
 #### Table of Contents
 
+Tools to generate a list of 
+
+#### Vis.js
+
+A JavaScript library for rendering graph networks.
+
+Vis.js is used to view and edit [learning graphs](#learning-graph) used by intelligent textbooks.
+
 #### Website Analytics
+
+The process of analyzing who is coming to your website, when they are visiting and what pages are being accessed.
+
+The mkdocs material system provides a way to integrate free Google Analytics by adding four lines to your mkdocs.yml file.
+
+See: [Tutorial on Google Analytics](./tutorial/google-analytics.md)
