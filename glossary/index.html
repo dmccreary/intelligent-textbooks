@@ -295,6 +295,8 @@
       
         
       
+        
+      
     
     
     
@@ -338,6 +340,8 @@
       
         
           
+        
+      
         
       
         
@@ -969,17 +973,19 @@
 
 <h1 id="glossary-of-terms-for-mkdocs-for-intelligent-textbooks">Glossary of Terms for mkdocs for Intelligent Textbooks</h1>
 <h4 id="admonition">Admonition</h4>
-<p>A section of text that is seperate from the main flow.
-Admonitions are designed to that they can be quickly skipped over
-if the user is not concerned with the topic.
-Admontions are used to store text such as abstracts, 
+<p>A section of text that is separate from the main flow of text.</p>
+<p>Admonitions are designed to that they can be quickly skipped over
+if the user is not concerned with the topic.</p>
+<p>In mkdocs-material admonitions are used to store text such as abstracts, 
 note, info, tip, success, question, warning, failure, danger, bug, example and quote.</p>
-<p><a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">mkdocs-materail admonitions documentation</a></p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">mkdocs-material admonitions documentation</a></p>
 <ul>
 <li>Also known as: Call outs</li>
 </ul>
 <h4 id="automatic-build">Automatic Build</h4>
-<p>Using an automatic build process that regnerates </p>
+<p>Using an automatic process that generates HTML from the markdown files.</p>
+<p>Automatic builds for mkdocs can be automatically executed whenever any part of the mkdocs.yml or the files
+in the <code>docs</code> directory change.  On GitHub, a GitHub action can be configured to achieve this.</p>
 <h4 id="code-highlighting">Code Highlighting</h4>
 <h4 id="concept-graph">Concept Graph</h4>
 <h4 id="favicon">Favicon</h4>
@@ -1000,12 +1006,20 @@ note, info, tip, success, question, warning, failure, danger, bug, example and q
 <h4 id="link-checker">Link Checker</h4>
 <h4 id="microsim">MicroSim</h4>
 <h4 id="navigation">Navigation</h4>
+<p>In our textbooks we focus on left-side navigation systems since these
+are the default navigation system and they are both intuitive and
+familiar by our users.  Our users also tend to be using
+screens that are wide landscape displays.  We discourage top navigation.</p>
 <h4 id="quiz-management">Quiz Management</h4>
-<p>Allow pages to contein self-assessments where the answers are hidden until the user
+<p>Allow pages to contain self-assessments where the answers are hidden until the user
 clicks on a "Show Answer" control.</p>
 <p>Allow multiple-choice questions in a list to use the ordered-list labels A. B. C. D.</p>
 <h4 id="search">Search</h4>
 <p>Create a search function as part of the build process.</p>
+<p>The mkdocs material theme generates a reverse index JSON file that is used to
+list the pages that match search keywords.</p>
+<p>Note that standard mkdocs search does not use embeddings and there is no
+way to find similar documents.</p>
 <h4 id="social-media-previews">Social Media Previews</h4>
 <h4 id="table-of-contents">Table of Contents</h4>
 <h4 id="website-analytics">Website Analytics</h4>

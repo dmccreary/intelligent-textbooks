@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/tutorial/quizes/">
+        <link rel="canonical" href="https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/tutorial/navigation/">
       
       
-        <link rel="prev" href="../admonitions/">
+        <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../upper-alpha-lists/">
+        <link rel="next" href="../admonitions/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Quizzes - Mkdocs for Intelligent Textbooks</title>
+        <title>Navigation - Mkdocs for Intelligent Textbooks</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quizes" class="md-skip">
+        <a href="#navigation" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quizzes
+              Navigation
             
           </span>
         </div>
@@ -297,6 +297,8 @@
       
         
       
+        
+      
     
     
     
@@ -362,27 +364,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../admonitions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Admonitions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -399,7 +380,7 @@
           
   
   <span class="md-ellipsis">
-    Quizzes
+    Navigation
   </span>
   
 
@@ -410,7 +391,7 @@
         
   
   <span class="md-ellipsis">
-    Quizzes
+    Navigation
   </span>
   
 
@@ -432,18 +413,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enable-uppercase-alpha-lists" class="md-nav__link">
+  <a href="#sample-nav-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Enable Uppercase Alpha Lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-enable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Enable
+      Sample Nav Configuration
     </span>
   </a>
   
@@ -453,6 +425,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admonitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admonitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quizzes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quizzes
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -518,6 +532,8 @@
       
         
           
+        
+      
         
       
         
@@ -743,18 +759,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enable-uppercase-alpha-lists" class="md-nav__link">
+  <a href="#sample-nav-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Enable Uppercase Alpha Lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-enable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Enable
+      Sample Nav Configuration
     </span>
   </a>
   
@@ -775,7 +782,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks/blob/master/docs/tutorial/quizes.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks/blob/master/docs/tutorial/navigation.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -783,18 +790,57 @@
   
 
 
-<h1 id="quizes">Quizes</h1>
-<p>Generative AI tools are very good at creating quizzes to help students assess their own knowledge of a concept.
-But how should these questions be stored within a mkdocs-material website.  Here are some options.</p>
-<h2 id="enable-uppercase-alpha-lists">Enable Uppercase Alpha Lists</h2>
-<p>By default, Markdown ordered lists only produce lists with integer numbers.
-However, many mulitple choice answers use uppercase alpha formats.
-To enable this feature we need to do two things:</p>
-<ol>
-<li>Enable the markdown within HTML option</li>
-<li>Add a CSS fule to turn on uppercase alpha lists</li>
-</ol>
-<h2 id="step-1-enable">Step 1: Enable</h2>
+<h1 id="navigation">Navigation</h1>
+<p>Modern displays tend to be very wide.</p>
+<p><img alt="" src="../../img/wide-screen.png" /></p>
+<p>The one in the image above is over 5120 pixels wide and 1440 pixels high.</p>
+<p>For this reason, we place our navigation links on the left of the main display.
+We discourage our users from using top navigation such as tabs.</p>
+<p>The typical structure of our books is the following</p>
+<ul>
+<li><strong>Chapters</strong> contain content with animations imbedded using Javascript or iframes</li>
+<li><strong>Prompts</strong> contain sample prompts that you give to large-langauge models to generate customized content</li>
+<li><strong>Sims</strong> contain <a href="../../glossary/#microsim">MicroSims</a> and other standalone animation programs</li>
+<li><strong>Tutorial</strong> contains content for step by step processes for specific tasks</li>
+</ul>
+<p>In addition, we suggest some of the following descrete makrdown files:</p>
+<ul>
+<li><strong>License</strong> - tells the user what rules govern the reuse of this content</li>
+<li><strong>About</strong> - gives a high-level overview about the book, the learning objectives of the book, the intended audience and the background of the authors</li>
+<li><strong>Course Description</strong> - contains a set of one or more typical single-page descriptions of this course as it might appear in a course catalog</li>
+<li><strong>Glossary</strong> - contains a set of level 4 markdown headers each with a term and a definition.  These terms are designed to be easy to link from any page using
+the automatic complete of editors such as Visual Studio Code with the markdown plugin.</li>
+<li><strong>References</strong> - links to other web sites or papers</li>
+<li><strong>How We Built This Site</strong> - give an overview of the software and tools used
+to generate the website from markdown</li>
+<li><strong>Contact</strong> - how to reach the authors or support community.  Note
+that many books use the GitHub pages to track feature requests and to
+report bugs.</li>
+</ul>
+<h2 id="sample-nav-configuration">Sample Nav Configuration</h2>
+<p><code>yml
+nav:
+  - Home: index.md
+  - About: about.md
+  - Tutorial:
+    - Introduction: tutorial/index.md
+    - Getting Started: tutorial/getting-started.md
+    - Navigation: tutorial/navigation.md
+    - Admonitions: tutorial/admonitions.md
+    - Quizzes: tutorial/quizzes.md
+    - Upper Alpha Lists: tutorial/upper-alpha-lists.md
+    - Google Analytics: tutorial/google-analytics.md
+  - Prompts:
+    - Introduction: prompts/index.md
+    - Feature Mapping: prompts/feature-mapping.md
+    - Enumerate Concepts: prompts/enumerate-concepts.md
+    - Generate Logo: prompts/generate-logo.md
+  - Glossary: glossary.md
+  - Table of Contents: toc.md
+  - License: license.md
+  - How We Built This Site: how-we-built-this-site.md
+  - References: references.md
+  - Contact: contact.md</code></p>
 
 
 
@@ -832,7 +878,7 @@ To enable this feature we need to do two things:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../admonitions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Admonitions">
+          <a href="../getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -842,20 +888,20 @@ To enable this feature we need to do two things:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Admonitions
+                Getting Started
               </div>
             </div>
           </a>
         
         
           
-          <a href="../upper-alpha-lists/" class="md-footer__link md-footer__link--next" aria-label="Next: Upper Alpha Lists">
+          <a href="../admonitions/" class="md-footer__link md-footer__link--next" aria-label="Next: Admonitions">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Upper Alpha Lists
+                Admonitions
               </div>
             </div>
             <div class="md-footer__button md-icon">
