@@ -141,9 +141,9 @@ Where YOUR_LOCAL_NAME is the name of your local account on your local filesystem
 The command ```mkdocs build``` will read all your markdown files and convert them
 into HTML.  It will place all the HTML files in a directory called ```site```.  You
 want to make sure not to check this into your GitHub main branch.  You can
-do this by adding site to the .gitignore file.  Here is an example:
+do this by adding site to the ```.gitignore file```.  Here is an example:
 
-```
+```linenums="0"
 site
 .DS_Store
 ~$*
@@ -159,6 +159,11 @@ INFO    -  Documentation built in 0.15 seconds
 
 ### Step 5: Run a Local Server
 
+This command will start a local web server and put your
+website on it.  It will also monitor if any of the files
+in the docs directory change of if your mkdocs.yml file
+changes.  If they do change, it will regenerate the required files.
+
 ```sh
 (mkdocs) $ mkdocs serve
 INFO    -  Building documentation...
@@ -168,7 +173,7 @@ INFO    -  [14:52:39] Watching paths for changes: 'docs', 'mkdocs.yml'
 INFO    -  [14:52:39] Serving on http://127.0.0.1:8000/
 ```
 
-Now navigate to your localhost port 8000
+Now navigate to your localhost port 8000:
 
 [http://localhost:8000](http://localhost:8000)
 
@@ -176,8 +181,15 @@ You should see the first version of the book.
 
 ### Step 6: Do a Deploy to GitHub Pages
 
+Once you preview your website on your local computer you
+are ready to publish your new creation for the world
+to see!  We do this with the following command:
+
 ```sh
 (mkdocs) $ mkdocs gh-deploy
+```
+
+```linenums="0"
 INFO    -  Cleaning site directory
 INFO    -  Building documentation to directory:
            /Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site
@@ -202,13 +214,14 @@ INFO    -  Your documentation should shortly be available at:
            https://YOUR_GITHUB_ID.github.io/i-book-v1/
 ```
 
-Where YOUR_GITHUB_ID is your GitHub account ID.
+Where YOUR_GITHUB_ID is your GitHub account ID.  Note that you can
+copy this last line from the terminal and paste it into your browser URL.
 
-Note that you can got to your GitHub repository and view the
+Note that you can go to your GitHub repository and view the
 ```gh-pages``` branch.  All of your HTML pages will be there.
 It is important that you don't check your ```site``` into your
 main branch since this is a duplicate of the gh-pages branch.
-
+As mentioned above, ```site``` should be in your .gitignore file.
 
 ### Step 7: Test Your Site
 
@@ -223,4 +236,8 @@ You can also view the template used in this tutorial here:
 
 Feel free to use the GitHub fork function to make your own copy of this GitHub repo.
 This will save you from having to create your own directory and file structures.
+
+That is it!  You have now published your first Intelligent Textbook.
+It does have search and navigation and we will now use
+generative AI tools to create fantastic content.
 
