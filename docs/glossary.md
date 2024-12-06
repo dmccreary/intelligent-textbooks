@@ -12,7 +12,7 @@ note, info, tip, success, question, warning, failure, danger, bug, example and q
 
 [mkdocs-material admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
 
-* Also known as: Call outs
+* Also known as: "call outs"
 
 #### Automatic Build
 

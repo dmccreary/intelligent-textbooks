@@ -32,7 +32,7 @@ report bugs.
 
 ## Sample Nav Configuration
 
-```yml
+```yaml
 nav:
   - Home: index.md
   - About: about.md
