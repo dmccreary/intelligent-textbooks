@@ -668,6 +668,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1184,13 +1190,11 @@ mkdocs,<span class="w"> </span>version<span class="w"> </span><span class="m">1<
 <p>The command <code>mkdocs build</code> will read all your markdown files and convert them
 into HTML.  It will place all the HTML files in a directory called <code>site</code>.  You
 want to make sure not to check this into your GitHub main branch.  You can
-do this by adding site to the .gitignore file.  Here is an example:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>site
+do this by adding site to the <code>.gitignore file</code>.  Here is an example:</p>
+<div class="highlight"><pre><span></span><code>site
 .DS_Store
 ~$*
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1202,6 +1206,10 @@ INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"
 INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.15<span class="w"> </span>seconds
 </code></pre></div></td></tr></table></div>
 <h3 id="step-5-run-a-local-server">Step 5: Run a Local Server</h3>
+<p>This command will start a local web server and put your
+website on it.  It will also monitor if any of the files
+in the docs directory change of if your mkdocs.yml file
+changes.  If they do change, it will regenerate the required files.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1214,61 +1222,45 @@ INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span clas
 INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">14</span>:52:39<span class="o">]</span><span class="w"> </span>Watching<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>changes:<span class="w"> </span><span class="s1">&#39;docs&#39;</span>,<span class="w"> </span><span class="s1">&#39;mkdocs.yml&#39;</span>
 INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">14</span>:52:39<span class="o">]</span><span class="w"> </span>Serving<span class="w"> </span>on<span class="w"> </span>http://127.0.0.1:8000/
 </code></pre></div></td></tr></table></div>
-<p>Now navigate to your localhost port 8000</p>
+<p>Now navigate to your localhost port 8000:</p>
 <p><a href="http://localhost:8000">http://localhost:8000</a></p>
 <p>You should see the first version of the book.</p>
 <h3 id="step-6-do-a-deploy-to-github-pages">Step 6: Do a Deploy to GitHub Pages</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
-INFO<span class="w">    </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
-INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:
-<span class="w">           </span>/Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site
-INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.13<span class="w"> </span>seconds
-WARNING<span class="w"> </span>-<span class="w">  </span>Version<span class="w"> </span>check<span class="w"> </span>skipped:<span class="w"> </span>No<span class="w"> </span>version<span class="w"> </span>specified<span class="w"> </span><span class="k">in</span><span class="w"> </span>previous<span class="w"> </span>deployment.
-INFO<span class="w">    </span>-<span class="w">  </span>Copying<span class="w"> </span><span class="s1">&#39;/Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>branch
-<span class="w">           </span>and<span class="w"> </span>pushing<span class="w"> </span>to<span class="w"> </span>GitHub.
-Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">67</span>,<span class="w"> </span><span class="k">done</span>.
-Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">67</span>/67<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
-Delta<span class="w"> </span>compression<span class="w"> </span>using<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span><span class="m">10</span><span class="w"> </span>threads
-Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">60</span>/60<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
-Writing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">67</span>/67<span class="o">)</span>,<span class="w"> </span><span class="m">577</span>.48<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">6</span>.56<span class="w"> </span>MiB/s,<span class="w"> </span><span class="k">done</span>.
-Total<span class="w"> </span><span class="m">67</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">8</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
-remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">8</span>/8<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
-remote:<span class="w"> </span>
-remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
-remote:<span class="w">      </span>https://github.com/YOUR_GITHUB_ID/i-book-v1/pull/new/gh-pages
-remote:<span class="w"> </span>
-To<span class="w"> </span>https://github.com/YOUR_GITHUB_ID/i-book-v1.git
-<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>gh-pages<span class="w"> </span>-&gt;<span class="w"> </span>gh-pages
-INFO<span class="w">    </span>-<span class="w">  </span>Your<span class="w"> </span>documentation<span class="w"> </span>should<span class="w"> </span>shortly<span class="w"> </span>be<span class="w"> </span>available<span class="w"> </span>at:
-<span class="w">           </span>https://YOUR_GITHUB_ID.github.io/i-book-v1/
+<p>Once you preview your website on your local computer you
+are ready to publish your new creation for the world
+to see!  We do this with the following command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">(</span>mkdocs<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
 </code></pre></div></td></tr></table></div>
-<p>Where YOUR_GITHUB_ID is your GitHub account ID.</p>
-<p>Note that you can got to your GitHub repository and view the
+<div class="highlight"><pre><span></span><code>INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory:
+           /Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site
+INFO    -  Documentation built in 0.13 seconds
+WARNING -  Version check skipped: No version specified in previous deployment.
+INFO    -  Copying &#39;/Users/YOUR_LOCAL_NAME/Documents/ws/i-book-v1/site&#39; to &#39;gh-pages&#39; branch
+           and pushing to GitHub.
+Enumerating objects: 67, done.
+Counting objects: 100% (67/67), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (60/60), done.
+Writing objects: 100% (67/67), 577.48 KiB | 6.56 MiB/s, done.
+Total 67 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+remote: 
+remote: Create a pull request for &#39;gh-pages&#39; on GitHub by visiting:
+remote:      https://github.com/YOUR_GITHUB_ID/i-book-v1/pull/new/gh-pages
+remote: 
+To https://github.com/YOUR_GITHUB_ID/i-book-v1.git
+ * [new branch]      gh-pages -&gt; gh-pages
+INFO    -  Your documentation should shortly be available at:
+           https://YOUR_GITHUB_ID.github.io/i-book-v1/
+</code></pre></div>
+<p>Where YOUR_GITHUB_ID is your GitHub account ID.  Note that you can
+copy this last line from the terminal and paste it into your browser URL.</p>
+<p>Note that you can go to your GitHub repository and view the
 <code>gh-pages</code> branch.  All of your HTML pages will be there.
 It is important that you don't check your <code>site</code> into your
-main branch since this is a duplicate of the gh-pages branch.</p>
+main branch since this is a duplicate of the gh-pages branch.
+As mentioned above, <code>site</code> should be in your .gitignore file.</p>
 <h3 id="step-7-test-your-site">Step 7: Test Your Site</h3>
 <p>You can now go to your site to test the deployment.  The home will be
 in the GitHub pages domain that ends with <code>github.io</code>.  The format is like this:</p>
@@ -1277,6 +1269,9 @@ in the GitHub pages domain that ends with <code>github.io</code>.  The format is
 <p><a href="https://dmccreary.github.io/i-book-v1/">https://dmccreary.github.io/i-book-v1/</a></p>
 <p>Feel free to use the GitHub fork function to make your own copy of this GitHub repo.
 This will save you from having to create your own directory and file structures.</p>
+<p>That is it!  You have now published your first Intelligent Textbook.
+It does have search and navigation and we will now use
+generative AI tools to create fantastic content.</p>
 
 
 

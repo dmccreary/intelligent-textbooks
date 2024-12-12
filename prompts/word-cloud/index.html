@@ -12,26 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/">
+        <link rel="canonical" href="https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/word-cloud/">
       
       
+        <link rel="prev" href="../semantic-search/">
       
-        <link rel="next" href="about/">
+      
+        <link rel="next" href="../../sims/">
       
       
-      <link rel="icon" href="img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Creating Intelligent Textbooks with Mkdocs Material</title>
+        <title>Word Cloud - Creating Intelligent Textbooks with Mkdocs Material</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-for-intelligent-textbooks" class="md-skip">
+        <a href="#generating-a-word-cloud-for-your-book" class="md-skip">
           Skip to content
         </a>
       
@@ -102,9 +104,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Creating Intelligent Textbooks with Mkdocs Material" class="md-header__button md-logo" aria-label="Creating Intelligent Textbooks with Mkdocs Material" data-md-component="logo">
+    <a href="../.." title="Creating Intelligent Textbooks with Mkdocs Material" class="md-header__button md-logo" aria-label="Creating Intelligent Textbooks with Mkdocs Material" data-md-component="logo">
       
-  <img src="img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Word Cloud
             
           </span>
         </div>
@@ -208,9 +210,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Creating Intelligent Textbooks with Mkdocs Material" class="md-nav__button md-logo" aria-label="Creating Intelligent Textbooks with Mkdocs Material" data-md-component="logo">
+    <a href="../.." title="Creating Intelligent Textbooks with Mkdocs Material" class="md-nav__button md-logo" aria-label="Creating Intelligent Textbooks with Mkdocs Material" data-md-component="logo">
       
-  <img src="img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     Creating Intelligent Textbooks with Mkdocs Material
@@ -234,19 +236,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,7 +248,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -267,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -320,7 +312,7 @@
         
   
   
-    <a href="tutorial/" class="md-nav__link">
+    <a href="../../tutorial/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -343,6 +335,8 @@
       
   
   
+    
+  
   
   
     
@@ -368,29 +362,180 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="prompts/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Prompts
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Mapping
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enumerate-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enumerate Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate-logo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../level-questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intelligence Level Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Word Cloud
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -426,7 +571,7 @@
         
   
   
-    <a href="sims/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -452,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="checklist/" class="md-nav__link">
+      <a href="../../checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -472,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code-highlight-test/" class="md-nav__link">
+      <a href="../../code-highlight-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -492,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="toc/" class="md-nav__link">
+      <a href="../../toc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="how-we-built-this-site/" class="md-nav__link">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="references/" class="md-nav__link">
+      <a href="../../references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +783,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks/blob/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks/blob/master/docs/prompts/word-cloud.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -646,30 +791,7 @@
   
 
 
-<h1 id="mkdocs-for-intelligent-textbooks">Mkdocs for Intelligent Textbooks</h1>
-<p><em>intelligent textbooks guide students through concepts
-on their quest for knowledge</em></p>
-<p>Welcome to the website for a step-by-step guild to using the <a href="http://mkdocs.com">mkdocs</a> build system 
-paried with generative AI to create and maintain intelligent textbooks.</p>
-<p>We feel that many courses today can benefit for high-quality online textbooks that have some of the following features:</p>
-<ol>
-<li>Powerful and easy to use <a href="glossary/#search">Search</a></li>
-<li>Site <a href="glossary/#navigation">Navigation</a></li>
-<li><a href="glossary/#microsim">MicroSims</a> - adding interactive simulations to any page using p5.js or iframes</li>
-<li><a href="glossary/#glossary-of-terms">Glossary of Terms</a></li>
-<li><a href="toc/">Table of Contents</a> - generate a table of contents for the entire book</li>
-<li><a href="glossary/#link-checker">Link Checker</a> - check for broken links on the website</li>
-<li><a href="glossary/#social-media-previews">Social Media Previews</a></li>
-<li>Rendering <a href="glossary/#formulas">Formulas</a> - allow pages to include complex equations and mathematical formulas</li>
-<li><a href="glossary/#code-highlighting">Code Highlighting</a> - make code easy to view with color syntax highlighting</li>
-<li><a href="glossary/#license">License Management</a> with a link to the license in the footer of each page</li>
-<li><a href="glossary/#website-analytics">Site Analytics with Google Analytics</a></li>
-<li><a href="glossary/#edit-from-github">Edit from GitHub</a></li>
-<li><a href="glossary/#automatic-build">Automatic Build</a></li>
-<li><a href="glossary/#quiz-management">Quiz Management</a></li>
-<li>High quality website logo and <a href="glossary/#favicon">favicon</a> generate for multiple environments</li>
-<li>An easy-to-visualize <a href="glossary/#concept-graph">Concept Graph</a> that shows all the concepts in the class and their dependencies.</li>
-</ol>
+<h1 id="generating-a-word-cloud-for-your-book">Generating A Word Cloud for Your Book</h1>
 
 
 
@@ -706,15 +828,31 @@ paried with generative AI to create and maintain intelligent textbooks.</p>
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../semantic-search/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Semantic Search">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Semantic Search
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+          <a href="../../sims/" class="md-footer__link md-footer__link--next" aria-label="Next: Gallery">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About
+                Gallery
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -748,10 +886,10 @@ paried with generative AI to create and maintain intelligent textbooks.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

@@ -1,0 +1,1615 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Using the mkdocs build system with the material theme to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/level-questions/">
+      
+      
+        <link rel="prev" href="../generate-logo/">
+      
+      
+        <link rel="next" href="../semantic-search/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Intelligence Level Questions - Creating Intelligent Textbooks with Mkdocs Material</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#level-questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Creating Intelligent Textbooks with Mkdocs Material" class="md-header__button md-logo" aria-label="Creating Intelligent Textbooks with Mkdocs Material" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Creating Intelligent Textbooks with Mkdocs Material
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intelligence Level Questions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Creating Intelligent Textbooks with Mkdocs Material" class="md-nav__button md-logo" aria-label="Creating Intelligent Textbooks with Mkdocs Material" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Creating Intelligent Textbooks with Mkdocs Material
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature-mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enumerate-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enumerate Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate-logo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intelligence Level Questions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intelligence Level Questions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-table-of-contents-index-glossary-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Table of Contents, Index, Glossary Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-availability-of-digital-format-and-simple-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Availability of Digital Format and Simple Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-presence-and-quality-of-hyperlinks-internal-and-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Presence and Quality of Hyperlinks (Internal and External)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inclusion-of-rich-media-videos-animations-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inclusion of Rich Media (Videos, Animations, Simulations)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-interactivity-and-navigational-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Interactivity and Navigational Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-personalization-or-adaptation-of-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Personalization or Adaptation of Content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-integration-with-learning-management-systems-lms" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Integration with Learning Management Systems (LMS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-ability-to-assess-student-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Ability to Assess Student Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-conversational-interface-or-chatbot-presence" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Conversational Interface or Chatbot Presence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ability-to-suggest-next-steps-or-learning-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Ability to Suggest Next Steps or Learning Paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-dynamic-content-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Dynamic Content Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ability-to-create-custom-visualizations-or-simulations-on-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Ability to Create Custom Visualizations or Simulations on Demand
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-reinforcement-learning-and-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Reinforcement Learning and Continuous Improvement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-external-resource-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. External Resource Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-ability-to-handle-user-inquiries-beyond-pre-defined-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Ability to Handle User Inquiries Beyond Pre-Defined FAQ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-support-for-multiple-learning-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Support for Multiple Learning Styles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-integration-of-learner-profiles-goals-interests-past-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Integration of Learner Profiles (Goals, Interests, Past Performance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-depth-of-internal-cross-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Depth of Internal Cross-Referencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-faq-and-trouble-shooting-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. FAQ and Trouble-Shooting Adaptation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-generation-of-custom-lesson-plans-and-curricula" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Generation of Custom Lesson Plans and Curricula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-html-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate HTML Form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-html-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample HTML Form
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../word-cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Word Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-highlight-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Highlight Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-table-of-contents-index-glossary-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Table of Contents, Index, Glossary Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-availability-of-digital-format-and-simple-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Availability of Digital Format and Simple Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-presence-and-quality-of-hyperlinks-internal-and-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Presence and Quality of Hyperlinks (Internal and External)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inclusion-of-rich-media-videos-animations-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inclusion of Rich Media (Videos, Animations, Simulations)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-interactivity-and-navigational-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Interactivity and Navigational Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-personalization-or-adaptation-of-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Personalization or Adaptation of Content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-integration-with-learning-management-systems-lms" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Integration with Learning Management Systems (LMS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-ability-to-assess-student-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Ability to Assess Student Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-conversational-interface-or-chatbot-presence" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Conversational Interface or Chatbot Presence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ability-to-suggest-next-steps-or-learning-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Ability to Suggest Next Steps or Learning Paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-dynamic-content-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Dynamic Content Generation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ability-to-create-custom-visualizations-or-simulations-on-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Ability to Create Custom Visualizations or Simulations on Demand
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-reinforcement-learning-and-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Reinforcement Learning and Continuous Improvement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-external-resource-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. External Resource Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-ability-to-handle-user-inquiries-beyond-pre-defined-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Ability to Handle User Inquiries Beyond Pre-Defined FAQ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-support-for-multiple-learning-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Support for Multiple Learning Styles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-integration-of-learner-profiles-goals-interests-past-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Integration of Learner Profiles (Goals, Interests, Past Performance)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-depth-of-internal-cross-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Depth of Internal Cross-Referencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-faq-and-trouble-shooting-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. FAQ and Trouble-Shooting Adaptation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-generation-of-custom-lesson-plans-and-curricula" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Generation of Custom Lesson Plans and Curricula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-html-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate HTML Form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-html-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample HTML Form
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/mkdocs-for-intelligent-textbooks/blob/master/docs/prompts/level-questions.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="level-questions">Level Questions</h1>
+<h2 id="prompt">Prompt</h2>
+<div class="highlight"><pre><span></span><code>I am working on a project to help educators and students evaluate the score of an intelligent textbook.  We have developed the following &quot;Bands&quot; for general scoring, but I would like you to help generate a series of questions to help a specific textbook be assigned to a level.
+
+
+
+So please generate a list of 20 questions that would be used to assign the level of a textbook.  For each question, generate rules that would discriminate the levels.  Use questions that have the ability to discriminate each level.
+
+
+
+Here is a list of the levels:
+
+
+
+Level 0 - A printed textbook.  Give a higher score to a textbook that has a high quality table of contents, index, glossary and detailed annotated biography for students that want to learn more.
+
+Level 1 - An online PDF or PPT of a textbook.  Give a slightly higher score to versions that have high-quality search and many internal and external links.
+
+Level 2 - A website with rich media including videos, animations and simulations but no personalization.  Give a higher score to great navigation, deep links, great animations and simulations and a tools like linked word clouds, concept graphs and FAQ.  Level 2 books are not personalized with any student-spcific information.
+
+Level 3 - A website that is connected to a learning management systems that has knowledge of each person&#39;s current knowledge about concepts and learning goals
+
+Level 4 - A website that includes a conversational interface such as a chatbot.  The chabot can answer questions given your personal knowledge.  It can also recommend content for a topic.
+
+Level 5 - A fully intelligent textbook that can answer questions, suggest learning paths and provide detailed recommendations for content.  It uses reinforcement learning to continually learn about what learning paths work for students.  It can also generate customized lesson plans and generate new animations and simulations of the real world on demand.
+</code></pre></div>
+<h2 id="response">Response</h2>
+<p>Below is a set of 20 questions designed to help determine the "intelligence" level of a textbook according to the given bands. Each question focuses on a feature or capability that differentiates one level from another. For each question, there are guidelines on how the presence, quality, or sophistication of that feature might map to one of the six levels (0 to 5).</p>
+<p><strong>Key to Levels:</strong></p>
+<ul>
+<li><strong>Level 0:</strong> Printed textbook (High-quality static reference tools)</li>
+<li><strong>Level 1:</strong> Online PDF/PPT (Basic digital format, possibly with search and simple links)</li>
+<li><strong>Level 2:</strong> Website with rich media (videos, animations, simulations, interactive navigation), but no personalization</li>
+<li><strong>Level 3:</strong> Website integrated with an LMS (knows students' progress/concepts)</li>
+<li><strong>Level 4:</strong> Website with a conversational interface (chatbot) that uses personal knowledge</li>
+<li><strong>Level 5:</strong> Fully intelligent textbook (suggesting paths, reinforcement learning, generating new content/visualizations on demand)</li>
+</ul>
+<hr />
+<h3 id="1-table-of-contents-index-glossary-quality">1. Table of Contents, Index, Glossary Quality</h3>
+<p><strong>Question:</strong> How comprehensive and well-structured are the textbook's table of contents, index, and glossary?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0:</strong> Detailed, well-formatted table of contents, index, and glossary present in a print textbook.</li>
+<li><strong>Level 1+:</strong> Basic digital TOC and glossary may be present, but does not surpass the printed quality.</li>
+<li>If the textbook excels only in static reference quality (no interactivity), it's likely Level 0.</li>
+</ul>
+<hr />
+<h3 id="2-availability-of-digital-format-and-simple-search">2. Availability of Digital Format and Simple Search</h3>
+<p><strong>Question:</strong> Is the textbook available in a digital format with a basic keyword search function?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0:</strong> Not available digitally, or only as a scanned static PDF without search.</li>
+<li><strong>Level 1:</strong> Available as a digital PDF or PPT with basic keyword search, possibly simple internal links.</li>
+<li>Higher levels also have digital formats, but if only a basic search is present (no personalization, no rich media), Level 1 is indicated.</li>
+</ul>
+<hr />
+<h3 id="3-presence-and-quality-of-hyperlinks-internal-and-external">3. Presence and Quality of Hyperlinks (Internal and External)</h3>
+<p><strong>Question:</strong> Does the resource contain clickable links that connect to related sections or external references?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0:</strong> No hyperlinks (print only).</li>
+<li><strong>Level 1:</strong> Has basic hyperlinks (e.g., from a digital PDF's table of contents to chapters).</li>
+<li><strong>Level 2+:</strong> Enhanced hyperlinking including deep internal cross-references and external resource links is common, but if only simple links are present, that suggests Level 1.</li>
+</ul>
+<hr />
+<h3 id="4-inclusion-of-rich-media-videos-animations-simulations">4. Inclusion of Rich Media (Videos, Animations, Simulations)</h3>
+<p><strong>Question:</strong> Does the resource integrate videos, animations, or simulations directly into the learning material?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-1:</strong> No embedded rich media, or only static images.</li>
+<li><strong>Level 2:</strong> Multiple embedded videos, animations, simulations that support the text.</li>
+<li><strong>Level 3-5:</strong> Will also have rich media, but for discriminating Level 2, focus on presence of rich media without personalization.</li>
+</ul>
+<hr />
+<h3 id="5-interactivity-and-navigational-tools">5. Interactivity and Navigational Tools</h3>
+<p><strong>Question:</strong> How interactive and navigable is the resource? Does it provide advanced navigation tools like concept maps, word clouds, or FAQ sections?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-1:</strong> Limited to simple linear navigation (page turning, basic scroll).</li>
+<li><strong>Level 2:</strong> Offers concept graphs, linked word clouds, advanced FAQ pages, and dynamic navigation menus.</li>
+<li><strong>Level 3-5:</strong> Similar navigation exists, but the presence of personalization or intelligence must be examined in other questions.</li>
+</ul>
+<hr />
+<h3 id="6-personalization-or-adaptation-of-content">6. Personalization or Adaptation of Content</h3>
+<p><strong>Question:</strong> Does the textbook adapt its content based on an individual student's learning profile, prior knowledge, or assessment data?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> No personalization; same content for all users.</li>
+<li><strong>Level 3:</strong> Content or navigation adjusts based on student progress data from an LMS.</li>
+<li><strong>Level 4-5:</strong> Personalized recommendations or conversation-based personalization is evident.</li>
+</ul>
+<hr />
+<h3 id="7-integration-with-learning-management-systems-lms">7. Integration with Learning Management Systems (LMS)</h3>
+<p><strong>Question:</strong> Is the textbook integrated with an LMS to track individual learner progress and adjust experiences?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> No LMS integration.</li>
+<li><strong>Level 3:</strong> Integrated with LMS, uses learner data to guide content selection.</li>
+<li><strong>Level 4-5:</strong> LMS integration plus more advanced, intelligent personalization or conversational interfaces.</li>
+</ul>
+<hr />
+<h3 id="8-ability-to-assess-student-knowledge">8. Ability to Assess Student Knowledge</h3>
+<p><strong>Question:</strong> Does the textbook include quizzes, assessments, or tools that adapt based on the student's performance?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-1:</strong> No adaptive assessment---may only offer static questions at the end of chapters.</li>
+<li><strong>Level 2:</strong> Possibly interactive quizzes, but not adaptive based on user profile.</li>
+<li><strong>Level 3:</strong> Adaptive assessments informed by LMS data.</li>
+<li><strong>Level 4-5:</strong> Assessments dynamically adjust based on a richer student model and can suggest new paths or respond to queries conversationally.</li>
+</ul>
+<hr />
+<h3 id="9-conversational-interface-or-chatbot-presence">9. Conversational Interface or Chatbot Presence</h3>
+<p><strong>Question:</strong> Is there a built-in conversational agent that can answer student questions directly?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-3:</strong> No conversational interface.</li>
+<li><strong>Level 4:</strong> A chatbot that can answer questions based on personal user data and recommend relevant topics.</li>
+<li><strong>Level 5:</strong> A chatbot with advanced reasoning, capable of generating entirely new content/visualizations on demand.</li>
+</ul>
+<hr />
+<h3 id="10-ability-to-suggest-next-steps-or-learning-paths">10. Ability to Suggest Next Steps or Learning Paths</h3>
+<p><strong>Question:</strong> Can the textbook suggest what a student should study next based on their interactions or mastery?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> No suggestion of personalized next steps.</li>
+<li><strong>Level 3:</strong> Basic suggestions informed by LMS data.</li>
+<li><strong>Level 4:</strong> Conversational suggestions tailored to the user's performance.</li>
+<li><strong>Level 5:</strong> Intelligent, continuously improving recommendations (reinforcement learning) that adapt learning paths dynamically.</li>
+</ul>
+<hr />
+<h3 id="11-dynamic-content-generation">11. Dynamic Content Generation</h3>
+<p><strong>Question:</strong> Can the resource generate new examples, problems, or explanations on demand rather than just serving static content?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-3:</strong> Content is predefined and static.</li>
+<li><strong>Level 4:</strong> Some dynamic retrieval of suitable content may occur, but primarily curated.</li>
+<li><strong>Level 5:</strong> Fully dynamic content generation, including new examples, problems, and custom explanations.</li>
+</ul>
+<hr />
+<h3 id="12-ability-to-create-custom-visualizations-or-simulations-on-demand">12. Ability to Create Custom Visualizations or Simulations on Demand</h3>
+<p><strong>Question:</strong> Can the textbook create new animations, simulations, or visual content in response to user queries or learning needs?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> Only preset images/videos.</li>
+<li><strong>Level 3-4:</strong> Might select the best pre-existing simulations based on user need.</li>
+<li><strong>Level 5:</strong> Can generate entirely new visualizations or simulations dynamically.</li>
+</ul>
+<hr />
+<h3 id="13-reinforcement-learning-and-continuous-improvement">13. Reinforcement Learning and Continuous Improvement</h3>
+<p><strong>Question:</strong> Does the system use data from student interactions over time to improve its recommendations or content delivery?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-4:</strong> No true reinforcement learning capabilities. At best, these levels adapt to user profiles statically or rule-based.</li>
+<li><strong>Level 5:</strong> Employs reinforcement learning to continually refine learning paths and strategies for individual and aggregated learners.</li>
+</ul>
+<hr />
+<h3 id="14-external-resource-integration">14. External Resource Integration</h3>
+<p><strong>Question:</strong> Does the textbook integrate with external resources (like encyclopedias, research databases, or educational tools) in a context-aware manner?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0:</strong> Only static references or a printed bibliography.</li>
+<li><strong>Level 1:</strong> Possibly static hyperlinks to external sites.</li>
+<li><strong>Level 2:</strong> Rich external link integration within an interactive website.</li>
+<li><strong>Level 3-5:</strong> External resources chosen or recommended based on the student's profile (increasing personalization with each higher level).</li>
+</ul>
+<hr />
+<h3 id="15-ability-to-handle-user-inquiries-beyond-pre-defined-faq">15. Ability to Handle User Inquiries Beyond Pre-Defined FAQ</h3>
+<p><strong>Question:</strong> Can the textbook address student questions that aren't explicitly covered in the predefined text (e.g., open-ended queries)?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> Only predefined content, no handling of open-ended queries.</li>
+<li><strong>Level 3:</strong> Might direct students to sections based on knowledge of their gaps but not truly "answer" novel queries.</li>
+<li><strong>Level 4:</strong> Conversational agent attempts to answer new questions contextually.</li>
+<li><strong>Level 5:</strong> Conversational agent with advanced reasoning and content generation responds fully and contextually, even creating new explanatory materials.</li>
+</ul>
+<hr />
+<h3 id="16-support-for-multiple-learning-styles">16. Support for Multiple Learning Styles</h3>
+<p><strong>Question:</strong> Does the textbook adjust or present content to support various learning styles (visual, auditory, kinesthetic) based on the learner?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> Static presentation with some variety (images, text, videos), but not tailored to an individual's style.</li>
+<li><strong>Level 3-4:</strong> Selection of content type may adjust based on user performance or preferences.</li>
+<li><strong>Level 5:</strong> Dynamically generates or selects content formats best suited to the individual's learning patterns as observed and improved over time.</li>
+</ul>
+<hr />
+<h3 id="17-integration-of-learner-profiles-goals-interests-past-performance">17. Integration of Learner Profiles (Goals, Interests, Past Performance)</h3>
+<p><strong>Question:</strong> Can the textbook use the learner's stated goals, interests, or performance history to prioritize or highlight certain topics?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> No user-specific profiling.</li>
+<li><strong>Level 3:</strong> Basic use of learner profile from LMS (e.g., knowing which modules the student has completed).</li>
+<li><strong>Level 4:</strong> Conversationally tailors suggestions and answers based on the learner's profile.</li>
+<li><strong>Level 5:</strong> Sophisticated, data-driven personalization and continuous updating of learner profiles to refine suggestions.</li>
+</ul>
+<hr />
+<h3 id="18-depth-of-internal-cross-referencing">18. Depth of Internal Cross-Referencing</h3>
+<p><strong>Question:</strong> Does the textbook dynamically highlight related concepts and prerequisites based on the user's current focus?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-1:</strong> Static cross-references.</li>
+<li><strong>Level 2:</strong> Rich static cross-referencing with interactive concept maps.</li>
+<li><strong>Level 3+:</strong> Cross-references informed by user knowledge state; the textbook might highlight the most relevant concepts for that learner.</li>
+<li><strong>Level 4-5:</strong> Uses conversation or intelligence to highlight or generate links specifically tuned to individual needs.</li>
+</ul>
+<hr />
+<h3 id="19-faq-and-trouble-shooting-adaptation">19. FAQ and Trouble-Shooting Adaptation</h3>
+<p><strong>Question:</strong> Are FAQs or help features adapted to the learner's known difficulties or frequently asked questions from similar users?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-2:</strong> Static FAQ sections.</li>
+<li><strong>Level 3:</strong> FAQ suggestions pulled from common misunderstandings related to user's performance.</li>
+<li><strong>Level 4-5:</strong> Adaptive FAQ that can expand or generate new answers in response to user input and historical data.</li>
+</ul>
+<hr />
+<h3 id="20-generation-of-custom-lesson-plans-and-curricula">20. Generation of Custom Lesson Plans and Curricula</h3>
+<p><strong>Question:</strong> Can the resource create an entirely custom lesson plan or course sequence tailored to an individual's learning trajectory?</p>
+<p><strong>Discrimination Rules:</strong></p>
+<ul>
+<li><strong>Level 0-3:</strong> Content is structured, but no custom lesson plans are generated. At best, Level 3 might reorder suggestions from a fixed set.</li>
+<li><strong>Level 4:</strong> Might recommend sequences conversationally, but still largely draws from predefined options.</li>
+<li><strong>Level 5:</strong> Fully generates personalized lesson plans and sequences dynamically, informed by continual learning and reinforcement feedback loops.</li>
+</ul>
+<hr />
+<p><strong>Overall Usage:</strong> By examining which level of capability applies to each question (0 through 5), an evaluator can determine the textbook's strongest match. A textbook that consistently answers in the realm of basic static features (0-1) remains at the lower levels. As it exhibits more interactivity (2), personalization and LMS integration (3), conversational capabilities (4), and finally dynamic, intelligent adaptation with generated content and reinforcement learning (5), the classification becomes clear.</p>
+<h2 id="generate-html-form">Generate HTML Form</h2>
+<div class="highlight"><pre><span></span><code>Now create an single-page HTML form that implements
+these 20 questions.  Use JavaScript within the HTML
+file to calculate progress on the number of questions
+remaining and give a running total of the level.
+After the last question, add a &quot;Calculate Score&quot;
+that will calculate the &quot;intelligence score&quot; of of
+textbook and give an explanation of how the score
+was calculated.  Make the title of the page be
+&quot;Calculating Intelligence Level of A Textbook&quot;.
+</code></pre></div>
+<h2 id="sample-html-form">Sample HTML Form</h2>
+<p><a href="./level-questions.html">Intelligent Textbook Level Questions</a></p>
+<p><a href="../level-questions-v1.html">Level Questions (prior version)</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../generate-logo/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generate Logo">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Generate Logo
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../semantic-search/" class="md-footer__link md-footer__link--next" aria-label="Next: Semantic Search">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Semantic Search
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
