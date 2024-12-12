@@ -23,17 +23,58 @@ in the ```docs``` directory change.  On GitHub, a GitHub action can be configure
 
 #### Code Highlighting
 
+The process of rendering source code with visually distinct styles to enhance readability and comprehension.
+
+Mkdocs material allows this feature to be enabled by changing the mkdocs.yml configuration file.
+
 #### Concept Graph
 
+A structured representation of concepts and their interrelationships, typically organized as nodes connected by edges.
+
+Concept Graphs are used to create lesson plans and learning roadmaps that are customized to a students learning objectives.
+
+#### Embedding
+
+A numeric vector representation of text that encodes semantic meaning, enabling large language models and semantic search systems to compare and rank content based on conceptual similarity rather than just keyword matching.
+
+**Example in an Intelligent Textbook:**
+When a student highlights a concept, the intelligent textbook generates embeddings for that concept and searches its database of content for related topics that share similar embeddings. As a result, it can suggest complementary reading sections, practice questions, or simulations that align with the student’s current focus, thus enhancing personalized learning.
+
 #### Favicon
+A small icon associated with a webpage, displayed by web browsers in tabs, bookmarks, or address bars.
 
 #### Formulas
+Mathematical expressions that represent relationships between variables, constants, and functions.
 
 #### GitHub Actions
 
+A workflow automation service integrated into GitHub that executes predefined tasks in response to repository events.
+
 #### Glossary of Terms
 
-#### Edit from GitHub
+A controlled vocabulary that lists specialized terms and their definitions to ensure consistent understanding.
+
+#### Hyper-Personalization
+
+The ability for a textbook to be customized to the needs of an individual learner.
+
+Modern textbooks allow hyper-personalization to be done in real-time using chatbots and agents.
+
+#### Edit Icon
+
+The ability to add an "Edit Icon" to the top of each page in a textbook.
+
+Mkdocs material allows the Edit Icon to move the user directly to a form
+where they can click the Edit icon to change text.  By doing a Save
+a GitHub action can be triggered to update the HTML of the site.
+
+This feature allows non-technical staff to change and preview changes without having to setup a local build process on their local computer or server.
+
+#### Keyword Search
+
+A retrieval method that matches documents against user-supplied words or phrases to identify relevant content.
+
+See also: [semantic search](#semantic-search)
 
 #### ISO Definition
 
@@ -51,9 +92,25 @@ A directed graph of concepts that reflects the order that concepts should be lea
 
 #### License
 
+A legal instrument specifying permissions, conditions, and restrictions for using, modifying, or redistributing content or software.
+
+mkdoc material allows you to place your license link on the footer of each page.
+
 #### Link Checker
 
+A tool that verifies the validity and accessibility of hyperlinks within a given set of documents or webpages.
+
 #### MicroSim
+
+A small-scale, embedded interactive simulation designed to illustrate a concept interactively within educational content.
+
+MicroSim are a core element of intelligent interactive textbooks.
+
+See the [MicroSims for Education Website](https://dmccreary.github.io/microsims/)
+
+#### MicroSite
+
+A website that runs on a web server with no need for complex heavy APIs to expensive services such as a search engine.
 
 #### Navigation
 
@@ -92,11 +149,19 @@ list the pages that match search keywords.
 Note that standard mkdocs search does not use embeddings and there is no
 way to find similar documents.
 
+#### Semantic Search
+
+A retrieval method that interprets the contextual meaning of search terms to improve the relevance of search results.
+
+Intelligent textbooks frequently create [embeddings](#embeddings) for words, phrases, paragraphs and pages so you can quickly find similar content.
+
 #### Social Media Previews
+
+Summaries automatically generated when a webpage link is shared on social platforms, often including a title, description, and image.
 
 #### Table of Contents
 
-Tools to generate a list of 
+A structured list of document sections and headings, enabling users to locate and navigate to specific topics easily.
 
 #### Vis.js
 

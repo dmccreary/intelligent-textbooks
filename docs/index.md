@@ -1,5 +1,8 @@
 # Mkdocs for Intelligent Textbooks
 
+*intelligent textbooks guide students through concepts
+on their quest for knowledge*
+
 Welcome to the website for a step-by-step guild to using the [mkdocs](http://mkdocs.com) build system 
 paried with generative AI to create and maintain intelligent textbooks.
 

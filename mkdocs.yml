@@ -23,6 +23,10 @@ nav:
     - Feature Mapping: prompts/feature-mapping.md
     - Enumerate Concepts: prompts/enumerate-concepts.md
     - Generate Logo: prompts/generate-logo.md
+    - Intelligence Level Questions: prompts/level-questions.md
+    - Semantic Search: prompts/semantic-search.md
+    - Word Cloud: prompts/word-cloud.md
+
   - Sims:
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
