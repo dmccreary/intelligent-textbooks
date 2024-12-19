@@ -45,10 +45,6 @@
          <lastmod>2024-12-19</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/enumerate-concepts/</loc>
-         <lastmod>2024-12-19</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/feature-mapping/</loc>
          <lastmod>2024-12-19</lastmod>
     </url>
@@ -69,15 +65,27 @@
          <lastmod>2024-12-19</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/learning-graph/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/learning-graph/02-enumerate-concepts/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/learning-graph/03-dependency/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/learning-graph/04-taxonomy/</loc>
+         <lastmod>2024-12-19</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/sims/</loc>
          <lastmod>2024-12-19</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/sims/learning-graph/concept-labels/</loc>
-         <lastmod>2024-12-19</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/sims/learning-graph/topic-headers/</loc>
+         <loc>https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/sims/learning-graph/</loc>
          <lastmod>2024-12-19</lastmod>
     </url>
     <url>
