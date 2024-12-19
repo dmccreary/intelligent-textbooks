@@ -29,6 +29,7 @@ nav:
 
   - Sims:
     - Word Cloud: sims/word-cloud/index.md
+    - Learning Graph: sims/learning-graph/index.md
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
   - Checklist: checklist.md
