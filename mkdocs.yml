@@ -28,6 +28,7 @@ nav:
     - Word Cloud: prompts/word-cloud.md
 
   - Sims:
+    - Word Cloud: sims/word-cloud/index.md
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
   - Checklist: checklist.md
