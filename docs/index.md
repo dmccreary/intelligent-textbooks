@@ -1,4 +1,4 @@
-# Mkdocs for Intelligent Textbooks
+# Building Intelligent Textbooks
 
 *intelligent textbooks guide students through concepts
 on their quest for knowledge*
