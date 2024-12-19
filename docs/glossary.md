@@ -33,6 +33,13 @@ A structured representation of concepts and their interrelationships, typically 
 
 Concept Graphs are used to create lesson plans and learning roadmaps that are customized to a students learning objectives.
 
+#### Deep Linking
+
+The ability to send a link to another person in a chat or e-mail that links
+directly to a subsection of a document.
+
+**Example:** You can send a link directly to a specific term in the [Glossary of Terms](#glossary)
+
 #### Embedding
 
 A numeric vector representation of text that encodes semantic meaning, enabling large language models and semantic search systems to compare and rank content based on conceptual similarity rather than just keyword matching.
@@ -50,9 +57,11 @@ Mathematical expressions that represent relationships between variables, constan
 
 A workflow automation service integrated into GitHub that executes predefined tasks in response to repository events.
 
-#### Glossary of Terms
+#### Glossary
 
 A controlled vocabulary that lists specialized terms and their definitions to ensure consistent understanding.
+
+* Also known as: Glossary of Terms
 
 #### Hyper-Personalization
 
@@ -99,6 +108,44 @@ mkdoc material allows you to place your license link on the footer of each page.
 #### Link Checker
 
 A tool that verifies the validity and accessibility of hyperlinks within a given set of documents or webpages.
+
+#### Markdown
+
+Markdown: A lightweight markup language with plain text formatting syntax designed to be easy to read and write. It is primarily used for creating formatted documents and web content, converting plain text to structured formats such as HTML or PDF through a rendering process.
+
+Example:
+Markdown syntax allows for the creation of structured content. For instance:
+
+- To create a header: # Header 1 or ## Header 2
+- To format text in bold: **bold text**
+- To create a link: [Link text](https://example.com)
+- To include an image: ![Alt text](image-url.png)
+
+For example, to write a numbered list:
+
+```markdown
+1. Item 1
+1. Item 2
+1. Item 3
+```
+
+Markdown will be rendered as the following:
+
+1. Item 1
+1. Item 2
+1. Item 3
+
+Note that the item counter is automatically calculated.
+
+#### Material
+
+A popular theme for the [mkdocs](#mkdocs) build system.
+
+The Material Theme currently has over [21K](https://github.com/squidfunk/mkdocs-material/) stars on GitHub.  This is more than 10x any of the other themes for mkdocs.
+
+#### Mkdocs
+
+A documentation build system that leverages [Markdown](#markdown) syntax for generating textbooks and websites.
 
 #### MicroSim
 
