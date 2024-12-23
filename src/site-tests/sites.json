@@ -1,0 +1,14 @@
+[
+    { "site": {
+        "name": "Intelligent Textbooks",
+        "github_repo": "https://github.com/dmccreary/mkdocs-for-intelligent-textbooks"
+    }},
+    { "site": {
+      "name": "MicroSims",
+      "github_repo": "https://github.com/dmccreary/microsims"
+    }},
+    { "site": {
+      "name": "LearningGraphs",
+      "github_repo": "https://github.com/dmccreary/learning-graphs"
+    }} 
+]
