@@ -1,14 +1,117 @@
-[
+[  
+    { "site": {
+        "name": "AI Assisted Geometry",
+        "github_repo": "https://github.com/dmccreary/geometry-course"
+    }},
+  
+    { "site": {
+        "name": "AI Based Data Science with Python",
+        "github_repo": "https://github.com/dmccreary/data-science-course"
+    }},
+
+    { "site": {
+        "name": "AI Racing League",
+        "github_repo": "https://github.com/CoderDojoTC/ai-racing-league"
+    }},
+  
+    { "site": {
+        "name": "Beginning Electronics",
+        "github_repo": "https://github.com/dmccreary/beginning-electronics"
+    }},
+
+    { "site": {
+        "name": "Digital Electronics",
+        "github_repo": "https://github.com/dmccreary/digital-electronics"
+    }},
+
+    { "site": {
+        "name": "Generative AI Strategy",
+        "github_repo": "https://github.com/dmccreary/cmm-for-genai"
+    }},
+
+    { "site": {
+        "name": "GraphRAG",
+        "github_repo": "https://github.com/dmccreary/graph-rag"
+    }},
+
+    { "site": {
+        "name": "Generative AI Architecture Patterns",
+        "github_repo": "https://github.com/dmccreary/genai-arch-patterns"
+    }},
+   
+    { "site": {
+        "name": "Generative AI for Teachers",
+        "github_repo": "https://github.com/CoderDojoTC/chatgpt-for-teachers"
+    }},
+   
+    { "site": {
+      "name": "Graph Algorithms",
+      "github_repo": "https://github.com/dmccreary/graph-algorithms"
+    }},
+
+    { "site": {
+        "name": "Graph Data Modeling",
+        "github_repo": "https://github.com/dmccreary/graph-data-modeling-course"
+      }},
+     
+      { "site": {
+        "name": "Graph Learning Management Systems",
+        "github_repo": "https://github.com/dmccreary/graph-lms"
+      }},
+     
     { "site": {
         "name": "Intelligent Textbooks",
         "github_repo": "https://github.com/dmccreary/mkdocs-for-intelligent-textbooks"
     }},
+
     { "site": {
-      "name": "MicroSims",
-      "github_repo": "https://github.com/dmccreary/microsims"
-    }},
-    { "site": {
-      "name": "LearningGraphs",
+      "name": "Learning Graphs",
       "github_repo": "https://github.com/dmccreary/learning-graphs"
-    }} 
+    }},
+
+    { "site": {
+        "name": "MicroPython for Kids",
+        "github_repo": "https://github.com/CoderDojoTC/micropython"
+    }},
+
+
+    { "site": {
+        "name": "MicroPython Clocks and Watches",
+        "github_repo": "https://github.com/dmccreary/micropython-clocks-and-watches"
+    }},
+  
+    { "site": {
+        "name": "MicroSims",
+        "github_repo": "https://github.com/dmccreary/microsims"
+    }},
+
+    { "site": {
+        "name": "Micro Simulations for Electrical Engineering",
+        "github_repo": "https://github.com/kenn0727/ee-microsims"
+    }},
+
+    { "site": {
+        "name": "Moving Rainbow",
+        "github_repo": "https://github.com/dmccreary/moving-rainbow"
+    }},
+  
+    { "site": {
+        "name": "Signal Processing",
+        "github_repo": "https://github.com/dmccreary/signal-processing"
+    }},
+
+    { "site": {
+        "name": "STEM Robots",
+        "github_repo": "https://github.com/dmccreary/stem-robots"
+    }},
+
+    { "site": {
+        "name": "Systems Thinking",
+        "github_repo": "https://github.com/dmccreary/graph-systems-thinking"
+    }},
+
+    { "site": {
+        "name": "Robot Day",
+        "github_repo": "https://github.com/dmccreary/robot-day"
+    }}
 ]
