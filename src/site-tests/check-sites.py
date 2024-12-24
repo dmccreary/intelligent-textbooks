@@ -125,12 +125,6 @@ def main():
         
         if user is None or repo is None:
             print("  Unable to determine GitHub user/repo from URL:", repo_url)
-            # Print FAIL for each check or skip?
-            print("  License: FAIL")
-            print("  Glossary: FAIL")
-            print("  Admonitions: FAIL")
-            print("  Resize Logo: FAIL")
-            print("  Admonition Prompt: FAIL")
             continue
         
         # Perform checks
