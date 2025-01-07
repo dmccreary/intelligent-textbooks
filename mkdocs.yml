@@ -44,8 +44,6 @@ nav:
 
 theme:
   name: material
-  extra_css:
-    - styles/custom.css
   logo: img/logo.png
   favicon: img/favicon.ico
   # favicon: img/my-icon.png
@@ -77,6 +75,8 @@ markdown_extensions:
       linenums: true
 extra_css:
    - css/extra.css
+extra_javascript:
+    - js/extra.js
 extra:
   analytics:
     provider: google
