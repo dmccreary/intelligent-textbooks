@@ -25,3 +25,25 @@
   .upper-alpha ol {
     list-style-type: upper-alpha;
   }
+
+/* Styling for the Copy Button */
+.admonition.prompt {
+  position: relative;
+}
+
+.admonition.prompt .copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.admonition.prompt .copy-button:hover {
+  background-color: #0041a4; /* Darker blue on hover */
+}

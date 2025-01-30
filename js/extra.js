@@ -1,4 +1,4 @@
-ocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Find all admonitions with the "prompt" class
     document.querySelectorAll(".admonition.prompt").forEach((admonition) => {
         // Create a "Copy" button
