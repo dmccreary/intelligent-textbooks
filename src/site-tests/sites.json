@@ -4,7 +4,12 @@
         "github_repo": "https://github.com/dmccreary/geometry-course",
         "site_url": "https://dmccreary.github.io/geometry-course",
         "description": "AI Assisted Geometry is an online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims.",
-        "status": "We have created a detailed learning graph and about a dozen MicroSims.  We are looking for schools, teachers students to give us feedback."
+        "status": "We have created a detailed learning graph and about a dozen MicroSims.  We are looking for schools, teachers students to give us feedback.",
+        "markdown-file-count": 47,
+        "image-count": 25,
+        "word-count": 18093,
+        "microsim-count": 3,
+        "glossary-term-count": 38
     }},
   
     { "site": {
@@ -12,7 +17,12 @@
         "github_repo": "https://github.com/dmccreary/data-science-course",
         "site_url": "https://dmccreary.github.io/data-science-course",
         "description": "An AI based data science course that uses AI to help undergraduate college learn data science with Python.",
-        "status": "We have created a detailed learning graph.  We are looking for feedback on the priorities of the next steps."
+        "status": "We have created a detailed learning graph.  We are looking for feedback on the priorities of the next steps.",
+        "markdown-file-count": 21,
+        "image-count": 3,
+        "word-count": 22992,
+        "microsim-count": 1,
+        "glossary-term-count": 143
     }},
 
     { "site": {
@@ -20,7 +30,12 @@
         "github_repo": "https://github.com/CoderDojoTC/ai-racing-league",
         "site_url": "https://coderdojotc.github.io/ai-racing-league",
         "description": "The AI Racing League is a project to support a fun way of teaching of AI and machine learning using a $300 RC car with a Raspberry Pi and a Camera.",
-        "status": "We have created extensive content based on the recent upgrades from the NVIDIA Nano to the Raspberry Pi.  We plan to continue to evolve the site to support the DonkeyCar projects."
+        "status": "We have created extensive content based on the recent upgrades from the NVIDIA Nano to the Raspberry Pi.  We plan to continue to evolve the site to support the DonkeyCar projects.",
+        "markdown-file-count": 107,
+        "image-count": 70,
+        "word-count": 39402,
+        "microsim-count": 0,
+        "glossary-term-count": 20
     }},
   
     { "site": {
@@ -28,7 +43,12 @@
         "github_repo": "https://github.com/dmccreary/beginning-electronics",
         "site_url": "https://dmccreary.github.io/beginning-electronics",
         "description": "An online course that uses MicroSims to help junior high and high students learn the basics of electronics.",
-        "status": "Very minimal content and a few example MicroSims.  We are looking for feedback on the priorities of the next steps."
+        "status": "Very minimal content and a few example MicroSims.  We are looking for feedback on the priorities of the next steps.",  
+        "markdown-file-count": 40,
+        "image-count": 89,
+        "word-count": 15771,
+        "microsim-count": 6,
+        "glossary-term-count": 0
     }},
 
     { "site": {
@@ -36,7 +56,12 @@
         "github_repo": "https://github.com/dmccreary/digital-electronics",
         "site_url": "https://dmccreary.github.io/digital-electronics",
         "description": "An online course that uses MicroSims to help high school students learn basic digital electronics.  We focus on using a breadboard, simple LEDs, buttons and logic gates.  We assume students have access to about $50 worth of parts.  We do not cover microcontrollers.",
-        "status": "We have created a simple framework and we are adding new MicroSims as needed.  We are looking for schools, teachers and students to give us feedback on what content to create next."
+        "status": "We have created a simple framework and we are adding new MicroSims as needed.  We are looking for schools, teachers and students to give us feedback on what content to create next.",
+        "markdown-file-count": 15,
+        "image-count": 15,
+        "word-count": 2708,
+        "microsim-count": 3,
+        "glossary-term-count": 0
     }},
 
     { "site": {
@@ -44,7 +69,12 @@
         "github_repo": "https://github.com/dmccreary/clocks-and-watches",
         "site_url": "https://dmccreary.github.io/clocks-and-watches",
         "description": "An online course that uses MicroSims to help high school students learn how to design and build clocks and watches.  We focus on using a breadboard, microcontrollers, displays, real-time clocks and displays.",
-        "status": "We have a lot of content, a detailed learning graph and are considering testing the content in a live classroom setting."
+        "status": "We have a lot of content, a detailed learning graph and are considering testing the content in a live classroom setting.",
+        "markdown-file-count": 124,
+        "image-count": 105,
+        "word-count": 37325,
+        "microsim-count": 11,
+        "glossary-term-count": 149
     }},
   
     { "site": {
@@ -52,7 +82,12 @@
         "github_repo": "https://github.com/dmccreary/cmm-for-genai",
         "site_url": "https://dmccreary.github.io/cmm-for-genai",
         "description": "Generative AI Strategy is an online course that uses AI to help business leaders understand how to use generative AI to create and maintain their AI business strategy.",
-        "status": "Minimal content and slides.  Use to support an AI strategy development consulting practice."
+        "status": "Minimal content and slides.  Use to support an AI strategy development consulting practice.",
+        "markdown-file-count": 22,
+        "image-count": 10,
+        "word-count": 6972,
+        "microsim-count": 3,
+        "glossary-term-count": 0
     }},
 
     { "site": {

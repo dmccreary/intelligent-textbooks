@@ -1,5 +1,7 @@
 # Building Intelligent Textbooks
 
+![Cover Image](./img/cover.png)
+
 *Intelligent textbooks guide students through concepts
 on their quest for knowledge.*
 
