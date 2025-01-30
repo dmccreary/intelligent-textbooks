@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/prompts/level-questions/">
       
       
-        <link rel="prev" href="../generate-logo/">
+        <link rel="prev" href="../generate-cover-image/">
       
       
         <link rel="next" href="../semantic-search/">
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#level-questions" class="md-skip">
+        <a href="#intelligent-textbook-level-questions" class="md-skip">
           Skip to content
         </a>
       
@@ -358,6 +358,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -425,16 +431,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../enumerate-concepts.md" class="md-nav__link">
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
   
+  
+    <a href="../learning-graph/" class="md-nav__link">
+      
+  
   <span class="md-ellipsis">
-    Enumerate Concepts
+    Learning Graph
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -452,6 +489,27 @@
   
   <span class="md-ellipsis">
     Generate Logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate-cover-image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Cover Image
   </span>
   
 
@@ -786,21 +844,37 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Metrics
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    
     
       
-      
-  
-  
-  
-  
-    
-    
+        
       
         
           
@@ -831,7 +905,7 @@
         
   
   
-    <a href="../../sims/word-cloud/" class="md-nav__link">
+    <a href="../sims/index.md" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -845,6 +919,14 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1261,32 +1343,23 @@
   
 
 
-<h1 id="level-questions">Level Questions</h1>
+<h1 id="intelligent-textbook-level-questions">Intelligent Textbook Level Questions</h1>
+<p>We need an objective that would allow a instructor or a student to
+assess the "level" of an intelligent textbook.  Here is a set of prompts
+that will generate the questions for this assessment and then the HTML form that can be used to score the question results.  The result of the questions is a web form with JavaScript that will return a score of 1-5 for a textbook.</p>
 <h2 id="prompt">Prompt</h2>
-<div class="highlight"><pre><span></span><code>I am working on a project to help educators and students evaluate the score of an intelligent textbook.  We have developed the following &quot;Bands&quot; for general scoring, but I would like you to help generate a series of questions to help a specific textbook be assigned to a level.
-
-
-
-So please generate a list of 20 questions that would be used to assign the level of a textbook.  For each question, generate rules that would discriminate the levels.  Use questions that have the ability to discriminate each level.
-
-
-
-Here is a list of the levels:
-
-
-
-Level 0 - A printed textbook.  Give a higher score to a textbook that has a high quality table of contents, index, glossary and detailed annotated biography for students that want to learn more.
-
-Level 1 - An online PDF or PPT of a textbook.  Give a slightly higher score to versions that have high-quality search and many internal and external links.
-
-Level 2 - A website with rich media including videos, animations and simulations but no personalization.  Give a higher score to great navigation, deep links, great animations and simulations and a tools like linked word clouds, concept graphs and FAQ.  Level 2 books are not personalized with any student-spcific information.
-
-Level 3 - A website that is connected to a learning management systems that has knowledge of each person&#39;s current knowledge about concepts and learning goals
-
-Level 4 - A website that includes a conversational interface such as a chatbot.  The chabot can answer questions given your personal knowledge.  It can also recommend content for a topic.
-
-Level 5 - A fully intelligent textbook that can answer questions, suggest learning paths and provide detailed recommendations for content.  It uses reinforcement learning to continually learn about what learning paths work for students.  It can also generate customized lesson plans and generate new animations and simulations of the real world on demand.
-</code></pre></div>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>I am working on a project to help educators and students evaluate the score of an intelligent textbook.  We have developed the following "Bands" for general scoring, but I would like you to help generate a series of questions to help a specific textbook be assigned to a level.</p>
+<p>So please generate a list of 20 questions that would be used to assign the level of a textbook.  For each question, generate rules that would discriminate the levels.  Use questions that have the ability to discriminate each level.</p>
+<p>Here is a list of the levels:</p>
+<p><strong>Level 0</strong> - A printed textbook.  Give a higher score to a textbook that has a high quality table of contents, index, glossary and detailed annotated biography for students that want to learn more.</p>
+<p><strong>Level 1</strong> - An online PDF or PPT of a textbook.  Give a slightly higher score to versions that have high-quality search and many internal and external links.</p>
+<p><strong>Level 2</strong> - A website with rich media including videos, animations and simulations but no personalization.  Give a higher score to great navigation, deep links, great animations and simulations and a tools like linked word clouds, concept graphs and FAQ.  Level 2 books are not personalized with any student-spcific information.</p>
+<p><strong>Level 3</strong> - A website that is connected to a learning management systems that has knowledge of each person's current knowledge about concepts and learning goals</p>
+<p><strong>Level 4</strong> - A website that includes a conversational interface such as a chatbot.  The chabot can answer questions given your personal knowledge.  It can also recommend content for a topic.</p>
+<p><strong>Level 5</strong> - A fully intelligent textbook that can answer questions, suggest learning paths and provide detailed recommendations for content.  It uses reinforcement learning to continually learn about what learning paths work for students.  It can also generate customized lesson plans and generate new animations and simulations of the real world on demand.</p>
+</div>
 <h2 id="response">Response</h2>
 <p>Below is a set of 20 questions designed to help determine the "intelligence" level of a textbook according to the given bands. Each question focuses on a feature or capability that differentiates one level from another. For each question, there are guidelines on how the presence, quality, or sophistication of that feature might map to one of the six levels (0 to 5).</p>
 <p><strong>Key to Levels:</strong></p>
@@ -1298,7 +1371,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> Website with a conversational interface (chatbot) that uses personal knowledge</li>
 <li><strong>Level 5:</strong> Fully intelligent textbook (suggesting paths, reinforcement learning, generating new content/visualizations on demand)</li>
 </ul>
-<hr />
 <h3 id="1-table-of-contents-index-glossary-quality">1. Table of Contents, Index, Glossary Quality</h3>
 <p><strong>Question:</strong> How comprehensive and well-structured are the textbook's table of contents, index, and glossary?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1307,7 +1379,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 1+:</strong> Basic digital TOC and glossary may be present, but does not surpass the printed quality.</li>
 <li>If the textbook excels only in static reference quality (no interactivity), it's likely Level 0.</li>
 </ul>
-<hr />
 <h3 id="2-availability-of-digital-format-and-simple-search">2. Availability of Digital Format and Simple Search</h3>
 <p><strong>Question:</strong> Is the textbook available in a digital format with a basic keyword search function?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1325,7 +1396,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 1:</strong> Has basic hyperlinks (e.g., from a digital PDF's table of contents to chapters).</li>
 <li><strong>Level 2+:</strong> Enhanced hyperlinking including deep internal cross-references and external resource links is common, but if only simple links are present, that suggests Level 1.</li>
 </ul>
-<hr />
 <h3 id="4-inclusion-of-rich-media-videos-animations-simulations">4. Inclusion of Rich Media (Videos, Animations, Simulations)</h3>
 <p><strong>Question:</strong> Does the resource integrate videos, animations, or simulations directly into the learning material?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1334,7 +1404,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 2:</strong> Multiple embedded videos, animations, simulations that support the text.</li>
 <li><strong>Level 3-5:</strong> Will also have rich media, but for discriminating Level 2, focus on presence of rich media without personalization.</li>
 </ul>
-<hr />
 <h3 id="5-interactivity-and-navigational-tools">5. Interactivity and Navigational Tools</h3>
 <p><strong>Question:</strong> How interactive and navigable is the resource? Does it provide advanced navigation tools like concept maps, word clouds, or FAQ sections?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1343,7 +1412,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 2:</strong> Offers concept graphs, linked word clouds, advanced FAQ pages, and dynamic navigation menus.</li>
 <li><strong>Level 3-5:</strong> Similar navigation exists, but the presence of personalization or intelligence must be examined in other questions.</li>
 </ul>
-<hr />
 <h3 id="6-personalization-or-adaptation-of-content">6. Personalization or Adaptation of Content</h3>
 <p><strong>Question:</strong> Does the textbook adapt its content based on an individual student's learning profile, prior knowledge, or assessment data?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1352,7 +1420,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3:</strong> Content or navigation adjusts based on student progress data from an LMS.</li>
 <li><strong>Level 4-5:</strong> Personalized recommendations or conversation-based personalization is evident.</li>
 </ul>
-<hr />
 <h3 id="7-integration-with-learning-management-systems-lms">7. Integration with Learning Management Systems (LMS)</h3>
 <p><strong>Question:</strong> Is the textbook integrated with an LMS to track individual learner progress and adjust experiences?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1361,7 +1428,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3:</strong> Integrated with LMS, uses learner data to guide content selection.</li>
 <li><strong>Level 4-5:</strong> LMS integration plus more advanced, intelligent personalization or conversational interfaces.</li>
 </ul>
-<hr />
 <h3 id="8-ability-to-assess-student-knowledge">8. Ability to Assess Student Knowledge</h3>
 <p><strong>Question:</strong> Does the textbook include quizzes, assessments, or tools that adapt based on the student's performance?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1371,7 +1437,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3:</strong> Adaptive assessments informed by LMS data.</li>
 <li><strong>Level 4-5:</strong> Assessments dynamically adjust based on a richer student model and can suggest new paths or respond to queries conversationally.</li>
 </ul>
-<hr />
 <h3 id="9-conversational-interface-or-chatbot-presence">9. Conversational Interface or Chatbot Presence</h3>
 <p><strong>Question:</strong> Is there a built-in conversational agent that can answer student questions directly?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1380,7 +1445,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> A chatbot that can answer questions based on personal user data and recommend relevant topics.</li>
 <li><strong>Level 5:</strong> A chatbot with advanced reasoning, capable of generating entirely new content/visualizations on demand.</li>
 </ul>
-<hr />
 <h3 id="10-ability-to-suggest-next-steps-or-learning-paths">10. Ability to Suggest Next Steps or Learning Paths</h3>
 <p><strong>Question:</strong> Can the textbook suggest what a student should study next based on their interactions or mastery?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1390,7 +1454,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> Conversational suggestions tailored to the user's performance.</li>
 <li><strong>Level 5:</strong> Intelligent, continuously improving recommendations (reinforcement learning) that adapt learning paths dynamically.</li>
 </ul>
-<hr />
 <h3 id="11-dynamic-content-generation">11. Dynamic Content Generation</h3>
 <p><strong>Question:</strong> Can the resource generate new examples, problems, or explanations on demand rather than just serving static content?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1399,7 +1462,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> Some dynamic retrieval of suitable content may occur, but primarily curated.</li>
 <li><strong>Level 5:</strong> Fully dynamic content generation, including new examples, problems, and custom explanations.</li>
 </ul>
-<hr />
 <h3 id="12-ability-to-create-custom-visualizations-or-simulations-on-demand">12. Ability to Create Custom Visualizations or Simulations on Demand</h3>
 <p><strong>Question:</strong> Can the textbook create new animations, simulations, or visual content in response to user queries or learning needs?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1408,7 +1470,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3-4:</strong> Might select the best pre-existing simulations based on user need.</li>
 <li><strong>Level 5:</strong> Can generate entirely new visualizations or simulations dynamically.</li>
 </ul>
-<hr />
 <h3 id="13-reinforcement-learning-and-continuous-improvement">13. Reinforcement Learning and Continuous Improvement</h3>
 <p><strong>Question:</strong> Does the system use data from student interactions over time to improve its recommendations or content delivery?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1416,7 +1477,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 0-4:</strong> No true reinforcement learning capabilities. At best, these levels adapt to user profiles statically or rule-based.</li>
 <li><strong>Level 5:</strong> Employs reinforcement learning to continually refine learning paths and strategies for individual and aggregated learners.</li>
 </ul>
-<hr />
 <h3 id="14-external-resource-integration">14. External Resource Integration</h3>
 <p><strong>Question:</strong> Does the textbook integrate with external resources (like encyclopedias, research databases, or educational tools) in a context-aware manner?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1426,7 +1486,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 2:</strong> Rich external link integration within an interactive website.</li>
 <li><strong>Level 3-5:</strong> External resources chosen or recommended based on the student's profile (increasing personalization with each higher level).</li>
 </ul>
-<hr />
 <h3 id="15-ability-to-handle-user-inquiries-beyond-pre-defined-faq">15. Ability to Handle User Inquiries Beyond Pre-Defined FAQ</h3>
 <p><strong>Question:</strong> Can the textbook address student questions that aren't explicitly covered in the predefined text (e.g., open-ended queries)?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1436,7 +1495,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> Conversational agent attempts to answer new questions contextually.</li>
 <li><strong>Level 5:</strong> Conversational agent with advanced reasoning and content generation responds fully and contextually, even creating new explanatory materials.</li>
 </ul>
-<hr />
 <h3 id="16-support-for-multiple-learning-styles">16. Support for Multiple Learning Styles</h3>
 <p><strong>Question:</strong> Does the textbook adjust or present content to support various learning styles (visual, auditory, kinesthetic) based on the learner?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1445,7 +1503,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3-4:</strong> Selection of content type may adjust based on user performance or preferences.</li>
 <li><strong>Level 5:</strong> Dynamically generates or selects content formats best suited to the individual's learning patterns as observed and improved over time.</li>
 </ul>
-<hr />
 <h3 id="17-integration-of-learner-profiles-goals-interests-past-performance">17. Integration of Learner Profiles (Goals, Interests, Past Performance)</h3>
 <p><strong>Question:</strong> Can the textbook use the learner's stated goals, interests, or performance history to prioritize or highlight certain topics?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1455,7 +1512,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> Conversationally tailors suggestions and answers based on the learner's profile.</li>
 <li><strong>Level 5:</strong> Sophisticated, data-driven personalization and continuous updating of learner profiles to refine suggestions.</li>
 </ul>
-<hr />
 <h3 id="18-depth-of-internal-cross-referencing">18. Depth of Internal Cross-Referencing</h3>
 <p><strong>Question:</strong> Does the textbook dynamically highlight related concepts and prerequisites based on the user's current focus?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1465,7 +1521,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3+:</strong> Cross-references informed by user knowledge state; the textbook might highlight the most relevant concepts for that learner.</li>
 <li><strong>Level 4-5:</strong> Uses conversation or intelligence to highlight or generate links specifically tuned to individual needs.</li>
 </ul>
-<hr />
 <h3 id="19-faq-and-trouble-shooting-adaptation">19. FAQ and Trouble-Shooting Adaptation</h3>
 <p><strong>Question:</strong> Are FAQs or help features adapted to the learner's known difficulties or frequently asked questions from similar users?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1474,7 +1529,6 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 3:</strong> FAQ suggestions pulled from common misunderstandings related to user's performance.</li>
 <li><strong>Level 4-5:</strong> Adaptive FAQ that can expand or generate new answers in response to user input and historical data.</li>
 </ul>
-<hr />
 <h3 id="20-generation-of-custom-lesson-plans-and-curricula">20. Generation of Custom Lesson Plans and Curricula</h3>
 <p><strong>Question:</strong> Can the resource create an entirely custom lesson plan or course sequence tailored to an individual's learning trajectory?</p>
 <p><strong>Discrimination Rules:</strong></p>
@@ -1483,19 +1537,20 @@ Level 5 - A fully intelligent textbook that can answer questions, suggest learni
 <li><strong>Level 4:</strong> Might recommend sequences conversationally, but still largely draws from predefined options.</li>
 <li><strong>Level 5:</strong> Fully generates personalized lesson plans and sequences dynamically, informed by continual learning and reinforcement feedback loops.</li>
 </ul>
-<hr />
 <p><strong>Overall Usage:</strong> By examining which level of capability applies to each question (0 through 5), an evaluator can determine the textbook's strongest match. A textbook that consistently answers in the realm of basic static features (0-1) remains at the lower levels. As it exhibits more interactivity (2), personalization and LMS integration (3), conversational capabilities (4), and finally dynamic, intelligent adaptation with generated content and reinforcement learning (5), the classification becomes clear.</p>
 <h2 id="generate-html-form">Generate HTML Form</h2>
-<div class="highlight"><pre><span></span><code>Now create an single-page HTML form that implements
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Now create an single-page HTML form that implements
 these 20 questions.  Use JavaScript within the HTML
 file to calculate progress on the number of questions
 remaining and give a running total of the level.
-After the last question, add a &quot;Calculate Score&quot;
-that will calculate the &quot;intelligence score&quot; of of
+After the last question, add a "Calculate Score"
+that will calculate the "intelligence score" of of
 textbook and give an explanation of how the score
 was calculated.  Make the title of the page be
-&quot;Calculating Intelligence Level of A Textbook&quot;.
-</code></pre></div>
+"Calculating Intelligence Level of A Textbook".</p>
+</div>
 <h2 id="sample-html-form">Sample HTML Form</h2>
 <p><a href="../level-questions-v2.html">Intelligent Textbook Level Questions</a></p>
 <p><a href="../level-questions-v1.html">Level Questions (prior version)</a></p>
@@ -1536,7 +1591,7 @@ was calculated.  Make the title of the page be
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../generate-logo/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generate Logo">
+          <a href="../generate-cover-image/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generate Cover Image">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1546,7 +1601,7 @@ was calculated.  Make the title of the page be
                 Previous
               </span>
               <div class="md-ellipsis">
-                Generate Logo
+                Generate Cover Image
               </div>
             </div>
           </a>

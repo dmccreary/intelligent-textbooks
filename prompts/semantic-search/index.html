@@ -358,6 +358,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -425,16 +431,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../enumerate-concepts.md" class="md-nav__link">
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
   
+  
+    <a href="../learning-graph/" class="md-nav__link">
+      
+  
   <span class="md-ellipsis">
-    Enumerate Concepts
+    Learning Graph
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -452,6 +489,27 @@
   
   <span class="md-ellipsis">
     Generate Logo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate-cover-image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Cover Image
   </span>
   
 
@@ -535,6 +593,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#approaches-to-implement-embedding-based-search-in-mkdocs" class="md-nav__link">
     <span class="md-ellipsis">
       Approaches to Implement Embedding-Based Search in MkDocs
@@ -542,8 +610,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#challenges-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Challenges and Considerations
@@ -551,8 +619,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
@@ -560,13 +628,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
       Additional Resources
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -600,21 +673,37 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Metrics
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    
     
       
-      
-  
-  
-  
-  
-    
-    
+        
       
         
           
@@ -645,7 +734,7 @@
         
   
   
-    <a href="../../sims/word-cloud/" class="md-nav__link">
+    <a href="../sims/index.md" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -659,6 +748,14 @@
     </a>
   
 
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -831,6 +928,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#approaches-to-implement-embedding-based-search-in-mkdocs" class="md-nav__link">
     <span class="md-ellipsis">
       Approaches to Implement Embedding-Based Search in MkDocs
@@ -838,8 +945,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#challenges-and-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Challenges and Considerations
@@ -847,8 +954,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
@@ -856,13 +963,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
       Additional Resources
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -890,13 +1002,18 @@
 
 
 <h1 id="semantic-search">Semantic Search</h1>
+<p>Although the keyword search feature built in to mkdocs is pretty good for a microsite architecture (just hosted on a web server with no search backend), it still leaves a lot to be desired.  Here is a prompt that will
+get you started and building your own semantic search tool.</p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
 <p>The search features of mkdocs seem to be limited to matching keywords. 
 Is there a way to use embeddings to increase the quality of search? 
 I know we can create embeddings for each word, phrase, sentence, paragraph and page at build time.</p>
-<p>ChatGPT</p>
-<p>Thought for 17 seconds</p>
+</div>
+<h2 id="response">Response</h2>
+<p>ChatGPT o1-preview Thought for 17 seconds</p>
 <p>Yes, you can enhance MkDocs' search capabilities by incorporating embeddings to enable semantic search, which can significantly improve the relevance and quality of search results compared to traditional keyword-based approaches. While MkDocs' default search relies on keyword matching (typically using <a href="https://lunrjs.com/">Lunr.js</a>), integrating embeddings allows the search to understand the context and meaning behind queries and documents.</p>
-<h3 id="approaches-to-implement-embedding-based-search-in-mkdocs"><strong>Approaches to Implement Embedding-Based Search in MkDocs</strong></h3>
+<h3 id="approaches-to-implement-embedding-based-search-in-mkdocs">Approaches to Implement Embedding-Based Search in MkDocs</h3>
 <ol>
 <li>
 <p><strong>Using Third-Party Search Services</strong></p>
