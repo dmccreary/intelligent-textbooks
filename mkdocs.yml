@@ -32,6 +32,7 @@ nav:
     - Semantic Search: prompts/semantic-search.md
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
+    - Discord Admin: prompts/discord-admin.md
     - Sims:
       - Introduction: prompts/sims/index.md
       - Word Cloud: sims/word-cloud/index.md
