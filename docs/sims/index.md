@@ -11,3 +11,7 @@
 ## Sine Wave
 
 [Sine Wave](./sine-wave/index.md)
+
+## Templates
+
+[](./templates/index.md)

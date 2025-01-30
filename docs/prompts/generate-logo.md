@@ -7,10 +7,9 @@ the website.
 
 ## Prompt
 
-```linenums="0"
-Please generate a minimalistic image of a orange book with the
-lowercase letter "i" on it.  Use blue for the background.
-```
+!!! prompt
+    Please generate a minimalistic image of a orange book with the
+    lowercase letter "i" on it.  Use blue for the background.
 
 ## Response
 

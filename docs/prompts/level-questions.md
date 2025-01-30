@@ -1,33 +1,31 @@
-# Level Questions
+# Intelligent Textbook Level Questions
+
+We need an objective that would allow a instructor or a student to
+assess the "level" of an intelligent textbook.  Here is a set of prompts
+that will generate the questions for this assessment and then the HTML form that can be used to score the question results.  The result of the questions is a web form with JavaScript that will return a score of 1-5 for a textbook.
 
 ## Prompt
 
-```linenums="0"
+!!! prompt
+    I am working on a project to help educators and students evaluate the score of an intelligent textbook.  We have developed the following "Bands" for general scoring, but I would like you to help generate a series of questions to help a specific textbook be assigned to a level.
 
-I am working on a project to help educators and students evaluate the score of an intelligent textbook.  We have developed the following "Bands" for general scoring, but I would like you to help generate a series of questions to help a specific textbook be assigned to a level.
-
-
-
-So please generate a list of 20 questions that would be used to assign the level of a textbook.  For each question, generate rules that would discriminate the levels.  Use questions that have the ability to discriminate each level.
+    So please generate a list of 20 questions that would be used to assign the level of a textbook.  For each question, generate rules that would discriminate the levels.  Use questions that have the ability to discriminate each level.
 
 
+    Here is a list of the levels:
 
-Here is a list of the levels:
+    **Level 0** - A printed textbook.  Give a higher score to a textbook that has a high quality table of contents, index, glossary and detailed annotated biography for students that want to learn more.
 
+    **Level 1** - An online PDF or PPT of a textbook.  Give a slightly higher score to versions that have high-quality search and many internal and external links.
 
+    **Level 2** - A website with rich media including videos, animations and simulations but no personalization.  Give a higher score to great navigation, deep links, great animations and simulations and a tools like linked word clouds, concept graphs and FAQ.  Level 2 books are not personalized with any student-spcific information.
 
-Level 0 - A printed textbook.  Give a higher score to a textbook that has a high quality table of contents, index, glossary and detailed annotated biography for students that want to learn more.
+    **Level 3** - A website that is connected to a learning management systems that has knowledge of each person's current knowledge about concepts and learning goals
 
-Level 1 - An online PDF or PPT of a textbook.  Give a slightly higher score to versions that have high-quality search and many internal and external links.
+    **Level 4** - A website that includes a conversational interface such as a chatbot.  The chabot can answer questions given your personal knowledge.  It can also recommend content for a topic.
 
-Level 2 - A website with rich media including videos, animations and simulations but no personalization.  Give a higher score to great navigation, deep links, great animations and simulations and a tools like linked word clouds, concept graphs and FAQ.  Level 2 books are not personalized with any student-spcific information.
+    **Level 5** - A fully intelligent textbook that can answer questions, suggest learning paths and provide detailed recommendations for content.  It uses reinforcement learning to continually learn about what learning paths work for students.  It can also generate customized lesson plans and generate new animations and simulations of the real world on demand.
 
-Level 3 - A website that is connected to a learning management systems that has knowledge of each person's current knowledge about concepts and learning goals
-
-Level 4 - A website that includes a conversational interface such as a chatbot.  The chabot can answer questions given your personal knowledge.  It can also recommend content for a topic.
-
-Level 5 - A fully intelligent textbook that can answer questions, suggest learning paths and provide detailed recommendations for content.  It uses reinforcement learning to continually learn about what learning paths work for students.  It can also generate customized lesson plans and generate new animations and simulations of the real world on demand.
-```
 
 ## Response
 
@@ -42,8 +40,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** Website with a conversational interface (chatbot) that uses personal knowledge
 -   **Level 5:** Fully intelligent textbook (suggesting paths, reinforcement learning, generating new content/visualizations on demand)
 
-* * * *
-
 ### 1. Table of Contents, Index, Glossary Quality
 
 **Question:** How comprehensive and well-structured are the textbook's table of contents, index, and glossary?
@@ -54,7 +50,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 1+:** Basic digital TOC and glossary may be present, but does not surpass the printed quality.
 -   If the textbook excels only in static reference quality (no interactivity), it's likely Level 0.
 
-* * * *
 
 ### 2. Availability of Digital Format and Simple Search
 
@@ -78,8 +73,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 1:** Has basic hyperlinks (e.g., from a digital PDF's table of contents to chapters).
 -   **Level 2+:** Enhanced hyperlinking including deep internal cross-references and external resource links is common, but if only simple links are present, that suggests Level 1.
 
-* * * *
-
 ### 4. Inclusion of Rich Media (Videos, Animations, Simulations)
 
 **Question:** Does the resource integrate videos, animations, or simulations directly into the learning material?
@@ -89,8 +82,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 0-1:** No embedded rich media, or only static images.
 -   **Level 2:** Multiple embedded videos, animations, simulations that support the text.
 -   **Level 3-5:** Will also have rich media, but for discriminating Level 2, focus on presence of rich media without personalization.
-
-* * * *
 
 ### 5. Interactivity and Navigational Tools
 
@@ -102,7 +93,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 2:** Offers concept graphs, linked word clouds, advanced FAQ pages, and dynamic navigation menus.
 -   **Level 3-5:** Similar navigation exists, but the presence of personalization or intelligence must be examined in other questions.
 
-* * * *
 
 ### 6. Personalization or Adaptation of Content
 
@@ -114,7 +104,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3:** Content or navigation adjusts based on student progress data from an LMS.
 -   **Level 4-5:** Personalized recommendations or conversation-based personalization is evident.
 
-* * * *
 
 ### 7. Integration with Learning Management Systems (LMS)
 
@@ -126,7 +115,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3:** Integrated with LMS, uses learner data to guide content selection.
 -   **Level 4-5:** LMS integration plus more advanced, intelligent personalization or conversational interfaces.
 
-* * * *
 
 ### 8. Ability to Assess Student Knowledge
 
@@ -139,7 +127,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3:** Adaptive assessments informed by LMS data.
 -   **Level 4-5:** Assessments dynamically adjust based on a richer student model and can suggest new paths or respond to queries conversationally.
 
-* * * *
 
 ### 9. Conversational Interface or Chatbot Presence
 
@@ -151,7 +138,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** A chatbot that can answer questions based on personal user data and recommend relevant topics.
 -   **Level 5:** A chatbot with advanced reasoning, capable of generating entirely new content/visualizations on demand.
 
-* * * *
 
 ### 10. Ability to Suggest Next Steps or Learning Paths
 
@@ -164,7 +150,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** Conversational suggestions tailored to the user's performance.
 -   **Level 5:** Intelligent, continuously improving recommendations (reinforcement learning) that adapt learning paths dynamically.
 
-* * * *
 
 ### 11. Dynamic Content Generation
 
@@ -176,7 +161,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** Some dynamic retrieval of suitable content may occur, but primarily curated.
 -   **Level 5:** Fully dynamic content generation, including new examples, problems, and custom explanations.
 
-* * * *
 
 ### 12. Ability to Create Custom Visualizations or Simulations on Demand
 
@@ -188,7 +172,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3-4:** Might select the best pre-existing simulations based on user need.
 -   **Level 5:** Can generate entirely new visualizations or simulations dynamically.
 
-* * * *
 
 ### 13. Reinforcement Learning and Continuous Improvement
 
@@ -198,8 +181,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 
 -   **Level 0-4:** No true reinforcement learning capabilities. At best, these levels adapt to user profiles statically or rule-based.
 -   **Level 5:** Employs reinforcement learning to continually refine learning paths and strategies for individual and aggregated learners.
-
-* * * *
 
 ### 14. External Resource Integration
 
@@ -212,7 +193,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 2:** Rich external link integration within an interactive website.
 -   **Level 3-5:** External resources chosen or recommended based on the student's profile (increasing personalization with each higher level).
 
-* * * *
 
 ### 15. Ability to Handle User Inquiries Beyond Pre-Defined FAQ
 
@@ -225,7 +205,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** Conversational agent attempts to answer new questions contextually.
 -   **Level 5:** Conversational agent with advanced reasoning and content generation responds fully and contextually, even creating new explanatory materials.
 
-* * * *
 
 ### 16. Support for Multiple Learning Styles
 
@@ -237,7 +216,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3-4:** Selection of content type may adjust based on user performance or preferences.
 -   **Level 5:** Dynamically generates or selects content formats best suited to the individual's learning patterns as observed and improved over time.
 
-* * * *
 
 ### 17. Integration of Learner Profiles (Goals, Interests, Past Performance)
 
@@ -250,7 +228,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** Conversationally tailors suggestions and answers based on the learner's profile.
 -   **Level 5:** Sophisticated, data-driven personalization and continuous updating of learner profiles to refine suggestions.
 
-* * * *
 
 ### 18. Depth of Internal Cross-Referencing
 
@@ -263,7 +240,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3+:** Cross-references informed by user knowledge state; the textbook might highlight the most relevant concepts for that learner.
 -   **Level 4-5:** Uses conversation or intelligence to highlight or generate links specifically tuned to individual needs.
 
-* * * *
 
 ### 19. FAQ and Trouble-Shooting Adaptation
 
@@ -275,7 +251,6 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 3:** FAQ suggestions pulled from common misunderstandings related to user's performance.
 -   **Level 4-5:** Adaptive FAQ that can expand or generate new answers in response to user input and historical data.
 
-* * * *
 
 ### 20. Generation of Custom Lesson Plans and Curricula
 
@@ -287,23 +262,22 @@ Below is a set of 20 questions designed to help determine the "intelligence" lev
 -   **Level 4:** Might recommend sequences conversationally, but still largely draws from predefined options.
 -   **Level 5:** Fully generates personalized lesson plans and sequences dynamically, informed by continual learning and reinforcement feedback loops.
 
-* * * *
 
 **Overall Usage:** By examining which level of capability applies to each question (0 through 5), an evaluator can determine the textbook's strongest match. A textbook that consistently answers in the realm of basic static features (0-1) remains at the lower levels. As it exhibits more interactivity (2), personalization and LMS integration (3), conversational capabilities (4), and finally dynamic, intelligent adaptation with generated content and reinforcement learning (5), the classification becomes clear.
 
 ## Generate HTML Form
 
-```linenums="0"
-Now create an single-page HTML form that implements
-these 20 questions.  Use JavaScript within the HTML
-file to calculate progress on the number of questions
-remaining and give a running total of the level.
-After the last question, add a "Calculate Score"
-that will calculate the "intelligence score" of of
-textbook and give an explanation of how the score
-was calculated.  Make the title of the page be
-"Calculating Intelligence Level of A Textbook".
-```
+!!! prompt
+    Now create an single-page HTML form that implements
+    these 20 questions.  Use JavaScript within the HTML
+    file to calculate progress on the number of questions
+    remaining and give a running total of the level.
+    After the last question, add a "Calculate Score"
+    that will calculate the "intelligence score" of of
+    textbook and give an explanation of how the score
+    was calculated.  Make the title of the page be
+    "Calculating Intelligence Level of A Textbook".
+
 ## Sample HTML Form
 
 [Intelligent Textbook Level Questions](./level-questions-v2.html)
