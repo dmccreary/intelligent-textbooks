@@ -21,17 +21,23 @@ nav:
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
-    - Enumerate Concepts: prompts/enumerate-concepts.md
+    - Learning Graph:
+      - Introduction: prompts/learning-graph/index.md
+      - Enumerate Concepts: prompts/learning-graph/02-enumerate-concepts.md
+      - Dependency Graph: prompts/learning-graph/03-dependency.md
+      - Concept Taxonomy: prompts/learning-graph/04-taxonomy.md
     - Generate Logo: prompts/generate-logo.md
+    - Generate Cover Image: prompts/generate-cover-image.md
     - Intelligence Level Questions: prompts/level-questions.md
     - Semantic Search: prompts/semantic-search.md
     - Word Cloud: prompts/word-cloud.md
-
-  - Sims:
-    - Word Cloud: sims/word-cloud/index.md
-    - Learning Graph: sims/learning-graph/index.md
-    - Gallery: sims/index.md
-    - Sine Wave: sims/sine-wave/index.md
+    - Quality Metrics: prompts/quality-metrics.md
+    - Sims:
+      - Introduction: prompts/sims/index.md
+      - Word Cloud: sims/word-cloud/index.md
+      - Learning Graph: sims/learning-graph/index.md
+      - Gallery: sims/index.md
+      - Sine Wave: sims/sine-wave/index.md
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Table of Contents: toc.md

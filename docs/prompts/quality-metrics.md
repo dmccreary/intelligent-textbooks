@@ -1,12 +1,16 @@
 # Generating Analytics for Intelligent Textbook Quality Metrics
 
-##
-```prompt
-    We have already created python programs that do simple reporting on the counts
-    of things like total number of markdown files, total word count, number of MicroSims
-    and the number of terms in the glossary.
+This prompt helps us generate a Python program that generates
+additional quality metrics on an intelligent textbook that
+is stored on a website where the source is markdown.  To
+run the script you will need to have cloned the textbook on
+a local drive.
+
+!!! prompt
+    We have already created python programs that do simple reporting on the counts of things like total number of markdown files, total word count, number of MicroSims and the number of terms in the glossary.
     
     What additional metrics can we use to measure the quality of content in a intelligent textbook?
+    
     Please look in the project folder for the file `get-metrics-json.py` for an example of the type of metrics we are already gathering and the sample format for the JSON output of these metrics.
 
 ## Response

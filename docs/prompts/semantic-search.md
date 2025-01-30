@@ -1,16 +1,20 @@
 # Semantic Search
 
-The search features of mkdocs seem to be limited to matching keywords. 
-Is there a way to use embeddings to increase the quality of search? 
-I know we can create embeddings for each word, phrase, sentence, paragraph and page at build time.
+Although the keyword search feature built in to mkdocs is pretty good for a microsite architecture (just hosted on a web server with no search backend), it still leaves a lot to be desired.  Here is a prompt that will
+get you started and building your own semantic search tool.
 
-ChatGPT
+!!! prompt
+    The search features of mkdocs seem to be limited to matching keywords. 
+    Is there a way to use embeddings to increase the quality of search? 
+    I know we can create embeddings for each word, phrase, sentence, paragraph and page at build time.
 
-Thought for 17 seconds
+## Response
+
+ChatGPT o1-preview Thought for 17 seconds
 
 Yes, you can enhance MkDocs' search capabilities by incorporating embeddings to enable semantic search, which can significantly improve the relevance and quality of search results compared to traditional keyword-based approaches. While MkDocs' default search relies on keyword matching (typically using [Lunr.js](https://lunrjs.com/)), integrating embeddings allows the search to understand the context and meaning behind queries and documents.
 
-### **Approaches to Implement Embedding-Based Search in MkDocs**
+### Approaches to Implement Embedding-Based Search in MkDocs
 
 1.  **Using Third-Party Search Services**
 
