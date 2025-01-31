@@ -34,12 +34,12 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
-    - Sims:
-      - Introduction: prompts/sims/index.md
-      - Word Cloud: sims/word-cloud/index.md
-      - Learning Graph: sims/learning-graph/index.md
-      - Gallery: sims/index.md
-      - Sine Wave: sims/sine-wave/index.md
+  - Sims:
+    - Introduction: sims/index.md
+    - Learning Graph: sims/learning-graph/index.md
+    - Word Cloud: sims/word-cloud/index.md
+    - Gallery: sims/index.md
+    - Sine Wave: sims/sine-wave/index.md
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Table of Contents: toc.md

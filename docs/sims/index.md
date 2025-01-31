@@ -1,12 +1,15 @@
 # List of MicroSims for This Intelligent Textbook
 
-## Word Cloud
-
-[Word Cloud](./word-cloud/index.md)
+Here is a list of MicroSims that are used
+in our intelligent textbooks.
 
 ## Learning Graph
 
 [Learning Graph](./learning-graph/index.md)
+
+## Word Cloud
+
+[Word Cloud](./word-cloud/index.md)
 
 ## Sine Wave
 

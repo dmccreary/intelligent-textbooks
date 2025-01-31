@@ -68,16 +68,16 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 .admonition.prompt .copy-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #0056d6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.3rem 0.6rem;
-    cursor: pointer;
-    font-size: 0.8rem;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background-color: #0056d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.3rem;
+  cursor: pointer;
+  font-size: 0.7rem;
 }
 
 .admonition.prompt .copy-button:hover {
