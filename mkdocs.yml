@@ -41,6 +41,7 @@ nav:
     - Word Cloud: sims/word-cloud/index.md
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
+    - Templates: sims/templates.md
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Table of Contents: toc.md
