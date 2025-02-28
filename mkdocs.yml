@@ -9,6 +9,7 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - About: about.md
+  - Mission and Values: mission-and-values.md
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
