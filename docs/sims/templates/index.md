@@ -1,4 +1,4 @@
-# MicroSim Template
+# MicroSim Templates
 
 Use these templates to create a MicroSim that can
 be added to any website with just a single ```iframe``` HTML element.
