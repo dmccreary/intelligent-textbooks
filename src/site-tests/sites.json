@@ -1,0 +1,295 @@
+[  
+    { "site": {
+        "name": "AI Assisted Geometry",
+        "github_repo": "https://github.com/dmccreary/geometry-course",
+        "site_url": "https://dmccreary.github.io/geometry-course",
+        "description": "AI Assisted Geometry is an online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims.",
+        "status": "We have created a detailed learning graph and about a dozen MicroSims.  We are looking for schools, teachers students to give us feedback.",
+        "markdown-file-count": 47,
+        "image-count": 25,
+        "word-count": 18093,
+        "microsim-count": 3,
+        "glossary-term-count": 38
+    }},
+  
+    { "site": {
+        "name": "AI Based Data Science with Python",
+        "github_repo": "https://github.com/dmccreary/data-science-course",
+        "site_url": "https://dmccreary.github.io/data-science-course",
+        "description": "An AI based data science course that uses AI to help undergraduate college learn data science with Python.",
+        "status": "We have created a detailed learning graph.  We are looking for feedback on the priorities of the next steps.",
+        "markdown-file-count": 21,
+        "image-count": 3,
+        "word-count": 22992,
+        "microsim-count": 1,
+        "glossary-term-count": 143
+    }},
+
+    { "site": {
+        "name": "AI Racing League",
+        "github_repo": "https://github.com/CoderDojoTC/ai-racing-league",
+        "site_url": "https://coderdojotc.github.io/ai-racing-league",
+        "description": "The AI Racing League is a project to support a fun way of teaching of AI and machine learning using a $300 RC car with a Raspberry Pi and a Camera.",
+        "status": "We have created extensive content based on the recent upgrades from the NVIDIA Nano to the Raspberry Pi.  We plan to continue to evolve the site to support the DonkeyCar projects.",
+        "markdown-file-count": 107,
+        "image-count": 70,
+        "word-count": 39402,
+        "microsim-count": 0,
+        "glossary-term-count": 20
+    }},
+  
+    { "site": {
+        "name": "Beginning Electronics",
+        "github_repo": "https://github.com/dmccreary/beginning-electronics",
+        "site_url": "https://dmccreary.github.io/beginning-electronics",
+        "description": "An online course that uses MicroSims to help junior high and high students learn the basics of electronics.",
+        "status": "Very minimal content and a few example MicroSims.  We are looking for feedback on the priorities of the next steps.",  
+        "markdown-file-count": 40,
+        "image-count": 89,
+        "word-count": 15771,
+        "microsim-count": 6,
+        "glossary-term-count": 0
+    }},
+
+    { "site": {
+        "name": "Digital Electronics",
+        "github_repo": "https://github.com/dmccreary/digital-electronics",
+        "site_url": "https://dmccreary.github.io/digital-electronics",
+        "description": "An online course that uses MicroSims to help high school students learn basic digital electronics.  We focus on using a breadboard, simple LEDs, buttons and logic gates.  We assume students have access to about $50 worth of parts.  We do not cover microcontrollers.",
+        "status": "We have created a simple framework and we are adding new MicroSims as needed.  We are looking for schools, teachers and students to give us feedback on what content to create next.",
+        "markdown-file-count": 15,
+        "image-count": 15,
+        "word-count": 2708,
+        "microsim-count": 3,
+        "glossary-term-count": 0
+    }},
+
+    { "site": {
+        "name": "Designing and Building and Clocks and Watches with AI",
+        "github_repo": "https://github.com/dmccreary/clocks-and-watches",
+        "site_url": "https://dmccreary.github.io/clocks-and-watches",
+        "description": "An online course that uses MicroSims to help high school students learn how to design and build clocks and watches.  We focus on using a breadboard, microcontrollers, displays, real-time clocks and displays.",
+        "status": "We have a lot of content, a detailed learning graph and are considering testing the content in a live classroom setting.",
+        "markdown-file-count": 124,
+        "image-count": 105,
+        "word-count": 37325,
+        "microsim-count": 11,
+        "glossary-term-count": 149
+    }},
+  
+    { "site": {
+        "name": "Generative AI Strategy",
+        "github_repo": "https://github.com/dmccreary/cmm-for-genai",
+        "site_url": "https://dmccreary.github.io/cmm-for-genai",
+        "description": "Generative AI Strategy is an online course that uses AI to help business leaders understand how to use generative AI to create and maintain their AI business strategy.",
+        "status": "Minimal content and slides.  Use to support an AI strategy development consulting practice.",
+        "markdown-file-count": 22,
+        "image-count": 10,
+        "word-count": 6972,
+        "microsim-count": 3,
+        "glossary-term-count": 0
+    }},
+
+    { "site": {
+        "name": "GraphRAG",
+        "github_repo": "https://github.com/dmccreary/graph-rag",
+        "site_url": "https://dmccreary.github.io/graph-rag",
+        "description": "An online course that teaches the concepts around GraphRag.",
+        "status": "Used to support a talk on GraphRAG.  Minimal content.",
+        "markdown-file-count": 14,
+        "image-count": 3,
+        "word-count": 7583,
+        "microsim-count": 0,
+        "glossary-term-count": 33
+    }},
+
+    { "site": {
+        "name": "Generative AI Architecture Patterns",
+        "github_repo": "https://github.com/dmccreary/genai-arch-patterns",
+        "site_url": "https://dmccreary.github.io/genai-arch-patterns",
+        "description": "An online course that uses AI to help software architects understand how to use generative AI to create and maintain their AI architecture patterns.",
+        "status": "Minimal content and slides.  Use to support an AI architecture consulting practice and presentation at the MACC conferences in 2023 and 2024.",
+        "markdown-file-count": 34,
+        "image-count": 5,
+        "word-count": 7283,
+        "microsim-count": 1,
+        "glossary-term-count": 16
+    }},
+   
+    { "site": {
+        "name": "Generative AI for Teachers",
+        "github_repo": "https://github.com/CoderDojoTC/chatgpt-for-teachers",
+        "site_url": "https://coderdojotc.github.io/chatgpt-for-teachers",
+        "description": "An online course that uses AI to help teachers understand how to use generative AI to create and maintain their AI teaching materials.",
+        "status": "Minimal content and slides but many sample prompts and MicroSims.  Use to support a talks given in 2023 and 2024.",
+        "markdown-file-count": 98,
+        "image-count": 47,
+        "word-count": 19019,
+        "microsim-count": 100,
+        "glossary-term-count": 15
+    }},
+   
+    { "site": {
+      "name": "Graph Algorithms",
+      "github_repo": "https://github.com/dmccreary/graph-algorithms",
+        "site_url": "https://dmccreary.github.io/graph-algorithms",
+        "description": "An online course that uses MicroSims to help undergraduate college students learn the basics of graph algorithms.",
+        "status": "Many MicroSims created using a variety of JavaScript libraries.  We are looking for feedback on the priorities of the next steps.",
+        "markdown-file-count": 71,
+        "image-count": 49,
+        "word-count": 30360,
+        "microsim-count": 15,
+        "glossary-term-count": 84
+    }},
+
+    { "site": {
+        "name": "Graph Data Modeling",
+        "github_repo": "https://github.com/dmccreary/graph-data-modeling-course",
+        "site_url": "https://dmccreary.github.io/graph-data-modeling-course",
+        "description": "An online course that uses MicroSims to help undergraduate college students learn the basics of graph data modeling.  Example graph data models created for a variety of domains.",
+        "status": "Many MicroSims created using mostly vis.js.  We are looking for feedback on the priorities of the next steps.",
+        "markdown-file-count": 49,
+        "image-count": 10,
+        "word-count": 13491,
+        "microsim-count": 3,
+        "glossary-term-count": 156
+      }},
+     
+      { "site": {
+        "name": "Graph Learning Management Systems",
+        "github_repo": "https://github.com/dmccreary/graph-lms",
+        "site_url": "https://dmccreary.github.io/graph-lms",
+        "description": "An online course that uses MicroSims to helps data architects learn how of graphs are used to build AI learning management systems.  Used to help various startups interested in the integrating AI into production learning management systems.",
+        "status": "Several MicroSims created using mostly vis.js.  We are looking for feedback on the priorities of the next steps.",
+        "markdown-file-count": 17,
+        "image-count": 13,
+        "word-count": 7877,
+        "microsim-count": 10,
+        "glossary-term-count": 52
+      }},
+     
+    { "site": {
+        "name": "Intelligent Textbooks",
+        "github_repo": "https://github.com/dmccreary/mkdocs-for-intelligent-textbooks",
+        "site_url": "https://dmccreary.github.io/mkdocs-for-intelligent-textbooks",
+        "description": "An online course that uses helps participants build intelligent textbooks using the mkdocs-material documentation build system.  This site contains a detailed tutorial on how to get started and was that the mkdocs-material system can be extended to support intelligent textbooks.",
+        "status": "Many best practices and detailed tutorial created.",
+        "image-count": 23,
+        "word-count": 11914,
+        "microsim-count": 4,
+        "glossary-term-count": 31
+    }},
+
+    { "site": {
+        "name": "Learning Graphs",
+        "github_repo": "https://github.com/dmccreary/learning-graphs",
+        "site_url": "https://dmccreary.github.io/learning-graphs",
+        "description": "Site focused on the creation and maintenance of learning graphs.  Extensive examples of how vis.js is used to create and maintain learning graphs.",
+        "status": "Many examples of how vis.js is used to create and maintain learning graphs.",
+        "markdown-file-count": 74,
+        "image-count": 46,
+        "word-count": 33460,
+        "microsim-count": 2,
+        "glossary-term-count": 47
+    }},
+
+    { "site": {
+        "name": "MicroPython for Kids",
+        "github_repo": "https://github.com/CoderDojoTC/micropython",
+        "description": "An online course that helps kids learn MicroPython on a microcontroller using fun low-cost projects.",
+        "status": "Extensive content and Google Analytics shows we are getting thousands of hits per month from users all over the world.",
+        "markdown-file-count": 204,
+        "image-count": 232,
+        "word-count": 63428,
+        "microsim-count": 2,
+        "glossary-term-count": 0
+    }},
+
+    { "site": {
+        "name": "MicroSims",
+        "github_repo": "https://github.com/dmccreary/microsims",
+        "site_url": "https://dmccreary.github.io/microsims",
+        "description": "An online course that helps participants learn how to create MicroSims using JavaScript and the p5.js library.  The site is used as a showcase for the diversity of subjects MicroSims can be used to teach.",
+        "status": "Many sample MicroSims and detailed tutorials created.",
+        "markdown-file-count": 88,
+        "image-count": 85,
+        "word-count": 17582,
+        "microsim-count": 66,
+        "glossary-term-count": 20
+    }},
+
+    { "site": {
+        "name": "Micro Simulations for Electrical Engineering",
+        "github_repo": "https://github.com/kenn0727/ee-microsims",
+        "site_url": "https://kenn0727.github.io/ee-microsims",
+        "description": "A site that contains 11 microsims created in 2024 by a group of six students at the University of Minnesota during their Senior Project in the Department of Electrical Engineering an Computer Design.  The MicroSims were designed to help students learn the basics of electrical engineering.",
+        "status": "Some good examples of MicroSims created in p5.js by students learning how to do prompt engineering using ChatGPT.",
+        "markdown-file-count": 14,
+        "image-count": 23,
+        "word-count": 1105,
+        "microsim-count": 12,
+        "glossary-term-count": 0
+    }},
+
+    { "site": {
+        "name": "Moving Rainbow",
+        "github_repo": "https://github.com/dmccreary/moving-rainbow",
+        "site_url": "https://dmccreary.github.io/moving-rainbow",
+        "description": "An online course that colorful addressable LED strips and LED noodles to create fun hands on projects for students learning computational thinking.",
+        "status": "The site is used by schools that teach coding and have the right hardware.  Many examples of how to use addressable LED strips and LED noodles to create fun projects using MicroPython.",
+        "markdown-file-count": 49,
+        "image-count": 104,
+        "word-count": 16849,
+        "microsim-count": 0,
+        "glossary-term-count": 6
+    }},
+
+    { "site": {
+        "name": "Robot Day",
+        "github_repo": "https://github.com/dmccreary/robot-day",
+        "site_url": "https://dmccreary.github.io/robot-day",
+        "description": "An online resources for single-day events at schools that want to get students excited about STEM by doing fun interactive hands-on projects on a series of tables that drive the students to understand all the components of a collision-avoidance robot.",
+        "status": "The site is used by schools that want to get students excited about STEM by doing fun interactive hands-on projects on a series of tables that drive the students to understand all the components of a collision-avoidance robot.",
+        "markdown-file-count": 52,
+        "image-count": 64,
+        "word-count": 25930,
+        "microsim-count": 1,
+        "glossary-term-count": 4
+    }},
+
+  
+    { "site": {
+        "name": "Signal Processing",
+        "github_repo": "https://github.com/dmccreary/signal-processing",
+        "site_url": "https://dmccreary.github.io/signal-processing",
+        "description": "An online course demonstrates how generative AI tools can be used to create undergraduate college courses about on the topic of signal processing.",
+        "markdown-file-count": 53,
+        "image-count": 17,
+        "word-count": 28485,
+        "microsim-count": 6,
+        "glossary-term-count": 105
+    }},
+
+    { "site": {
+        "name": "STEM Robots",
+        "github_repo": "https://github.com/dmccreary/stem-robots",
+        "site_url": "https://dmccreary.github.io/stem-robots",
+        "description": "An online course that helps high school students learn the basics of STEM and robotics.  THe site is built around using the Raspberry Pi RP2040 chip on low-cost robotics kits to teach fun and engaging projects that teach computational thinking",
+        "markdown-file-count": 74,
+        "image-count": 80,
+        "word-count": 18244,
+        "microsim-count": 5,
+        "glossary-term-count": 46
+    }},
+
+    { "site": {
+        "name": "Systems Thinking",
+        "github_repo": "https://github.com/dmccreary/graph-systems-thinking",
+        "site_url": "https://dmccreary.github.io/graph-systems-thinking",
+        "description": "An online course that teaches systems thinking.  The site was designed to support courses being taught on systems thinking.  The site also includes sample MicroSims such as a simulation of the Tragedy of the Commons",  "markdown-file-count": 47,
+        "image-count": 25,
+        "word-count": 18093,
+        "microsim-count": 3,
+        "glossary-term-count": 38
+    }}
+]

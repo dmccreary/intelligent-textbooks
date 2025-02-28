@@ -2,34 +2,31 @@
 
 ## Sample Prompt
 
-```linenums="0"
-I have an new online textbook I would like to create with the mkdocs website build tool.  I am also using the material theme.
+!!! prompt
+    I have an new online textbook I would like to create with the mkdocs website build tool.  I am also using the material theme.
 
-Can you tell me what features I should use to do the following functions?
+    Can you tell me what features I should use to do the following functions?
 
-If you find a function, please provide a sample of how the mkdocs.yml file would be configured to use this function.
+    If you find a function, please provide a sample of how the mkdocs.yml file would be configured to use this function.
 
-Here are the functions I would like to have in my online textbook:
+    Here are the functions I would like to have in my online textbook:
 
-Powerful and easy to use Search
-Site Navigation
-MicroSims - adding interactive simulations to any page using p5.js or iframes
-Glossary of Terms
-Table of Contents
-Link CHecker
-Social Media Previews
-Rendering Formulas
-Code Highlighting
-License Management with a link to the license in the footer of each page
-Site Analytics with Google Analytics
-```
+    - Powerful and easy to use Search
+    - Site Navigation
+    - MicroSims - adding interactive simulations to any page using p5.js or iframes
+    - Glossary of Terms
+    - Table of Contents
+    - Link CHecker
+    - Social Media Previews
+    - Rendering Formulas
+    - Code Highlighting
+    - License Management with a link to the license in the footer of each page
+    - Site Analytics with Google Analytics
 
 ## Response
 
 Certainly! Below is a detailed guide on how to implement each of the functions you've listed 
 in your MkDocs project using the Material theme. I've included sample `mkdocs.yml` configurations and explanations for each feature.
-
-* * * *
 
 ### **1. Powerful and Easy-to-Use Search**
 

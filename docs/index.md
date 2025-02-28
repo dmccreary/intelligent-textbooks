@@ -1,7 +1,16 @@
-# Mkdocs for Intelligent Textbooks
+# Building Intelligent Textbooks
 
-Welcome to the website for a step-by-step guild to using the [mkdocs](http://mkdocs.com) build system 
-paried with generative AI to create and maintain intelligent textbooks.
+![Cover Image](./img/cover.png)
+
+*Intelligent textbooks guide students through concepts
+on their quest for knowledge.*
+
+Welcome to the website for a step-by-step guide to building [intelligent textbooks](./glossary#glossary-of-terms-for-mkdocs-for-intelligent-textbooks) using open standards.
+
+Most of the examples on this website use the [mkdocs](http://mkdocs.com) build system 
+paired with generative AI to create and maintain intelligent textbooks.  We also
+leverage the [material theme](./glossary.md#material) to create customized look-and-feel
+systems for textbooks.
 
 We feel that many courses today can benefit for high-quality online textbooks that have some of the following features:
 

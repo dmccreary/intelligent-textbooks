@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud Glossary</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.6/wordcloud2.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #wordcloud {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+        }
+        #wordcloud a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Word Cloud</h1>
+    <p>Click on a term to navigate to its glossary entry.</p>
+    <div id="wordcloud"></div>
+    <script>
+        const wordData = [
+            ["Intelligent Textbook", 70],
+            ["MicroSim", 65],
+            ["Open Standards", 60],
+            ["Markdown", 60],
+            ["mkdocs", 55],
+            ["mkdocs-material", 55],
+            ["Theme", 45],
+            ["Build Process", 55],
+            ["mkdocs.yml", 50],
+            ["Navigation", 50],
+            ["Docs", 45],
+            ["Images", 45],
+            ["Links", 45],
+            ["Deep Linking", 40],
+            ["Search", 50],
+            ["Admonitions", 45],
+            ["Assessments", 45],
+            ["Footer", 40],
+            ["License", 40],
+            ["Previous and Next Page", 40],
+            ["Social Previews", 40],
+            ["Logo", 30],
+            ["Favicon", 30],
+            ["Equations", 30],
+            ["LaTeX", 25],
+            ["MathJax", 25],
+            ["Code Highlighting", 25],
+            ["Simulations", 25],
+            ["p5.js", 40],
+            ["iframe", 40],
+            ["Glossary", 50],
+            ["Table of Contents", 45],
+            ["Prompts", 50],
+            ["Open Graph", 45],
+            ["Preview Testing", 40],
+            ["Feedback Form", 40],
+            ["Google Analytics", 50],
+            ["Plugins", 45],
+            ["Conda", 40],
+            ["Python", 40],
+            ["Learning Graph", 50],
+            ["Chatbot", 45],
+            ["Recommendation", 45],
+            ["Broken Link", 35],
+            ["GitHub Pages", 40]
+        ];
+
+        const wordList = wordData.map(([label, weight]) => {
+            return [
+                label,
+                weight,
+                () => window.location.href = `../../glossary#${label.replace(/\s+/g, '-').toLowerCase()}`
+            ];
+        });
+
+        WordCloud(document.getElementById('wordcloud'), {
+            list: wordList,
+            gridSize: Math.round(16 * window.innerWidth / 1024),
+            weightFactor: 0.9,
+            fontFamily: 'Times, serif',
+            color: () => `hsl(${Math.random() * 360}, 100%, 50%)`,
+            rotateRatio: 0.5,
+            rotationSteps: 2,
+            backgroundColor: '#f0f0f0',
+            click: function(item) {
+                if (item[2]) item[2]();
+            }
+        });
+    </script>
+</body>
+</html>
