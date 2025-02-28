@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Calculating Intelligence Level of a Textbook</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: cornsilk;
+        margin: 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .question-label {
+        font-weight: bold;
+    }
+    .progress {
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    .score {
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .explanation {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+</style>
+</head>
+<body>
+
+<h1>Calculating Intelligence Level of a Textbook</h1>
+
+<p>For each question, select the level (0-5) that best matches the textbook’s capabilities.</p>
+<p>Levels are cumulative in complexity and features:
+<br/><br/>
+<b>Level 0:</b> Printed textbook with high-quality references<br>
+<b>Level 1:</b> Online PDF/PPT with basic linking/search<br>
+<b>Level 2:</b> Rich media website (videos/animations) without personalization<br>
+<b>Level 3:</b> Personalized website integrated with LMS<br>
+<b>Level 4:</b> Conversational interface with personalized recommendations<br>
+<b>Level 5:</b> Fully intelligent (dynamic generation of content, reinforcement learning, etc.)
+<br/><br/>
+See our <a href="../glossary/">Glossary of Intelligent Textbook Terms</a> for precise definitions of terms used in this survey.
+</p>
+
+<div class="progress">
+    Questions answered: <span id="answeredCount">0</span>/20
+</div>
+
+<form id="quizForm">
+    <!-- Each question block -->
+    <div class="question">
+        <div class="question-label">1. Table of Contents, Index, Glossary Quality</div>
+        <select name="q1" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Detailed static references in print form only</option>
+            <option value="1">1 - Basic digital references (TOC, etc.)</option>
+            <option value="2">2 - Advanced digital references with interactive elements</option>
+            <option value="3">3 - References tailored based on user progress (LMS)</option>
+            <option value="4">4 - References accessible via conversational agent</option>
+            <option value="5">5 - Dynamically generated references based on ongoing learning</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">2. Availability of Digital Format and Simple Search</div>
+        <select name="q2" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Printed only, no digital search</option>
+            <option value="1">1 - Basic digital format (PDF/PPT) with simple search</option>
+            <option value="2">2 - Rich media site, though search not personalized</option>
+            <option value="3">3 - Personalized searches based on LMS data</option>
+            <option value="4">4 - Conversational search capabilities</option>
+            <option value="5">5 - Intelligent search generating on-demand results</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">3. Presence and Quality of Hyperlinks (Internal and External)</div>
+        <select name="q3" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No hyperlinks (print only)</option>
+            <option value="1">1 - Basic hyperlinks in a digital document</option>
+            <option value="2">2 - Deep linking and rich navigation in a website</option>
+            <option value="3">3 - Links adapted based on user profile from LMS</option>
+            <option value="4">4 - Conversational linking recommendations</option>
+            <option value="5">5 - Dynamically generated links tailored by reinforcement learning</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">4. Inclusion of Rich Media (Videos, Animations, Simulations)</div>
+        <select name="q4" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Static images only</option>
+            <option value="1">1 - Digital version with static images, no embedded rich media</option>
+            <option value="2">2 - Embedded videos, animations, simulations without personalization</option>
+            <option value="3">3 - Rich media selection influenced by student progress (LMS)</option>
+            <option value="4">4 - Conversational interface suggests appropriate rich media</option>
+            <option value="5">5 - Dynamically generates new simulations on demand</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">5. Interactivity and Navigational Tools</div>
+        <select name="q5" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Basic print navigation (page turning)</option>
+            <option value="1">1 - Digital linear navigation with limited interactivity</option>
+            <option value="2">2 - Interactive navigation (concept maps, word clouds, FAQ)</option>
+            <option value="3">3 - Navigation adapted to user progress data</option>
+            <option value="4">4 - Conversational guidance in navigation</option>
+            <option value="5">5 - Dynamically restructured navigation based on reinforcement learning</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">6. Personalization or Adaptation of Content</div>
+        <select name="q6" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No personalization</option>
+            <option value="1">1 - Static digital content, same for all</option>
+            <option value="2">2 - Rich media but still no personalization</option>
+            <option value="3">3 - Content adapted via LMS data</option>
+            <option value="4">4 - Conversational personalization</option>
+            <option value="5">5 - Fully adaptive, reinforcement-learning-driven personalization</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">7. Integration with Learning Management Systems (LMS)</div>
+        <select name="q7" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No LMS integration</option>
+            <option value="1">1 - Simple digital format, no LMS link</option>
+            <option value="2">2 - Interactive website only</option>
+            <option value="3">3 - Integrated with LMS, uses learner data</option>
+            <option value="4">4 - Conversational LMS-based recommendations</option>
+            <option value="5">5 - LMS integration plus reinforcement learning</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">8. Ability to Assess Student Knowledge</div>
+        <select name="q8" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Static, end-of-chapter questions only</option>
+            <option value="1">1 - Basic quizzes, not adaptive</option>
+            <option value="2">2 - Interactive quizzes but not personalized</option>
+            <option value="3">3 - Adaptive assessments based on LMS data</option>
+            <option value="4">4 - Conversational assessment with tailored questions</option>
+            <option value="5">5 - Fully adaptive, generates new assessments on demand</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">9. Conversational Interface or Chatbot Presence</div>
+        <select name="q9" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No conversational interface</option>
+            <option value="1">1 - Static digital text only</option>
+            <option value="2">2 - Rich media but no chatbot</option>
+            <option value="3">3 - LMS integration but no chatbot</option>
+            <option value="4">4 - Chatbot answers questions based on user profile</option>
+            <option value="5">5 - Chatbot that generates new content dynamically</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">10. Ability to Suggest Next Steps or Learning Paths</div>
+        <select name="q10" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No suggestions</option>
+            <option value="1">1 - Static suggestions (e.g. "Next Chapter")</option>
+            <option value="2">2 - Helpful but non-personalized suggestions</option>
+            <option value="3">3 - Personalized suggestions from LMS data</option>
+            <option value="4">4 - Conversational suggestions tailored to user</option>
+            <option value="5">5 - Intelligent, dynamically generated learning paths</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">11. Dynamic Content Generation</div>
+        <select name="q11" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - All content static</option>
+            <option value="1">1 - Digital static content only</option>
+            <option value="2">2 - Rich but pre-defined content</option>
+            <option value="3">3 - Selects from a set of predefined content based on LMS</option>
+            <option value="4">4 - Conversational retrieval of suitable pre-made content</option>
+            <option value="5">5 - Dynamic creation of new examples and explanations</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">12. Ability to Create Custom Visualizations or Simulations on Demand</div>
+        <select name="q12" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Static images only</option>
+            <option value="1">1 - No new media generation, just static digital</option>
+            <option value="2">2 - Pre-made videos/animations</option>
+            <option value="3">3 - Personalized selection from existing simulations</option>
+            <option value="4">4 - Conversational guidance to appropriate pre-made media</option>
+            <option value="5">5 - On-demand generation of new simulations</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">13. Reinforcement Learning and Continuous Improvement</div>
+        <select name="q13" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No adaptation over time</option>
+            <option value="1">1 - Static digital, no learning from interactions</option>
+            <option value="2">2 - No personalization, hence no RL</option>
+            <option value="3">3 - Adapts based on rules/LMS data but no RL</option>
+            <option value="4">4 - Conversational adaptation but no true RL</option>
+            <option value="5">5 - Uses reinforcement learning to improve over time</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">14. External Resource Integration</div>
+        <select name="q14" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Print references only</option>
+            <option value="1">1 - Basic hyperlinks to external sites</option>
+            <option value="2">2 - Deep integration of external resources in a static manner</option>
+            <option value="3">3 - External resources chosen based on user profile</option>
+            <option value="4">4 - Conversational agent curates external resources</option>
+            <option value="5">5 - Dynamic, RL-driven integration of external sources</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">15. Ability to Handle User Inquiries Beyond Pre-Defined FAQ</div>
+        <select name="q15" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No handling beyond static FAQ</option>
+            <option value="1">1 - Static FAQ only</option>
+            <option value="2">2 - FAQ plus some interactive navigation</option>
+            <option value="3">3 - Directs to relevant content based on profile, but no open Q&A</option>
+            <option value="4">4 - Conversational Q&A capability</option>
+            <option value="5">5 - Q&A with dynamic content generation</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">16. Support for Multiple Learning Styles</div>
+        <select name="q16" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Uniform static content</option>
+            <option value="1">1 - Digital format but same for all</option>
+            <option value="2">2 - Variety of media, but not personalized by style</option>
+            <option value="3">3 - Chooses format based on user profile (LMS)</option>
+            <option value="4">4 - Conversational tailoring of format</option>
+            <option value="5">5 - Dynamically generates and adapts media to suit learning styles via RL</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">17. Integration of Learner Profiles (Goals, Interests, Past Performance)</div>
+        <select name="q17" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - No learner profiling</option>
+            <option value="1">1 - Static content only</option>
+            <option value="2">2 - No personalization, but richer media</option>
+            <option value="3">3 - Basic profiling via LMS data</option>
+            <option value="4">4 - Conversational personalization based on profile</option>
+            <option value="5">5 - Continually updated learner profile via RL for personalized path</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">18. Depth of Internal Cross-Referencing</div>
+        <select name="q18" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Minimal or no internal cross-references</option>
+            <option value="1">1 - Basic digital cross-references</option>
+            <option value="2">2 - Rich, interactive cross-references</option>
+            <option value="3">3 - Cross-references tailored to user’s knowledge gaps</option>
+            <option value="4">4 - Conversational guidance to relevant references</option>
+            <option value="5">5 - Dynamic, RL-driven cross-referencing</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">19. FAQ and Trouble-Shooting Adaptation</div>
+        <select name="q19" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Static, print FAQ if any</option>
+            <option value="1">1 - Static digital FAQ</option>
+            <option value="2">2 - Rich, static FAQ in website</option>
+            <option value="3">3 - FAQ adapted from LMS-based common misunderstandings</option>
+            <option value="4">4 - Conversational FAQ assistance</option>
+            <option value="5">5 - Dynamically generated FAQ responses with RL</option>
+        </select>
+    </div>
+    
+    <div class="question">
+        <div class="question-label">20. Generation of Custom Lesson Plans and Curricula</div>
+        <select name="q20" onchange="updateProgress()">
+            <option value="">--Select Level--</option>
+            <option value="0">0 - Fixed curriculum, no customization</option>
+            <option value="1">1 - Digital access but no custom paths</option>
+            <option value="2">2 - Interactive but no personalized lesson plans</option>
+            <option value="3">3 - Suggestion of next modules based on LMS data</option>
+            <option value="4">4 - Conversational, semi-personalized lesson recommendations</option>
+            <option value="5">5 - Fully custom lesson plans generated dynamically</option>
+        </select>
+    </div>
+    
+    <button type="button" onclick="calculateScore()">Calculate Score</button>
+
+</form>
+
+<div class="score" id="scoreDisplay"></div>
+<div class="explanation" id="explanation" style="display:none;"></div>
+
+<script>
+    function updateProgress() {
+        const form = document.getElementById('quizForm');
+        const selects = form.querySelectorAll('select');
+        let answered = 0;
+        for (let i = 0; i < selects.length; i++) {
+            if (selects[i].value !== '') {
+                answered++;
+            }
+        }
+        document.getElementById('answeredCount').innerText = answered;
+    }
+
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        const selects = form.querySelectorAll('select');
+        let total = 0;
+        let count = 0;
+        let details = [];
+
+        for (let i = 0; i < selects.length; i++) {
+            if (selects[i].value !== '') {
+                let val = parseInt(selects[i].value, 10);
+                total += val;
+                count++;
+                details.push(`Q${i+1}: Level ${val}`);
+            } else {
+                details.push(`Q${i+1}: No selection`);
+            }
+        }
+
+        let average = count > 0 ? (total / count).toFixed(2) : 0;
+        
+        const scoreDiv = document.getElementById('scoreDisplay');
+        const explanationDiv = document.getElementById('explanation');
+
+        scoreDiv.innerHTML = `Final Intelligence Score (Average Level): ${average}`;
+        explanationDiv.style.display = 'block';
+        explanationDiv.innerHTML = 
+            `<h3>Explanation</h3>
+             <p>Each of the 20 questions corresponds to a capability level (0 to 5). 
+             We took all the levels you selected and computed the average to determine the overall 
+             "intelligence score" of the textbook.</p>
+             <p>Here are your selections:</p>
+             <ul>${details.map(d => `<li>${d}</li>`).join('')}</ul>
+             <p>Sum of chosen levels: ${total}<br>
+             Number of answered questions: ${count}<br>
+             Average: ${average}</p>`;
+        
+        // Scroll to the score section after calculation
+        scoreDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

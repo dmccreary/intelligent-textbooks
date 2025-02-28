@@ -7,7 +7,7 @@ textbooks.
 There are many ways to store intelligent textbooks on a website.
 Many of our teachers don't want to pay a hosting service for
 hosting their content.  Since GitHub Pages is free, we
-focsused on GitHub Pages publishing tools that support Markdown, code
+focussed on GitHub Pages publishing tools that support Markdown, code
 highlighting and equations on GitHub.
 
 When we gave ChatGPT the following requirements:
@@ -30,13 +30,13 @@ often being answered within hours.
 
 Because of the close match of mkdocs-material's features with our intelligent textbook requirements,
 we have created about 20 sample websites that test these tools.  We have also found that
-mkdocs-material can be quickly extensed to support the features we need in advanced
+mkdocs-material can be quickly extended to support the features we need in advanced
 intelligent textbooks.
 
 Note that these tools generate a [2.9 level](https://dmccreary.medium.com/five-levels-of-intelligent-textbooks-b81a4c1525a0)
 intelligent textbook.  THis is up to but does not include personalization to the knowledge of the student.  This gets your textbook ready to move to level 3, where a knowledge graph of what concepts they are aware of are used to generate personalized content.
 
-We hope the [glossary](./glossary.md) and [tutorials](./tutorial/) we provide are useful.
+We hope the [glossary](./glossary.md) and [tutorials](./tutorial/index.md) we provide are useful.
 
 ## References
 

@@ -1,5 +1,5 @@
-site_name: Mkdocs for Intelligent Textbooks
-site_description: 'Using the mkdocs build to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: Creating Intelligent Textbooks with Mkdocs Material and Open Standards
+site_description: 'Using the mkdocs build system with the material theme to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/'
@@ -9,19 +9,40 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - About: about.md
+  - Mission and Values: mission-and-values.md
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
+    - Navigation: tutorial/navigation.md
     - Admonitions: tutorial/admonitions.md
-    - Quizzes: tutorial/quizes.md
+    - Prompt Copy Admonition: tutorial/admonition-prompt-copy.md
+    - Quizzes: tutorial/quizzes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
+    - Adding a MicroSim: tutorial/adding-a-microsim.md
     - Google Analytics: tutorial/google-analytics.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
-    - Enumerate Concepts: prompts/enumarate-concepts.md
-  - Checklist: checklist.md
-  - Code Highlight Test: code-highlight-test.md
+    - Learning Graph:
+      - Introduction: prompts/learning-graph/index.md
+      - Enumerate Concepts: prompts/learning-graph/02-enumerate-concepts.md
+      - Dependency Graph: prompts/learning-graph/03-dependency.md
+      - Concept Taxonomy: prompts/learning-graph/04-taxonomy.md
+    - Generate Logo: prompts/generate-logo.md
+    - Generate Cover Image: prompts/generate-cover-image.md
+    - Intelligence Level Questions: prompts/level-questions.md
+    - Semantic Search: prompts/semantic-search.md
+    - Word Cloud: prompts/word-cloud.md
+    - Quality Metrics: prompts/quality-metrics.md
+    - Discord Admin: prompts/discord-admin.md
+  - Sims:
+    - Introduction: sims/index.md
+    - Learning Graph: sims/learning-graph/index.md
+    - Word Cloud: sims/word-cloud/index.md
+    - Gallery: sims/index.md
+    - Sine Wave: sims/sine-wave/index.md
+    - Templates: sims/templates.md
+  - Feedback: feedback.md
   - Glossary: glossary.md
   - Table of Contents: toc.md
   - License: license.md
@@ -33,8 +54,6 @@ nav:
 
 theme:
   name: material
-  extra_css:
-    - styles/custom.css
   logo: img/logo.png
   favicon: img/favicon.ico
   # favicon: img/my-icon.png
@@ -66,6 +85,8 @@ markdown_extensions:
       linenums: true
 extra_css:
    - css/extra.css
+extra_javascript:
+    - js/extra.js
 extra:
   analytics:
     provider: google
