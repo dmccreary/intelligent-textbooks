@@ -22,6 +22,12 @@ nav:
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
     - Adding a MicroSim: tutorial/adding-a-microsim.md
     - Google Analytics: tutorial/google-analytics.md
+  - Educational concepts:
+    - Introduction: concepts/index.md
+    - Bloom's Taxonomy: concepts/bloom-taxonomy.md
+    - Scaffolding: concepts/scaffolding.md
+    - Learning Graph: concepts/learning-graph.md
+    - Open Educational Resources: concepts/open-educational-resources.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
