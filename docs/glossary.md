@@ -233,6 +233,12 @@ clicks on a "Show Answer" control.
 
 Allow multiple-choice questions in a list to use the ordered-list labels A. B. C. D.
 
+#### Scaffolding
+
+An instructional strategy where support is provided to learners at the beginning of a learning process and then gradually removed as they gain confidence and competence. 
+
+Scaffolding allows students to build on what they already know and reach higher levels of understanding.
+
 #### Search
 
 Create a search function as part of the build process.
@@ -279,11 +285,3 @@ The process of analyzing who is coming to your website, when they are visiting a
 The mkdocs material system provides a way to integrate free Google Analytics by adding four lines to your mkdocs.yml file.
 
 See: [Tutorial on Google Analytics](./tutorial/google-analytics.md)
-
-Tools and scripts used to collect and analyze data about how users interact with the documentation.
-
-Website analytics Informs continuous improvement efforts by providing insights into user behavior, popular content, and navigation patterns.
-
-Google Analyics can be enabled with a four-line change in the mkdocs.yml file.  There is no charge for using Google Analytics.
-
-See our [Google Analtics Tutorial](./tutorial/google-analytics.md)
