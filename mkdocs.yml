@@ -48,7 +48,7 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
-  - Sims:
+  - MicroSims:
     - Introduction: sims/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Word Cloud: sims/word-cloud/index.md
@@ -60,6 +60,7 @@ nav:
   - Ontology Questions: ontology-questions.md
   - Table of Contents: toc.md
   - License: license.md
+  - FAQ: faq.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
   - Contact: contact.md

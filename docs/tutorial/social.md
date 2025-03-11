@@ -2,7 +2,7 @@
 
 ## Why Social Headers
 
-Pros
+Pros - allows students and learning participants to 
 
 Cons
 
