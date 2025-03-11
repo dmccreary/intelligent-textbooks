@@ -1,5 +1,5 @@
-site_name: Creating Intelligent Textbooks with Mkdocs Material and Open Standards
-site_description: 'Using the mkdocs build system with the material theme to to create and managed intelligent textbooks. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: Intelligent Textbooks
+site_description: 'Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/'
