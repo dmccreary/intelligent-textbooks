@@ -2,6 +2,10 @@
 
 ## Why Social Headers
 
+Pros
+
+Cons
+
 ## Modifying Your mkdocs.yml
 
 ```yml
@@ -10,6 +14,10 @@ plugins:
 ```
 
 ## How It Works
+
+The Cache:
+
+![](../img/cache-vscode-screen-image.png)
 
 ## 
 
