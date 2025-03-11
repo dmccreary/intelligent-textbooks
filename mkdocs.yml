@@ -2,8 +2,8 @@ site_name: Intelligent Textbooks
 site_description: 'Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
-site_url: 'https://dmccreary.github.io/mkdocs-for-intelligent-textbooks/'
-repo_url: 'https://github.com/dmccreary/mkdocs-for-intelligent-textbooks'
+site_url: 'https://dmccreary.github.io/intelligent-textbooks/'
+repo_url: 'https://github.com/dmccreary/intelligent-textbooks'
 edit_uri: 'blob/master/docs'
 
 nav:
