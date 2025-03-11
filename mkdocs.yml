@@ -13,6 +13,8 @@ nav:
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
+    - Directory Structure: tutorial/directory-structure.md
+    - Markdown: tutorial/markdown.md
     - Navigation: tutorial/navigation.md
     - Admonitions: tutorial/admonitions.md
     - Prompt Copy Admonition: tutorial/admonition-prompt-copy.md
@@ -44,6 +46,7 @@ nav:
     - Templates: sims/templates.md
   - Feedback: feedback.md
   - Glossary: glossary.md
+  - Ontology Questions: ontology-questions.md
   - Table of Contents: toc.md
   - License: license.md
   - How We Built This Site: how-we-built-this-site.md
