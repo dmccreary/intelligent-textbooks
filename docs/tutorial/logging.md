@@ -21,7 +21,10 @@ Structure the response like this
 -->
 
 
-Creating intelligent textbooks with MkDocs Material offers tremendous educational possibilities, but understanding how users interact with these resources is essential for continuous improvement. Let's explore comprehensive logging strategies that can help you measure engagement and optimize your intelligent textbooks.
+Intelligent textbooks offer tremendous educational possibilities, but understanding 
+how users interact with these resources is essential for continuous improvement. 
+Let's explore comprehensive logging strategies that can help you measure engagement 
+and optimize your intelligent textbooks.
 
 ## Using Web Analytics
 
