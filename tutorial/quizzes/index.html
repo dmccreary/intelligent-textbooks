@@ -565,9 +565,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-enable" class="md-nav__link">
+  <a href="#step-1-enable-the-markdown-in-html" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Enable
+      Step 1: Enable the Markdown In HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-wrap-your-quiz-questions-in-an-html-div" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Wrap Your Quiz Questions in an HTML div
     </span>
   </a>
   
@@ -1132,9 +1141,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-enable" class="md-nav__link">
+  <a href="#step-1-enable-the-markdown-in-html" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Enable
+      Step 1: Enable the Markdown In HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-wrap-your-quiz-questions-in-an-html-div" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Wrap Your Quiz Questions in an HTML div
     </span>
   </a>
   
@@ -1172,9 +1190,19 @@ However, many mulitple choice answers use uppercase alpha formats.
 To enable this feature we need to do two things:</p>
 <ol>
 <li>Enable the markdown within HTML option</li>
-<li>Add a CSS fule to turn on uppercase alpha lists</li>
+<li>Add a CSS rule to turn on uppercase alpha lists</li>
 </ol>
-<h2 id="step-1-enable">Step 1: Enable</h2>
+<h2 id="step-1-enable-the-markdown-in-html">Step 1: Enable the Markdown In HTML</h2>
+<p>Normally when you place HTML in your Markdown, the parser will just
+skip over the entire block of HTML.  However, if you enable the <code>md_in_html</code>
+extension the parser will look inside all HTML blocks for markdown to process.</p>
+<p>You must modify your <code>mkdocs.yml</code> file to add the <code>md_in_html</code> extension
+like in the following example.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>markdown_extensions:
+  - md_in_html 
+</code></pre></div></td></tr></table></div>
+<h2 id="step-2-wrap-your-quiz-questions-in-an-html-div">Step 2: Wrap Your Quiz Questions in an HTML div</h2>
 
 
 
