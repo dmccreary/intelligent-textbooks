@@ -21,6 +21,11 @@ nav:
     - Quizzes: tutorial/quizzes.md
     - Upper Alpha Lists: tutorial/upper-alpha-lists.md
     - Adding a MicroSim: tutorial/adding-a-microsim.md
+    - Testing: tutorial/testing.md
+    - Feedback: tutorial/feedback.md
+    - Logging: tutorial/logging.md
+    - Search: tutorial/search.md
+    - Social: tutorial/social.md
     - Google Analytics: tutorial/google-analytics.md
   - Educational concepts:
     - Introduction: concepts/index.md
