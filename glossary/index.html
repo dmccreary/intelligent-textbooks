@@ -736,6 +736,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#glossary-of-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary of Terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-from-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit from GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#iso-definition" class="md-nav__link">
     <span class="md-ellipsis">
       ISO Definition
@@ -901,15 +919,6 @@
   <a href="#website-analytics" class="md-nav__link">
     <span class="md-ellipsis">
       Website Analytics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-content-accessibility-guidelines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web Content Accessibility Guidelines
     </span>
   </a>
   
@@ -1187,6 +1196,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#glossary-of-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary of Terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-from-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit from GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#iso-definition" class="md-nav__link">
     <span class="md-ellipsis">
       ISO Definition
@@ -1357,15 +1384,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#web-content-accessibility-guidelines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web Content Accessibility Guidelines
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1403,10 +1421,14 @@ note, info, tip, success, question, warning, failure, danger, bug, example and q
 <h4 id="automatic-build">Automatic Build</h4>
 <p>Using an automatic process that generates HTML from the markdown files.</p>
 <p>Automatic builds for mkdocs can be automatically executed whenever any part of the mkdocs.yml or the files
-in the <code>docs</code> directory change.  On GitHub, a GitHub action can be configured to achieve this.</p>
+in the <code>docs</code> directory change.  On GitHub, a GitHub action can be configured to achieve this.
+A process that regenerates and/or redeploys the documentation automatically whenever changes are made to source files, typically triggered by a continuous integration (CI) tool or build server.
+<em>Ensures that documentation is always up-to-date without manual intervention.</em></p>
 <h4 id="code-highlighting">Code Highlighting</h4>
 <p>The process of rendering source code with visually distinct styles to enhance readability and comprehension.</p>
 <p>Mkdocs material allows this feature to be enabled by changing the mkdocs.yml configuration file.</p>
+<p>A feature that applies syntax-specific color schemes and formatting to code blocks within the documentation.
+<em>Improves readability and comprehension of code examples by distinguishing keywords, variables, and other language constructs.</em></p>
 <h4 id="concept-graph">Concept Graph</h4>
 <p>A structured representation of concepts and their interrelationships, typically organized as nodes connected by edges.</p>
 <p>Concept Graphs are used to create lesson plans and learning roadmaps that are customized to a students learning objectives.</p>
@@ -1418,11 +1440,19 @@ directly to a subsection of a document.</p>
 <p>A numeric vector representation of text that encodes semantic meaning, enabling large language models and semantic search systems to compare and rank content based on conceptual similarity rather than just keyword matching.</p>
 <p><strong>Example in an Intelligent Textbook:</strong>
 When a student highlights a concept, the intelligent textbook generates embeddings for that concept and searches its database of content for related topics that share similar embeddings. As a result, it can suggest complementary reading sections, practice questions, or simulations that align with the student’s current focus, thus enhancing personalized learning.</p>
+<p>A visual representation of the relationships between topics, concepts, and terms within the documentation.
+<em>Helps users navigate complex material, see how ideas interconnect, and discover related information.</em></p>
 <h4 id="favicon">Favicon</h4>
 <p>A small icon associated with a webpage, displayed by web browsers in tabs, bookmarks, or address bars.</p>
+<p>Mathematical or scientific expressions integrated into the documentation, often rendered using tools such as LaTeX or MathJax.
+<em>Enables precise and readable presentation of equations, enhancing clarity in technical and scholarly content.</em></p>
 <h4 id="formulas">Formulas</h4>
 <p>Mathematical expressions that represent relationships between variables, constants, and functions.</p>
+<p>Mathematical or scientific expressions integrated into the documentation, often rendered using tools such as LaTeX or MathJax.
+<em>Enables precise and readable presentation of equations, enhancing clarity in technical and scholarly content.</em></p>
 <h4 id="github-actions">GitHub Actions</h4>
+<p>Scripts that perform build processes on GitHub servers.</p>
+<p>GitHub actions can automatically be run when any new content is updated in the docs directory or the mkdocs.yml file.</p>
 <p>A workflow automation service integrated into GitHub that executes predefined tasks in response to repository events.</p>
 <h4 id="glossary">Glossary</h4>
 <p>A controlled vocabulary that lists specialized terms and their definitions to ensure consistent understanding.</p>
@@ -1441,6 +1471,12 @@ a GitHub action can be triggered to update the HTML of the site.</p>
 <h4 id="keyword-search">Keyword Search</h4>
 <p>A retrieval method that matches documents against user-supplied words or phrases to identify relevant content.</p>
 <p>See also: <a href="#semantic-search">semantic search</a></p>
+<h4 id="glossary-of-terms">Glossary of Terms</h4>
+<p>A dedicated section that provides definitions and explanations of key terms, jargon, and acronyms used throughout the documentation.
+<em>Serves as a quick reference to ensure consistent understanding of terminology across readers.</em></p>
+<h4 id="edit-from-github">Edit from GitHub</h4>
+<p>An integrated link within the documentation that directs users to the corresponding source file on GitHub.</p>
+<p>Edit links Encourages community involvement by allowing readers to propose edits, corrections, or improvements through pull requests.  Users do not need to understand how the build process works on their local systems to generate an updated web page.</p>
 <h4 id="iso-definition">ISO Definition</h4>
 <p>A term definition is considered to be consistent with ISO metadata registry guideline ISO/IEC 11179 if it meets the following criteria:</p>
 <ol>
@@ -1455,6 +1491,9 @@ a GitHub action can be triggered to update the HTML of the site.</p>
 <h4 id="license">License</h4>
 <p>A legal instrument specifying permissions, conditions, and restrictions for using, modifying, or redistributing content or software.</p>
 <p>mkdoc material allows you to place your license link on the footer of each page.</p>
+<p>A statement that specifies the legal terms under which the documentation and related materials can be used, modified, and distributed.</p>
+<p>Clarifies permissions and restrictions, providing guidance to users and contributors.</p>
+<p>Textbooks pages can be generated with links in their footer to the creative commons licenses.</p>
 <h4 id="link-checker">Link Checker</h4>
 <p>A tool that verifies the validity and accessibility of hyperlinks within a given set of documents or webpages.</p>
 <h4 id="markdown">Markdown</h4>
@@ -1486,12 +1525,17 @@ Markdown syntax allows for the creation of structured content. For instance:</p>
 <p>The Material Theme currently has over <a href="https://github.com/squidfunk/mkdocs-material/">21K</a> stars on GitHub.  This is more than 10x any of the other themes for mkdocs.</p>
 <h4 id="mkdocs">Mkdocs</h4>
 <p>A documentation build system that leverages <a href="#markdown">Markdown</a> syntax for generating textbooks and websites.</p>
+<p>A tool or script that verifies the integrity and accessibility of hyperlinks within the documentation.</p>
+<p>With mkdocs material, link checking - both internal links and links to external pages - can be done as part of the build process or a separte process.</p>
+<p><em>Ensures that references remain accurate and functional, improving user experience and maintaining credibility.</em></p>
 <h4 id="microsim">MicroSim</h4>
 <p>A small-scale, embedded interactive simulation designed to illustrate a concept interactively within educational content.</p>
 <p>MicroSim are a core element of intelligent interactive textbooks.</p>
 <p>See the <a href="https://dmccreary.github.io/microsims/">MicroSims for Education Website</a></p>
 <h4 id="microsite">MicroSite</h4>
 <p>A website that runs on a web server with no need for complex heavy APIs to expensive services such as a search engine.</p>
+<p>A small-scale, self-contained example or simulation embedded within the documentation.
+<em>Allows readers to interact with or test concepts in a controlled environment for deeper understanding and hands-on learning.</em></p>
 <h4 id="navigation">Navigation</h4>
 <p>In our textbooks we focus on left-side navigation systems since these
 are the default navigation system and they are both intuitive and
@@ -1506,6 +1550,8 @@ web crawlers used by generative AI tools, p5.js dominates
 the MicroSim ecosystems.</p>
 <p>Other specialized libraries such as vis.js are used for tasks such
 as simulating graph traversal algorithms.</p>
+<p>The organized structure of menus, sections, and links that guide readers through the documentation.
+<em>Facilitates ease of use, enabling readers to find information efficiently.</em></p>
 <h4 id="quiz-management">Quiz Management</h4>
 <p>Allow pages to contain self-assessments where the answers are hidden until the user
 clicks on a "Show Answer" control.</p>
@@ -1524,22 +1570,20 @@ way to find similar documents.</p>
 <p>Intelligent textbooks frequently create <a href="#embeddings">embeddings</a> for words, phrases, paragraphs and pages so you can quickly find similar content.</p>
 <h4 id="social-media-previews">Social Media Previews</h4>
 <p>Summaries automatically generated when a webpage link is shared on social platforms, often including a title, description, and image.</p>
+<p>Metadata added to web pages that control how content is displayed when shared on social media platforms.</p>
+<p>Social media preview increases the appeal and clarity of shared links, encouraging users to engage with and disseminate the documentation.</p>
+<p>Social media previews can be automatically be generated by a configuration in the mkdocs.yml file.</p>
 <h4 id="table-of-contents">Table of Contents</h4>
 <p>A structured list of document sections and headings, enabling users to locate and navigate to specific topics easily.</p>
 <h4 id="visjs">Vis.js</h4>
 <p>A JavaScript library for rendering graph networks.</p>
 <p>Vis.js is used to view and edit <a href="#learning-graph">learning graphs</a> used by intelligent textbooks.</p>
+<p>A hierarchical listing of page headings and sections typically displayed in a sidebar or at the start of a page.
+<em>Helps users quickly understand the scope of the content and jump directly to areas of interest.</em></p>
 <h4 id="website-analytics">Website Analytics</h4>
 <p>The process of analyzing who is coming to your website, when they are visiting and what pages are being accessed.</p>
 <p>The mkdocs material system provides a way to integrate free Google Analytics by adding four lines to your mkdocs.yml file.</p>
 <p>See: <a href="../tutorial/google-analytics/">Tutorial on Google Analytics</a></p>
-<h4 id="web-content-accessibility-guidelines">Web Content Accessibility Guidelines</h4>
-<p>A set of internationally recognized recommendations for making web content more 
-accessible to people with disabilities, including guidelines for perceivable, 
-operable, understandable, and robust web design.</p>
-<p>Web Content Accessibility Guidelines (WCAG) is developed and maintained by the 
-Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C) and
-is widely adopted as the standard for digital accessibility compliance.</p>
 
 
 
