@@ -1,5 +1,8 @@
 # The Five Levels of Intelligent Textbooks
 
+<iframe src="../../sims/book-levels/main.html" width="600px" height="520px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+
 ## Introduction to Intelligent Textbook Classification
 
 The concept of "intelligent textbooks" has evolved significantly with advancements in technology and educational theory. However, understanding the varying degrees of sophistication in these resources requires a clear classification system. This chapter presents a five-level framework for intelligent textbooks, inspired by the established levels of autonomous driving. This classification helps learning organizations strategize their approach to developing and implementing intelligent textbooks based on their capabilities, resources, and educational goals.
