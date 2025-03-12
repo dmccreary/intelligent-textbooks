@@ -29,6 +29,7 @@ nav:
     - Google Analytics: tutorial/google-analytics.md
   - Educational concepts:
     - Introduction: concepts/index.md
+    - Intelligence Levels: concepts/five-levels-of-intelligent-textbooks.md
     - Bloom's Taxonomy: concepts/bloom-taxonomy.md
     - Scaffolding: concepts/scaffolding.md
     - Learning Graph: concepts/learning-graph.md
@@ -50,11 +51,12 @@ nav:
     - Discord Admin: prompts/discord-admin.md
   - MicroSims:
     - Introduction: sims/index.md
+    - Book Levels: sims/book-levels/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Word Cloud: sims/word-cloud/index.md
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
-    - Templates: sims/templates.md
+    - Templates: sims/templates/index.md
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Ontology Questions: ontology-questions.md
