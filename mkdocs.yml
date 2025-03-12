@@ -52,6 +52,7 @@ nav:
   - MicroSims:
     - Introduction: sims/index.md
     - Book Levels: sims/book-levels/index.md
+    - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Word Cloud: sims/word-cloud/index.md
     - Gallery: sims/index.md
