@@ -105,7 +105,7 @@ function draw() {
         textAlign(CENTER, CENTER);
         
         // Scale text size based on container width
-        let levelTextSize = constrain(containerWidth * 0.03, 12, 18);
+        let levelTextSize = constrain(containerWidth * 0.04, 10, 24);
         textSize(levelTextSize);
         
         // For very small screens, use abbreviations
