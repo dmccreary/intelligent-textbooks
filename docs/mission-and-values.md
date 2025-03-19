@@ -72,3 +72,18 @@ Please contact me on [LinkedIn](https://www.linkedin.com/in/danmccreary/) if you
 
 Dan McCreary<br/>
 February 28th, 2025
+
+## Sample LinkedIn Introduction
+
+Thank you for connecting!
+
+I'm leading teams building AI-driven Intelligent Textbooks. We're revolutionizing education by creating interactive, AI-enhanced learning materials that adapt to individual needs.
+
+Our mission is to democratize education through free, open-source textbooks that integrate interactive simulations (MicroSims) and leverage generative AI to make high-quality education accessible globally.
+
+I'd love to discuss how you might contribute to or benefit from our work. Whether you're an educator, developer, content creator, or simply passionate about educational innovation, there are many ways to get involved.
+
+Would you be interested in learning more about our approach using AI, learning graphs, and embedded simulations? Or perhaps you'd like to explore collaboration opportunities?
+Looking forward to working together!
+
+Dan
