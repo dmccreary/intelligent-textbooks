@@ -120,7 +120,7 @@ function draw() {
     }
     
     // Calculate description area position
-    let descriptionY = sh*5 + mt + 30;
+    let descriptionY = sh*5 + mt + 10;
     
     // Display description text under the step diagram
     if (currentHover != -1) {
