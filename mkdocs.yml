@@ -66,6 +66,8 @@ nav:
     - Quizzes: formatting-tests/quizzes-test.md
     - Equations: formatting-tests/equations-test.md
     - Social Media Preview: formatting-tests/social-test.md
+    - Social Media Override Preview: formatting-tests/social-test-2.md
+
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Ontology Questions: ontology-questions.md

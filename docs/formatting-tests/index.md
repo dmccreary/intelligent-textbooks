@@ -12,3 +12,7 @@
 [Equations Test](equations-test.md)
 
 ## Social Media Preview Card Test
+
+* [Social Media Preview](formatting-tests/social-test.md)
+
+* [Social Media Override Preview](formatting-tests/social-test-2.md)
