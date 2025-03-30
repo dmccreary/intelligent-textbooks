@@ -1,12 +1,6 @@
-// Five Levels of Intelligent Textbooks Infographics
-// An interactive infographic that shows detailed describtions of a each of the five levels of
-// Intelligent Textbooks upon a hover
-// This code was originally generted by OpenAI ChatGPT o1 but then editied by Anthropic Claude to be responsive
-// Note you can change the width of the window and the MicroSim will automatically reize the widths of the levels.
-
+// global variables for width and height
 let containerWidth; // calculated by container
-let containerHeight = 500; // fixed height on page
-let canvasWidth = 500;
+let containerHeight = 550; // fixed height on page
 
 // Variables for the stair diagram
 let layers = [];
@@ -45,7 +39,7 @@ function setup() {
 function updateLayout() {
     // Calculate responsive dimensions based on container width
     m = max(10, containerWidth * 0.03); // margins around the steps
-    mt = 50; // margin from the top is fixed
+    mt = max(40, containerWidth * 0.08); // margin from the top
     
     // Adjust step sizes based on container width
     if (containerWidth < 400) {
@@ -65,11 +59,11 @@ function updateLayout() {
     // Define the layers and labels with colors representing increasing intelligence
     // The positions and sizes adjust based on the container width
     layers = [
-        {x: m,      y: sh*4+mt, w: canvasWidth - sw,   h: sh, level: "Level 1 - Static Textbooks", color: "red", tcolor: "white" },  
-        {x: sw+m,   y: sh*3+mt, w: canvasWidth - sw*2, h: sh, level: "Level 2 - Interactive Content", color: "#4682B4", tcolor: "white" },
-        {x: sw*2+m, y: sh*2+mt, w: canvasWidth - sw*3, h: sh, level: "Level 3 - Adaptive Textbooks", color: "#20B2AA", tcolor: "white" },
-        {x: sw*3+m, y: sh*1+mt, w: canvasWidth - sw*4, h: sh, level: "L4 - Chatbot Integration", color: "#9370DB", tcolor: "white" },
-        {x: sw*4+m, y: mt,      w: canvasWidth - sw*5, h: sh, level: "L5 - Autonomous AI", color: "gold", tcolor: "black" }
+        {x: m,      y: sh*4+mt, w: step_width*6-2*sw, h: sh, level: "Level 1 - Static Textbooks", color: "red", tcolor: "white" },  
+        {x: sw+m,   y: sh*3+mt, w: step_width*5-sw,   h: sh, level: "Level 2 - Interactive Content", color: "#4682B4", tcolor: "white" },
+        {x: sw*2+m, y: sh*2+mt, w: step_width*4,      h: sh, level: "Level 3 - Adaptive Textbooks", color: "#20B2AA", tcolor: "white" },
+        {x: sw*3+m, y: sh*1+mt, w: step_width*4-sw,   h: sh, level: "L4 - Chatbot Integration", color: "#9370DB", tcolor: "white" },
+        {x: sw*4+m, y: mt,      w: step_width*3,      h: sh, level: "L5 - Autonomous AI", color: "gold", tcolor: "black" }
     ];
     
     // For very small screens, shorten the level labels
@@ -105,22 +99,21 @@ function draw() {
         
         // Highlight the currently hovered step
         if (i === currentHover) {
-            stroke('blue');
+            stroke('black');
             strokeWeight(4);
         } else {
             stroke(0);
             strokeWeight(0);
         }
         
-        // subtract 2 from the height to give room for the highlighting around the rectangle on hover
-        rect(l.x, l.y, l.w, l.h-2);
+        rect(l.x, l.y, l.w, l.h);
         fill(l.tcolor);
         strokeWeight(0);
         text(l.level, l.x + l.w / 2, l.y + l.h / 2);
     }
     
     // Calculate description area position
-    let descriptionY = sh*5 + mt + 10;
+    let descriptionY = sh*5 + mt + 30;
     
     // Display description text under the step diagram
     if (currentHover != -1) {
@@ -178,5 +171,4 @@ function updateCanvasSize() {
     // Get the exact dimensions of the container
     const container = document.querySelector('main').getBoundingClientRect();
     containerWidth = Math.floor(container.width);  // Avoid fractional pixels
-  canvasWidth = containerWidth;
 }
