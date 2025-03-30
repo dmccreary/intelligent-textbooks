@@ -1,7 +1,7 @@
 ---
 title: Social Media Preview Test
 description: A test to see if a local image will be used to generate a social media card.
-image: social-preview-test.png
+image: ./social-preview-test.png
 ---
 # Social Media Test With Local Override
 
