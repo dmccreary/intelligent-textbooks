@@ -58,6 +58,14 @@ nav:
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
     - Templates: sims/templates/index.md
+  - Formatting Tests:
+    - Introduction: formatting-tests/index.md
+    - Code Highlighting: formatting-tests/code-highlight-test.md
+    - Markdown: formatting-tests/markdown-test.md
+    - Admonitions: formatting-tests/admonitions-test.md
+    - Quizzes: formatting-tests/quizzes-test.md
+    - Equations: formatting-tests/equations-test.md
+    - Social Media Preview: formatting-tests/social-test.md
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Ontology Questions: ontology-questions.md
@@ -93,6 +101,7 @@ theme:
 plugins:
   - search
   - social
+  - social_override
 markdown_extensions:
   - admonition
   - md_in_html # required for multiple-choce question numbering

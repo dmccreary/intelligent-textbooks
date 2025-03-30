@@ -47,3 +47,7 @@ project-root/
 ├── README.md                # Repository documentation
 └── requirements.txt         # Python dependencies including mkdocs-material and extensions
 ```
+
+!!! note
+    You can create your own "tree" diagram like the one
+    above by installing the UNIX `tree` command.
