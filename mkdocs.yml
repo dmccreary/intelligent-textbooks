@@ -1,4 +1,4 @@
-site_name: Intelligent Textbooks
+site_name: Building Intelligent Textbooks With AI
 site_description: 'Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
@@ -59,6 +59,16 @@ nav:
     - Sine Wave: sims/sine-wave/index.md
     - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - Templates: sims/templates/index.md
+  - Formatting Tests:
+    - Introduction: formatting-tests/index.md
+    - Code Highlighting: formatting-tests/code-highlight-test.md
+    - Markdown: formatting-tests/markdown-test.md
+    - Admonitions: formatting-tests/admonitions-test.md
+    - Quizzes: formatting-tests/quizzes-test.md
+    - Equations: formatting-tests/equations-test.md
+    - Social Media Preview: formatting-tests/social-test.md
+    - Social Media Override Preview: formatting-tests/social-test-2.md
+
   - Feedback: feedback.md
   - Glossary: glossary.md
   - Ontology Questions: ontology-questions.md
@@ -94,6 +104,7 @@ theme:
 plugins:
   - search
   - social
+  - social_override
 markdown_extensions:
   - admonition
   - md_in_html # required for multiple-choce question numbering
