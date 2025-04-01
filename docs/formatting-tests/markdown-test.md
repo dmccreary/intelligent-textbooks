@@ -93,29 +93,7 @@ For internal links in MkDocs:
 [Link to a section on the same page](#section-id)
 ```
 
-## Admonitions
 
-MkDocs Material extends Markdown with admonitions for highlighted content. These require the `admonition` and `pymdownx.details` extensions.
-
-```markdown
-!!! note "Optional explicit title"
-    This is a note admonition.
-
-!!! tip
-    This is a tip.
-
-!!! warning
-    This is a warning.
-
-!!! danger
-    This highlights dangerous actions.
-
-??? question "Collapsible admonition (closed by default)"
-    This admonition is collapsible and closed by default.
-
-???+ example "Collapsible admonition (open by default)"
-    This admonition is collapsible and open by default.
-```
 
 ## Code
 

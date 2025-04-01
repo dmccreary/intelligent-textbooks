@@ -1,6 +1,7 @@
 # The Open Graph Metadata Standard
 
-I'll help you understand Open Graph metadata standards for your intelligent textbooks built with mkdocs-material. This will enhance how your content appears when shared on social media platforms.
+The Open Graph metadata standards are used by our intelligent textbooks built with mkdocs-material. This section describes how the the metadata in the HTML is used by social media platforms and how we can
+customize the behavior by using overrides and plugins.
 
 ## Open Graph Protocol Standards
 
@@ -26,10 +27,13 @@ plugins:
     - social
 ```
 
-### Implementation in mkdocs-material
+### Using Overrides in mkdocs-material
 
-To add a custom Open Graph tags to your mkdocs-material site
-you'll need to create a custom template. Here's how:
+If you don't like the default social cards we
+can build customer ways to used markdown metadata tags
+to populate and override our default social cards.
+
+Here's how:
 
 1. Create a directory called `overrides` in your project root
 2. Create a file `overrides/main.html` with this content:
@@ -69,6 +73,7 @@ For page-specific descriptions, you can add front matter to each markdown file:
 ```markdown
 ---
 description: A detailed explanation of how to integrate MicroSims in your intelligent textbook.
+image: path-from-your-docs-to-your/custom-image.png
 ---
 
 # Your Page Title

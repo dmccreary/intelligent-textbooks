@@ -26,6 +26,7 @@ nav:
     - Logging: tutorial/logging.md
     - Search: tutorial/search.md
     - Social: tutorial/social.md
+    - Open Graph: tutorial/open-graph.md
     - Google Analytics: tutorial/google-analytics.md
   - Educational concepts:
     - Introduction: concepts/index.md

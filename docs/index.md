@@ -1,6 +1,6 @@
 # Building Intelligent Textbooks With AI
 
-![Cover Image](./img/cover.png){ width="650" }
+![Cover Image](./img/cover.png){ width="750" }
 
 *Intelligent textbooks guide students through concepts
 on their quest for knowledge.*
