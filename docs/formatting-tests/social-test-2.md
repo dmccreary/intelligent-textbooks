@@ -18,6 +18,9 @@ local image below.
 
 [Social Share Preview](https://socialsharepreview.com/)
 [This Page](https://socialsharepreview.com/?url=https://dmccreary.github.io/intelligent-textbooks/formatting-tests/social-test-2/)
+
+[Meta - Facebook Test](https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fdmccreary.github.io%2Fintelligent-textbooks%2Fformatting-tests%2Fsocial-test-2%2F)
+
 ## Test Image
 
 ![](./social-preview-test.png)
