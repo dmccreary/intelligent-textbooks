@@ -11,7 +11,7 @@ be added to any website with just a single ```iframe``` HTML element.
   style="overflow: hidden;"></iframe>
 
 ```html
-<iframe src="./mains.html" width="600px" height="450px" scrolling="no"
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/NAME/mains.html" width="600px" height="450px" scrolling="no"
   style="overflow: hidden;"></iframe>
 ```
 
