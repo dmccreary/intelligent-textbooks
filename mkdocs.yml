@@ -50,19 +50,19 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
-    - Workflow:
-      - Introduction: workflow/index.md
-      - Course Description: workflow/course-description.md
-      - Bloom's Taxonomy: workflow/bloom-taxonomy.md
-      - Concept Enumeration: workflow/concept-enumeration.md
-      - Concept Dependency: workflow/concept-dependency.md
-      - Concept Taxonomy: workflow/concept-taxonomy.md
-      - Learning Graph: workflow/learning-graph.md
-      - Chapters and Sections: workflow/chapters-and-sections.md
-      - FAQs: workflow/faq.md
-      - Figures, Diagrams and Charts: workflow/figures-diagrams-charts.md
-      - MicroSims: workflow/microsim.md
-      - Graphic Novel: workflow/graphic-novel.md
+  - Workflows:
+    - Introduction: workflow/index.md
+    - Course Description: workflow/course-description.md
+    - Bloom's Taxonomy: workflow/bloom-taxonomy.md
+    - Concept Enumeration: workflow/concept-enumeration.md
+    - Concept Dependency: workflow/concept-dependency.md
+    - Concept Taxonomy: workflow/concept-taxonomy.md
+    - Learning Graph: workflow/learning-graph.md
+    - Chapters and Sections: workflow/chapters-and-sections.md
+    - FAQs: workflow/faq.md
+    - Figures, Diagrams and Charts: workflow/figures-diagrams-charts.md
+    - MicroSims: workflow/microsim.md
+    - Graphic Novel: workflow/graphic-novel.md
   - MicroSims:
     - Introduction: sims/index.md
     - Book Levels: sims/book-levels/index.md
