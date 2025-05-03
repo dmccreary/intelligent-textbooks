@@ -10,11 +10,11 @@ Use this MicroSim to create an interactive tool to view the five levels of intel
   style="overflow: hidden;"></iframe>
 
 
-[Run the Book Levels MicroSim - Responsive Version](https://dmccreary.github.io/intelligent-textbooks/sims/book-levels/main.html){ .md-button .md-button--primary }
+[Run the Book Levels MicroSim - Responsive Version](main.html){ .md-button .md-button--primary }
 
 [Edit the Book Levels MicroSim (Responsive)](https://editor.p5js.org/dmccreary/sketches/_GLojWgQW)
 
-Copy this iframe to your website to include this MicroSim in your class website:
+Copy this line of HTML into your website to include this MicroSim in your class website:
 
 ```html
 <iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/book-levels/main.html" height="500px" scrolling="no"
