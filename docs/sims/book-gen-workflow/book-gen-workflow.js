@@ -1,460 +1,461 @@
 // Curriculum Development Pipeline Interactive Infographic
-// Shows detailed descriptions of each step in the curriculum development process upon hover
-// Responsive design that adapts to different screen sizes
+// Updated: Adds clickable boxes that open URLs in a new tab and changes
+// cursor to a pointer when hovering over a box with an associated URL.
+// Responsive design that adapts to different screen sizes.
 // Row 1 is primary path to Learning Graph
-// Row 2 is book level content
-// Row 3 is chapter level content
+// Row 2 is book‑level content
+// Row 3 is chapter‑level content
 
-let containerWidth; // calculated by container
-let containerHeight = 600; // fixed height on page
-let canvasWidth = 800;
+// ---------------------------------------------------------------------
+// Global layout variables
+// ---------------------------------------------------------------------
+let containerWidth;                // Calculated from container
+let containerHeight = 600;         // Fixed height on page
+let canvasWidth = 800;             // Initial width – updated responsively
 
-// Variables for the diagram
-let boxes = []; // Main workflow boxes
-let outputs = []; // Output component boxes  
-let currentHover = -1;
-let lineStrokeWeight = 2;
-let arrowSize = 8;
+// Box and diagram styling
+let boxes = [];                    // Main workflow boxes
+let outputs = [];                  // Output component boxes
+let currentHover = -1;             // Index of currently hovered box
+let lineStrokeWeight = 2;          // Thickness of connecting lines
+let arrowSize = 8;                 // Size of arrowheads
 
+// Box sizes – recalculated in updateLayout()
 let boxHeight = 85;
-let boxWidth = 130;
-let defaultTextSize = 14;
-let row1Y = 140;
-let row2Y = 280;
-let row3Y = 420;
+let boxWidth  = 130;
+const defaultTextSize = 14;
+const row1Y = 140;
+const row2Y = 280;
+const row3Y = 420;
 
-// left margin
-let lm = 0.04;
-// box X percent canvas width
-let pcw = .19
+// Layout helpers
+const lm  = 0.04;   // Left margin (as fraction of width)
+const pcw = 0.19;   // Column width fraction for outputs
 
+// ---------------------------------------------------------------------
+// p5.js setup – called once at page load
+// ---------------------------------------------------------------------
 function setup() {
-    // Create a canvas to match the parent container's size
-    updateCanvasSize();
+    updateCanvasSize();                                   // Get parent <main> dims
     const canvas = createCanvas(containerWidth, containerHeight);
-    var mainElement = document.querySelector('main');
-    canvas.parent(mainElement);
-    
-    // Initialize the layout (will be updated in updateLayout)
-    updateLayout();
-    
+    canvas.parent(document.querySelector('main'));
+
+    updateLayout();                                       // Build initial layout
+
     describe(
-        'Workflow diagram with hover-over infographic for generating intelligent textbooks using generative AI. The workflows taks a Course Description to Learning Graph and this is used various outputs chapters, glossary, FAQ, Word Cloud, Summaries etc.  Then for each chapter or section we can then generate figures, diagrams, charts, interactive infographics, MicroSims, assessments, graphic novels and assessments.',
+        'Workflow diagram with hover‑over infographic for generating intelligent textbooks using generative AI. The workflow takes a Course Description to a Learning Graph, which then powers various outputs (chapters, glossary, FAQ, word cloud, summaries, figures, diagrams, micro‑sims, graphic novels, assessments). Hover for details, click boxes with links to open documentation.',
         LABEL
     );
 }
 
+// ---------------------------------------------------------------------
+// Recalculate all box positions & sizes based on current width
+// ---------------------------------------------------------------------
 function updateLayout() {
-    // Calculate responsive dimensions based on container width
-    let m = max(20, containerWidth * 0.03); // margins
-    let boxWidth = containerWidth * 0.15;
-    let boxHeight = 50;
-    boxWidth = containerWidth * 0.14;
-    let outputBoxWidth = containerWidth * 0.16;
+    // Responsive dimensions
+    const margin = max(20, containerWidth * 0.03);
+    boxWidth  = containerWidth * 0.14;
+    boxHeight = 50;
+    let outputBoxWidth  = containerWidth * 0.16;
     let outputBoxHeight = 62;
-    
-    // Adjust for very small screens
-    if (containerWidth < 400) {
-        boxWidth = containerWidth * 0.2;
-        outputBoxWidth = containerWidth * 0.18;
+
+    if (containerWidth < 400) {                          // Small screens tweaks
+        boxWidth        = containerWidth * 0.20;
+        outputBoxWidth  = containerWidth * 0.18;
     }
-    
-    // Define the main workflow boxes
+
+    // -----------------------------------------------------------------
+    // Main workflow boxes (row 1 + taxonomy box)
+    // -----------------------------------------------------------------
     boxes = [
         {
             x: containerWidth * 0.05,
             y: row1Y,
             w: boxWidth,
             h: boxHeight,
-            label: "Course\nDescription",
-            color: "red",
-            tcolor: "white",
-            description: "We begin the textbook generation process starting with a detailed course description that outlines target audience, prerequisite, and learning objectives, and the knowledge, and the scope of content to be covered. This document the foundation for all subsequent development stages.",
-            url: ""
+            label: 'Course\nDescription',
+            color: 'red',
+            tcolor: 'white',
+            description: 'We begin the textbook generation process starting with a detailed course description that outlines the target audience, prerequisites, learning objectives, and scope of content. This document forms the foundation for all subsequent development stages.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/course-description/'
         },
         {
             x: containerWidth * 0.23,
             y: row1Y,
             w: boxWidth,
             h: boxHeight,
-            label: "2001 Bloom\nTaxonomy",
-            color: "orange",
-            tcolor: "black",
-            description: "Our second step is the application of the  2001 Bloom's Taxonomy to categorize learning objectives from the course description across six cognitive levels: Remember, Understand, Apply, Analyze, Evaluate, and Create. This provides structure for progressive skill development."
+            label: '2001 Bloom\nTaxonomy',
+            color: 'orange',
+            tcolor: 'black',
+            description: "Apply the 2001 Bloom's Taxonomy to categorize learning objectives across six cognitive levels: Remember, Understand, Apply, Analyze, Evaluate, and Create. This scaffolds progressive skill development.",
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/course-description/'
         },
         {
             x: containerWidth * 0.41,
             y: row1Y,
             w: boxWidth,
             h: boxHeight,
-            label: "Concept\nEnumeration",
-            color: "yellow",
-            tcolor: "black",
-            description: "Once we have a solid understanding of the course description categoriexed by Bloom's six levels we can then create a precise listing of all key concepts that students need to master. This comprehensive inventory ensures no important topics are overlooked."
+            label: 'Concept\nEnumeration',
+            color: 'yellow',
+            tcolor: 'black',
+            description: "Create a precise inventory of all key concepts students must master. This comprehensive list ensures no important topic is overlooked.",
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/concept-enumeration/'
         },
         {
             x: containerWidth * 0.59,
             y: row1Y,
             w: boxWidth,
             h: boxHeight,
-            label: "Concept\nDependencies",
-            color: "green",
-            tcolor: "white",
-            description: "Next we create the learning order relationships between concepts.  We call these our concept dependency relationships.  They will define learning paths from foundational elements to creational concepts. This creates a structured learning sequence where foundational concepts are taught before advanced topics."
+            label: 'Concept\nDependencies',
+            color: 'green',
+            tcolor: 'white',
+            description: "Define learning‑order relationships between concepts. These dependencies establish a structured sequence where foundational concepts precede advanced topics.",
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/concept-depenencies/'
         },
         {
             x: containerWidth * 0.77,
             y: row1Y,
             w: boxWidth,
             h: boxHeight,
-            label: "Learning\nGraph",
-            color: "purple",
-            tcolor: "white",
-            description: "FInally, we create a comprehensive Learning Graph that combines dependencies and our taxonomy.  Learning Graphs are used to visualizes the interconnections between concepts, showing pathways through the curriculum. This enables AI to create adaptive learning and personalized education paths customized to the needs of the students."
+            label: 'Learning\nGraph',
+            color: 'purple',
+            tcolor: 'white',
+            description: 'Combine dependencies and taxonomy into a comprehensive Learning Graph that visualizes interconnections between concepts. This enables AI‑driven adaptive learning paths.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/learning-graph/'
         },
         {
             x: containerWidth * 0.59,
             y: 60,
             w: boxWidth,
             h: boxHeight,
-            label: "Concept\nTaxonomy",
-            color: "steelblue",
-            tcolor: "white",
-            description: "Once we have a list of all the concepts in a course, we can ask generative AI models to suggest a taxonomy that classifies concepts into about a dozen categories. This allows us to colorize each concept and allow the viewer to see patterns in the learning graph."
-        },
+            label: 'Concept\nTaxonomy',
+            color: 'steelblue',
+            tcolor: 'white',
+            description: 'Generate a taxonomy that classifies concepts into categories, enabling color‑coding in the Learning Graph to reveal structural patterns.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/concept-taxonomy/'
+        }
     ];
-  
-    // Define the output components
+
+    // -----------------------------------------------------------------
+    // Output component boxes (rows 2 & 3)
+    // -----------------------------------------------------------------
     outputs = [
+        // Row 2
         {
             x: containerWidth * lm,
             y: row2Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Chapters &\nSections",
-            color: "lightblue",
-            tcolor: "black",
-            description: "Structuring content into logical chapters and sections based on concept dependencies. This creates an organized progression through the material with clear milestones and checkpoints."
+            label: 'Chapters &\nSections',
+            color: 'lightblue',
+            tcolor: 'black',
+            description: 'Structure content into logical chapters and sections based on concept dependencies, creating an organized progression with clear milestones.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/chapters-and-sections/'
         },
         {
             x: containerWidth * (lm + pcw),
             y: row2Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Glossary of\nTerms",
-            color: "lightblue",
-            tcolor: "black",
-            description: "Compilation of key terminology with clear definitions, ensuring consistent understanding across the curriculum. This reference tool supports comprehension and reduces confusion."
+            label: 'Glossary of\nTerms',
+            color: 'lightblue',
+            tcolor: 'black',
+            description: 'Generate precise ISO‑11179 definitions for each concept to ensure consistent understanding across the curriculum.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/glossary/'
         },
         {
-            x: containerWidth * (lm + 2*pcw),
+            x: containerWidth * (lm + 2 * pcw),
             y: row2Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Word Cloud",
-            color: "lightblue",
-            tcolor: "black",
-            description: "Visual representation of key concepts sized by importance or frequency. This provides a quick overview of course themes and helps students identify central ideas."
+            label: 'Word Cloud',
+            color: 'lightblue',
+            tcolor: 'black',
+            description: 'Visualize key concepts sized by importance or frequency, providing a quick overview of course themes.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/word-cloud/'
         },
         {
-            x: containerWidth * (lm + 3*pcw),
+            x: containerWidth * (lm + 3 * pcw),
             y: row2Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "FAQ",
-            color: "lightblue",
-            tcolor: "black",
-            description: "Anticipatory answers to common student questions organized by topic. This resource helps clarify common misconceptions and provides additional context."
+            label: 'FAQ',
+            color: 'lightblue',
+            tcolor: 'black',
+            description: 'Provide anticipatory answers to common student questions, clarifying misconceptions and offering additional context.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/faq/'
         },
         {
-            x: containerWidth * (lm + 4*pcw),
+            x: containerWidth * (lm + 4 * pcw),
             y: row2Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Summaries",
-            color: "lightblue",
-            tcolor: "black",
-            description: "Concise distillations of each major topic, highlighting key takeaways and essential information. These support review and reinforce learning objectives."
+            label: 'Summaries',
+            color: 'lightblue',
+            tcolor: 'black',
+            description: 'Concise distillations of each major topic highlighting key takeaways to support review and reinforce learning objectives.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/summaries/'
         },
+        // Row 3
         {
             x: containerWidth * lm,
             y: row3Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Figures,\nDiagrams,\nCharts",
-            color: "lightgreen",
-            tcolor: "black",
-            description: "Visual learning aids that illustrate complex concepts, show relationships, and provide graphical representations of data. These enhance understanding through multiple learning modalities."
+            label: 'Figures,\nDiagrams,\nCharts',
+            color: 'lightgreen',
+            tcolor: 'black',
+            description: 'Visual aids that illustrate complex concepts and data relationships, enhancing comprehension through multiple modalities.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/figures-diagrams-charts/'
         },
         {
             x: containerWidth * (lm + pcw),
             y: row3Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Interactive\nInfographics",
-            color: "lightgreen",
-            tcolor: "black",
-            description: "Dynamic visual presentations that respond to user interaction, allowing exploration of data and concepts. These engage students through hands-on learning experiences."
+            label: 'Interactive\nInfographics',
+            color: 'lightgreen',
+            tcolor: 'black',
+            description: 'Dynamic visuals that respond to user interaction, allowing exploration of data and concepts for hands‑on learning.'
         },
         {
-            x: containerWidth * (lm + 2*pcw),
+            x: containerWidth * (lm + 2 * pcw),
             y: row3Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "MicroSims",
-            color: "lightgreen",
-            tcolor: "black",
-            description: "Small-scale simulations that model specific concepts or processes, allowing students to experiment with variables and observe outcomes. These provide experiential learning opportunities."
+            label: 'MicroSims',
+            color: 'lightgreen',
+            tcolor: 'black',
+            description: 'Small‑scale simulations where students experiment with variables and observe outcomes, providing experiential learning.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/microsims/'
         },
         {
-            x: containerWidth * (lm + 3*pcw),
+            x: containerWidth * (lm + 3 * pcw),
             y: row3Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Graphic Novel\nStories",
-            color: "lightgreen",
-            tcolor: "black",
-            description: "Narrative-based visual content that teaches concepts through storytelling, making complex ideas more memorable and accessible. This approach appeals to diverse learning styles."
+            label: 'Graphic Novel\nStories',
+            color: 'lightgreen',
+            tcolor: 'black',
+            description: 'Narrative‑based visual content that teaches concepts through storytelling, appealing to diverse learning styles.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/graphic-novel/'
         },
         {
-            x: containerWidth * (lm + 4*pcw),
+            x: containerWidth * (lm + 4 * pcw),
             y: row3Y,
             w: outputBoxWidth,
             h: outputBoxHeight,
-            label: "Assessments",
-            color: "lightgreen",
-            tcolor: "black",
-            description: "Varied evaluation methods including quizzes, projects, and performance tasks that measure student understanding and progress across Bloom's taxonomy levels."
+            label: 'Assessments',
+            color: 'lightgreen',
+            tcolor: 'black',
+            description: 'Quizzes, projects, and performance tasks that measure student understanding and progress across Bloom\'s levels.',
+            url: 'https://dmccreary.github.io/intelligent-textbooks/workflow/assessments/'
         }
     ];
 }
 
+// ---------------------------------------------------------------------
+// Main draw loop – renders diagram each frame
+// ---------------------------------------------------------------------
 function draw() {
-    // light blue background with a light gray border
+    // Background with subtle border
     fill('aliceblue');
     stroke('silver');
-    rect(0,0, canvasWidth, containerHeight);
-    
-    // Add title - responsive font size
+    rect(0, 0, canvasWidth, containerHeight);
+
+    // Title – responsive size
     let titleSize = constrain(containerWidth * 0.04, 18, 28);
     textSize(titleSize);
     textAlign(CENTER, TOP);
     fill(0);
-    strokeWeight(0);
-    text("Intelligent Textbook Generation Workflow", containerWidth/2, 20);
-    
-      // Draw main top workflow boxes
-    drawBoxes(boxes);
-    
-    // TODO - create a data structure to hold all the edges
-    // and create a function to draw the edges from the correct side
-    // Draw left to right workflow arrows in 
-    strokeWeight(lineStrokeWeight);
-    stroke('black');
-    // all but last
-    for (let i = 0; i < boxes.length - 2; i++) {
-        let fromX = boxes[i].x + boxes[i].w;
-        let fromY = boxes[i].y + boxes[i].h/2;
-        let toX = boxes[i+1].x;
-        let toY = boxes[i+1].y + boxes[i+1].h/2;
-        drawArrow(fromX, fromY, toX, toY);
-    }
-  
-    // Draw arrows from taxonomy
-    // Concept Enumeration box
-    ce = boxes[2];
-    // learning graph box
-    lg = boxes[4];
-    // Concept Taxonomy box
-    ct = boxes[5];
-    // Concept Enumeration Top Center point
-    cetc = ce.x + ce.w/2;
+    noStroke();
+    text('Intelligent Textbook Generation Workflow', containerWidth / 2, 20);
 
-    // arrow from top of concept enumeration to concept taxonomy
-    drawArrow(cetc, boxes[3].y, ct.x, ct.y + boxHeight/4);
-    // arrow from right middle of concept taxonomy to top middle of learing graph
-    
-    drawArrow(ct.x + ct.w, ct.y + boxHeight/4, lg.x + boxWidth/2, lg.y);
-     
-    // Draw arrow from Learning Graph to outputs
-    let learningGraphBox = boxes[boxes.length - 2];
-    let learningGraphBottomX = learningGraphBox.x + learningGraphBox.w/2;
-    let learningGraphBottomY = learningGraphBox.y + learningGraphBox.h;
-    
-    // Draw curved arrow to left side outputs
-    let curveStartX = learningGraphBottomX;
-    let curveStartY = learningGraphBottomY;
-    curveEndY = outputs[0].y;
-    
-    // Draw arrow to 2nd row
-    for (let i = 0; i < 5; i++) {
-       curveEndX = outputs[i].x + boxWidth/2;
-       drawArrow(curveStartX, curveStartY, curveEndX, curveEndY);
-    }
-  
-    // Draw output boxes
+    // Render boxes & connecting arrows
+    drawBoxes(boxes);
+    drawTopWorkflowArrows();
+    drawBoxToOutputArrows();
     drawBoxes(outputs);
-    
-    // Draw arrows from Chapters to subsequent outputs
-    strokeWeight(lineStrokeWeight);
-    stroke('black');
-    for (let i = 0; i < 5; i++) {
-        drawArrow(outputs[0].x + outputs[0].w/2, outputs[0].y + outputs[0].h,
-                 outputs[5+i].x + outputs[5+i].w/2, outputs[5+i].y);
-    }
-    
-    // Calculate description area position
-    let descriptionY = row3Y + 80;
-    let descriptionHeight = 95;
-    
-    // Display description text
-    if (currentHover != -1) {
-        let descTextSize = constrain(containerWidth * 0.02, 12, 16);
-        textSize(descTextSize);
-        fill(0);
-        textAlign(LEFT, TOP);
-        noStroke();
-        
-        // Draw description box
-        fill(240);
-        rect(10, descriptionY, containerWidth - 20, descriptionHeight);
-        
-        fill(0);
-        let descWidth = containerWidth - 40;
-        let description;
-        
-        if (currentHover < boxes.length) {
-            description = boxes[currentHover].description;
-        } else {
-            description = outputs[currentHover - boxes.length].description;
-        }
-        
-        text(description, 20, descriptionY + 10, descWidth, descriptionHeight - 20);
-    } else {
-        // Default text when nothing is hovered
-        let defaultTextSize = constrain(containerWidth * 0.025, 14, 18);
-        textSize(defaultTextSize);
-        fill(0);
-        noStroke();
-        textAlign(CENTER, CENTER);
-        text("Hover over components to see detailed descriptions", containerWidth/2, descriptionY + descriptionHeight/4);
-    }
+
+    // Description area below rows
+    renderDescriptionBox();
 }
 
-function drawBoxes(boxArray) {
-    let boxTextSize = constrain(containerWidth * 0.02, 12, 16);
-    
-    for (let i = 0; i < boxArray.length; i++) {
-        let b = boxArray[i];
-        
-        // Check if this box is being hovered
-        let isHovered = (mouseX >= b.x && mouseX <= b.x + b.w && 
-                        mouseY >= b.y && mouseY <= b.y + b.h);
-        
-        if (isHovered) {
-            currentHover = boxArray === boxes ? i : boxes.length + i;
-            stroke('blue');
-            strokeWeight(4);
-        } else {
-            stroke('black');
-            strokeWeight(1);
-        }
-        
+// ---------------------------------------------------------------------
+// Render helper functions
+// ---------------------------------------------------------------------
+function drawBoxes(arr) {
+    const txtSize = constrain(containerWidth * 0.02, 12, 16);
+
+    for (let i = 0; i < arr.length; i++) {
+        const b = arr[i];
+        const isHovered = mouseX >= b.x && mouseX <= b.x + b.w && mouseY >= b.y && mouseY <= b.y + b.h;
+
+        stroke(isHovered ? 'blue' : 'black');
+        strokeWeight(isHovered ? 4 : 1);
         fill(b.color);
         rect(b.x, b.y, b.w, b.h);
-        
+
         fill(b.tcolor);
-        strokeWeight(0);
+        noStroke();
+        textSize(txtSize);
         textAlign(CENTER, CENTER);
-        textSize(boxTextSize);
-        text(b.label, b.x + b.w/2, b.y + b.h/2);
+        text(b.label, b.x + b.w / 2, b.y + b.h / 2);
     }
 }
 
+// Draw left‑to‑right arrows for the main workflow (row 1 + taxonomy)
+function drawTopWorkflowArrows() {
+    strokeWeight(lineStrokeWeight);
+    stroke(0);
+
+    // Sequential arrows in row 1 (boxes[0] … boxes[4])
+    for (let i = 0; i < boxes.length - 2; i++) {
+        const from = boxes[i];
+        const to   = boxes[i + 1];
+        drawArrow(from.x + from.w, from.y + from.h / 2, to.x, to.y + to.h / 2);
+    }
+
+    // Arrow Concept Enumeration → Concept Taxonomy
+    const ce = boxes[2];
+    const ct = boxes[5];
+    drawArrow(ce.x + ce.w / 2, ce.y, ct.x, ct.y + boxHeight / 4);
+
+    // Arrow Concept Taxonomy → Learning Graph
+    const lg = boxes[4];
+    drawArrow(ct.x + ct.w, ct.y + boxHeight / 4, lg.x + boxWidth / 2, lg.y);
+}
+
+// Arrows from Learning Graph to output boxes & between outputs
+function drawBoxToOutputArrows() {
+    const lg = boxes[4];
+    const startX = lg.x + lg.w / 2;
+    const startY = lg.y + lg.h;
+
+    // Down to second row
+    for (let i = 0; i < 5; i++) {
+        const out = outputs[i];
+        drawArrow(startX, startY, out.x + out.w / 2, out.y);
+    }
+
+    // Chapters & Sections → row 3 outputs
+    const chapters = outputs[0];
+    for (let i = 0; i < 5; i++) {
+        const out = outputs[5 + i];
+        drawArrow(chapters.x + chapters.w / 2, chapters.y + chapters.h, out.x + out.w / 2, out.y);
+    }
+}
+
+// Draw arrow with arrowhead
 function drawArrow(x1, y1, x2, y2) {
-    // Draw the line
     line(x1, y1, x2, y2);
-    
-    // Calculate arrow head
-    let angle = atan2(y2 - y1, x2 - x1);
+    const angle = atan2(y2 - y1, x2 - x1);
     push();
     translate(x2, y2);
     rotate(angle);
-    fill('black');
+    fill(0);
     noStroke();
-    triangle(-arrowSize*2, -arrowSize, -arrowSize*2, arrowSize, 0, 0);
+    triangle(-arrowSize * 2, -arrowSize, -arrowSize * 2, arrowSize, 0, 0);
     pop();
 }
 
-function drawCurvedArrow(x1, y1, x2, y2) {
-    // Draw curved path from learning graph to left side
-    noFill();
-    stroke('black');
-    strokeWeight(lineStrokeWeight);
-    beginShape();
-    vertex(x1, y1);
-    let cp1x = x1 - 200;
-    let cp1y = y1 + 100;
-    let cp2x = x2 + 100;
-    let cp2y = y2 - 50;
-    bezierVertex(cp1x, cp1y, cp2x, cp2y, x2, y2);
-    endShape();
-    
-    // Add arrow head
-    let angle = atan2(cp2y - y2, cp2x - x2);
-    push();
-    translate(x2, y2);
-    rotate(angle + PI);
-    fill('black');
+// Render description panel beneath the diagram
+function renderDescriptionBox() {
+    const descriptionY = row3Y + 80;
+    const descriptionHeight = 95;
+
+    // Panel background
+    fill(240);
+    stroke(200);
+    rect(10, descriptionY, containerWidth - 20, descriptionHeight);
+
     noStroke();
-    triangle(-arrowSize*2, -arrowSize, -arrowSize*2, arrowSize, 0, 0);
-    pop();
+    fill(0);
+    textSize(constrain(containerWidth * 0.02, 12, 16));
+    textAlign(LEFT, TOP);
+
+    if (currentHover !== -1) {
+        const desc = currentHover < boxes.length
+            ? boxes[currentHover].description
+            : outputs[currentHover - boxes.length].description;
+        text(desc, 20, descriptionY + 10, containerWidth - 40, descriptionHeight - 20);
+    } else {
+        textAlign(CENTER, CENTER);
+        textSize(constrain(containerWidth * 0.025, 14, 18));
+        text('Hover over components to see detailed descriptions', containerWidth / 2, descriptionY + descriptionHeight / 2);
+    }
 }
 
+// ---------------------------------------------------------------------
+// Interaction handlers
+// ---------------------------------------------------------------------
+// Change cursor & set currentHover while moving mouse
 function mouseMoved() {
     currentHover = -1;
-    
-    // Check if hovering over concept taxonomy circle
-    let circleX = containerWidth / 2;
-    let circleY = 100;
-    let circleR = containerWidth * 0.1;
-    if (dist(mouseX, mouseY, circleX, circleY) < circleR) {
-        currentHover = boxes.length;
-        return;
-    }
-    
+    let hoverOnLink = false;
+
+    // -----------------------------------------------------------------
     // Check boxes
+    // -----------------------------------------------------------------
     for (let i = 0; i < boxes.length; i++) {
-        let b = boxes[i];
-        if (mouseX >= b.x && mouseX <= b.x + b.w && 
-            mouseY >= b.y && mouseY <= b.y + b.h) {
+        const b = boxes[i];
+        if (mouseX >= b.x && mouseX <= b.x + b.w && mouseY >= b.y && mouseY <= b.y + b.h) {
             currentHover = i;
+            if (b.url) hoverOnLink = true;
+            break;
+        }
+    }
+
+    // -----------------------------------------------------------------
+    // Check outputs if nothing matched yet
+    // -----------------------------------------------------------------
+    if (currentHover === -1) {
+        for (let i = 0; i < outputs.length; i++) {
+            const b = outputs[i];
+            if (mouseX >= b.x && mouseX <= b.x + b.w && mouseY >= b.y && mouseY <= b.y + b.h) {
+                currentHover = boxes.length + i;
+                if (b.url) hoverOnLink = true;
+                break;
+            }
+        }
+    }
+
+    // Cursor feedback
+    cursor(hoverOnLink ? 'pointer' : 'default');
+}
+
+// On click – open URL in new tab if box has one
+function mousePressed() {
+    // Boxes
+    for (let i = 0; i < boxes.length; i++) {
+        const b = boxes[i];
+        if (mouseX >= b.x && mouseX <= b.x + b.w && mouseY >= b.y && mouseY <= b.y + b.h) {
+            if (b.url) window.open(b.url, '_blank');
             return;
         }
     }
-    
-    // Check outputs
+    // Outputs
     for (let i = 0; i < outputs.length; i++) {
-        let b = outputs[i];
-        if (mouseX >= b.x && mouseX <= b.x + b.w && 
-            mouseY >= b.y && mouseY <= b.y + b.h) {
-            currentHover = boxes.length + i;
+        const b = outputs[i];
+        if (mouseX >= b.x && mouseX <= b.x + b.w && mouseY >= b.y && mouseY <= b.y + b.h) {
+            if (b.url) window.open(b.url, '_blank');
             return;
         }
     }
 }
 
+// ---------------------------------------------------------------------
+// Responsive handling
+// ---------------------------------------------------------------------
 function windowResized() {
-    // Update canvas size when the container resizes
     updateCanvasSize();
-    updateLayout(); // Recalculate layout based on new size
+    updateLayout();
     resizeCanvas(containerWidth, containerHeight);
     redraw();
 }
 
 function updateCanvasSize() {
-    // Get the exact dimensions of the container
-    const container = document.querySelector('main').getBoundingClientRect();
-    containerWidth = Math.floor(container.width);  // Avoid fractional pixels
-    canvasWidth = containerWidth;
+    const rect = document.querySelector('main').getBoundingClientRect();
+    containerWidth = Math.floor(rect.width);
+    canvasWidth    = containerWidth;
 }
