@@ -39,7 +39,7 @@ function setup() {
     updateLayout();
     
     describe(
-        'Workflow diagraim with hover-over infographic for generating intelligent textbooks using generative AI. The workflows taks a Course Description to Learning Graph and this is used various outputs chapters, glossary, FAQ, Word Cloud, Summaries etc.  Then for each chapter or section we can then generate figures, diagrams, charts, interactive infographics, MicroSims, assessments, graphic novels and assessments.',
+        'Workflow diagram with hover-over infographic for generating intelligent textbooks using generative AI. The workflows taks a Course Description to Learning Graph and this is used various outputs chapters, glossary, FAQ, Word Cloud, Summaries etc.  Then for each chapter or section we can then generate figures, diagrams, charts, interactive infographics, MicroSims, assessments, graphic novels and assessments.',
         LABEL
     );
 }
@@ -69,7 +69,8 @@ function updateLayout() {
             label: "Course\nDescription",
             color: "red",
             tcolor: "white",
-            description: "We begin the textbook generation process starting with a detailed course description that outlines target audience, prerequisite, and learning objectives, and the knowledge, and the scope of content to be covered. This document the foundation for all subsequent development stages."
+            description: "We begin the textbook generation process starting with a detailed course description that outlines target audience, prerequisite, and learning objectives, and the knowledge, and the scope of content to be covered. This document the foundation for all subsequent development stages.",
+            url: ""
         },
         {
             x: containerWidth * 0.23,
