@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # MicroSim Templates
 
 Use these templates to create a MicroSim that can

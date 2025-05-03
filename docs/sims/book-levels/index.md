@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # Book Levels MicroSim
 
 Use this MicroSim to create an interactive tool to view the five levels of intelligent textbooks.

@@ -16,7 +16,7 @@ let currentHover = -1;
 let lineStrokeWeight = 2;
 let arrowSize = 8;
 
-let boxHeight = 80;
+let boxHeight = 85;
 let boxWidth = 130;
 let defaultTextSize = 14;
 let row1Y = 150;
@@ -106,7 +106,7 @@ function updateLayout() {
             y: row1Y,
             w: boxWidth,
             h: boxHeight,
-            label: "Learning Graph",
+            label: "Learning\nGraph",
             color: "purple",
             tcolor: "white",
             description: "Construction of a comprehensive knowledge graph that visualizes the interconnections between concepts, showing pathways through the curriculum. This enables adaptive learning and personalized education paths."
@@ -229,6 +229,7 @@ function updateLayout() {
 }
 
 function draw() {
+    // light blue background with a light gray border
     fill('aliceblue');
     stroke('silver');
     rect(0,0, canvasWidth, containerHeight);
@@ -303,7 +304,7 @@ function draw() {
     
     // Calculate description area position
     let descriptionY = row3Y + 80;
-    let descriptionHeight = 100;
+    let descriptionHeight = 62;
     
     // Display description text
     if (currentHover != -1) {
@@ -321,10 +322,7 @@ function draw() {
         let descWidth = containerWidth - 40;
         let description;
         
-        if (currentHover === boxes.length) {
-            // Special case for concept taxonomy circle
-            description = "The central component that organizes all learning concepts into a hierarchical structure. This taxonomy informs the development of concept enumeration, dependencies, and ultimately shapes the entire curriculum architecture.";
-        } else if (currentHover < boxes.length) {
+        if (currentHover < boxes.length) {
             description = boxes[currentHover].description;
         } else {
             description = outputs[currentHover - boxes.length].description;
@@ -336,8 +334,9 @@ function draw() {
         let defaultTextSize = constrain(containerWidth * 0.025, 14, 18);
         textSize(defaultTextSize);
         fill(0);
+        noStroke();
         textAlign(CENTER, CENTER);
-        text("Hover over components to see detailed descriptions", containerWidth/2, descriptionY + descriptionHeight/2);
+        text("Hover over components to see detailed descriptions", containerWidth/2, descriptionY + descriptionHeight/4);
     }
 }
 

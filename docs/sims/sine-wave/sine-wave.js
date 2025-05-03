@@ -1,66 +1,92 @@
-// p5.js code to generate a sine wave with amplitude and period controls
-
-// sine wave with 3 sliders
+// MicroSim for a responsive sine wave demonstration
+// Canvas dimensions
 let canvasWidth = 670;
 let drawHeight = 400;
-let canvasHeight = 475;
-let halfWidth = canvasWidth / 2;
-let halfHeight = drawHeight / 2;
+let controlHeight = 75;
+let canvasHeight = drawHeight + controlHeight;
+let margin = 25;
+let sliderLeftMargin = 130;
+let defaultTextSize = 16;
+
+// Global variables for responsive design
+let containerWidth; // calculated by container upon resize
+let containerHeight = canvasHeight; // fixed height on page
+
+// Sine wave parameters
 let amplitude = 100;
+let period = 50;
 let phase = 0;
 
+// UI Controls
 let amplitudeSlider, periodSlider, phaseSlider;
-let labelValueMargin = 130;
 
 function setup() {
-  const canvas = createCanvas(canvasWidth, canvasHeight);
+  // Create a canvas to match the parent container's size
+  updateCanvasSize();
+  const canvas = createCanvas(containerWidth, containerHeight);
   // This code will also work in the p5.js editor
   var mainElement = document.querySelector('main');
   canvas.parent(mainElement);
   
   textFont('Arial');
-  textSize(16);
+  textSize(defaultTextSize);
   
-  // Create sliders
+  // Create sliders with responsive sizing
   amplitudeSlider = createSlider(0, 200, 100);
-  amplitudeSlider.position(labelValueMargin, drawHeight + 10);
-  amplitudeSlider.size(width - labelValueMargin - 15);
+  amplitudeSlider.position(sliderLeftMargin, drawHeight + 10);
+  amplitudeSlider.size(containerWidth - sliderLeftMargin - 15);
   
   periodSlider = createSlider(1, 100, 50);
-  periodSlider.position(labelValueMargin, drawHeight + 30);
-  periodSlider.size(width - labelValueMargin - 15);
+  periodSlider.position(sliderLeftMargin, drawHeight + 30);
+  periodSlider.size(containerWidth - sliderLeftMargin - 15);
   
   phaseSlider = createSlider(-PI*100, PI*100, 0, 0.01);
-  phaseSlider.position(labelValueMargin, drawHeight + 50);
-  phaseSlider.size(width - labelValueMargin - 15);
+  phaseSlider.position(sliderLeftMargin, drawHeight + 50);
+  phaseSlider.size(containerWidth - sliderLeftMargin - 15);
+  
+  describe('A MicroSim for exploring sine waves with amplitude, period, and phase controls.', LABEL);
 }
   
 function draw() {
-  stroke(0);
-  // make the background drawing region light gray
-  fill('aliceblue');
-  rect(0, 0, canvasWidth, canvasWidth);
-  // make the background of the controls white
-  fill('white')
-  rect(0, drawHeight, canvasWidth, canvasHeight-drawHeight);
+  // Update canvasWidth after resize
+  canvasWidth = containerWidth;
   
+  // Background for drawing area
+  fill('aliceblue');
+  stroke('silver');
+  strokeWeight(1);
+  rect(0, 0, canvasWidth, drawHeight);
+  
+  // Background for controls area
+  fill('white');
+  stroke('silver');
+  strokeWeight(1);
+  rect(0, drawHeight, canvasWidth, controlHeight);
+  
+  // Get values from sliders
   amplitude = amplitudeSlider.value();
   period = periodSlider.value();
   phase = phaseSlider.value();
   
-  // draw slider labels
-  strokeWeight(0);
-  fill('black'); // Text color
-  text('Amplitude: ' + amplitude/100,    10, drawHeight + 25);
-  text('Period: '    + period,           10, drawHeight + 45);
-  text('Phase: '     + phase.toFixed(2), 10, drawHeight + 65);
+  // Draw slider labels
+  fill('black');
+  noStroke();
+  textSize(defaultTextSize);
+  textAlign(LEFT, CENTER);
   
-  // draw on the standard axis to keep text upright
+  text(`Amplitude: ${(amplitude/100).toFixed(2)}`, 10, drawHeight + 20);
+  text(`Period: ${period}`, 10, drawHeight + 40);
+  text(`Phase: ${phase.toFixed(2)}`, 10, drawHeight + 60);
+  
+  // Draw axes without transformation (keeps text upright)
   drawAxis();
-  translate(canvasWidth / 2, drawHeight / 2); // Shift origin to center
   
-  scale(1, -1); // Flip y-axis to make positive y up
-  drawSineWave(amplitude, 1/period, phase);
+  // Apply transformations for sine wave
+  push();
+    translate(canvasWidth / 2, drawHeight / 2); // Shift origin to center
+    scale(1, -1); // Flip y-axis to make positive y up
+    drawSineWave(amplitude, 1/period, phase);
+  pop();
 }
 
 function setLineDash(list) {
@@ -68,32 +94,54 @@ function setLineDash(list) {
 }
 
 function drawAxis() {
-  fill('black')
-  strokeWeight(0)
-  text('y', halfWidth-20, 15)
-  text('x', width-20, halfHeight + 20)
-  stroke('gray')
-  strokeWeight(1)
-  setLineDash([5, 5])
+  fill('black');
+  noStroke();
+  textSize(defaultTextSize);
+  textAlign(LEFT, CENTER);
   
-  // horizontal line
-  line(0, halfHeight, width, halfHeight)
-  // vertical line
-  line(halfWidth, 0, halfWidth, drawHeight)
+  text('y', canvasWidth/2 - 20, 15);
+  text('x', canvasWidth - 20, drawHeight/2 + 20);
   
-
+  stroke('gray');
+  strokeWeight(1);
+  setLineDash([5, 5]);
+  
+  // Horizontal line (x-axis)
+  line(0, drawHeight/2, canvasWidth, drawHeight/2);
+  
+  // Vertical line (y-axis)
+  line(canvasWidth/2, 0, canvasWidth/2, drawHeight);
 }
 
 function drawSineWave(amplitude, frequency, phase) {
   stroke('blue');
-  strokeWeight(3)
+  strokeWeight(3);
   noFill();
-  // turn off dash line
-  setLineDash([1, 0])
+  // Turn off dash line
+  setLineDash([1, 0]);
+  
   beginShape();
-    for (let x = -width / 2; x < width / 2; x++) {
-      let y = amplitude * sin(frequency * (x - phase));
-      vertex(x, y);
-    }
+  for (let x = -canvasWidth/2; x < canvasWidth/2; x++) {
+    let y = amplitude * sin(frequency * (x - phase));
+    vertex(x, y);
+  }
   endShape();
+}
+
+function windowResized() {
+  // Update canvas size when the container resizes
+  updateCanvasSize();
+  resizeCanvas(containerWidth, containerHeight);
+  redraw();
+  
+  // Resize the sliders to match the new canvasWidth
+  amplitudeSlider.size(containerWidth - sliderLeftMargin - 15);
+  periodSlider.size(containerWidth - sliderLeftMargin - 15);
+  phaseSlider.size(containerWidth - sliderLeftMargin - 15);
+}
+
+function updateCanvasSize() {
+  // Get the exact dimensions of the container
+  const container = document.querySelector('main').getBoundingClientRect();
+  containerWidth = Math.floor(container.width);  // Avoid fractional pixels
 }

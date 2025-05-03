@@ -1,11 +1,20 @@
+---
+hide:
+  - toc
+---
+
 # Sine Wave
 
-<figure markdown>
-   ![Image Name](./sine-wave.png){ width="400" }
-   <figcaption>Sine Wave.</figcaption>
-</figure>
+<iframe src="./main.html" height="480px" scrolling="no"
+  style="overflow: hidden;"></iframe>
 
-[Run the Sine Wave Demo](./sine-wave.html){ .md-button .md-button--primary }
+[Run the Sine Wave MicroSim](./sine-wave.html){ .md-button .md-button--primary }
+[Edit the Sine Wave MicroSim](https://editor.p5js.org/dmccreary/sketches/0SEATs3jW)
+
+```html
+<iframe src="http://dmccreary.github.io/intelligent-textbook/main.html" height="480px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+```
 
 In this demo, we use three range control sliders to change 
 the ways a sine wave is drawn on a canvas.

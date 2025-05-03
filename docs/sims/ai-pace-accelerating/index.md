@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # The Accelerating Pace of AI
 
 Use these templates to create a MicroSim that can
