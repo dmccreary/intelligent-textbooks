@@ -19,9 +19,9 @@ let arrowSize = 8;
 let boxHeight = 85;
 let boxWidth = 130;
 let defaultTextSize = 14;
-let row1Y = 150;
-let row2Y = 300;
-let row3Y = 450;
+let row1Y = 140;
+let row2Y = 280;
+let row3Y = 420;
 
 // left margin
 let lm = 0.04;
@@ -39,7 +39,7 @@ function setup() {
     updateLayout();
     
     describe(
-        'Curriculum Development Pipeline showing the workflow from Course Description to Learning Graph and various outputs including MicroSims, assessments, and multimedia content.',
+        'Workflow diagraim with hover-over infographic for generating intelligent textbooks using generative AI. The workflows taks a Course Description to Learning Graph and this is used various outputs chapters, glossary, FAQ, Word Cloud, Summaries etc.  Then for each chapter or section we can then generate figures, diagrams, charts, interactive infographics, MicroSims, assessments, graphic novels and assessments.',
         LABEL
     );
 }
@@ -51,7 +51,7 @@ function updateLayout() {
     let boxHeight = 50;
     boxWidth = containerWidth * 0.14;
     let outputBoxWidth = containerWidth * 0.16;
-    let outputBoxHeight = 60;
+    let outputBoxHeight = 62;
     
     // Adjust for very small screens
     if (containerWidth < 400) {
@@ -69,7 +69,7 @@ function updateLayout() {
             label: "Course\nDescription",
             color: "red",
             tcolor: "white",
-            description: "Starting with a thorough course description that outlines learning objectives, target audience, prerequisite knowledge, and the scope of content to be covered. This forms the foundation for all subsequent development stages."
+            description: "We begin the textbook generation process starting with a detailed course description that outlines target audience, prerequisite, and learning objectives, and the knowledge, and the scope of content to be covered. This document the foundation for all subsequent development stages."
         },
         {
             x: containerWidth * 0.23,
@@ -79,7 +79,7 @@ function updateLayout() {
             label: "2001 Bloom\nTaxonomy",
             color: "orange",
             tcolor: "black",
-            description: "Application of the revised 2001 Bloom's Taxonomy to categorize learning objectives across six cognitive levels: Remember, Understand, Apply, Analyze, Evaluate, and Create. This provides structure for progressive skill development."
+            description: "Our second step is the application of the  2001 Bloom's Taxonomy to categorize learning objectives from the course description across six cognitive levels: Remember, Understand, Apply, Analyze, Evaluate, and Create. This provides structure for progressive skill development."
         },
         {
             x: containerWidth * 0.41,
@@ -89,7 +89,7 @@ function updateLayout() {
             label: "Concept\nEnumeration",
             color: "yellow",
             tcolor: "black",
-            description: "Systematic identification and listing of all key concepts, skills, and knowledge elements that students need to master. This comprehensive inventory ensures no important topics are overlooked."
+            description: "Once we have a solid understanding of the course description categoriexed by Bloom's six levels we can then create a precise listing of all key concepts that students need to master. This comprehensive inventory ensures no important topics are overlooked."
         },
         {
             x: containerWidth * 0.59,
@@ -99,7 +99,7 @@ function updateLayout() {
             label: "Concept\nDependencies",
             color: "green",
             tcolor: "white",
-            description: "Mapping the logical relationships between concepts to establish prerequisite knowledge paths. This creates a structured learning sequence where foundational concepts are taught before advanced topics."
+            description: "Next we create the learning order relationships between concepts.  We call these our concept dependency relationships.  They will define learning paths from foundational elements to creational concepts. This creates a structured learning sequence where foundational concepts are taught before advanced topics."
         },
         {
             x: containerWidth * 0.77,
@@ -109,7 +109,7 @@ function updateLayout() {
             label: "Learning\nGraph",
             color: "purple",
             tcolor: "white",
-            description: "Construction of a comprehensive knowledge graph that visualizes the interconnections between concepts, showing pathways through the curriculum. This enables adaptive learning and personalized education paths."
+            description: "FInally, we create a comprehensive Learning Graph that combines dependencies and our taxonomy.  Learning Graphs are used to visualizes the interconnections between concepts, showing pathways through the curriculum. This enables AI to create adaptive learning and personalized education paths customized to the needs of the students."
         },
         {
             x: containerWidth * 0.59,
@@ -119,7 +119,7 @@ function updateLayout() {
             label: "Concept\nTaxonomy",
             color: "steelblue",
             tcolor: "white",
-            description: "Mapping the logical relationships between concepts to establish prerequisite knowledge paths. This creates a structured learning sequence where foundational concepts are taught before advanced topics."
+            description: "Once we have a list of all the concepts in a course, we can ask generative AI models to suggest a taxonomy that classifies concepts into about a dozen categories. This allows us to colorize each concept and allow the viewer to see patterns in the learning graph."
         },
     ];
   
@@ -240,7 +240,7 @@ function draw() {
     textAlign(CENTER, TOP);
     fill(0);
     strokeWeight(0);
-    text("Intelligent Textbook AI Workflow", containerWidth/2, 20);
+    text("Intelligent Textbook Generation Workflow", containerWidth/2, 20);
     
       // Draw main top workflow boxes
     drawBoxes(boxes);
@@ -304,7 +304,7 @@ function draw() {
     
     // Calculate description area position
     let descriptionY = row3Y + 80;
-    let descriptionHeight = 62;
+    let descriptionHeight = 95;
     
     // Display description text
     if (currentHover != -1) {
