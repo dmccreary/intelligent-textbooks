@@ -7,11 +7,11 @@ hide:
 Use these templates to create a MicroSim that can
 be added to any website with just a single ```iframe``` HTML element.
 
-<iframe src="./main.html" height="650px" scrolling="no"
+<iframe src="./main.html" height="610px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
 ```html
-<iframe src="./mains.html" height="450px" scrolling="no"
+<iframe src="./mains.html" height="610px" scrolling="no"
   style="overflow: hidden;"></iframe>
 ```
 
