@@ -50,6 +50,14 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
+    - Workflow:
+      - Introduction: workflow/index.md
+      - Course Description: workflow/course-description.md
+      - Bloom's Taxonomy: workflow/blooms-taxonomy.md
+      - Concept Enumeration: workflow/concept-enumeration.md
+      - Concept Dependency: workflow/concept-dependency.md
+      - Concept Taxonomy: workflow/concept-taxonomy.md
+      - Learning Graph: workflow/learning-graph.md
   - MicroSims:
     - Introduction: sims/index.md
     - Book Levels: sims/book-levels/index.md
