@@ -382,7 +382,7 @@ function renderDescriptionBox() {
     } else {
         textAlign(CENTER, CENTER);
         textSize(constrain(containerWidth * 0.025, 14, 18));
-        text('Hover over components to see detailed descriptions', containerWidth / 2, descriptionY + descriptionHeight / 2);
+        text('Hover over components to see detailed descriptions.\nClick on a component to learn more.', containerWidth / 2, descriptionY + descriptionHeight / 2);
     }
 }
 
