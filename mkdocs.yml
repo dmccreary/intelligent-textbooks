@@ -59,8 +59,10 @@ nav:
     - Concept Taxonomy: workflow/concept-taxonomy.md
     - Learning Graph: workflow/learning-graph.md
     - Chapters and Sections: workflow/chapters-and-sections.md
+    - Glossary: workflow/glossary.md
     - FAQs: workflow/faq.md
     - Figures, Diagrams and Charts: workflow/figures-diagrams-charts.md
+    - Interactive Infographics: workflow/interactive-infographics.md
     - MicroSims: workflow/microsim.md
     - Graphic Novel: workflow/graphic-novel.md
   - MicroSims:
