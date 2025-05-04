@@ -679,6 +679,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Concept Enumeration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -690,6 +703,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1281,6 +1322,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1304,6 +1362,20 @@
 
 
 <h1 id="generating-concepts">Generating Concepts</h1>
+<p>In this step, we create a precise inventory of all key concepts students must master. This comprehensive list ensures no important topic is overlooked.</p>
+<p>Current language models such as ChatGPT o1 and Anthropic Claude 3.7 seem to do well when
+we request about 250 concepts per course.  We can request more concepts when their
+is plenty of existing knowledge about a course.  For example a <a href="https://dmccreary.github.io/geometry-course/">High School Geometry Course</a> is well represented in training data for large-language models.
+However, a new course on a new topic such as the ISO GQL language standards has few online courses.</p>
+<h2 id="sample-prompt">Sample Prompt</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>You are an expert at generating high-quality concept labels used in a knowledge graph for online training courses.</p>
+<p>For the attached course description (or course-description.md in the project knowledge) that has been enhanced with the 2001 Bloom Taxonomy, please generate a numbered list of the 250 key concepts in this course.  Use a single line per concept.</p>
+<p>Each key concept should be formatted as a short concept label using title case format.
+Use acronyms and abbreviations only when the concept label becomes too long.</p>
+<p>Return the concept label list in the approximate order that they should be taught.</p>
+</div>
 
 
 

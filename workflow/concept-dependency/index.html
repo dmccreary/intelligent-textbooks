@@ -702,6 +702,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Concept Dependency
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -713,6 +726,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1281,6 +1322,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Prompt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1304,7 +1362,36 @@
 
 
 <h1 id="concept-dependency">Concept Dependency</h1>
-<p>In this step we look at what prior concepts we need to master before we can learn a new concept.</p>
+<p>In this step we create a dependency graph of concepts.  The dependency graph tells us what concepts we need to master before we can learn a new concept.</p>
+<p>A learning graph creates learning‑order relationships between concepts. These dependencies establish a structured sequence where foundational concepts precede advanced topics.  This is technically
+called a directed acyclic graph (DAG) since there can be no loops in a dependency graph.  Loops are concepts that both depend on each other.</p>
+<p>Note that a DAG might have multiple learning paths.  There might be multiple
+different ways to master a new concept.  For example, based on the student's background
+one path might take them through concepts that require a strong math background such
+as calculus.  Another path might teach a new concept using metaphors and storytelling which
+do not require advanced math training.</p>
+<h2 id="sample-prompt">Sample Prompt</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Your are an expert at understanding learning dependencies in teaching new Concepts in a course.
+You understand how directed acyclic graphs (DAGs) are used to build learning graphs for a course.
+You understand how to generate a new CSV file that holds a learning graph.</p>
+<p>Learning dependencies focus on understanding what order the Concepts should be taught to a student before they are ready to learn a specific concept.</p>
+<p>For input to this step, use the attached enumerated-concepts.md file or look in the project knowledge area for this file.  Note that the file contains a numbered list.  The number is called the Concept ID and the label after the number is called the ConceptLabel.</p>
+<p>Please create a fully connected concept learning dependency graph for the concepts in this course in a new CSV file. Add a new pipe-delimited column that contains the dependant concept IDs.</p>
+<p>Here is the format of the new CSV output file you will create.  The first row in the file contains the header metadata.</p>
+<p>Return the new list as a CSV file using the following format:</p>
+<ol>
+<li>The first column in the CSV file is a numeric ConceptID you assigned in the list above.</li>
+<li>The second column is the ConceptLabel.</li>
+<li>The third column is the Dependencies which is a pipe-delimited list of the ConceptIDs that the concept depends upon.</li>
+</ol>
+<p>The first row of the CSV file you generate will be the following header row:</p>
+<p>ConceptID,ConceptLabel,Dependencies</p>
+<p>Check your results to make sure that all concepts are connected to at least one other concept.</p>
+<p>Foundation Concepts are concepts that have no dependant concepts in this set.<br />
+They have an empty third column.</p>
+</div>
 
 
 
