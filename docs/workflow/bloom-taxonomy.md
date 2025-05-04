@@ -46,13 +46,15 @@ This structured approach ensures students develop both foundational knowledge an
     Just remember the phrase "Remember Understanding Allows Analyzing Everything Creatively"
 
 !!! prompt
-    Please generate a colorful drawing of a tree of knowledge that has the following levels:
+    Please generate a colorful wide-landscape drawing of a tree using bright colors of knowledge that has the following levels:
 
-    1. Remember - The soil/foundation at the bottom of the drawing where it all begins
-    2. Understand - The feeding roots that take in nutrients
-    3. Apply - The main root system that grounds knowledge
-    4. Analyze - The main trunk that connects everything
-    5. Evaluate - The branches that judge where to grow
-    6. Create - The crown/fruits at the top
+    1. Remember (red) - The soil/foundation at the very bottom of the drawing where it all begins
+    2. Understand (orange) - The small feeding roots below ground that take in nutrients
+    3. Apply (yellow) - The main center root just below the surface system that grounds knowledge
+    4. Analyze (green) - The main trunk above the ground that connects everything
+    5. Evaluate (blue) - The mid-level above ground branches that judge where to grow
+    6. Create (purple) - The crown/fruits at the top
+
+Make sure to place all the labels in the correct order from bottom to top.
 
 ![](../img/bloom-tree.png)
