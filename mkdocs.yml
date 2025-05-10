@@ -14,6 +14,7 @@ nav:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
     - Directory Structure: tutorial/directory-structure.md
+    - concepts/levels-of-interactivity.md
     - Markdown: tutorial/markdown.md
     - Navigation: tutorial/navigation.md
     - Admonitions: tutorial/admonitions.md
