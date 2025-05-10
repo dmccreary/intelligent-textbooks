@@ -725,6 +725,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -736,6 +749,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-the-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the Taxonomy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-the-dependency-graph-csv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating the Dependency Graph CSV File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-the-learning-graph-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the Learning Graph Legend
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1281,6 +1349,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-the-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the Taxonomy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-the-dependency-graph-csv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating the Dependency Graph CSV File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-the-learning-graph-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the Learning Graph Legend
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1304,6 +1416,14 @@
 
 
 <h1 id="generating-a-course-taxonomy">Generating a Course Taxonomy</h1>
+<h2 id="overview">Overview</h2>
+<p>This workflow has three parts:</p>
+<ol>
+<li>The generation of a 10-12 element taxonomy</li>
+<li>Updating the dependencies csv file to include the primary taxonomy as a new column of data</li>
+<li>Generating a legend in HTML for the learning graph viewer</li>
+</ol>
+<h2 id="generating-the-taxonomy">Generating the Taxonomy</h2>
 <div class="admonition prompt">
 <p class="admonition-title">Prompt</p>
 <p>Now lets focus again on the enumerated-concepts.md file we have generated for a course.
@@ -1325,6 +1445,55 @@ Ensure that the categories cover
 a range of concept types, including abstract ideas, practical
 applications, common misunderstandings, and real-world examples.
 Avoid redundancy and ensure that each category is distinct.</p>
+</div>
+<h2 id="updating-the-dependency-graph-csv-file">Updating the Dependency Graph CSV File</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Please update the dependencies.csv file to add a new column.  The new column name is TaxonomyID.  For each concept, find the primary taxonomy that the concept fits into.  Only assign a single taxonomy to each concept.</p>
+<p>Here is the format for the new CSV file I want you to generate:</p>
+<ol>
+<li>ConceptID (copied direct from the dependencies.csv file)</li>
+<li>ConceptLabel  (copied direct from the dependencies.csv file)</li>
+<li>Dependencies (copied direct from the dependencies.csv file)</li>
+<li>TaxononyID - this is the new column you will generate.</li>
+</ol>
+</div>
+<h2 id="generating-the-learning-graph-legend">Generating the Learning Graph Legend</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Please summarize the taxonomy into a numbered list with just the taxonomy label as the item in the list in raw markdown format.</p>
+</div>
+<p>In this updated CSV file, each concept is assigned to a single TaxonomyID based on its primary category from our taxonomy:</p>
+<p>Here's a simplified numbered list containing just the taxonomy labels:</p>
+<ol>
+<li>Foundational Concepts</li>
+<li>AI Evolution and History</li>
+<li>AI Architectures and Technologies</li>
+<li>AI Capabilities and Applications</li>
+<li>Content Generation and Creativity</li>
+<li>Knowledge Management and Organization</li>
+<li>Educational Transformation</li>
+<li>Organizational Strategy and Implementation</li>
+<li>Performance Evaluation and Benchmarking</li>
+<li>Ethical and Regulatory Considerations</li>
+<li>Future Trends and Projections</li>
+<li>Implementation and Management Practices</li>
+</ol>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Please convert the list into an HTML table with the following format.
+Do not put any style elements ih the table other than background color and font color on the second column:</p>
+<p><table>
+        <tr>
+            <td>Foundational Concepts</td>
+            <td style="background-color: red; color: white;">Red</td>
+        </tr>
+        <tr>
+            <td>AI Evolution and History</td>
+            <td style="background-color: orange; color: black;">Orange</td>
+        </tr>
+            <td>AI Architectures and Technologies</td>
+            <td style="background-color: yellow; color: black;">Orange</td></p>
 </div>
 
 
