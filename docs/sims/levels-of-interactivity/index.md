@@ -4,15 +4,16 @@ hide:
 ---
 # Levels of Interactivity MicroSim
 
-Use these templates to create a MicroSim that can
-be added to any website with just a single ```iframe``` HTML element.
 
-<iframe src="./main.html" width="620px" height="550px" scrolling="no"
+
+<iframe src="./main.html" width="620px" height="505px" scrolling="no"
   style="overflow: hidden;"></iframe>
+
+To use this MicroSim, just copy this ```iframe``` HTML element onto your website.
 
 ```html
-<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/levels-of-interactivity/mains.html" width="600px" height="450px" scrolling="no"
-  style="overflow: hidden;"></iframe>
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/levels-of-interactivity/main.html" height="505px" 
+   scrolling="no" style="overflow: hidden;"></iframe>
 ```
 
 ![Image Name](./template.png){ width="400" }
