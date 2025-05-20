@@ -2,11 +2,11 @@
 
 This website is part of a series of resources to help teachers from around the world create the foundation for free and open intelligent textbooks.
 
-Our focus today is to help instructors create [Level 2](./sims/book-levels/index.md) textbooks that have a learning graph has their core data structure use to ground content generation and agents.
+Our focus today is to help instructors create [Level 2](./sims/book-levels/index.md) textbooks that have a [learning graph](./glossary.md#learning-graph) as their core data structure to ground content generation and guide learning agents.
 
 ## Our Book Generation Workflow
 
-If you are new to the book generation process, we strongly suggest you use the following infographic MicroSim workflow to get a feeling of how we generate content but always keep humans in the loop to guide content generation:
+If you are new to the book generation process, we strongly suggest you use the following infographic MicroSim workflow to get a feeling of how we generate content but always keep humans in the loop to guide content generation process.
 
 <iframe src="../sims/book-gen-workflow/main.html" height="610px" scrolling="no"
   style="overflow: hidden;"></iframe>
@@ -15,8 +15,8 @@ If you are new to the book generation process, we strongly suggest you use the f
 
 After you get an overview of the steps to generate guided content around a learning graph, the next step is to understand the basic mechanics of getting your LLM content into a website.  Although there are are many ways to store intelligent textbooks on a website, this guide focuses on the best practices of using LLMs to generate Markdown and then convert that Markdown to a beautiful website built with HTML, CSS and JavaScript.
 
-Many of our teachers don't want to pay a hosting service for hosting their content.  Since GitHub Pages is free, we
-focussed on GitHub Pages publishing tools that support Markdown, code highlighting and equations on GitHub.
+Many of our teachers can't afford expense service for hosting their intelligent textbooks.  Since GitHub Pages is a free service for public
+website, we show how to use GitHub Pages and publishing tools that support Markdown, code highlighting and equations on GitHub.
 
 ## Why Mkdos Material?
 
@@ -30,18 +30,14 @@ When we gave ChatGPT the following requirements:
 Here is the summary of ChatGPT's recommendation:
 
 !!! Quote ""
-    MkDocs with the Material Theme is the most aligned with your requirements due to its
-    simplicity, robust features, and ease of deployment to GitHub Pages. It handles code 
-    highlighting and mathematical formulas gracefully and has a straightforward
-    configuration process.
+    MkDocs with the Material Theme is the most aligned with your requirements due to its simplicity, robust features, and ease of deployment to GitHub Pages. It handles code 
+    highlighting and mathematical formulas gracefully and has a straightforward configuration process.
 
 We have also found the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) [support](https://squidfunk.github.io/mkdocs-material/support/) extremely good, with our questions
 often being answered within hours.
 
 Because of the close match of mkdocs-material's features with our intelligent textbook requirements,
-we have created about 30 sample websites that test these tools.  We have also found that
-mkdocs-material can be quickly extended to support the features we need in advanced
-intelligent textbooks.
+we have created about 30 sample websites that test these tools.  We have also found that mkdocs-material can be quickly extended to support the features we need in advanced intelligent textbooks.
 
 Note that these tools generate a [2.9 level](https://dmccreary.medium.com/five-levels-of-intelligent-textbooks-b81a4c1525a0)
 intelligent textbook.  THis is up to but does not include personalization to the knowledge of the student.  This gets your textbook ready to move to level 3, where a knowledge graph of what concepts they are aware of are used to generate personalized content.
