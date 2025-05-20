@@ -1,5 +1,19 @@
 [  
     { "site": {
+        "name": "Architectural Tradeoff Analysis Method",
+        "github_repo": "https://github.com/dmccreary/atam",
+        "site_url": "https://dmccreary.github.io/atam/",
+        "description": "ATAM is a method for evaluating software architecture.  We apply ATAM to the database selection process.  This book is a companion to the book 'Making Sense of NoSQL'.",
+        "status": "Early stage."
+    }},
+    { "site": {
+        "name": "Building AI Agents with Python",
+        "github_repo": "https://dmccreary.github.io/agents-course/",
+        "site_url": "https://dmccreary.github.io/agents-course/",
+        "description": "Creating intelligent agents with Python and LLMs.",
+        "status": "Early stage."
+    }},
+    { "site": {
         "name": "AI Assisted Geometry",
         "github_repo": "https://github.com/dmccreary/geometry-course",
         "site_url": "https://dmccreary.github.io/geometry-course",
@@ -50,7 +64,13 @@
         "microsim-count": 6,
         "glossary-term-count": 0
     }},
-
+    { "site": {
+        "name": "AI Circuits Course",
+        "github_repo": "https://dmccreary.github.io/circuits/",
+        "site_url": "https://dmccreary.github.io/circuits/",
+        "description": "Designing circuits using AI.  Created to support Dr. Sharat Bhatra's circuits course at the University of Minnesota.",
+        "status": "Early stage."
+    }},
     { "site": {
         "name": "Digital Electronics with AI",
         "github_repo": "https://github.com/dmccreary/digital-electronics",
@@ -63,7 +83,12 @@
         "microsim-count": 3,
         "glossary-term-count": 0
     }},
-
+    { "site": {
+        "name": "Deep Learning with AI",
+        "github_repo": "https://github.com/dmccreary/deep-learning-course",
+        "site_url": "https://dmccreary.github.io/deep-learning-course",
+        "description": "Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota."
+    }},
     { "site": {
         "name": "Designing and Building and Clocks and Watches with AI",
         "github_repo": "https://github.com/dmccreary/clocks-and-watches",
@@ -76,7 +101,13 @@
         "microsim-count": 11,
         "glossary-term-count": 149
     }},
-  
+    { "site": {
+        "name": "Fluid Power Systems",
+        "github_repo": "https://dmccreary.github.io/fluid-power-systems/",
+        "site_url": "https://dmccreary.github.io/fluid-power-systems/",
+        "description": "Done in conjunction with Peter Vinck at Inflow Corporation",
+        "status": "Early stage."
+    }},
     { "site": {
         "name": "Generative AI Strategy",
         "github_repo": "https://github.com/dmccreary/cmm-for-genai",
@@ -195,7 +226,7 @@
 
     { "site": {
         "name": "Learning MicroPython with AI",
-        "github_repo": "https://github.com/dmccrerary/learning-micropython",
+        "github_repo": "https://github.com/dmccreary/learning-micropython",
         "site_url": "https://dmccreary.github.io/learning-micropython",
         "description": "An online course that helps kids learn MicroPython on microcontrollers using fun low-cost projects.",
         "status": "Extensive content and Google Analytics shows we are getting thousands of hits per month from users all over the world.",
@@ -244,7 +275,12 @@
         "microsim-count": 0,
         "glossary-term-count": 6
     }},
-
+    { "site": {
+        "name": "Personal Finance",
+        "github_repo": "https://dmccreary.github.io/personal-finance/",
+        "site_url": "https://dmccreary.github.io/personal-finance/",
+        "description": "An online course that helps high school students learn personal finance.  Many MicroSims and Infographics with graphic novel storytelling."
+    }},
     { "site": {
         "name": "Robot Day",
         "github_repo": "https://github.com/dmccreary/robot-day",
@@ -283,6 +319,12 @@
         "glossary-term-count": 46
     }},
     { "site": {
+        "name": "Spectrum Analyzer",
+        "github_repo": "https://dmccreary.github.io/spectrum-analyzer/",
+        "site_url": "https://dmccreary.github.io/spectrum-analyzer/",
+        "description": "Create a spectrum analyzer using a Raspberry Pi Pico and a microphone.  The site contains a detailed tutorial on how to build the hardware and software."
+    }},
+    { "site": {
         "name": "Tracking AI",
         "github_repo": "https://github.com/dmccreary/tracking-ai-course",
         "site_url": "https://dmccreary.github.io/tracking-ai-course",
@@ -291,5 +333,31 @@
         "word-count": 18093,
         "microsim-count": 3,
         "glossary-term-count": 38
+    }},
+    { "site": {
+        "name": "Digital Design With Programmable Logic",
+        "github_repo": "https://mcbasken.github.io/umn-senior-design/",
+        "site_url": "https://mcbasken.github.io/umn-senior-design/"
+    }}
+    ,
+    { "site": {
+        "name": "Introduction to Microcontrollers with the PIC24",
+        "github_repo": "https://irvinggsea.github.io/i-book-v1/",
+        "site_url": "https://irvinggsea.github.io/i-book-v1/"
+    }},
+    { "site": {
+        "name": "Introduction to Operating Systems",
+        "github_repo": "https://btlepak.github.io/Intelligent_Textbook/",
+        "site_url": "https://btlepak.github.io/Intelligent_Textbook/"
+    }},
+    { "site": {
+        "name": "Applied Linear Algebra for Computer Science and Electrical Engineering",
+        "github_repo": "https://artemispearson.github.io/learning-graphs/",
+        "site_url": "https://artemispearson.github.io/learning-graphs/"
+    }},
+    { "site": {
+        "name": "Neurodiversity Course",
+        "github_repo": "https://dmccreary.github.io/neurodiversity-course/",
+        "site_url": "https://dmccreary.github.io/neurodiversity-course/"
     }}
 ]
