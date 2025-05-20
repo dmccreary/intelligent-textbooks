@@ -1,21 +1,31 @@
-# About This Website
+# About This Site
 
-This website is part of a series of resources to help teachers from
-around the world create the foundation for free and open intelligent
-textbooks.
+This website is part of a series of resources to help teachers from around the world create the foundation for free and open intelligent textbooks.
 
-There are many ways to store intelligent textbooks on a website.
-Many of our teachers don't want to pay a hosting service for
-hosting their content.  Since GitHub Pages is free, we
-focussed on GitHub Pages publishing tools that support Markdown, code
-highlighting and equations on GitHub.
+Our focus today is to help instructors create [Level 2](./sims/book-levels/index.md) textbooks that have a learning graph has their core data structure use to ground content generation and agents.
+
+## Our Book Generation Workflow
+
+If you are new to the book generation process, we strongly suggest you use the following infographic MicroSim workflow to get a feeling of how we generate content but always keep humans in the loop to guide content generation:
+
+<iframe src="../sims/book-gen-workflow/main.html" height="610px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+
+## The Mechanics of Book Building
+
+After you get an overview of the steps to generate guided content around a learning graph, the next step is to understand the basic mechanics of getting your LLM content into a website.  Although there are are many ways to store intelligent textbooks on a website, this guide focuses on the best practices of using LLMs to generate Markdown and then convert that Markdown to a beautiful website built with HTML, CSS and JavaScript.
+
+Many of our teachers don't want to pay a hosting service for hosting their content.  Since GitHub Pages is free, we
+focussed on GitHub Pages publishing tools that support Markdown, code highlighting and equations on GitHub.
+
+## Why Mkdos Material?
 
 When we gave ChatGPT the following requirements:
 
 1. Content is stored in Markdown format
-2. Easy publishing to GitHub pages
-3. Ability to format code
-4. Ability to format equations
+2. Easy publishing to GitHub Pages
+3. Ability to store rich media (Infographics and MicroSims)
+4. Ability to format concent such as equations and code with text highlighting
 
 Here is the summary of ChatGPT's recommendation:
 
@@ -25,11 +35,11 @@ Here is the summary of ChatGPT's recommendation:
     highlighting and mathematical formulas gracefully and has a straightforward
     configuration process.
 
-We have also found the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) [support](https://squidfunk.github.io/mkdocs-material/support/) extreamly good, with our questions
+We have also found the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) [support](https://squidfunk.github.io/mkdocs-material/support/) extremely good, with our questions
 often being answered within hours.
 
 Because of the close match of mkdocs-material's features with our intelligent textbook requirements,
-we have created about 20 sample websites that test these tools.  We have also found that
+we have created about 30 sample websites that test these tools.  We have also found that
 mkdocs-material can be quickly extended to support the features we need in advanced
 intelligent textbooks.
 
@@ -51,9 +61,9 @@ Our cover features Nell, one of the main characters in the book "Diamond Age" by
 
 I'll create a detailed summary of "The Primer" from Neal Stephenson's "The Diamond Age" that follows mkdocs standards for formatting.
 
-## The Primer in "The Diamond Age"
+### The Primer in "The Diamond Age"
 
-### Overview of the Young Lady's Illustrated Primer
+#### Overview of the Young Lady's Illustrated Primer
 
 The Young Lady's Illustrated Primer is a revolutionary educational device in Neal Stephenson's novel "The Diamond Age: Or, A Young Lady's Illustrated Primer." Created by engineer John Percival Hackworth for a neo-Victorian leader's granddaughter, the Primer represents the ultimate intelligent textbook—a fully interactive, adaptive learning system embedded in the form of a book.
 
