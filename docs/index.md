@@ -1,3 +1,14 @@
+---
+title: Building Intelligent Textbooks
+description: A step-by-step building intelligent textbooks using LLMs, graphs and agents.
+image: /img/cover-preview.png
+og:image: /img/cover-preview.png
+twitter:image: /img/cover-preview.png
+social:
+   cards: false
+hide:
+  - toc
+---
 # Building Intelligent Textbooks With AI
 
 ![Cover Image](./img/cover.png){ width="750" }
