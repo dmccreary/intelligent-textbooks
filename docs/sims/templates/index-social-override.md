@@ -1,6 +1,6 @@
 ---
-title: Building Intelligent Textbooks
-description: A step-by-step build to build intelligent textbooks using LLMs and graphs.
+title: A title under 60 characters.
+description: A description under 110 characters.
 image: /img/cover-preview.png
 og:image: /img/cover-preview.png
 twitter:image: /img/cover-preview.png
@@ -10,6 +10,8 @@ hide:
   - toc
 ---
 # MicroSim Templates
+
+Use an image ratio of 1.91:1
 
 Use these templates to create a MicroSim that can
 be added to any website with just a single ```iframe``` HTML element.
