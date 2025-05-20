@@ -39,7 +39,7 @@
     }},
   
     { "site": {
-        "name": "Beginning Electronics",
+        "name": "Beginning Electronics with AI",
         "github_repo": "https://github.com/dmccreary/beginning-electronics",
         "site_url": "https://dmccreary.github.io/beginning-electronics",
         "description": "An online course that uses MicroSims to help junior high and high students learn the basics of electronics.",
@@ -52,7 +52,7 @@
     }},
 
     { "site": {
-        "name": "Digital Electronics",
+        "name": "Digital Electronics with AI",
         "github_repo": "https://github.com/dmccreary/digital-electronics",
         "site_url": "https://dmccreary.github.io/digital-electronics",
         "description": "An online course that uses MicroSims to help high school students learn basic digital electronics.  We focus on using a breadboard, simple LEDs, buttons and logic gates.  We assume students have access to about $50 worth of parts.  We do not cover microcontrollers.",
@@ -130,7 +130,7 @@
     }},
    
     { "site": {
-      "name": "Graph Algorithms",
+      "name": "Graph Algorithms with AI",
       "github_repo": "https://github.com/dmccreary/graph-algorithms",
         "site_url": "https://dmccreary.github.io/graph-algorithms",
         "description": "An online course that uses MicroSims to help undergraduate college students learn the basics of graph algorithms.",
@@ -143,7 +143,7 @@
     }},
 
     { "site": {
-        "name": "Graph Data Modeling",
+        "name": "Graph Data Modeling with AI",
         "github_repo": "https://github.com/dmccreary/graph-data-modeling-course",
         "site_url": "https://dmccreary.github.io/graph-data-modeling-course",
         "description": "An online course that uses MicroSims to help undergraduate college students learn the basics of graph data modeling.  Example graph data models created for a variety of domains.",
@@ -170,8 +170,8 @@
      
     { "site": {
         "name": "Intelligent Textbooks",
-        "github_repo": "https://github.com/dmccreary/mkdocs-for-intelligent-textbooks",
-        "site_url": "https://dmccreary.github.io/mkdocs-for-intelligent-textbooks",
+        "github_repo": "https://github.com/dmccreary/intelligent-textbooks",
+        "site_url": "https://dmccreary.github.io/intelligent-textbooks",
         "description": "An online course that uses helps participants build intelligent textbooks using the mkdocs-material documentation build system.  This site contains a detailed tutorial on how to get started and was that the mkdocs-material system can be extended to support intelligent textbooks.",
         "status": "Many best practices and detailed tutorial created.",
         "image-count": 23,
@@ -194,9 +194,10 @@
     }},
 
     { "site": {
-        "name": "MicroPython for Kids",
-        "github_repo": "https://github.com/CoderDojoTC/micropython",
-        "description": "An online course that helps kids learn MicroPython on a microcontroller using fun low-cost projects.",
+        "name": "Learning MicroPython with AI",
+        "github_repo": "https://github.com/dmccrerary/learning-micropython",
+        "site_url": "https://dmccreary.github.io/learning-micropython",
+        "description": "An online course that helps kids learn MicroPython on microcontrollers using fun low-cost projects.",
         "status": "Extensive content and Google Analytics shows we are getting thousands of hits per month from users all over the world.",
         "markdown-file-count": 204,
         "image-count": 232,
@@ -222,7 +223,7 @@
         "name": "Micro Simulations for Electrical Engineering",
         "github_repo": "https://github.com/kenn0727/ee-microsims",
         "site_url": "https://kenn0727.github.io/ee-microsims",
-        "description": "A site that contains 11 microsims created in 2024 by a group of six students at the University of Minnesota during their Senior Project in the Department of Electrical Engineering an Computer Design.  The MicroSims were designed to help students learn the basics of electrical engineering.",
+        "description": "A site that contains 11 MicroSims created in 2024 by a group of six students at the University of Minnesota during their Senior Project in the Department of Electrical Engineering an Computer Design.  The MicroSims were designed to help students learn the basics of electrical engineering.",
         "status": "Some good examples of MicroSims created in p5.js by students learning how to do prompt engineering using ChatGPT.",
         "markdown-file-count": 14,
         "image-count": 23,
@@ -281,12 +282,11 @@
         "microsim-count": 5,
         "glossary-term-count": 46
     }},
-
     { "site": {
-        "name": "Systems Thinking",
-        "github_repo": "https://github.com/dmccreary/graph-systems-thinking",
-        "site_url": "https://dmccreary.github.io/graph-systems-thinking",
-        "description": "An online course that teaches systems thinking.  The site was designed to support courses being taught on systems thinking.  The site also includes sample MicroSims such as a simulation of the Tragedy of the Commons",  "markdown-file-count": 47,
+        "name": "Tracking AI",
+        "github_repo": "https://github.com/dmccreary/tracking-ai-course",
+        "site_url": "https://dmccreary.github.io/tracking-ai-course",
+        "description": "An online course that teaches how to track the progress of AI.  The site was designed to support strategy consulting within education and knowledge management organizations.  The site also includes sample MicroSims and infographics.",  "markdown-file-count": 47,
         "image-count": 25,
         "word-count": 18093,
         "microsim-count": 3,
