@@ -20,7 +20,8 @@ def process_nav_items(nav_items, base_url, level=0):
                     lines.append(f"{indent}- [{title}]({url})\n")
                 elif isinstance(content, list):
                     # Section with subitems
-                    lines.append(f"{indent}- **{title}**\n")
+                    # lines.append(f"{indent}- **{title}**\n")
+                    lines.append(f"\n## {title}\n\n")
                     lines.extend(process_nav_items(content, base_url, level + 1))
     
     return lines
@@ -40,11 +41,11 @@ def generate_toc(yaml_file, output_file):
         site_url += '/'
     
     # Generate TOC content
-    toc_lines = ["# Table of Contents\n\n"]
+    toc_lines = ["# Intelligent Textbooks: Table of Contents\n\n"]
     toc_lines.extend(process_nav_items(nav, site_url))
     
     # Ensure the output directory exists
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    # os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
     # Write the TOC file
     with open(output_file, 'w') as file:
@@ -54,8 +55,9 @@ def generate_toc(yaml_file, output_file):
 
 if __name__ == "__main__":
     # Input and output files
-    yaml_file = "mkdocs.yml"
-    output_file = "docs/table-of-contents.md"
+    # ../../mkdocs.yml
+    yaml_file = "../../mkdocs.yml"
+    output_file = "table-of-contents.md"
     
     # Generate the table of contents
     generate_toc(yaml_file, output_file)
