@@ -9,7 +9,7 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - About ths Site: about.md
-  - Table of Contents: table-of-contents.md
+  - Table of Contents: book-table-of-contents.md
   - Mission and Values: mission-and-values.md
   
   - Tutorial:
