@@ -1,6 +1,10 @@
-# Intelligent Textbook Case Studies
+---
+title: "Case Studies"
+---
+# Case Studies in Building Intelligent Textbooks
 
-This document provides a comprehensive overview of all intelligent textbook projects.
+This document provides a sample of some of the intelligent textbooks that
+have been created with our workflows.
 
 ## AI Assisted Geometry
 
