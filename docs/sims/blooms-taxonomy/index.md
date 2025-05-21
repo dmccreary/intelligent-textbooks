@@ -14,8 +14,6 @@
 This MicroSim teaches us how to
 specify the drawing of a static filled circle.
 
-![Image Name](./image.png){ width="400" }
-
 ## Sample Prompt
 
 !!! prompt

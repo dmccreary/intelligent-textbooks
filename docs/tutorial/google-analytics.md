@@ -1,6 +1,6 @@
 # Configuring Google Analytics
 
-In the mkdocs.yml template file you will find the following lines:
+In the `mkdocs.yml` template file you will find the following lines:
 
 ```yml
 #extra:
@@ -19,7 +19,12 @@ extra:
     property: G-XXXX
 ```
 
-## Step By Step
+## Google Analytics Step By Step
+
+For this step, you will need a Google Analytics account.  Once you have
+that go to the Google Analytics developer site to create a new property:
+
+[https://developers.google.com/analytics](https://developers.google.com/analytics)
 
 ### Step 1 - Find the Configure Icon
 
@@ -47,15 +52,15 @@ And give it a timezone
 
 ![Step 6](../img/google-analytics-setup-6.png)
 
-### Step 7 - Find Your Google Analaytics ID
+### Step 7 - Find Your Google Analytics Measurement ID
 
 ![Step 7](../img/google-analytics-setup-7.png)
 
-### Step 8 - Copy the Google Analytics ID into Your Mkdocs.yml and Check Your ID
+### Step 8 - Copy the Google Analytics Measurement ID into Your Mkdocs.yml and Check Your ID
 
-After you do your next deploy, check that the tag befor the </head> has the Google Analytics Script.
+After you do your next deploy with mkdocs `gh-deploy`, check that the tag in the <head> has the Google Analytics Script.
 
-Use the Chrome Developer Tool to verfiy that the Google Aanalytcis Script is Being Loaded
+Use the Chrome Developer Tool to verify that the Google Analytics Script is Being Loaded
 
 ![Step 8](../img/google-analytics-setup-8.png)
 
