@@ -1,4 +1,8 @@
 ---
+title: "Workflow for Generating Intelligent Textbooks"
+description: "Interactive infographic MicroSim of the workflow used in intelligent book creation"
+image: "/sims/book-gen-workflow/book-gen-workflow.png"
+og:image: "/sims/book-gen-workflow/book-gen-workflow.png"
 hide:
   - toc
 ---
