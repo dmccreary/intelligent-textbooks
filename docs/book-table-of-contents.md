@@ -3,7 +3,8 @@
 - [Home](https://dmccreary.github.io/intelligent-textbooks/index/)
 - [About ths Site](https://dmccreary.github.io/intelligent-textbooks/about/)
 - [Mission and Values](https://dmccreary.github.io/intelligent-textbooks/mission-and-values/)
-- **Tutorial**
+
+## **Tutorial**
   - [Introduction](https://dmccreary.github.io/intelligent-textbooks/tutorial/index/)
   - [Getting Started](https://dmccreary.github.io/intelligent-textbooks/tutorial/getting-started/)
   - [Directory Structure](https://dmccreary.github.io/intelligent-textbooks/tutorial/directory-structure/)
@@ -23,17 +24,20 @@
   - [Open Graph](https://dmccreary.github.io/intelligent-textbooks/tutorial/open-graph/)
   - [Google Analytics](https://dmccreary.github.io/intelligent-textbooks/tutorial/google-analytics/)
   - [Logo and Favicon](https://dmccreary.github.io/intelligent-textbooks/tutorial/logo-and-favicon/)
-- **Educational concepts**
+
+## **Educational concepts**
   - [Introduction](https://dmccreary.github.io/intelligent-textbooks/concepts/index/)
   - [Intelligence Levels](https://dmccreary.github.io/intelligent-textbooks/concepts/five-levels-of-intelligent-textbooks/)
   - [Bloom's Taxonomy](https://dmccreary.github.io/intelligent-textbooks/concepts/bloom-taxonomy/)
   - [Scaffolding](https://dmccreary.github.io/intelligent-textbooks/concepts/scaffolding/)
   - [Learning Graph](https://dmccreary.github.io/intelligent-textbooks/concepts/learning-graph/)
   - [Open Educational Resources](https://dmccreary.github.io/intelligent-textbooks/concepts/open-educational-resources/)
-- **Prompts**
+
+## **Prompts**
   - [Introduction](https://dmccreary.github.io/intelligent-textbooks/prompts/index/)
   - [Feature Mapping](https://dmccreary.github.io/intelligent-textbooks/prompts/feature-mapping/)
-  - **Learning Graph**
+
+## **Learning Graph**
     - [Introduction](https://dmccreary.github.io/intelligent-textbooks/prompts/learning-graph/index/)
     - [Enumerate Concepts](https://dmccreary.github.io/intelligent-textbooks/prompts/learning-graph/02-enumerate-concepts/)
     - [Dependency Graph](https://dmccreary.github.io/intelligent-textbooks/prompts/learning-graph/03-dependency/)
@@ -45,7 +49,8 @@
   - [Word Cloud](https://dmccreary.github.io/intelligent-textbooks/prompts/word-cloud/)
   - [Quality Metrics](https://dmccreary.github.io/intelligent-textbooks/prompts/quality-metrics/)
   - [Discord Admin](https://dmccreary.github.io/intelligent-textbooks/prompts/discord-admin/)
-- **Workflows**
+
+## **Workflows**
   - [Introduction](https://dmccreary.github.io/intelligent-textbooks/workflow/index/)
   - [Course Description](https://dmccreary.github.io/intelligent-textbooks/workflow/course-description/)
   - [Bloom's Taxonomy](https://dmccreary.github.io/intelligent-textbooks/workflow/bloom-taxonomy/)
@@ -60,7 +65,8 @@
   - [Interactive Infographics](https://dmccreary.github.io/intelligent-textbooks/workflow/interactive-infographics/)
   - [MicroSims](https://dmccreary.github.io/intelligent-textbooks/workflow/microsim/)
   - [Graphic Novel](https://dmccreary.github.io/intelligent-textbooks/workflow/graphic-novel/)
-- **MicroSims**
+
+## **MicroSims**
   - [Introduction](https://dmccreary.github.io/intelligent-textbooks/sims/index/)
   - [Book Levels](https://dmccreary.github.io/intelligent-textbooks/sims/book-levels/index/)
   - [Bloom's Taxonomy](https://dmccreary.github.io/intelligent-textbooks/sims/blooms-taxonomy/index/)
@@ -72,9 +78,11 @@
   - [Sine Wave](https://dmccreary.github.io/intelligent-textbooks/sims/sine-wave/index/)
   - [AI Pace Accelerating](https://dmccreary.github.io/intelligent-textbooks/sims/ai-pace-accelerating/index/)
   - [Templates](https://dmccreary.github.io/intelligent-textbooks/sims/templates/index/)
-- **Case Studies**
+
+## **Case Studies**
   - [Intro](https://dmccreary.github.io/intelligent-textbooks/case-studies/index/)
-- **Formatting Tests**
+
+## **Formatting Tests**
   - [Introduction](https://dmccreary.github.io/intelligent-textbooks/formatting-tests/index/)
   - [Code Highlighting](https://dmccreary.github.io/intelligent-textbooks/formatting-tests/code-highlight-test/)
   - [Markdown](https://dmccreary.github.io/intelligent-textbooks/formatting-tests/markdown-test/)
@@ -83,6 +91,8 @@
   - [Equations](https://dmccreary.github.io/intelligent-textbooks/formatting-tests/equations-test/)
   - [Social Media Preview](https://dmccreary.github.io/intelligent-textbooks/formatting-tests/social-test/)
   - [Social Media Override Preview](https://dmccreary.github.io/intelligent-textbooks/formatting-tests/social-test-2/)
+
+## End Matter
 - [Feedback](https://dmccreary.github.io/intelligent-textbooks/feedback/)
 - [Glossary](https://dmccreary.github.io/intelligent-textbooks/glossary/)
 - [License](https://dmccreary.github.io/intelligent-textbooks/license/)
