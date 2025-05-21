@@ -146,15 +146,14 @@ A tool that verifies the validity and accessibility of hyperlinks within a given
 
 #### Markdown
 
-Markdown: A lightweight markup language with plain text formatting syntax designed to be easy to read and write. It is primarily used for creating formatted documents and web content, converting plain text to structured formats such as HTML or PDF through a rendering process.
+A lightweight markup language with plain text formatting syntax designed to be easy to read and write. It is primarily used for creating formatted documents and web content, converting plain text to structured formats such as HTML or PDF through a rendering process.
 
-Example:
-Markdown syntax allows for the creation of structured content. For instance:
+**Example:** Markdown syntax allows for the creation of structured content. For instance:
 
-- To create a header: # Header 1 or ## Header 2
-- To format text in bold: **bold text**
-- To create a link: [Link text](https://example.com)
-- To include an image: ![Alt text](image-url.png)
+- To create a header: `# Header 1` or `## Header 2`
+- To format text in bold: `**bold text**`
+- To create a link: `[Link text](https://example.com)`
+- To include an image: `![Alt text](image-url.png)`
 
 For example, to write a numbered list:
 
