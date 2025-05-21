@@ -1,4 +1,4 @@
-# Intelligent Textbook Case Studies
+# Intelligent Textbooks Report
 
 This document provides a comprehensive overview of all intelligent textbook projects.
 
@@ -536,4 +536,5 @@ This document provides a comprehensive overview of all intelligent textbook proj
 * MicroSims: 3
 * Glossary Terms: 38
 
+---
 

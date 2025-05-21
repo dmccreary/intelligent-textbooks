@@ -9,12 +9,14 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - About ths Site: about.md
+  - Table of Contents: table-of-contents.md
   - Mission and Values: mission-and-values.md
+  
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
     - Directory Structure: tutorial/directory-structure.md
-    - concepts/levels-of-interactivity.md
+    - Levels of Interactivity: concepts/levels-of-interactivity.md
     - Markdown: tutorial/markdown.md
     - Navigation: tutorial/navigation.md
     - Admonitions: tutorial/admonitions.md
@@ -30,6 +32,7 @@ nav:
     - Open Graph: tutorial/open-graph.md
     - Google Analytics: tutorial/google-analytics.md
     - Logo and Favicon: tutorial/logo-and-favicon.md
+  
   - Educational concepts:
     - Introduction: concepts/index.md
     - Intelligence Levels: concepts/five-levels-of-intelligent-textbooks.md
@@ -37,6 +40,7 @@ nav:
     - Scaffolding: concepts/scaffolding.md
     - Learning Graph: concepts/learning-graph.md
     - Open Educational Resources: concepts/open-educational-resources.md
+  
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
@@ -52,6 +56,7 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
+  
   - Workflows:
     - Introduction: workflow/index.md
     - Course Description: workflow/course-description.md
@@ -67,6 +72,7 @@ nav:
     - Interactive Infographics: workflow/interactive-infographics.md
     - MicroSims: workflow/microsim.md
     - Graphic Novel: workflow/graphic-novel.md
+  
   - MicroSims:
     - Introduction: sims/index.md
     - Book Levels: sims/book-levels/index.md
@@ -79,6 +85,10 @@ nav:
     - Sine Wave: sims/sine-wave/index.md
     - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - Templates: sims/templates/index.md
+  
+  - Case Studies:
+    - Intro: case-studies/index.md
+  
   - Formatting Tests:
     - Introduction: formatting-tests/index.md
     - Code Highlighting: formatting-tests/code-highlight-test.md
@@ -91,8 +101,6 @@ nav:
 
   - Feedback: feedback.md
   - Glossary: glossary.md
-  - Ontology Questions: ontology-questions.md
-  - Table of Contents: toc.md
   - License: license.md
   - FAQ: faq.md
   - How We Built This Site: how-we-built-this-site.md
