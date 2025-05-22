@@ -8,8 +8,10 @@ edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
-  - About: about.md
+  - About ths Site: about.md
+  - Table of Contents: book-table-of-contents.md
   - Mission and Values: mission-and-values.md
+  
   - Tutorial:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
@@ -28,13 +30,19 @@ nav:
     - Social: tutorial/social.md
     - Open Graph: tutorial/open-graph.md
     - Google Analytics: tutorial/google-analytics.md
+    - Logo and Favicon: tutorial/logo-and-favicon.md
+  
   - Educational concepts:
     - Introduction: concepts/index.md
     - Intelligence Levels: concepts/five-levels-of-intelligent-textbooks.md
     - Bloom's Taxonomy: concepts/bloom-taxonomy.md
     - Scaffolding: concepts/scaffolding.md
     - Learning Graph: concepts/learning-graph.md
+    - Best Practices: concepts/best-practices.md
+    - Levels of Interactivity: concepts/levels-of-interactivity.md
+    - Ontology Questions: concepts/ontology-questions.md
     - Open Educational Resources: concepts/open-educational-resources.md
+  
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
@@ -50,6 +58,7 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
+  
   - Workflows:
     - Introduction: workflow/index.md
     - Course Description: workflow/course-description.md
@@ -65,17 +74,22 @@ nav:
     - Interactive Infographics: workflow/interactive-infographics.md
     - MicroSims: workflow/microsim.md
     - Graphic Novel: workflow/graphic-novel.md
+  
   - MicroSims:
     - Introduction: sims/index.md
     - Book Levels: sims/book-levels/index.md
     - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
     - Learning Graph: sims/learning-graph/index.md
+    - Levels of Interactivity: sims/levels-of-interactivity/index.md
     - Book Generation Workflow: sims/book-gen-workflow/index.md
     - Word Cloud: sims/word-cloud/index.md
     - Gallery: sims/index.md
     - Sine Wave: sims/sine-wave/index.md
     - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - Templates: sims/templates/index.md
+  
+  - Case Studies:
+    - Intro: case-studies/index.md
   
   - Formatting Tests:
     - Introduction: formatting-tests/index.md
@@ -89,8 +103,6 @@ nav:
 
   - Feedback: feedback.md
   - Glossary: glossary.md
-  - Ontology Questions: ontology-questions.md
-  - Table of Contents: toc.md
   - License: license.md
   - FAQ: faq.md
   - How We Built This Site: how-we-built-this-site.md

@@ -1,5 +1,19 @@
 [  
     { "site": {
+        "name": "Architectural Tradeoff Analysis Method",
+        "github_repo": "https://github.com/dmccreary/atam",
+        "site_url": "https://dmccreary.github.io/atam/",
+        "description": "ATAM is a method for evaluating software architecture.  We apply ATAM to the database selection process.  This book is a companion to the book 'Making Sense of NoSQL'.",
+        "status": "Early stage."
+    }},
+    { "site": {
+        "name": "Building AI Agents with Python",
+        "github_repo": "https://dmccreary.github.io/agents-course/",
+        "site_url": "https://dmccreary.github.io/agents-course/",
+        "description": "Creating intelligent agents with Python and LLMs.",
+        "status": "Early stage."
+    }},
+    { "site": {
         "name": "AI Assisted Geometry",
         "github_repo": "https://github.com/dmccreary/geometry-course",
         "site_url": "https://dmccreary.github.io/geometry-course",
@@ -39,7 +53,7 @@
     }},
   
     { "site": {
-        "name": "Beginning Electronics",
+        "name": "Beginning Electronics with AI",
         "github_repo": "https://github.com/dmccreary/beginning-electronics",
         "site_url": "https://dmccreary.github.io/beginning-electronics",
         "description": "An online course that uses MicroSims to help junior high and high students learn the basics of electronics.",
@@ -50,9 +64,15 @@
         "microsim-count": 6,
         "glossary-term-count": 0
     }},
-
     { "site": {
-        "name": "Digital Electronics",
+        "name": "AI Circuits Course",
+        "github_repo": "https://dmccreary.github.io/circuits/",
+        "site_url": "https://dmccreary.github.io/circuits/",
+        "description": "Designing circuits using AI.  Created to support Dr. Sharat Bhatra's circuits course at the University of Minnesota.",
+        "status": "Early stage."
+    }},
+    { "site": {
+        "name": "Digital Electronics with AI",
         "github_repo": "https://github.com/dmccreary/digital-electronics",
         "site_url": "https://dmccreary.github.io/digital-electronics",
         "description": "An online course that uses MicroSims to help high school students learn basic digital electronics.  We focus on using a breadboard, simple LEDs, buttons and logic gates.  We assume students have access to about $50 worth of parts.  We do not cover microcontrollers.",
@@ -63,7 +83,12 @@
         "microsim-count": 3,
         "glossary-term-count": 0
     }},
-
+    { "site": {
+        "name": "Deep Learning with AI",
+        "github_repo": "https://github.com/dmccreary/deep-learning-course",
+        "site_url": "https://dmccreary.github.io/deep-learning-course",
+        "description": "Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota."
+    }},
     { "site": {
         "name": "Designing and Building and Clocks and Watches with AI",
         "github_repo": "https://github.com/dmccreary/clocks-and-watches",
@@ -76,7 +101,13 @@
         "microsim-count": 11,
         "glossary-term-count": 149
     }},
-  
+    { "site": {
+        "name": "Fluid Power Systems",
+        "github_repo": "https://dmccreary.github.io/fluid-power-systems/",
+        "site_url": "https://dmccreary.github.io/fluid-power-systems/",
+        "description": "Done in conjunction with Peter Vinck at Inflow Corporation",
+        "status": "Early stage."
+    }},
     { "site": {
         "name": "Generative AI Strategy",
         "github_repo": "https://github.com/dmccreary/cmm-for-genai",
@@ -130,7 +161,7 @@
     }},
    
     { "site": {
-      "name": "Graph Algorithms",
+      "name": "Graph Algorithms with AI",
       "github_repo": "https://github.com/dmccreary/graph-algorithms",
         "site_url": "https://dmccreary.github.io/graph-algorithms",
         "description": "An online course that uses MicroSims to help undergraduate college students learn the basics of graph algorithms.",
@@ -143,7 +174,7 @@
     }},
 
     { "site": {
-        "name": "Graph Data Modeling",
+        "name": "Graph Data Modeling with AI",
         "github_repo": "https://github.com/dmccreary/graph-data-modeling-course",
         "site_url": "https://dmccreary.github.io/graph-data-modeling-course",
         "description": "An online course that uses MicroSims to help undergraduate college students learn the basics of graph data modeling.  Example graph data models created for a variety of domains.",
@@ -170,8 +201,8 @@
      
     { "site": {
         "name": "Intelligent Textbooks",
-        "github_repo": "https://github.com/dmccreary/mkdocs-for-intelligent-textbooks",
-        "site_url": "https://dmccreary.github.io/mkdocs-for-intelligent-textbooks",
+        "github_repo": "https://github.com/dmccreary/intelligent-textbooks",
+        "site_url": "https://dmccreary.github.io/intelligent-textbooks",
         "description": "An online course that uses helps participants build intelligent textbooks using the mkdocs-material documentation build system.  This site contains a detailed tutorial on how to get started and was that the mkdocs-material system can be extended to support intelligent textbooks.",
         "status": "Many best practices and detailed tutorial created.",
         "image-count": 23,
@@ -194,9 +225,10 @@
     }},
 
     { "site": {
-        "name": "MicroPython for Kids",
-        "github_repo": "https://github.com/CoderDojoTC/micropython",
-        "description": "An online course that helps kids learn MicroPython on a microcontroller using fun low-cost projects.",
+        "name": "Learning MicroPython with AI",
+        "github_repo": "https://github.com/dmccreary/learning-micropython",
+        "site_url": "https://dmccreary.github.io/learning-micropython",
+        "description": "An online course that helps kids learn MicroPython on microcontrollers using fun low-cost projects.",
         "status": "Extensive content and Google Analytics shows we are getting thousands of hits per month from users all over the world.",
         "markdown-file-count": 204,
         "image-count": 232,
@@ -222,7 +254,7 @@
         "name": "Micro Simulations for Electrical Engineering",
         "github_repo": "https://github.com/kenn0727/ee-microsims",
         "site_url": "https://kenn0727.github.io/ee-microsims",
-        "description": "A site that contains 11 microsims created in 2024 by a group of six students at the University of Minnesota during their Senior Project in the Department of Electrical Engineering an Computer Design.  The MicroSims were designed to help students learn the basics of electrical engineering.",
+        "description": "A site that contains 11 MicroSims created in 2024 by a group of six students at the University of Minnesota during their Senior Project in the Department of Electrical Engineering an Computer Design.  The MicroSims were designed to help students learn the basics of electrical engineering.",
         "status": "Some good examples of MicroSims created in p5.js by students learning how to do prompt engineering using ChatGPT.",
         "markdown-file-count": 14,
         "image-count": 23,
@@ -243,7 +275,12 @@
         "microsim-count": 0,
         "glossary-term-count": 6
     }},
-
+    { "site": {
+        "name": "Personal Finance",
+        "github_repo": "https://dmccreary.github.io/personal-finance/",
+        "site_url": "https://dmccreary.github.io/personal-finance/",
+        "description": "An online course that helps high school students learn personal finance.  Many MicroSims and Infographics with graphic novel storytelling."
+    }},
     { "site": {
         "name": "Robot Day",
         "github_repo": "https://github.com/dmccreary/robot-day",
@@ -281,15 +318,46 @@
         "microsim-count": 5,
         "glossary-term-count": 46
     }},
-
     { "site": {
-        "name": "Systems Thinking",
-        "github_repo": "https://github.com/dmccreary/graph-systems-thinking",
-        "site_url": "https://dmccreary.github.io/graph-systems-thinking",
-        "description": "An online course that teaches systems thinking.  The site was designed to support courses being taught on systems thinking.  The site also includes sample MicroSims such as a simulation of the Tragedy of the Commons",  "markdown-file-count": 47,
+        "name": "Spectrum Analyzer",
+        "github_repo": "https://dmccreary.github.io/spectrum-analyzer/",
+        "site_url": "https://dmccreary.github.io/spectrum-analyzer/",
+        "description": "Create a spectrum analyzer using a Raspberry Pi Pico and a microphone.  The site contains a detailed tutorial on how to build the hardware and software."
+    }},
+    { "site": {
+        "name": "Tracking AI",
+        "github_repo": "https://github.com/dmccreary/tracking-ai-course",
+        "site_url": "https://dmccreary.github.io/tracking-ai-course",
+        "description": "An online course that teaches how to track the progress of AI.  The site was designed to support strategy consulting within education and knowledge management organizations.  The site also includes sample MicroSims and infographics.",  "markdown-file-count": 47,
         "image-count": 25,
         "word-count": 18093,
         "microsim-count": 3,
         "glossary-term-count": 38
+    }},
+    { "site": {
+        "name": "Digital Design With Programmable Logic",
+        "github_repo": "https://mcbasken.github.io/umn-senior-design/",
+        "site_url": "https://mcbasken.github.io/umn-senior-design/"
+    }}
+    ,
+    { "site": {
+        "name": "Introduction to Microcontrollers with the PIC24",
+        "github_repo": "https://irvinggsea.github.io/i-book-v1/",
+        "site_url": "https://irvinggsea.github.io/i-book-v1/"
+    }},
+    { "site": {
+        "name": "Introduction to Operating Systems",
+        "github_repo": "https://btlepak.github.io/Intelligent_Textbook/",
+        "site_url": "https://btlepak.github.io/Intelligent_Textbook/"
+    }},
+    { "site": {
+        "name": "Applied Linear Algebra for Computer Science and Electrical Engineering",
+        "github_repo": "https://artemispearson.github.io/learning-graphs/",
+        "site_url": "https://artemispearson.github.io/learning-graphs/"
+    }},
+    { "site": {
+        "name": "Neurodiversity Course",
+        "github_repo": "https://dmccreary.github.io/neurodiversity-course/",
+        "site_url": "https://dmccreary.github.io/neurodiversity-course/"
     }}
 ]
