@@ -76,6 +76,7 @@ nav:
     - Sine Wave: sims/sine-wave/index.md
     - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - Templates: sims/templates/index.md
+  
   - Formatting Tests:
     - Introduction: formatting-tests/index.md
     - Code Highlighting: formatting-tests/code-highlight-test.md
@@ -96,13 +97,12 @@ nav:
   - References: references.md
   - Contact: contact.md
  
-# CoderDojo Microsite Standards from here down
+# Dan's MicroSite Standards from here down
 
 theme:
   name: material
   logo: img/logo.png
   favicon: img/favicon.ico
-  # favicon: img/my-icon.png
   palette:
     primary: 'blue'
     accent: 'orange'
@@ -124,7 +124,7 @@ plugins:
   - social_override
 markdown_extensions:
   - admonition
-  - md_in_html # required for multiple-choce question numbering
+  - md_in_html # required for multiple-choice question numbering
   - pymdownx.details
   - pymdownx.superfences
   - attr_list

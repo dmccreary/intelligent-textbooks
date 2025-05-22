@@ -3,8 +3,8 @@
     padding: 0;
 }
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
 }
 
 /* Container to control the iframe size and scaling */

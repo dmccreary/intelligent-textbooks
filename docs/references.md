@@ -1,4 +1,19 @@
-# Site References
+# References
+
+## 
+
+[Concepts for Classification of Adaptive Instructional Systems](https://ieeexplore.ieee.org/abstract/document/10127601)
+
+## IEEE Total Learning Architecture References
+
+The IEEE Total Learning Architecture (TLA) is a set of standards
+for the design of online learning systems.
+
+1. [ADLNet TLA References Implementation](https://github.com/adlnet/tla)
+1. [Main Advanced Distributed Learning (ADLNet) GitHub Site](https://github.com/adlnet)
+1. [IEEE Standard for Artificial Intelligence (AI) Model Representation, Compression, Distribution, and Management](https://standards.ieee.org/ieee/2941/10363/)
+
+## References for Book Building
 
 1. **mkdocs** - [https://www.mkdocs.org/](https://www.mkdocs.org/) - this is our tool for building the website.  It converts Markdown into HTML in the ```site``` directory.
 2. **mkdocs material theme** - [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/) - this is the theme for our site.  The theme adds the user interface elements that give our site the look and feel.  It also has the features such as social cards.
