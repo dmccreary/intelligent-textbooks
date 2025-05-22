@@ -3,7 +3,7 @@
 !!! prompt
     I want to build a general ontology for textbooks.  I want the ontology to be driven by the key questions that a person would ask about a textbook.  Please generate  list the 100 most common questions that users might ask about a textbook.  Exclude any questions that are specific to any domain.
 
-Here are some samples of non-domain specific questions about a textbook that the ontology should answer:
+Here are 100 samples of non-domain specific questions about a textbook that the ontology should answer:
 
 1. What is the title of the textbook?
 2. Who is the audience of the textbook?
@@ -26,11 +26,6 @@ Here are some samples of non-domain specific questions about a textbook that the
 19. For each concept C, list the related generative AI "Prompts" P.
 20. For the textbook, list the chapters in the textbook in the order they are presented.
 21. For each chapter, list the concepts C covered in that chapter.
-
-Now list about 80 more similar questions.
-
-Here are 80 more non-domain-specific questions that an ontology for textbooks should address:
-
 22.  What is the ISBN of the textbook?
 23.  Who are the authors of the textbook?
 24.  What is the edition number of the textbook?
