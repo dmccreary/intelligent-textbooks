@@ -16,7 +16,6 @@ nav:
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
     - Directory Structure: tutorial/directory-structure.md
-    - Levels of Interactivity: concepts/levels-of-interactivity.md
     - Markdown: tutorial/markdown.md
     - Navigation: tutorial/navigation.md
     - Admonitions: tutorial/admonitions.md
@@ -39,6 +38,9 @@ nav:
     - Bloom's Taxonomy: concepts/bloom-taxonomy.md
     - Scaffolding: concepts/scaffolding.md
     - Learning Graph: concepts/learning-graph.md
+    - Best Practices: concepts/best-practices.md
+    - Levels of Interactivity: concepts/levels-of-interactivity.md
+    - Ontology Questions: concepts/ontology-questions.md
     - Open Educational Resources: concepts/open-educational-resources.md
   
   - Prompts:

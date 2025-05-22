@@ -10,8 +10,7 @@
 5.  **Simulation Level** - Dynamic modeling of concepts
 6.  **Advanced Simulation Level** - Complex, personalized interactions
 
-Detailed Breakdown
-------------------
+## Detailed Breakdown
 
 ### Static Content Level
 

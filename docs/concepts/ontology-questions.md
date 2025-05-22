@@ -1,6 +1,7 @@
 # Questions that Drive the Ontology
 
-I want to build a general ontology for textbooks.  I want the ontology to be driven by the key questions that a person would ask about a textbook.  Please generate  list the 100 most common questions that users might ask about a textbook.  Exclude any questions that are specific to any domain.
+!!! prompt
+    I want to build a general ontology for textbooks.  I want the ontology to be driven by the key questions that a person would ask about a textbook.  Please generate  list the 100 most common questions that users might ask about a textbook.  Exclude any questions that are specific to any domain.
 
 Here are some samples of non-domain specific questions about a textbook that the ontology should answer:
 
