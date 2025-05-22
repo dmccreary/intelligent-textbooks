@@ -8,7 +8,7 @@ hide:
 <iframe src="./main.html" height="480px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
-[Run the Sine Wave MicroSim](./sine-wave.html){ .md-button .md-button--primary }
+[Run the Sine Wave MicroSim](./main.html){ .md-button .md-button--primary }
 [Edit the Sine Wave MicroSim](https://editor.p5js.org/dmccreary/sketches/0SEATs3jW)
 
 To include this MicroSim on your web site, just copy the following line of HTML code:
