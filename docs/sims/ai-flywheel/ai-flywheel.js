@@ -186,7 +186,7 @@ function drawNodes() {
 // draw the edges between each node
 function drawEdges() {
   stroke('black');
-  strokeWeight(2);
+  strokeWeight(4);
   fill('#333');
   
   // iterate through all the edges
@@ -227,7 +227,7 @@ function drawCurvedArrow(x1, y1, x2, y2, label) {
   // Normalize and extend outward from center
   let centerToMidLength = sqrt(centerToMidX * centerToMidX + centerToMidY * centerToMidY);
   
-  // this controlse midpoint of the arc between the circles
+  // this controls midpoint of the arc between the circles
   let curveOffset = 30; // Distance to curve outward
   
   let controlX = midX + (centerToMidX / centerToMidLength) * curveOffset;
@@ -236,7 +236,7 @@ function drawCurvedArrow(x1, y1, x2, y2, label) {
   // Draw curved line
   noFill();
   stroke('#333');
-  strokeWeight(3);
+  strokeWeight(4);
   bezier(x1, y1, controlX, controlY, controlX, controlY, x2, y2);
   
   // Calculate arrow direction at the end point
@@ -247,7 +247,7 @@ function drawCurvedArrow(x1, y1, x2, y2, label) {
   
   // Simplified: just use direction from control point to end point
   let arrowAngle = atan2(y2 - controlY, x2 - controlX);
-  let arrowSize = 10;
+  let arrowSize = 12;
   
   // Draw arrowhead
   fill('#333');
