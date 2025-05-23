@@ -14,6 +14,13 @@ hide:
 <iframe src="./main.html" height="470px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
+You can include this MicroSim infographic in your web page by adding the following line to your web page:
+
+```html
+<iframe src="./main.html" height="470px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+```
+
 [Run the AI Flywheel MicroSim](./main.html){ .md-button .md-button--primary }
 [Edit the AI Flywheel MicroSim](https://editor.p5js.org/dmccreary/sketches/HC-HjkNpm)
 
