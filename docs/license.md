@@ -6,7 +6,7 @@ All content in this repository is governed by the following license agreement:
 
 ## License Type
 
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
 
 ## Link to License Agreement
 
