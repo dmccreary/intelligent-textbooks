@@ -103,6 +103,7 @@ This feature allows non-technical staff to change and preview changes without ha
 A retrieval method that matches documents against user-supplied words or phrases to identify relevant content.
 
 See also: [semantic search](#semantic-search)
+
 #### Glossary of Terms
 
 A dedicated section that provides definitions and explanations of key terms, jargon, and acronyms used throughout the documentation.
@@ -113,6 +114,12 @@ A dedicated section that provides definitions and explanations of key terms, jar
 An integrated link within the documentation that directs users to the corresponding source file on GitHub.
 
 Edit links Encourages community involvement by allowing readers to propose edits, corrections, or improvements through pull requests.  Users do not need to understand how the build process works on their local systems to generate an updated web page.
+
+#### Intelligent Textbook
+
+A textbook that has tha ability to respond to the needs of each student.
+
+See Also: [Levels of Intelligent Textbook](#levels-of-intelligent-textbooks)
 
 #### ISO Definition
 
@@ -128,13 +135,17 @@ A term definition is considered to be consistent with ISO metadata registry guid
 
 A directed graph of concepts that reflects the order that concepts should be learned to master a new concept.
 
+#### Levels of Intelligent Textbooks
+
+A five level classification of intelligent textbooks.
+
+* See [Five Levels of Intelligent Textbooks](https://dmccreary.medium.com/five-levels-of-intelligent-textbooks-b81a4c1525a0)
+
 #### License
 
 A legal instrument specifying permissions, conditions, and restrictions for using, modifying, or redistributing content or software.
 
-mkdoc material allows you to place your license link on the footer of each page.
-
-A statement that specifies the legal terms under which the documentation and related materials can be used, modified, and distributed.
+`mkdoc material` allows you to place your license link on the footer of each page.
 
 Clarifies permissions and restrictions, providing guidance to users and contributors.
 
