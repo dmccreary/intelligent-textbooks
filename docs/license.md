@@ -6,7 +6,7 @@ All content in this repository is governed by the following license agreement:
 
 ## License Type
 
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
 
 ## Link to License Agreement
 
@@ -34,3 +34,5 @@ The licensor cannot revoke these freedoms as long as you follow the license term
     No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
     This deed highlights only some of the key features and terms of the actual license. It is not a license and has no legal value. You should carefully review all of the terms and conditions of the actual license before using the licensed material.
+
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
