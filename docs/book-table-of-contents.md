@@ -1,7 +1,7 @@
 # Intelligent Textbooks: Table of Contents
 
 - [Home](../)
-- [About ths Site](../about/)
+- [About ths Site](../about.md)
 - [Mission and Values](../mission-and-values/)
 
 ## **Tutorial**
