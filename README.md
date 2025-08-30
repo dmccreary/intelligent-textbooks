@@ -6,7 +6,7 @@
 [![p5.js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=white)](https://p5js.org/)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-> A comprehensive guide to designing and building intelligent textbooks using open source tools, with a focus on interactive learning experiences and AI-powered content generation.
+> A comprehensive guide to designing and building online interactive intelligent textbooks using open source tools, with a focus on interactive learning experiences and AI-powered content generation.
 
 ## 🌐 Website
 
