@@ -1,6 +1,6 @@
 # Integrating Learning Theory into Intelligent Textbook Design
 
-Based on Dehaene's Four Pillars of Learning and the principles from "Make It Stick," here are the top 10 things you should implement in your intelligent textbook architecture:
+Based on Dehaene's [Four Pillars of Learning](#references) and the principles from ["Make It Stick,"](#references) here are the top 10 things you should implement in your intelligent textbook architecture:
 
 ## 1. **Implement Adaptive Attention Management**
 - **Design attention-focusing mechanisms**: Use AI to identify the 3-5 most critical concepts per chapter and highlight them prominently
