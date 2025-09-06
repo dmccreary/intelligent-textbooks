@@ -65,7 +65,9 @@ This approach transforms your intelligent textbook from a content delivery syste
 Here are 10 references relevant to building intelligent textbooks based on learning science.
 
 !!! note
-    Three of these links are blocked by their robot.txt permission files for agentic link verification.
+    Some of these links are blocked by their robot.txt permission files for argentic link verification.  I have checked these manually.
+
+1. [Book Review by Arun Batchu on How We Learn by Stanislas Dehaene](https://www.thethinkingspot.us/post/how-we-learn-by-stanislas-dehaene-a-review) - Nov 23, 2024 - This review done on [The Thinking Spot Blog](https://www.thethinkingspot.us/blog) was the blog that help me understand the role of learning theory on intelligent book design.  My thanks to [Arun Batchu](https://www.linkedin.com/in/arunbatchu/) for educating me on this topic.
 
 1. [How We Learn: The Four Pillars of Learning](https://www.wooclap.com/en/blog/stanislas-dehaene-the-four-pillars-of-learning/) - November 2, 2021 - Wooclap Blog - Provides a comprehensive breakdown of Stanislas Dehaene's four pillars (attention, active engagement, error feedback, and consolidation) with practical applications for educational technology platforms. Directly relevant for implementing these neuroscience principles in intelligent textbook design. (link working on Sept. 6th, 2025)
 
