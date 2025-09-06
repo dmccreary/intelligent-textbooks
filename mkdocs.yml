@@ -44,6 +44,26 @@ nav:
     - Ontology Questions: concepts/ontology-questions.md
     - Open Educational Resources: concepts/open-educational-resources.md
   
+<<<<<<< HEAD
+=======
+  - Prompts:
+    - Introduction: prompts/index.md
+    - Feature Mapping: prompts/feature-mapping.md
+    - Learning Graph:
+      - Introduction: prompts/learning-graph/index.md
+      - Enumerate Concepts: prompts/learning-graph/02-enumerate-concepts.md
+      - Dependency Graph: prompts/learning-graph/03-dependency.md
+      - Concept Taxonomy: prompts/learning-graph/04-taxonomy.md
+    - Generating Chapter Content: prompts/chapter-content/index.md
+    - Generate Logo: prompts/generate-logo.md
+    - Generate Cover Image: prompts/generate-cover-image.md
+    - Intelligence Level Questions: prompts/level-questions.md
+    - Semantic Search: prompts/semantic-search.md
+    - Word Cloud: prompts/word-cloud.md
+    - Quality Metrics: prompts/quality-metrics.md
+    - Discord Admin: prompts/discord-admin.md
+  
+>>>>>>> 16b14ac (updating content)
   - Workflows:
     - Introduction: workflow/index.md
     - Course Description: workflow/course-description.md
