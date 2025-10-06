@@ -20,6 +20,6 @@ Copy this line into your course website:
 
 [Run the Terms to Enterprise Knowledge Graph Infographic Fullscreen](./main.html){ .md-button .md-button--primary }
 
-[Edit this MicroSimTerms to Enterprise Knowledge Graph Infographic on the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/DH-rcSx9i4)
+[Edit this MicroSimTerms to Enterprise Knowledge Graph Infographic on the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/DH-rcSx9i)
 
 
