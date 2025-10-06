@@ -295,3 +295,45 @@ The process of analyzing who is coming to your website, when they are visiting a
 The mkdocs material system provides a way to integrate free Google Analytics by adding four lines to your mkdocs.yml file.
 
 See: [Tutorial on Google Analytics](./tutorial/google-analytics.md)
+
+## Knowledge Graph Terms
+
+#### Terms List {#terms-list}
+
+A simple inventory of business terms and acronyms without definitions. This is typically the starting point - a raw collection of vocabulary used within an organization, often inconsistently defined or understood by different teams.
+
+#### Business Glossary {#business-glossary}
+
+Terms with informal, human-readable definitions. These definitions may vary between departments and lack the precision needed for technical implementation, but they establish a common understanding of business vocabulary.
+
+#### Controlled Vocabulary {#controlled-vocabulary}
+
+Terms with approved, standardized definitions following ISO-11179 naming conventions. Each term has a single, authoritative definition that everyone in the organization agrees to use, reducing ambiguity and improving communication.
+
+#### Taxonomy {#taxonomy}
+
+A hierarchical classification system where terms have broader/narrower relationships. This creates a tree-like structure showing how concepts relate in terms of generalization and specialization, making it easier to navigate and understand the conceptual landscape.
+
+#### Ontology {#ontology}
+
+A formal representation of concepts with more detailed relationships including synonyms, related terms, and part-whole relationships. This richer structure captures the complexity of how business concepts interconnect beyond simple hierarchies.
+
+#### Semantic Ontology {#semantic-ontology}
+
+All relationships between terms have formally approved types with clear semantics. Each connection has a defined meaning (e.g., 'partOf', 'causedBy', 'requires'), enabling precise logical reasoning about concepts and their relationships.
+
+#### Knowledge Graph {#knowledge-graph}
+
+A formal, typed graph of concepts optimized for graph traversal algorithms. This structure enables powerful queries and analytics, allowing you to discover insights by exploring paths and patterns across interconnected concepts.
+
+#### Enterprise Knowledge Graph (EKG) {#enterprise-knowledge-graph}
+
+Concepts used consistently by both people and AI agents across the entire enterprise, governed by a central data governance process. This ensures organizational alignment and enables enterprise-wide analytics and decision-making.
+
+#### AI Enhanced EKG {#ai-enhanced-ekg}
+
+An EKG that is continuously created, enhanced, and monitored by AI agents. Machine learning systems automatically discover new relationships, suggest improvements, and maintain quality, dramatically accelerating knowledge graph evolution.
+
+#### Real-Time EKG {#real-time-ekg}
+
+A dynamic knowledge graph that continuously monitors products, customers, sales, competitors, and market changes. This empowers real-time AI agents to provide instant insights and recommendations, enabling rapid response to market opportunities and threats.
