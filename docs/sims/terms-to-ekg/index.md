@@ -10,7 +10,7 @@ hide:
 ---
 # Terms to Enterprise Knowledge Graph
 
-<iframe src="./main.html" height="620px" scrolling="no" style="overflow: hidden;"></iframe>
+<iframe src="./main.html" height="630px" scrolling="no" style="overflow: hidden;"></iframe>
 
 Copy this line into your course website:
 ```html
