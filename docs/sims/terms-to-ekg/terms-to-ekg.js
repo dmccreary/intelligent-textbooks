@@ -3,18 +3,20 @@
 // Hover over boxes to see descriptions, click to visit glossary
 
 let containerWidth; // calculated by container
-let containerHeight = 900; // fixed height on page
+let containerHeight = 620; // fixed height on page
 let canvasWidth = 600;
 
 // Variables for the diagram
 let stages = [];
 let currentHover = -1;
-let boxWidth = 280;
-let boxHeight = 70;
-let verticalSpacing = 20;
-let margin = 40;
-let arrowSize = 10;
+let boxWidth = 220;
+let boxHeight = 40;
+let verticalSpacing = 15;
+let margin = 20;
+let arrowSize = 8;
 let lineStrokeWeight = 2;
+let descBoxWidth = 340; // width of description box on right
+let descBoxMargin = 20; // margin between stages and description
 
 function setup() {
     // Create a canvas to match the parent container's size
@@ -33,12 +35,14 @@ function setup() {
 }
 
 function updateLayout() {
-    // Calculate responsive box width
-    boxWidth = min(280, containerWidth * 0.7);
+    // Calculate responsive dimensions
+    let stagesAreaWidth = containerWidth * 0.45; // left side for stages
+    boxWidth = min(220, stagesAreaWidth - 2 * margin);
+    descBoxWidth = containerWidth - stagesAreaWidth - 3 * margin;
     
     // Calculate starting Y position to center the diagram vertically
     let totalHeight = 10 * boxHeight + 9 * verticalSpacing;
-    let startY = (containerHeight - totalHeight) / 2;
+    let startY = margin + 60; // account for title
     
     // Define all stages with their properties
     stages = [
@@ -114,9 +118,9 @@ function updateLayout() {
         }
     ];
     
-    // Calculate positions for each stage
+    // Calculate positions for each stage on the left side
     for (let i = 0; i < stages.length; i++) {
-        stages[i].x = (containerWidth - boxWidth) / 2;
+        stages[i].x = margin;
         stages[i].y = startY + i * (boxHeight + verticalSpacing);
     }
 }
@@ -178,7 +182,7 @@ function drawArrows() {
 
 function drawStages() {
     // Calculate responsive text size
-    let textSizeValue = constrain(containerWidth * 0.03, 14, 18);
+    let textSizeValue = constrain(containerWidth * 0.025, 12, 16);
     
     for (let i = 0; i < stages.length; i++) {
         let stage = stages[i];
@@ -200,7 +204,7 @@ function drawStages() {
         
         // Draw rounded rectangle
         fill(stage.color);
-        rect(stage.x, stage.y, boxWidth, boxHeight, 10);
+        rect(stage.x, stage.y, boxWidth, boxHeight, 8);
         
         // Draw stage name
         fill('black');
@@ -212,33 +216,55 @@ function drawStages() {
 }
 
 function drawDescription() {
-    let descriptionY = containerHeight - 120;
-    let descriptionHeight = 100;
-    
-    // Draw description box background
-    fill(240);
-    stroke('silver');
-    strokeWeight(1);
-    rect(10, descriptionY, containerWidth - 20, descriptionHeight, 5);
+    // Calculate description box position on the right side
+    let descBoxX = boxWidth + 2 * margin + descBoxMargin;
     
     // Display description for hovered stage
     if (currentHover !== -1) {
+        let stage = stages[currentHover];
+        let descBoxY = stage.y;
+        let descBoxHeight = boxHeight * 3; // Make it tall enough for text
+        
+        // Adjust Y position if box would go off bottom
+        if (descBoxY + descBoxHeight > containerHeight - margin) {
+            descBoxY = containerHeight - margin - descBoxHeight;
+        }
+        
+        // Draw description box background
+        fill(250);
+        stroke(stage.borderColor);
+        strokeWeight(2);
+        rect(descBoxX, descBoxY, descBoxWidth, descBoxHeight, 8);
+        
+        // Draw description text
         fill('black');
         noStroke();
-        textSize(constrain(containerWidth * 0.022, 11, 14));
+        textSize(constrain(containerWidth * 0.020, 11, 13));
         textAlign(LEFT, TOP);
         
-        let descWidth = containerWidth - 40;
-        let description = stages[currentHover].description;
-        text(description, 20, descriptionY + 10, descWidth, descriptionHeight - 20);
+        let textPadding = 10;
+        text(stage.description, 
+             descBoxX + textPadding, 
+             descBoxY + textPadding, 
+             descBoxWidth - 2 * textPadding, 
+             descBoxHeight - 2 * textPadding);
     } else {
         // Display instruction when no stage is hovered
+        let descBoxY = 80;
+        let descBoxHeight = 100;
+        
+        fill(250);
+        stroke('#CCCCCC');
+        strokeWeight(1);
+        rect(descBoxX, descBoxY, descBoxWidth, descBoxHeight, 8);
+        
         fill('#666666');
         noStroke();
-        textSize(constrain(containerWidth * 0.025, 12, 16));
+        textSize(constrain(containerWidth * 0.022, 12, 14));
         textAlign(CENTER, CENTER);
-        text("Hover over stages to see descriptions\nClick to visit glossary entry", 
-             containerWidth / 2, descriptionY + descriptionHeight / 2);
+        text("Hover over stages to see\ndetailed descriptions\n\nClick to visit glossary entry", 
+             descBoxX + descBoxWidth / 2, 
+             descBoxY + descBoxHeight / 2);
     }
 }
 
