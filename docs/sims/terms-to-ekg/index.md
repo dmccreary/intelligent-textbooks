@@ -14,7 +14,7 @@ hide:
 
 Copy this line into your course website:
 ```html
-<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/terms-to-ekg/mains.html" height="620px" scrolling="no"
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/terms-to-ekg/mains.html" height="630px" scrolling="no"
   style="overflow: hidden;"></iframe>
 ```
 
