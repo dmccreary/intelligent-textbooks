@@ -62,13 +62,17 @@ nav:
   
   - MicroSims:
     - Introduction: sims/index.md
+    - Addie Workflow: sims/addie-workflow/index.md
     - Book Levels: sims/book-levels/index.md
     - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
+    - Cognitive Load: sims/cognitive-load/index.md
+    - Kemp Model: sims/kemp-model/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Levels of Interactivity: sims/levels-of-interactivity/index.md
     - Book Generation Workflow: sims/book-gen-workflow/index.md
     - Word Cloud: sims/word-cloud/index.md
     - Gallery: sims/index.md
+    - Sam Process: sims/sam-process/index.md
     - Sine Wave: sims/sine-wave/index.md
     - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - AI Flywheel: sims/ai-flywheel/index.md
