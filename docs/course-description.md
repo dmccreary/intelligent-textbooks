@@ -20,90 +20,116 @@ that are curious about the future of education. Knowledge of how to create promp
 Students will be able to:
 - Define terms such as Intelligent Textbook, Learning Concepts, Concept Graphs, Learning Graphs, Content, MicroSim
 - List Five Levels of Intelligent Textbooks
+- What protected student data is and why it is required for personalization
 - Identify the level of any textbook based on its interactive characteristics
 
 ### Understand (Explain ideas or concepts)
+
 Students will be able to:
-- Explain [core principles in their own words]
-- Summarize [key processes or methodologies]
-- Compare and contrast [related concepts]
+- Explain the five levels of intelligent textbooks
+- Explain why levels 3-5 must protect student privacy
+- Explain the steps in generating a textbooks
+- Explain the purpose of a learning graph as the guardrails of content generation
+- Explain why level 2 textbooks will be available at low cost to students around the world
+- Explain the difference between Concept nodes in a graph and Content nodes
+- Summarize the overall approach to using generative AI to generate content and simulations
+- Summarize the challenges of breaking up walls of text
+- Compare and contrast static textbooks with different levels of intelligent textbooks
 
 ### Apply (Use information in new situations)
+
 Students will be able to:
-- Solve [specific types of problems]
-- Demonstrate [practical skills]
-- Use [tools, techniques, or frameworks]
+- Solve the problems of organizing concept learning dependencies
+- Demonstrate the use of generative AI to create Concepts, Chapters and MicroSims
+- Use tools such as GitHub, GitHub Pages, VSCode, mkdocs, the material theme, Python and shell scripts
 
 ### Analyze (Draw connections among ideas)
+
 Students will be able to:
-- Analyze [complex systems or scenarios]
-- Differentiate between [competing approaches or solutions]
-- Examine [cause-and-effect relationships]
+- Analyze a learning graph for quality, completeness and consistency
+- Differentiate between the different type of textbooks such as history, math, science and logic
+- Examine the effectiveness of interactivity at engauging students
 
 ### Evaluate (Justify a decision or course of action)
+
 Students will be able to:
-- Evaluate [solutions, designs, or approaches]
-- Critique [theories, methodologies, or implementations]
-- Assess [quality, effectiveness, or appropriateness]
+
+- Evaluate a given intelligent textbook for completeness and quality metrics
+- Critique the ability of large-language models (LLMs) to generate quality content and code
+- Assess the quality of concepts, content and learning aids such as a glossary of terms, FAQs and quizzes
 
 ### Create (Produce original work)
+
 Students will be able to:
-- Design [original solutions or systems]
-- Develop [new applications or implementations]
-- Construct [working prototypes or models]
+- Design a learning graph including foundational prerequisite concepts, outcome concepts and capstone project nodes
+- Develop and test new interactive MicroSims using generative 
+- Construct full textbooks working with subject-matter experts
 
 ## Concepts Covered
-1. **Foundation Concepts:** [List 5-10 fundamental concepts]
-2. **Core Concepts:** [List 10-15 main concepts]
-3. **Advanced Concepts:** [List 5-10 advanced topics]
+
+1. **Foundation Concepts:** Markdown, Build process, Textbook Structure, MicroSims, Instructional Design
+2. **Core Concepts:** Mkdocs, Material Theme, LLMs, Generative AI, Learning Graph
+3. **Advanced Concepts:** xAPI, Learning Record Store, Reinforcement Learning
 
 ## Concepts Explicitly Excluded
-- [List topics that might be expected but are intentionally omitted]
-- [Explain briefly why each is excluded]
 
-## Capstone Projects
-1. **Project Name:** [Title]
-   - **Description:** [2-3 sentences about the project]
-   - **Skills Demonstrated:** [List 3-5 key skills]
-   - **Deliverables:** [What students will produce]
+- Specific APIs for Learning Management Systems (Canvas) - varies based on the learning organization
+- Advanced JavaScript variations like TypeScript - too deep into computer science
+- Libraries to support specific types of content like circuits, chemistry or maps - to specific to a field
+- Advanced A/B testing to measure the effectiveness of interactive content
+- Reinforcement learning
+- Recommendation engines
 
-2. **Project Name:** [Title]
-   - **Description:** [2-3 sentences about the project]
-   - **Skills Demonstrated:** [List 3-5 key skills]
-   - **Deliverables:** [What students will produce]
+## Sample Capstone Projects
+
+1. **Project Name:** Custom Textbook from Scratch
+   - **Description:** Each student will build a custom textbook using only content they create
+   - **Skills Demonstrated:** Ability to start with a template and add content
+   - **Deliverables:** A working textbook on GitHub pages
+
+2. **Project Name:** Textbook Review
+   - **Description:** Review an existing textbook for 
+   - **Skills Demonstrated:** Run metrics, look for consistency and completeness
+   - **Deliverables:** Written evaluation of a textbook including pros and cons
+
+3. **Project Name:** Textbook Upgrade
+   - **Description:** Work with an existing textbook and upgrade its level
+   - **Skills Demonstrated:** Run metrics, look for consistency and completeness
+   - **Deliverables:** Written evaluation of a textbook before and after upgrade
 
 ## Interactive Elements (MicroSims)
-- **Estimated Number of MicroSims:** [Provide a range]
-- **Types of Simulations:** [e.g., "Interactive visualizations", "Problem-solving scenarios", "Concept explorers"]
-- **Primary Library:** [e.g., "p5.js", "vis.js", "custom JavaScript"]
+- **Estimated Number of MicroSims:** 5-10
+- **Types of Simulations:** Infographic, Interactive visualizations, Problem-solving scenarios, Concept explorers, graph traversal
+- **Primary Library:** p5.js, vis-network.js
 
 ## Assessment Strategy
-- **Formative Assessments:** [How students check understanding during learning]
-- **Summative Assessments:** [How final competency is measured]
-- **Self-Assessment Tools:** [Quizzes, reflection prompts, etc.]
+- **Formative Assessments:** Students will take self assessment quizzes throughout the course to measure their own learning
+- **Summative Assessments:** The final assessment will be their presentation of their book to the group or instructor
+- **Self-Assessment Tools:** Interactive multiple-choice Quizzes, short essays, reflection prompts
 
 ## Learning Path Structure
-- **Estimated Chapters:** [Number]
-- **Estimated Total Concepts:** [Number]
-- **Estimated Completion Time:** [Hours or weeks]
-- **Suggested Pace:** [e.g., "2-3 concepts per week"]
+- **Estimated Chapters:** 12
+- **Estimated Total Concepts:** 200
+- **Estimated Completion Time:** 100
+- **Suggested Pace:** 6-10 hours per week, two hour-long group discussion, per week
 
 ## Real-World Applications
 After completing this textbook, students will be able to:
-- [Specific job-relevant task 1]
-- [Specific job-relevant task 2]
-- [Specific job-relevant task 3]
-- [Industry or field application]
-- [Problem-solving capability]
+- Assess the quality of a course and give it an overall AI level score of 1-5
+- Understand the tools used to create an intelligent textbook and how each tool works
+- Create a new textbook using a template
+- Understand the dynamics of the publishing industry including copyright law and creative commons licensing
+- Be able to help improve the interactive quality of a textbook
 
 ## Success Metrics
 Students will know they have mastered the material when they can:
-- [Observable, measurable outcome 1]
-- [Observable, measurable outcome 2]
-- [Observable, measurable outcome 3]
+- Quickly assess the level of a textbook
+- Install the 
+- Run a quality metric report on a textbook that counts the number of chapters, sections, paragraphs, words, concepts etc.
+- Create a high-quality report that describes a textbook
 
 ## Technical Requirements
-- **Software/Tools Needed:** [List any required software]
+- **Software/Tools Needed:** GitHub Account, 
 - **Hardware Requirements:** [Minimum specifications if applicable]
 - **Internet Connectivity:** [Required/Recommended/Optional]
 
@@ -111,16 +137,3 @@ Students will know they have mastered the material when they can:
 - **Estimated Number of Terms:** [Provide a range]
 - **Term Categories:** [e.g., "Technical terms", "Domain-specific concepts", "Tools and technologies"]
 
----
-
-## Example Usage Instructions
-
-When using this template, replace all bracketed placeholders with specific information for your subject. Be as detailed and specific as possible. For example:
-
-Instead of: "Students will solve problems"
-Write: "Students will solve differential equations using the separation of variables method"
-
-Instead of: "Basic math skills"
-Write: "Algebra II including quadratic equations, logarithms, and basic trigonometry"
-
-This structured approach ensures your intelligent textbook will have clear learning objectives aligned with Bloom's taxonomy, measurable outcomes, and appropriate interactive elements for effective learning.
