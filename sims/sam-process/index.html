@@ -1,0 +1,2530 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/sims/sam-process/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../sine-wave/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Sam Process - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Sam Process - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/sims/sam-process/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/sims/sam-process/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Sam Process - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/sims/sam-process/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sam-successive-approximation-model-microsim" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sam Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addie-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Addie Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Book Levels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blooms-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloom's Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cognitive-load/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive Load
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kemp-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kemp Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../levels-of-interactivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Interactivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-gen-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Book Generation Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../word-cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Word Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sam Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sam Process
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-phases-of-sam" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Phases of SAM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Phases of SAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparation-phase-blue" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparation Phase (Blue)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-iterative-design-phase-orange" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Iterative Design Phase (Orange)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterative-development-phase-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Iterative Development Phase (Green)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-differences-from-addie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Differences from ADDIE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Differences from ADDIE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addie-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADDIE Approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAM Approach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-mode-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Mode (Default)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-play-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-play Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-sam-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key SAM Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key SAM Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-early-and-frequent-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Early and Frequent Prototyping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-collaboration-over-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Collaboration Over Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-embracing-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Embracing Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Continuous Improvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-sam" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use SAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-sam-may-not-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      When SAM May Not Fit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-savvy-start-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Savvy Start Workshop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diminishing-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diminishing Returns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-small-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Small Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-large-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Large Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-elearning" class="md-nav__link">
+    <span class="md-ellipsis">
+      For eLearning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-instructor-led-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Instructor-Led Training
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-this-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try This Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-real-sam-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Real SAM Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sine-wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sine Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-pace-accelerating/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Pace Accelerating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-flywheel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Flywheel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-to-ekg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terms to EKG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-phases-of-sam" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Phases of SAM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Phases of SAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparation-phase-blue" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Preparation Phase (Blue)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-iterative-design-phase-orange" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Iterative Design Phase (Orange)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterative-development-phase-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Iterative Development Phase (Green)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-differences-from-addie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Differences from ADDIE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Differences from ADDIE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addie-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADDIE Approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAM Approach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-mode-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Mode (Default)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-play-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-play Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-sam-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key SAM Principles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key SAM Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-early-and-frequent-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Early and Frequent Prototyping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-collaboration-over-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Collaboration Over Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-embracing-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Embracing Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Continuous Improvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-sam" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use SAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-sam-may-not-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      When SAM May Not Fit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-savvy-start-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Savvy Start Workshop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diminishing-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diminishing Returns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discussion Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-small-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Small Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-large-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Large Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-elearning" class="md-nav__link">
+    <span class="md-ellipsis">
+      For eLearning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-instructor-led-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Instructor-Led Training
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-this-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try This Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-real-sam-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Real SAM Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/sims/sam-process/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="sam-successive-approximation-model-microsim">SAM: Successive Approximation Model MicroSim</h1>
+<p><a href="main.html">Run Fullscreen</a></p>
+<h2 id="overview">Overview</h2>
+<p>The Successive Approximation Model (SAM) is an agile, iterative approach to instructional design developed by Michael Allen. Unlike the linear ADDIE model, SAM emphasizes rapid prototyping, frequent iteration, and continuous improvement through stakeholder feedback. This interactive MicroSim demonstrates how SAM works and why it's particularly effective for modern instructional design projects.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>After using this MicroSim, you will be able to:</p>
+<ul>
+<li>Identify the three phases of the SAM process</li>
+<li>Explain how SAM differs from traditional ADDIE</li>
+<li>Understand the value of iterative design and development</li>
+<li>Recognize how quality improves through successive iterations</li>
+<li>Apply SAM principles to instructional design projects</li>
+</ul>
+<h2 id="the-three-phases-of-sam">The Three Phases of SAM</h2>
+<h3 id="1-preparation-phase-blue">1. Preparation Phase (Blue)</h3>
+<p>The foundation phase where you gather essential information:</p>
+<p><strong>Activities:</strong>
+- Gather information about learners and context
+- Identify instructional problems and needs
+- Define project scope and constraints
+- Brainstorm potential solutions with stakeholders</p>
+<p><strong>Duration:</strong> Short and focused (typically 1-2 days)</p>
+<p><strong>Deliverable:</strong> Project brief and initial design ideas</p>
+<h3 id="2-iterative-design-phase-orange">2. Iterative Design Phase (Orange)</h3>
+<p>Rapid cycles of prototyping and refinement:</p>
+<p><strong>Activities:</strong>
+- Create quick prototypes (paper, sketches, mockups)
+- Review with stakeholders in Savvy Start sessions
+- Gather immediate feedback
+- Refine design based on input</p>
+<p><strong>Duration:</strong> Multiple short cycles (each 1-3 days)</p>
+<p><strong>Deliverable:</strong> Validated design ready for development</p>
+<h3 id="3-iterative-development-phase-green">3. Iterative Development Phase (Green)</h3>
+<p>Building and testing with real learners:</p>
+<p><strong>Activities:</strong>
+- Build functional content incrementally
+- Test with actual learners
+- Collect performance data and feedback
+- Implement improvements immediately</p>
+<p><strong>Duration:</strong> Multiple sprints (each 1-2 weeks)</p>
+<p><strong>Deliverable:</strong> Continuously improved learning solution</p>
+<h2 id="key-differences-from-addie">Key Differences from ADDIE</h2>
+<h3 id="addie-approach">ADDIE Approach</h3>
+<ul>
+<li>Linear progression through phases</li>
+<li>Complete each phase before starting next</li>
+<li>Extensive upfront planning and documentation</li>
+<li>Testing happens late in the process</li>
+<li>Changes are expensive after development begins</li>
+</ul>
+<h3 id="sam-approach">SAM Approach</h3>
+<ul>
+<li>Cyclical, iterative progression</li>
+<li>Rapid prototyping from the start</li>
+<li>Minimal documentation, maximum collaboration</li>
+<li>Testing throughout the entire process</li>
+<li>Changes are expected and welcomed</li>
+</ul>
+<h2 id="interactive-features">Interactive Features</h2>
+<p><strong>Next Iteration Button</strong>: Advance through the SAM process one step at a time</p>
+<p><strong>Auto-play Mode</strong>: Watch the entire process unfold automatically</p>
+<p><strong>Iteration Speed Slider</strong>: Control how fast iterations progress</p>
+<p><strong>Spiral Visualization</strong>: See how the process cycles through design and development</p>
+<p><strong>Quality Meter</strong>: Watch product quality improve with each iteration</p>
+<p><strong>Phase Indicators</strong>: Track which phase is currently active</p>
+<p><strong>Iteration Counter</strong>: See progress toward the final product (up to 5 iterations)</p>
+<p><strong>Current Activities Panel</strong>: View specific tasks happening in each phase</p>
+<h2 id="how-to-use">How to Use</h2>
+<h3 id="manual-mode-default">Manual Mode (Default)</h3>
+<ol>
+<li>Click "Next Iteration" to move through each phase</li>
+<li>Observe the spiral visualization showing your progress</li>
+<li>Watch the quality meter improve with each iteration</li>
+<li>Read the current activities panel to understand what's happening</li>
+</ol>
+<h3 id="auto-play-mode">Auto-play Mode</h3>
+<ol>
+<li>Check "Auto-play Iterations" to start automatic progression</li>
+<li>Adjust the "Iteration Speed" slider to control pacing</li>
+<li>Watch as the process cycles through all iterations</li>
+<li>Observe how quality increases with each cycle</li>
+</ol>
+<h3 id="understanding-the-visualization">Understanding the Visualization</h3>
+<p><strong>Spiral Path</strong>: Represents the iterative journey from start to finish</p>
+<p><strong>Position Marker</strong>: Shows your current location in the process</p>
+<p><strong>Iteration Dots</strong>: Visual progress indicator (5 total iterations)</p>
+<p><strong>Quality Meter</strong>: 
+- Red (0-50%): Initial rough draft
+- Orange (50-75%): Improving with feedback
+- Green (75-100%): High-quality final product</p>
+<h2 id="microsim">MicroSim</h2>
+<iframe src="main.html" width="100%" height="672" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="key-sam-principles">Key SAM Principles</h2>
+<h3 id="1-early-and-frequent-prototyping">1. Early and Frequent Prototyping</h3>
+<p>Don't wait for perfect designs. Create quick mockups and test them immediately:</p>
+<ul>
+<li>Sketches on paper</li>
+<li>PowerPoint mockups</li>
+<li>Simple interactive prototypes</li>
+<li>Rough content samples</li>
+</ul>
+<p><strong>Benefit</strong>: Find problems early when they're cheap to fix</p>
+<h3 id="2-collaboration-over-documentation">2. Collaboration Over Documentation</h3>
+<p>SAM replaces lengthy documents with collaborative sessions:</p>
+<ul>
+<li><strong>Savvy Start</strong>: Intensive kickoff workshop with stakeholders</li>
+<li><strong>Design Proof</strong>: Working prototypes instead of written specs</li>
+<li><strong>Alpha/Beta Reviews</strong>: Real testing with actual learners</li>
+</ul>
+<p><strong>Benefit</strong>: Faster alignment and better solutions through conversation</p>
+<h3 id="3-embracing-change">3. Embracing Change</h3>
+<p>SAM assumes you'll discover issues and opportunities during development:</p>
+<ul>
+<li>Iterate based on feedback</li>
+<li>Refine as you learn</li>
+<li>Improve continuously</li>
+<li>Welcome new insights</li>
+</ul>
+<p><strong>Benefit</strong>: Final product is better because it evolved based on evidence</p>
+<h3 id="4-continuous-improvement">4. Continuous Improvement</h3>
+<p>Each iteration through the cycle improves quality:</p>
+<ul>
+<li><strong>Iteration 1</strong>: Rough but functional</li>
+<li><strong>Iteration 2</strong>: Clearer based on feedback</li>
+<li><strong>Iteration 3</strong>: More polished and effective</li>
+<li><strong>Iteration 4</strong>: Fine-tuned and refined</li>
+<li><strong>Iteration 5</strong>: High-quality finished product</li>
+</ul>
+<p><strong>Benefit</strong>: Systematic quality improvement with measurable progress</p>
+<h2 id="when-to-use-sam">When to Use SAM</h2>
+<p>SAM is particularly effective when:</p>
+<p><strong>✓ Requirements are unclear</strong> - Discover what's needed through prototyping</p>
+<p><strong>✓ Stakeholder buy-in is critical</strong> - Involve them throughout the process</p>
+<p><strong>✓ Speed is important</strong> - Deliver faster than traditional approaches</p>
+<p><strong>✓ Innovation is valued</strong> - Encourage creative solutions through iteration</p>
+<p><strong>✓ Learner feedback is available</strong> - Test early and often</p>
+<p><strong>✓ Agile culture exists</strong> - Organization embraces iterative development</p>
+<h2 id="when-sam-may-not-fit">When SAM May Not Fit</h2>
+<p>Consider alternatives when:</p>
+<p><strong>✗ Strict regulatory compliance</strong> - May require extensive documentation</p>
+<p><strong>✗ Fixed requirements</strong> - Linear approach might be more efficient</p>
+<p><strong>✗ No stakeholder access</strong> - Collaboration is difficult</p>
+<p><strong>✗ Very small projects</strong> - Overhead may not be worth it</p>
+<p><strong>✗ One-time delivery</strong> - No opportunity for iteration</p>
+<h2 id="the-savvy-start-workshop">The Savvy Start Workshop</h2>
+<p>A key SAM component is the Savvy Start - an intensive collaborative design session:</p>
+<p><strong>Participants:</strong>
+- Subject matter experts
+- Instructional designers
+- Project stakeholders
+- Technical team members</p>
+<p><strong>Activities:</strong>
+- Brainstorm solutions
+- Create rough prototypes
+- Test ideas immediately
+- Build consensus</p>
+<p><strong>Duration:</strong> Typically 1-3 days</p>
+<p><strong>Outcome:</strong> Aligned team with validated design direction</p>
+<h2 id="diminishing-returns">Diminishing Returns</h2>
+<p>Notice in the MicroSim that quality improvements decrease with each iteration:</p>
+<ul>
+<li><strong>Early iterations</strong>: Large quality jumps (15-20% increase)</li>
+<li><strong>Middle iterations</strong>: Moderate improvements (10-15% increase)</li>
+<li><strong>Late iterations</strong>: Fine-tuning (5-10% increase)</li>
+</ul>
+<p><strong>This teaches an important lesson:</strong> Know when to stop iterating and ship!</p>
+<h2 id="discussion-questions">Discussion Questions</h2>
+<ol>
+<li>
+<p><strong>Compare and Contrast</strong>: How would a project differ if developed using ADDIE vs. SAM?</p>
+</li>
+<li>
+<p><strong>Risk Management</strong>: Which approach (ADDIE or SAM) better handles uncertainty? Why?</p>
+</li>
+<li>
+<p><strong>Stakeholder Engagement</strong>: How does SAM ensure stakeholder buy-in throughout the project?</p>
+</li>
+<li>
+<p><strong>Time to Market</strong>: Can SAM really be faster than ADDIE despite multiple iterations? Explain.</p>
+</li>
+<li>
+<p><strong>Quality Assessment</strong>: How do you know when you've iterated enough?</p>
+</li>
+</ol>
+<h2 id="practical-applications">Practical Applications</h2>
+<h3 id="for-small-projects">For Small Projects</h3>
+<ul>
+<li>Use 2-3 iterations maximum</li>
+<li>Combine preparation with first design iteration</li>
+<li>Focus on core functionality</li>
+</ul>
+<h3 id="for-large-projects">For Large Projects</h3>
+<ul>
+<li>Use 4-5 iterations as shown in MicroSim</li>
+<li>Create multiple prototypes in parallel</li>
+<li>Establish clear iteration criteria</li>
+</ul>
+<h3 id="for-elearning">For eLearning</h3>
+<ul>
+<li>Prototype interactions early</li>
+<li>Test with small learner groups</li>
+<li>Iterate based on completion rates and feedback</li>
+</ul>
+<h3 id="for-instructor-led-training">For Instructor-Led Training</h3>
+<ul>
+<li>Pilot with one class</li>
+<li>Gather instructor and learner feedback</li>
+<li>Refine materials between sessions</li>
+</ul>
+<h2 id="success-metrics">Success Metrics</h2>
+<p>Track these indicators of SAM effectiveness:</p>
+<p><strong>Time Metrics:</strong>
+- Time from start to first prototype
+- Time from start to first learner testing
+- Total development time vs. ADDIE</p>
+<p><strong>Quality Metrics:</strong>
+- Stakeholder satisfaction scores
+- Learner performance improvements
+- Error rates and confusion points</p>
+<p><strong>Efficiency Metrics:</strong>
+- Number of major changes required
+- Rework time after initial delivery
+- Cost per iteration</p>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<p><strong>❌ Insufficient Stakeholder Involvement</strong>
+- Solution: Schedule regular review sessions</p>
+<p><strong>❌ Analysis Paralysis</strong>
+- Solution: Set time limits for each iteration</p>
+<p><strong>❌ Over-Iteration</strong>
+- Solution: Define "good enough" criteria upfront</p>
+<p><strong>❌ Skipping Learner Testing</strong>
+- Solution: Make testing mandatory in each cycle</p>
+<p><strong>❌ Poor Prototyping Tools</strong>
+- Solution: Use rapid prototyping software</p>
+<h2 id="reflection">Reflection</h2>
+<p>Consider your own experiences:</p>
+<ul>
+<li>Have you ever created something, gotten feedback, and wished you'd tested earlier?</li>
+<li>When has iteration improved one of your projects?</li>
+<li>What would help you embrace an iterative approach?</li>
+<li>How might SAM change your workflow?</li>
+</ul>
+<h2 id="try-this-challenge">Try This Challenge</h2>
+<p>Using the MicroSim:</p>
+<ol>
+<li>Run through all 5 iterations and note the quality at each stage</li>
+<li>Imagine specific feedback that might occur at each iteration</li>
+<li>Consider what would happen if you stopped at iteration 3</li>
+<li>Think about how ADDIE would handle the same project differently</li>
+</ol>
+<h2 id="related-concepts">Related Concepts</h2>
+<ul>
+<li><a href="../addie-workflow/">ADDIE Model</a> - Traditional instructional design approach</li>
+<li><a href="../agile-development/">Agile Development</a> - Software development methodology inspiring SAM</li>
+<li><a href="../rapid-prototyping/">Rapid Prototyping</a> - Quick mockup creation</li>
+<li><a href="../formative-evaluation/">Formative Evaluation</a> - Testing during development</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li>Allen, M. W., &amp; Sites, R. (2012). <em>Leaving ADDIE for SAM: An Agile Model for Developing the Best Learning Experiences</em>. ASTD Press.</li>
+<li>Allen, M. W. (2016). <em>Designing Successful e-Learning: Forget What You Know About Instructional Design and Do Something Interesting</em>. Pfeiffer.</li>
+<li>Hnatiuk, J. (2021). <em>SAM for Instructional Designers</em>. ATD Press.</li>
+</ul>
+<h2 id="case-study-real-sam-project">Case Study: Real SAM Project</h2>
+<p><strong>Project</strong>: Employee onboarding program for 500-person company</p>
+<p><strong>ADDIE Approach Would Have Been:</strong>
+- 2 months analysis and design
+- 3 months development
+- 1 month implementation
+- Total: 6 months</p>
+<p><strong>SAM Approach Was:</strong>
+- 2 days Savvy Start workshop
+- 3 two-week design/development iterations
+- Deployed partial solution after iteration 2
+- Total: 7 weeks to full deployment</p>
+<p><strong>Results:</strong>
+- 5 months faster
+- Higher satisfaction (stakeholders involved throughout)
+- Better quality (tested with real employees early)
+- Lower cost (found issues before extensive development)</p>
+<h2 id="credits">Credits</h2>
+<p>This MicroSim was created to support the Intelligent Textbooks project and demonstrate the SAM instructional design process interactively. The visualization shows how agile approaches can accelerate and improve instructional design.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sine-wave/" class="md-footer__link md-footer__link--next" aria-label="Next: Sine Wave">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Sine Wave
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,216 @@
+{
+  "microsim": {
+    "title": "Cognitive Load Visualizer",
+    "description": "Interactive visualization demonstrating the three types of cognitive load (intrinsic, extraneous, and germane) and their impact on working memory capacity. Users can adjust sliders to see how different load combinations affect learning effectiveness and explore optimal instructional design configurations.",
+    "subject": "Educational Psychology",
+    "grade_level": "Undergraduate",
+    "topic": "Cognitive Load Theory",
+    "keywords": [
+      "cognitive load",
+      "working memory",
+      "intrinsic load",
+      "extraneous load",
+      "germane load",
+      "instructional design",
+      "learning theory",
+      "cognitive psychology",
+      "mental capacity",
+      "information processing"
+    ],
+    "learning_objectives": [
+      "Identify and distinguish between the three types of cognitive load",
+      "Explain how each type of cognitive load affects learning outcomes",
+      "Recognize when total cognitive load exceeds working memory capacity",
+      "Apply cognitive load principles to evaluate instructional design",
+      "Design learning materials that optimize cognitive load"
+    ],
+    "prerequisites": [
+      "Basic understanding of how learning works",
+      "Familiarity with instructional design concepts"
+    ],
+    "estimated_time": "10-15 minutes",
+    "language": "en-US",
+    "author": "Intelligent Textbooks Project",
+    "version": "1.0",
+    "created_date": "2025-10-21",
+    "last_modified": "2025-10-21",
+    "license": "CC BY-SA 4.0",
+    "framework": "p5.js",
+    "canvas_dimensions": {
+      "width": 800,
+      "height": 650,
+      "responsive": true
+    },
+    "controls": [
+      {
+        "type": "slider",
+        "name": "Intrinsic Load",
+        "description": "Adjust the inherent difficulty of the content being learned",
+        "min": 0,
+        "max": 100,
+        "default": 40,
+        "step": 5,
+        "unit": "percent",
+        "color": "#F5C842"
+      },
+      {
+        "type": "slider",
+        "name": "Extraneous Load",
+        "description": "Adjust the mental effort wasted on poor instructional design",
+        "min": 0,
+        "max": 100,
+        "default": 30,
+        "step": 5,
+        "unit": "percent",
+        "color": "#E94B3C"
+      },
+      {
+        "type": "slider",
+        "name": "Germane Load",
+        "description": "Adjust the mental effort devoted to learning processes",
+        "min": 0,
+        "max": 100,
+        "default": 20,
+        "step": 5,
+        "unit": "percent",
+        "color": "#7ED321"
+      },
+      {
+        "type": "button",
+        "name": "Good Design Example",
+        "description": "Load an example showing optimal cognitive load balance",
+        "action": "load_good_example"
+      },
+      {
+        "type": "button",
+        "name": "Bad Design Example",
+        "description": "Load an example showing cognitive overload",
+        "action": "load_bad_example"
+      },
+      {
+        "type": "button",
+        "name": "Reset to Default",
+        "description": "Return all sliders to their default values",
+        "action": "reset"
+      }
+    ],
+    "educational_features": {
+      "interactive_elements": [
+        "Three independent load sliders",
+        "Real-time working memory visualization",
+        "Color-coded load type bars",
+        "Animated capacity filling",
+        "Example configuration buttons"
+      ],
+      "visual_representations": [
+        "Brain/working memory capacity meter",
+        "Horizontal load bars with percentages",
+        "Color-coded load types (yellow, red, green)",
+        "Visual overload indicators",
+        "Dynamic feedback messages"
+      ],
+      "feedback_mechanisms": [
+        "Real-time capacity percentage display",
+        "Color changes (blue/orange/red) based on load level",
+        "Text feedback on load status",
+        "Warning indicators for overload",
+        "Example explanations for good/bad design"
+      ]
+    },
+    "bloom_taxonomy_levels": [
+      "Remember",
+      "Understand",
+      "Apply",
+      "Analyze",
+      "Evaluate"
+    ],
+    "assessment_suggestions": [
+      "Ask students to identify which type of load each design element creates",
+      "Have students calculate total load from given scenarios",
+      "Request redesign of high-load materials to reduce extraneous load",
+      "Ask students to justify load estimates for specific learning materials",
+      "Have students create load profiles for different learner expertise levels"
+    ],
+    "extension_activities": [
+      "Analyze real textbooks or courses for cognitive load issues",
+      "Create before/after designs showing load reduction",
+      "Research how expertise changes intrinsic load",
+      "Design a study to measure cognitive load in learners",
+      "Apply multimedia learning principles to reduce extraneous load"
+    ],
+    "theoretical_foundation": {
+      "theory": "Cognitive Load Theory",
+      "developers": "John Sweller, Paul Chandler, Fred Paas",
+      "key_principles": [
+        "Working memory has limited capacity (typically 4-7 chunks)",
+        "Long-term memory has virtually unlimited capacity",
+        "Learning requires transferring information from working to long-term memory",
+        "Cognitive load is additive across all three types",
+        "Effective design manages all three types of load"
+      ],
+      "research_support": [
+        "Meta-analyses show effect sizes of 0.4-1.0 for load reduction",
+        "Split-attention effect consistently demonstrates extraneous load impact",
+        "Worked example effect shows intrinsic load management",
+        "Expertise reversal effect demonstrates load relativity"
+      ]
+    },
+    "design_implications": {
+      "reduce_extraneous_load": [
+        "Use integrated text and diagrams",
+        "Remove unnecessary decorations",
+        "Provide clear navigation",
+        "Use consistent layouts"
+      ],
+      "manage_intrinsic_load": [
+        "Ensure prerequisites are met",
+        "Break complex topics into chunks",
+        "Use worked examples",
+        "Progress from simple to complex"
+      ],
+      "optimize_germane_load": [
+        "Provide practice opportunities",
+        "Encourage elaboration",
+        "Support schema construction",
+        "Enable meaningful connections"
+      ]
+    },
+    "common_misconceptions": [
+      "More information is always better (ignores capacity limits)",
+      "Attractive design is more important than clear design (adds extraneous load)",
+      "All cognitive effort is productive (ignores extraneous load)",
+      "Content difficulty can't be managed (ignores chunking strategies)"
+    ],
+    "technical_requirements": {
+      "libraries": [
+        "p5.js v1.11.2"
+      ],
+      "browser_compatibility": [
+        "Chrome",
+        "Firefox",
+        "Safari",
+        "Edge"
+      ],
+      "responsive": true,
+      "mobile_friendly": true
+    },
+    "accessibility": {
+      "screen_reader_support": true,
+      "keyboard_navigation": false,
+      "color_blind_safe": true,
+      "described_content": "Interactive cognitive load visualizer with three adjustable load types and a capacity meter showing when working memory is overloaded"
+    },
+    "references": [
+      "Sweller, J., Ayres, P., & Kalyuga, S. (2011). Cognitive Load Theory. Springer.",
+      "Mayer, R. E. (2021). Multimedia Learning (3rd ed.). Cambridge University Press.",
+      "van Merriënboer, J. J. G., & Sweller, J. (2005). Cognitive load theory and complex learning. Educational Psychology Review, 17(2), 147-177.",
+      "Paas, F., Renkl, A., & Sweller, J. (2003). Cognitive load theory and instructional design: Recent developments. Educational Psychologist, 38(1), 1-4."
+    ],
+    "file_structure": {
+      "main_html": "main.html",
+      "javascript": "cognitive-load.js",
+      "documentation": "index.md",
+      "metadata": "metadata.json"
+    }
+  }
+}
