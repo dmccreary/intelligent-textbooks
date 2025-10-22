@@ -31,7 +31,10 @@ nav:
     - Open Graph: tutorial/open-graph.md
     - Google Analytics: tutorial/google-analytics.md
     - Logo and Favicon: tutorial/logo-and-favicon.md
-  
+    - CSS: concepts/css-tips.md
+    - Disable Titles: concepts/disable-title.md
+    - Hiding Content: concepts/hiding-content.md
+
   - Educational concepts:
     - Introduction: concepts/index.md
     - Intelligence Levels: concepts/five-levels-of-intelligent-textbooks.md
@@ -43,6 +46,9 @@ nav:
     - Levels of Interactivity: concepts/levels-of-interactivity.md
     - Ontology Questions: concepts/ontology-questions.md
     - Open Educational Resources: concepts/open-educational-resources.md
+    - Instructional Design: concepts/instructional-design.md
+    - Levels of Interactivity: concepts/levels-of-interactivity-v1.md
+    - Quality Metrics: concepts/quality-metrics.md
   
   - Workflows:
     - Introduction: workflow/index.md
@@ -87,6 +93,8 @@ nav:
     - Feature Mapping: prompts/feature-mapping.md
     - Learning Graph:
       - Introduction: prompts/learning-graph/index.md
+      - Course Description: prompts/learning-graph/00-course-description.md
+      - Personas: prompts/learning-graph/01-personas.md
       - Enumerate Concepts: prompts/learning-graph/02-enumerate-concepts.md
       - Dependency Graph: prompts/learning-graph/03-dependency.md
       - Concept Taxonomy: prompts/learning-graph/04-taxonomy.md
@@ -100,6 +108,7 @@ nav:
     - Word Cloud: prompts/word-cloud.md
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
+    - Terms to EKG: prompts/terms-to-ekg/index.md
   
   - Formatting Tests:
     - Introduction: formatting-tests/index.md

@@ -13,12 +13,14 @@ hide:
 Use these templates to create a MicroSim that can
 be added to any website with just a single ```iframe``` HTML element.
 
-<iframe src="./main.html" width="620px" height="550px" scrolling="no"
-  style="overflow: hidden;"></iframe>
+<iframe src="./main.html" height="550px" 
+   scrolling="no" style="overflow: hidden;">
+</iframe>
 
 ```html
-<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/NAME/mains.html" width="600px" height="450px" scrolling="no"
-  style="overflow: hidden;"></iframe>
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/NAME/mains.html" height="450px" 
+   scrolling="no" style="overflow: hidden;">
+</iframe>
 ```
 
 [Run the MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
