@@ -45,10 +45,10 @@ function setup() {
   canvas.parent(document.querySelector('main'));
   
   // Calculate positions
-  brainX = canvasWidth * 0.3;
+  brainX = canvasWidth * 0.2;
   brainY = drawHeight / 2;
   brainSize = 140;
-  barStartX = canvasWidth * 0.6;
+  barStartX = canvasWidth * 0.5;
   
   // Create controls
   createControls();
@@ -212,8 +212,8 @@ function draw() {
   }
   
   // Update positions for responsive design
-  brainX = canvasWidth * 0.3;
-  barStartX = canvasWidth * 0.6;
+  brainX = canvasWidth * 0.2;
+  barStartX = canvasWidth * 0.5;
   
   // Draw brain/working memory visualization
   drawBrainCapacity();
@@ -366,7 +366,7 @@ function drawLegend() {
   noStroke();
   rect(legendX, legendY, boxSize, boxSize);
   fill('black');
-  text('Intrinsic: Inherent complexity of concept', legendX + boxSize + 8, legendY + boxSize/2);
+  text('Intrinsic: Inherent complexity of concept chunk', legendX + boxSize + 8, legendY + boxSize/2);
   
   // Extraneous Load
   legendY += lineHeight;
