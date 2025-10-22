@@ -12,7 +12,7 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/concepts/hiding-content/">
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/tutorial/disable-title/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Hiding Content - Building Intelligent Textbooks With AI</title>
+        <title>How to Disable a Title - Building Intelligent Textbooks With AI</title>
       
     
     
@@ -69,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Hiding Content - Building Intelligent Textbooks With AI" >
+        <meta  property="og:title"  content="How to Disable a Title - Building Intelligent Textbooks With AI" >
       
         <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/hiding-content.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/tutorial/disable-title.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -81,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/concepts/hiding-content/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/tutorial/disable-title/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Hiding Content - Building Intelligent Textbooks With AI" >
+        <meta  name="twitter:title"  content="How to Disable a Title - Building Intelligent Textbooks With AI" >
       
         <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/hiding-content.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/tutorial/disable-title.png" >
       
     
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hiding-content" class="md-skip">
+        <a href="#how-to-disable-a-title" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hiding Content
+              How to Disable a Title
             
           </span>
         </div>
@@ -381,6 +381,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -394,7 +400,7 @@
         
   
   
-    <a href="../../tutorial/" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -444,6 +450,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -457,7 +469,7 @@
         
   
   
-    <a href="../" class="md-nav__link">
+    <a href="../../concepts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -736,6 +748,10 @@
       
         
       
+        
+          
+        
+      
     
     
     
@@ -1000,7 +1016,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/concepts/hiding-content.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/tutorial/disable-title.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1008,34 +1024,24 @@
   
 
 
-<h1 id="hiding-content">Hiding Content</h1>
-<p>You can add <code>metadata</code> to the very top of your index.md file to
-hide specific elements of any page.</p>
+<h1 id="how-to-disable-a-title">How to Disable a Title</h1>
+<p>In the ideal world we could just add a metadata element to hide the title.</p>
+<p>The following would be used to disable the title:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>---
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>---
 hide:
-  - title          # Hide the page title
-  - navigation     # Hide the navigation sidebar
-  - toc           # Hide the table of contents
-  - footer        # Hide the footer
-  - tags          # Hide tags (if using tags plugin)
----
+<span class="gu">    title</span>
+<span class="gu">---</span>
 </code></pre></div></td></tr></table></div>
-<p>I have found that the hide of title does not work.  To
-get around this bug I use the following CSS:</p>
+<p>However, this does not work.  So we need to add an inline CSS element into our markdown:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">.</span><span class="nc">md-content__inner</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="w"> </span><span class="cp">!important</span><span class="p">;}</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>Note you want to restrict the h1 <code>display:none</code> to only the markdown content inner class.</p>
 
 
 

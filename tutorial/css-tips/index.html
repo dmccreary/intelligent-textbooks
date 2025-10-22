@@ -12,7 +12,7 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/concepts/disable-title/">
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/tutorial/css-tips/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>How to Disable a Title - Building Intelligent Textbooks With AI</title>
+        <title>CSS Tips - Building Intelligent Textbooks With AI</title>
       
     
     
@@ -69,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="How to Disable a Title - Building Intelligent Textbooks With AI" >
+        <meta  property="og:title"  content="CSS Tips - Building Intelligent Textbooks With AI" >
       
         <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/disable-title.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/tutorial/css-tips.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -81,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/concepts/disable-title/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/tutorial/css-tips/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="How to Disable a Title - Building Intelligent Textbooks With AI" >
+        <meta  name="twitter:title"  content="CSS Tips - Building Intelligent Textbooks With AI" >
       
         <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/disable-title.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/tutorial/css-tips.png" >
       
     
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-disable-a-title" class="md-skip">
+        <a href="#css-tips" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Disable a Title
+              CSS Tips
             
           </span>
         </div>
@@ -381,6 +381,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -394,7 +400,7 @@
         
   
   
-    <a href="../../tutorial/" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -444,6 +450,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -457,7 +469,7 @@
         
   
   
-    <a href="../" class="md-nav__link">
+    <a href="../../concepts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -736,6 +748,10 @@
       
         
       
+        
+          
+        
+      
     
     
     
@@ -987,6 +1003,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1000,7 +1033,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/concepts/disable-title.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/tutorial/css-tips.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1008,23 +1041,115 @@
   
 
 
-<h1 id="how-to-disable-a-title">How to Disable a Title</h1>
-<p>In the ideal world we could just add a metadata element to hide the title.</p>
-<p>The following would be used to disable the title:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>---
-hide:
-<span class="gu">    title</span>
-<span class="gu">---</span>
-</code></pre></div></td></tr></table></div>
-<p>However, this does not work.  So we need to add an inline CSS element into our markdown:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">.</span><span class="nc">md-content__inner</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="w"> </span><span class="cp">!important</span><span class="p">;}</span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<h1 id="css-tips">CSS Tips</h1>
+<p>Here are some CSS that you can add to your `docs/css/extra.css' file</p>
+<h2 id="logo">Logo</h2>
+<p>Here is some CSS to adjust the size of the logo in the upper left corner of the page</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">.</span><span class="nc">md-header__button</span><span class="p">.</span><span class="nc">md-logo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">md-header__button</span><span class="p">.</span><span class="nc">md-logo</span><span class="w"> </span><span class="nt">img</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">md-header__button</span><span class="p">.</span><span class="nc">md-logo</span><span class="w"> </span><span class="nt">svg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">##</span><span class="w"> </span><span class="nt">iFrame</span>
+
+<span class="nt">Our</span><span class="w"> </span><span class="nt">textbooks</span><span class="w"> </span><span class="nt">put</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">blue</span><span class="w"> </span><span class="nt">line</span><span class="w"> </span><span class="nt">around</span><span class="w"> </span><span class="nt">iFrames</span><span class="w"> </span><span class="nt">so</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">user</span><span class="w"> </span><span class="nt">knows</span><span class="w"> </span><span class="nt">they</span><span class="w"> </span><span class="nt">they</span><span class="w"> </span><span class="nt">are</span><span class="w"> </span><span class="nt">interactive</span><span class="w"> </span><span class="nt">contetn</span><span class="o">.</span>
+
+<span class="c">/* Container to control the iframe size and scaling */</span>
+<span class="p">.</span><span class="nc">iframe-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">    </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c">/* Iframe styles */</span>
+<span class="w">  </span><span class="nt">iframe</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c">/* if a div with &lt;div class=&quot;upper-alpha&quot;&gt; wraps a list, then number A.B.C.D etc */</span>
+<span class="w">  </span><span class="c">/* this requires that the markdown extension md_in_html is enabled in the mkdocs.yml file */</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">upper-alpha</span><span class="w"> </span><span class="nt">ol</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">upper-alpha</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="c">/* Styling for the Copy Button */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">prompt</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">prompt</span><span class="w"> </span><span class="p">.</span><span class="nc">copy-button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0056d6</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">rem</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="kt">rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">prompt</span><span class="w"> </span><span class="p">.</span><span class="nc">copy-button</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0041a4</span><span class="p">;</span><span class="w"> </span><span class="c">/* Darker blue on hover */</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
 
