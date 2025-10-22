@@ -129,11 +129,12 @@ Students will know they have mastered the material when they can:
 - Create a high-quality report that describes a textbook
 
 ## Technical Requirements
-- **Software/Tools Needed:** GitHub Account, 
-- **Hardware Requirements:** [Minimum specifications if applicable]
-- **Internet Connectivity:** [Required/Recommended/Optional]
+- **Software/Tools Needed:** GitHub Account, Visual Studio Code (VSCode), Generative AI Tool (Anthropic Claude, ChatGPT)
+- **Hardware Requirements:** Local computer should have a minimum of 8GB RAM
+- **Internet Connectivity:** Required
 
-## Glossary Scope
-- **Estimated Number of Terms:** [Provide a range]
-- **Term Categories:** [e.g., "Technical terms", "Domain-specific concepts", "Tools and technologies"]
+## Concept Metrics
+- **Estimated Number of Concepts in Learn:** 150
+- **Concept Categories:** 10
+[Link to Learning Graph](./sims/learning-graph/index.md)
 
