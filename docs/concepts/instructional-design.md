@@ -25,18 +25,41 @@ The foundation of effective instructional design is placing the learner at the c
 <iframe src="../../sims/cognitive-load/main.html" height="650px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
-Cognitive load theory explains how working memory limitations affect learning. Intelligent textbooks should:
+Cognitive Load Theory (CLT) is fundamental to creating effective educational MicroSims. The theory recognizes that our working memory has limited capacity - we can only process a few pieces of information simultaneously.
 
-- **Manage intrinsic load**: Break complex topics into digestible chunks
-- **Reduce extraneous load**: Eliminate unnecessary information and confusing layouts
-- **Optimize germane load**: Support schema formation through meaningful practice and connections
-- **Use progressive disclosure**: Reveal information incrementally rather than overwhelming learners
+This constraint shapes how we should design interactive educational simulations. CLT explains how our design choices affect learning. Intelligent textbooks should contain MicroSims that:
+
+#### Intrinsic Load
+Intrinsic Load is the complexity of the concept or concepts we want the learner to master.
+Good instructional designers know how to break complex topics into digestible chunks and then create a separate MicroSim for each chunk.  Trying to explain too many complex topics together can prevent us from learning.  Our goal should be to add one concept per MicroSim and add features slowly using progressive reveals of additional user elements.  MicroSims excel at managing intrinsic load by focusing on single, well-defined concepts rather than attempting to simulate entire systems.  Each MicroSim targets specific learning objectives without overwhelming the learner.
+
+#### Extraneous Load
+Extraneous Load are any screen elements that don't contribute to learning.
+Extra grid lines on a plot that does not need them is an example of
+extraneous load that can be removed.
+When we design MicroSims our goal is to eliminate unnecessary information and confusing layouts.  We should not add information to a screen that does not help understanding our understanding the core concepts.
+
+#### Germane Load
+Germane Load is the mental effort that contributes to learning.
+Some concepts can be quickly understood, especially if they are
+a small variation of an existing concept.  Other concepts
+are unlike any the student has seen before.  They require
+a great deal of time and effort to understand.
+Support schema formation through meaningful practice and connections
+
+#### Progressive Disclosure
+
+Progressive disclosure is the process of hiding some information
+at the start of a MicroSim.  After the user gets oriented then
+an additional control can show the new complexity.
+Reveal information incrementally rather than overwhelming learners
+with too many graphical elements when a MicroSim starts.
 
 ### Active Learning
 
 Active learning engages students in the learning process through activities that promote analysis, synthesis, and evaluation. In intelligent textbooks, this includes:
 
-- **Interactive simulations**: MicroSims that let learners experiment with concepts
+- **Interactive simulations**: MicroSims that let learners experiment with concepts at their own pace
 - **Practice problems**: Immediate feedback on exercises and quizzes
 - **Reflection prompts**: Questions that encourage metacognition
 - **Application scenarios**: Real-world problems that require applying new knowledge

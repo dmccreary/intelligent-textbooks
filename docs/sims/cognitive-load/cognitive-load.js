@@ -3,7 +3,7 @@
 
 // Canvas dimensions - REQUIRED structure
 let canvasWidth = 800;              // Initial width (responsive)
-let drawHeight = 500;               // Drawing/simulation area height
+let drawHeight = 450;               // Drawing/simulation area height
 let controlHeight = 150;            // Controls area height
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;                    // Margin for visual elements
@@ -59,11 +59,6 @@ function setup() {
 function createControls() {
   let yPos = drawHeight + 15;
   
-  // Intrinsic Load Slider
-  textSize(14);
-  fill('black');
-  noStroke();
-  text('Intrinsic Load:', 20, yPos + 5);
   
   intrinsicSlider = createSlider(0, 100, 40, 5);
   intrinsicSlider.position(sliderLeftMargin, yPos);
@@ -71,18 +66,14 @@ function createControls() {
   intrinsicSlider.input(updateLoads);
   
   // Extraneous Load Slider
-  yPos += 35;
-  text('Extraneous Load:', 20, yPos + 5);
-  
+  yPos += 35;  
   extraneousSlider = createSlider(0, 100, 30, 5);
   extraneousSlider.position(sliderLeftMargin, yPos);
   extraneousSlider.size(canvasWidth - sliderLeftMargin - margin);
   extraneousSlider.input(updateLoads);
   
   // Germane Load Slider
-  yPos += 35;
-  text('Germane Load:', 20, yPos + 5);
-  
+  yPos += 35;  
   germaneSlider = createSlider(0, 100, 20, 5);
   germaneSlider.position(sliderLeftMargin, yPos);
   germaneSlider.size(canvasWidth - sliderLeftMargin - margin);
@@ -94,12 +85,16 @@ function createControls() {
   goodExampleButton.position(20, yPos);
   goodExampleButton.mousePressed(() => loadGoodExample());
   
-  badExampleButton = createButton('Bad Design Example');
+  badExampleButton = createButton('Bad Design Example 1');
   badExampleButton.position(180, yPos);
   badExampleButton.mousePressed(() => loadBadExample());
   
+  badExampleButton = createButton('Bad Design Example 2');
+  badExampleButton.position(340, yPos);
+  badExampleButton.mousePressed(() => loadBadExample2());
+  
   resetButton = createButton('Reset to Default');
-  resetButton.position(340, yPos);
+  resetButton.position(500, yPos);
   resetButton.mousePressed(resetSimulation);
 }
 
@@ -144,6 +139,21 @@ function loadBadExample() {
   animating = true;
 }
 
+function loadBadExample2() {
+  // Bad design: high extraneous, high intrinsic, low germane
+  intrinsicLoad = 50;
+  extraneousLoad = 10;
+  germaneLoad = 60;
+  
+  intrinsicSlider.value(intrinsicLoad);
+  extraneousSlider.value(extraneousLoad);
+  germaneSlider.value(germaneLoad);
+  
+  showingExample = 'bad';
+  targetFill = intrinsicLoad + extraneousLoad + germaneLoad;
+  animating = true;
+}
+
 function resetSimulation() {
   intrinsicLoad = 40;
   extraneousLoad = 30;
@@ -159,9 +169,10 @@ function resetSimulation() {
 }
 
 function draw() {
+  updateCanvasSize();
   // Drawing area (light blue background)
   fill('aliceblue');
-  noStroke();
+  stroke('silver');
   rect(0, 0, width, drawHeight);
   
   // Control area (white background)
@@ -343,7 +354,7 @@ function drawBar(x, y, value, color, label) {
 
 function drawLegend() {
   let legendX = margin + 10;
-  let legendY = drawHeight - 140;
+  let legendY = margin + 320;
   let boxSize = 15;
   let lineHeight = 25;
   
@@ -355,7 +366,7 @@ function drawLegend() {
   noStroke();
   rect(legendX, legendY, boxSize, boxSize);
   fill('black');
-  text('Intrinsic: Inherent complexity', legendX + boxSize + 8, legendY + boxSize/2);
+  text('Intrinsic: Inherent complexity of concept', legendX + boxSize + 8, legendY + boxSize/2);
   
   // Extraneous Load
   legendY += lineHeight;
@@ -363,7 +374,7 @@ function drawLegend() {
   noStroke();
   rect(legendX, legendY, boxSize, boxSize);
   fill('black');
-  text('Extraneous: Poor design', legendX + boxSize + 8, legendY + boxSize/2);
+  text('Extraneous Load: Number of unnessary UI elements', legendX + boxSize + 8, legendY + boxSize/2);
   
   // Germane Load
   legendY += lineHeight;
@@ -371,14 +382,14 @@ function drawLegend() {
   noStroke();
   rect(legendX, legendY, boxSize, boxSize);
   fill('black');
-  text('Germane: Learning processes', legendX + boxSize + 8, legendY + boxSize/2);
+  text('Germane: Similar to known concepts', legendX + boxSize + 8, legendY + boxSize/2);
 }
 
 function drawExampleExplanation() {
-  let panelX = canvasWidth - 280;
-  let panelY = drawHeight - 170;
-  let panelWidth = 260;
-  let panelHeight = 150;
+  let panelX = canvasWidth/2;
+  let panelY = 335;
+  let panelWidth = 300;
+  let panelHeight = 100;
   
   // Adjust for narrow screens
   if (canvasWidth < 700) {
@@ -456,13 +467,13 @@ function drawControlLabels() {
   // Display current values after sliders
   let yPos = drawHeight + 15;
   
-  text(nf(intrinsicLoad, 0, 0) + '%', sliderLeftMargin + intrinsicSlider.width + 10, yPos + 5);
+  text("Intrinsic Load " + nf(intrinsicLoad, 0, 0) + '%', 10, yPos + 5);
   
   yPos += 35;
-  text(nf(extraneousLoad, 0, 0) + '%', sliderLeftMargin + extraneousSlider.width + 10, yPos + 5);
+  text("Extraneous Load " + nf(extraneousLoad, 0, 0) + '%', 10, yPos + 5);
   
   yPos += 35;
-  text(nf(germaneLoad, 0, 0) + '%', sliderLeftMargin + germaneSlider.width + 10, yPos + 5);
+  text("Germane Load " + nf(germaneLoad, 0, 0) + '%', 10, yPos + 5);
 }
 
 function windowResized() {
