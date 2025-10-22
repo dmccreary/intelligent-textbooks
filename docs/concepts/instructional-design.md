@@ -22,6 +22,9 @@ The foundation of effective instructional design is placing the learner at the c
 
 ### Cognitive Load Theory
 
+<iframe src="../../sims/cognitive-load/main.html" height="650px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+
 Cognitive load theory explains how working memory limitations affect learning. Intelligent textbooks should:
 
 - **Manage intrinsic load**: Break complex topics into digestible chunks
@@ -41,6 +44,9 @@ Active learning engages students in the learning process through activities that
 ## Instructional Design Models
 
 ### ADDIE Model
+
+<iframe src="../../sims/addie-workflow/main.html" height="650px" scrolling="no"
+  style="overflow: hidden;"></iframe>
 
 ADDIE (Analysis, Design, Development, Implementation, Evaluation) is the most widely used instructional design framework.
 
@@ -98,6 +104,9 @@ The evaluation phase assesses effectiveness:
 
 ### SAM Model (Successive Approximation Model)
 
+<iframe src="../../sims/sam-process/main.html" height="650px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+
 SAM offers a more agile, iterative approach than ADDIE:
 
 **Preparation Phase**
@@ -124,6 +133,9 @@ SAM works particularly well for intelligent textbooks because it embraces the ag
 
 ### Kemp Design Model
 
+<iframe src="../../sims/kemp-model/main.html" height="650px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+
 The Kemp model is a circular, continuous process that emphasizes flexibility. Key elements include:
 
 - Identifying instructional problems
@@ -149,6 +161,9 @@ Learning objectives should be SMART:
 - **Time-bound**: Specify when mastery should occur
 
 ### Bloom's Taxonomy
+
+<iframe src="../../sims/blooms-taxonomy/main.html" height="600px" scrolling="no"
+  style="overflow: hidden;"></iframe>
 
 Structure objectives using Bloom's revised taxonomy levels:
 

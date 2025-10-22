@@ -1,6 +1,28 @@
+---
+title: "Successive Approximation Model MicroSim"
+description: "Interactive infographic MicroSim of Successive Approximation Model (SAM) used in instructional design."
+image: "/sims/sam-process/sam-process.png"
+og:image: "/sims/sam-process/sam-process.png"
+social:
+   cards: false
+hide:
+  - toc
+---
 # SAM: Successive Approximation Model MicroSim
 
-[Run Fullscreen](./main.html)
+<iframe src="./main.html" height="650px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+
+[Run Fullscreen](./main.html){ .md-button .md-button--primary }
+
+[Edit the SAM MicroSim with the p5.js editor](https://editor.p5js.org/dmccreary/sketches/opmBkr_Nt)
+
+Copy the following line to include this MicroSim in your website:
+
+```html
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/sam-process/main.html" height="650px" scrolling="no"
+  style="overflow: hidden;"></iframe>
+```
 
 ## Overview
 

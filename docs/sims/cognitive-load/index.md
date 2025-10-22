@@ -1,5 +1,7 @@
 # Cognitive Load Visualizer MicroSim
 
+[Run the Cognitive Load MicroSim Full Screen](main.html)
+
 ## Overview
 
 Cognitive Load Theory explains how our working memory has limited capacity and how different types of mental effort affect learning. This interactive MicroSim helps you explore the three types of cognitive load and understand how instructional design choices impact learning effectiveness.
