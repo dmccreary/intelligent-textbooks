@@ -16,5 +16,3 @@ This section is an overview of some of the workflows we use to generate intellig
 ### [Concept Dependency](./concept-dependency.md)
 
 ### [Learning Graph](./learning-graph.md)
-
-### [](.)
