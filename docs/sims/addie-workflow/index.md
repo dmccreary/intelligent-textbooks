@@ -103,10 +103,10 @@ Consider a time when you created educational content without following a systema
 
 ## Related Concepts
 
-- [SAM Model](../sam-model/) - A more agile alternative to ADDIE
-- [Bloom's Taxonomy](../blooms-taxonomy/) - Frameworks for writing learning objectives (used in Analysis and Design phases)
-- [Assessment Design](../assessment-design/) - Creating effective evaluations (Design and Evaluation phases)
-- [Iterative Design](../iterative-design/) - The philosophy behind cycling through phases
+- [SAM Model](../sam-model/index.md) - A more agile alternative to ADDIE
+- [Bloom's Taxonomy](../blooms-taxonomy/index.md) - Frameworks for writing learning objectives (used in Analysis and Design phases)
+- Assessment Design - Creating effective evaluations (Design and Evaluation phases)
+- [Iterative Design (SAM)](../sam-process/index.md) - The philosophy behind cycling through phases
 
 ## Additional Resources
 

@@ -449,10 +449,10 @@ Using the MicroSim:
 
 ## Related Concepts
 
-- [ADDIE Model](../addie-workflow/) - Linear systematic approach
-- [SAM Process](../sam-process/) - Agile iterative approach
-- [Systems Thinking](../systems-thinking/) - Holistic perspective
-- [Instructional Design Fundamentals](../instructional-design/) - Core principles
+- [ADDIE Model](../addie-workflow/index.md) - Linear systematic approach
+- [Agile SAM Process](../sam-process/index.md) - Agile iterative approach
+- [Systems Thinking Textbook](https://dmccreary.github.io/systems-thinking/) - Holistic perspective
+- [Instructional Design Fundamentals](../concepts/instructional-design.md) - Core principles
 
 ## References
 

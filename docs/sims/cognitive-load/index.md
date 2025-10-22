@@ -221,10 +221,10 @@ Consider your own experiences as a learner:
 
 ## Related Concepts
 
-- [Multimedia Learning Principles](../multimedia-principles/) - Applying cognitive load theory to media
-- [Chunking Strategies](../chunking/) - Breaking content into manageable pieces
-- [Scaffolding](../scaffolding/) - Providing support to manage load
-- [Working Memory](../working-memory/) - Understanding the underlying capacity limits
+- Multimedia Learning Principles - Applying cognitive load theory to media
+- Chunking Strategies - Breaking content into manageable pieces
+- Scaffolding - Providing support to manage load
+- Working Memory - Understanding the underlying capacity limits
 
 ## References
 

@@ -349,10 +349,10 @@ Using the MicroSim:
 
 ## Related Concepts
 
-- [ADDIE Model](../addie-workflow/) - Traditional instructional design approach
-- [Agile Development](../agile-development/) - Software development methodology inspiring SAM
-- [Rapid Prototyping](../rapid-prototyping/) - Quick mockup creation
-- [Formative Evaluation](../formative-evaluation/) - Testing during development
+- [ADDIE Model](../addie-workflow/index.md) - Traditional instructional design approach
+- [Agile Development (SAM Process)](../sam-process/index.md) - Software development methodology inspiring SAM
+- Rapid Prototyping - Quick mockup creation
+- Formative Evaluation - Testing during development
 
 ## References
 
