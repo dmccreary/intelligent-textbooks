@@ -19,7 +19,6 @@
   - [Testing](tutorial/testing.md)
   - [Feedback](tutorial/feedback.md)
   - [Logging](tutorial/logging.md)
-  - [Search](tutorial/search.md)
   - [Social](tutorial/social.md)
   - [Open Graph](tutorial/open-graph.md)
   - [Google Analytics](tutorial/google-analytics.md)
@@ -77,7 +76,7 @@
   - [Templates](sims/templates/index.md)
 
 ## **Case Studies**
-  - [Intro](case-studies)
+  - [Intro](case-studies/index.md)
 
 ## Formatting Tests
   - [Introduction](formatting-tests/index.md)
@@ -90,7 +89,7 @@
   - [Social Media Override Preview](formatting-tests/social-test-2.md)
 
 ## End Matter
-- [Feedback](feedback/index.md)
+- [Feedback](feedback.md)
 - [Glossary](glossary.md)
 - [License](license.md)
 - [FAQ](faq.md)

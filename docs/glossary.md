@@ -23,7 +23,6 @@ in the ```docs``` directory change.  On GitHub, a GitHub action can be configure
 A process that regenerates and/or redeploys the documentation automatically whenever changes are made to source files, typically triggered by a continuous integration (CI) tool or build server.
 *Ensures that documentation is always up-to-date without manual intervention.*
 
-
 #### Code Highlighting
 
 The process of rendering source code with visually distinct styles to enhance readability and comprehension.
@@ -263,7 +262,7 @@ way to find similar documents.
 
 A retrieval method that interprets the contextual meaning of search terms to improve the relevance of search results.
 
-Intelligent textbooks frequently create [embeddings](#embeddings) for words, phrases, paragraphs and pages so you can quickly find similar content.
+Intelligent textbooks frequently create [embeddings](#embedding) for words, phrases, paragraphs and pages so you can quickly find similar content.
 
 #### Social Media Previews
 
