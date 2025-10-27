@@ -1,6 +1,22 @@
+---
+title: "Cognitive Load Visualizer MicroSims"
+description: "Interactive infographic MicroSim of the factors that fill working memory"
+image: /sims/cognitive-load/cognitive-load.png
+og:image: /sims/cognitive-load/cognitive-load.png
+social:
+   cards: false
+hide:
+  - toc
+---
 # Cognitive Load Visualizer MicroSim
 
+<iframe src="./main.html" height="550px" 
+   scrolling="no" style="overflow: hidden;">
+</iframe>
+
 [Run the Cognitive Load MicroSim Full Screen](main.html)
+<br/>
+[Edit on P5.js](https://editor.p5js.org/dmccreary/sketches/ueWljgjNV)
 
 ## Overview
 
