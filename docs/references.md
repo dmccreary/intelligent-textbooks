@@ -1,8 +1,12 @@
 # References
 
-## 
+## Classification
 
 [Concepts for Classification of Adaptive Instructional Systems](https://ieeexplore.ieee.org/abstract/document/10127601)
+
+## Google Research
+
+[Towards an AI-Augmented Textbook](https://services.google.com/fh/files/misc/ai_augmented_textbook.pdf) - 2025-10-01 - From the Google LearnX group. 
 
 ## IEEE Total Learning Architecture References
 
