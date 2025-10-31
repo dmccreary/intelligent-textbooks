@@ -1815,12 +1815,14 @@
 <h2 id="summary">Summary</h2>
 <p>This skill validates that all concepts in the learning graph are properly integrated throughout the textbook, checking for coverage in chapters, glossary definitions, quiz questions, and MicroSims, while identifying gaps and ensuring pedagogical consistency across the entire educational resource.</p>
 <h2 id="order">Order</h2>
-<p>This skill should be executed:
-1. After learning graph is complete
-2. After initial chapter content generation
-3. Before glossary finalization
-4. Periodically during content development (every 10-15 chapters)
-5. As final validation before publication</p>
+<p>This skill should be executed:</p>
+<ol>
+<li>After learning graph is complete</li>
+<li>After initial chapter content generation</li>
+<li>Before glossary finalization</li>
+<li>Periodically during content development (every 10-15 chapters)</li>
+<li>As final validation before publication</li>
+</ol>
 <p>The validator cross-references all textbook components, so it requires the learning graph and at least some content to be meaningful. It's most valuable as a quality gate at key milestones.</p>
 <h2 id="inputs">Inputs</h2>
 <h3 id="primary-input-files">Primary Input Files</h3>
@@ -1891,12 +1893,14 @@
 - 70-89: Most inputs present, some concepts have limited coverage
 - 50-69: Basic inputs present, many concepts lack comprehensive coverage
 - Below 50: Critical inputs missing or insufficient content</p>
-<p><strong>Pre-Validation Checks:</strong>
-1. Learning graph validity (required: no cycles)
-2. Minimum content threshold (recommended: 50+ markdown files)
-3. Glossary exists (recommended)
-4. At least 1 quiz (recommended)
-5. At least 1 MicroSim (recommended)</p>
+<p><strong>Pre-Validation Checks:</strong></p>
+<ol>
+<li>Learning graph validity (required: no cycles)</li>
+<li>Minimum content threshold (recommended: 50+ markdown files)</li>
+<li>Glossary exists (recommended)</li>
+<li>At least 1 quiz (recommended)</li>
+<li>At least 1 MicroSim (recommended)</li>
+</ol>
 <p><strong>User Dialog Triggers:</strong>
 - Score &lt; 50: "Insufficient content for meaningful validation. Minimum requirements not met. Continue with limited validation?"
 - No glossary: "No glossary found. Concept definition validation will be skipped. Proceed?"
@@ -2061,63 +2065,83 @@
 <li><strong>Critical Gap (&lt;40)</strong>: Major deficiency, immediate attention required</li>
 </ul>
 <h3 id="validation-checks-performed">Validation Checks Performed</h3>
-<p><strong>1. Coverage Validation:</strong>
-- ✓ Every concept from learning graph mentioned in at least one chapter
-- ✓ Every concept has glossary definition
-- ✓ Core concepts (high centrality in graph) tested in quizzes
-- ✓ Complex concepts have MicroSim demonstrations
-- ✓ Difficult concepts addressed in FAQ</p>
-<p><strong>2. Scaffolding Validation:</strong>
-- ✓ Prerequisite concepts always introduced before dependent concepts
-- ✓ No circular dependencies in presentation order
-- ✓ Concept density appropriate (not too many new concepts per chapter)
-- ✓ Forward references include links to upcoming content
-- ✓ Review of prerequisites at chapter beginnings</p>
-<p><strong>3. Consistency Validation:</strong>
-- ✓ Concept labels match exactly across all components
-- ✓ Definitions align between glossary and chapter explanations
-- ✓ Examples don't contradict each other
-- ✓ Terminology usage consistent
-- ✓ No concept presented with conflicting difficulty levels</p>
-<p><strong>4. Quality Validation:</strong>
-- ✓ Glossary definitions meet ISO 11179 standards
-- ✓ Chapter explanations appropriate depth for concept importance
-- ✓ Quiz questions at right Bloom's level for concept
-- ✓ MicroSims effectively demonstrate concept
-- ✓ Examples clear and relevant</p>
-<p><strong>5. Integration Validation:</strong>
-- ✓ Cross-references between components exist
-- ✓ Glossary terms linked from chapters
-- ✓ Quiz questions reference chapter sections
-- ✓ MicroSims embedded in relevant chapters
-- ✓ FAQ answers link to detailed explanations</p>
-<p><strong>6. Accessibility Validation:</strong>
-- ✓ Multiple learning pathways to each concept
-- ✓ Varied presentation styles (visual, textual, interactive)
-- ✓ Support materials for difficult concepts
-- ✓ Alternative explanations available
-- ✓ Practice opportunities for key concepts</p>
+<p><strong>1. Coverage Validation:</strong></p>
+<ul>
+<li>✓ Every concept from learning graph mentioned in at least one chapter</li>
+<li>✓ Every concept has glossary definition</li>
+<li>✓ Core concepts (high centrality in graph) tested in quizzes</li>
+<li>✓ Complex concepts have MicroSim demonstrations</li>
+<li>✓ Difficult concepts addressed in FAQ</li>
+</ul>
+<p><strong>2. Scaffolding Validation:</strong></p>
+<ul>
+<li>✓ Prerequisite concepts always introduced before dependent concepts</li>
+<li>✓ No circular dependencies in presentation order</li>
+<li>✓ Concept density appropriate (not too many new concepts per chapter)</li>
+<li>✓ Forward references include links to upcoming content</li>
+<li>✓ Review of prerequisites at chapter beginnings</li>
+</ul>
+<p><strong>3. Consistency Validation:</strong></p>
+<ul>
+<li>✓ Concept labels match exactly across all components</li>
+<li>✓ Definitions align between glossary and chapter explanations</li>
+<li>✓ Examples don't contradict each other</li>
+<li>✓ Terminology usage consistent</li>
+<li>✓ No concept presented with conflicting difficulty levels</li>
+</ul>
+<p><strong>4. Quality Validation:</strong></p>
+<ul>
+<li>✓ Glossary definitions meet ISO 11179 standards</li>
+<li>✓ Chapter explanations appropriate depth for concept importance</li>
+<li>✓ Quiz questions at right Bloom's level for concept</li>
+<li>✓ MicroSims effectively demonstrate concept</li>
+<li>✓ Examples clear and relevant</li>
+</ul>
+<p><strong>5. Integration Validation:</strong></p>
+<ul>
+<li>✓ Cross-references between components exist</li>
+<li>✓ Glossary terms linked from chapters</li>
+<li>✓ Quiz questions reference chapter sections</li>
+<li>✓ MicroSims embedded in relevant chapters</li>
+<li>✓ FAQ answers link to detailed explanations</li>
+</ul>
+<p><strong>6. Accessibility Validation:</strong></p>
+<ul>
+<li>✓ Multiple learning pathways to each concept</li>
+<li>✓ Varied presentation styles (visual, textual, interactive)</li>
+<li>✓ Support materials for difficult concepts</li>
+<li>✓ Alternative explanations available</li>
+<li>✓ Practice opportunities for key concepts</li>
+</ul>
 <h3 id="gap-analysis-categories">Gap Analysis Categories</h3>
-<p><strong>Critical Gaps (Immediate Action Required):</strong>
-1. <strong>Orphaned concepts</strong>: In learning graph but not in any chapter
-2. <strong>Undefined concepts</strong>: No glossary definition
-3. <strong>Prerequisite violations</strong>: Concept before its prerequisites
-4. <strong>Circular dependencies</strong>: Concepts depending on each other</p>
-<p><strong>High Priority Gaps:</strong>
-1. <strong>Untested core concepts</strong>: Important concepts without quiz questions
-2. <strong>Unexplained concepts</strong>: Mentioned but not explained
-3. <strong>Missing examples</strong>: Abstract concepts without concrete examples
-4. <strong>Inconsistent terminology</strong>: Same concept with different labels</p>
-<p><strong>Medium Priority Gaps:</strong>
-1. <strong>Limited interactivity</strong>: Complex concepts without MicroSims
-2. <strong>Single modality</strong>: Concepts only explained one way
-3. <strong>Weak definitions</strong>: Glossary entries not meeting ISO standards
-4. <strong>Missing cross-references</strong>: Isolated content without links</p>
-<p><strong>Enhancement Opportunities:</strong>
-1. <strong>Add alternative explanations</strong>: Multiple approaches to difficult topics
-2. <strong>Increase quiz coverage</strong>: More assessment for better learning
-3. <strong>Create MicroSims</strong>: Interactive demonstrations for abstract concepts
-4. <strong>Expand examples</strong>: More diverse, real-world examples</p>
+<p><strong>Critical Gaps (Immediate Action Required):</strong></p>
+<ol>
+<li><strong>Orphaned concepts</strong>: In learning graph but not in any chapter</li>
+<li><strong>Undefined concepts</strong>: No glossary definition</li>
+<li><strong>Prerequisite violations</strong>: Concept before its prerequisites</li>
+<li><strong>Circular dependencies</strong>: Concepts depending on each other</li>
+</ol>
+<p><strong>High Priority Gaps:</strong></p>
+<ol>
+<li><strong>Untested core concepts</strong>: Important concepts without quiz questions</li>
+<li><strong>Unexplained concepts</strong>: Mentioned but not explained</li>
+<li><strong>Missing examples</strong>: Abstract concepts without concrete examples</li>
+<li><strong>Inconsistent terminology</strong>: Same concept with different labels</li>
+</ol>
+<p><strong>Medium Priority Gaps:</strong></p>
+<ol>
+<li><strong>Limited interactivity</strong>: Complex concepts without MicroSims</li>
+<li><strong>Single modality</strong>: Concepts only explained one way</li>
+<li><strong>Weak definitions</strong>: Glossary entries not meeting ISO standards</li>
+<li><strong>Missing cross-references</strong>: Isolated content without links</li>
+</ol>
+<p><strong>Enhancement Opportunities:</strong></p>
+<ol>
+<li><strong>Add alternative explanations</strong>: Multiple approaches to difficult topics</li>
+<li><strong>Increase quiz coverage</strong>: More assessment for better learning</li>
+<li><strong>Create MicroSims</strong>: Interactive demonstrations for abstract concepts</li>
+<li><strong>Expand examples</strong>: More diverse, real-world examples</li>
+</ol>
 <h3 id="detailed-reports">Detailed Reports</h3>
 <p><strong>Per-Concept Analysis:</strong></p>
 <p>For each concept, the report includes:</p>
@@ -2174,48 +2198,62 @@
 <span class="gs">**Priority**</span>: Medium
 </code></pre></div></td></tr></table></div>
 <h3 id="trend-analysis-if-historical-data-available">Trend Analysis (if historical data available)</h3>
-<p>Tracks improvement over time:
-- Overall health score trajectory
-- Gap reduction rate
-- Coverage improvements by category
-- Component completion progress
-- Concept integration velocity</p>
+<p>Tracks improvement over time:</p>
+<ul>
+<li>Overall health score trajectory</li>
+<li>Gap reduction rate</li>
+<li>Coverage improvements by category</li>
+<li>Component completion progress</li>
+<li>Concept integration velocity</li>
+</ul>
 <h3 id="success-criteria">Success Criteria</h3>
-<p><strong>Publication Ready Thresholds:</strong>
-- Overall health score &gt; 75
-- No critical gaps
-- &lt;10% concepts with insufficient coverage (&lt;40)
-- 100% prerequisite compliance
-- 90%+ glossary coverage
-- 70%+ quiz coverage for core concepts
-- 30%+ concepts with MicroSims
-- Terminology consistency &gt; 95%</p>
-<p><strong>Quality Gates:</strong>
-- <strong>Alpha release</strong>: Health score &gt; 60, no critical gaps
-- <strong>Beta release</strong>: Health score &gt; 70, &lt;5% insufficient concepts
-- <strong>Production release</strong>: Health score &gt; 75, all criteria above</p>
+<p><strong>Publication Ready Thresholds:</strong></p>
+<ul>
+<li>Overall health score &gt; 75</li>
+<li>No critical gaps</li>
+<li>&lt;10% concepts with insufficient coverage (&lt;40)</li>
+<li>100% prerequisite compliance</li>
+<li>90%+ glossary coverage</li>
+<li>70%+ quiz coverage for core concepts</li>
+<li>30%+ concepts with MicroSims</li>
+<li>Terminology consistency &gt; 95%</li>
+</ul>
+<p><strong>Quality Gates:</strong></p>
+<ul>
+<li><strong>Alpha release</strong>: Health score &gt; 60, no critical gaps</li>
+<li><strong>Beta release</strong>: Health score &gt; 70, &lt;5% insufficient concepts</li>
+<li><strong>Production release</strong>: Health score &gt; 75, all criteria above</li>
+</ul>
 <h3 id="remediation-planning">Remediation Planning</h3>
 <p>The validator generates prioritized action items:</p>
-<p><strong>Phase 1 - Critical Fixes (Week 1):</strong>
-1. Add missing concepts to chapters
-2. Create glossary definitions for undefined concepts
-3. Fix prerequisite violations
-4. Resolve circular dependencies</p>
-<p><strong>Phase 2 - High Priority (Weeks 2-3):</strong>
-1. Add quiz questions for untested core concepts
-2. Expand brief concept explanations
-3. Create examples for abstract concepts
-4. Standardize inconsistent terminology</p>
-<p><strong>Phase 3 - Medium Priority (Weeks 4-6):</strong>
-1. Develop MicroSims for complex concepts
-2. Add FAQ entries for difficult topics
-3. Create cross-references between components
-4. Enhance weak glossary definitions</p>
-<p><strong>Phase 4 - Enhancements (Ongoing):</strong>
-1. Add alternative explanations
-2. Increase quiz coverage
-3. Create more MicroSims
-4. Expand example variety</p>
+<p><strong>Phase 1 - Critical Fixes (Week 1):</strong></p>
+<ol>
+<li>Add missing concepts to chapters</li>
+<li>Create glossary definitions for undefined concepts</li>
+<li>Fix prerequisite violations</li>
+<li>Resolve circular dependencies</li>
+</ol>
+<p><strong>Phase 2 - High Priority (Weeks 2-3):</strong></p>
+<ol>
+<li>Add quiz questions for untested core concepts</li>
+<li>Expand brief concept explanations</li>
+<li>Create examples for abstract concepts</li>
+<li>Standardize inconsistent terminology</li>
+</ol>
+<p><strong>Phase 3 - Medium Priority (Weeks 4-6):</strong></p>
+<ol>
+<li>Develop MicroSims for complex concepts</li>
+<li>Add FAQ entries for difficult topics</li>
+<li>Create cross-references between components</li>
+<li>Enhance weak glossary definitions</li>
+</ol>
+<p><strong>Phase 4 - Enhancements (Ongoing):</strong></p>
+<ol>
+<li>Add alternative explanations</li>
+<li>Increase quiz coverage</li>
+<li>Create more MicroSims</li>
+<li>Expand example variety</li>
+</ol>
 <h3 id="additional-outputs">Additional Outputs</h3>
 <ol>
 <li><strong><code>docs/learning-graph/concept-importance-analysis.md</code></strong></li>
@@ -2248,25 +2286,33 @@
 <li>Clickable nodes showing detailed coverage info</li>
 </ol>
 <h2 id="configuration-options">Configuration Options</h2>
-<p><strong>Validation Depth:</strong>
-- Quick scan (coverage check only)
-- Standard validation (coverage + scaffolding + consistency)
-- Deep validation (all checks + quality assessment)</p>
-<p><strong>Reporting Detail:</strong>
-- Summary only (executive overview)
-- Standard (summary + gap list)
-- Detailed (per-concept analysis)
-- Comprehensive (all reports + visualizations)</p>
-<p><strong>Scope:</strong>
-- All concepts (complete validation)
-- Critical concepts only (fast check)
-- Changed concepts (incremental validation)
-- Specific category (targeted validation)</p>
-<p><strong>Thresholds:</strong>
-- Strict (publication-ready standards)
-- Standard (recommended thresholds)
-- Lenient (early development)
-- Custom (user-defined thresholds)</p>
+<p><strong>Validation Depth:</strong></p>
+<ul>
+<li>Quick scan (coverage check only)</li>
+<li>Standard validation (coverage + scaffolding + consistency)</li>
+<li>Deep validation (all checks + quality assessment)</li>
+</ul>
+<p><strong>Reporting Detail:</strong></p>
+<ul>
+<li>Summary only (executive overview)</li>
+<li>Standard (summary + gap list)</li>
+<li>Detailed (per-concept analysis)</li>
+<li>Comprehensive (all reports + visualizations)</li>
+</ul>
+<p><strong>Scope:</strong></p>
+<ul>
+<li>All concepts (complete validation)</li>
+<li>Critical concepts only (fast check)</li>
+<li>Changed concepts (incremental validation)</li>
+<li>Specific category (targeted validation)</li>
+</ul>
+<p><strong>Thresholds:</strong></p>
+<ul>
+<li>Strict (publication-ready standards)</li>
+<li>Standard (recommended thresholds)</li>
+<li>Lenient (early development)</li>
+<li>Custom (user-defined thresholds)</li>
+</ul>
 
 
 

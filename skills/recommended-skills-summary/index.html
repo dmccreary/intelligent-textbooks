@@ -1814,17 +1814,21 @@
 <h1 id="recommended-claude-skills-for-intelligent-textbooks">Recommended Claude Skills for Intelligent Textbooks</h1>
 <p>Based on analysis of the intelligent-textbooks repository workflows and content patterns, here are the recommended Claude Skills to complement your existing MicroSim and Learning Graph skills.</p>
 <h2 id="overview">Overview</h2>
-<p>You currently have:
-1. ✅ <strong>MicroSim P5</strong> - Creates interactive p5.js simulations
-2. ✅ <strong>Learning Graph</strong> - Generates concept dependency graphs</p>
-<p>Recommended additions:
-3. <strong>Glossary Generator</strong> - Automated glossary creation from concepts
-4. <strong>FAQ Generator</strong> - Creates comprehensive FAQ from content
-5. <strong>Chapter Content Generator</strong> - Generates complete chapter content with scaffolding
-6. <strong>Quiz Generator</strong> - Creates assessments aligned to Bloom's Taxonomy
-7. <strong>Quality Metrics Analyzer</strong> - Comprehensive textbook quality analysis
-8. <strong>Social Media Generator</strong> - Creates social cards and promotional content
-9. <strong>Concept Validator</strong> - Validates concept integration across all components</p>
+<p>You currently have:</p>
+<ol>
+<li>✅ <strong>MicroSim P5</strong> - Creates interactive p5.js simulations</li>
+<li>✅ <strong>Learning Graph</strong> - Generates concept dependency graphs</li>
+</ol>
+<p>Recommended additions:</p>
+<ol>
+<li><strong>Glossary Generator</strong> - Automated glossary creation from concepts</li>
+<li><strong>FAQ Generator</strong> - Creates comprehensive FAQ from content</li>
+<li><strong>Chapter Content Generator</strong> - Generates complete chapter content with scaffolding</li>
+<li><strong>Quiz Generator</strong> - Creates assessments aligned to Bloom's Taxonomy</li>
+<li><strong>Quality Metrics Analyzer</strong> - Comprehensive textbook quality analysis</li>
+<li><strong>Social Media Generator</strong> - Creates social cards and promotional content</li>
+<li><strong>Concept Validator</strong> - Validates concept integration across all components</li>
+</ol>
 <h2 id="recommended-execution-order">Recommended Execution Order</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1863,21 +1867,31 @@
     style J fill:#87CEEB
 </code></pre></div></td></tr></table></div>
 <h3 id="workflow-phases">Workflow Phases</h3>
-<p><strong>Phase 1: Foundation (Existing)</strong>
-- Course Description created manually
-- Learning Graph Skill generates concept structure
-- MicroSim P5 Skill creates interactive simulations (ongoing)</p>
-<p><strong>Phase 2: Content Generation (New Skills)</strong>
-1. <strong>Glossary Generator</strong> - Run after learning graph finalized
-2. <strong>Chapter Content Generator</strong> - Run after chapter structure defined
-3. <strong>FAQ Generator</strong> - Run after chapters written</p>
-<p><strong>Phase 3: Assessment (New Skill)</strong>
-4. <strong>Quiz Generator</strong> - Run after each chapter or in batch</p>
-<p><strong>Phase 4: Validation (New Skill)</strong>
-5. <strong>Concept Validator</strong> - Run at milestones (every 10 chapters, before release)</p>
-<p><strong>Phase 5: Quality &amp; Promotion (New Skills)</strong>
-6. <strong>Quality Metrics Analyzer</strong> - Run before release and periodically
-7. <strong>Social Media Generator</strong> - Run when ready to promote</p>
+<p><strong>Phase 1: Foundation (Existing)</strong></p>
+<ul>
+<li>Course Description created manually</li>
+<li>Learning Graph Skill generates concept structure</li>
+<li>MicroSim P5 Skill creates interactive simulations (ongoing)</li>
+</ul>
+<p><strong>Phase 2: Content Generation (New Skills)</strong></p>
+<ol>
+<li><strong>Glossary Generator</strong> - Run after learning graph finalized</li>
+<li><strong>Chapter Content Generator</strong> - Run after chapter structure defined</li>
+<li><strong>FAQ Generator</strong> - Run after chapters written</li>
+</ol>
+<p><strong>Phase 3: Assessment (New Skill)</strong></p>
+<ol>
+<li><strong>Quiz Generator</strong> - Run after each chapter or in batch</li>
+</ol>
+<p><strong>Phase 4: Validation (New Skill)</strong></p>
+<ol>
+<li><strong>Concept Validator</strong> - Run at milestones (every 10 chapters, before release)</li>
+</ol>
+<p><strong>Phase 5: Quality &amp; Promotion (New Skills)</strong></p>
+<ol>
+<li><strong>Quality Metrics Analyzer</strong> - Run before release and periodically</li>
+<li><strong>Social Media Generator</strong> - Run when ready to promote</li>
+</ol>
 <h2 id="skill-comparison-matrix">Skill Comparison Matrix</h2>
 <table>
 <thead>
@@ -1958,21 +1972,29 @@
 <h2 id="detailed-skill-summaries">Detailed Skill Summaries</h2>
 <h3 id="1-glossary-generator-high-priority">1. Glossary Generator ⭐⭐⭐ (High Priority)</h3>
 <p><strong>Purpose</strong>: Converts learning graph concepts into ISO 11179-compliant glossary definitions</p>
-<p><strong>Key Features</strong>:
-- Generates precise, concise, non-circular definitions
-- Includes relevant examples for context
-- Alphabetically organized
-- Quality scoring for each definition</p>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Generates precise, concise, non-circular definitions</li>
+<li>Includes relevant examples for context</li>
+<li>Alphabetically organized</li>
+<li>Quality scoring for each definition</li>
+</ul>
 <p><strong>When to Use</strong>: After learning graph concept list is finalized and reviewed</p>
-<p><strong>Inputs</strong>:
-- Learning graph concept list (02-concept-list-v1.md)
-- Course description for context</p>
-<p><strong>Outputs</strong>:
-- docs/glossary.md (complete glossary)
-- Quality report assessing definition compliance</p>
-<p><strong>Quality Metrics</strong>:
-- Input: Concept uniqueness (100%), Title Case formatting (95%+), length &lt;32 chars (98%+)
-- Output: ISO compliance (4 criteria × 25 pts), readability, example coverage (60-80%)</p>
+<p><strong>Inputs</strong>:</p>
+<ul>
+<li>Learning graph concept list (02-concept-list-v1.md)</li>
+<li>Course description for context</li>
+</ul>
+<p><strong>Outputs</strong>:</p>
+<ul>
+<li>docs/glossary.md (complete glossary)</li>
+<li>Quality report assessing definition compliance</li>
+</ul>
+<p><strong>Quality Metrics</strong>:</p>
+<ul>
+<li>Input: Concept uniqueness (100%), Title Case formatting (95%+), length &lt;32 chars (98%+)</li>
+<li>Output: ISO compliance (4 criteria × 25 pts), readability, example coverage (60-80%)</li>
+</ul>
 <p><strong>Success Score</strong>: &gt;85/100 (no circular definitions, all concepts included)</p>
 <hr />
 <h3 id="2-faq-generator-high-priority">2. FAQ Generator ⭐⭐⭐ (High Priority)</h3>
@@ -2143,72 +2165,100 @@
 <hr />
 <h2 id="implementation-recommendations">Implementation Recommendations</h2>
 <h3 id="priority-ranking">Priority Ranking</h3>
-<p><strong>Must Have (Build First)</strong>:
-1. <strong>Chapter Content Generator</strong> - Core content creation
-2. <strong>Concept Validator</strong> - Quality assurance critical path
-3. <strong>Quality Metrics Analyzer</strong> - Comprehensive quality gate</p>
-<p><strong>Should Have (Build Next)</strong>:
-4. <strong>Glossary Generator</strong> - Essential reference, fast ROI
-5. <strong>FAQ Generator</strong> - Student support + chatbot prep
-6. <strong>Quiz Generator</strong> - Assessment fundamental</p>
-<p><strong>Nice to Have (Build Later)</strong>:
-7. <strong>Social Media Generator</strong> - Marketing/promotion phase</p>
+<p><strong>Must Have (Build First)</strong>:</p>
+<ol>
+<li><strong>Chapter Content Generator</strong> - Core content creation</li>
+<li><strong>Concept Validator</strong> - Quality assurance critical path</li>
+<li><strong>Quality Metrics Analyzer</strong> - Comprehensive quality gate</li>
+</ol>
+<p><strong>Should Have (Build Next)</strong>:</p>
+<ol>
+<li><strong>Glossary Generator</strong> - Essential reference, fast ROI</li>
+<li><strong>FAQ Generator</strong> - Student support + chatbot prep</li>
+<li><strong>Quiz Generator</strong> - Assessment fundamental</li>
+</ol>
+<p><strong>Nice to Have (Build Later)</strong>:</p>
+<ol>
+<li><strong>Social Media Generator</strong> - Marketing/promotion phase</li>
+</ol>
 <h3 id="build-order-recommendation">Build Order Recommendation</h3>
-<p><strong>Iteration 1</strong> (Weeks 1-2):
-1. Glossary Generator (simplest, high value)
-2. Concept Validator (validates everything, useful immediately)</p>
-<p><strong>Iteration 2</strong> (Weeks 3-4):
-3. Chapter Content Generator (most complex, highest impact)
-4. Quiz Generator (complements chapters)</p>
-<p><strong>Iteration 3</strong> (Weeks 5-6):
-5. FAQ Generator (leverages existing content)
-6. Quality Metrics Analyzer (comprehensive validation)</p>
-<p><strong>Iteration 4</strong> (Week 7):
-7. Social Media Generator (polish for launch)</p>
+<p><strong>Iteration 1</strong> (Weeks 1-2):</p>
+<ol>
+<li>Glossary Generator (simplest, high value)</li>
+<li>Concept Validator (validates everything, useful immediately)</li>
+</ol>
+<p><strong>Iteration 2</strong> (Weeks 3-4):</p>
+<ol>
+<li>Chapter Content Generator (most complex, highest impact)</li>
+<li>Quiz Generator (complements chapters)</li>
+</ol>
+<p><strong>Iteration 3</strong> (Weeks 5-6):</p>
+<ol>
+<li>FAQ Generator (leverages existing content)</li>
+<li>Quality Metrics Analyzer (comprehensive validation)</li>
+</ol>
+<p><strong>Iteration 4</strong> (Week 7):</p>
+<ol>
+<li>Social Media Generator (polish for launch)</li>
+</ol>
 <h3 id="integration-strategy">Integration Strategy</h3>
-<p><strong>Skill Chaining</strong>:
-- Learning Graph → Glossary Generator (automatic handoff)
-- Chapter Generator → Quiz Generator (automatic quiz creation)
-- All skills → Concept Validator (continuous validation)
-- Concept Validator → Quality Metrics (comprehensive report)</p>
-<p><strong>Automation Opportunities</strong>:
-1. After Learning Graph finalized → Auto-run Glossary Generator
-2. After each chapter generated → Auto-run Quiz Generator
-3. Every 5 chapters → Auto-run Concept Validator
-4. Before deployment → Auto-run Quality Metrics Analyzer</p>
-<p><strong>Quality Gates</strong>:
-- <strong>Gate 1</strong>: Concept Validator health score &gt;60 (Alpha)
-- <strong>Gate 2</strong>: Quality Metrics score &gt;70 (Beta)
-- <strong>Gate 3</strong>: Both scores &gt;75 + Social Media ready (Production)</p>
+<p><strong>Skill Chaining</strong>:</p>
+<ul>
+<li>Learning Graph → Glossary Generator (automatic handoff)</li>
+<li>Chapter Generator → Quiz Generator (automatic quiz creation)</li>
+<li>All skills → Concept Validator (continuous validation)</li>
+<li>Concept Validator → Quality Metrics (comprehensive report)</li>
+</ul>
+<p><strong>Automation Opportunities</strong>:</p>
+<ol>
+<li>After Learning Graph finalized → Auto-run Glossary Generator</li>
+<li>After each chapter generated → Auto-run Quiz Generator</li>
+<li>Every 5 chapters → Auto-run Concept Validator</li>
+<li>Before deployment → Auto-run Quality Metrics Analyzer</li>
+</ol>
+<p><strong>Quality Gates</strong>:</p>
+<ul>
+<li><strong>Gate 1</strong>: Concept Validator health score &gt;60 (Alpha)</li>
+<li><strong>Gate 2</strong>: Quality Metrics score &gt;70 (Beta)</li>
+<li><strong>Gate 3</strong>: Both scores &gt;75 + Social Media ready (Production)</li>
+</ul>
 <h2 id="expected-time-savings">Expected Time Savings</h2>
-<p><strong>Without Skills</strong> (Manual work):
-- Glossary (200 terms): ~8-10 hours
-- FAQ (40 questions): ~6-8 hours
-- Chapters (20 chapters): ~40-60 hours
-- Quizzes (20 chapters × 10 questions): ~20-30 hours
-- Quality analysis: ~4-6 hours
-- Social media (30 posts + cards): ~8-12 hours
-- <strong>Total: 86-126 hours</strong></p>
-<p><strong>With Skills</strong> (AI-assisted):
-- Glossary: ~30 minutes (review + refinement)
-- FAQ: ~1 hour (review + refinement)
-- Chapters: ~15-20 hours (review + refinement)
-- Quizzes: ~5 hours (review + refinement)
-- Quality analysis: ~1 hour (review)
-- Social media: ~2 hours (review + customization)
-- <strong>Total: 24-30 hours</strong></p>
+<p><strong>Without Skills</strong> (Manual work):</p>
+<ul>
+<li>Glossary (200 terms): ~8-10 hours</li>
+<li>FAQ (40 questions): ~6-8 hours</li>
+<li>Chapters (20 chapters): ~40-60 hours</li>
+<li>Quizzes (20 chapters × 10 questions): ~20-30 hours</li>
+<li>Quality analysis: ~4-6 hours</li>
+<li>Social media (30 posts + cards): ~8-12 hours</li>
+<li><strong>Total: 86-126 hours</strong></li>
+</ul>
+<p><strong>With Skills</strong> (AI-assisted):</p>
+<ul>
+<li>Glossary: ~30 minutes (review + refinement)</li>
+<li>FAQ: ~1 hour (review + refinement)</li>
+<li>Chapters: ~15-20 hours (review + refinement)</li>
+<li>Quizzes: ~5 hours (review + refinement)</li>
+<li>Quality analysis: ~1 hour (review)</li>
+<li>Social media: ~2 hours (review + customization)</li>
+<li><strong>Total: 24-30 hours</strong></li>
+</ul>
 <p><strong>Time Savings: 60-95 hours (70-75% reduction)</strong></p>
 <h2 id="quality-improvement">Quality Improvement</h2>
-<p><strong>Consistency Benefits</strong>:
-- 100% prerequisite compliance (vs. ~80-90% manual)
-- ISO 11179 glossary standards (vs. informal definitions)
-- Balanced Bloom's Taxonomy (vs. memorization-heavy)
-- Comprehensive coverage validation (vs. spot checks)</p>
-<p><strong>New Capabilities</strong>:
-- Automated gap detection (not feasible manually)
-- Trend analysis across textbook versions
-- Systematic quality metrics (objective scoring)
-- Integration validation (cross-component checking)</p>
+<p><strong>Consistency Benefits</strong>:</p>
+<ul>
+<li>100% prerequisite compliance (vs. ~80-90% manual)</li>
+<li>ISO 11179 glossary standards (vs. informal definitions)</li>
+<li>Balanced Bloom's Taxonomy (vs. memorization-heavy)</li>
+<li>Comprehensive coverage validation (vs. spot checks)</li>
+</ul>
+<p><strong>New Capabilities</strong>:</p>
+<ul>
+<li>Automated gap detection (not feasible manually)</li>
+<li>Trend analysis across textbook versions</li>
+<li>Systematic quality metrics (objective scoring)</li>
+<li>Integration validation (cross-component checking)</li>
+</ul>
 <h2 id="next-steps">Next Steps</h2>
 <ol>
 <li><strong>Review</strong>: Examine each skill specification in detail</li>
@@ -2220,14 +2270,16 @@
 </ol>
 <hr />
 <h2 id="skill-files-created">Skill Files Created</h2>
-<p>All detailed specifications available in:
-- <a href="../glossary-generator/">Glossary Generator</a>
-- <a href="../faq-generator/">FAQ Generator</a>
-- <a href="../chapter-generator/">Chapter Content Generator</a>
-- <a href="../quiz-generator/">Quiz Generator</a>
-- <a href="../quality-metrics-analyzer/">Quality Metrics Analyzer</a>
-- <a href="../social-media-generator/">Social Media Generator</a>
-- <a href="../concept-validator/">Concept Validator</a></p>
+<p>All detailed specifications available in:</p>
+<ul>
+<li><a href="../glossary-generator/">Glossary Generator</a></li>
+<li><a href="../faq-generator/">FAQ Generator</a></li>
+<li><a href="../chapter-generator/">Chapter Content Generator</a></li>
+<li><a href="../quiz-generator/">Quiz Generator</a></li>
+<li><a href="../quality-metrics-analyzer/">Quality Metrics Analyzer</a></li>
+<li><a href="../social-media-generator/">Social Media Generator</a></li>
+<li><a href="../concept-validator/">Concept Validator</a></li>
+</ul>
 <p>Each file follows the <a href="../template/">template structure</a> with detailed input/output specifications and quality metrics.</p>
 
 

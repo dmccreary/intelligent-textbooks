@@ -1713,10 +1713,12 @@
 <h2 id="summary">Summary</h2>
 <p>This skill generates interactive quizzes for each chapter of an intelligent textbook, with questions aligned to specific concepts from the learning graph and distributed across Bloom's Taxonomy cognitive levels to assess student understanding effectively.</p>
 <h2 id="order">Order</h2>
-<p>This skill should be executed after:
-1. Chapter content has been generated or written
-2. Learning graph exists with concept dependencies
-3. Glossary is available (recommended for terminology questions)</p>
+<p>This skill should be executed after:</p>
+<ol>
+<li>Chapter content has been generated or written</li>
+<li>Learning graph exists with concept dependencies</li>
+<li>Glossary is available (recommended for terminology questions)</li>
+</ol>
 <p>The quiz generator analyzes chapter content to create contextually relevant questions, so chapters must exist first. It can be run incrementally (chapter by chapter) or in batch mode (entire textbook).</p>
 <h2 id="inputs">Inputs</h2>
 <h3 id="primary-input-files">Primary Input Files</h3>
@@ -1765,12 +1767,14 @@
 - 70-89: Good content but limited examples or some concept gaps
 - 50-69: Basic content, minimal examples, glossary gaps
 - Below 50: Insufficient content for quality quiz generation</p>
-<p><strong>Quality Checks:</strong>
-1. Chapter word count: 1000+ words = good, 2000+ = excellent
-2. Example coverage: 60%+ concepts with examples
-3. Glossary coverage: 80%+ chapter concepts defined
-4. Concept clarity: Clear explanations for each concept
-5. Learning graph alignment: All chapter concepts mapped</p>
+<p><strong>Quality Checks:</strong></p>
+<ol>
+<li>Chapter word count: 1000+ words = good, 2000+ = excellent</li>
+<li>Example coverage: 60%+ concepts with examples</li>
+<li>Glossary coverage: 80%+ chapter concepts defined</li>
+<li>Concept clarity: Clear explanations for each concept</li>
+<li>Learning graph alignment: All chapter concepts mapped</li>
+</ol>
 <p><strong>User Dialog Triggers:</strong>
 - Score &lt; 60: "Chapter [X] has limited content ([N] words). Generate shorter quiz or skip?"
 - No glossary: "No glossary found. Definition questions will be limited. Proceed?"
@@ -1999,24 +2003,32 @@ Incorrect. [Brief explanation why]
 </li>
 </ol>
 <h2 id="configuration-options">Configuration Options</h2>
-<p><strong>Question Distribution:</strong>
-- Multiple choice (default)
-- True/False (optional, max 20% of quiz)
-- Fill-in-the-blank (for terminology)
-- Matching (for relationships)</p>
-<p><strong>Integration Mode:</strong>
-- Embedded in chapter (appended to chapter.md)
-- Separate quiz pages (chapter-name-quiz.md)
-- Quiz section at end of textbook
-- JSON export only (for external LMS)</p>
-<p><strong>Difficulty Tuning:</strong>
-- Easy mode: More Remember/Understand, fewer distractors
-- Standard mode: Balanced distribution
-- Challenge mode: More Analyze/Evaluate/Create, difficult distractors</p>
-<p><strong>Randomization:</strong>
-- Fixed quiz (same questions every time)
-- Random selection (from question bank)
-- Adaptive (adjusts difficulty based on performance - future feature)</p>
+<p><strong>Question Distribution:</strong></p>
+<ul>
+<li>Multiple choice (default)</li>
+<li>True/False (optional, max 20% of quiz)</li>
+<li>Fill-in-the-blank (for terminology)</li>
+<li>Matching (for relationships)</li>
+</ul>
+<p><strong>Integration Mode:</strong></p>
+<ul>
+<li>Embedded in chapter (appended to chapter.md)</li>
+<li>Separate quiz pages (chapter-name-quiz.md)</li>
+<li>Quiz section at end of textbook</li>
+<li>JSON export only (for external LMS)</li>
+</ul>
+<p><strong>Difficulty Tuning:</strong></p>
+<ul>
+<li>Easy mode: More Remember/Understand, fewer distractors</li>
+<li>Standard mode: Balanced distribution</li>
+<li>Challenge mode: More Analyze/Evaluate/Create, difficult distractors</li>
+</ul>
+<p><strong>Randomization:</strong></p>
+<ul>
+<li>Fixed quiz (same questions every time)</li>
+<li>Random selection (from question bank)</li>
+<li>Adaptive (adjusts difficulty based on performance - future feature)</li>
+</ul>
 
 
 

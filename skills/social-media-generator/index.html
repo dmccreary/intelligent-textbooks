@@ -1749,11 +1749,13 @@
 <h2 id="summary">Summary</h2>
 <p>This skill generates optimized social media preview images and Open Graph metadata for each page in the intelligent textbook, ensuring attractive, informative previews when pages are shared on social platforms, and creates a social media promotion campaign to increase textbook visibility.</p>
 <h2 id="order">Order</h2>
-<p>This skill should be executed:
-1. After chapter content is substantially complete (70%+ chapters written)
-2. After glossary and key pages exist
-3. Before major marketing or promotion efforts
-4. Can be re-run when content updates significantly</p>
+<p>This skill should be executed:</p>
+<ol>
+<li>After chapter content is substantially complete (70%+ chapters written)</li>
+<li>After glossary and key pages exist</li>
+<li>Before major marketing or promotion efforts</li>
+<li>Can be re-run when content updates significantly</li>
+</ol>
 <p>The generator creates custom social cards and promotional content, so it needs actual content to visualize and promote.</p>
 <h2 id="inputs">Inputs</h2>
 <h3 id="primary-input-files">Primary Input Files</h3>
@@ -1824,12 +1826,14 @@
 - 70-89: Most content ready, some pages lack descriptions
 - 50-69: Basic content but many pages lack compelling hooks
 - Below 50: Insufficient content for effective social promotion</p>
-<p><strong>Quality Checks:</strong>
-1. Page count: 20+ pages = good baseline for promotion
-2. Metadata completeness: Titles and descriptions for 90%+ pages
-3. Visual assets: Logo, favicon, cover image present
-4. Compelling hooks: Key value propositions clear in content
-5. Target audience: Clearly defined in course description</p>
+<p><strong>Quality Checks:</strong></p>
+<ol>
+<li>Page count: 20+ pages = good baseline for promotion</li>
+<li>Metadata completeness: Titles and descriptions for 90%+ pages</li>
+<li>Visual assets: Logo, favicon, cover image present</li>
+<li>Compelling hooks: Key value propositions clear in content</li>
+<li>Target audience: Clearly defined in course description</li>
+</ol>
 <p><strong>User Dialog Triggers:</strong>
 - Score &lt; 60: "Limited content or metadata. Social cards may be generic. Continue or improve content first?"
 - No logo: "No logo found. Generate text-based social cards or provide logo first?"
@@ -1992,29 +1996,39 @@
 <li>User-generated content hooks</li>
 </ul>
 <h3 id="social-media-post-categories">Social Media Post Categories</h3>
-<p><strong>Feature Highlights (30%):</strong>
-- "Check out our interactive MicroSims for [topic]!"
-- "Navigate your learning path with our concept graph"
-- "Every term clearly defined in our comprehensive glossary"</p>
-<p><strong>Educational Content (25%):</strong>
-- "Did you know? [Interesting fact from textbook]"
-- "Quick tip: [Practical advice from content]"
-- "Concept breakdown: [Complex topic explained simply]"</p>
-<p><strong>Visual Content (20%):</strong>
-- MicroSim demonstrations
-- Learning graph visualizations
-- Infographics from chapters
-- Quote cards with key insights</p>
-<p><strong>Social Proof (15%):</strong>
-- User testimonials (when available)
-- Usage statistics
-- Case study highlights
-- Community contributions</p>
-<p><strong>Engagement Posts (10%):</strong>
-- Questions to community
-- Polls and surveys
-- Challenges and exercises
-- Discussion prompts</p>
+<p><strong>Feature Highlights (30%):</strong></p>
+<ul>
+<li>"Check out our interactive MicroSims for [topic]!"</li>
+<li>"Navigate your learning path with our concept graph"</li>
+<li>"Every term clearly defined in our comprehensive glossary"</li>
+</ul>
+<p><strong>Educational Content (25%):</strong></p>
+<ul>
+<li>"Did you know? [Interesting fact from textbook]"</li>
+<li>"Quick tip: [Practical advice from content]"</li>
+<li>"Concept breakdown: [Complex topic explained simply]"</li>
+</ul>
+<p><strong>Visual Content (20%):</strong></p>
+<ul>
+<li>MicroSim demonstrations</li>
+<li>Learning graph visualizations</li>
+<li>Infographics from chapters</li>
+<li>Quote cards with key insights</li>
+</ul>
+<p><strong>Social Proof (15%):</strong></p>
+<ul>
+<li>User testimonials (when available)</li>
+<li>Usage statistics</li>
+<li>Case study highlights</li>
+<li>Community contributions</li>
+</ul>
+<p><strong>Engagement Posts (10%):</strong></p>
+<ul>
+<li>Questions to community</li>
+<li>Polls and surveys</li>
+<li>Challenges and exercises</li>
+<li>Discussion prompts</li>
+</ul>
 <h3 id="platform-specific-templates">Platform-Specific Templates</h3>
 <p><strong>Twitter/X:</strong>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2222,24 +2236,32 @@ Explore now: [Tracked link]
 <li>Update and refresh schedule</li>
 </ol>
 <h2 id="configuration-options">Configuration Options</h2>
-<p><strong>Social Card Styles:</strong>
-- Minimal (text + logo + color)
-- Visual (concept illustration + text)
-- Data (graph visualization + stats)
-- Screenshot (MicroSim preview + description)</p>
-<p><strong>Campaign Intensity:</strong>
-- Soft launch (1-2 posts/week, 4 weeks)
-- Standard launch (3-5 posts/week, 3 weeks)
-- Blitz launch (daily posts, 2 weeks)</p>
-<p><strong>Target Platforms:</strong>
-- Academic focus (Twitter, LinkedIn, Reddit academic subs)
-- General education (Facebook, Instagram, Pinterest)
-- Technical audience (Hacker News, dev.to, technical subs)
-- All platforms (comprehensive strategy)</p>
-<p><strong>Automation Level:</strong>
-- Full automation (scheduled posts via Buffer/Hootsuite)
-- Semi-automated (drafts prepared, manual posting)
-- Manual (content created, posting strategy provided)</p>
+<p><strong>Social Card Styles:</strong></p>
+<ul>
+<li>Minimal (text + logo + color)</li>
+<li>Visual (concept illustration + text)</li>
+<li>Data (graph visualization + stats)</li>
+<li>Screenshot (MicroSim preview + description)</li>
+</ul>
+<p><strong>Campaign Intensity:</strong></p>
+<ul>
+<li>Soft launch (1-2 posts/week, 4 weeks)</li>
+<li>Standard launch (3-5 posts/week, 3 weeks)</li>
+<li>Blitz launch (daily posts, 2 weeks)</li>
+</ul>
+<p><strong>Target Platforms:</strong></p>
+<ul>
+<li>Academic focus (Twitter, LinkedIn, Reddit academic subs)</li>
+<li>General education (Facebook, Instagram, Pinterest)</li>
+<li>Technical audience (Hacker News, dev.to, technical subs)</li>
+<li>All platforms (comprehensive strategy)</li>
+</ul>
+<p><strong>Automation Level:</strong></p>
+<ul>
+<li>Full automation (scheduled posts via Buffer/Hootsuite)</li>
+<li>Semi-automated (drafts prepared, manual posting)</li>
+<li>Manual (content created, posting strategy provided)</li>
+</ul>
 
 
 

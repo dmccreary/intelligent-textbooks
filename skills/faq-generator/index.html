@@ -1605,11 +1605,13 @@
 <h2 id="summary">Summary</h2>
 <p>This skill generates a comprehensive set of Frequently Asked Questions (FAQs) from course content, learning graphs, and glossary terms to help students understand common questions and prepare content for chatbot integration.</p>
 <h2 id="order">Order</h2>
-<p>This skill should be executed after the following artifacts exist:
-1. Course description has been finalized
-2. Learning graph has been created
-3. Glossary has been generated
-4. At least 30% of chapter content has been written</p>
+<p>This skill should be executed after the following artifacts exist:</p>
+<ol>
+<li>Course description has been finalized</li>
+<li>Learning graph has been created</li>
+<li>Glossary has been generated</li>
+<li>At least 30% of chapter content has been written</li>
+</ol>
 <p>Having these prerequisites ensures the FAQ generator has sufficient context to create meaningful, relevant questions.</p>
 <h2 id="inputs">Inputs</h2>
 <h3 id="primary-input-files">Primary Input Files</h3>
@@ -1652,12 +1654,14 @@
 - 70-89: Core inputs present, some content gaps
 - 50-69: Missing optional inputs or low word count
 - Below 50: Critical inputs missing</p>
-<p><strong>Quality Checks:</strong>
-1. Course description completeness (title, audience, prerequisites, outcomes)
-2. Learning graph validity (no cycles, reasonable connectivity)
-3. Glossary size (50+ terms = good, 100+ = excellent)
-4. Content word count (target: 10,000+ words for comprehensive FAQ)
-5. Concept coverage (what % of learning graph concepts have related content?)</p>
+<p><strong>Quality Checks:</strong></p>
+<ol>
+<li>Course description completeness (title, audience, prerequisites, outcomes)</li>
+<li>Learning graph validity (no cycles, reasonable connectivity)</li>
+<li>Glossary size (50+ terms = good, 100+ = excellent)</li>
+<li>Content word count (target: 10,000+ words for comprehensive FAQ)</li>
+<li>Concept coverage (what % of learning graph concepts have related content?)</li>
+</ol>
 <p><strong>User Dialog Triggers:</strong>
 - Score &lt; 60: "Limited content available for FAQ generation. Continue with basic FAQ or wait for more content?"
 - No glossary: "No glossary found. Generate FAQ anyway (limited technical questions) or create glossary first?"
@@ -1725,20 +1729,24 @@
 <li>No duplicate questions</li>
 <li>Clear, searchable question phrasing</li>
 </ul>
-<p><strong>Question Categories Generated:</strong>
-1. Getting Started (10-15 questions)
-2. Core Concepts (20-30 questions based on learning graph)
-3. Technical Details (15-25 questions from glossary)
-4. Common Challenges (10-15 questions)
-5. Best Practices (10-15 questions)
-6. Advanced Topics (5-10 questions)</p>
-<p><strong>Quality Checks Performed:</strong>
-1. No duplicate questions (100% unique)
-2. All internal links valid
-3. Bloom's Taxonomy distribution
-4. Reading level appropriate for target audience
-5. Answer completeness (no partial answers)
-6. Technical accuracy (verified against glossary/content)</p>
+<p><strong>Question Categories Generated:</strong></p>
+<ol>
+<li>Getting Started (10-15 questions)</li>
+<li>Core Concepts (20-30 questions based on learning graph)</li>
+<li>Technical Details (15-25 questions from glossary)</li>
+<li>Common Challenges (10-15 questions)</li>
+<li>Best Practices (10-15 questions)</li>
+<li>Advanced Topics (5-10 questions)</li>
+</ol>
+<p><strong>Quality Checks Performed:</strong></p>
+<ol>
+<li>No duplicate questions (100% unique)</li>
+<li>All internal links valid</li>
+<li>Bloom's Taxonomy distribution</li>
+<li>Reading level appropriate for target audience</li>
+<li>Answer completeness (no partial answers)</li>
+<li>Technical accuracy (verified against glossary/content)</li>
+</ol>
 <p><strong>Success Criteria:</strong>
 - Overall quality score &gt; 75
 - Minimum 40 questions generated

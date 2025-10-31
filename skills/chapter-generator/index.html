@@ -1641,11 +1641,13 @@
 <h2 id="summary">Summary</h2>
 <p>This skill generates comprehensive chapter content for an intelligent textbook based on the learning graph, ensuring each chapter covers specific concepts with appropriate scaffolding, examples, and alignment to Bloom's Taxonomy learning outcomes.</p>
 <h2 id="order">Order</h2>
-<p>This skill should be executed after:
-1. Learning graph is complete and validated
-2. Course description is finalized
-3. Chapter structure/navigation is defined in <code>mkdocs.yml</code>
-4. Glossary has been generated (recommended but not required)</p>
+<p>This skill should be executed after:</p>
+<ol>
+<li>Learning graph is complete and validated</li>
+<li>Course description is finalized</li>
+<li>Chapter structure/navigation is defined in <code>mkdocs.yml</code></li>
+<li>Glossary has been generated (recommended but not required)</li>
+</ol>
 <p>The chapter generator uses the learning graph to determine concept dependencies and ensure proper scaffolding, so the learning graph must be complete before generating chapters.</p>
 <h2 id="inputs">Inputs</h2>
 <h3 id="primary-input-files">Primary Input Files</h3>
@@ -1703,12 +1705,14 @@
 - 70-89: Mostly clear mapping, some chapters too large/small
 - 50-69: Vague mapping or unbalanced chapter sizes
 - Below 50: No clear chapter structure defined</p>
-<p><strong>Quality Checks:</strong>
-1. Verify learning graph has no cycles (required)
-2. Check concept distribution across chapters (target: 8-15 per chapter)
-3. Validate prerequisites: concepts only after dependencies (required)
-4. Assess taxonomy alignment with chapter structure
-5. Verify all referenced concepts exist in glossary (if present)</p>
+<p><strong>Quality Checks:</strong></p>
+<ol>
+<li>Verify learning graph has no cycles (required)</li>
+<li>Check concept distribution across chapters (target: 8-15 per chapter)</li>
+<li>Validate prerequisites: concepts only after dependencies (required)</li>
+<li>Assess taxonomy alignment with chapter structure</li>
+<li>Verify all referenced concepts exist in glossary (if present)</li>
+</ol>
 <p><strong>User Dialog Triggers:</strong>
 - Score &lt; 60: "Learning graph quality is low. Review dependencies before generating chapters?"
 - Unbalanced chapters: "Chapter [X] has [N] concepts. Recommended range is 8-15. Proceed or restructure?"

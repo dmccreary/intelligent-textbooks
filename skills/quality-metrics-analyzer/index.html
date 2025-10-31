@@ -1815,11 +1815,13 @@
 <h2 id="summary">Summary</h2>
 <p>This skill performs comprehensive quality analysis of an intelligent textbook, generating detailed metrics reports covering content structure, engagement features, technical implementation, and educational effectiveness to guide continuous improvement.</p>
 <h2 id="order">Order</h2>
-<p>This skill should be executed:
-1. <strong>During development</strong>: After major milestones (learning graph, chapters, MicroSims)
-2. <strong>Before deployment</strong>: As final quality gate before publishing
-3. <strong>Periodically</strong>: Monthly or quarterly for mature textbooks
-4. <strong>On demand</strong>: When investigating specific quality concerns</p>
+<p>This skill should be executed:</p>
+<ol>
+<li><strong>During development</strong>: After major milestones (learning graph, chapters, MicroSims)</li>
+<li><strong>Before deployment</strong>: As final quality gate before publishing</li>
+<li><strong>Periodically</strong>: Monthly or quarterly for mature textbooks</li>
+<li><strong>On demand</strong>: When investigating specific quality concerns</li>
+</ol>
 <p>The analyzer can run at any stage but provides most value when substantial content exists (minimum: course description, learning graph, and 5+ chapters).</p>
 <h2 id="inputs">Inputs</h2>
 <h3 id="primary-input-files">Primary Input Files</h3>
@@ -1889,12 +1891,14 @@
 - 70-89: Core files present, some optional components missing
 - 50-69: Basic structure but missing key components
 - Below 50: Insufficient content for meaningful analysis</p>
-<p><strong>Pre-Analysis Checks:</strong>
-1. Valid mkdocs.yml (required)
-2. At least 10 markdown files (minimum viable content)
-3. Course description exists
-4. Learning graph exists (recommended)
-5. At least 1 MicroSim (for full analysis)</p>
+<p><strong>Pre-Analysis Checks:</strong></p>
+<ol>
+<li>Valid mkdocs.yml (required)</li>
+<li>At least 10 markdown files (minimum viable content)</li>
+<li>Course description exists</li>
+<li>Learning graph exists (recommended)</li>
+<li>At least 1 MicroSim (for full analysis)</li>
+</ol>
 <p><strong>User Dialog Triggers:</strong>
 - Score &lt; 50: "Limited content detected. Analysis will be incomplete. Continue?"
 - No learning graph: "No learning graph found. Many educational metrics will be unavailable. Proceed with basic analysis?"
@@ -2016,49 +2020,59 @@
 - Examples clarify difficult concepts = 5 pts
 - Multiple explanation approaches for key ideas = 5 pts</p>
 <h3 id="detailed-metrics-collected">Detailed Metrics Collected</h3>
-<p><strong>Quantitative Metrics:</strong>
-- Total markdown files: [count]
-- Total word count: [count]
-- Average words per page: [count]
-- Total images: [count]
-- Total MicroSims: [count]
-- Glossary terms: [count]
-- Learning graph concepts: [count]
-- Code blocks: [count]
-- Admonitions: [count] (by type)
-- Internal links: [count]
-- External links: [count]
-- Quiz questions: [count]</p>
-<p><strong>Structural Metrics:</strong>
-- Navigation depth: [levels]
-- Navigation breadth: [avg items/level]
-- Chapter count: [count]
-- Average chapter length: [words]
-- Word count variance: [%]
-- Orphaned pages: [count]</p>
-<p><strong>Educational Metrics:</strong>
-- Bloom's Taxonomy distribution: [% by level]
-- Concept coverage: [%]
-- Prerequisite compliance: [%]
-- Scaffolding score: [0-100]
-- Learning graph connectivity: [avg edges/node]
-- Orphaned concepts: [count]</p>
-<p><strong>Engagement Metrics:</strong>
-- MicroSim density: [sims per chapter]
-- Interactive element diversity: [types used]
-- Quiz coverage: [% chapters with quizzes]
-- Exercise density: [exercises per 1000 words]
-- Example coverage: [% concepts with examples]
-- Admonition density: [per chapter]</p>
-<p><strong>Technical Metrics:</strong>
-- Broken internal links: [count]
-- Broken external links: [count]
-- Markdown syntax errors: [count]
-- Heading hierarchy violations: [count]
-- Missing alt text: [count images]
-- Build configuration score: [0-100]
-- Analytics configured: [yes/no]
-- Mobile responsive: [yes/no]</p>
+<p><strong>Quantitative Metrics:</strong></p>
+<ul>
+<li>Total markdown files: [count]</li>
+<li>Total word count: [count]</li>
+<li>Average words per page: [count]</li>
+<li>Total images: [count]</li>
+<li>Total MicroSims: [count]</li>
+<li>Glossary terms: [count]</li>
+<li>Learning graph concepts: [count]</li>
+<li>Code blocks: [count]</li>
+<li>Admonitions: [count] (by type)</li>
+<li>Internal links: [count]</li>
+<li>External links: [count]</li>
+<li>Quiz questions: [count]</li>
+</ul>
+<p><strong>Structural Metrics:</strong></p>
+<ul>
+<li>Navigation depth: [levels]</li>
+<li>Navigation breadth: [avg items/level]</li>
+<li>Chapter count: [count]</li>
+<li>Average chapter length: [words]</li>
+<li>Word count variance: [%]</li>
+<li>Orphaned pages: [count]</li>
+</ul>
+<p><strong>Educational Metrics:</strong></p>
+<ul>
+<li>Bloom's Taxonomy distribution: [% by level]</li>
+<li>Concept coverage: [%]</li>
+<li>Prerequisite compliance: [%]</li>
+<li>Scaffolding score: [0-100]</li>
+<li>Learning graph connectivity: [avg edges/node]</li>
+<li>Orphaned concepts: [count]</li>
+</ul>
+<p><strong>Engagement Metrics:</strong></p>
+<ul>
+<li>MicroSim density: [sims per chapter]</li>
+<li>Interactive element diversity: [types used]</li>
+<li>Quiz coverage: [% chapters with quizzes]</li>
+<li>Exercise density: [exercises per 1000 words]</li>
+<li>Example coverage: [% concepts with examples]</li>
+<li>Admonition density: [per chapter]</li>
+</ul>
+<p><strong>Technical Metrics:</strong></p>
+<ul>
+<li>Broken internal links: [count]</li>
+<li>Broken external links: [count]</li>
+<li>Markdown syntax errors: [count]</li>
+<li>Heading hierarchy violations: [count]</li>
+<li>Missing alt text: [count images]</li>
+<li>Build configuration score: [0-100]</li>
+<li>Analytics configured: [yes/no]</li>
+<li>Mobile responsive: [yes/no]</li>
+</ul>
 <h3 id="quality-checks-performed">Quality Checks Performed</h3>
 <ol>
 <li><strong>Link Validation</strong>: All internal and external links tested</li>
@@ -2074,26 +2088,34 @@
 </ol>
 <h3 id="recommendations-engine">Recommendations Engine</h3>
 <p>The skill generates prioritized, actionable recommendations:</p>
-<p><strong>Critical (Fix Immediately):</strong>
-- Broken build configuration
-- Circular dependencies in learning graph
-- Missing prerequisite concepts
-- Broken internal links</p>
-<p><strong>High Priority (Fix Soon):</strong>
-- Orphaned concepts
-- Unbalanced chapter sizes
-- Missing glossary terms
-- Poor Bloom's distribution</p>
-<p><strong>Medium Priority (Improve Quality):</strong>
-- Add more examples
-- Increase MicroSim coverage
-- Improve scaffolding
-- Add more quizzes</p>
-<p><strong>Low Priority (Nice to Have):</strong>
-- Add more admonitions
-- Enhance social previews
-- Add more cross-references
-- Improve visual elements</p>
+<p><strong>Critical (Fix Immediately):</strong></p>
+<ul>
+<li>Broken build configuration</li>
+<li>Circular dependencies in learning graph</li>
+<li>Missing prerequisite concepts</li>
+<li>Broken internal links</li>
+</ul>
+<p><strong>High Priority (Fix Soon):</strong></p>
+<ul>
+<li>Orphaned concepts</li>
+<li>Unbalanced chapter sizes</li>
+<li>Missing glossary terms</li>
+<li>Poor Bloom's distribution</li>
+</ul>
+<p><strong>Medium Priority (Improve Quality):</strong></p>
+<ul>
+<li>Add more examples</li>
+<li>Increase MicroSim coverage</li>
+<li>Improve scaffolding</li>
+<li>Add more quizzes</li>
+</ul>
+<p><strong>Low Priority (Nice to Have):</strong></p>
+<ul>
+<li>Add more admonitions</li>
+<li>Enhance social previews</li>
+<li>Add more cross-references</li>
+<li>Improve visual elements</li>
+</ul>
 <h3 id="success-criteria">Success Criteria</h3>
 <p><strong>Overall Quality Grades:</strong>
 - 90-100: Excellent - Publication ready
@@ -2101,29 +2123,35 @@
 - 70-79: Adequate - Several improvements needed
 - 60-69: Fair - Significant work required
 - Below 60: Poor - Major revision needed</p>
-<p><strong>Minimum Thresholds for "Publication Ready":</strong>
-- No critical issues (broken links, build errors)
-- Learning graph valid (no cycles)
-- 80%+ concept coverage
-- 70%+ Bloom's alignment score
-- 75%+ technical quality score
-- At least 1 MicroSim per 5 chapters
-- Complete glossary
-- All navigation items valid</p>
+<p><strong>Minimum Thresholds for "Publication Ready":</strong></p>
+<ul>
+<li>No critical issues (broken links, build errors)</li>
+<li>Learning graph valid (no cycles)</li>
+<li>80%+ concept coverage</li>
+<li>70%+ Bloom's alignment score</li>
+<li>75%+ technical quality score</li>
+<li>At least 1 MicroSim per 5 chapters</li>
+<li>Complete glossary</li>
+<li>All navigation items valid</li>
+</ul>
 <h3 id="trend-analysis-if-historical-data-available">Trend Analysis (if historical data available)</h3>
-<p>Compares current metrics to previous reports:
-- Quality score trajectory
-- Content growth rate
-- Improvement areas
-- Regression detection
-- Velocity metrics (content added per month)</p>
+<p>Compares current metrics to previous reports:</p>
+<ul>
+<li>Quality score trajectory</li>
+<li>Content growth rate</li>
+<li>Improvement areas</li>
+<li>Regression detection</li>
+<li>Velocity metrics (content added per month)</li>
+</ul>
 <h3 id="export-formats">Export Formats</h3>
-<p>The quality report can be exported as:
-1. Markdown (default)
-2. JSON (for programmatic analysis)
-3. CSV (for spreadsheet analysis)
-4. HTML (standalone report)
-5. PDF (for sharing with stakeholders)</p>
+<p>The quality report can be exported as:</p>
+<ol>
+<li>Markdown (default)</li>
+<li>JSON (for programmatic analysis)</li>
+<li>CSV (for spreadsheet analysis)</li>
+<li>HTML (standalone report)</li>
+<li>PDF (for sharing with stakeholders)</li>
+</ol>
 
 
 
