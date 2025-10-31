@@ -7,6 +7,7 @@ This skill generates interactive quizzes for each chapter of an intelligent text
 ## Order
 
 This skill should be executed after:
+
 1. Chapter content has been generated or written
 2. Learning graph exists with concept dependencies
 3. Glossary is available (recommended for terminology questions)
@@ -52,6 +53,7 @@ The quiz generator analyzes chapter content to create contextually relevant ques
 - Below 50: Insufficient content for quality quiz generation
 
 **Quality Checks:**
+
 1. Chapter word count: 1000+ words = good, 2000+ = excellent
 2. Example coverage: 60%+ concepts with examples
 3. Glossary coverage: 80%+ chapter concepts defined
@@ -252,23 +254,27 @@ Incorrect. [Brief explanation why]
 ## Configuration Options
 
 **Question Distribution:**
+
 - Multiple choice (default)
 - True/False (optional, max 20% of quiz)
 - Fill-in-the-blank (for terminology)
 - Matching (for relationships)
 
 **Integration Mode:**
+
 - Embedded in chapter (appended to chapter.md)
 - Separate quiz pages (chapter-name-quiz.md)
 - Quiz section at end of textbook
 - JSON export only (for external LMS)
 
 **Difficulty Tuning:**
+
 - Easy mode: More Remember/Understand, fewer distractors
 - Standard mode: Balanced distribution
 - Challenge mode: More Analyze/Evaluate/Create, difficult distractors
 
 **Randomization:**
+
 - Fixed quiz (same questions every time)
 - Random selection (from question bank)
 - Adaptive (adjusts difficulty based on performance - future feature)

@@ -7,6 +7,7 @@ This skill validates that all concepts in the learning graph are properly integr
 ## Order
 
 This skill should be executed:
+
 1. After learning graph is complete
 2. After initial chapter content generation
 3. Before glossary finalization
@@ -67,6 +68,7 @@ The validator cross-references all textbook components, so it requires the learn
 - Below 50: Critical inputs missing or insufficient content
 
 **Pre-Validation Checks:**
+
 1. Learning graph validity (required: no cycles)
 2. Minimum content threshold (recommended: 50+ markdown files)
 3. Glossary exists (recommended)
@@ -213,6 +215,7 @@ Based on overall score, concepts are categorized:
 ### Validation Checks Performed
 
 **1. Coverage Validation:**
+
 - ✓ Every concept from learning graph mentioned in at least one chapter
 - ✓ Every concept has glossary definition
 - ✓ Core concepts (high centrality in graph) tested in quizzes
@@ -220,6 +223,7 @@ Based on overall score, concepts are categorized:
 - ✓ Difficult concepts addressed in FAQ
 
 **2. Scaffolding Validation:**
+
 - ✓ Prerequisite concepts always introduced before dependent concepts
 - ✓ No circular dependencies in presentation order
 - ✓ Concept density appropriate (not too many new concepts per chapter)
@@ -227,6 +231,7 @@ Based on overall score, concepts are categorized:
 - ✓ Review of prerequisites at chapter beginnings
 
 **3. Consistency Validation:**
+
 - ✓ Concept labels match exactly across all components
 - ✓ Definitions align between glossary and chapter explanations
 - ✓ Examples don't contradict each other
@@ -234,6 +239,7 @@ Based on overall score, concepts are categorized:
 - ✓ No concept presented with conflicting difficulty levels
 
 **4. Quality Validation:**
+
 - ✓ Glossary definitions meet ISO 11179 standards
 - ✓ Chapter explanations appropriate depth for concept importance
 - ✓ Quiz questions at right Bloom's level for concept
@@ -241,6 +247,7 @@ Based on overall score, concepts are categorized:
 - ✓ Examples clear and relevant
 
 **5. Integration Validation:**
+
 - ✓ Cross-references between components exist
 - ✓ Glossary terms linked from chapters
 - ✓ Quiz questions reference chapter sections
@@ -248,6 +255,7 @@ Based on overall score, concepts are categorized:
 - ✓ FAQ answers link to detailed explanations
 
 **6. Accessibility Validation:**
+
 - ✓ Multiple learning pathways to each concept
 - ✓ Varied presentation styles (visual, textual, interactive)
 - ✓ Support materials for difficult concepts
@@ -257,24 +265,28 @@ Based on overall score, concepts are categorized:
 ### Gap Analysis Categories
 
 **Critical Gaps (Immediate Action Required):**
+
 1. **Orphaned concepts**: In learning graph but not in any chapter
 2. **Undefined concepts**: No glossary definition
 3. **Prerequisite violations**: Concept before its prerequisites
 4. **Circular dependencies**: Concepts depending on each other
 
 **High Priority Gaps:**
+
 1. **Untested core concepts**: Important concepts without quiz questions
 2. **Unexplained concepts**: Mentioned but not explained
 3. **Missing examples**: Abstract concepts without concrete examples
 4. **Inconsistent terminology**: Same concept with different labels
 
 **Medium Priority Gaps:**
+
 1. **Limited interactivity**: Complex concepts without MicroSims
 2. **Single modality**: Concepts only explained one way
 3. **Weak definitions**: Glossary entries not meeting ISO standards
 4. **Missing cross-references**: Isolated content without links
 
 **Enhancement Opportunities:**
+
 1. **Add alternative explanations**: Multiple approaches to difficult topics
 2. **Increase quiz coverage**: More assessment for better learning
 3. **Create MicroSims**: Interactive demonstrations for abstract concepts
@@ -318,6 +330,7 @@ For each concept, the report includes:
 ### Trend Analysis (if historical data available)
 
 Tracks improvement over time:
+
 - Overall health score trajectory
 - Gap reduction rate
 - Coverage improvements by category
@@ -327,6 +340,7 @@ Tracks improvement over time:
 ### Success Criteria
 
 **Publication Ready Thresholds:**
+
 - Overall health score > 75
 - No critical gaps
 - <10% concepts with insufficient coverage (<40)
@@ -337,6 +351,7 @@ Tracks improvement over time:
 - Terminology consistency > 95%
 
 **Quality Gates:**
+
 - **Alpha release**: Health score > 60, no critical gaps
 - **Beta release**: Health score > 70, <5% insufficient concepts
 - **Production release**: Health score > 75, all criteria above
@@ -346,24 +361,28 @@ Tracks improvement over time:
 The validator generates prioritized action items:
 
 **Phase 1 - Critical Fixes (Week 1):**
+
 1. Add missing concepts to chapters
 2. Create glossary definitions for undefined concepts
 3. Fix prerequisite violations
 4. Resolve circular dependencies
 
 **Phase 2 - High Priority (Weeks 2-3):**
+
 1. Add quiz questions for untested core concepts
 2. Expand brief concept explanations
 3. Create examples for abstract concepts
 4. Standardize inconsistent terminology
 
 **Phase 3 - Medium Priority (Weeks 4-6):**
+
 1. Develop MicroSims for complex concepts
 2. Add FAQ entries for difficult topics
 3. Create cross-references between components
 4. Enhance weak glossary definitions
 
 **Phase 4 - Enhancements (Ongoing):**
+
 1. Add alternative explanations
 2. Increase quiz coverage
 3. Create more MicroSims
@@ -394,23 +413,27 @@ The validator generates prioritized action items:
 ## Configuration Options
 
 **Validation Depth:**
+
 - Quick scan (coverage check only)
 - Standard validation (coverage + scaffolding + consistency)
 - Deep validation (all checks + quality assessment)
 
 **Reporting Detail:**
+
 - Summary only (executive overview)
 - Standard (summary + gap list)
 - Detailed (per-concept analysis)
 - Comprehensive (all reports + visualizations)
 
 **Scope:**
+
 - All concepts (complete validation)
 - Critical concepts only (fast check)
 - Changed concepts (incremental validation)
 - Specific category (targeted validation)
 
 **Thresholds:**
+
 - Strict (publication-ready standards)
 - Standard (recommended thresholds)
 - Lenient (early development)

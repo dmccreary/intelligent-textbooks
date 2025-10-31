@@ -7,6 +7,7 @@ This skill performs comprehensive quality analysis of an intelligent textbook, g
 ## Order
 
 This skill should be executed:
+
 1. **During development**: After major milestones (learning graph, chapters, MicroSims)
 2. **Before deployment**: As final quality gate before publishing
 3. **Periodically**: Monthly or quarterly for mature textbooks
@@ -68,6 +69,7 @@ The analyzer can run at any stage but provides most value when substantial conte
 - Below 50: Insufficient content for meaningful analysis
 
 **Pre-Analysis Checks:**
+
 1. Valid mkdocs.yml (required)
 2. At least 10 markdown files (minimum viable content)
 3. Course description exists
@@ -204,6 +206,7 @@ The analyzer can run at any stage but provides most value when substantial conte
 ### Detailed Metrics Collected
 
 **Quantitative Metrics:**
+
 - Total markdown files: [count]
 - Total word count: [count]
 - Average words per page: [count]
@@ -218,6 +221,7 @@ The analyzer can run at any stage but provides most value when substantial conte
 - Quiz questions: [count]
 
 **Structural Metrics:**
+
 - Navigation depth: [levels]
 - Navigation breadth: [avg items/level]
 - Chapter count: [count]
@@ -226,6 +230,7 @@ The analyzer can run at any stage but provides most value when substantial conte
 - Orphaned pages: [count]
 
 **Educational Metrics:**
+
 - Bloom's Taxonomy distribution: [% by level]
 - Concept coverage: [%]
 - Prerequisite compliance: [%]
@@ -234,6 +239,7 @@ The analyzer can run at any stage but provides most value when substantial conte
 - Orphaned concepts: [count]
 
 **Engagement Metrics:**
+
 - MicroSim density: [sims per chapter]
 - Interactive element diversity: [types used]
 - Quiz coverage: [% chapters with quizzes]
@@ -242,6 +248,7 @@ The analyzer can run at any stage but provides most value when substantial conte
 - Admonition density: [per chapter]
 
 **Technical Metrics:**
+
 - Broken internal links: [count]
 - Broken external links: [count]
 - Markdown syntax errors: [count]
@@ -269,24 +276,28 @@ The analyzer can run at any stage but provides most value when substantial conte
 The skill generates prioritized, actionable recommendations:
 
 **Critical (Fix Immediately):**
+
 - Broken build configuration
 - Circular dependencies in learning graph
 - Missing prerequisite concepts
 - Broken internal links
 
 **High Priority (Fix Soon):**
+
 - Orphaned concepts
 - Unbalanced chapter sizes
 - Missing glossary terms
 - Poor Bloom's distribution
 
 **Medium Priority (Improve Quality):**
+
 - Add more examples
 - Increase MicroSim coverage
 - Improve scaffolding
 - Add more quizzes
 
 **Low Priority (Nice to Have):**
+
 - Add more admonitions
 - Enhance social previews
 - Add more cross-references
@@ -302,6 +313,7 @@ The skill generates prioritized, actionable recommendations:
 - Below 60: Poor - Major revision needed
 
 **Minimum Thresholds for "Publication Ready":**
+
 - No critical issues (broken links, build errors)
 - Learning graph valid (no cycles)
 - 80%+ concept coverage
@@ -314,6 +326,7 @@ The skill generates prioritized, actionable recommendations:
 ### Trend Analysis (if historical data available)
 
 Compares current metrics to previous reports:
+
 - Quality score trajectory
 - Content growth rate
 - Improvement areas
@@ -323,6 +336,7 @@ Compares current metrics to previous reports:
 ### Export Formats
 
 The quality report can be exported as:
+
 1. Markdown (default)
 2. JSON (for programmatic analysis)
 3. CSV (for spreadsheet analysis)

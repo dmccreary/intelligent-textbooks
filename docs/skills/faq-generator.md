@@ -7,6 +7,7 @@ This skill generates a comprehensive set of Frequently Asked Questions (FAQs) fr
 ## Order
 
 This skill should be executed after the following artifacts exist:
+
 1. Course description has been finalized
 2. Learning graph has been created
 3. Glossary has been generated
@@ -47,6 +48,7 @@ Having these prerequisites ensures the FAQ generator has sufficient context to c
 - Below 50: Critical inputs missing
 
 **Quality Checks:**
+
 1. Course description completeness (title, audience, prerequisites, outcomes)
 2. Learning graph validity (no cycles, reasonable connectivity)
 3. Glossary size (50+ terms = good, 100+ = excellent)
@@ -109,6 +111,7 @@ Having these prerequisites ensures the FAQ generator has sufficient context to c
   - Clear, searchable question phrasing
 
 **Question Categories Generated:**
+
 1. Getting Started (10-15 questions)
 2. Core Concepts (20-30 questions based on learning graph)
 3. Technical Details (15-25 questions from glossary)
@@ -117,6 +120,7 @@ Having these prerequisites ensures the FAQ generator has sufficient context to c
 6. Advanced Topics (5-10 questions)
 
 **Quality Checks Performed:**
+
 1. No duplicate questions (100% unique)
 2. All internal links valid
 3. Bloom's Taxonomy distribution
