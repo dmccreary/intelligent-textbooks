@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learning-graph" class="md-skip">
+        <a href="#claude-skills-for-intelligent-textbooks" class="md-skip">
           Skip to content
         </a>
       
@@ -1343,6 +1343,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1360,9 +1362,81 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#microsim" class="md-nav__link">
+  <a href="#p5-microsim" class="md-nav__link">
     <span class="md-ellipsis">
-      MicroSim
+      P5 MicroSim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary Generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ Generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-content-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Content Generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz Generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-metrics-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Metrics Analyzer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social-media-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Media Generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Validator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-execution-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Execution Order
     </span>
   </a>
   
@@ -1391,13 +1465,50 @@
   
 
 
-  <h1>Introduction</h1>
-
-<p>List of Intelligent Textbook MicroSims</p>
+<h1 id="claude-skills-for-intelligent-textbooks">Claude Skills for Intelligent Textbooks</h1>
+<p>This page provides an overview of all available Claude Skills for building intelligent textbooks. Each skill automates a specific aspect of textbook development with built-in quality metrics and validation.</p>
 <h2 id="learning-graph">Learning Graph</h2>
-<p><a href="learning-graph/">Learning Graph</a></p>
-<h2 id="microsim">MicroSim</h2>
-<p><a href="microsim-p5/"></a></p>
+<p>This skill converts a course description into a concept dependency graph called a learning graph. Learning graphs provide a roadmap of concept learning order for a course and are foundational data structures for recommending content for students. The skill analyzes course descriptions, generates pedagogically-sound concept labels, maps prerequisite dependencies as a Directed Acyclic Graph (DAG), validates quality with cycle detection and connectivity checks, creates a balanced taxonomy, and produces distribution reports and JSON exports ready for visualization.</p>
+<p><a href="learning-graph/">Learning Graph Skill Details</a></p>
+<h2 id="p5-microsim">P5 MicroSim</h2>
+<p>This skill generates a MicroSim application that will run within an intelligent textbook. MicroSims are small-scale, embedded interactive simulations designed to illustrate concepts interactively within educational content. The skill creates a complete directory structure with main.html, p5.js code, index.md documentation, and metadata.json files following established templates and coding standards for immediate integration into textbook chapters.</p>
+<p><a href="microsim-p5/">P5 MicroSim Skill Details</a></p>
+<h2 id="glossary-generator">Glossary Generator</h2>
+<p>This skill automatically generates a comprehensive glossary of terms from a learning graph's concept list, ensuring each definition follows ISO 11179 metadata registry standards (precise, concise, distinct, non-circular, and free of business rules). The skill creates alphabetically ordered definitions with relevant examples, performs quality scoring on each definition, and validates cross-references to ensure all terms are properly integrated with the textbook content.</p>
+<p><a href="glossary-generator/">Glossary Generator Skill Details</a></p>
+<h2 id="faq-generator">FAQ Generator</h2>
+<p>This skill generates a comprehensive set of Frequently Asked Questions (FAQs) from course content, learning graphs, and glossary terms to help students understand common questions and prepare content for chatbot integration. The skill organizes questions by category and difficulty using Bloom's Taxonomy distribution, provides answers with links to relevant sections, and exports structured JSON data ready for RAG system integration.</p>
+<p><a href="faq-generator/">FAQ Generator Skill Details</a></p>
+<h2 id="chapter-content-generator">Chapter Content Generator</h2>
+<p>This skill generates comprehensive chapter content for an intelligent textbook based on the learning graph, ensuring each chapter covers specific concepts with appropriate scaffolding, examples, and alignment to Bloom's Taxonomy learning outcomes. The skill validates prerequisite compliance, creates practice exercises, recommends MicroSim opportunities, and maintains progressive complexity across chapters while ensuring consistent terminology usage from the glossary.</p>
+<p><a href="chapter-generator/">Chapter Content Generator Skill Details</a></p>
+<h2 id="quiz-generator">Quiz Generator</h2>
+<p>This skill generates interactive quizzes for each chapter of an intelligent textbook, with questions aligned to specific concepts from the learning graph and distributed across Bloom's Taxonomy cognitive levels to assess student understanding effectively. The skill creates 8-12 multiple choice questions per chapter with quality distractors, explanations for all answers, links to chapter sections, and exports to JSON format for LMS or chatbot integration.</p>
+<p><a href="quiz-generator/">Quiz Generator Skill Details</a></p>
+<h2 id="quality-metrics-analyzer">Quality Metrics Analyzer</h2>
+<p>This skill performs comprehensive quality analysis of an intelligent textbook, generating detailed metrics reports covering content structure, engagement features, technical implementation, and educational effectiveness to guide continuous improvement. The analyzer evaluates navigation quality, content balance, interactive elements, Bloom's Taxonomy alignment, scaffolding compliance, link validation, and accessibility, producing prioritized recommendations across critical, high, medium, and low priority categories.</p>
+<p><a href="quality-metrics-analyzer/">Quality Metrics Analyzer Skill Details</a></p>
+<h2 id="social-media-generator">Social Media Generator</h2>
+<p>This skill generates optimized social media preview images and Open Graph metadata for each page in the intelligent textbook, ensuring attractive, informative previews when pages are shared on social platforms, and creates a social media promotion campaign to increase textbook visibility. The skill produces custom social cards, platform-specific posts for Twitter/LinkedIn/Facebook/Reddit, launch campaign schedules, MicroSim preview GIFs, and UTM-tracked links for analytics integration.</p>
+<p><a href="social-media-generator/">Social Media Generator Skill Details</a></p>
+<h2 id="concept-validator">Concept Validator</h2>
+<p>This skill validates that all concepts in the learning graph are properly integrated throughout the textbook, checking for coverage in chapters, glossary definitions, quiz questions, and MicroSims, while identifying gaps and ensuring pedagogical consistency across the entire educational resource. The validator generates comprehensive coverage matrices, gap analysis reports, scaffolding validation, terminology consistency checks, and prioritized remediation plans organized by critical, high, medium, and enhancement categories.</p>
+<p><a href="concept-validator/">Concept Validator Skill Details</a></p>
+<hr />
+<h2 id="recommended-execution-order">Recommended Execution Order</h2>
+<p>For optimal workflow, skills should generally be executed in this order:</p>
+<ol>
+<li><strong>Learning Graph</strong> - Foundation for all other skills</li>
+<li><strong>Glossary Generator</strong> - After learning graph is finalized</li>
+<li><strong>Chapter Content Generator</strong> - After chapter structure is defined</li>
+<li><strong>MicroSim P5</strong> - During or after chapter development (ongoing)</li>
+<li><strong>Quiz Generator</strong> - After each chapter or in batch mode</li>
+<li><strong>FAQ Generator</strong> - After substantial chapter content exists</li>
+<li><strong>Concept Validator</strong> - Periodically during development and before release</li>
+<li><strong>Quality Metrics Analyzer</strong> - Before deployment and for periodic quality checks</li>
+<li><strong>Social Media Generator</strong> - When ready for promotion</li>
+</ol>
+<p>See the <a href="recommended-skills-summary/">Recommended Skills Summary</a> for detailed workflow phases, priority rankings, and integration strategies.</p>
 
 
 
