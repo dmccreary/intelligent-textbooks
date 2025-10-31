@@ -12,7 +12,7 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/skills/learning-graph/">
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/skills/microsim-p5/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Learning Graph Skill - Building Intelligent Textbooks With AI</title>
+        <title>P5 MicroSim Skill - Building Intelligent Textbooks With AI</title>
       
     
     
@@ -69,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Learning Graph Skill - Building Intelligent Textbooks With AI" >
+        <meta  property="og:title"  content="P5 MicroSim Skill - Building Intelligent Textbooks With AI" >
       
         <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/learning-graph.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/microsim-p5.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -81,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/skills/learning-graph/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/skills/microsim-p5/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Learning Graph Skill - Building Intelligent Textbooks With AI" >
+        <meta  name="twitter:title"  content="P5 MicroSim Skill - Building Intelligent Textbooks With AI" >
       
         <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/learning-graph.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/microsim-p5.png" >
       
     
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learning-graph-skill" class="md-skip">
+        <a href="#p5-microsim-skill" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learning Graph Skill
+              P5 MicroSim Skill
             
           </span>
         </div>
@@ -1039,33 +1039,27 @@
         <li class="md-nav__item">
   <a href="#order" class="md-nav__link">
     <span class="md-ellipsis">
-      Order
+      ORder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-skill-input-course-description-analysis" class="md-nav__link">
+  <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Skill Input Course Description Analysis
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 1: Skill Input Course Description Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-2-concept-graph-generation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Concept Graph Generation Steps
+      Input
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
   
 </li>
       
@@ -1084,7 +1078,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/skills/learning-graph.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/skills/microsim-p5.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1092,42 +1086,30 @@
   
 
 
-<h1 id="learning-graph-skill">Learning Graph Skill</h1>
+<h1 id="p5-microsim-skill">P5 MicroSim Skill</h1>
 <h2 id="summary">Summary</h2>
-<p>This skill converts a course description into a concept dependency graph called a learning graph.
-Learning graphs provide a roadmap of concept learning order for a course.<br />
-Learning graphs are foundational data structures for recommending concent for a student.</p>
-<h2 id="order">Order</h2>
-<p>The skill should be called after a draft of the /docs/course-description.md is available</p>
-<p>Output will be placed in the folder /docs/learning-graph unless the prompt contains an override location.</p>
-<p>The learniing graph should be created before chapter content is generated.</p>
-<h2 id="step-1-skill-input-course-description-analysis">Step 1: Skill Input Course Description Analysis</h2>
+<p>This skill generates a MicroSim application that will run within an intelligent textbook</p>
+<h2 id="order">ORder</h2>
+<p>MicroSims should be placed in individual chapters.  So they are ideally created
+after the content for each chapter has been created.</p>
+<h2 id="input">Input</h2>
+<p>A detailed description of the MicroSim including what controls the user will have
+and what the output drawing will be.
+Include details such as if the MicroSim has a single drawing panel or has dual side-by-side panels in the drawing area.
+The assumption is that only the latest p5 version is used.
+If the MicroSim uses the microphone or sound, that should be specified in the description.
+If there are similar MicroSims, please provide a location to those MicroSims.</p>
+<h2 id="output">Output</h2>
+<p>The output for the MicroSim contains the following:</p>
 <ol>
-<li>The input is a detailed course description with Bloom Taxonomy outcomes.</li>
-<li>The skill will first look in the file /docs/course-description.md to find the content.</li>
-<li>A series of quality checks will be performed on the course-description file.  It will look for key elements such as title, audience, prerequisites, course duration, and outcomes.  It will use the 2001 Bloom taxonomy as a way to measure different types of objectives (remember, understand, apply, analyze, evaluate and create).  It will then create a quality score which is a scale of 1 to 100 and generate a report called 01-course-description-quality-checks.md.  This file may also have suggestions on how the course-description can be improved.</li>
+<li>A new directory is created in the /docs/sims area of the intelligent textbook.</li>
+<li>The new directory will contain a short name with only lowercase letters and dashes.  This is called the LC_NAME (lowercase name)</li>
+<li>A main.html file is placed in the new microsim directory.  Only the title an the name of the JavaScript file can be changed.</li>
+<li>A JavaScript file with the name of LC_NAME is created with the main p5.js code.  It should work without changes in the p5.js editor</li>
+<li>The p5.js code follows explicit rules described in the p5-js-microsim-rules.md file</li>
+<li>An index.md file is crated from the index-template.md file.  This contains an iframe that references the main.html file as the src.</li>
+<li>A metadata.json files is created that stores Dublin Core and other data for MicroSim search engines</li>
 </ol>
-<h3 id="step-2-concept-graph-generation-steps">Step 2: Concept Graph Generation Steps</h3>
-<ol>
-<li>A file called 02-concept-list-v1.md will generated.  It will contain 200 pedagogically-sound concept labels in a numbered markdown list format</li>
-<li>After the skill generate the concept list file, it will  ask the user to review the list for accuracy.  At this point the user should remove any concepts that should not be covered and add any missing concepts to the list.</li>
-<li>A directed acyclic graph (DAG) file in csv format will be generated, 
-12 element taxonomy for classification.  It will contain the list generated in step 1 above but it will also concent concept dependencies for each concept.  The file will be called 03-concept-dependencies.csv</li>
-<li>Maps prerequisite dependencies as a Directed Acyclic Graph (DAG)
- ✅ Validates quality with cycle detection, orphan analysis, and connectivity checks
- ✅ Creates a taxonomy with ~12 balanced categories
- ✅ Produces distribution reports and JSON export for visualization</li>
-</ol>
-<p>The workflow:
- 1️⃣ Analyzes your course description for depth and breadth
- 2️⃣ Generates concept labels (Title Case, under 32 chars)
- 3️⃣ Maps meaningful learning pathways (not just linear chains!)
- 4️⃣ Validates graph quality with Python analysis tools
- 5️⃣ Categorizes concepts with balanced taxonomy
- 6️⃣ Exports everything ready for visualization</p>
-<p>Perfect for educators, instructional designers, and anyone building structured
- learning content. The skill ensures your learning graph has strong foundational
- concepts, clear prerequisites, and multiple pathways through the material.</p>
 
 
 
