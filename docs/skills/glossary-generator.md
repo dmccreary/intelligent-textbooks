@@ -31,6 +31,7 @@ This skill should be executed after the Learning Graph skill has completed and t
 - Below 50: Significant issues - PROMPT USER for manual review
 
 **Quality Checks:**
+
 1. Verify no duplicate concept labels (100% unique)
 2. Check Title Case formatting (target: 95%+)
 3. Validate length constraints (target: 98% under 32 chars)
@@ -67,6 +68,7 @@ This skill should be executed after the Learning Graph skill has completed and t
 - **Non-circularity** (25 points): No definition references undefined terms or creates circular dependencies
 
 **Quality Checks Performed:**
+
 1. ISO 11179 compliance validation (all 4 criteria)
 2. Readability score (Flesch-Kincaid grade level appropriate for audience)
 3. Example coverage (target: 60-80% of terms include examples)
