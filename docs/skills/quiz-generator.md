@@ -68,6 +68,22 @@ The quiz generator analyzes chapter content to create contextually relevant ques
 
 ## Outputs
 
+Make sure to use the question admonition for each question.
+
+```markdown
+#### 1. Question test in a full sentence with a question mark?
+
+<div class="upper-alpha" markdown>
+1. Answer 1 text
+2. Answer 2 text
+3. Answer 3 text
+4. Answer 3 text
+</div>
+
+??? question "Show Answer"
+    The correct answer is **X**. Detailed explanation of answer here.
+```
+
 ### Generated Files
 
 For each chapter:
