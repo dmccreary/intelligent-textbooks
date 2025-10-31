@@ -27,6 +27,6 @@ This section is an overview of some of the workflows we use to generate intellig
 
 #### [Lists, Tables, Charts and Plots](./lists-tables-charts--plots.md)
 
-#### [Interactive Infographics](.)
+#### [Interactive Infographics](./infographics.md)
 
-#### [Glossary of Terms]
+#### [Glossary of Terms](./glossary.md)
