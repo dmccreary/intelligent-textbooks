@@ -111,11 +111,21 @@ nav:
     - Quality Metrics: prompts/quality-metrics.md
     - Discord Admin: prompts/discord-admin.md
     - Terms to EKG: prompts/terms-to-ekg/index.md
+    - Suggest Skills: prompts/suggest-skills.md
+
   
   - Skills:
     - Introduction: skills/index.md
     - Learning Graph: skills/learning-graph.md
     - MicroSims: skills/microsim-p5.md
+    - Chapter Generator: skills/chapter-generator.md
+    - Concept Validator: skills/concept-validator.md
+    - FAQ Generator: skills/faq-generator.md
+    - Glossary Generator: skills/glossary-generator.md
+    - Quality Metrics Analyzer: skills/quality-metrics-analyzer.md
+    - Quiz Generator: skills/quiz-generator.md
+    - Recommended Skill Summary: skills/recommended-skills-summary.md
+    - Social Media Generator: skills/social-media-generator.md
     - Template: skills/template.md
   - Formatting Tests:
     - Introduction: formatting-tests/index.md
