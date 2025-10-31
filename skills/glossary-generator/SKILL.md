@@ -12,9 +12,13 @@ Generate a comprehensive glossary of terms from a learning graph's concept list 
 
 This skill automates glossary creation for intelligent textbooks by converting concept labels from a learning graph into properly formatted glossary definitions. Each definition follows ISO 11179 metadata registry standards: precise, concise, distinct, non-circular, and free of business rules. The skill ensures consistency across terminology, validates cross-references, and produces alphabetically ordered entries with relevant examples.
 
+Following a short definition you may provide a discussion of why the term is important in the textbook and an example of how the term is used.
+
 ## When to Use This Skill
 
-Use this skill after the Learning Graph skill has completed and the concept list has been finalized. The glossary relies on having a complete, reviewed list of concepts from the learning graph's concept enumeration phase. Specifically, trigger this skill when:
+Use this skill after the Learning Graph skill has completed and the concept list has been finalized.  All markdown content in the /docs area can also be scanned looking for words or phases that might not be clear to the average high-school student.
+
+The glossary relies on having a complete, reviewed list of concepts from the learning graph's concept enumeration phase. Specifically, trigger this skill when:
 
 - A concept list file exists (typically `docs/learning-graph/02-concept-list-v1.md`)
 - The concept list has been reviewed and approved
@@ -48,7 +52,7 @@ Calculate a quality score (1-100 scale):
 
 ### Step 2: Read Course Context
 
-Read the course description file (`docs/course-description.md`) to understand:
+Read the course description file (`docs/course-description.md`) and any other markdonw files in `/docs/**/*.md` to understand:
 
 - Target audience (for appropriate example complexity)
 - Course objectives (for terminology alignment)
@@ -91,6 +95,9 @@ For a concept "Learning Graph":
 #### Learning Graph
 
 A directed graph of concepts that reflects the order that concepts should be learned to master a new concept.
+
+Learning graphs are the foundational data structure use for intelligent textbooks.  They are used to guide
+intelligent agents and recommend learning paths for students.
 
 **Example:** In a programming course, the learning graph shows that "Variables" must be understood before "Functions," which must be understood before "Recursion."
 ```

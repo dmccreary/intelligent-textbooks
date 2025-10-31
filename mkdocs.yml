@@ -112,6 +112,9 @@ nav:
     - Discord Admin: prompts/discord-admin.md
     - Terms to EKG: prompts/terms-to-ekg/index.md
     - Suggest Skills: prompts/suggest-skills.md
+    - Generate Glosssary Skill: prompts/generate-glossary-skill.md
+    - Generate FAQ Skill: prompts/generate-faq-skill.md
+    - Generate Quiz Skill: prompts/generate-quiz-skill.md
 
   
   - Skills:
