@@ -6,18 +6,21 @@ This skill converts a course description into a concept dependency graph called 
 Learning graphs provide a roadmap of concept learning order for a course.  
 Learning graphs are foundational data structures for recommending concent for a student.
 
+## Order
 
-## Details
+The skill should be called after a draft of the /docs/course-description.md is available
 
 Output will be placed in the folder /docs/learning-graph unless the prompt contains an override location.
 
-### Skill Input Course Description Analysis
+The learniing graph should be created before chapter content is generated.
+
+## Step 1: Skill Input Course Description Analysis
 
 1. The input is a detailed course description with Bloom Taxonomy outcomes.
 2. The skill will first look in the file /docs/course-description.md to find the content.
 3. A series of quality checks will be performed on the course-description file.  It will look for key elements such as title, audience, prerequisites, course duration, and outcomes.  It will use the 2001 Bloom taxonomy as a way to measure different types of objectives (remember, understand, apply, analyze, evaluate and create).  It will then create a quality score which is a scale of 1 to 100 and generate a report called 01-course-description-quality-checks.md.  This file may also have suggestions on how the course-description can be improved.
 
-### Concept Graph Generation Steps
+### Step 2: Concept Graph Generation Steps
 
 1. A file called 02-concept-list-v1.md will generated.  It will contain 200 pedagogically-sound concept labels in a numbered markdown list format
 1. After the skill generate the concept list file, it will  ask the user to review the list for accuracy.  At this point the user should remove any concepts that should not be covered and add any missing concepts to the list.
