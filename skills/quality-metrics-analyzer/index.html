@@ -1,0 +1,1687 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/skills/quality-metrics-analyzer/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quality Metrics Analyzer Skill - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Quality Metrics Analyzer Skill - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/quality-metrics-analyzer.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/skills/quality-metrics-analyzer/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Quality Metrics Analyzer Skill - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/quality-metrics-analyzer.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quality-metrics-analyzer-skill" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quality Metrics Analyzer Skill
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Input Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Input Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-quality-metrics-scale-1-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Quality Metrics (Scale 1-100)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-metrics-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Metrics Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-quality-metrics-scale-1-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Quality Metrics (Scale 1-100)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Quality Metrics (Scale 1-100)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-content-structure-metrics-25-points-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Content Structure Metrics (25 points total)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-engagement-features-metrics-25-points-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Engagement Features Metrics (25 points total)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-technical-quality-metrics-25-points-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Technical Quality Metrics (25 points total)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-educational-effectiveness-metrics-25-points-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Educational Effectiveness Metrics (25 points total)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-metrics-collected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Metrics Collected
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-checks-performed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Checks Performed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Criteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend-analysis-if-historical-data-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Analysis (if historical data available)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/skills/quality-metrics-analyzer.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quality-metrics-analyzer-skill">Quality Metrics Analyzer Skill</h1>
+<h2 id="summary">Summary</h2>
+<p>This skill performs comprehensive quality analysis of an intelligent textbook, generating detailed metrics reports covering content structure, engagement features, technical implementation, and educational effectiveness to guide continuous improvement.</p>
+<h2 id="order">Order</h2>
+<p>This skill should be executed:
+1. <strong>During development</strong>: After major milestones (learning graph, chapters, MicroSims)
+2. <strong>Before deployment</strong>: As final quality gate before publishing
+3. <strong>Periodically</strong>: Monthly or quarterly for mature textbooks
+4. <strong>On demand</strong>: When investigating specific quality concerns</p>
+<p>The analyzer can run at any stage but provides most value when substantial content exists (minimum: course description, learning graph, and 5+ chapters).</p>
+<h2 id="inputs">Inputs</h2>
+<h3 id="primary-input-files">Primary Input Files</h3>
+<ol>
+<li><strong>Complete Textbook Repository</strong> (entire <code>docs/</code> directory)</li>
+<li>All markdown files</li>
+<li>All MicroSims</li>
+<li>Images and assets</li>
+<li>
+<p>Quality check: Valid mkdocs project structure</p>
+</li>
+<li>
+<p><strong>Configuration File</strong> (<code>mkdocs.yml</code>)</p>
+</li>
+<li>Site structure and navigation</li>
+<li>Theme settings</li>
+<li>Plugin configuration</li>
+<li>
+<p>Quality check: Valid YAML, all referenced files exist</p>
+</li>
+<li>
+<p><strong>Learning Graph</strong> (<code>docs/learning-graph/</code> directory)</p>
+</li>
+<li>Concept dependencies CSV</li>
+<li>Taxonomy CSV</li>
+<li>Quality reports from other skills</li>
+<li>
+<p>Quality check: Files exist and are valid</p>
+</li>
+<li>
+<p><strong>Glossary</strong> (<code>docs/glossary.md</code>)</p>
+</li>
+<li>
+<p>Quality check: Alphabetically ordered, valid markdown</p>
+</li>
+<li>
+<p><strong>MicroSims</strong> (<code>docs/sims/*/</code>)</p>
+</li>
+<li>All simulation directories</li>
+<li>Quality check: Each has index.md, main.html, and .js file</li>
+</ol>
+<h3 id="optional-input-files">Optional Input Files</h3>
+<ol>
+<li><strong>Analytics Data</strong> (if available)</li>
+<li>Google Analytics export</li>
+<li>User engagement metrics</li>
+<li>
+<p>Page view statistics</p>
+</li>
+<li>
+<p><strong>Previous Quality Reports</strong> (<code>docs/learning-graph/quality-reports/</code>)</p>
+</li>
+<li>Historical metrics for trend analysis</li>
+<li>
+<p>Quality check: Valid JSON format</p>
+</li>
+<li>
+<p><strong>Custom Quality Standards</strong> (<code>docs/quality-standards.json</code>)</p>
+</li>
+<li>Project-specific thresholds</li>
+<li>Custom metrics definitions</li>
+<li>Override default scoring</li>
+</ol>
+<h3 id="input-quality-metrics-scale-1-100">Input Quality Metrics (Scale 1-100)</h3>
+<p><strong>Repository Completeness Score:</strong>
+- 90-100: All expected files present, valid structure
+- 70-89: Core files present, some optional components missing
+- 50-69: Basic structure but missing key components
+- Below 50: Insufficient content for meaningful analysis</p>
+<p><strong>Pre-Analysis Checks:</strong>
+1. Valid mkdocs.yml (required)
+2. At least 10 markdown files (minimum viable content)
+3. Course description exists
+4. Learning graph exists (recommended)
+5. At least 1 MicroSim (for full analysis)</p>
+<p><strong>User Dialog Triggers:</strong>
+- Score &lt; 50: "Limited content detected. Analysis will be incomplete. Continue?"
+- No learning graph: "No learning graph found. Many educational metrics will be unavailable. Proceed with basic analysis?"
+- No MicroSims: "No MicroSims detected. Interactivity metrics will be zero. Continue?"
+- Missing mkdocs.yml: "Invalid mkdocs configuration. Cannot analyze site structure. Fix configuration first?"</p>
+<h2 id="outputs">Outputs</h2>
+<h3 id="primary-report">Primary Report</h3>
+<ol>
+<li><strong><code>docs/quality-report.md</code></strong> - Comprehensive human-readable report</li>
+<li>Executive summary with overall score</li>
+<li>Detailed metrics by category</li>
+<li>Trend analysis (if historical data available)</li>
+<li>Prioritized recommendations for improvement</li>
+<li>Visual charts (using Mermaid diagrams)</li>
+</ol>
+<h3 id="detailed-metrics-files">Detailed Metrics Files</h3>
+<ol>
+<li><strong><code>docs/learning-graph/quality-reports/metrics-[YYYY-MM-DD].json</code></strong> - Machine-readable data</li>
+<li>Timestamp and version</li>
+<li>All metrics with scores</li>
+<li>Raw counts and calculations</li>
+<li>
+<p>Comparison to thresholds</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/quality-reports/content-structure-analysis.md</code></strong></p>
+</li>
+<li>Navigation depth and breadth</li>
+<li>Chapter balance analysis</li>
+<li>Concept coverage matrix</li>
+<li>
+<p>Content hierarchy visualization</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/quality-reports/engagement-analysis.md</code></strong></p>
+</li>
+<li>Interactive element distribution</li>
+<li>MicroSim complexity ratings</li>
+<li>Quiz coverage map</li>
+<li>
+<p>Engagement opportunity gaps</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/quality-reports/technical-quality-analysis.md</code></strong></p>
+</li>
+<li>Build configuration completeness</li>
+<li>Link validation results</li>
+<li>Markdown formatting issues</li>
+<li>Accessibility compliance score</li>
+<li>
+<p>Performance metrics</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/quality-reports/educational-effectiveness-analysis.md</code></strong></p>
+</li>
+<li>Bloom's Taxonomy distribution across textbook</li>
+<li>Scaffolding quality assessment</li>
+<li>Learning graph connectivity metrics</li>
+<li>Prerequisite compliance validation</li>
+</ol>
+<h3 id="output-quality-metrics-scale-1-100">Output Quality Metrics (Scale 1-100)</h3>
+<h4 id="1-content-structure-metrics-25-points-total">1. Content Structure Metrics (25 points total)</h4>
+<p><strong>Navigation Quality (8 points):</strong>
+- Depth: 2-4 levels ideal (8 pts), 1 or 5+ levels (4 pts), 6+ levels (2 pts)
+- Breadth: Balanced sections (5-15 items per level)
+- Orphan pages: 0% = 8 pts, 1-5% = 6 pts, 6-10% = 4 pts, &gt;10% = 2 pts</p>
+<p><strong>Content Balance (8 points):</strong>
+- Chapter word count variance &lt; 30% = 8 pts, 30-50% = 5 pts, &gt;50% = 2 pts
+- Concept distribution: Balanced across chapters = 8 pts
+- Section depth consistency: All chapters similar structure = 8 pts</p>
+<p><strong>Coverage Completeness (9 points):</strong>
+- Learning graph concepts covered: 100% = 9 pts, 90-99% = 7 pts, 80-89% = 5 pts, &lt;80% = 2 pts
+- Glossary coverage: All concepts defined = 9 pts
+- Cross-reference density: 3+ links per page = 9 pts</p>
+<h4 id="2-engagement-features-metrics-25-points-total">2. Engagement Features Metrics (25 points total)</h4>
+<p><strong>Interactive Elements (10 points):</strong>
+- MicroSim distribution: 1 per 3-5 chapters = 10 pts
+- MicroSim quality: Complex controls, multiple visualizations = 10 pts
+- Quiz coverage: 60%+ chapters with quizzes = 10 pts</p>
+<p><strong>Content Variety (8 points):</strong>
+- Admonition usage: 2-5 per chapter = 8 pts
+- Code examples: Present in 70%+ technical chapters = 8 pts
+- Visual elements: Images/diagrams in 60%+ chapters = 8 pts</p>
+<p><strong>Practice Opportunities (7 points):</strong>
+- Exercise density: 1 per 1000 words = 7 pts
+- Example quality: Relevant, clear, diverse = 7 pts
+- Challenge problems: Progressive difficulty = 7 pts</p>
+<h4 id="3-technical-quality-metrics-25-points-total">3. Technical Quality Metrics (25 points total)</h4>
+<p><strong>Build Configuration (8 points):</strong>
+- Complete mkdocs.yml: All required fields = 8 pts
+- Theme properly configured = 8 pts
+- Plugins correctly enabled = 8 pts
+- Navigation matches file structure 100% = 8 pts</p>
+<p><strong>Code Quality (9 points):</strong>
+- All internal links valid = 9 pts
+- No markdown syntax errors = 9 pts
+- Proper heading hierarchy = 9 pts
+- Consistent formatting = 9 pts</p>
+<p><strong>Production Readiness (8 points):</strong>
+- Analytics configured = 8 pts
+- Social media previews enabled = 8 pts
+- Logo and favicon present = 8 pts
+- License specified = 8 pts
+- Search enabled = 8 pts</p>
+<h4 id="4-educational-effectiveness-metrics-25-points-total">4. Educational Effectiveness Metrics (25 points total)</h4>
+<p><strong>Bloom's Taxonomy Alignment (10 points):</strong>
+- Distribution matches course level (introductory vs advanced)
+- Progressive cognitive levels across chapters
+- Higher-order thinking in appropriate places
+- Target: 20% Remember, 30% Understand, 25% Apply, 15% Analyze, 7% Evaluate, 3% Create</p>
+<p><strong>Scaffolding Quality (10 points):</strong>
+- 100% prerequisite compliance = 10 pts
+- Clear concept progression = 10 pts
+- No circular dependencies = 10 pts (required)
+- Appropriate concept spacing (not too dense) = 10 pts</p>
+<p><strong>Learning Support (5 points):</strong>
+- Glossary completeness = 5 pts
+- FAQ addresses common confusion points = 5 pts
+- Examples clarify difficult concepts = 5 pts
+- Multiple explanation approaches for key ideas = 5 pts</p>
+<h3 id="detailed-metrics-collected">Detailed Metrics Collected</h3>
+<p><strong>Quantitative Metrics:</strong>
+- Total markdown files: [count]
+- Total word count: [count]
+- Average words per page: [count]
+- Total images: [count]
+- Total MicroSims: [count]
+- Glossary terms: [count]
+- Learning graph concepts: [count]
+- Code blocks: [count]
+- Admonitions: [count] (by type)
+- Internal links: [count]
+- External links: [count]
+- Quiz questions: [count]</p>
+<p><strong>Structural Metrics:</strong>
+- Navigation depth: [levels]
+- Navigation breadth: [avg items/level]
+- Chapter count: [count]
+- Average chapter length: [words]
+- Word count variance: [%]
+- Orphaned pages: [count]</p>
+<p><strong>Educational Metrics:</strong>
+- Bloom's Taxonomy distribution: [% by level]
+- Concept coverage: [%]
+- Prerequisite compliance: [%]
+- Scaffolding score: [0-100]
+- Learning graph connectivity: [avg edges/node]
+- Orphaned concepts: [count]</p>
+<p><strong>Engagement Metrics:</strong>
+- MicroSim density: [sims per chapter]
+- Interactive element diversity: [types used]
+- Quiz coverage: [% chapters with quizzes]
+- Exercise density: [exercises per 1000 words]
+- Example coverage: [% concepts with examples]
+- Admonition density: [per chapter]</p>
+<p><strong>Technical Metrics:</strong>
+- Broken internal links: [count]
+- Broken external links: [count]
+- Markdown syntax errors: [count]
+- Heading hierarchy violations: [count]
+- Missing alt text: [count images]
+- Build configuration score: [0-100]
+- Analytics configured: [yes/no]
+- Mobile responsive: [yes/no]</p>
+<h3 id="quality-checks-performed">Quality Checks Performed</h3>
+<ol>
+<li><strong>Link Validation</strong>: All internal and external links tested</li>
+<li><strong>Markdown Linting</strong>: Syntax errors, formatting inconsistencies</li>
+<li><strong>Learning Graph Analysis</strong>: Cycle detection, connectivity, orphan identification</li>
+<li><strong>Prerequisite Validation</strong>: Concepts only after dependencies</li>
+<li><strong>Glossary Cross-check</strong>: All terms properly defined</li>
+<li><strong>Navigation Validation</strong>: All nav entries point to existing files</li>
+<li><strong>MicroSim Validation</strong>: All required files present, proper structure</li>
+<li><strong>Bloom's Distribution</strong>: Compared against ideal distribution</li>
+<li><strong>Readability Analysis</strong>: Flesch-Kincaid scores by chapter</li>
+<li><strong>Accessibility Audit</strong>: Alt text, heading structure, semantic markup</li>
+</ol>
+<h3 id="recommendations-engine">Recommendations Engine</h3>
+<p>The skill generates prioritized, actionable recommendations:</p>
+<p><strong>Critical (Fix Immediately):</strong>
+- Broken build configuration
+- Circular dependencies in learning graph
+- Missing prerequisite concepts
+- Broken internal links</p>
+<p><strong>High Priority (Fix Soon):</strong>
+- Orphaned concepts
+- Unbalanced chapter sizes
+- Missing glossary terms
+- Poor Bloom's distribution</p>
+<p><strong>Medium Priority (Improve Quality):</strong>
+- Add more examples
+- Increase MicroSim coverage
+- Improve scaffolding
+- Add more quizzes</p>
+<p><strong>Low Priority (Nice to Have):</strong>
+- Add more admonitions
+- Enhance social previews
+- Add more cross-references
+- Improve visual elements</p>
+<h3 id="success-criteria">Success Criteria</h3>
+<p><strong>Overall Quality Grades:</strong>
+- 90-100: Excellent - Publication ready
+- 80-89: Good - Minor improvements recommended
+- 70-79: Adequate - Several improvements needed
+- 60-69: Fair - Significant work required
+- Below 60: Poor - Major revision needed</p>
+<p><strong>Minimum Thresholds for "Publication Ready":</strong>
+- No critical issues (broken links, build errors)
+- Learning graph valid (no cycles)
+- 80%+ concept coverage
+- 70%+ Bloom's alignment score
+- 75%+ technical quality score
+- At least 1 MicroSim per 5 chapters
+- Complete glossary
+- All navigation items valid</p>
+<h3 id="trend-analysis-if-historical-data-available">Trend Analysis (if historical data available)</h3>
+<p>Compares current metrics to previous reports:
+- Quality score trajectory
+- Content growth rate
+- Improvement areas
+- Regression detection
+- Velocity metrics (content added per month)</p>
+<h3 id="export-formats">Export Formats</h3>
+<p>The quality report can be exported as:
+1. Markdown (default)
+2. JSON (for programmatic analysis)
+3. CSV (for spreadsheet analysis)
+4. HTML (standalone report)
+5. PDF (for sharing with stakeholders)</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

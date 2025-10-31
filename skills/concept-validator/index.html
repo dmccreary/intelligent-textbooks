@@ -1,0 +1,1830 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/skills/concept-validator/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Concept Validator Skill - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Concept Validator Skill - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/concept-validator.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/skills/concept-validator/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Concept Validator Skill - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/concept-validator.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#concept-validator-skill" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Concept Validator Skill
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Input Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Input Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-quality-metrics-scale-1-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Quality Metrics (Scale 1-100)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-validation-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Validation Report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-analysis-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Analysis Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-quality-metrics-scale-1-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Quality Metrics (Scale 1-100)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Quality Metrics (Scale 1-100)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall-concept-health-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overall Concept Health Score
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concept-coverage-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Coverage Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-checks-performed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Checks Performed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-analysis-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gap Analysis Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Reports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend-analysis-if-historical-data-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Analysis (if historical data available)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Criteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediation-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation Planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Outputs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/skills/concept-validator.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="concept-validator-skill">Concept Validator Skill</h1>
+<h2 id="summary">Summary</h2>
+<p>This skill validates that all concepts in the learning graph are properly integrated throughout the textbook, checking for coverage in chapters, glossary definitions, quiz questions, and MicroSims, while identifying gaps and ensuring pedagogical consistency across the entire educational resource.</p>
+<h2 id="order">Order</h2>
+<p>This skill should be executed:
+1. After learning graph is complete
+2. After initial chapter content generation
+3. Before glossary finalization
+4. Periodically during content development (every 10-15 chapters)
+5. As final validation before publication</p>
+<p>The validator cross-references all textbook components, so it requires the learning graph and at least some content to be meaningful. It's most valuable as a quality gate at key milestones.</p>
+<h2 id="inputs">Inputs</h2>
+<h3 id="primary-input-files">Primary Input Files</h3>
+<ol>
+<li><strong>Learning Graph</strong> (<code>docs/learning-graph/03-concept-dependencies.csv</code>)</li>
+<li>Complete list of concepts to validate</li>
+<li>Prerequisite relationships for scaffolding checks</li>
+<li>
+<p>Quality check: Valid DAG structure, no cycles</p>
+</li>
+<li>
+<p><strong>Concept Taxonomy</strong> (<code>docs/learning-graph/04-concept-taxonomy.csv</code>)</p>
+</li>
+<li>Concept categorization for organizational checks</li>
+<li>
+<p>Quality check: All concepts categorized</p>
+</li>
+<li>
+<p><strong>All Chapter Content</strong> (<code>docs/**/*.md</code>)</p>
+</li>
+<li>Source of concept explanations</li>
+<li>
+<p>Quality check: Meaningful content exists (not just stubs)</p>
+</li>
+<li>
+<p><strong>Glossary</strong> (<code>docs/glossary.md</code>)</p>
+</li>
+<li>Concept definitions</li>
+<li>
+<p>Quality check: Alphabetically ordered, valid markdown</p>
+</li>
+<li>
+<p><strong>Quiz Files</strong> (<code>docs/**/quiz.md</code> or <code>*-quiz.md</code>)</p>
+</li>
+<li>Assessment coverage</li>
+<li>
+<p>Quality check: Valid quiz format</p>
+</li>
+<li>
+<p><strong>MicroSims</strong> (<code>docs/sims/*/index.md</code>)</p>
+</li>
+<li>Interactive concept demonstrations</li>
+<li>Quality check: All MicroSims functional</li>
+</ol>
+<h3 id="optional-input-files">Optional Input Files</h3>
+<ol>
+<li><strong>Course Description</strong> (<code>docs/course-description.md</code>)</li>
+<li>Learning objectives for alignment checking</li>
+<li>
+<p>Quality check: Contains Bloom's Taxonomy outcomes</p>
+</li>
+<li>
+<p><strong>FAQ</strong> (<code>docs/faq.md</code>)</p>
+</li>
+<li>Student support coverage</li>
+<li>
+<p>Quality check: Questions mapped to concepts</p>
+</li>
+<li>
+<p><strong>Previous Validation Reports</strong> (<code>docs/learning-graph/validation-reports/</code>)</p>
+</li>
+<li>Historical data for trend analysis</li>
+<li>Quality check: Valid JSON format</li>
+</ol>
+<h3 id="input-quality-metrics-scale-1-100">Input Quality Metrics (Scale 1-100)</h3>
+<p><strong>Validation Readiness Score:</strong>
+- 90-100: All inputs present, substantial content for all concepts
+- 70-89: Most inputs present, some concepts have limited coverage
+- 50-69: Basic inputs present, many concepts lack comprehensive coverage
+- Below 50: Critical inputs missing or insufficient content</p>
+<p><strong>Pre-Validation Checks:</strong>
+1. Learning graph validity (required: no cycles)
+2. Minimum content threshold (recommended: 50+ markdown files)
+3. Glossary exists (recommended)
+4. At least 1 quiz (recommended)
+5. At least 1 MicroSim (recommended)</p>
+<p><strong>User Dialog Triggers:</strong>
+- Score &lt; 50: "Insufficient content for meaningful validation. Minimum requirements not met. Continue with limited validation?"
+- No glossary: "No glossary found. Concept definition validation will be skipped. Proceed?"
+- No quizzes: "No quizzes detected. Assessment coverage validation will be skipped. Continue?"
+- Learning graph invalid: "Learning graph has cycles or errors. Fix before validation?"</p>
+<h2 id="outputs">Outputs</h2>
+<h3 id="primary-validation-report">Primary Validation Report</h3>
+<ol>
+<li><strong><code>docs/learning-graph/validation-report.md</code></strong> - Comprehensive human-readable report</li>
+<li>Executive summary with overall health score</li>
+<li>Concept coverage matrix</li>
+<li>Gap analysis by category</li>
+<li>Prioritized remediation recommendations</li>
+<li>Trend charts (if historical data available)</li>
+</ol>
+<h3 id="detailed-analysis-files">Detailed Analysis Files</h3>
+<ol>
+<li><strong><code>docs/learning-graph/validation-reports/validation-[YYYY-MM-DD].json</code></strong> - Machine-readable results</li>
+<li>Timestamp and version</li>
+<li>Per-concept validation scores</li>
+<li>Coverage metrics across all components</li>
+<li>Gap identification</li>
+<li>
+<p>Comparison to previous validations</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/concept-coverage-matrix.csv</code></strong> - Detailed matrix</p>
+</li>
+<li>Columns: Concept, Chapter, Glossary, Quiz, MicroSim, FAQ, Overall_Score</li>
+<li>Rows: One per concept from learning graph</li>
+<li>
+<p>Values: ✓ (covered), ✗ (missing), ⚠ (partial), or coverage percentage</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/gap-analysis.md</code></strong> - Actionable gaps list</p>
+</li>
+<li><strong>Critical gaps</strong>: Concepts with &lt;40% coverage</li>
+<li><strong>High priority gaps</strong>: Concepts with 40-60% coverage</li>
+<li><strong>Medium priority gaps</strong>: Concepts with 60-80% coverage</li>
+<li>
+<p><strong>Enhancement opportunities</strong>: Concepts with &gt;80% coverage but room for improvement</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/scaffolding-validation.md</code></strong> - Prerequisite compliance</p>
+</li>
+<li>Prerequisites taught before dependent concepts?</li>
+<li>Concept spacing appropriate (not too dense)?</li>
+<li>Forward/backward references proper?</li>
+<li>
+<p>Circular dependency warnings</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/consistency-report.md</code></strong> - Terminology consistency</p>
+</li>
+<li>Concept labels used consistently across components</li>
+<li>Synonym usage patterns</li>
+<li>Terminology conflicts or ambiguities</li>
+<li>Recommendations for standardization</li>
+</ol>
+<h3 id="output-quality-metrics-scale-1-100">Output Quality Metrics (Scale 1-100)</h3>
+<h4 id="overall-concept-health-score">Overall Concept Health Score</h4>
+<p>The validator generates a comprehensive health score based on multiple dimensions:</p>
+<p><strong>1. Coverage Completeness (40 points)</strong></p>
+<p>Per-concept scoring:
+- <strong>Chapter coverage</strong> (15 pts): Concept explained in chapter content
+  - Substantial explanation (500+ words): 15 pts
+  - Moderate explanation (200-499 words): 10 pts
+  - Brief mention (&lt;200 words): 5 pts
+  - Not mentioned: 0 pts</p>
+<ul>
+<li><strong>Glossary coverage</strong> (10 pts): Concept defined in glossary</li>
+<li>ISO 11179 compliant definition: 10 pts</li>
+<li>Adequate definition: 7 pts</li>
+<li>Weak definition: 4 pts</li>
+<li>
+<p>Missing: 0 pts</p>
+</li>
+<li>
+<p><strong>Assessment coverage</strong> (10 pts): Concept tested in quizzes</p>
+</li>
+<li>Multiple quiz questions: 10 pts</li>
+<li>One quiz question: 7 pts</li>
+<li>
+<p>Not tested: 0 pts</p>
+</li>
+<li>
+<p><strong>Interactive coverage</strong> (5 pts): Concept demonstrated in MicroSim</p>
+</li>
+<li>Dedicated MicroSim: 5 pts</li>
+<li>Included in MicroSim: 3 pts</li>
+<li>Not demonstrated: 0 pts</li>
+</ul>
+<p><strong>2. Pedagogical Quality (30 points)</strong></p>
+<ul>
+<li><strong>Scaffolding compliance</strong> (15 pts): Prerequisites taught before concept</li>
+<li>100% prerequisites covered earlier: 15 pts</li>
+<li>80-99% prerequisites covered: 12 pts</li>
+<li>60-79% prerequisites covered: 8 pts</li>
+<li>
+<p>&lt;60% prerequisites covered: 0 pts (critical issue)</p>
+</li>
+<li>
+<p><strong>Bloom's Taxonomy alignment</strong> (10 pts): Concept taught at appropriate cognitive level</p>
+</li>
+<li>Perfect alignment with course objectives: 10 pts</li>
+<li>Good alignment: 7 pts</li>
+<li>
+<p>Misaligned (too simple or too complex): 3 pts</p>
+</li>
+<li>
+<p><strong>Example quality</strong> (5 pts): Concrete examples provided</p>
+</li>
+<li>Multiple diverse examples: 5 pts</li>
+<li>One good example: 3 pts</li>
+<li>No examples: 0 pts</li>
+</ul>
+<p><strong>3. Consistency &amp; Integration (20 points)</strong></p>
+<ul>
+<li><strong>Terminology consistency</strong> (10 pts): Same labels used across components</li>
+<li>100% consistent: 10 pts</li>
+<li>Minor variations: 7 pts</li>
+<li>
+<p>Significant inconsistencies: 3 pts</p>
+</li>
+<li>
+<p><strong>Cross-referencing</strong> (5 pts): Concept linked between components</p>
+</li>
+<li>Well-integrated with links: 5 pts</li>
+<li>Some links: 3 pts</li>
+<li>
+<p>Isolated: 0 pts</p>
+</li>
+<li>
+<p><strong>Context appropriateness</strong> (5 pts): Concept appears in right sections</p>
+</li>
+<li>Optimal placement: 5 pts</li>
+<li>Acceptable placement: 3 pts</li>
+<li>Misplaced: 0 pts</li>
+</ul>
+<p><strong>4. Support &amp; Accessibility (10 points)</strong></p>
+<ul>
+<li><strong>FAQ coverage</strong> (5 pts): Common questions addressed</li>
+<li>FAQ entry exists: 5 pts</li>
+<li>Partially addressed: 3 pts</li>
+<li>
+<p>Not in FAQ: 0 pts</p>
+</li>
+<li>
+<p><strong>Multiple modalities</strong> (5 pts): Concept explained in different ways</p>
+</li>
+<li>3+ modalities (text, visual, interactive, assessment): 5 pts</li>
+<li>2 modalities: 3 pts</li>
+<li>1 modality: 1 pt</li>
+</ul>
+<h3 id="concept-coverage-categories">Concept Coverage Categories</h3>
+<p>Based on overall score, concepts are categorized:</p>
+<ul>
+<li><strong>Excellent (85-100)</strong>: Comprehensive coverage, ready for publication</li>
+<li><strong>Good (70-84)</strong>: Solid coverage, minor enhancements possible</li>
+<li><strong>Adequate (55-69)</strong>: Basic coverage, improvements recommended</li>
+<li><strong>Insufficient (40-54)</strong>: Significant gaps, remediation needed</li>
+<li><strong>Critical Gap (&lt;40)</strong>: Major deficiency, immediate attention required</li>
+</ul>
+<h3 id="validation-checks-performed">Validation Checks Performed</h3>
+<p><strong>1. Coverage Validation:</strong>
+- ✓ Every concept from learning graph mentioned in at least one chapter
+- ✓ Every concept has glossary definition
+- ✓ Core concepts (high centrality in graph) tested in quizzes
+- ✓ Complex concepts have MicroSim demonstrations
+- ✓ Difficult concepts addressed in FAQ</p>
+<p><strong>2. Scaffolding Validation:</strong>
+- ✓ Prerequisite concepts always introduced before dependent concepts
+- ✓ No circular dependencies in presentation order
+- ✓ Concept density appropriate (not too many new concepts per chapter)
+- ✓ Forward references include links to upcoming content
+- ✓ Review of prerequisites at chapter beginnings</p>
+<p><strong>3. Consistency Validation:</strong>
+- ✓ Concept labels match exactly across all components
+- ✓ Definitions align between glossary and chapter explanations
+- ✓ Examples don't contradict each other
+- ✓ Terminology usage consistent
+- ✓ No concept presented with conflicting difficulty levels</p>
+<p><strong>4. Quality Validation:</strong>
+- ✓ Glossary definitions meet ISO 11179 standards
+- ✓ Chapter explanations appropriate depth for concept importance
+- ✓ Quiz questions at right Bloom's level for concept
+- ✓ MicroSims effectively demonstrate concept
+- ✓ Examples clear and relevant</p>
+<p><strong>5. Integration Validation:</strong>
+- ✓ Cross-references between components exist
+- ✓ Glossary terms linked from chapters
+- ✓ Quiz questions reference chapter sections
+- ✓ MicroSims embedded in relevant chapters
+- ✓ FAQ answers link to detailed explanations</p>
+<p><strong>6. Accessibility Validation:</strong>
+- ✓ Multiple learning pathways to each concept
+- ✓ Varied presentation styles (visual, textual, interactive)
+- ✓ Support materials for difficult concepts
+- ✓ Alternative explanations available
+- ✓ Practice opportunities for key concepts</p>
+<h3 id="gap-analysis-categories">Gap Analysis Categories</h3>
+<p><strong>Critical Gaps (Immediate Action Required):</strong>
+1. <strong>Orphaned concepts</strong>: In learning graph but not in any chapter
+2. <strong>Undefined concepts</strong>: No glossary definition
+3. <strong>Prerequisite violations</strong>: Concept before its prerequisites
+4. <strong>Circular dependencies</strong>: Concepts depending on each other</p>
+<p><strong>High Priority Gaps:</strong>
+1. <strong>Untested core concepts</strong>: Important concepts without quiz questions
+2. <strong>Unexplained concepts</strong>: Mentioned but not explained
+3. <strong>Missing examples</strong>: Abstract concepts without concrete examples
+4. <strong>Inconsistent terminology</strong>: Same concept with different labels</p>
+<p><strong>Medium Priority Gaps:</strong>
+1. <strong>Limited interactivity</strong>: Complex concepts without MicroSims
+2. <strong>Single modality</strong>: Concepts only explained one way
+3. <strong>Weak definitions</strong>: Glossary entries not meeting ISO standards
+4. <strong>Missing cross-references</strong>: Isolated content without links</p>
+<p><strong>Enhancement Opportunities:</strong>
+1. <strong>Add alternative explanations</strong>: Multiple approaches to difficult topics
+2. <strong>Increase quiz coverage</strong>: More assessment for better learning
+3. <strong>Create MicroSims</strong>: Interactive demonstrations for abstract concepts
+4. <strong>Expand examples</strong>: More diverse, real-world examples</p>
+<h3 id="detailed-reports">Detailed Reports</h3>
+<p><strong>Per-Concept Analysis:</strong></p>
+<p>For each concept, the report includes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">### Concept: [Concept Name]</span>
+
+<span class="gs">**Overall Score**</span>: 78/100 (Good)
+
+<span class="gs">**Coverage:**</span>
+<span class="k">-</span><span class="w"> </span>Chapter: ✓ Explained in Chapter 5, Section 3 (350 words)
+<span class="k">-</span><span class="w"> </span>Glossary: ✓ ISO 11179 compliant definition
+<span class="k">-</span><span class="w"> </span>Quiz: ✓ 2 questions (Apply level)
+<span class="k">-</span><span class="w"> </span>MicroSim: ⚠ Partially demonstrated in &quot;Learning Graph&quot; sim
+<span class="k">-</span><span class="w"> </span>FAQ: ✗ Not addressed
+
+<span class="gs">**Scaffolding:**</span>
+<span class="k">-</span><span class="w"> </span>Prerequisites: ✓ All 3 prerequisites covered in earlier chapters
+<span class="k">-</span><span class="w"> </span>Placement: ✓ Appropriate position in learning sequence
+<span class="k">-</span><span class="w"> </span>Spacing: ✓ Not too dense with related concepts
+
+<span class="gs">**Consistency:**</span>
+<span class="k">-</span><span class="w"> </span>Terminology: ✓ Consistent across all components
+<span class="k">-</span><span class="w"> </span>Cross-references: ✓ Well-integrated with links
+
+<span class="gs">**Recommendations:**</span>
+<span class="k">1.</span> Add dedicated MicroSim for hands-on exploration
+<span class="k">2.</span> Create FAQ entry addressing common confusion
+<span class="k">3.</span> Add one more quiz question at Analyze level
+
+<span class="gs">**Priority**</span>: Medium
+</code></pre></div></td></tr></table></div>
+<h3 id="trend-analysis-if-historical-data-available">Trend Analysis (if historical data available)</h3>
+<p>Tracks improvement over time:
+- Overall health score trajectory
+- Gap reduction rate
+- Coverage improvements by category
+- Component completion progress
+- Concept integration velocity</p>
+<h3 id="success-criteria">Success Criteria</h3>
+<p><strong>Publication Ready Thresholds:</strong>
+- Overall health score &gt; 75
+- No critical gaps
+- &lt;10% concepts with insufficient coverage (&lt;40)
+- 100% prerequisite compliance
+- 90%+ glossary coverage
+- 70%+ quiz coverage for core concepts
+- 30%+ concepts with MicroSims
+- Terminology consistency &gt; 95%</p>
+<p><strong>Quality Gates:</strong>
+- <strong>Alpha release</strong>: Health score &gt; 60, no critical gaps
+- <strong>Beta release</strong>: Health score &gt; 70, &lt;5% insufficient concepts
+- <strong>Production release</strong>: Health score &gt; 75, all criteria above</p>
+<h3 id="remediation-planning">Remediation Planning</h3>
+<p>The validator generates prioritized action items:</p>
+<p><strong>Phase 1 - Critical Fixes (Week 1):</strong>
+1. Add missing concepts to chapters
+2. Create glossary definitions for undefined concepts
+3. Fix prerequisite violations
+4. Resolve circular dependencies</p>
+<p><strong>Phase 2 - High Priority (Weeks 2-3):</strong>
+1. Add quiz questions for untested core concepts
+2. Expand brief concept explanations
+3. Create examples for abstract concepts
+4. Standardize inconsistent terminology</p>
+<p><strong>Phase 3 - Medium Priority (Weeks 4-6):</strong>
+1. Develop MicroSims for complex concepts
+2. Add FAQ entries for difficult topics
+3. Create cross-references between components
+4. Enhance weak glossary definitions</p>
+<p><strong>Phase 4 - Enhancements (Ongoing):</strong>
+1. Add alternative explanations
+2. Increase quiz coverage
+3. Create more MicroSims
+4. Expand example variety</p>
+<h3 id="additional-outputs">Additional Outputs</h3>
+<ol>
+<li><strong><code>docs/learning-graph/concept-importance-analysis.md</code></strong></li>
+<li>Ranks concepts by centrality in learning graph</li>
+<li>Identifies foundational vs. advanced concepts</li>
+<li>
+<p>Suggests where to focus quality improvements</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/terminology-standardization.md</code></strong></p>
+</li>
+<li>Lists all term variations found</li>
+<li>Recommends standard labels</li>
+<li>
+<p>Find-and-replace suggestions</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/cross-reference-suggestions.json</code></strong></p>
+</li>
+<li>Recommended links to add between components</li>
+<li>Structured for automated link insertion</li>
+<li>
+<p>Prioritized by pedagogical value</p>
+</li>
+<li>
+<p><strong><code>docs/learning-graph/coverage-visualization.html</code></strong></p>
+</li>
+<li>Interactive visualization of concept coverage</li>
+<li>Learning graph colored by coverage level</li>
+<li>Clickable nodes showing detailed coverage info</li>
+</ol>
+<h2 id="configuration-options">Configuration Options</h2>
+<p><strong>Validation Depth:</strong>
+- Quick scan (coverage check only)
+- Standard validation (coverage + scaffolding + consistency)
+- Deep validation (all checks + quality assessment)</p>
+<p><strong>Reporting Detail:</strong>
+- Summary only (executive overview)
+- Standard (summary + gap list)
+- Detailed (per-concept analysis)
+- Comprehensive (all reports + visualizations)</p>
+<p><strong>Scope:</strong>
+- All concepts (complete validation)
+- Critical concepts only (fast check)
+- Changed concepts (incremental validation)
+- Specific category (targeted validation)</p>
+<p><strong>Thresholds:</strong>
+- Strict (publication-ready standards)
+- Standard (recommended thresholds)
+- Lenient (early development)
+- Custom (user-defined thresholds)</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1521 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/prompts/suggest-skills/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Suggested Skills - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Suggested Skills - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/prompts/suggest-skills.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/prompts/suggest-skills/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Suggested Skills - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/prompts/suggest-skills.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#suggested-skills" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Suggested Skills
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#skill-suggestion-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Suggestion Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skill Suggestion Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glossary-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary Skill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faq-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ Skill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-content-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Content Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-content-generator_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Content Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz Generator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-media-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Media Generator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/prompts/suggest-skills.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="suggested-skills">Suggested Skills</h1>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>I am now getting pretty good at creating Claude Skills.  I have one skill for 
+creating MicroSims and another skill for creating learning graphs.  Based on all the 
+content in this current intelligent-textbooks GitHub repo, what other skills would you
+recommend?  For each skill, suggest what the inputs and outputs would be.  Suggest 
+quality metrics for both inputs and outputs.  For each skill list the inputs, outputs 
+in level two headers.  Use the template at /docs/skills/template.md for each Skill you
+recommend.</p>
+</div>
+<h2 id="skill-suggestion-response">Skill Suggestion Response</h2>
+<p>I'll analyze the repository to understand the content structure and workflows, then
+  recommend additional Claude Skills based on the patterns I find.</p>
+<p>⏺ Read(docs/skills/template.md)
+  ⎿  Read 23 lines</p>
+<p>⏺ Search(pattern: "docs/skills/*.md")
+  ⎿  Found 4 files (ctrl+o to expand)</p>
+<p>⏺ Read(mkdocs.yml)
+  ⎿  Read 179 lines</p>
+<p>⏺ Read(docs/skills/microsim-p5.md)
+  ⎿  Read 34 lines</p>
+<p>⏺ Read(docs/skills/learning-graph.md)
+  ⎿  Read 45 lines</p>
+<p>⏺ Search(pattern: "docs/workflow/*.md")
+  ⎿  Found 16 files (ctrl+o to expand)</p>
+<p>⏺ Search(pattern: "docs/prompts/*<em>/</em>.md")
+  ⎿  Found 18 files (ctrl+o to expand)</p>
+<p>⏺ Read(docs/workflow/glossary.md)
+  ⎿  Read 28 lines</p>
+<p>⏺ Read(docs/workflow/chapters-and-sections.md)
+  ⎿  Read 7 lines</p>
+<p>⏺ Read(docs/workflow/faq.md)
+  ⎿  Read 7 lines</p>
+<p>⏺ Read(docs/glossary.md)
+  ⎿  Read 338 lines</p>
+<p>⏺ Read(docs/prompts/quality-metrics.md)
+  ⎿  Read 121 lines</p>
+<p>⏺ Search(pattern: "src/*<em>/</em>.py")
+  ⎿  Found 12 files (ctrl+o to expand)</p>
+<p>⏺ Read(docs/faq.md)
+  ⎿  Read 36 lines</p>
+<h3 id="analysis">Analysis</h3>
+<p>Based on my analysis of the repository, I can recommend several additional Claude
+  Skills that would complement your existing MicroSim and Learning Graph skills. Let
+  me create skill documentation for each recommendation using your template.</p>
+<h3 id="glossary-skill">Glossary Skill</h3>
+<p><a href="../../skills/glossary-generator/">Write(docs/skills/glossary-generator.md)</a></p>
+<p>⎿  Wrote 88 lines to docs/skills/glossary-generator.md                           <br />
+     # Glossary Generator Skill
+     ## Summary
+     This skill automatically generates a comprehensive glossary of terms from a
+     learning graph's concept list, ensuring each definition follows ISO 11179
+     metadata registry standards (precise, concise, distinct, non-circular, and free
+     of business rules).
+     ## Order
+     This skill should be executed after the Learning Graph skill has completed and
+     the concept list has been finalized. The glossary relies on having a complete,
+     reviewed list of concepts from the learning graph's concept enumeration phase.
+     … +78 lines (ctrl+o to expand)</p>
+<h3 id="faq-skill">FAQ Skill</h3>
+<p><a href="../../skills/faq-generator/">Write(docs/skills/faq-generator.md)</a>
+  ⎿  Wrote 139 lines to docs/skills/faq-generator.md                               <br />
+     # FAQ Generator Skill
+     ## Summary
+     This skill generates a comprehensive set of Frequently Asked Questions (FAQs)
+     from course content, learning graphs, and glossary terms to help students
+     understand common questions and prepare content for chatbot integration.
+     ## Order
+     This skill should be executed after the following artifacts exist:
+     1. Course description has been finalized
+     … +129 lines (ctrl+o to expand)</p>
+<h3 id="chapter-content-generator">Chapter Content Generator</h3>
+<p>⏺
+<a href="../../skills/chapter-generator/">Write(docs/skills/chapter-generator.md)</a>
+  ⎿  Wrote 206 lines to docs/skills/chapter-generator.md                           <br />
+     # Chapter Content Generator Skill
+     ## Summary
+     This skill generates comprehensive chapter content for an intelligent textbook
+     based on the learning graph, ensuring each chapter covers specific concepts with
+     appropriate scaffolding, examples, and alignment to Bloom's Taxonomy learning
+     outcomes.
+     ## Order
+     This skill should be executed after:
+     1. Learning graph is complete and validated
+     … +196 lines (ctrl+o to expand)</p>
+<h3 id="chapter-content-generator_1">Chapter Content Generator</h3>
+<p><a href="../../skills/quality-metrics-analyzer/">Write(docs/skills/quality-metrics-analyzer.md)</a>
+  ⎿  Wrote 331 lines to docs/skills/quality-metrics-analyzer.md                    <br />
+     # Quality Metrics Analyzer Skill
+     ## Summary
+     This skill performs comprehensive quality analysis of an intelligent textbook,
+     generating detailed metrics reports covering content structure, engagement
+     features, technical implementation, and educational effectiveness to guide
+     continuous improvement.
+     ## Order
+     This skill should be executed:
+     1. <strong>During development</strong>: After major milestones (learning graph, chapters,
+     MicroSims)
+     … +321 lines (ctrl+o to expand)</p>
+<h3 id="quiz-generator">Quiz Generator</h3>
+<p><a href="../../skills/quiz-generator/">Write(docs/skills/quiz-generator.md)</a>
+  ⎿  Wrote 275 lines to docs/skills/quiz-generator.md                              <br />
+     # Quiz Generator Skill
+     ## Summary
+     This skill generates interactive quizzes for each chapter of an intelligent
+     textbook, with questions aligned to specific concepts from the learning graph and
+      distributed across Bloom's Taxonomy cognitive levels to assess student
+     understanding effectively.
+     ## Order
+     This skill should be executed after:
+     1. Chapter content has been generated or written
+     … +265 lines (ctrl+o to expand)</p>
+<h3 id="social-media-generator">Social Media Generator</h3>
+<p><a href="../../skills/social-media-generator/">Write(docs/skills/social-media-generator.md)</a>
+  ⎿  Wrote 412 lines to docs/skills/social-media-generator.md                      <br />
+     # Social Media Content Generator Skill
+     ## Summary
+     This skill generates optimized social media preview images and Open Graph
+     metadata for each page in the intelligent textbook, ensuring attractive,
+     informative previews when pages are shared on social platforms, and creates a
+     social media promotion campaign to increase textbook visibility.
+     ## Order
+     This skill should be executed:
+     1. After chapter content is substantially complete (70%+ chapters written)
+     … +402 lines (ctrl+o to expand)</p>
+<p>Now let me create one more important skill based on the repository patterns I've
+  observed:</p>
+<p><a href="../../skills/concept-validator/">Write(docs/skills/concept-validator.md)</a>
+  ⎿  Wrote 418 lines to docs/skills/concept-validator.md                           <br />
+     # Concept Validator Skill
+     ## Summary
+     This skill validates that all concepts in the learning graph are properly
+     integrated throughout the textbook, checking for coverage in chapters, glossary
+     definitions, quiz questions, and MicroSims, while identifying gaps and ensuring
+     pedagogical consistency across the entire educational resource.
+     ## Order
+     This skill should be executed:
+     1. After learning graph is complete
+     … +408 lines (ctrl+o to expand)</p>
+<p>Perfect! Now let me create a summary document to present all the recommended skills:</p>
+<p><a href="../../skills/recommended-skills-summary/">Write(docs/skills/recommended-skills-summary.md)</a>
+  ⎿  Wrote 442 lines to docs/skills/recommended-skills-summary.md                  <br />
+     # Recommended Claude Skills for Intelligent Textbooks
+     Based on analysis of the intelligent-textbooks repository workflows and content
+     patterns, here are the recommended Claude Skills to complement your existing
+     MicroSim and Learning Graph skills.
+     ## Overview
+     You currently have:
+     1. ✅ <strong>MicroSim P5</strong> - Creates interactive p5.js simulations
+     2. ✅ <strong>Learning Graph</strong> - Generates concept dependency graphs
+     … +432 lines (ctrl+o to expand)</p>
+<h2 id="summary">Summary</h2>
+<p>Excellent! I've created comprehensive specifications for 7 new Claude Skills to
+  complement your existing MicroSim and Learning Graph skills. Here's a summary of
+  what I've delivered:</p>
+<p>Created Skills</p>
+<ol>
+<li>
+<p>Glossary Generator ⭐⭐⭐ (High Priority)</p>
+</li>
+<li>
+<p>Inputs: Learning graph concept list, course description</p>
+</li>
+<li>Outputs: ISO 11179-compliant glossary with quality reports</li>
+<li>Quality Metrics: 4-criteria ISO compliance (25 pts each), readability, example
+  coverage</li>
+<li>
+<p>Success: &gt;85/100 score, no circular definitions</p>
+</li>
+<li>
+<p>FAQ Generator ⭐⭐⭐ (High Priority)</p>
+</li>
+<li>
+<p>Inputs: Course description, learning graph, glossary, chapter content</p>
+</li>
+<li>Outputs: Categorized FAQ, chatbot training JSON, coverage analysis</li>
+<li>Quality Metrics: Coverage (30 pts), Bloom's distribution (25 pts), answer quality
+  (25 pts), organization (20 pts)</li>
+<li>
+<p>Success: &gt;75/100, minimum 40 questions, 60% concept coverage</p>
+</li>
+<li>
+<p>Chapter Content Generator ⭐⭐⭐⭐ (Critical)</p>
+</li>
+<li>
+<p>Inputs: Learning graph, concept taxonomy, course description, chapter outline</p>
+</li>
+<li>Outputs: Complete chapter markdown, metadata, MicroSim recommendations, quiz bank</li>
+<li>Quality Metrics: Scaffolding (25 pts), Bloom's alignment (20 pts), completeness
+  (25 pts), readability (15 pts), engagement (15 pts)</li>
+<li>
+<p>Success: &gt;75/100, 100% prerequisite compliance, 2000+ words</p>
+</li>
+<li>
+<p>Quiz Generator ⭐⭐⭐ (High Priority)</p>
+</li>
+<li>
+<p>Inputs: Chapter content, learning graph, glossary</p>
+</li>
+<li>Outputs: Multiple-choice quizzes, quiz bank JSON, quality reports</li>
+<li>Quality Metrics: Question quality (30 pts), Bloom's distribution (25 pts),
+  coverage (20 pts), answer balance (15 pts), pedagogical value (10 pts)</li>
+<li>
+<p>Success: &gt;70/100, 8-12 questions per chapter</p>
+</li>
+<li>
+<p>Quality Metrics Analyzer ⭐⭐⭐⭐ (Critical)</p>
+</li>
+<li>
+<p>Inputs: Entire repository, all components</p>
+</li>
+<li>Outputs: Comprehensive quality reports across 4 dimensions (25 pts each)</li>
+<li>Quality Metrics: Content structure, engagement, technical quality, educational
+  effectiveness</li>
+<li>
+<p>Success: &gt;75/100 for publication readiness</p>
+</li>
+<li>
+<p>Social Media Generator ⭐⭐ (Medium Priority)</p>
+</li>
+<li>
+<p>Inputs: All content, learning graph, MicroSims, branding assets</p>
+</li>
+<li>Outputs: Social cards, promotional posts, launch campaign, UTM links</li>
+<li>Quality Metrics: Social cards (4×25 pts), promotional content (messaging, platform
+   fit, coherence, engagement)</li>
+<li>
+<p>Success: &gt;75/100 social cards, &gt;70/100 content</p>
+</li>
+<li>
+<p>Concept Validator ⭐⭐⭐⭐ (Critical)</p>
+</li>
+<li>
+<p>Inputs: Learning graph, all chapters, glossary, quizzes, MicroSims</p>
+</li>
+<li>Outputs: Validation reports, coverage matrix, gap analysis, remediation plan</li>
+<li>Quality Metrics: Coverage (40 pts), pedagogical quality (30 pts), consistency (20
+  pts), support (10 pts)</li>
+<li>Success: &gt;75/100 health score, no critical gaps</li>
+</ol>
+<p>## Key Features</p>
+<p>Each skill specification includes:
+  - ✅ Clear execution order and dependencies
+  - ✅ Detailed input requirements with quality thresholds
+  - ✅ Comprehensive output specifications
+  - ✅ Quantified quality metrics (scale 1-100)
+  - ✅ Success criteria and quality gates
+  - ✅ User dialog triggers for quality issues
+  - ✅ Multiple quality checks performed automatically</p>
+<p>## Expected Benefits</p>
+<ul>
+<li>Time Savings: 70-75% reduction (60-95 hours saved per textbook)</li>
+<li>Quality Improvements: 100% prerequisite compliance, ISO standards, balanced
+  Bloom's</li>
+<li>New Capabilities: Automated gap detection, trend analysis, integration validation</li>
+</ul>
+<p>All specifications are in /docs/skills/ following your template format!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
