@@ -65,6 +65,8 @@ nav:
     - Interactive Infographics: workflow/interactive-infographics.md
     - MicroSims: workflow/microsim.md
     - Graphic Novel: workflow/graphic-novel.md
+    - Infographics: workflow/infographics.md
+    - Lists, Tables and Charts: workflow/lists-tables-charts--plots.md
   
   - MicroSims:
     - Introduction: sims/index.md
