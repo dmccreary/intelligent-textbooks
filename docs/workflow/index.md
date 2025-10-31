@@ -5,14 +5,28 @@
 
 This section is an overview of some of the workflows we use to generate intelligent textbooks from a course description.
 
-## Steps
+## Workflow Steps
 
-### [Course Description](course-description.md)
+### For Generating the Learning Graph
 
-### [Bloom Taxonomy](./bloom-taxonomy.md)
+#### [Course Description](course-description.md)
 
-### [Concept Enumeration](concept-enumeration.md)
+#### [Bloom Taxonomy](./bloom-taxonomy.md)
 
-### [Concept Dependency](./concept-dependency.md)
+#### [Concept Enumeration](concept-enumeration.md)
 
-### [Learning Graph](./learning-graph.md)
+#### [Concept Dependency](./concept-dependency.md)
+
+#### [Concept Taxonomy](./concept-taxonomy.md)
+
+#### [Learning Graph](./learning-graph.md)
+
+### Chapter-Specific Content Generation
+
+#### [Chapter and Section Content Generation](chapters-and-sections.md)
+
+#### [Lists, Tables, Charts and Plots](./lists-tables-charts--plots.md)
+
+#### [Interactive Infographics](.)
+
+#### [Glossary of Terms]
