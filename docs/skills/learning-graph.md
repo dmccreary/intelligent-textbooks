@@ -12,7 +12,7 @@ The skill should be called after a draft of the /docs/course-description.md is a
 
 Output will be placed in the folder /docs/learning-graph unless the prompt contains an override location.
 
-The learniing graph should be created before chapter content is generated.
+The learning graph should be created before chapter content is generated.
 
 ## Step 1: Skill Input Course Description Analysis
 
