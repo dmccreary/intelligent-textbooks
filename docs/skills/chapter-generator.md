@@ -7,6 +7,7 @@ This skill generates comprehensive chapter content for an intelligent textbook b
 ## Order
 
 This skill should be executed after:
+
 1. Learning graph is complete and validated
 2. Course description is finalized
 3. Chapter structure/navigation is defined in `mkdocs.yml`
@@ -60,6 +61,7 @@ The chapter generator uses the learning graph to determine concept dependencies 
 - Below 50: No clear chapter structure defined
 
 **Quality Checks:**
+
 1. Verify learning graph has no cycles (required)
 2. Check concept distribution across chapters (target: 8-15 per chapter)
 3. Validate prerequisites: concepts only after dependencies (required)

@@ -7,6 +7,7 @@ This skill generates optimized social media preview images and Open Graph metada
 ## Order
 
 This skill should be executed:
+
 1. After chapter content is substantially complete (70%+ chapters written)
 2. After glossary and key pages exist
 3. Before major marketing or promotion efforts
@@ -69,6 +70,7 @@ The generator creates custom social cards and promotional content, so it needs a
 - Below 50: Insufficient content for effective social promotion
 
 **Quality Checks:**
+
 1. Page count: 20+ pages = good baseline for promotion
 2. Metadata completeness: Titles and descriptions for 90%+ pages
 3. Visual assets: Logo, favicon, cover image present
@@ -206,28 +208,33 @@ The generator creates custom social cards and promotional content, so it needs a
 ### Social Media Post Categories
 
 **Feature Highlights (30%):**
+
 - "Check out our interactive MicroSims for [topic]!"
 - "Navigate your learning path with our concept graph"
 - "Every term clearly defined in our comprehensive glossary"
 
 **Educational Content (25%):**
+
 - "Did you know? [Interesting fact from textbook]"
 - "Quick tip: [Practical advice from content]"
 - "Concept breakdown: [Complex topic explained simply]"
 
 **Visual Content (20%):**
+
 - MicroSim demonstrations
 - Learning graph visualizations
 - Infographics from chapters
 - Quote cards with key insights
 
 **Social Proof (15%):**
+
 - User testimonials (when available)
 - Usage statistics
 - Case study highlights
 - Community contributions
 
 **Engagement Posts (10%):**
+
 - Questions to community
 - Polls and surveys
 - Challenges and exercises
@@ -389,23 +396,27 @@ Explore now: [Tracked link]
 ## Configuration Options
 
 **Social Card Styles:**
+
 - Minimal (text + logo + color)
 - Visual (concept illustration + text)
 - Data (graph visualization + stats)
 - Screenshot (MicroSim preview + description)
 
 **Campaign Intensity:**
+
 - Soft launch (1-2 posts/week, 4 weeks)
 - Standard launch (3-5 posts/week, 3 weeks)
 - Blitz launch (daily posts, 2 weeks)
 
 **Target Platforms:**
+
 - Academic focus (Twitter, LinkedIn, Reddit academic subs)
 - General education (Facebook, Instagram, Pinterest)
 - Technical audience (Hacker News, dev.to, technical subs)
 - All platforms (comprehensive strategy)
 
 **Automation Level:**
+
 - Full automation (scheduled posts via Buffer/Hootsuite)
 - Semi-automated (drafts prepared, manual posting)
 - Manual (content created, posting strategy provided)

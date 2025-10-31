@@ -5,10 +5,12 @@ Based on analysis of the intelligent-textbooks repository workflows and content 
 ## Overview
 
 You currently have:
+
 1. ✅ **MicroSim P5** - Creates interactive p5.js simulations
 2. ✅ **Learning Graph** - Generates concept dependency graphs
 
 Recommended additions:
+
 3. **Glossary Generator** - Automated glossary creation from concepts
 4. **FAQ Generator** - Creates comprehensive FAQ from content
 5. **Chapter Content Generator** - Generates complete chapter content with scaffolding
@@ -43,22 +45,27 @@ graph TD
 ### Workflow Phases
 
 **Phase 1: Foundation (Existing)**
+
 - Course Description created manually
 - Learning Graph Skill generates concept structure
 - MicroSim P5 Skill creates interactive simulations (ongoing)
 
 **Phase 2: Content Generation (New Skills)**
+
 1. **Glossary Generator** - Run after learning graph finalized
 2. **Chapter Content Generator** - Run after chapter structure defined
 3. **FAQ Generator** - Run after chapters written
 
 **Phase 3: Assessment (New Skill)**
+
 4. **Quiz Generator** - Run after each chapter or in batch
 
 **Phase 4: Validation (New Skill)**
+
 5. **Concept Validator** - Run at milestones (every 10 chapters, before release)
 
 **Phase 5: Quality & Promotion (New Skills)**
+
 6. **Quality Metrics Analyzer** - Run before release and periodically
 7. **Social Media Generator** - Run when ready to promote
 
@@ -83,6 +90,7 @@ graph TD
 **Purpose**: Converts learning graph concepts into ISO 11179-compliant glossary definitions
 
 **Key Features**:
+
 - Generates precise, concise, non-circular definitions
 - Includes relevant examples for context
 - Alphabetically organized
@@ -91,14 +99,17 @@ graph TD
 **When to Use**: After learning graph concept list is finalized and reviewed
 
 **Inputs**:
+
 - Learning graph concept list (02-concept-list-v1.md)
 - Course description for context
 
 **Outputs**:
+
 - docs/glossary.md (complete glossary)
 - Quality report assessing definition compliance
 
 **Quality Metrics**:
+
 - Input: Concept uniqueness (100%), Title Case formatting (95%+), length <32 chars (98%+)
 - Output: ISO compliance (4 criteria × 25 pts), readability, example coverage (60-80%)
 
@@ -332,50 +343,60 @@ graph TD
 ### Priority Ranking
 
 **Must Have (Build First)**:
+
 1. **Chapter Content Generator** - Core content creation
 2. **Concept Validator** - Quality assurance critical path
 3. **Quality Metrics Analyzer** - Comprehensive quality gate
 
 **Should Have (Build Next)**:
+
 4. **Glossary Generator** - Essential reference, fast ROI
 5. **FAQ Generator** - Student support + chatbot prep
 6. **Quiz Generator** - Assessment fundamental
 
 **Nice to Have (Build Later)**:
+
 7. **Social Media Generator** - Marketing/promotion phase
 
 ### Build Order Recommendation
 
 **Iteration 1** (Weeks 1-2):
+
 1. Glossary Generator (simplest, high value)
 2. Concept Validator (validates everything, useful immediately)
 
 **Iteration 2** (Weeks 3-4):
+
 3. Chapter Content Generator (most complex, highest impact)
 4. Quiz Generator (complements chapters)
 
 **Iteration 3** (Weeks 5-6):
+
 5. FAQ Generator (leverages existing content)
 6. Quality Metrics Analyzer (comprehensive validation)
 
 **Iteration 4** (Week 7):
+
 7. Social Media Generator (polish for launch)
 
 ### Integration Strategy
 
 **Skill Chaining**:
+
 - Learning Graph → Glossary Generator (automatic handoff)
 - Chapter Generator → Quiz Generator (automatic quiz creation)
 - All skills → Concept Validator (continuous validation)
 - Concept Validator → Quality Metrics (comprehensive report)
 
 **Automation Opportunities**:
+
 1. After Learning Graph finalized → Auto-run Glossary Generator
 2. After each chapter generated → Auto-run Quiz Generator
 3. Every 5 chapters → Auto-run Concept Validator
 4. Before deployment → Auto-run Quality Metrics Analyzer
 
 **Quality Gates**:
+
 - **Gate 1**: Concept Validator health score >60 (Alpha)
 - **Gate 2**: Quality Metrics score >70 (Beta)
 - **Gate 3**: Both scores >75 + Social Media ready (Production)
@@ -383,6 +404,7 @@ graph TD
 ## Expected Time Savings
 
 **Without Skills** (Manual work):
+
 - Glossary (200 terms): ~8-10 hours
 - FAQ (40 questions): ~6-8 hours
 - Chapters (20 chapters): ~40-60 hours
@@ -392,6 +414,7 @@ graph TD
 - **Total: 86-126 hours**
 
 **With Skills** (AI-assisted):
+
 - Glossary: ~30 minutes (review + refinement)
 - FAQ: ~1 hour (review + refinement)
 - Chapters: ~15-20 hours (review + refinement)
@@ -405,18 +428,21 @@ graph TD
 ## Quality Improvement
 
 **Consistency Benefits**:
+
 - 100% prerequisite compliance (vs. ~80-90% manual)
 - ISO 11179 glossary standards (vs. informal definitions)
 - Balanced Bloom's Taxonomy (vs. memorization-heavy)
 - Comprehensive coverage validation (vs. spot checks)
 
 **New Capabilities**:
+
 - Automated gap detection (not feasible manually)
 - Trend analysis across textbook versions
 - Systematic quality metrics (objective scoring)
 - Integration validation (cross-component checking)
 
 ## Next Steps
+
 
 1. **Review**: Examine each skill specification in detail
 2. **Prioritize**: Confirm build order based on your needs
@@ -430,6 +456,7 @@ graph TD
 ## Skill Files Created
 
 All detailed specifications available in:
+
 - [Glossary Generator](./glossary-generator.md)
 - [FAQ Generator](./faq-generator.md)
 - [Chapter Content Generator](./chapter-generator.md)
