@@ -1,0 +1,1861 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/skill-dependency-diagram/">
+      
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Skill Dependency Diagram - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Skill Dependency Diagram - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skill-dependency-diagram.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/skill-dependency-diagram/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Skill Dependency Diagram - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skill-dependency-diagram.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#skill-dependency-diagram" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Skill Dependency Diagram
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-dependencies-can-run-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Dependencies (Can Run First)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requires-course-description-quality-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requires Course Description (Quality ≥ 70)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requires-learning-graph-quality-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requires Learning Graph (Quality ≥ 70)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requires-chapter-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requires Chapter Progress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-execution-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Execution Opportunities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parallel Execution Opportunities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#after-learning-graph-completes" class="md-nav__link">
+    <span class="md-ellipsis">
+      After Learning Graph Completes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-30-chapters-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      After 30% Chapters Complete
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-score-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Score Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completion-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completion Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-execution-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Execution Order
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Execution Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week-1-planning-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1: Planning &amp; Foundation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-2-3-initial-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2-3: Initial Content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-4-6-content-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4-6: Content Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-7-8-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7-8: Enhancement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-9-polish-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9: Polish &amp; Deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-10-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 10: Launch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blocking Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocking Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-blockers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Blockers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Status Checking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/skill-dependency-diagram.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="skill-dependency-diagram">Skill Dependency Diagram</h1>
+<p>This diagram shows the dependencies between intelligent textbook creation skills.</p>
+<h2 id="dependency-graph">Dependency Graph</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code>┌─────────────────────────────────────────────────────────────────┐
+│                      TEXTBOOK CREATION WORKFLOW                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ PHASE 1: PLANNING                                                │
+└──────────────────────────────────────────────────────────────────┘
+
+    course_description_analyzer
+    ────────────────┬────────────────
+                    │
+                    ├─────────────────────────────────┐
+                    │                                 │
+                    ▼                                 ▼
+
+┌──────────────────────────────────────────────────────────────────┐
+│ PHASE 2: FOUNDATION                                              │
+└──────────────────────────────────────────────────────────────────┘
+
+    learning_graph_generator            reference_generator
+    ────────────┬────────────            (can run anytime)
+                │
+        ┌───────┼───────┬───────┬───────┬───────┬───────┐
+        │       │       │       │       │       │       │
+        ▼       ▼       ▼       ▼       ▼       ▼       ▼
+
+┌──────────────────────────────────────────────────────────────────┐
+│ PHASE 3: CONTENT GENERATION                                      │
+└──────────────────────────────────────────────────────────────────┘
+
+    glossary     chapter    microsim   concept_
+    generator    generator  _p5        validator
+        │            │
+        │            ├───── (30% complete) ─────┬
+        │            │                           │
+        │            │                           ▼
+        │            │
+        │            ├───── (50% complete) ──────┐
+        │            │                            │
+        ▼            ▼                            │
+
+┌──────────────────────────────────────────────────────────────────┐
+│ PHASE 4: ENHANCEMENT                                             │
+└──────────────────────────────────────────────────────────────────┘
+
+    quiz_generator      faq_generator          │
+    (needs 30%          (needs 30% chapters,   │
+     chapters)           glossary)              │
+                                                │
+                                                ▼
+
+┌──────────────────────────────────────────────────────────────────┐
+│ PHASE 5: QUALITY ASSURANCE                                       │
+└──────────────────────────────────────────────────────────────────┘
+
+    quality_metrics_analyzer
+    (can run anytime)
+
+
+┌──────────────────────────────────────────────────────────────────┐
+│ PHASE 6: DEPLOYMENT                                              │
+└──────────────────────────────────────────────────────────────────┘
+
+    social_media_generator
+    (needs 50% chapters)
+</code></pre></div></td></tr></table></div>
+<h2 id="dependency-details">Dependency Details</h2>
+<h3 id="no-dependencies-can-run-first">No Dependencies (Can Run First)</h3>
+<ul>
+<li><strong>course_description_analyzer</strong> - Start here</li>
+<li><strong>quality_metrics_analyzer</strong> - Can run anytime to check progress</li>
+</ul>
+<h3 id="requires-course-description-quality-70">Requires Course Description (Quality ≥ 70)</h3>
+<ul>
+<li><strong>learning_graph_generator</strong> - Needs validated course description</li>
+<li><strong>reference_generator</strong> - Needs course description only</li>
+<li><strong>faq_generator</strong> - Needs course description (among others)</li>
+</ul>
+<h3 id="requires-learning-graph-quality-70">Requires Learning Graph (Quality ≥ 70)</h3>
+<ul>
+<li><strong>glossary_generator</strong> - Generates terms from concepts</li>
+<li><strong>chapter_generator</strong> - Uses concepts to structure content</li>
+<li><strong>microsim_p5</strong> - Creates simulations for concepts</li>
+<li><strong>concept_validator</strong> - Validates the concept graph</li>
+<li><strong>quiz_generator</strong> - Aligns questions to concepts</li>
+<li><strong>faq_generator</strong> - Uses concepts for questions</li>
+</ul>
+<h3 id="requires-chapter-progress">Requires Chapter Progress</h3>
+<ul>
+<li><strong>quiz_generator</strong> - Needs 30% of chapters complete</li>
+<li><strong>faq_generator</strong> - Needs 30% of chapters complete</li>
+<li><strong>social_media_generator</strong> - Needs 50% of chapters complete</li>
+</ul>
+<h3 id="multiple-dependencies">Multiple Dependencies</h3>
+<p><strong>faq_generator</strong> requires ALL of:
+- course_description_analyzer (quality ≥ 70)
+- learning_graph_generator (quality ≥ 70)
+- glossary_generator (quality ≥ 70)
+- chapter_generator (30% complete)</p>
+<h2 id="parallel-execution-opportunities">Parallel Execution Opportunities</h2>
+<p>These skills can run in parallel once dependencies are met:</p>
+<h3 id="after-learning-graph-completes">After Learning Graph Completes</h3>
+<p>Run simultaneously:
+1. <strong>glossary_generator</strong> - Generate terminology
+2. <strong>chapter_generator</strong> - Start writing chapters
+3. <strong>microsim_p5</strong> - Create simulations
+4. <strong>concept_validator</strong> - Validate concepts</p>
+<h3 id="after-30-chapters-complete">After 30% Chapters Complete</h3>
+<p>Run simultaneously:
+1. <strong>quiz_generator</strong> - Create quizzes
+2. <strong>faq_generator</strong> - Generate FAQs (if glossary done)</p>
+<h2 id="critical-path">Critical Path</h2>
+<p>The fastest path through the workflow:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code>1. course_description_analyzer
+   ↓
+2. learning_graph_generator
+   ↓
+3. chapter_generator (start - runs in background)
+   ↓
+4. glossary_generator (while chapters generating)
+   ↓
+5. Wait for chapters to reach 30%
+   ↓
+6. quiz_generator &amp; faq_generator (parallel)
+   ↓
+7. Wait for chapters to reach 50%
+   ↓
+8. social_media_generator
+   ↓
+9. quality_metrics_analyzer (final check)
+   ↓
+10. Deploy
+</code></pre></div></td></tr></table></div>
+<h2 id="quality-score-requirements">Quality Score Requirements</h2>
+<p>Skills require these minimum quality scores from dependencies:</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Requires</th>
+<th>Min Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>learning_graph_generator</td>
+<td>course_description_analyzer</td>
+<td>70</td>
+</tr>
+<tr>
+<td>glossary_generator</td>
+<td>learning_graph_generator</td>
+<td>70</td>
+</tr>
+<tr>
+<td>chapter_generator</td>
+<td>learning_graph_generator</td>
+<td>70</td>
+</tr>
+<tr>
+<td>quiz_generator</td>
+<td>learning_graph_generator</td>
+<td>70</td>
+</tr>
+<tr>
+<td>faq_generator</td>
+<td>course_description_analyzer</td>
+<td>70</td>
+</tr>
+<tr>
+<td>faq_generator</td>
+<td>learning_graph_generator</td>
+<td>70</td>
+</tr>
+<tr>
+<td>faq_generator</td>
+<td>glossary_generator</td>
+<td>70</td>
+</tr>
+<tr>
+<td>reference_generator</td>
+<td>course_description_analyzer</td>
+<td>70</td>
+</tr>
+<tr>
+<td>microsim_p5</td>
+<td>learning_graph_generator</td>
+<td>70</td>
+</tr>
+<tr>
+<td>concept_validator</td>
+<td>learning_graph_generator</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<h2 id="completion-requirements">Completion Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Requires</th>
+<th>Min Completion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quiz_generator</td>
+<td>chapter_generator</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>faq_generator</td>
+<td>chapter_generator</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>social_media_generator</td>
+<td>chapter_generator</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-execution-order">Recommended Execution Order</h2>
+<p>For a typical textbook creation workflow:</p>
+<h3 id="week-1-planning-foundation">Week 1: Planning &amp; Foundation</h3>
+<ol>
+<li>✓ course_description_analyzer</li>
+<li>✓ learning_graph_generator</li>
+<li>✓ concept_validator</li>
+</ol>
+<h3 id="week-2-3-initial-content">Week 2-3: Initial Content</h3>
+<ol>
+<li>✓ glossary_generator</li>
+<li>✓ reference_generator</li>
+<li>▶ chapter_generator (start - continues in background)</li>
+</ol>
+<h3 id="week-4-6-content-development">Week 4-6: Content Development</h3>
+<ol>
+<li>▶ chapter_generator (continue)</li>
+<li>✓ microsim_p5 (create 2-3 initial simulations)</li>
+<li>✓ quality_metrics_analyzer (first check)</li>
+</ol>
+<h3 id="week-7-8-enhancement">Week 7-8: Enhancement</h3>
+<ol>
+<li>✓ quiz_generator (once 30% chapters done)</li>
+<li>✓ faq_generator (once 30% chapters done)</li>
+<li>▶ chapter_generator (continue to completion)</li>
+</ol>
+<h3 id="week-9-polish-deploy">Week 9: Polish &amp; Deploy</h3>
+<ol>
+<li>✓ microsim_p5 (complete remaining simulations)</li>
+<li>✓ social_media_generator (once 50% chapters done)</li>
+<li>✓ quality_metrics_analyzer (final check)</li>
+</ol>
+<h3 id="week-10-launch">Week 10: Launch</h3>
+<ol>
+<li>Build and deploy site</li>
+<li>Share on social media</li>
+</ol>
+<h2 id="blocking-scenarios">Blocking Scenarios</h2>
+<h3 id="common-blockers">Common Blockers</h3>
+<p><strong>Quiz Generator Won't Run</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>Blocked: Dependency &#39;learning_graph_generator&#39; must be completed
+Blocked: Dependency &#39;chapter_generator&#39; must be completed
+
+Solution:
+1. Run learning_graph_generator first
+2. Run chapter_generator until 30% complete
+3. Then quiz_generator can run
+</code></pre></div></td></tr></table></div></p>
+<p><strong>FAQ Generator Won't Run</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Blocked: Dependency &#39;course_description_analyzer&#39; must be completed
+Blocked: Dependency &#39;learning_graph_generator&#39; must be completed
+Blocked: Dependency &#39;glossary_generator&#39; must be completed
+Blocked: Dependency &#39;chapter_generator&#39; must be completed
+
+Solution: FAQ generator has the most dependencies
+1. Complete course_description_analyzer
+2. Complete learning_graph_generator
+3. Complete glossary_generator
+4. Get chapter_generator to 30%
+5. Then faq_generator can run
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Quality Score Too Low</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Blocked: Dependency &#39;course_description_analyzer&#39; requires quality score &gt;= 70
+         (current: 65)
+
+Solution:
+1. Review course_description_analyzer output
+2. Improve quality based on feedback
+3. Re-run with improvements
+4. Verify new score &gt;= 70
+</code></pre></div></td></tr></table></div></p>
+<h2 id="status-checking">Status Checking</h2>
+<p>Check dependencies before running any skill:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check specific skill</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>check<span class="w"> </span>--skill<span class="w"> </span>quiz_generator
+
+<span class="c1"># See full dependency graph status</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status
+</code></pre></div></td></tr></table></div>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../book-metadata-quickstart/">Book Metadata Quick Start</a></li>
+<li><a href="../book-metadata-guide/">Book Metadata Guide</a></li>
+<li><a href="../skills/metadata-integration-example/">Skill Integration Examples</a></li>
+<li><a href="../workflow/index.md">Workflow Documentation</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>

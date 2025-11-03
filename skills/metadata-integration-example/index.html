@@ -1,0 +1,2229 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/skills/metadata-integration-example/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Skill Metadata Integration Example - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Skill Metadata Integration Example - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/metadata-integration-example.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/skills/metadata-integration-example/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Skill Metadata Integration Example - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/skills/metadata-integration-example.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#skill-metadata-integration-example" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Skill Metadata Integration Example
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-quiz-generator-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Quiz Generator Skill
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Quiz Generator Skill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-check-prerequisites-skill-entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Check Prerequisites (Skill Entry Point)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-using-in-claude-code-skill-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Using in Claude Code Skill Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Using in Claude Code Skill Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quiz-generator-skill-prompt-skillmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz Generator Skill Prompt (SKILL.md)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-checking-status-before-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Checking Status Before Running
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Claude Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Claude Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Request:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claude-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claude Response:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/skills/metadata-integration-example.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="skill-metadata-integration-example">Skill Metadata Integration Example</h1>
+<p>This document provides a complete example of how to integrate the book metadata system into your Claude Code skills.</p>
+<h2 id="example-quiz-generator-skill">Example: Quiz Generator Skill</h2>
+<p>Here's how the quiz generator skill would integrate with <code>book-metadata.yml</code>:</p>
+<h3 id="step-1-check-prerequisites-skill-entry-point">Step 1: Check Prerequisites (Skill Entry Point)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Quiz Generator Skill</span>
+<span class="sd">Generates interactive quizzes for textbook chapters</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main entry point for quiz generator skill.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Initialize metadata helper</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 Checking book metadata...&quot;</span><span class="p">)</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
+
+    <span class="c1"># Check if this skill can run</span>
+    <span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">can_run</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">❌ Cannot run quiz generator:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">reason</span> <span class="ow">in</span> <span class="n">reasons</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   • </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 Recommendation:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Run these skills first:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   1. course_description_analyzer&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   2. learning_graph_generator&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   3. chapter_generator (at least 30</span><span class="si">% c</span><span class="s2">omplete)&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ All prerequisites met!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Mark skill as in progress</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">,</span> <span class="s1">&#39;in_progress&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Run the quiz generation</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">generate_quizzes</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+
+        <span class="c1"># Update with results</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span>
+            <span class="n">skill_name</span><span class="o">=</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span>
+            <span class="n">quality_score</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;quality_score&#39;</span><span class="p">],</span>
+            <span class="n">outputs</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Quiz generation completed!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Quality Score: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;quality_score&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/100&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Quizzes Generated: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="s1">&#39;quizzes_generated&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Total Questions: </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="s1">&#39;total_questions&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="c1"># Mark as failed with error details</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span>
+            <span class="n">skill_name</span><span class="o">=</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span>
+            <span class="n">notes</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="k">raise</span>
+
+
+<span class="k">def</span> <span class="nf">generate_quizzes</span><span class="p">(</span><span class="n">metadata</span><span class="p">:</span> <span class="n">BookMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate quizzes based on learning graph and chapter content.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        metadata: BookMetadata instance for accessing book data</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Dictionary with quality_score and outputs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get learning graph data</span>
+    <span class="n">learning_graph_status</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_skill_status</span><span class="p">(</span><span class="s1">&#39;learning_graph_generator&#39;</span><span class="p">)</span>
+    <span class="n">concept_count</span> <span class="o">=</span> <span class="n">learning_graph_status</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="s1">&#39;concept_count&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Get chapter data</span>
+    <span class="n">chapter_status</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_skill_status</span><span class="p">(</span><span class="s1">&#39;chapter_generator&#39;</span><span class="p">)</span>
+    <span class="n">chapters</span> <span class="o">=</span> <span class="n">chapter_status</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="s1">&#39;chapters_list&#39;</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📚 Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chapters</span><span class="p">)</span><span class="si">}</span><span class="s2"> chapters&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🎯 Found </span><span class="si">{</span><span class="n">concept_count</span><span class="si">}</span><span class="s2"> concepts in learning graph&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Generate quiz for each chapter</span>
+    <span class="n">quizzes_generated</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_questions</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">blooms_distribution</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;remember&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;understand&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;apply&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;analyze&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;evaluate&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;create&#39;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="n">quiz_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">chapter</span> <span class="ow">in</span> <span class="n">chapters</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📝 Generating quiz for: </span><span class="si">{</span><span class="n">chapter</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Here you would call Claude to generate quiz content</span>
+        <span class="c1"># For now, we&#39;ll simulate it</span>
+        <span class="n">quiz</span> <span class="o">=</span> <span class="n">generate_chapter_quiz</span><span class="p">(</span><span class="n">chapter</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+
+        <span class="n">quizzes_generated</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total_questions</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">quiz</span><span class="p">[</span><span class="s1">&#39;questions&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Track Bloom&#39;s taxonomy distribution</span>
+        <span class="k">for</span> <span class="n">question</span> <span class="ow">in</span> <span class="n">quiz</span><span class="p">[</span><span class="s1">&#39;questions&#39;</span><span class="p">]:</span>
+            <span class="n">blooms_level</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;blooms_level&#39;</span><span class="p">,</span> <span class="s1">&#39;remember&#39;</span><span class="p">)</span>
+            <span class="n">blooms_distribution</span><span class="p">[</span><span class="n">blooms_level</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">quiz_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quiz</span><span class="p">[</span><span class="s1">&#39;file_path&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Validate quiz quality</span>
+    <span class="n">validation_passed</span> <span class="o">=</span> <span class="n">validate_quizzes</span><span class="p">(</span><span class="n">quizzes_generated</span><span class="p">,</span> <span class="n">total_questions</span><span class="p">,</span> <span class="n">blooms_distribution</span><span class="p">)</span>
+
+    <span class="c1"># Calculate quality score</span>
+    <span class="n">quality_score</span> <span class="o">=</span> <span class="n">calculate_quality_score</span><span class="p">(</span>
+        <span class="n">quizzes_generated</span><span class="p">,</span>
+        <span class="n">total_questions</span><span class="p">,</span>
+        <span class="n">blooms_distribution</span><span class="p">,</span>
+        <span class="n">validation_passed</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;quality_score&#39;</span><span class="p">:</span> <span class="n">quality_score</span><span class="p">,</span>
+        <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;quizzes_generated&#39;</span><span class="p">:</span> <span class="n">quizzes_generated</span><span class="p">,</span>
+            <span class="s1">&#39;quiz_list&#39;</span><span class="p">:</span> <span class="n">quiz_list</span><span class="p">,</span>
+            <span class="s1">&#39;total_questions&#39;</span><span class="p">:</span> <span class="n">total_questions</span><span class="p">,</span>
+            <span class="s1">&#39;blooms_distribution&#39;</span><span class="p">:</span> <span class="n">blooms_distribution</span><span class="p">,</span>
+            <span class="s1">&#39;validation_passed&#39;</span><span class="p">:</span> <span class="n">validation_passed</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;issues&#39;</span><span class="p">:</span> <span class="n">validation_passed</span><span class="p">[</span><span class="s1">&#39;issues&#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">generate_chapter_quiz</span><span class="p">(</span><span class="n">chapter</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">metadata</span><span class="p">:</span> <span class="n">BookMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate quiz for a specific chapter.&quot;&quot;&quot;</span>
+    <span class="c1"># Implementation would use Claude to generate questions</span>
+    <span class="c1"># based on chapter content and learning objectives</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;file_path&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;docs/quizzes/</span><span class="si">{</span><span class="n">chapter</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.md&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;questions&#39;</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># Would contain actual questions</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">validate_quizzes</span><span class="p">(</span><span class="n">quiz_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">question_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">blooms</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Validate quiz quality.&quot;&quot;&quot;</span>
+    <span class="n">issues</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Check minimum questions per quiz</span>
+    <span class="n">avg_questions</span> <span class="o">=</span> <span class="n">question_count</span> <span class="o">/</span> <span class="n">quiz_count</span> <span class="k">if</span> <span class="n">quiz_count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">avg_questions</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">issues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average questions per quiz (</span><span class="si">{</span><span class="n">avg_questions</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">) below minimum (5)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Check Bloom&#39;s taxonomy distribution</span>
+    <span class="c1"># Should have questions across multiple levels</span>
+    <span class="n">non_empty_levels</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">blooms</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">non_empty_levels</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">issues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Questions only cover </span><span class="si">{</span><span class="n">non_empty_levels</span><span class="si">}</span><span class="s2"> Bloom&#39;s levels (should be 3+)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Check for too many lower-order questions</span>
+    <span class="n">lower_order</span> <span class="o">=</span> <span class="n">blooms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;remember&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">blooms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;understand&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">higher_order</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">blooms</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">-</span> <span class="n">lower_order</span>
+
+    <span class="k">if</span> <span class="n">question_count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">lower_order</span> <span class="o">/</span> <span class="n">question_count</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.7</span><span class="p">:</span>
+        <span class="n">issues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Too many lower-order questions (&gt;70%)&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;passed&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">issues</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s1">&#39;issues&#39;</span><span class="p">:</span> <span class="n">issues</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">calculate_quality_score</span><span class="p">(</span>
+    <span class="n">quiz_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">question_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">blooms</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+    <span class="n">validation</span><span class="p">:</span> <span class="nb">dict</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate overall quality score for quiz generation.</span>
+
+<span class="sd">    Scoring criteria:</span>
+<span class="sd">    - Quiz count: 20 points (1 point per quiz, max 20)</span>
+<span class="sd">    - Question count: 20 points (1 point per 10 questions, max 20)</span>
+<span class="sd">    - Bloom&#39;s coverage: 30 points (5 points per level covered)</span>
+<span class="sd">    - Bloom&#39;s balance: 20 points (higher-order questions bonus)</span>
+<span class="sd">    - Validation: 10 points (all checks passed)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Quiz count (max 20 points)</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="nb">min</span><span class="p">(</span><span class="n">quiz_count</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+    <span class="c1"># Question count (max 20 points)</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="nb">min</span><span class="p">(</span><span class="n">question_count</span> <span class="o">//</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+    <span class="c1"># Bloom&#39;s coverage (max 30 points)</span>
+    <span class="n">non_empty_levels</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">blooms</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="n">non_empty_levels</span> <span class="o">*</span> <span class="mi">5</span>
+
+    <span class="c1"># Bloom&#39;s balance (max 20 points)</span>
+    <span class="k">if</span> <span class="n">question_count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lower_order</span> <span class="o">=</span> <span class="n">blooms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;remember&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">blooms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;understand&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">higher_order</span> <span class="o">=</span> <span class="n">question_count</span> <span class="o">-</span> <span class="n">lower_order</span>
+        <span class="n">higher_order_pct</span> <span class="o">=</span> <span class="n">higher_order</span> <span class="o">/</span> <span class="n">question_count</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">higher_order_pct</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+
+    <span class="c1"># Validation (max 10 points)</span>
+    <span class="k">if</span> <span class="n">validation</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]:</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="mi">10</span>
+
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="example-using-in-claude-code-skill-prompts">Example: Using in Claude Code Skill Prompts</h2>
+<p>Here's how to structure your skill prompt to integrate with metadata:</p>
+<h3 id="quiz-generator-skill-prompt-skillmd">Quiz Generator Skill Prompt (SKILL.md)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># Quiz Generator Skill</span>
+
+This skill generates interactive multiple-choice quizzes for each chapter of an intelligent textbook, with questions aligned to specific concepts from the learning graph and distributed across Bloom&#39;s Taxonomy cognitive levels.
+
+<span class="gu">## Prerequisites Check</span>
+
+Before running this skill, execute the following Python code to verify prerequisites:
+
+<span class="sb">```python</span>
+<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
+<span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">can_run</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Prerequisites not met:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">reason</span> <span class="ow">in</span> <span class="n">reasons</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  • </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Prerequisites met - proceeding with quiz generation&quot;</span><span class="p">)</span>
+<span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">,</span> <span class="s1">&#39;in_progress&#39;</span><span class="p">)</span>
+<span class="sb">```</span>
+
+<span class="gu">## Required Context</span>
+
+Gather the following information from the metadata:
+
+<span class="k">1.</span> <span class="gs">**Learning Graph**</span>: Read concept list and Bloom&#39;s taxonomy categorization
+<span class="k">2.</span> <span class="gs">**Chapter List**</span>: Get all chapters that have been generated
+<span class="k">3.</span> <span class="gs">**Course Description**</span>: Understand learning objectives and audience level
+
+<span class="sb">```python</span>
+<span class="c1"># Get required data</span>
+<span class="n">learning_graph</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_skill_status</span><span class="p">(</span><span class="s1">&#39;learning_graph_generator&#39;</span><span class="p">)</span>
+<span class="n">chapters</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_skill_status</span><span class="p">(</span><span class="s1">&#39;chapter_generator&#39;</span><span class="p">)</span>
+<span class="n">course_desc</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_dublin_core</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Generating quizzes for </span><span class="si">{</span><span class="n">chapters</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="s1">&#39;chapters_generated&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> chapters&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using </span><span class="si">{</span><span class="n">learning_graph</span><span class="p">[</span><span class="s1">&#39;outputs&#39;</span><span class="p">][</span><span class="s1">&#39;concept_count&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> concepts&quot;</span><span class="p">)</span>
+<span class="sb">```</span>
+
+<span class="gu">## Generation Process</span>
+
+For each chapter:
+
+<span class="k">1.</span> <span class="gs">**Read chapter content**</span> from <span class="sb">`docs/chapters/&lt;chapter-name&gt;.md`</span>
+<span class="k">2.</span> <span class="gs">**Identify key concepts**</span> covered in the chapter (from learning graph)
+<span class="k">3.</span> <span class="gs">**Generate 5-10 questions**</span> per chapter:
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Questions aligned to specific concepts
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Distributed across Bloom&#39;s taxonomy levels
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Mix of difficulty levels
+<span class="k">4.</span> <span class="gs">**Format as interactive quiz**</span> using mkdocs-material quiz format
+<span class="k">5.</span> <span class="gs">**Save to**</span> <span class="sb">`docs/quizzes/&lt;chapter-name&gt;-quiz.md`</span>
+
+<span class="gu">### Question Distribution Guidelines</span>
+
+For college-level textbooks:
+<span class="k">-</span><span class="w"> </span>20% Remember (recall facts)
+<span class="k">-</span><span class="w"> </span>25% Understand (explain concepts)
+<span class="k">-</span><span class="w"> </span>25% Apply (use in new situations)
+<span class="k">-</span><span class="w"> </span>15% Analyze (draw connections)
+<span class="k">-</span><span class="w"> </span>10% Evaluate (justify decisions)
+<span class="k">-</span><span class="w"> </span>5% Create (produce new work)
+
+<span class="gu">## Quality Validation</span>
+
+After generating all quizzes, validate:
+
+<span class="k">1.</span> ✅ Each chapter has a corresponding quiz
+<span class="k">2.</span> ✅ Minimum 5 questions per quiz
+<span class="k">3.</span> ✅ Questions cover at least 3 Bloom&#39;s levels
+<span class="k">4.</span> ✅ No more than 70% lower-order questions (Remember/Understand)
+<span class="k">5.</span> ✅ All questions have correct answers and explanations
+
+Calculate quality score:
+<span class="k">-</span><span class="w"> </span>100 points: All criteria met, excellent distribution
+<span class="k">-</span><span class="w"> </span>80-99: Minor issues with distribution
+<span class="k">-</span><span class="w"> </span>60-79: Some validation failures
+<span class="k">-</span><span class="w"> </span>&lt;60: Major issues, needs rework
+
+<span class="gu">## Update Metadata</span>
+
+After completion, update the skill status:
+
+<span class="sb">```python</span>
+<span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span>
+    <span class="n">skill_name</span><span class="o">=</span><span class="s1">&#39;quiz_generator&#39;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span>  <span class="c1"># or &#39;needs_update&#39; if quality &lt; 60</span>
+    <span class="n">quality_score</span><span class="o">=</span><span class="n">calculated_score</span><span class="p">,</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;quizzes_generated&#39;</span><span class="p">:</span> <span class="n">quiz_count</span><span class="p">,</span>
+        <span class="s1">&#39;quiz_list&#39;</span><span class="p">:</span> <span class="n">list_of_quiz_files</span><span class="p">,</span>
+        <span class="s1">&#39;total_questions&#39;</span><span class="p">:</span> <span class="n">total_questions</span><span class="p">,</span>
+        <span class="s1">&#39;blooms_distribution&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;remember&#39;</span><span class="p">:</span> <span class="n">count</span><span class="p">,</span>
+            <span class="s1">&#39;understand&#39;</span><span class="p">:</span> <span class="n">count</span><span class="p">,</span>
+            <span class="c1"># ... etc</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;validation_passed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="p">,</span>
+        <span class="s1">&#39;issues&#39;</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># List any validation failures</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="sb">```</span>
+
+<span class="gu">## Output Format</span>
+
+Generate quizzes in this format:
+
+<span class="sb">```markdown</span>
+<span class="gh"># Chapter X Quiz</span>
+
+Test your understanding of [Chapter Name] concepts.
+
+<span class="gu">## Question 1</span>
+<span class="gs">**Concept:**</span> [Concept name from learning graph]
+<span class="gs">**Bloom&#39;s Level:**</span> Remember
+
+What is the primary purpose of...?
+
+A) Option 1
+B) Option 2
+C) Option 3
+D) Option 4
+
+??? success &quot;Answer&quot;
+    <span class="gs">**C) Option 3**</span>
+
+    Explanation: [Why this is correct and why others are incorrect]
+<span class="sb">```</span>
+
+<span class="gu">## Success Criteria</span>
+
+This skill is successful when:
+
+<span class="k">1.</span> ✅ Quality score ≥ 60
+<span class="k">2.</span> ✅ All chapters have quizzes
+<span class="k">3.</span> ✅ Validation passes
+<span class="k">4.</span> ✅ Metadata is updated with results
+<span class="k">5.</span> ✅ Quiz files are created in <span class="sb">`docs/quizzes/`</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="example-checking-status-before-running">Example: Checking Status Before Running</h2>
+<p>Here's a complete workflow example showing how a user or automated system would work with the metadata:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Complete workflow example for running multiple skills in sequence</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+
+
+<span class="k">def</span> <span class="nf">run_intelligent_textbook_workflow</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run the complete textbook generation workflow.&quot;&quot;&quot;</span>
+
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
+
+    <span class="c1"># Define the workflow sequence</span>
+    <span class="n">workflow</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;course_description_analyzer&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;learning_graph_generator&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;glossary_generator&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;chapter_generator&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;quiz_generator&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;faq_generator&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;reference_generator&#39;</span>
+    <span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;INTELLIGENT TEXTBOOK GENERATION WORKFLOW&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">skill_name</span> <span class="ow">in</span> <span class="n">workflow</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">80</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SKILL: </span><span class="si">{</span><span class="n">skill_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;=&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">80</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Check if skill can run</span>
+        <span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="n">skill_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">can_run</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏸️  Skipping </span><span class="si">{</span><span class="n">skill_name</span><span class="si">}</span><span class="s2"> - prerequisites not met:&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">reason</span> <span class="ow">in</span> <span class="n">reasons</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   • </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 Complete the following skills first:&quot;</span><span class="p">)</span>
+            <span class="n">skill_data</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_skill_status</span><span class="p">(</span><span class="n">skill_name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">skill_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dependencies&#39;</span><span class="p">,</span> <span class="p">[]):</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   • </span><span class="si">{</span><span class="n">dep</span><span class="p">[</span><span class="s1">&#39;skill&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   • </span><span class="si">{</span><span class="n">dep</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Check if already completed</span>
+        <span class="n">skill_status</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">get_skill_status</span><span class="p">(</span><span class="n">skill_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">skill_status</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;completed&#39;</span><span class="p">:</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">skill_status</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;quality_score&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ Already completed (score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Skill can run - would normally invoke the skill here</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚀 Ready to run </span><span class="si">{</span><span class="n">skill_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Dependencies: ✅ All met&quot;</span><span class="p">)</span>
+
+        <span class="c1"># In a real workflow, you would invoke the skill here:</span>
+        <span class="c1"># run_skill(skill_name)</span>
+
+        <span class="c1"># For this example, we&#39;ll just simulate it</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   ⏭️  Would invoke skill here...&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Generate final report</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">generate_status_report</span><span class="p">())</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run_intelligent_textbook_workflow</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="integration-with-claude-code">Integration with Claude Code</h2>
+<p>When using Claude Code, the assistant can check metadata before running skills:</p>
+<h3 id="user-request">User Request:</h3>
+<blockquote>
+<p>"Please generate quizzes for my textbook"</p>
+</blockquote>
+<h3 id="claude-response">Claude Response:</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>I&#39;ll generate quizzes for your textbook. Let me first check if prerequisites are met.
+
+&lt;uses Python tool to check metadata&gt;
+
+I see that:
+<span class="k">-</span><span class="w"> </span>✅ Course description is complete (score: 85)
+<span class="k">-</span><span class="w"> </span>✅ Learning graph is complete (score: 92)
+<span class="k">-</span><span class="w"> </span>❌ Chapter generation is not yet complete (only 20% done)
+
+The quiz generator requires at least 30% of chapters to be completed before it can run.
+
+Would you like me to:
+<span class="k">1.</span> Continue generating chapters until we reach 30%, then generate quizzes
+<span class="k">2.</span> Generate quizzes only for the completed chapters
+<span class="k">3.</span> Wait and generate quizzes later when more chapters are done
+
+Please let me know your preference.
+</code></pre></div></td></tr></table></div>
+<p>This integration ensures skills run in the correct order and with sufficient prerequisites, making the textbook creation process more reliable and systematic.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../../book-metadata-guide/">Book Metadata Guide</a> - Complete documentation</li>
+<li><a href="../../src/book_metadata_helper.py">Python Helper API</a> - Source code</li>
+<li><a href="../../workflow/index.md">Workflow Documentation</a> - Process overview</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

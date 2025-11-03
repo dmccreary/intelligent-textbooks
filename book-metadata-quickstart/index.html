@@ -1,0 +1,1759 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/book-metadata-quickstart/">
+      
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Book Metadata Quick Start Guide - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Book Metadata Quick Start Guide - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/book-metadata-quickstart.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/book-metadata-quickstart/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Book Metadata Quick Start Guide - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/book-metadata-quickstart.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#book-metadata-quick-start-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Book Metadata Quick Start Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-textbook-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Textbook Authors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For Textbook Authors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-your-book-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Your Book Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-running-any-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Running Any Skill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-running-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      After Running a Skill
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-skill-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Skill Developers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="For Skill Developers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-3-lines-to-your-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add 3 Lines to Your Skill
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-minimal-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Minimal Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#starting-a-new-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting a New Book
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequential-skill-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequential Skill Execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking What's Next
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resuming-work-on-a-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resuming Work on a Book
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-claude-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Claude Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill-status-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Status Values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-score-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Score Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-find-book-metadatayml" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Cannot find book-metadata.yml"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-shows-as-blocked-but-dependency-is-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill shows as blocked but dependency is completed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-to-reset-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need to reset a skill
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/book-metadata-quickstart.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="book-metadata-quick-start-guide">Book Metadata Quick Start Guide</h1>
+<p>Get started with the book metadata system in 5 minutes.</p>
+<h2 id="for-textbook-authors">For Textbook Authors</h2>
+<h3 id="check-your-book-status">Check Your Book Status</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status
+</code></pre></div></td></tr></table></div>
+<p>This shows you:
+- Which skills have been completed ✓
+- Which skills are ready to run ○
+- Which skills are blocked and why</p>
+<h3 id="before-running-any-skill">Before Running Any Skill</h3>
+<p>Check if prerequisites are met:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>check<span class="w"> </span>--skill<span class="w"> </span>&lt;skill_name&gt;
+</code></pre></div></td></tr></table></div>
+<p>Examples:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Can I generate quizzes?</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>check<span class="w"> </span>--skill<span class="w"> </span>quiz_generator
+
+<span class="c1"># Can I generate the learning graph?</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>check<span class="w"> </span>--skill<span class="w"> </span>learning_graph_generator
+</code></pre></div></td></tr></table></div></p>
+<h3 id="after-running-a-skill">After Running a Skill</h3>
+<p>Update the metadata (usually done automatically by the skill):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--skill<span class="w"> </span>quiz_generator<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--status<span class="w"> </span>completed<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--score<span class="w"> </span><span class="m">85</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="for-skill-developers">For Skill Developers</h2>
+<h3 id="add-3-lines-to-your-skill">Add 3 Lines to Your Skill</h3>
+<p><strong>Step 1: Check if skill can run</strong></p>
+<p>Add this at the start of your skill:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
+<span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">&#39;your_skill_name&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">can_run</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Cannot run - prerequisites not met:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">reason</span> <span class="ow">in</span> <span class="n">reasons</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  • </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Step 2: Mark as in progress</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">&#39;your_skill_name&#39;</span><span class="p">,</span> <span class="s1">&#39;in_progress&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Step 3: Update when complete</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span>
+    <span class="n">skill_name</span><span class="o">=</span><span class="s1">&#39;your_skill_name&#39;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span>
+    <span class="n">quality_score</span><span class="o">=</span><span class="n">your_calculated_score</span><span class="p">,</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;key_metrics&#39;</span><span class="p">:</span> <span class="s1">&#39;values&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;files_generated&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">,</span> <span class="s1">&#39;files&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="full-minimal-example">Full Minimal Example</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Minimal skill with metadata integration.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
+
+    <span class="c1"># Check prerequisites</span>
+    <span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">&#39;my_skill&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">can_run</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Cannot run:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">reason</span> <span class="ow">in</span> <span class="n">reasons</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  • </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Mark as in progress</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">&#39;my_skill&#39;</span><span class="p">,</span> <span class="s1">&#39;in_progress&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Do your skill work here</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">do_skill_work</span><span class="p">()</span>
+
+        <span class="c1"># Mark as completed</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span>
+            <span class="n">skill_name</span><span class="o">=</span><span class="s1">&#39;my_skill&#39;</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span>
+            <span class="n">quality_score</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">score</span><span class="p">,</span>
+            <span class="n">outputs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">metrics</span>
+        <span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="c1"># Mark as failed</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">&#39;my_skill&#39;</span><span class="p">,</span> <span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="n">notes</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+        <span class="k">raise</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="common-workflows">Common Workflows</h2>
+<h3 id="starting-a-new-book">Starting a New Book</h3>
+<ol>
+<li>
+<p>Update <code>book-metadata.yml</code> with your book information:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">dublin_core</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Your</span><span class="nv"> </span><span class="s">Book</span><span class="nv"> </span><span class="s">Title&quot;</span>
+<span class="w">  </span><span class="nt">creator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Your</span><span class="nv"> </span><span class="s">Name&quot;</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Your</span><span class="nv"> </span><span class="s">course</span><span class="nv"> </span><span class="s">description&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p>Run course description analyzer:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if ready</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>check<span class="w"> </span>--skill<span class="w"> </span>course_description_analyzer
+
+<span class="c1"># Run the skill (using Claude Code or your script)</span>
+<span class="c1"># Skill will automatically update metadata</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p>Check status:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<h3 id="sequential-skill-execution">Sequential Skill Execution</h3>
+<p>Follow this order for best results:</p>
+<ol>
+<li><strong>course_description_analyzer</strong> - Foundation</li>
+<li><strong>learning_graph_generator</strong> - Concept mapping</li>
+<li><strong>glossary_generator</strong> - Term definitions</li>
+<li><strong>reference_generator</strong> - Bibliography</li>
+<li><strong>chapter_generator</strong> - Content (can run in parallel with glossary/references)</li>
+<li><strong>quiz_generator</strong> - Assessment (after 30% of chapters)</li>
+<li><strong>faq_generator</strong> - Questions (after 30% of chapters)</li>
+<li><strong>microsim_p5</strong> - Interactive content (anytime after learning graph)</li>
+<li><strong>quality_metrics_analyzer</strong> - Validation (anytime)</li>
+<li><strong>social_media_generator</strong> - Marketing (after 50% of chapters)</li>
+</ol>
+<h3 id="checking-whats-next">Checking What's Next</h3>
+<p>The status report tells you what you can do next:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status
+</code></pre></div></td></tr></table></div>
+<p>Look for skills marked with ○ (not started) that have <strong>no blockers</strong> listed.</p>
+<h3 id="resuming-work-on-a-book">Resuming Work on a Book</h3>
+<ol>
+<li>
+<p>Check current status:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p>Find the current phase:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Current Phase: content_generation
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p>Look for next unblocked skill and run it</p>
+</li>
+</ol>
+<h2 id="integration-with-claude-code">Integration with Claude Code</h2>
+<p>When asking Claude Code to help with your textbook:</p>
+<p><strong>Good request:</strong></p>
+<blockquote>
+<p>"Check the book metadata and tell me what skill I should run next"</p>
+</blockquote>
+<p><strong>Claude will:</strong>
+1. Run <code>python src/book_metadata_helper.py status</code>
+2. Analyze what's completed and what's blocked
+3. Recommend the next logical skill to run
+4. Offer to run it for you</p>
+<p><strong>Good request:</strong></p>
+<blockquote>
+<p>"Generate quizzes for my textbook"</p>
+</blockquote>
+<p><strong>Claude will:</strong>
+1. Check if quiz_generator can run
+2. If blocked, tell you what needs to be done first
+3. If ready, run the skill and update metadata automatically</p>
+<h2 id="skill-status-values">Skill Status Values</h2>
+<ul>
+<li><strong>not_started</strong> ○ - Skill hasn't been run yet</li>
+<li><strong>in_progress</strong> → - Skill is currently running</li>
+<li><strong>completed</strong> ✓ - Skill finished successfully</li>
+<li><strong>failed</strong> ✗ - Skill encountered errors</li>
+<li><strong>needs_update</strong> ⚠ - Skill completed but quality score below threshold</li>
+</ul>
+<h2 id="quality-score-guidelines">Quality Score Guidelines</h2>
+<ul>
+<li><strong>90-100</strong>: Excellent - Exceeds all requirements</li>
+<li><strong>80-89</strong>: Very Good - Meets all requirements with minor issues</li>
+<li><strong>70-79</strong>: Good - Meets requirements, some improvements needed</li>
+<li><strong>60-69</strong>: Acceptable - Meets minimum requirements</li>
+<li><strong>Below 60</strong>: Needs Work - Should be re-run or revised</li>
+</ul>
+<p>Most skills require a minimum score of 70 from their dependencies.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="cannot-find-book-metadatayml">"Cannot find book-metadata.yml"</h3>
+<p>The file should be in your repository root. If missing:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if it exists</span>
+ls<span class="w"> </span>book-metadata.yml
+
+<span class="c1"># If not, you may need to create it from template</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="skill-shows-as-blocked-but-dependency-is-completed">Skill shows as blocked but dependency is completed</h3>
+<p>Check the quality score:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>dependency_name
+</code></pre></div></td></tr></table></div>
+<p>If score is below 70, you may need to re-run the dependency.</p>
+<h3 id="need-to-reset-a-skill">Need to reset a skill</h3>
+<p>Edit <code>book-metadata.yml</code> and change the skill's status back to <code>not_started</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">skills</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_skill</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not_started</span><span class="w">  </span><span class="c1"># Change from completed/failed</span>
+<span class="w">    </span><span class="nt">quality_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+</code></pre></div></td></tr></table></div>
+<p>Or use Python:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
+<span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">&#39;my_skill&#39;</span><span class="p">,</span> <span class="s1">&#39;not_started&#39;</span><span class="p">,</span> <span class="n">quality_score</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="tips">Tips</h2>
+<ol>
+<li><strong>Always check status before starting</strong> - Saves time and prevents errors</li>
+<li><strong>Let skills update metadata</strong> - Don't manually edit unless necessary</li>
+<li><strong>Track quality scores</strong> - They determine what can run next</li>
+<li><strong>Use the status report</strong> - It's your workflow dashboard</li>
+<li><strong>Follow the phases</strong> - They guide you through the process</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Read the <a href="../book-metadata-guide/">complete guide</a></li>
+<li>See <a href="../skills/metadata-integration-example/">integration examples</a></li>
+<li>Review <a href="../skills/">skill documentation</a></li>
+<li>Check <a href="../workflow/index.md">workflow overview</a></li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show full status</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>status
+
+<span class="c1"># Check if skill can run</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>check<span class="w"> </span>--skill<span class="w"> </span>SKILL_NAME
+
+<span class="c1"># Update skill status</span>
+python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span>update<span class="w"> </span>--skill<span class="w"> </span>SKILL_NAME<span class="w"> </span>--status<span class="w"> </span>STATUS<span class="w"> </span>--score<span class="w"> </span>SCORE
+</code></pre></div></td></tr></table></div>
+<p><strong>Status values:</strong> <code>not_started</code>, <code>in_progress</code>, <code>completed</code>, <code>failed</code>, <code>needs_update</code></p>
+<p><strong>Common skill names:</strong>
+- <code>course_description_analyzer</code>
+- <code>learning_graph_generator</code>
+- <code>glossary_generator</code>
+- <code>chapter_generator</code>
+- <code>quiz_generator</code>
+- <code>faq_generator</code>
+- <code>reference_generator</code>
+- <code>microsim_p5</code></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>
