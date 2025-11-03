@@ -2,6 +2,6 @@
 
 The skills previously located in this directory have been moved to:
 
-**`/Users/dan/Documents/ws/claude-skills`**
+[https://github.com/dmccreary/claude-skills/](https://github.com/dmccreary/claude-skills/)
 
-Please find all Claude Code skills in the new centralized location.
+You will find all Claude Code skills related to the creation of intelligent textbooks in this new centralized location.
