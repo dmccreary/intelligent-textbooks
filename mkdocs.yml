@@ -35,10 +35,10 @@ nav:
     - Disable Titles: tutorial/disable-title.md
     - Hiding Content: tutorial/hiding-content.md
     - Book Metadata:
-      - Book Metadata Intro: tutorial/book-metadata/book-metadata-intro.md
-      - Book Metadata Guide: tutorial/book-metadata-Guide.md
-      - Book Metadata Summary: tutorial/book-metadata/book-metadata-summary.md
-      - Book Metadata Quickstart: tutorial/book-metadata/book-metadata-quickstart.md
+      - Book Metadata Intro: concepts/book-metadata/book-metadata-intro.md
+      - Book Metadata Guide: concepts/book-metadata-Guide.md
+      - Book Metadata Summary: concepts/book-metadata/book-metadata-summary.md
+      - Book Metadata Quickstart: concepts/book-metadata/book-metadata-quickstart.md
 
   - Educational concepts:
     - Introduction: concepts/index.md
