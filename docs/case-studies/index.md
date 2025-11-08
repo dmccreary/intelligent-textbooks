@@ -540,4 +540,18 @@ have been created with our workflows.
 * MicroSims: 3
 * Glossary Terms: 38
 
+---
 
+## Trigonometric Functions
+
+- **Author:** [Hank Ratzesberger](https://www.linkedin.com/in/hank-ratzesberger-9391331/)
+- **Title:** Trigonometric Functions
+- **Target Audience:** High School
+- **Prerequisites:** Basic geometry, basic algebra, general math and calculation skills
+- **Concepts:** 200
+
+
+### Course Overview
+Trigonometric Functions is a foundational course that introduces students to the relationships between angles and sides in right triangles. This course bridges algebraic thinking and geometric reasoning, providing essential tools for solving practical problems in physics, engineering, architecture, and navigation. Students will discover how the simple ratios of trigonometric functions unlock solutions to real-world challenges, from surveying land to designing structures to understanding wave behavior.
+
+[Trigonometric Functions Website](https://stage03.iowerx.com:8443/)
