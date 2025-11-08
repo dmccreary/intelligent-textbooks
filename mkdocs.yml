@@ -34,11 +34,7 @@ nav:
     - CSS: tutorial/css-tips.md
     - Disable Titles: tutorial/disable-title.md
     - Hiding Content: tutorial/hiding-content.md
-    - Book Metadata:
-      - Book Metadata Intro: concepts/book-metadata/book-metadata-intro.md
-      - Book Metadata Guide: concepts/book-metadata-Guide.md
-      - Book Metadata Summary: concepts/book-metadata/book-metadata-summary.md
-      - Book Metadata Quickstart: concepts/book-metadata/book-metadata-quickstart.md
+
 
   - Educational concepts:
     - Introduction: concepts/index.md
@@ -54,6 +50,11 @@ nav:
     - Instructional Design: concepts/instructional-design.md
     - Levels of Interactivity: concepts/levels-of-interactivity-v1.md
     - Quality Metrics: concepts/quality-metrics.md
+    - Book Metadata:
+      - Book Metadata Intro: concepts/book-metadata/index.md
+      - Book Metadata Guide: concepts/book-metadata/book-metadata-guide.md
+      - Book Metadata Summary: concepts/book-metadata/book-metadata-summary.md
+      - Book Metadata Quickstart: concepts/book-metadata/book-metadata-quickstart.md
   
   - Workflows:
     - Introduction: workflow/index.md
