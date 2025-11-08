@@ -9,6 +9,9 @@ social:
 hide:
   - toc
 ---
+<style>
+.md-content__inner h1 {display: none !important;}
+</style>
 # Building Intelligent Textbooks With AI
 
 ![Cover Image](./img/cover.png){ width="750" }
