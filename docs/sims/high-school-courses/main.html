@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>High School Course Dependency Graph</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>High School Course Dependency Graph</h1>
+    <p>Arrows point from a course to a more advanced course that typically comes later.  The number of outgoing arrows determine the size and color of each node.</p>
+  </header>
+  <div class="controls">
+    <label>Layout:</label>
+    <label class="radio-option">
+      <input type="radio" name="layout" value="hierarchical" checked>
+      Left to Right
+    </label>
+    <label class="radio-option">
+      <input type="radio" name="layout" value="forceDirected">
+      Force Directed
+    </label>
+  </div>
+  <main>
+    <div id="network"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
