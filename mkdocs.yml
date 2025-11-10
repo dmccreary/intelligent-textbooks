@@ -76,7 +76,7 @@ nav:
   
   - MicroSims:
     - Introduction: sims/index.md
-    - High School Courses: sims/high-school-courses.md
+    - High School Courses: sims/high-school-courses/index.md
     - Addie Workflow: sims/addie-workflow/index.md
     - Book Levels: sims/book-levels/index.md
     - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
