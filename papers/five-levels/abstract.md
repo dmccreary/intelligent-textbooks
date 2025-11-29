@@ -1,0 +1,13 @@
+# A Five-Level Classification Framework for Intelligent Textbooks: Lessons from Autonomous Vehicle Standards
+
+## Abstract
+
+The rapid advancement of artificial intelligence is transforming educational content delivery, yet the field lacks a standardized framework for classifying intelligent textbook capabilities. This paper proposes a five-level classification system for intelligent textbooks, drawing inspiration from the Society of Automotive Engineers' J3016 standard for autonomous vehicles—a framework that successfully enabled clear communication, graduated regulation, and realistic expectation-setting across an industry undergoing rapid technological change.
+
+We define five levels of textbook intelligence: (1) Static textbooks with fixed content and no interactivity; (2) Interactive textbooks incorporating multimedia, hyperlinks, and basic assessments; (3) Adaptive textbooks that dynamically adjust content based on individual learner performance; (4) Chatbot-integrated textbooks employing large language models for conversational tutoring; and (5) Autonomous AI textbooks capable of comprehensive, real-time personalization across all learning contexts.
+
+A critical finding of our analysis is the identification of Level 3 as a privacy inflection point. Below this threshold, textbooks require minimal student data. At Level 3 and above, systems necessitate increasingly detailed individual learning histories, conversation logs, and behavioral patterns—raising significant concerns under FERPA, COPPA, and GDPR regulations. We argue that this threshold demands differentiated governance frameworks, with higher levels requiring proportionally stronger privacy protections, algorithmic bias auditing, and institutional data stewardship. We further examine how existing educational technology standards—including IEEE learning technology specifications, the Experience API (xAPI), and Learning Record Stores (LRS)—can provide interoperability foundations for Level 3+ systems while enabling portable, student-controlled learning records that support both personalization and privacy.
+
+Our framework provides educators, administrators, publishers, and policymakers with a common vocabulary for evaluating intelligent textbook products, establishing appropriate procurement criteria, and developing level-specific regulatory guidelines. As AI capabilities continue their exponential growth, such standardization becomes essential for responsible innovation in educational technology.
+
+**Keywords:** intelligent textbooks, educational technology, artificial intelligence, adaptive learning, privacy, classification framework, autonomous systems, large language models, xAPI, Learning Record Store
