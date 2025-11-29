@@ -1,0 +1,63 @@
+\section{Lessons from Autonomous Vehicle Classification}
+
+The Society of Automotive Engineers' J3016 standard, first published in 2014, has become the definitive framework for classifying autonomous vehicle capabilities. Its success offers valuable lessons for educational technology classification.
+
+\subsection{The Problem J3016 Solved}
+
+Prior to J3016, the autonomous vehicle industry suffered from terminological chaos. Terms like ``autopilot,'' ``self-driving,'' ``semi-autonomous,'' and ``driver assist'' were used interchangeably by manufacturers, creating confusion for consumers, regulators, and researchers alike. This ambiguity had serious consequences: consumers misunderstood system capabilities, leading to misuse and accidents; regulators struggled to craft appropriate requirements; and researchers lacked a common vocabulary for comparing systems.
+
+\subsection{The J3016 Framework}
+
+The SAE standard defines six levels of driving automation (0-5), based on who performs the dynamic driving task (human or system) and under what conditions:
+
+\begin{table}[h]
+\centering
+\caption{SAE J3016 Levels of Driving Automation}
+\begin{tabular}{@{}clL{7cm}@{}}
+\toprule
+Level & Name & Description \\
+\midrule
+0 & No Automation & Human performs all driving tasks \\
+1 & Driver Assistance & System controls steering \textbf{or} acceleration; human monitors and controls all other tasks \\
+2 & Partial Automation & System controls steering \textbf{and} acceleration; human monitors environment and intervenes as needed \\
+3 & Conditional Automation & System handles all driving in specific conditions; human must intervene when requested \\
+4 & High Automation & System handles all driving in defined operational domains; no human intervention required within those domains \\
+5 & Full Automation & System handles all driving in all conditions; no human intervention ever required \\
+\bottomrule
+\end{tabular}
+\label{tab:sae-levels}
+\end{table}
+
+\subsection{Key Design Principles}
+
+Several design principles contributed to J3016's success:
+
+\textbf{Capability-based definition}: Levels are defined by what the system can do, not by the technology used. This makes the framework technology-agnostic and resistant to obsolescence.
+
+\textbf{Clear responsibility allocation}: Each level specifies who (human or system) is responsible for what tasks. This clarity enables appropriate liability frameworks.
+
+\textbf{Graduated expectations}: The framework acknowledges that full automation is a distant goal, setting realistic expectations while validating intermediate achievements.
+
+\textbf{Regulatory compatibility}: The framework has been adopted by regulators worldwide, enabling consistent policy development.
+
+\subsection{Application to Educational Technology}
+
+Figure~\ref{fig:sae-comparison} illustrates the parallel between SAE J3016 autonomous vehicle levels and our proposed intelligent textbook classification.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/f2-sae-comparison.png}
+\caption{Side-by-side comparison of SAE J3016 autonomous vehicle levels and intelligent textbook levels. Both frameworks progress from no automation/static content through increasing levels of system autonomy, with corresponding shifts in human oversight requirements.}
+\label{fig:sae-comparison}
+\end{figure}
+
+We apply these principles to intelligent textbook classification:
+
+\begin{itemize}
+    \item Define levels by capability, not technology
+    \item Specify who (student, instructor, or system) controls learning progression
+    \item Acknowledge that full autonomy remains aspirational
+    \item Enable graduated regulatory responses
+\end{itemize}
+
+A critical addition for educational technology is explicit consideration of data requirements at each level, given the sensitivity of student information.
