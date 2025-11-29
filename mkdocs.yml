@@ -76,22 +76,27 @@ nav:
   
   - MicroSims:
     - Introduction: sims/index.md
-    - High School Courses: sims/high-school-courses/index.md
     - Addie Workflow: sims/addie-workflow/index.md
-    - Book Levels: sims/book-levels/index.md
+    - AI Flywheel: sims/ai-flywheel/index.md
+    - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
+    - Book Generation Workflow: sims/book-gen-workflow/index.md
+    - Book Levels: sims/book-levels/index.md
     - Cognitive Load: sims/cognitive-load/index.md
+    - High School Courses: sims/high-school-courses/index.md
+    - Implementation Decision Matrix: sims/implementation-matrix/index.md
     - Kemp Model: sims/kemp-model/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Levels of Interactivity: sims/levels-of-interactivity/index.md
-    - Book Generation Workflow: sims/book-gen-workflow/index.md
-    - Word Cloud: sims/word-cloud/index.md
-    - Gallery: sims/index.md
+    - METR Task Horizon Growth: sims/metr-task-horizon/index.md
+    - Privacy Threshold Chart: sims/privacy-threshold-chart/index.md
+    - SAE vs Textbook Levels: sims/sae-comparison/index.md
     - Sam Process: sims/sam-process/index.md
     - Sine Wave: sims/sine-wave/index.md
-    - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
-    - AI Flywheel: sims/ai-flywheel/index.md
+    - Standards Ecosystem: sims/standards-ecosystem/index.md
     - Terms to EKG: sims/terms-to-ekg/index.md
+    - Textbook Ecosystem CLD: sims/textbook-ecosystem-cld/index.md
+    - Word Cloud: sims/word-cloud/index.md
     - Templates: sims/templates/index.md
   
   - Case Studies:

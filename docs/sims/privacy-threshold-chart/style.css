@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    padding-bottom: 50px;
+    height: 420px;
+}
+
+@media (max-width: 600px) {
+    .chart-container {
+        height: 380px;
+        padding: 10px;
+        padding-bottom: 45px;
+    }
+}
