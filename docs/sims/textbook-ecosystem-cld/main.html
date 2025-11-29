@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Textbook Ecosystem - Causal Loop Diagram</title>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="header">
+            <h1>Intelligent Textbook Ecosystem Dynamics</h1>
+        </div>
+
+        <div class="diagram-description" id="diagram-description">
+            A systems dynamics model showing how AI capabilities, MicroSim creation, faceted search discovery, and teacher adoption interact to transform educational publishing.
+        </div>
+
+        <div id="network"></div>
+
+        <div class="details-panel" id="details-panel">
+            <h3>Details</h3>
+            <div class="details-content" id="details-content">
+                Click on a node, edge, or loop symbol to see details here.
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-color positive"></span>
+                <span>+ Positive relationship (same direction)</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color negative"></span>
+                <span>- Negative relationship (opposite direction)</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-loop reinforcing">R</span>
+                <span>Reinforcing loop</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-loop balancing">B</span>
+                <span>Balancing loop</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="textbook-ecosystem-cld.js"></script>
+</body>
+</html>

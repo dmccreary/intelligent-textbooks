@@ -1,0 +1,316 @@
+{
+  "metadata": {
+    "id": "textbook-ecosystem-cld",
+    "title": "Intelligent Textbook Ecosystem Dynamics",
+    "archetype": "limits-to-growth",
+    "description": "A systems dynamics model showing how AI capabilities, MicroSim creation, faceted search discovery, and teacher adoption interact to transform educational publishing, while traditional publishers face resistance loops.",
+    "learning_objectives": [
+      "Identify reinforcing loops driving intelligent textbook adoption",
+      "Understand balancing loops creating publisher resistance",
+      "Recognize the role of faceted search in accelerating adoption",
+      "Analyze leverage points for accelerating transformation"
+    ],
+    "version": "1.0.0",
+    "created_date": "2025-11-29",
+    "author": "Dan McCreary",
+    "tags": ["education", "AI", "publishing", "systems-thinking", "MicroSims"]
+  },
+  "nodes": [
+    {
+      "id": "ai_capabilities",
+      "label": "AI Model Capabilities",
+      "position": {"x": 100, "y": 100},
+      "type": "variable",
+      "description": "The task horizon and quality of AI systems, measured by METR methodology (7-month doubling time)",
+      "examples": ["GPT-5 at 137 hours", "Claude capabilities", "Task completion horizons"]
+    },
+    {
+      "id": "microsim_quantity",
+      "label": "MicroSim Quality & Quantity",
+      "position": {"x": 300, "y": 50},
+      "type": "stock",
+      "description": "The number and quality of interactive educational simulations available",
+      "examples": ["p5.js simulations", "Interactive visualizations", "Embedded assessments"]
+    },
+    {
+      "id": "content_cost",
+      "label": "Content Creation Cost",
+      "position": {"x": 100, "y": 250},
+      "type": "variable",
+      "description": "The cost (time and money) to produce Level 2 interactive textbook content",
+      "examples": ["Hours per chapter", "Cost per simulation", "Editorial overhead"]
+    },
+    {
+      "id": "faceted_search",
+      "label": "Faceted Search Engines",
+      "position": {"x": 450, "y": 150},
+      "type": "variable",
+      "description": "Centralized discovery platforms that help instructors find the perfect MicroSim for their lessons",
+      "examples": ["MicroSim marketplaces", "OER repositories", "Curated collections"]
+    },
+    {
+      "id": "teacher_awareness",
+      "label": "Teacher Adoption & Awareness",
+      "position": {"x": 500, "y": 300},
+      "type": "variable",
+      "description": "The degree to which educators know about and actively use intelligent textbook resources",
+      "examples": ["Professional development", "Word of mouth", "Conference presentations"]
+    },
+    {
+      "id": "oer_availability",
+      "label": "Open Educational Resources",
+      "position": {"x": 150, "y": 400},
+      "type": "stock",
+      "description": "The pool of freely available educational content including textbooks and simulations",
+      "examples": ["OpenStax", "MIT OCW", "OER Commons"]
+    },
+    {
+      "id": "student_outcomes",
+      "label": "Student Learning Outcomes",
+      "position": {"x": 350, "y": 450},
+      "type": "variable",
+      "description": "Measurable improvements in student learning, engagement, and achievement",
+      "examples": ["Test scores", "Completion rates", "Engagement metrics"]
+    },
+    {
+      "id": "textbook_demand",
+      "label": "Intelligent Textbook Demand",
+      "position": {"x": 550, "y": 450},
+      "type": "variable",
+      "description": "Market demand for Level 2+ intelligent textbooks from institutions and students",
+      "examples": ["Adoption rates", "Procurement requests", "Student preferences"]
+    },
+    {
+      "id": "publisher_revenue",
+      "label": "Traditional Publisher Revenue",
+      "position": {"x": 700, "y": 200},
+      "type": "stock",
+      "description": "Revenue from traditional print and static digital textbook sales",
+      "examples": ["Print sales", "Access codes", "Static ebook licenses"]
+    },
+    {
+      "id": "publisher_reluctance",
+      "label": "Publisher AI Reluctance",
+      "position": {"x": 700, "y": 350},
+      "type": "variable",
+      "description": "Resistance from traditional publishers to invest in AI-generated content that might cannibalize existing revenue",
+      "examples": ["Risk aversion", "Legacy system lock-in", "Shareholder pressure"]
+    },
+    {
+      "id": "ai_investment",
+      "label": "AI Content Investment",
+      "position": {"x": 700, "y": 500},
+      "type": "variable",
+      "description": "Investment by publishers and institutions in AI-powered content creation tools",
+      "examples": ["R&D spending", "Platform development", "AI tool licensing"]
+    }
+  ],
+  "edges": [
+    {
+      "id": "ai_to_microsim",
+      "source": "ai_capabilities",
+      "target": "microsim_quantity",
+      "polarity": "positive",
+      "description": "More capable AI enables creation of more and better MicroSims",
+      "strength": "strong",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "ai_to_cost",
+      "source": "ai_capabilities",
+      "target": "content_cost",
+      "polarity": "negative",
+      "description": "More capable AI reduces the cost of content creation",
+      "strength": "strong",
+      "curve": {"type": "curvedCCW", "roundness": 0.2}
+    },
+    {
+      "id": "cost_to_oer",
+      "source": "content_cost",
+      "target": "oer_availability",
+      "polarity": "negative",
+      "description": "Lower creation costs lead to more OER production",
+      "strength": "moderate",
+      "curve": {"type": "curvedCW", "roundness": 0.3}
+    },
+    {
+      "id": "microsim_to_search",
+      "source": "microsim_quantity",
+      "target": "faceted_search",
+      "polarity": "positive",
+      "description": "More MicroSims increase the value of discovery platforms",
+      "strength": "moderate",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "search_to_teacher",
+      "source": "faceted_search",
+      "target": "teacher_awareness",
+      "polarity": "positive",
+      "description": "Better search tools help teachers discover and adopt resources",
+      "strength": "strong",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "oer_to_teacher",
+      "source": "oer_availability",
+      "target": "teacher_awareness",
+      "polarity": "positive",
+      "description": "More free resources attract teacher attention and adoption",
+      "strength": "moderate",
+      "curve": {"type": "curvedCCW", "roundness": 0.3}
+    },
+    {
+      "id": "teacher_to_outcomes",
+      "source": "teacher_awareness",
+      "target": "student_outcomes",
+      "polarity": "positive",
+      "description": "Teacher adoption of quality resources improves student outcomes",
+      "strength": "strong",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "outcomes_to_demand",
+      "source": "student_outcomes",
+      "target": "textbook_demand",
+      "polarity": "positive",
+      "description": "Demonstrated learning improvements increase demand",
+      "strength": "strong",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "demand_to_teacher",
+      "source": "textbook_demand",
+      "target": "teacher_awareness",
+      "polarity": "positive",
+      "description": "Higher demand creates buzz and increases awareness",
+      "strength": "moderate",
+      "curve": {"type": "curvedCCW", "roundness": 0.4}
+    },
+    {
+      "id": "demand_to_revenue",
+      "source": "textbook_demand",
+      "target": "publisher_revenue",
+      "polarity": "negative",
+      "description": "Demand for intelligent textbooks cannibalizes traditional sales",
+      "strength": "strong",
+      "curve": {"type": "curvedCW", "roundness": 0.3}
+    },
+    {
+      "id": "revenue_to_reluctance",
+      "source": "publisher_revenue",
+      "target": "publisher_reluctance",
+      "polarity": "positive",
+      "description": "Declining revenue reinforces protective behavior",
+      "strength": "moderate",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "reluctance_to_investment",
+      "source": "publisher_reluctance",
+      "target": "ai_investment",
+      "polarity": "negative",
+      "description": "Reluctance reduces investment in AI content tools",
+      "strength": "strong",
+      "curve": {"type": "curvedCW", "roundness": 0.2}
+    },
+    {
+      "id": "investment_to_ai",
+      "source": "ai_investment",
+      "target": "ai_capabilities",
+      "polarity": "positive",
+      "description": "Investment in AI tools improves available capabilities",
+      "strength": "moderate",
+      "delay": {"present": true, "duration": "1-2 years"},
+      "curve": {"type": "curvedCCW", "roundness": 0.4}
+    }
+  ],
+  "loops": [
+    {
+      "id": "R1",
+      "type": "reinforcing",
+      "path": ["teacher_awareness", "student_outcomes", "textbook_demand", "teacher_awareness"],
+      "label": "Adoption Flywheel",
+      "description": "Teacher adoption improves outcomes, which increases demand, which drives more awareness and adoption",
+      "behavior_pattern": "Exponential growth in intelligent textbook adoption",
+      "position": {"x": 480, "y": 380},
+      "is_primary": true
+    },
+    {
+      "id": "R2",
+      "type": "reinforcing",
+      "path": ["ai_capabilities", "microsim_quantity", "faceted_search", "teacher_awareness", "student_outcomes", "textbook_demand"],
+      "label": "AI Content Virtuous Cycle",
+      "description": "AI capabilities drive content creation, discovery, adoption, and demand, potentially feeding back to more AI investment",
+      "behavior_pattern": "Accelerating content ecosystem growth",
+      "position": {"x": 320, "y": 220}
+    },
+    {
+      "id": "R3",
+      "type": "reinforcing",
+      "path": ["ai_capabilities", "content_cost", "oer_availability", "teacher_awareness", "student_outcomes"],
+      "label": "Cost Collapse Loop",
+      "description": "AI reduces costs, enabling more OER, driving adoption and outcomes",
+      "behavior_pattern": "Democratization of educational content",
+      "position": {"x": 200, "y": 320}
+    },
+    {
+      "id": "B1",
+      "type": "balancing",
+      "path": ["textbook_demand", "publisher_revenue", "publisher_reluctance", "ai_investment", "ai_capabilities"],
+      "label": "Publisher Resistance",
+      "description": "Demand threatens revenue, creating reluctance that slows AI investment",
+      "behavior_pattern": "Resistance to disruption eventually overcome by market forces",
+      "position": {"x": 620, "y": 380}
+    }
+  ],
+  "leverage_points": [
+    {
+      "id": "lp1",
+      "target_type": "node",
+      "target_id": "faceted_search",
+      "leverage_level": 4,
+      "title": "Accelerate Discovery",
+      "description": "Investing in faceted search engines dramatically accelerates the entire adoption cycle",
+      "intervention_strategies": ["Build MicroSim marketplaces", "Integrate with LMS platforms", "Add quality ratings"],
+      "expected_impact": "10x faster teacher discovery of relevant resources",
+      "difficulty": "moderate"
+    },
+    {
+      "id": "lp2",
+      "target_type": "edge",
+      "target_id": "reluctance_to_investment",
+      "leverage_level": 3,
+      "title": "Publisher Mindset Shift",
+      "description": "Helping publishers see AI as opportunity rather than threat",
+      "intervention_strategies": ["Showcase successful AI-publisher partnerships", "Demonstrate new revenue models"],
+      "expected_impact": "Converts resistance to acceleration",
+      "difficulty": "high"
+    }
+  ],
+  "educational_content": {
+    "discussion_questions": [
+      "What happens to the system if AI capabilities plateau?",
+      "How might traditional publishers successfully adapt rather than resist?",
+      "What role should institutions play in accelerating or regulating this transformation?",
+      "How do privacy concerns at Level 3+ interact with this ecosystem?"
+    ],
+    "key_insights": [
+      "The system has multiple reinforcing loops that can create rapid transformation",
+      "Publisher resistance is a temporary balancing force that market pressure eventually overcomes",
+      "Faceted search is a high-leverage intervention point",
+      "The 7-month AI doubling time means waiting is increasingly costly"
+    ],
+    "common_misconceptions": [
+      {
+        "misconception": "Traditional publishers will successfully resist disruption",
+        "correction": "Multiple reinforcing loops overwhelm the single balancing loop over time"
+      },
+      {
+        "misconception": "Teacher adoption is the primary bottleneck",
+        "correction": "Discovery (faceted search) is often the bigger constraint than willingness to adopt"
+      }
+    ],
+    "related_concepts": ["Disruptive innovation", "Network effects", "Platform economics", "Educational technology adoption curves"]
+  }
+}
