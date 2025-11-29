@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Technology Standards Ecosystem</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Educational Technology Standards Ecosystem</h1>
+        <div id="network"></div>
+        <div id="details">
+            <p>Click on a standard to see details</p>
+        </div>
+    </div>
+
+    <script>
+        const nodes = new vis.DataSet([
+            // Core Standards
+            { id: 'xapi', label: 'xAPI\n(Experience API)', group: 'core', title: 'Tracks learning activities as Actor-Verb-Object statements', x: 0, y: 0 },
+            { id: 'lrs', label: 'LRS\n(Learning Record Store)', group: 'core', title: 'Stores and retrieves xAPI statements', x: 150, y: 100 },
+            { id: 'lti', label: 'LTI\n(Learning Tools\nInteroperability)', group: 'ims', title: 'Connects external tools to LMS platforms', x: -150, y: 100 },
+
+            // IEEE Standards
+            { id: 'ieee_lom', label: 'IEEE LOM\n(Learning Object\nMetadata)', group: 'ieee', title: 'Describes educational content for discovery', x: -200, y: -100 },
+            { id: 'ieee_ltsc', label: 'IEEE LTSC', group: 'ieee', title: 'Learning Technology Standards Committee', x: -300, y: 0 },
+
+            // IMS Standards
+            { id: 'caliper', label: 'Caliper\nAnalytics', group: 'ims', title: 'Learning analytics standard from IMS Global', x: -100, y: 200 },
+            { id: 'clr', label: 'CLR\n(Comprehensive\nLearner Record)', group: 'ims', title: 'Portable credential and achievement records', x: 50, y: 250 },
+
+            // Systems
+            { id: 'lms', label: 'LMS\n(Learning\nManagement\nSystem)', group: 'system', title: 'Canvas, Blackboard, Moodle, etc.', x: -250, y: 150 },
+            { id: 'textbook', label: 'Intelligent\nTextbook\n(Level 3+)', group: 'system', title: 'Adaptive and AI-powered textbooks', x: 200, y: -50 },
+
+            // Privacy/Governance
+            { id: 'ferpa', label: 'FERPA', group: 'regulation', title: 'US student privacy law', x: 300, y: 150 },
+            { id: 'gdpr', label: 'GDPR', group: 'regulation', title: 'EU data protection regulation', x: 300, y: 250 }
+        ]);
+
+        const edges = new vis.DataSet([
+            // xAPI connections
+            { from: 'xapi', to: 'lrs', label: 'stores in', arrows: 'to' },
+            { from: 'textbook', to: 'xapi', label: 'generates', arrows: 'to' },
+
+            // LTI connections
+            { from: 'lms', to: 'lti', label: 'uses', arrows: 'to' },
+            { from: 'lti', to: 'textbook', label: 'connects', arrows: 'to' },
+
+            // IEEE connections
+            { from: 'ieee_ltsc', to: 'ieee_lom', label: 'defines', arrows: 'to' },
+            { from: 'ieee_lom', to: 'textbook', label: 'describes', arrows: 'to', dashes: true },
+
+            // IMS connections
+            { from: 'lms', to: 'caliper', label: 'implements', arrows: 'to' },
+            { from: 'caliper', to: 'lrs', label: 'similar to', arrows: 'to', dashes: true },
+            { from: 'lrs', to: 'clr', label: 'feeds', arrows: 'to' },
+
+            // Regulation connections
+            { from: 'lrs', to: 'ferpa', label: 'must comply', arrows: 'to', color: { color: '#e74c3c' } },
+            { from: 'lrs', to: 'gdpr', label: 'must comply', arrows: 'to', color: { color: '#e74c3c' } },
+            { from: 'textbook', to: 'ferpa', label: 'subject to', arrows: 'to', dashes: true, color: { color: '#e74c3c' } }
+        ]);
+
+        const container = document.getElementById('network');
+        const data = { nodes: nodes, edges: edges };
+
+        const options = {
+            layout: {
+                improvedLayout: true,
+                hierarchical: false
+            },
+            physics: {
+                enabled: false
+            },
+            nodes: {
+                shape: 'box',
+                margin: 10,
+                font: { size: 12, face: 'Arial', multi: 'html', align: 'center' },
+                borderWidth: 2,
+                shadow: true
+            },
+            edges: {
+                font: { size: 10, align: 'middle' },
+                arrows: { to: { scaleFactor: 0.8 } },
+                smooth: { type: 'curvedCW', roundness: 0.2 }
+            },
+            groups: {
+                core: {
+                    color: { background: '#3498db', border: '#2980b9' },
+                    font: { color: 'white' }
+                },
+                ieee: {
+                    color: { background: '#9b59b6', border: '#8e44ad' },
+                    font: { color: 'white' }
+                },
+                ims: {
+                    color: { background: '#1abc9c', border: '#16a085' },
+                    font: { color: 'white' }
+                },
+                system: {
+                    color: { background: '#f39c12', border: '#d68910' },
+                    font: { color: 'white' }
+                },
+                regulation: {
+                    color: { background: '#e74c3c', border: '#c0392b' },
+                    font: { color: 'white' }
+                }
+            }
+        };
+
+        const network = new vis.Network(container, data, options);
+
+        const descriptions = {
+            'xapi': '<b>Experience API (xAPI)</b><br>Developed by ADL Initiative. Records learning activities as "Actor-Verb-Object" statements. Enables fine-grained tracking of learning interactions across platforms.',
+            'lrs': '<b>Learning Record Store</b><br>Database for storing xAPI statements. Can be institution-controlled or student-owned. Key for Level 3+ textbook data storage.',
+            'lti': '<b>Learning Tools Interoperability</b><br>IMS Global standard for connecting external tools (like intelligent textbooks) to LMS platforms. Enables single sign-on and grade passback.',
+            'ieee_lom': '<b>IEEE Learning Object Metadata</b><br>Standard vocabulary for describing educational content. Enables discovery and categorization of learning resources.',
+            'ieee_ltsc': '<b>IEEE Learning Technology Standards Committee</b><br>Develops technical standards for learning technology. Parent organization for LOM and related standards.',
+            'caliper': '<b>Caliper Analytics</b><br>IMS Global standard for learning analytics. Competing/complementary to xAPI with stronger LMS integration.',
+            'clr': '<b>Comprehensive Learner Record</b><br>Emerging standard for portable credentials. Enables students to carry verified achievements across institutions.',
+            'lms': '<b>Learning Management System</b><br>Platforms like Canvas, Blackboard, Moodle. Central hub for course delivery and student data.',
+            'textbook': '<b>Intelligent Textbook (Level 3+)</b><br>Adaptive, chatbot, or autonomous textbooks that generate learning data requiring standards-based storage.',
+            'ferpa': '<b>FERPA</b><br>Family Educational Rights and Privacy Act (US). Protects student education records. Applies to Level 3+ systems.',
+            'gdpr': '<b>GDPR</b><br>General Data Protection Regulation (EU). Requires consent, data minimization, right to erasure for student data.'
+        };
+
+        network.on('click', function(params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                document.getElementById('details').innerHTML = descriptions[nodeId] || 'No details available';
+            } else {
+                document.getElementById('details').innerHTML = '<p>Click on a standard to see details</p>';
+            }
+        });
+
+        network.fit({ animation: { duration: 500 } });
+    </script>
+</body>
+</html>

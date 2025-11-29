@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METR Task Horizon Growth (2019-2030)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="metrChart"></canvas>
+    </div>
+    <div class="controls">
+        <button id="btnLinear" onclick="setScale('linear')">Linear</button>
+        <button id="btnLog" class="active" onclick="setScale('logarithmic')">Log Scale</button>
+        <span class="separator">|</span>
+        <button id="btnTrend" class="active" onclick="toggleTrend()">Show Projection</button>
+    </div>
+
+    <script>
+        // Historical METR data (50% success horizon in minutes)
+        const historicalData = [
+            { date: '2019-02-14', model: 'GPT-2', horizon: 2.4 },
+            { date: '2020-05-28', model: 'davinci-002', horizon: 8.9 },
+            { date: '2022-03-15', model: 'GPT-3.5', horizon: 36.3 },
+            { date: '2023-03-14', model: 'GPT-4', horizon: 321.8 },
+            { date: '2023-11-06', model: 'GPT-4 1106', horizon: 513.4 },
+            { date: '2024-05-13', model: 'GPT-4o', horizon: 550.2 },
+            { date: '2024-06-20', model: 'Claude 3.5 Sonnet', horizon: 1092.9 },
+            { date: '2024-09-12', model: 'o1-preview', horizon: 1325.7 },
+            { date: '2024-10-22', model: 'Claude 3.5 (Oct)', horizon: 1738.9 },
+            { date: '2024-12-05', model: 'o1-elicited', horizon: 2352.4 },
+            { date: '2025-02-24', model: 'Claude 3.7 Sonnet', horizon: 3253.6 },
+            { date: '2025-04-16', model: 'o3', horizon: 5530.7 },
+            { date: '2025-07-09', model: 'Grok-4', horizon: 6604.5 },
+            { date: '2025-08-07', model: 'GPT-5', horizon: 8239.1 }
+        ];
+
+        // Generate projection data based on 7-month doubling
+        function generateProjection() {
+            const referenceDate = new Date('2025-08-07');
+            const referenceValue = 8239.1;
+            const doublingDays = 7 * 30.44; // 7 months in days
+
+            const projectionData = [];
+            const startDate = new Date('2019-01-01');
+            const endDate = new Date('2030-06-01');
+
+            for (let d = new Date(startDate); d <= endDate; d.setMonth(d.getMonth() + 2)) {
+                const daysDiff = (d - referenceDate) / (1000 * 60 * 60 * 24);
+                const doublings = daysDiff / doublingDays;
+                const value = referenceValue * Math.pow(2, doublings);
+                projectionData.push({
+                    x: new Date(d).getTime(),
+                    y: value
+                });
+            }
+            return projectionData;
+        }
+
+        // Key milestones for annotation
+        const milestones = [
+            { horizon: 60, label: '1 hour' },
+            { horizon: 480, label: '8 hours (workday)' },
+            { horizon: 1440, label: '1 day' },
+            { horizon: 10080, label: '1 week' },
+            { horizon: 43200, label: '1 month' }
+        ];
+
+        let currentScale = 'logarithmic';
+        let showTrend = true;
+        let chart;
+
+        function formatHorizon(minutes) {
+            if (minutes >= 43200) return (minutes / 43200).toFixed(1) + ' months';
+            if (minutes >= 10080) return (minutes / 10080).toFixed(1) + ' weeks';
+            if (minutes >= 1440) return (minutes / 1440).toFixed(1) + ' days';
+            if (minutes >= 60) return (minutes / 60).toFixed(1) + ' hours';
+            return minutes.toFixed(1) + ' min';
+        }
+
+        function createChart() {
+            const ctx = document.getElementById('metrChart').getContext('2d');
+
+            const historicalPoints = historicalData.map(d => ({
+                x: new Date(d.date).getTime(),
+                y: d.horizon,
+                model: d.model
+            }));
+
+            const datasets = [
+                {
+                    label: 'Frontier Models (METR Data)',
+                    data: historicalPoints,
+                    backgroundColor: 'rgba(39, 174, 96, 0.8)',
+                    borderColor: 'rgba(39, 174, 96, 1)',
+                    pointRadius: 6,
+                    pointHoverRadius: 9,
+                    showLine: false
+                }
+            ];
+
+            if (showTrend) {
+                datasets.push({
+                    label: '7-Month Doubling Projection',
+                    data: generateProjection(),
+                    borderColor: 'rgba(52, 152, 219, 0.7)',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    borderWidth: 3,
+                    borderDash: [10, 5],
+                    pointRadius: 0,
+                    fill: false,
+                    tension: 0.4
+                });
+            }
+
+            chart = new Chart(ctx, {
+                type: 'scatter',
+                data: { datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'AI Task Completion Horizon: 7-Month Doubling Time',
+                            font: { size: 16, weight: 'bold' },
+                            padding: { bottom: 10 }
+                        },
+                        subtitle: {
+                            display: true,
+                            text: 'Source: METR (Model Evaluation and Threat Research), March 2025',
+                            font: { size: 11, style: 'italic' },
+                            color: '#666'
+                        },
+                        legend: {
+                            position: 'bottom',
+                            labels: { usePointStyle: true, padding: 15 }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)',
+                            padding: 12,
+                            callbacks: {
+                                title: function(context) {
+                                    const point = context[0].raw;
+                                    return point.model || 'Projection';
+                                },
+                                label: function(context) {
+                                    const date = new Date(context.parsed.x);
+                                    const horizon = context.parsed.y;
+                                    return [
+                                        `Date: ${date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}`,
+                                        `Horizon: ${formatHorizon(horizon)}`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'year',
+                                displayFormats: { year: 'yyyy' }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Year',
+                                font: { size: 13, weight: 'bold' }
+                            },
+                            min: new Date('2019-01-01').getTime(),
+                            max: new Date('2030-06-01').getTime(),
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        y: {
+                            type: currentScale,
+                            title: {
+                                display: true,
+                                text: 'Task Completion Horizon (50% Success)',
+                                font: { size: 13, weight: 'bold' }
+                            },
+                            min: currentScale === 'logarithmic' ? 1 : 0,
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            ticks: {
+                                callback: function(value) {
+                                    return formatHorizon(value);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function setScale(scale) {
+            currentScale = scale;
+            document.getElementById('btnLinear').classList.toggle('active', scale === 'linear');
+            document.getElementById('btnLog').classList.toggle('active', scale === 'logarithmic');
+            chart.destroy();
+            createChart();
+        }
+
+        function toggleTrend() {
+            showTrend = !showTrend;
+            document.getElementById('btnTrend').classList.toggle('active', showTrend);
+            chart.destroy();
+            createChart();
+        }
+
+        window.addEventListener('load', createChart);
+    </script>
+</body>
+</html>
