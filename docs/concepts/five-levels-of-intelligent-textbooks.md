@@ -3,13 +3,85 @@
 <iframe src="../../sims/book-levels/main.html" width="600px" height="520px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
-## Introduction to Intelligent Textbook Classification
+## The Case for a Classification System
 
-The concept of "intelligent textbooks" has evolved significantly with advancements in technology and educational theory. However, understanding the varying degrees of sophistication in these resources requires a clear classification system. This chapter presents a five-level framework for intelligent textbooks, inspired by the established levels of autonomous driving. This classification helps learning organizations strategize their approach to developing and implementing intelligent textbooks based on their capabilities, resources, and educational goals.
+As artificial intelligence reshapes education, we face a critical question: how do we talk about intelligent textbooks in a meaningful, standardized way? Without a common vocabulary, educators, administrators, publishers, and policymakers struggle to evaluate products, set expectations, and establish appropriate regulations.
+
+### Lessons from Autonomous Vehicles
+
+The automotive industry faced a similar challenge with self-driving cars. In the early 2010s, manufacturers used vague terms like "autopilot," "semi-autonomous," and "driver assist" interchangeably, creating confusion for consumers and regulators alike. The breakthrough came in 2014 when the Society of Automotive Engineers (SAE) published **J3016**, defining six levels of driving automation (0-5):
+
+| SAE Level | Name | Description |
+|-----------|------|-------------|
+| 0 | No Automation | Human does everything |
+| 1 | Driver Assistance | Vehicle controls steering OR acceleration |
+| 2 | Partial Automation | Vehicle controls steering AND acceleration; human monitors |
+| 3 | Conditional Automation | Vehicle handles most driving; human intervenes when requested |
+| 4 | High Automation | Vehicle handles all driving in defined conditions |
+| 5 | Full Automation | Vehicle handles all driving in all conditions |
+
+This classification transformed the industry. It enabled:
+
+- **Clear communication** between manufacturers, regulators, and consumers
+- **Appropriate regulation** at each level of autonomy
+- **Realistic expectations** about what each system can and cannot do
+- **Graduated liability frameworks** based on who (human or machine) controls the vehicle
+
+Intelligent textbooks deserve the same clarity.
+
+### Why Education Needs This Now
+
+Three converging trends make classification urgent:
+
+**1. Exponential AI Growth**
+
+The capabilities of AI systems are advancing at an unprecedented pace. Large language models have progressed from generating simple text completions to engaging in sophisticated tutoring conversations in just a few years. What was experimental in 2020 is now widely deployed. What seems aspirational today may be commonplace by 2027. Educational institutions need a framework to evaluate these rapidly evolving capabilities.
+
+**2. Proliferating Products**
+
+The market is flooded with products claiming to be "AI-powered," "adaptive," or "intelligent." Without standardized classification, a textbook with basic keyword search and one with sophisticated personalization algorithms might both be marketed as "intelligent"—leaving educators unable to make informed decisions.
+
+**3. Student Privacy at Stake**
+
+Perhaps most critically, higher levels of textbook intelligence require increasingly detailed data about students. A static PDF collects nothing. An adaptive system tracks every click, every wrong answer, every moment of hesitation. An AI chatbot logs intimate questions students might never ask a human teacher. Without clear classification, we cannot have informed conversations about what data collection is appropriate—and what protections students deserve.
+
+### The Privacy Threshold: Level 3 and Above
+
+The five-level framework reveals a crucial inflection point at Level 3. Below this threshold, textbooks can function with minimal or no student data:
+
+| Level | Data Requirements | Privacy Risk |
+|-------|-------------------|--------------|
+| **Level 1** (Static) | None | Minimal |
+| **Level 2** (Interactive) | Anonymous usage analytics (optional) | Low |
+| **Level 3** (Adaptive) | Individual learning histories, performance data | **Significant** |
+| **Level 4** (Chatbot) | Conversation logs, question patterns, confusion signals | **High** |
+| **Level 5** (Autonomous) | Comprehensive learner profiles, cognitive patterns | **Very High** |
+
+This threshold matters for several reasons:
+
+**Regulatory Implications**: In the United States, FERPA (Family Educational Rights and Privacy Act) and COPPA (Children's Online Privacy Protection Act) impose specific requirements on educational data. In Europe, GDPR requires explicit consent and data minimization. Level 3+ systems must be designed with these regulations in mind from the start.
+
+**Institutional Responsibility**: When a textbook tracks individual student performance, the institution becomes a data custodian. This requires investment in security infrastructure, audit capabilities, data retention policies, and breach notification procedures.
+
+**Student Trust**: Students may share vulnerabilities with an AI tutor they would never reveal to a human instructor. Questions like "I don't understand anything in this chapter" or searches for basic concepts can feel exposing. Level 4+ systems must earn and protect this trust.
+
+**Algorithmic Bias**: Adaptive and AI-driven systems can inadvertently perpetuate or amplify biases present in their training data or algorithms. A system that tracks performance might unfairly label students, creating self-fulfilling prophecies. Classification helps us identify where bias auditing is essential.
+
+### A Framework for Action
+
+Just as SAE J3016 enabled the automotive industry to move forward responsibly, a clear intelligent textbook classification enables:
+
+- **Educators** to select appropriate tools for their pedagogical goals
+- **Administrators** to develop institutional policies proportional to each level's requirements
+- **Publishers** to communicate capabilities honestly
+- **Regulators** to craft targeted requirements rather than one-size-fits-all rules
+- **Students** to understand what data they're sharing and why
+
+The five levels presented in this chapter are not meant to be exhaustive or permanent. Technology evolves. New capabilities will emerge. But having a shared vocabulary—a common starting point—transforms the conversation from vague promises to concrete capabilities.
 
 *All models are wrong, but some are useful.* — George Box
 
-This framework isn't meant to be rigid but rather serves as a guide to understand the progression of textbook intelligence and functionality. Organizations may find themselves implementing features across different levels or even bypassing certain levels as technology and pedagogical approaches evolve.
+This framework serves as a guide to understand the progression of textbook intelligence and functionality. Organizations may find themselves implementing features across different levels or even bypassing certain levels as technology and pedagogical approaches evolve.
 
 ## Learning Graphs: The Foundation of Intelligent Textbooks
 
