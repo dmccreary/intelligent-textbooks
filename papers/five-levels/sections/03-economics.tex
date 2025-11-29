@@ -1,0 +1,165 @@
+\section{The Economics of Educational Content Creation}
+
+A fundamental driver of the intelligent textbook framework is the rapidly declining cost of content creation. This section examines empirical evidence for this trend and its implications for educational publishers and institutions.
+
+\subsection{The METR Study: Measuring AI Task Capabilities}
+
+In March 2025, the Model Evaluation and Threat Research (METR) organization published groundbreaking research on measuring AI capabilities in terms of \textit{task horizons}---the duration of human tasks that AI systems can complete with specified success probabilities~\cite{metr2025}.
+
+The METR methodology represents a paradigm shift in AI evaluation. Rather than measuring narrow benchmarks (e.g., question answering accuracy, code completion), METR measures the \textbf{length of realistic human tasks} that an AI agent can complete autonomously with a 50\% (or 80\%) probability of success.
+
+\begin{table}[h]
+\centering
+\caption{AI Task Horizon Growth (50\% Success Probability)}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Model & Release Date & Horizon (min) & Horizon (hours) \\
+\midrule
+GPT-2 & Feb 2019 & 2.4 & 0.04 \\
+davinci-002 & May 2020 & 8.9 & 0.15 \\
+GPT-3.5 & Mar 2022 & 36.3 & 0.6 \\
+GPT-4 & Mar 2023 & 321.8 & 5.4 \\
+GPT-4o & May 2024 & 550.2 & 9.2 \\
+Claude 3.5 Sonnet & Jun 2024 & 1,092.9 & 18.2 \\
+o1-preview & Sep 2024 & 1,325.7 & 22.1 \\
+Claude 3.7 Sonnet & Feb 2025 & 3,253.6 & 54.2 \\
+o3 & Apr 2025 & 5,530.7 & 92.2 \\
+GPT-5 & Aug 2025 & 8,239.1 & 137.3 \\
+\bottomrule
+\end{tabular}
+\label{tab:metr-data}
+\end{table}
+
+\subsection{The Seven-Month Doubling Time}
+
+Analysis of the METR data reveals a remarkably consistent exponential growth pattern, as shown in Figure~\ref{fig:metr-projection}. AI task completion capabilities have been \textbf{doubling approximately every seven months}. This growth rate can be expressed as:
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/f4-metr-projection.png}
+\caption{AI Task Horizon Growth (2019--2030). Historical data points (blue) show measured AI capabilities from METR evaluations. The exponential trendline (dashed) extrapolates the 7-month doubling time through 2030, projecting AI systems capable of completing tasks requiring months of human effort.}
+\label{fig:metr-projection}
+\end{figure}
+
+\begin{equation}
+H(t) = H_0 \times 2^{t/7}
+\label{eq:doubling}
+\end{equation}
+
+where $H(t)$ is the task horizon in minutes at time $t$ (months from baseline), $H_0$ is the baseline horizon, and the doubling time is 7 months.
+
+To contextualize this growth rate: from February 2019 (GPT-2) to August 2025 (GPT-5), task horizons increased from 2.4 minutes to 8,239 minutes---a factor of approximately 3,400$\times$ in 78 months, or roughly 11.7 doublings (78/7 $\approx$ 11.1).
+
+\subsection{Extrapolation to 2030}
+
+If the seven-month doubling time continues, AI capabilities by 2030 would be extraordinary. Table~\ref{tab:projection} shows the projected task horizons.
+
+\begin{table}[h]
+\centering
+\caption{Projected AI Task Horizons (2025--2030)}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Date & Horizon (min) & Horizon (hours) & Horizon (days) \\
+\midrule
+Aug 2025 (baseline) & 8,239 & 137 & 5.7 \\
+Mar 2026 (+7 mo) & 16,478 & 275 & 11.5 \\
+Oct 2026 (+14 mo) & 32,956 & 549 & 22.9 \\
+May 2027 (+21 mo) & 65,912 & 1,099 & 45.8 \\
+Dec 2027 (+28 mo) & 131,824 & 2,197 & 91.5 \\
+Jul 2028 (+35 mo) & 263,648 & 4,394 & 183 \\
+Jan 2030 (+53 mo) & 1,318,000 & 21,970 & 915 \\
+\bottomrule
+\end{tabular}
+\label{tab:projection}
+\end{table}
+
+By January 2030, if trends continue, AI systems could reliably complete tasks that would take a human \textbf{over two years} of continuous work. Even accounting for significant slowdown, capabilities measured in weeks or months of human-equivalent work appear plausible within this timeframe.
+
+\textbf{Important caveats}: Exponential trends do not continue indefinitely. Physical limits, diminishing returns, data constraints, or fundamental algorithmic barriers could slow this growth. However, even a significant reduction in growth rate (e.g., 14-month doubling instead of 7-month) would still yield transformative capabilities by 2030.
+
+\subsection{Implications for Textbook Production Costs}
+
+The METR framework has direct implications for educational content creation. Consider the tasks involved in producing a Level 2 interactive textbook chapter:
+
+\begin{itemize}
+    \item Writing 5,000 words of educational prose: 2--4 hours
+    \item Creating 3 embedded quiz questions: 30--60 minutes
+    \item Developing a simple interactive simulation: 4--8 hours
+    \item Producing a concept diagram: 1--2 hours
+    \item Editing and quality review: 2--4 hours
+\end{itemize}
+
+Total: approximately \textbf{10--20 hours} per chapter.
+
+Current frontier models (2025) already have task horizons exceeding this duration. By 2027, AI systems may reliably produce entire textbooks---hundreds of pages with integrated simulations, assessments, and multimedia---in single autonomous sessions.
+
+\subsection{The Cost Trajectory}
+
+The economic implications are stark. Table~\ref{tab:cost-projection} estimates the marginal cost of producing a Level 2 textbook chapter.
+
+\begin{table}[h]
+\centering
+\caption{Projected Cost per Level 2 Chapter}
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Year & Human Hours & AI Cost & Notes \\
+\midrule
+2020 & 15 & N/A & Fully human production \\
+2023 & 10 & \$50--100 & AI assists with drafting \\
+2025 & 3 & \$10--20 & AI produces first draft; human review \\
+2027 & 0.5 & \$1--5 & AI produces complete draft; light review \\
+2030 & 0.1 & \$0.10--0.50 & Near-autonomous production \\
+\bottomrule
+\end{tabular}
+\label{tab:cost-projection}
+\end{table}
+
+At 2030 cost levels, producing a complete interactive textbook with 30 chapters would cost approximately \textbf{\$3--15}. Amortized across even a modest student population, this translates to \textbf{pennies per student per course}.
+
+\subsection{The Commoditization of Level 1--2 Content}
+
+This cost trajectory has profound strategic implications:
+
+\textbf{Level 1 (static) content becomes essentially free}. Any organization can generate high-quality static educational text at negligible cost. The value of static content approaches zero.
+
+\textbf{Level 2 (interactive) content becomes a commodity}. Interactive elements---simulations, quizzes, embedded videos---that once required specialized development will be producible on demand. The barrier to entry for creating engaging digital textbooks disappears.
+
+\textbf{Differentiation requires Level 3+}. If any organization can produce Level 1--2 content at near-zero cost, competitive advantage must come from capabilities that AI cannot easily replicate or that require persistent student relationships:
+
+\begin{itemize}
+    \item \textbf{Level 3 (Adaptive)}: Requires institutional data infrastructure, student authentication, and ongoing relationship management
+    \item \textbf{Level 4 (Chatbot)}: Requires integration with institutional systems, oversight capabilities, and trust relationships
+    \item \textbf{Level 5 (Autonomous)}: Requires deep institutional knowledge and comprehensive student support systems
+\end{itemize}
+
+\subsection{Strategic Imperatives}
+
+This analysis yields clear strategic imperatives for educational organizations:
+
+\begin{enumerate}
+    \item \textbf{Do not compete on content alone}. Organizations whose value proposition is ``we produce good educational content'' face existential risk as content production costs approach zero.
+
+    \item \textbf{Invest in data infrastructure}. The capabilities required for Level 3+ systems---student authentication, learning record management, privacy compliance---take years to build. Organizations should begin now.
+
+    \item \textbf{Build trust relationships}. Higher-level intelligent textbooks require students to share sensitive learning data. Institutions with established trust have a significant advantage.
+
+    \item \textbf{Develop integration capabilities}. Level 4+ systems must integrate with institutional LMS platforms, authentication systems, and support services. Technical integration capability becomes a competitive moat.
+
+    \item \textbf{Focus on what AI cannot easily provide}. Human mentorship, accountability structures, credential verification, and community remain valuable even as content becomes free.
+\end{enumerate}
+
+\subsection{The Penny-Per-Day Vision}
+
+Extrapolating current trends suggests a future where high-quality interactive educational content is available to every student at costs measured in pennies per day. A complete interactive textbook for a semester-long course might cost less than a single cup of coffee.
+
+This vision has profound equity implications. Educational content that was once gatekept by expensive textbook publishers could become universally accessible. The question shifts from ``Can students afford good textbooks?'' to ``How do we help students navigate abundant free resources?''
+
+However, this abundance creates new challenges:
+\begin{itemize}
+    \item Quality assurance becomes harder when anyone can produce professional-looking content
+    \item Curation and recommendation become more valuable than production
+    \item Institutional brands serve as trust signals in a sea of undifferentiated content
+    \item The value of credentials---proof that learning occurred---increases as content access becomes universal
+\end{itemize}
+
+The organizations that thrive in this future will be those that recognize Level 1--2 content as table stakes and build their value proposition around the adaptive, interactive, and relationship-based capabilities of Levels 3--5.
