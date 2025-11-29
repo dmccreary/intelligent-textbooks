@@ -10,7 +10,7 @@ const levels = [
     'Level 5\nAutonomous'
 ];
 
-const dataRequirements = [0, 1, 4, 7, 10]; // Relative data intensity
+const dataRequirements = [0, .5, 7, 8, 10]; // Relative data intensity
 
 // Descriptions shown in tooltips
 const descriptions = [

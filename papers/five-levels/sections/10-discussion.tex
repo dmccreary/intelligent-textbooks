@@ -14,16 +14,25 @@ Our five-level framework, like all classification systems, involves simplificati
 
 \subsection{Relationship to Learning Graphs}
 
-Our framework is closely related to the concept of learning graphs---structured representations of concept dependencies that enable adaptive navigation through educational content.
+Our framework is closely related to the concept of learning graphs---structured representations of concept dependencies that enable navigation through educational content.
 
-Learning graphs become essential at Level 3 and above:
+Learning graphs are a fundamental component of Level 2 intelligent textbooks. At this level, learning graphs serve as static knowledge structures that:
 \begin{itemize}
-    \item Level 3 systems use learning graphs to sequence content and enforce prerequisites
-    \item Level 4 systems use learning graphs to ground chatbot responses in verified concept relationships
-    \item Level 5 systems would use learning graphs as the knowledge backbone for autonomous tutoring
+    \item Define prerequisite relationships between concepts
+    \item Enable students to visualize the overall course structure
+    \item Support non-linear navigation based on student interests
+    \item Provide context for where each concept fits in the broader curriculum
 \end{itemize}
 
-The quality of the learning graph significantly impacts the effectiveness of higher-level systems. Poorly structured graphs lead to suboptimal learning paths regardless of algorithmic sophistication.
+The key distinction is that at Level 2, learning graphs inform \textit{student-directed} exploration, while at Level 3 and above, they enable \textit{system-directed} adaptation:
+\begin{itemize}
+    \item \textbf{Level 2}: Learning graphs help students choose their own path; the system does not track which path was taken
+    \item \textbf{Level 3}: Systems use learning graphs combined with individual performance data to sequence content and enforce prerequisites automatically
+    \item \textbf{Level 4}: Systems use learning graphs to ground chatbot responses in verified concept relationships
+    \item \textbf{Level 5}: Systems use learning graphs as the knowledge backbone for autonomous tutoring
+\end{itemize}
+
+The quality of the learning graph significantly impacts effectiveness at all levels. At Level 2, a well-structured graph helps students understand concept relationships; at Level 3+, it determines the quality of adaptive pathways. Poorly structured graphs lead to confusion at Level 2 and suboptimal learning paths at higher levels.
 
 \subsection{The Role of Human Instructors}
 
