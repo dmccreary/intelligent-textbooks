@@ -21,11 +21,11 @@ on their quest for knowledge.*
 
 Welcome to the website for a step-by-step guide to building [intelligent textbooks](./glossary.md#intelligent-textbook) using open standards.
 
-!!! not Important Announcement
-  We now have dozens of Claude Code Skills that automate over
-  90% of the effort required to build level-2 textbooks from a course
-  description.  See our [Claud Skills](https://dmccreary.github.io/claude-skills/)
-  intelligent textbook for more information.  It rocks!!
+!!! Announcement
+    We now have dozens of Claude Code Skills that automate over
+    90% of the tasks required to build level-2 textbooks from a course
+    description.  See our [Claud Skills](https://dmccreary.github.io/claude-skills/)
+    intelligent textbook for more information.  It rocks!!
 
 Most of the examples on this website use the [mkdocs](http://mkdocs.com) build system 
 paired with generative AI to create and maintain intelligent textbooks.  We also
