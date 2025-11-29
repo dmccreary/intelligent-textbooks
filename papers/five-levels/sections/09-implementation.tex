@@ -12,6 +12,38 @@ Organizations need not progress sequentially through all five levels. Depending 
 
 \textbf{Domain-specific depth}: Achieving higher levels in specific subject areas while maintaining lower levels elsewhere, based on where adaptivity provides greatest benefit.
 
+\subsection{Precision in Level Terminology}
+
+One of the primary benefits of a standardized classification framework is enabling precise communication about capabilities and requirements. When discussing educational technology initiatives, stakeholders should use level designations with care and consistency.
+
+\textbf{Regulatory Clarity}: Precise level terminology streamlines governance discussions. For example: ``Since learning graphs are part of a Level 2 textbook, we don't need regulatory approval from the student privacy review board.'' This clarity accelerates decision-making and reduces unnecessary compliance overhead for lower-level implementations.
+
+\textbf{The Level 2.99 Frontier}: There remains substantial room for innovation at the boundary between Level 2 and Level 3---what we might informally call ``Level 2.99.'' Consider a textbook that incorporates:
+
+\begin{itemize}
+    \item \textbf{Knowledge graphs} storing concept dependencies and learning paths
+    \item \textbf{In-browser graph algorithms} that recommend personalized learning sequences based on student-declared goals
+    \item \textbf{Local storage} using browser-based mechanisms entirely controlled by each student
+\end{itemize}
+
+Such a system can provide sophisticated path recommendations without crossing the privacy threshold. The key distinction: these recommendations are computed locally, goals are not persistent across sessions (unless the student explicitly saves them), and no student-specific data resides on institutional servers.
+
+\textbf{Browser-Based Privacy Preservation}: Modern web technologies---including IndexedDB, localStorage, and client-side JavaScript---enable surprisingly capable learning systems that keep all personalization data under student control. A student's browser becomes their personal learning record store, exportable and deletable at will. This architecture sidesteps many regulatory concerns while still enabling meaningful personalization within a session.
+
+\textbf{The 2.99 to 3.01 Transition}: When students \textit{do} want persistent, cross-device learning histories---and many will, for legitimate educational benefit---the challenge becomes crossing from Level 2.99 to Level 3.01 without data loss. Students who have built up valuable learning records in browser storage need a seamless path to server-side persistence when they're ready.
+
+This transition requirement will drive a new industry of secure Software-as-a-Service Learning Record Store providers. These services must offer:
+
+\begin{itemize}
+    \item Easy import of browser-based learning records
+    \item Student-controlled data ownership and portability
+    \item Institutional integration without institutional ownership
+    \item Compliance with FERPA, COPPA, GDPR, and emerging state regulations
+    \item Clear data retention and deletion policies
+\end{itemize}
+
+The organizations that build trusted bridges across the 2.99/3.01 boundary---enabling students to ``graduate'' their learning data from local to cloud storage on their own terms---will occupy a strategically valuable position in the educational technology ecosystem.
+
 \subsection{Level 2 Implementation}
 
 Level 2 represents an accessible entry point with significant benefits and minimal risk:
@@ -20,6 +52,7 @@ Level 2 represents an accessible entry point with significant benefits and minim
 \begin{itemize}
     \item Static site generators (MkDocs, Hugo, Jekyll)
     \item JavaScript simulation libraries (p5.js, D3.js)
+    \item Learning graph visualization (vis.js, D3.js, Cytoscape.js)
     \item Embedded video platforms
     \item Optional analytics (privacy-respecting options like Plausible)
 \end{itemize}
@@ -37,7 +70,7 @@ Level 3 requires significant infrastructure investment:
     \item Learning Management System with adaptive capabilities
     \item Student authentication and identity management
     \item Learning Record Store (xAPI-compatible)
-    \item Graph database for concept relationships
+    \item Learning graphs (available from Level 2) with server-side traversal algorithms
     \item Assessment engine with item banking
 \end{itemize}
 
