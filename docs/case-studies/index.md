@@ -1,5 +1,6 @@
 ---
 title: "Case Studies"
+description: A list of case studies about intelligent textbooks created by myself and others.
 ---
 # Case Studies in Building Intelligent Textbooks
 
@@ -74,6 +75,17 @@ have been created with our workflows.
 
 ---
 
+## Algebra I
+
+* **Site URL:** [https://dmccreary.github.io/algebra-1](https://dmccreary.github.io/algebra-1)
+* **GitHub Repository:** [https://github.com/dmccreary/algebra-1](https://github.com/dmccreary/algebra-1)
+
+**Description:** An introductory course to Algebra covering fundamental concepts and skills with many interactive simulations. Designed for high school students.
+
+**Status:** Chapter content with quizzes. Active development.
+
+---
+
 ## Applied Linear Algebra for Computer Science and Electrical Engineering
 
 * **Site URL:** [https://artemispearson.github.io/learning-graphs/](https://artemispearson.github.io/learning-graphs/)
@@ -114,11 +126,22 @@ have been created with our workflows.
 ## Building AI Agents with Python
 
 * **Site URL:** [https://dmccreary.github.io/agents-course/](https://dmccreary.github.io/agents-course/)
-* **GitHub Repository:** [https://dmccreary.github.io/agents-course/](https://dmccreary.github.io/agents-course/)
+* **GitHub Repository:** [https://github.com/dmccreary/agents-course](https://github.com/dmccreary/agents-course)
 
 **Description:** Creating intelligent agents with Python and LLMs.
 
 **Status:** Early stage.
+
+---
+
+## Conversational AI
+
+* **Site URL:** [https://dmccreary.github.io/conversational-ai](https://dmccreary.github.io/conversational-ai)
+* **GitHub Repository:** [https://github.com/dmccreary/conversational-ai](https://github.com/dmccreary/conversational-ai)
+
+**Description:** A college level course on creating chatbots using AI. Covers foundations of AI and NLP, search technologies, semantic search, large language models, embeddings, and vector databases.
+
+**Status:** Chapter content with quizzes. Active development.
 
 ---
 
@@ -173,6 +196,17 @@ have been created with our workflows.
 * Word Count: 2708
 * MicroSims: 3
 * Glossary Terms: 0
+
+---
+
+## Ethics in Modern Society
+
+* **Site URL:** [https://dmccreary.github.io/ethics-course](https://dmccreary.github.io/ethics-course)
+* **GitHub Repository:** [https://github.com/dmccreary/ethics-course](https://github.com/dmccreary/ethics-course)
+
+**Description:** Ethical issues and considerations in modern society backed by critical thinking and data science. Covers measuring harm, data gathering, impact analysis, systems thinking, and advocating for change.
+
+**Status:** Chapter content with MicroSims including ranking simulation and harm bubble chart.
 
 ---
 
@@ -338,6 +372,17 @@ have been created with our workflows.
 
 ---
 
+## Introduction to Graph Databases
+
+* **Site URL:** [https://dmccreary.github.io/intro-to-graph](https://dmccreary.github.io/intro-to-graph)
+* **GitHub Repository:** [https://github.com/dmccreary/intro-to-graph](https://github.com/dmccreary/intro-to-graph)
+
+**Description:** An interactive intelligent textbook covering an introduction to graph databases. Includes graph thinking, data modeling, NoSQL, labeled property graphs, query languages, and performance benchmarking.
+
+**Status:** Chapter content with quizzes. Extensive MicroSims.
+
+---
+
 ## Introduction to Microcontrollers with the PIC24
 
 * **Site URL:** [https://irvinggsea.github.io/i-book-v1/](https://irvinggsea.github.io/i-book-v1/)
@@ -349,6 +394,41 @@ have been created with our workflows.
 
 * **Site URL:** [https://btlepak.github.io/Intelligent_Textbook/](https://btlepak.github.io/Intelligent_Textbook/)
 * **GitHub Repository:** [https://btlepak.github.io/Intelligent_Textbook/](https://btlepak.github.io/Intelligent_Textbook/)
+
+---
+
+## Introduction to Physics
+
+* **Site URL:** [https://dmccreary.github.io/intro-to-physics-course](https://dmccreary.github.io/intro-to-physics-course)
+* **GitHub Repository:** [https://github.com/dmccreary/intro-to-physics-course](https://github.com/dmccreary/intro-to-physics-course)
+
+**Description:** A comprehensive year-long introduction to physics course developing students' scientific literacy through systematic progression from foundational knowledge to creative application. Covers motion, forces, energy, waves, optics, and electricity.
+
+**Status:** Chapter content with MicroSims. Active development.
+
+---
+
+## Investor Relations
+
+**Author:** [David Berglund](https://www.linkedin.com/in/dberglund/)
+
+* **Site URL:** [https://dberglu.github.io/ir-textbook/](https://dberglu.github.io/ir-textbook/)
+* **GitHub Repository:** [https://github.com/dberglu/ir-textbook](https://github.com/dberglu/ir-textbook)
+
+ **Description:** This executive-level course equips senior leaders with the frameworks, tools, and governance models required to lead AI-powered IR modernization efforts.
+
+ **Status:** 15 Chapters with full content, glossary of terms, FAQs, quizzes and several MicroSims
+
+---
+
+## IT Management with Graphs
+
+* **Site URL:** [https://dmccreary.github.io/it-management-graph](https://dmccreary.github.io/it-management-graph)
+* **GitHub Repository:** [https://github.com/dmccreary/it-management-graph](https://github.com/dmccreary/it-management-graph)
+
+**Description:** An in-depth course on IT management using graph databases. Covers ITIL, configuration management, asset management, graph technologies, and advanced IT operations topics.
+
+**Status:** Full chapter content with learning graph. Active development.
 
 ---
 
@@ -428,6 +508,17 @@ have been created with our workflows.
 
 ---
 
+## Modeling Healthcare Data with Graphs
+
+* **Site URL:** [https://dmccreary.github.io/modeling-healthcare-data](https://dmccreary.github.io/modeling-healthcare-data)
+* **GitHub Repository:** [https://github.com/dmccreary/modeling-healthcare-data](https://github.com/dmccreary/modeling-healthcare-data)
+
+**Description:** An undergraduate textbook on modeling healthcare data using graphs. Covers graph theory, healthcare systems, patient-centric data modeling, provider operations, and clinical workflows.
+
+**Status:** Chapter content with quizzes. Active development.
+
+---
+
 ## Moving Rainbow
 
 * **Site URL:** [https://dmccreary.github.io/moving-rainbow](https://dmccreary.github.io/moving-rainbow)
@@ -457,9 +548,20 @@ have been created with our workflows.
 ## Personal Finance
 
 * **Site URL:** [https://dmccreary.github.io/personal-finance/](https://dmccreary.github.io/personal-finance/)
-* **GitHub Repository:** [https://dmccreary.github.io/personal-finance/](https://dmccreary.github.io/personal-finance/)
+* **GitHub Repository:** [https://github.com/dmccreary/personal-finance](https://github.com/dmccreary/personal-finance)
 
 **Description:** An online course that helps high school students learn personal finance.  Many MicroSims and Infographics with graphic novel storytelling.
+
+---
+
+## Prompt Engineering Class
+
+* **Site URL:** [https://dmccreary.github.io/prompt-class](https://dmccreary.github.io/prompt-class)
+* **GitHub Repository:** [https://github.com/dmccreary/prompt-class](https://github.com/dmccreary/prompt-class)
+
+**Description:** Resources for teaching a class on prompt engineering. Contains hands-on labs covering lists, Mermaid diagrams, markdown tables, validation, p5.js visualizations, embeddings, and data science applications.
+
+**Status:** Lab-based content with practical exercises. Active development.
 
 ---
 
@@ -479,6 +581,17 @@ have been created with our workflows.
 * Word Count: 25930
 * MicroSims: 1
 * Glossary Terms: 4
+
+---
+
+## Semiconductor Physics Course
+
+* **Site URL:** [https://dmccreary.github.io/semiconductor-physics-course](https://dmccreary.github.io/semiconductor-physics-course)
+* **GitHub Repository:** [https://github.com/dmccreary/semiconductor-physics-course](https://github.com/dmccreary/semiconductor-physics-course)
+
+**Description:** Resources for teaching a college-level course on semiconductor physics with a focus on creating interactive simulations. Includes MicroSims like PN Junction visualization.
+
+**Status:** Early stage with course framework and initial MicroSims.
 
 ---
 
@@ -519,9 +632,20 @@ have been created with our workflows.
 ## Spectrum Analyzer
 
 * **Site URL:** [https://dmccreary.github.io/spectrum-analyzer/](https://dmccreary.github.io/spectrum-analyzer/)
-* **GitHub Repository:** [https://dmccreary.github.io/spectrum-analyzer/](https://dmccreary.github.io/spectrum-analyzer/)
+* **GitHub Repository:** [https://github.com/dmccreary/spectrum-analyzer](https://github.com/dmccreary/spectrum-analyzer)
 
 **Description:** Create a spectrum analyzer using a Raspberry Pi Pico and a microphone.  The site contains a detailed tutorial on how to build the hardware and software.
+
+---
+
+## Systems Thinking in the Age of AI
+
+* **Site URL:** [https://dmccreary.github.io/systems-thinking](https://dmccreary.github.io/systems-thinking)
+* **GitHub Repository:** [https://github.com/dmccreary/systems-thinking](https://github.com/dmccreary/systems-thinking)
+
+**Description:** An intelligent textbook with many interactive resources for teaching systems thinking to a wide audience from high school students to business executives. Covers AI flywheel, success to the successful, fixes that fail, limits to growth, and tragedy of the commons.
+
+**Status:** Multiple course descriptions for different audiences. Chapter content with MicroSims.
 
 ---
 
