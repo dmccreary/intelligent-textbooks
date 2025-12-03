@@ -10,21 +10,28 @@ This chapter explores the theory, algorithms, and implementation strategies for 
 
 ## The Learning Graph as Assessment Foundation
 
-### Concept Mastery States
+### Concept Mastery State Colors
 
-In an adaptive assessment system, each node (concept) in a student's personal learning graph exists in one of three states:
+In an adaptive assessment system, each node (concept) in a student's personal learning graph exists in one of several states:
 
 | State | Color | Description |
 |-------|-------|-------------|
+| **Unknown** | Gray | We have no knowledge if the student has mastered this concept |
 | **Mastered** | Green | Student has demonstrated understanding of this concept |
-| **Ready to Learn** | Yellow | All prerequisite concepts are green; student can begin learning this |
-| **Not Yet Ready** | Red | One or more prerequisites remain unmastered |
+| **Ready to Learn** | Yellow | All prerequisite concepts are green; student can begin learning this concept now |
+| **Not Yet Ready** | Red | One or more prerequisites remain unmastered or an assessment has shown the student has not mastered this concept |
+| **Student Goal** | Purple | The student has stated this is a goal concept they are interested in mastering. |
 
 This traffic-light metaphor provides intuitive visualization for both students and instructors:
 
-- **Green nodes** represent the student's current knowledge foundation
-- **Yellow nodes** form the "learning frontier"—the optimal next steps
-- **Red nodes** are future goals that require prerequisite mastery first
+- **Green nodes** represent the student's current knowledge foundation.  This symbolizes a green light that the users can go down this learning path at any time.
+- **Yellow nodes** form the "learning frontier" - the optimal next steps
+- **Red nodes** concepts that the user has not mastered symbolizing a red stop light that prevents further travel down a learning path
+
+In this course, you will frequently see personal learning graphs that are associated with one or more students.
+These graphs will have the following legend in the graph:
+
+![](../img/learning-graph-concept-color-legend.png)
 
 ### The Certainty Score
 
@@ -41,6 +48,28 @@ The certainty score enables nuanced decision-making:
 - Concepts with certainty > 0.8 can be marked green with confidence
 - Concepts in the 0.4-0.6 range warrant follow-up questions
 - Scores decay over time to account for forgetting (spaced repetition)
+
+### Unknown States and Goals
+
+We will add two more colors to our graphs.
+
+- Gray is an `unknown` state.  We don't know if the student has mastered this concept or not.
+- Purple is a `goal` state.  This is a concept that the student has shown a curiosity about or has stated it is a learning objective.
+
+Now we are ready to see how answering a question about a concept will change the state of the personal learning graph for each student.
+
+#### Diagram: Learning Graph Question Color
+
+<iframe src="/intelligent-textbooks/sims/question-color-update/main.html?enable-save=false" width="100%" height="680px" scrolling="no"></iframe>
+[Run the Learning Graph Question Color Update MicroSim Fullscreen](../sims/question-color-update/main.html?enable-save=false)
+
+To use this MicroSim, click on a node in the graph such as the `Term` node.  Note that the panel to the right of the graph
+now allows you to indicate if a student got an assessment question correct or incorrect.  If you click `correct` the
+node will turn green, indicating that the student has mastered the concept.  Note that the nodes that depend on the `Term` concept
+have also changed from Gray to Orange, indicating that the student is ready to learn these concepts.  All the concepts that `Term` depends on also turn green, since we can infer that a student that understands what a Term in algebra is also understands its two dependant concepts: `Constants` and `Variables`.
+
+Note that you don't need to use any complex AI or LLMs to do this analysis.  This is just simply plain old deterministic graph algorithms.  These algorithms run by simple pointer hopping and can be run directly in each students browser.  This is a key
+characteristic of a level-3 textbook.
 
 ## The Adaptive Assessment Algorithm
 
@@ -291,7 +320,10 @@ When is assessment "complete enough"?
 
 ## Suggested MicroSims
 
+<diagram>
 Use the vis-network-microsim skill
+
+**Status:** Done
 
 ### 1. Learning Graph Adaptive Assessment Coloring Simulator
 
@@ -327,7 +359,7 @@ goals are red.  Nodes are only marked "ready to learn" if all their dependant co
 - Display certainty scores on hover over each node
 
 **Learning objective**: Understand how single answers affect multiple concepts through dependencies
-
+</diagram>
 
 ### 2. Binary Search Assessment Demo
 
