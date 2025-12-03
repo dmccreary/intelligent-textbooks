@@ -11,7 +11,7 @@ const colors = {
     green: {
         background: '#4caf50',
         border: '#2e7d32',
-        font: '#ffffff'
+        font: 'white'
     },
     orange: {
         background: '#ff9800',
@@ -21,6 +21,11 @@ const colors = {
     red: {
         background: '#f44336',
         border: '#c62828',
+        font: '#ffffff'
+    },
+    purple: {
+        background: '#9c27b0',
+        border: '#6a1b9a',
         font: '#ffffff'
     }
 };
@@ -141,7 +146,7 @@ function propagateMasteryToPrerequisites(nodeId, certainty) {
 function positionView() {
     if (network) {
         network.moveTo({
-            position: { x: -50, y: 10 },
+            position: { x: -70, y: 20 },
             scale: 0.9,
             animation: false
         });
@@ -154,20 +159,25 @@ function initializeNetwork() {
     nodeCertainty = {};
     selectedNode = null;
 
-    // Initialize all nodes as gray with 0.5 certainty
+    // Define initial goals (purple nodes) - these are learning objectives
+    const initialGoals = [40]; // Simplify
+
+    // Initialize all nodes as gray with 0.5 certainty (unless they're goals)
     const initialNodes = nodeData.map(node => {
-        nodeStates[node.id] = 'gray';
-        nodeCertainty[node.id] = 0.5;
+        const isGoal = initialGoals.includes(node.id);
+        nodeStates[node.id] = isGoal ? 'purple' : 'gray';
+        nodeCertainty[node.id] = isGoal ? 0.0 : 0.5;
+        const colorSet = isGoal ? colors.purple : colors.gray;
         return {
             id: node.id,
             label: node.label,
             x: node.x,
             y: node.y,
             color: {
-                background: colors.gray.background,
-                border: colors.gray.border
+                background: colorSet.background,
+                border: colorSet.border
             },
-            font: { color: colors.gray.font, size: 14 }
+            font: { color: colorSet.font, size: 14 }
         };
     });
 
@@ -329,8 +339,9 @@ function handleNodeHover(params) {
     let stateText = {
         'gray': 'Unknown',
         'green': 'Mastered',
+        'red': 'Incorrect',
         'orange': 'Ready to Learn',
-        'red': 'Learning Goal'
+        'purple': 'Learning Goal'
     }[state];
 
     let html = `<strong>${node.label}</strong><br>`;
@@ -351,14 +362,10 @@ function handleNodeBlur(params) {
 }
 
 function showQuestionForNode(node) {
-    const questionTitle = document.querySelector('.question-title');
-    const questionText = document.getElementById('question-text');
+    const questionTitle = document.getElementById('question-title');
     const answerSection = document.getElementById('answer-section');
-    const answerPrompt = document.getElementById('answer-prompt');
 
-    questionTitle.textContent = `Question: ${node.label}`;
-    questionText.textContent = `Did the student correctly answer a question about "${node.label}"?`;
-    answerPrompt.textContent = `Record the student's response:`;
+    questionTitle.textContent = `Concept: ${node.label}`;
     answerSection.style.display = 'block';
 
     // Clear previous selection
@@ -367,12 +374,10 @@ function showQuestionForNode(node) {
 }
 
 function resetQuestionPanel() {
-    const questionTitle = document.querySelector('.question-title');
-    const questionText = document.getElementById('question-text');
+    const questionTitle = document.getElementById('question-title');
     const answerSection = document.getElementById('answer-section');
 
-    questionTitle.textContent = 'Select a Concept';
-    questionText.textContent = 'Click on any node in the graph to answer a question about that concept.';
+    questionTitle.textContent = 'Click a node to assess';
     answerSection.style.display = 'none';
     selectedNode = null;
 }
@@ -406,6 +411,10 @@ function submitAnswer() {
     }
 
     updateStats();
+
+    // Deselect the node so user can see the color change
+    network.unselectAll();
+
     resetQuestionPanel();
 }
 
