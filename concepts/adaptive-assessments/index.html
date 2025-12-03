@@ -504,7 +504,7 @@
               
   
   <span class="md-ellipsis">
-    Educational concepts
+    Educational Concepts
   </span>
   
 
@@ -520,7 +520,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Educational concepts
+            Educational Concepts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2511,11 +2511,21 @@
 
 
 <h1 id="adaptive-assessments">Adaptive Assessments</h1>
-<p>Placing students at the optimal "ready-to-learn" position on their personal learning graph through intelligent, minimal questioning.</p>
+<p>This section covers the process of recommending content for a student based on the the assessment
+questions they have answered.  Adaptive assessment are an optimized method for placing students at the optimal "ready-to-learn" position on their personal learning graph through intelligent, minimal questioning.</p>
 <h2 id="introduction">Introduction</h2>
-<p>Adaptive assessment is a cornerstone of intelligent textbooks at Level 3 and above. Unlike traditional assessments that test all students on identical content, adaptive assessments dynamically adjust questions based on student responses to efficiently map each learner's knowledge state onto a learning graph. The goal is to determine, with minimal questions, exactly which concepts a student has mastered and which they are ready to learn next.</p>
+<p>Adaptive assessment is a cornerstone of intelligent textbooks at Level 3 and above. Unlike traditional assessments that test all students on identical content, adaptive assessments dynamically adjust questions based on student responses to efficiently map each learner's knowledge state onto a learning graph. The goal is to determine, with minimal questions, exactly which concepts a student has mastered and which they are ready to learn next.  This is step 1.  Step 2 is to then recommend content
+for their age group and reading level that will help them master this concept.</p>
 <p>This chapter explores the theory, algorithms, and implementation strategies for building adaptive assessment systems that respect student time while providing accurate placement on personalized learning paths.</p>
 <h2 id="the-learning-graph-as-assessment-foundation">The Learning Graph as Assessment Foundation</h2>
+<p>Every intelligent textbook has a learning graph.  We can call this the course learning graph.  This is a list of the core concepts taught in a course
+that should be mastered in order for a student to pass the course.  This is another way of saying
+they have mastered all the concepts in a course.</p>
+<p>Level 3 textbooks add state information to each node node of the course learning graph for each student.
+When we combine the course graph with the student state information we create a new type of graph we
+call a personal learning graph.  By coloring each state with different colors we can learn to visualize
+how adaptive assessments are used to inform us what concepts need to be mastered next and from this
+we can recommend content for each student.</p>
 <h3 id="concept-mastery-state-colors">Concept Mastery State Colors</h3>
 <p>In an adaptive assessment system, each node (concept) in a student's personal learning graph exists in one of several states:</p>
 <table>
