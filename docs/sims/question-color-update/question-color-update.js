@@ -206,9 +206,11 @@ function initializeNetwork() {
         },
         interaction: {
             selectConnectedEdges: false,
-            zoomView: saveEnabled,  // Enable zoom in save mode
-            dragView: saveEnabled,  // Enable pan in save mode
-            dragNodes: saveEnabled, // Enable node dragging in save mode
+            zoomView: saveEnabled,      // Enable mouse zoom in save mode only
+            dragView: saveEnabled,      // Enable mouse pan in save mode only
+            dragNodes: true,            // Always allow node dragging
+            navigationButtons: saveEnabled, // Show zoom/pan controls in save mode
+            keyboard: saveEnabled,      // Enable keyboard navigation in save mode
             hover: true
         },
         nodes: {
