@@ -682,9 +682,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concept-mastery-states" class="md-nav__link">
+  <a href="#concept-mastery-state-colors" class="md-nav__link">
     <span class="md-ellipsis">
-      Concept Mastery States
+      Concept Mastery State Colors
     </span>
   </a>
   
@@ -696,6 +696,30 @@
       The Certainty Score
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown-states-and-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unknown States and Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unknown States and Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-learning-graph-question-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Learning Graph Question Color
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2015,9 +2039,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concept-mastery-states" class="md-nav__link">
+  <a href="#concept-mastery-state-colors" class="md-nav__link">
     <span class="md-ellipsis">
-      Concept Mastery States
+      Concept Mastery State Colors
     </span>
   </a>
   
@@ -2029,6 +2053,30 @@
       The Certainty Score
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unknown-states-and-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unknown States and Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unknown States and Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-learning-graph-question-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Learning Graph Question Color
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2468,8 +2516,8 @@
 <p>Adaptive assessment is a cornerstone of intelligent textbooks at Level 3 and above. Unlike traditional assessments that test all students on identical content, adaptive assessments dynamically adjust questions based on student responses to efficiently map each learner's knowledge state onto a learning graph. The goal is to determine, with minimal questions, exactly which concepts a student has mastered and which they are ready to learn next.</p>
 <p>This chapter explores the theory, algorithms, and implementation strategies for building adaptive assessment systems that respect student time while providing accurate placement on personalized learning paths.</p>
 <h2 id="the-learning-graph-as-assessment-foundation">The Learning Graph as Assessment Foundation</h2>
-<h3 id="concept-mastery-states">Concept Mastery States</h3>
-<p>In an adaptive assessment system, each node (concept) in a student's personal learning graph exists in one of three states:</p>
+<h3 id="concept-mastery-state-colors">Concept Mastery State Colors</h3>
+<p>In an adaptive assessment system, each node (concept) in a student's personal learning graph exists in one of several states:</p>
 <table>
 <thead>
 <tr>
@@ -2480,6 +2528,11 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>Unknown</strong></td>
+<td>Gray</td>
+<td>We have no knowledge if the student has mastered this concept</td>
+</tr>
+<tr>
 <td><strong>Mastered</strong></td>
 <td>Green</td>
 <td>Student has demonstrated understanding of this concept</td>
@@ -2487,21 +2540,29 @@
 <tr>
 <td><strong>Ready to Learn</strong></td>
 <td>Yellow</td>
-<td>All prerequisite concepts are green; student can begin learning this</td>
+<td>All prerequisite concepts are green; student can begin learning this concept now</td>
 </tr>
 <tr>
 <td><strong>Not Yet Ready</strong></td>
 <td>Red</td>
-<td>One or more prerequisites remain unmastered</td>
+<td>One or more prerequisites remain unmastered or an assessment has shown the student has not mastered this concept</td>
+</tr>
+<tr>
+<td><strong>Student Goal</strong></td>
+<td>Purple</td>
+<td>The student has stated this is a goal concept they are interested in mastering.</td>
 </tr>
 </tbody>
 </table>
 <p>This traffic-light metaphor provides intuitive visualization for both students and instructors:</p>
 <ul>
-<li><strong>Green nodes</strong> represent the student's current knowledge foundation</li>
-<li><strong>Yellow nodes</strong> form the "learning frontier"—the optimal next steps</li>
-<li><strong>Red nodes</strong> are future goals that require prerequisite mastery first</li>
+<li><strong>Green nodes</strong> represent the student's current knowledge foundation.  This symbolizes a green light that the users can go down this learning path at any time.</li>
+<li><strong>Yellow nodes</strong> form the "learning frontier" - the optimal next steps</li>
+<li><strong>Red nodes</strong> concepts that the user has not mastered symbolizing a red stop light that prevents further travel down a learning path</li>
 </ul>
+<p>In this course, you will frequently see personal learning graphs that are associated with one or more students.
+These graphs will have the following legend in the graph:</p>
+<p><img alt="" src="../../img/learning-graph-concept-color-legend.png" /></p>
 <h3 id="the-certainty-score">The Certainty Score</h3>
 <p>Beyond the three-state model, sophisticated systems track a <strong>certainty score</strong> for each concept, typically ranging from 0 to 1:</p>
 <table>
@@ -2532,6 +2593,22 @@
 <li>Concepts in the 0.4-0.6 range warrant follow-up questions</li>
 <li>Scores decay over time to account for forgetting (spaced repetition)</li>
 </ul>
+<h3 id="unknown-states-and-goals">Unknown States and Goals</h3>
+<p>We will add two more colors to our graphs.</p>
+<ul>
+<li>Gray is an <code>unknown</code> state.  We don't know if the student has mastered this concept or not.</li>
+<li>Purple is a <code>goal</code> state.  This is a concept that the student has shown a curiosity about or has stated it is a learning objective.</li>
+</ul>
+<p>Now we are ready to see how answering a question about a concept will change the state of the personal learning graph for each student.</p>
+<h4 id="diagram-learning-graph-question-color">Diagram: Learning Graph Question Color</h4>
+<iframe src="/intelligent-textbooks/sims/question-color-update/main.html?enable-save=false" width="100%" height="680px" scrolling="no"></iframe>
+<p><a href="../../sims/question-color-update/main.html?enable-save=false">Run the Learning Graph Question Color Update MicroSim Fullscreen</a></p>
+<p>To use this MicroSim, click on a node in the graph such as the <code>Term</code> node.  Note that the panel to the right of the graph
+now allows you to indicate if a student got an assessment question correct or incorrect.  If you click <code>correct</code> the
+node will turn green, indicating that the student has mastered the concept.  Note that the nodes that depend on the <code>Term</code> concept
+have also changed from Gray to Orange, indicating that the student is ready to learn these concepts.  All the concepts that <code>Term</code> depends on also turn green, since we can infer that a student that understands what a Term in algebra is also understands its two dependant concepts: <code>Constants</code> and <code>Variables</code>.</p>
+<p>Note that you don't need to use any complex AI or LLMs to do this analysis.  This is just simply plain old deterministic graph algorithms.  These algorithms run by simple pointer hopping and can be run directly in each students browser.  This is a key
+characteristic of a level-3 textbook.</p>
 <h2 id="the-adaptive-assessment-algorithm">The Adaptive Assessment Algorithm</h2>
 <h3 id="core-principles">Core Principles</h3>
 <p>The fundamental goal of adaptive assessment is <strong>information maximization</strong>: each question should provide the maximum possible information about the student's knowledge state. This is achieved through several key principles:</p>
@@ -2817,7 +2894,9 @@ Diagnostic question:
 <li><strong>Student fatigue</strong>: Detected through response time patterns</li>
 </ul>
 <h2 id="suggested-microsims">Suggested MicroSims</h2>
-<p>Use the vis-network-microsim skill</p>
+<p><diagram>
+Use the vis-network-microsim skill</p>
+<p><strong>Status:</strong> Done</p>
 <h3 id="1-learning-graph-adaptive-assessment-coloring-simulator">1. Learning Graph Adaptive Assessment Coloring Simulator</h3>
 <p>The following interactive simulations would effectively illustrate adaptive assessment concepts:
 Use the vis-network-microsim skill to generate a new microsim called 'question-color-update' that
@@ -2844,7 +2923,8 @@ goals are red.  Nodes are only marked "ready to learn" if all their dependant co
 - An incorrect response turns the node red
 - Watch dependency propagation in real-time as each question is answered
 - Display certainty scores on hover over each node</p>
-<p><strong>Learning objective</strong>: Understand how single answers affect multiple concepts through dependencies</p>
+<p><strong>Learning objective</strong>: Understand how single answers affect multiple concepts through dependencies
+</diagram></p>
 <h3 id="2-binary-search-assessment-demo">2. Binary Search Assessment Demo</h3>
 <p><strong>Concept</strong>: Compare naive vs. adaptive questioning strategies</p>
 <p><strong>Features</strong>:
