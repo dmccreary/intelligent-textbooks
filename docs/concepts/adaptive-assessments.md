@@ -5,11 +5,22 @@ questions they have answered.  Adaptive assessment are an optimized method for p
 
 ## Introduction
 
-Adaptive assessment is a cornerstone of intelligent textbooks at Level 3 and above. Unlike traditional assessments that test all students on identical content, adaptive assessments dynamically adjust questions based on student responses to efficiently map each learner's knowledge state onto a learning graph. The goal is to determine, with minimal questions, exactly which concepts a student has mastered and which they are ready to learn next.
+Adaptive assessment is a cornerstone of intelligent textbooks at Level 3 and above. Unlike traditional assessments that test all students on identical content, adaptive assessments dynamically adjust questions based on student responses to efficiently map each learner's knowledge state onto a learning graph. The goal is to determine, with minimal questions, exactly which concepts a student has mastered and which they are ready to learn next.  This is step 1.  Step 2 is to then recommend content
+for their age group and reading level that will help them master this concept.
 
 This chapter explores the theory, algorithms, and implementation strategies for building adaptive assessment systems that respect student time while providing accurate placement on personalized learning paths.
 
 ## The Learning Graph as Assessment Foundation
+
+Every intelligent textbook has a learning graph.  We can call this the course learning graph.  This is a list of the core concepts taught in a course
+that should be mastered in order for a student to pass the course.  This is another way of saying
+they have mastered all the concepts in a course.
+
+Level 3 textbooks add state information to each node node of the course learning graph for each student.
+When we combine the course graph with the student state information we create a new type of graph we
+call a personal learning graph.  By coloring each state with different colors we can learn to visualize
+how adaptive assessments are used to inform us what concepts need to be mastered next and from this
+we can recommend content for each student.
 
 ### Concept Mastery State Colors
 
