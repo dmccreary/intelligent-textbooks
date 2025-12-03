@@ -1171,6 +1171,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="How It Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backward-inference-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backward Inference Explained
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1423,8 +1438,43 @@
 <li><strong>Answering Questions</strong>: Click any node to simulate answering a question</li>
 <li>Select "Correct" to mark the concept as mastered (green)</li>
 <li>Select "Incorrect" to mark it as a learning goal (red)</li>
-<li><strong>Dependency Propagation</strong>: When a concept turns green, dependent concepts may become orange if all their prerequisites are now mastered</li>
+<li><strong>Backward Inference</strong>: When a concept is mastered, all prerequisites are automatically inferred as mastered with decaying certainty (90% per level)</li>
+<li><strong>Forward Propagation</strong>: When prerequisites turn green, dependent concepts may become orange (ready to learn)</li>
 </ol>
+<h3 id="backward-inference-explained">Backward Inference Explained</h3>
+<p>If a student correctly answers a question about "Two-Step Equations", we can reasonably infer they've mastered the prerequisites:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Certainty</th>
+<th>Reasoning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two-Step Equations</td>
+<td>100%</td>
+<td>Directly assessed</td>
+</tr>
+<tr>
+<td>One-Step Equations</td>
+<td>90%</td>
+<td>Direct prerequisite</td>
+</tr>
+<tr>
+<td>Solve Equations</td>
+<td>81%</td>
+<td>One level back</td>
+</tr>
+<tr>
+<td>Equation</td>
+<td>73%</td>
+<td>Two levels back</td>
+</tr>
+</tbody>
+</table>
+<p>This models how knowledge actually works - you can't master advanced concepts without understanding the foundations. Hover over nodes to see their certainty scores.</p>
 <h2 id="the-algebra-1-concept-graph">The Algebra 1 Concept Graph</h2>
 <p>This visualization uses 17 foundational Algebra 1 concepts:</p>
 <h3 id="foundation-layer">Foundation Layer</h3>
