@@ -291,20 +291,43 @@ When is assessment "complete enough"?
 
 ## Suggested MicroSims
 
-The following interactive simulations would effectively illustrate adaptive assessment concepts:
+Use the vis-network-microsim skill
 
-### 1. Learning Graph Coloring Simulator
+### 1. Learning Graph Adaptive Assessment Coloring Simulator
+
+The following interactive simulations would effectively illustrate adaptive assessment concepts:
+Use the vis-network-microsim skill to generate a new microsim called 'question-color-update' that
+  will update a personal learning graph for a student based on how they answer a specific question.
+  Use the @docs/sims/three-color-dfs/ as your layout template.  
+  We want sample Algebra 1 topics that most readers will be familiar with
+  Get a sample of about 17 nodes from the
+  algebra-1 learning graph at
+  /Users/dan/Documents/ws/algebra-1/docs/learning-graph/learning-graph.json
+  Create short names since they will be labels inside of an ellipse in a graph with a narrow width.
+  Place the nodes in a graph that is connected.  Make sure there are no orphan nodes.
+  
+
+
+Context: Understanding the role of answering an assessment in building a personal student learning graph
+where concepts they know are green, concepts they are "ready to learn" are orange, and their stated learning
+goals are red.  Nodes are only marked "ready to learn" if all their dependant concepts are green
 
 **Concept**: Visualize how answering questions changes node colors
 
 **Features**:
 - Interactive learning graph with 15-20 nodes
-- Clickable "answer question" buttons for each concept
-- Toggle correct/incorrect responses
-- Watch dependency propagation in real-time
-- Display certainty scores on hover
+- all nodes are initially gray
+- Suggest a node by making it the current node
+- When a user clicks on any node a radio button appears on the right side panel with a radio control
+- The radio buttons values are "correct" and "incorrect"
+- The user selects a correct/incorrect responses
+- A correct responses turn a node green
+- An incorrect response turns the node red
+- Watch dependency propagation in real-time as each question is answered
+- Display certainty scores on hover over each node
 
 **Learning objective**: Understand how single answers affect multiple concepts through dependencies
+
 
 ### 2. Binary Search Assessment Demo
 
