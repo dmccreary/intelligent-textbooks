@@ -32,7 +32,21 @@ In adaptive assessment, each student maintains a personal learning graph where n
 3. **Answering Questions**: Click any node to simulate answering a question
    - Select "Correct" to mark the concept as mastered (green)
    - Select "Incorrect" to mark it as a learning goal (red)
-4. **Dependency Propagation**: When a concept turns green, dependent concepts may become orange if all their prerequisites are now mastered
+4. **Backward Inference**: When a concept is mastered, all prerequisites are automatically inferred as mastered with decaying certainty (90% per level)
+5. **Forward Propagation**: When prerequisites turn green, dependent concepts may become orange (ready to learn)
+
+### Backward Inference Explained
+
+If a student correctly answers a question about "Two-Step Equations", we can reasonably infer they've mastered the prerequisites:
+
+| Concept | Certainty | Reasoning |
+|---------|-----------|-----------|
+| Two-Step Equations | 100% | Directly assessed |
+| One-Step Equations | 90% | Direct prerequisite |
+| Solve Equations | 81% | One level back |
+| Equation | 73% | Two levels back |
+
+This models how knowledge actually works - you can't master advanced concepts without understanding the foundations. Hover over nodes to see their certainty scores.
 
 ## The Algebra 1 Concept Graph
 

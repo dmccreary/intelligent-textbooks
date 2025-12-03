@@ -102,6 +102,38 @@ function updateReadyToLearn() {
     });
 }
 
+// Certainty decay factor for inferred prerequisite mastery
+const CERTAINTY_DECAY = 0.9;
+
+// Propagate mastery backward to prerequisites with decaying certainty
+// If student masters a concept, we infer they've mastered prerequisites
+function propagateMasteryToPrerequisites(nodeId, certainty) {
+    const prereqs = dependencies[nodeId];
+    if (!prereqs || prereqs.length === 0) return;
+
+    prereqs.forEach(prereqId => {
+        // Calculate new certainty for this prerequisite
+        const newCertainty = certainty * CERTAINTY_DECAY;
+
+        // Only update if:
+        // 1. Node is not already green with higher certainty, OR
+        // 2. Node is gray/orange (not yet assessed)
+        const currentState = nodeStates[prereqId];
+        const currentCertainty = nodeCertainty[prereqId];
+
+        if (currentState === 'gray' || currentState === 'orange' ||
+            (currentState === 'green' && newCertainty > currentCertainty)) {
+
+            // Mark as mastered (inferred)
+            setNodeColor(prereqId, 'green');
+            nodeCertainty[prereqId] = newCertainty;
+
+            // Recursively propagate to this node's prerequisites
+            propagateMasteryToPrerequisites(prereqId, newCertainty);
+        }
+    });
+}
+
 /* Position the view to show nodes on the left side of canvas
  *    - Lower x value = moves the view RIGHT (shows more of left side of graph)
  *    - Higher y value = moves the view UP (shows more of bottom of graph)
@@ -357,11 +389,15 @@ function submitAnswer() {
     }
 
     if (correct) {
-        // Mark as mastered (green)
+        // Mark as mastered (green) with full certainty
         setNodeColor(selectedNode, 'green');
         nodeCertainty[selectedNode] = 1.0;
 
-        // Update dependent nodes - they may now be "ready to learn"
+        // Backward inference: If student masters this concept,
+        // they likely have mastered prerequisites (with decaying certainty)
+        propagateMasteryToPrerequisites(selectedNode, 1.0);
+
+        // Forward update: dependent nodes may now be "ready to learn"
         updateReadyToLearn();
     } else {
         // Mark as learning goal (red)
