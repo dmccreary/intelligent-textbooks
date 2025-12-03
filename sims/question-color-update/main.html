@@ -30,7 +30,11 @@
             </div>
             <div class="legend-item">
                 <div class="legend-color color-red"></div>
-                <span><strong>Red</strong> - Learning Goal</span>
+                <span><strong>Red</strong> - Incorrect</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-purple"></div>
+                <span><strong>Purple</strong> - Learning Goal</span>
             </div>
         </div>
 
@@ -42,13 +46,8 @@
             </div>
 
             <div class="question-container" id="question-container">
-                <div class="question-title">Select a Concept</div>
-                <div class="question-text" id="question-text">
-                    Click on any node in the graph to answer a question about that concept.
-                </div>
-
+                <div class="question-title" id="question-title">Click a node to assess</div>
                 <div class="answer-section" id="answer-section" style="display: none;">
-                    <div class="answer-prompt" id="answer-prompt"></div>
                     <div class="radio-group">
                         <label class="radio-label">
                             <input type="radio" name="answer" value="correct" id="radio-correct">
@@ -59,25 +58,25 @@
                             <span class="radio-text incorrect-text">Incorrect</span>
                         </label>
                     </div>
-                    <button class="btn btn-primary" id="submit-btn">Submit Answer</button>
-                </div>
-            </div>
-
-            <div class="status-info" id="status-info">
-                <div class="status-title">How It Works:</div>
-                <div class="status-text">
-                    <ul>
-                        <li><strong>Correct answers</strong> turn nodes green and <em>infer mastery of prerequisites</em> (90% certainty decay per level)</li>
-                        <li><strong>Incorrect answers</strong> turn nodes red (learning goal)</li>
-                        <li><strong>Orange nodes</strong> are "ready to learn" - all prerequisites mastered</li>
-                        <li><strong>Hover</strong> over nodes to see certainty scores</li>
-                    </ul>
+                    <button class="btn btn-primary" id="submit-btn">Submit</button>
                 </div>
             </div>
 
             <div class="certainty-display" id="certainty-display" style="display: none;">
                 <div class="certainty-title">Node Details:</div>
                 <div class="certainty-content" id="certainty-content"></div>
+            </div>
+
+            <div class="status-info" id="status-info">
+                <div class="status-title">How It Works:</div>
+                <div class="status-text">
+                    <ul>
+                        <li><strong>Correct</strong> = green + infer prerequisites (90% decay)</li>
+                        <li><strong>Incorrect</strong> = red (needs review)</li>
+                        <li><strong>Purple</strong> = learning goal</li>
+                        <li><strong>Orange</strong> = ready to learn</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
