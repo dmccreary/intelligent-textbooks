@@ -5,7 +5,7 @@ description: Interactive vis-network visualization showing how answering assessm
 
 # Question-Based Learning Graph Update
 
-<iframe src="main.html?enable-save=true" width="100%" height="650px" scrolling="no"></iframe>
+<iframe src="main.html?enable-save=true" width="100%" height="680px" scrolling="no"></iframe>
 
 [Run MicroSim (Editor Mode)](main.html?enable-save=true){ .md-button .md-button--primary }
 [Run MicroSim (View Only)](main.html){ .md-button }

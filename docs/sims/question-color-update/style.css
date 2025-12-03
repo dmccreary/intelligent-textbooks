@@ -87,7 +87,7 @@ body {
     height: 16px;
     border-radius: 50%;
     margin-right: 4px;
-    border: 2px solid #333;
+    border: 2px solid black;
 }
 
 /* Legend color swatches - match colors object in JS */
@@ -101,6 +101,10 @@ body {
 
 .color-orange {
     background-color: #ff9800;
+}
+
+.color-purple {
+    background-color: #9c27b0;
 }
 
 .color-red {
@@ -117,7 +121,7 @@ body {
     width: 280px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     z-index: 10;
 }
 
@@ -175,54 +179,38 @@ body {
 }
 
 /* ===========================================
-   QUESTION CONTAINER
+   QUESTION CONTAINER (Compact)
    =========================================== */
 .question-container {
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
-    padding: 12px;
+    padding: 8px 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .question-title {
     font-weight: bold;
-    margin-bottom: 6px;
-    font-size: 14px;
+    font-size: 13px;
     color: #1976d2;
 }
 
-.question-text {
-    font-size: 12px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    color: #333;
-}
-
 .answer-section {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
     margin-top: 6px;
-}
-
-.answer-prompt {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 8px;
 }
 
 .radio-group {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 12px;
+    flex-direction: row;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 .radio-label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
     transition: background-color 0.2s;
 }
 
@@ -231,13 +219,13 @@ body {
 }
 
 .radio-label input[type="radio"] {
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
+    margin-right: 4px;
+    width: 14px;
+    height: 14px;
 }
 
 .radio-text {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
