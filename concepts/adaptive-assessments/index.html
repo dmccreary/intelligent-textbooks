@@ -1,0 +1,3121 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/concepts/adaptive-assessments/">
+      
+      
+        <link rel="prev" href="../learning-graph/">
+      
+      
+        <link rel="next" href="../best-practices/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Adaptive Assessments - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Adaptive Assessments - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/adaptive-assessments.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/concepts/adaptive-assessments/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Adaptive Assessments - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/adaptive-assessments.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adaptive-assessments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adaptive Assessments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Educational concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Educational concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../five-levels-of-intelligent-textbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Five Levels of Intelligent Textbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bloom-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloom's Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scaffolding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaffolding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Adaptive Assessments
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Assessments
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-learning-graph-as-assessment-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Learning Graph as Assessment Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Learning Graph as Assessment Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-mastery-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Mastery States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-certainty-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Certainty Score
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-adaptive-assessment-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Adaptive Assessment Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Adaptive Assessment Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-binary-search-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Binary Search Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-topological-assessment-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Topological Assessment Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-knowledge-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Knowledge Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-gain-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Gain Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-design-for-adaptive-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question Design for Adaptive Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question Design for Adaptive Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question-types-and-information-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question Types and Information Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difficulty-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difficulty Calibration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnostic Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-assessment-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizing the Assessment Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizing the Assessment Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-knowledge-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Knowledge Map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progress-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cold-start-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cold Start Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-inconsistent-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Inconsistent Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Criteria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested MicroSims
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suggested MicroSims">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-learning-graph-adaptive-assessment-coloring-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Learning Graph Adaptive Assessment Coloring Simulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-binary-search-assessment-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Binary Search Assessment Demo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-information-gain-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Information Gain Visualizer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-student-journey-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Student Journey Simulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-irt-parameter-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. IRT Parameter Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-and-ethical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy and Ethical Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy and Ethical Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Minimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoiding-negative-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoiding Negative Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bias-auditing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bias Auditing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundational-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundational Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-space-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Space Theory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-learning-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptive Learning Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethical Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standards-and-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standards and Interoperability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../levels-of-interactivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Interactivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-educational-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Educational Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructional-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructional Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../levels-of-interactivity-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Interactivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../from-sage-to-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Sage to Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../book-metadata/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Book Metadata
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-learning-graph-as-assessment-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Learning Graph as Assessment Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Learning Graph as Assessment Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-mastery-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Mastery States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-certainty-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Certainty Score
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-adaptive-assessment-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Adaptive Assessment Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Adaptive Assessment Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-binary-search-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Binary Search Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-topological-assessment-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Topological Assessment Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-knowledge-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Knowledge Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-gain-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Gain Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-design-for-adaptive-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question Design for Adaptive Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question Design for Adaptive Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question-types-and-information-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question Types and Information Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difficulty-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difficulty Calibration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnostic Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizing-the-assessment-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizing the Assessment Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizing the Assessment Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-knowledge-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Knowledge Map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progress-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cold-start-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cold Start Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-inconsistent-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Inconsistent Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopping-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Criteria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested MicroSims
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Suggested MicroSims">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-learning-graph-adaptive-assessment-coloring-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Learning Graph Adaptive Assessment Coloring Simulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-binary-search-assessment-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Binary Search Assessment Demo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-information-gain-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Information Gain Visualizer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-student-journey-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Student Journey Simulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-irt-parameter-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. IRT Parameter Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-and-ethical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy and Ethical Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy and Ethical Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Minimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Transparency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoiding-negative-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avoiding Negative Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bias-auditing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bias Auditing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Exercise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundational-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foundational Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-space-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Space Theory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-learning-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptive Learning Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethical Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standards-and-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standards and Interoperability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/concepts/adaptive-assessments.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="adaptive-assessments">Adaptive Assessments</h1>
+<p>Placing students at the optimal "ready-to-learn" position on their personal learning graph through intelligent, minimal questioning.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Adaptive assessment is a cornerstone of intelligent textbooks at Level 3 and above. Unlike traditional assessments that test all students on identical content, adaptive assessments dynamically adjust questions based on student responses to efficiently map each learner's knowledge state onto a learning graph. The goal is to determine, with minimal questions, exactly which concepts a student has mastered and which they are ready to learn next.</p>
+<p>This chapter explores the theory, algorithms, and implementation strategies for building adaptive assessment systems that respect student time while providing accurate placement on personalized learning paths.</p>
+<h2 id="the-learning-graph-as-assessment-foundation">The Learning Graph as Assessment Foundation</h2>
+<h3 id="concept-mastery-states">Concept Mastery States</h3>
+<p>In an adaptive assessment system, each node (concept) in a student's personal learning graph exists in one of three states:</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Color</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mastered</strong></td>
+<td>Green</td>
+<td>Student has demonstrated understanding of this concept</td>
+</tr>
+<tr>
+<td><strong>Ready to Learn</strong></td>
+<td>Yellow</td>
+<td>All prerequisite concepts are green; student can begin learning this</td>
+</tr>
+<tr>
+<td><strong>Not Yet Ready</strong></td>
+<td>Red</td>
+<td>One or more prerequisites remain unmastered</td>
+</tr>
+</tbody>
+</table>
+<p>This traffic-light metaphor provides intuitive visualization for both students and instructors:</p>
+<ul>
+<li><strong>Green nodes</strong> represent the student's current knowledge foundation</li>
+<li><strong>Yellow nodes</strong> form the "learning frontier"—the optimal next steps</li>
+<li><strong>Red nodes</strong> are future goals that require prerequisite mastery first</li>
+</ul>
+<h3 id="the-certainty-score">The Certainty Score</h3>
+<p>Beyond the three-state model, sophisticated systems track a <strong>certainty score</strong> for each concept, typically ranging from 0 to 1:</p>
+<table>
+<thead>
+<tr>
+<th>Score Range</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0 - 0.3</td>
+<td>Low confidence; concept likely not mastered</td>
+</tr>
+<tr>
+<td>0.3 - 0.7</td>
+<td>Uncertain; additional assessment recommended</td>
+</tr>
+<tr>
+<td>0.7 - 1.0</td>
+<td>High confidence; concept mastered</td>
+</tr>
+</tbody>
+</table>
+<p>The certainty score enables nuanced decision-making:</p>
+<ul>
+<li>Concepts with certainty &gt; 0.8 can be marked green with confidence</li>
+<li>Concepts in the 0.4-0.6 range warrant follow-up questions</li>
+<li>Scores decay over time to account for forgetting (spaced repetition)</li>
+</ul>
+<h2 id="the-adaptive-assessment-algorithm">The Adaptive Assessment Algorithm</h2>
+<h3 id="core-principles">Core Principles</h3>
+<p>The fundamental goal of adaptive assessment is <strong>information maximization</strong>: each question should provide the maximum possible information about the student's knowledge state. This is achieved through several key principles:</p>
+<ol>
+<li><strong>Dependency Exploitation</strong>: If a student answers a question on an advanced concept correctly, they likely understand all prerequisites</li>
+<li><strong>Failure Propagation</strong>: If a student fails a foundational concept, they probably cannot master dependent concepts</li>
+<li><strong>Uncertainty Targeting</strong>: Questions should target concepts where certainty is lowest</li>
+<li><strong>Efficiency Optimization</strong>: Minimize total questions while maximizing coverage</li>
+</ol>
+<h3 id="the-binary-search-analogy">The Binary Search Analogy</h3>
+<p>Consider a linear chain of 8 concepts: A → B → C → D → E → F → G → H</p>
+<p>A naive approach tests each concept sequentially (8 questions). An adaptive approach uses binary search:</p>
+<ol>
+<li><strong>Question 1</strong>: Test concept D (middle)</li>
+<li>If correct: Student likely knows A, B, C, D → test F</li>
+<li>
+<p>If incorrect: Student may not know D or prerequisites → test B</p>
+</li>
+<li>
+<p><strong>Question 2</strong>: Narrow based on first response</p>
+</li>
+<li><strong>Continue</strong>: Until all concepts have sufficient certainty</li>
+</ol>
+<p>This reduces worst-case questions from 8 to approximately 3 questions, plus validation. The number of questions required follows:</p>
+<div class="arithmatex">\[
+Q_{max} = \lceil \log_2(n) \rceil
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(Q_{max}\)</span> = maximum number of questions needed in worst case</li>
+<li><span class="arithmatex">\(n\)</span> = number of concepts in the linear chain</li>
+<li><span class="arithmatex">\(\lceil \cdot \rceil\)</span> = ceiling function (round up to nearest integer)</li>
+</ul>
+<h3 id="the-topological-assessment-algorithm">The Topological Assessment Algorithm</h3>
+<p>For real learning graphs (not linear chains), the algorithm becomes more sophisticated:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code>Algorithm: Adaptive Assessment
+
+Input: Learning graph G, target concepts T, threshold θ
+Output: Mastery map M with certainty scores
+
+1. Initialize all certainty scores to 0.5 (unknown)
+2. Compute topological order of G
+3. While any target concept has certainty &lt; θ:
+   a. Select question Q targeting concept with:
+      - Highest uncertainty (closest to 0.5)
+      - Maximum information gain potential
+      - Appropriate difficulty for current state
+   b. Present Q to student
+   c. Update certainty scores:
+      - If correct: Increase score for tested concept
+                   Propagate partial credit to prerequisites
+      - If incorrect: Decrease score for tested concept
+                     Propagate uncertainty to dependents
+   d. Apply Bayesian update to related concepts
+4. Color nodes based on final certainty scores
+5. Return mastery map M
+</code></pre></div></td></tr></table></div>
+<h3 id="bayesian-knowledge-update">Bayesian Knowledge Update</h3>
+<p>When a student answers a question, we update our belief about their mastery using Bayes' theorem:</p>
+<div class="arithmatex">\[
+P(M|R) = \frac{P(R|M) \cdot P(M)}{P(R)}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(P(M|R)\)</span> = posterior probability of mastery given the response (updated belief)</li>
+<li><span class="arithmatex">\(P(R|M)\)</span> = likelihood of the response given mastery</li>
+<li><span class="arithmatex">\(P(M)\)</span> = prior probability of mastery (belief before this question)</li>
+<li><span class="arithmatex">\(P(R)\)</span> = probability of the response (normalizing constant)</li>
+</ul>
+<p>The denominator can be expanded using the law of total probability:</p>
+<div class="arithmatex">\[
+P(R) = P(R|M) \cdot P(M) + P(R|\neg M) \cdot P(\neg M)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(P(R|\neg M)\)</span> = likelihood of the response given non-mastery</li>
+<li><span class="arithmatex">\(P(\neg M)\)</span> = prior probability of non-mastery (equal to <span class="arithmatex">\(1 - P(M)\)</span>)</li>
+</ul>
+<h3 id="information-gain-calculation">Information Gain Calculation</h3>
+<p>The information gain for a potential question can be estimated using entropy. For a concept <span class="arithmatex">\(C\)</span>, the entropy is calculated as:</p>
+<div class="arithmatex">\[
+H(C) = -P(m) \log_2 P(m) - P(\neg m) \log_2 P(\neg m)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(H(C)\)</span> = entropy (uncertainty) of concept <span class="arithmatex">\(C\)</span>, measured in bits</li>
+<li><span class="arithmatex">\(P(m)\)</span> = probability that the student has mastered the concept</li>
+<li><span class="arithmatex">\(P(\neg m)\)</span> = probability that the student has not mastered the concept (equal to <span class="arithmatex">\(1 - P(m)\)</span>)</li>
+<li><span class="arithmatex">\(\log_2\)</span> = logarithm base 2</li>
+</ul>
+<p>Key properties of entropy:</p>
+<ul>
+<li>Concepts with certainty near 0.5 have maximum entropy (most uncertainty): <span class="arithmatex">\(H = 1\)</span> bit</li>
+<li>Concepts with certainty near 0 or 1 have minimum entropy (already known): <span class="arithmatex">\(H \approx 0\)</span> bits</li>
+</ul>
+<p>The optimal next question targets the concept where answering would most reduce total system entropy. The expected information gain from asking about concept <span class="arithmatex">\(C\)</span> is:</p>
+<div class="arithmatex">\[
+IG(C) = H(C) - \mathbb{E}[H(C|answer)]
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(IG(C)\)</span> = information gain from testing concept <span class="arithmatex">\(C\)</span></li>
+<li><span class="arithmatex">\(H(C)\)</span> = current entropy of concept <span class="arithmatex">\(C\)</span></li>
+<li><span class="arithmatex">\(\mathbb{E}[H(C|answer)]\)</span> = expected entropy after receiving the student's answer</li>
+</ul>
+<h2 id="question-design-for-adaptive-systems">Question Design for Adaptive Systems</h2>
+<h3 id="question-types-and-information-value">Question Types and Information Value</h3>
+<p>Different question types provide varying amounts of information:</p>
+<table>
+<thead>
+<tr>
+<th>Question Type</th>
+<th>Information Value</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple choice (4 options)</td>
+<td>~2 bits max</td>
+<td>Quick screening</td>
+</tr>
+<tr>
+<td>Multiple choice (2 options)</td>
+<td>~1 bit max</td>
+<td>Binary decisions</td>
+</tr>
+<tr>
+<td>Free response</td>
+<td>Variable</td>
+<td>Deep assessment</td>
+</tr>
+<tr>
+<td>Multi-select</td>
+<td>~n bits</td>
+<td>Complex understanding</td>
+</tr>
+<tr>
+<td>Sequencing/ordering</td>
+<td>High</td>
+<td>Procedural knowledge</td>
+</tr>
+</tbody>
+</table>
+<h3 id="difficulty-calibration">Difficulty Calibration</h3>
+<p>Questions should be calibrated to Item Response Theory (IRT) parameters. The three-parameter logistic (3PL) model describes the probability of a correct response:</p>
+<div class="arithmatex">\[
+P(\theta) = c + \frac{1 - c}{1 + e^{-a(\theta - b)}}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(P(\theta)\)</span> = probability of correct answer given student ability <span class="arithmatex">\(\theta\)</span></li>
+<li><span class="arithmatex">\(\theta\)</span> = student ability level (typically standardized, mean = 0, sd = 1)</li>
+<li><span class="arithmatex">\(a\)</span> = discrimination parameter (how well the question differentiates ability levels)</li>
+<li><span class="arithmatex">\(b\)</span> = difficulty parameter (the ability level at which 50% of non-guessers answer correctly)</li>
+<li><span class="arithmatex">\(c\)</span> = guessing parameter (probability of correct answer by chance)</li>
+<li><span class="arithmatex">\(e\)</span> = Euler's number (approximately 2.718)</li>
+</ul>
+<p>High-quality adaptive assessments use questions with:</p>
+<ul>
+<li>High discrimination (<span class="arithmatex">\(a &gt; 1.0\)</span>)</li>
+<li>Varied difficulty levels (range of <span class="arithmatex">\(b\)</span> values)</li>
+<li>Minimal guessing potential (<span class="arithmatex">\(c &lt; 0.25\)</span> for 4-option multiple choice)</li>
+</ul>
+<h3 id="diagnostic-questions">Diagnostic Questions</h3>
+<p>Beyond correct/incorrect, diagnostic questions reveal <em>why</em> students struggle:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>Example: Testing understanding of &quot;derivative&quot;
+
+Standard question:
+  What is the derivative of f(x) = 3x²?
+  a) 6x  b) 3x  c) x²  d) 6x²
+
+Diagnostic question:
+  Which step is INCORRECT in finding the derivative of f(x) = 3x²?
+
+  Step 1: Apply power rule: bring down exponent
+  Step 2: Multiply coefficient: 3 × 2 = 6
+  Step 3: Reduce exponent: 2 - 1 = 1
+  Step 4: Result: f&#39;(x) = 6x¹ = 6x
+
+  a) Step 1  b) Step 2  c) Step 3  d) No error
+</code></pre></div></td></tr></table></div>
+<p>The diagnostic version reveals which sub-concept needs reinforcement.</p>
+<h2 id="visualizing-the-assessment-process">Visualizing the Assessment Process</h2>
+<h3 id="the-knowledge-map">The Knowledge Map</h3>
+<p>A student's personal learning graph can be visualized as an interactive knowledge map:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>        [Statistics]         [Probability]
+              ↑                    ↑
+              |                    |
+        [Descriptive       [Combinatorics]
+         Statistics]              ↑
+              ↑                   |
+              |              [Factorials]
+        [Mean/Median]             ↑
+              ↑                   |
+              |_______    ________|
+                      |  |
+                 [Basic Algebra]
+                       ↑
+                       |
+                 [Arithmetic]
+</code></pre></div></td></tr></table></div>
+<p>During assessment, nodes transition from red → yellow → green as mastery is established.</p>
+<h3 id="progress-indicators">Progress Indicators</h3>
+<p>Effective adaptive assessment interfaces show:</p>
+<ol>
+<li><strong>Overall progress</strong>: Percentage of learning graph assessed</li>
+<li><strong>Current certainty</strong>: Confidence level for recent answers</li>
+<li><strong>Frontier size</strong>: Number of concepts ready to learn (yellow nodes)</li>
+<li><strong>Path to goal</strong>: Shortest path from current state to target concepts</li>
+</ol>
+<h2 id="implementation-considerations">Implementation Considerations</h2>
+<h3 id="cold-start-problem">Cold Start Problem</h3>
+<p>New students have no prior data. Solutions include:</p>
+<ol>
+<li><strong>Placement tests</strong>: Brief initial assessments targeting key decision points</li>
+<li><strong>Demographic priors</strong>: Use population-level data responsibly</li>
+<li><strong>Self-assessment</strong>: Allow students to indicate prior knowledge</li>
+<li><strong>Conservative starting</strong>: Begin with foundational concepts</li>
+</ol>
+<h3 id="handling-inconsistent-responses">Handling Inconsistent Responses</h3>
+<p>Students may answer inconsistently (know advanced concept, miss basic one):</p>
+<ol>
+<li><strong>Re-testing</strong>: Flag and re-assess suspicious patterns</li>
+<li><strong>Weighted averaging</strong>: Recent responses weighted more heavily</li>
+<li><strong>Forgetting curves</strong>: Account for knowledge decay</li>
+<li><strong>Lucky guesses</strong>: Require confirmation for surprise correct answers</li>
+</ol>
+<h3 id="stopping-criteria">Stopping Criteria</h3>
+<p>When is assessment "complete enough"?</p>
+<ul>
+<li><strong>Coverage threshold</strong>: X% of concepts have certainty &gt; 0.7</li>
+<li><strong>Question budget</strong>: Maximum N questions per session</li>
+<li><strong>Diminishing returns</strong>: Information gain drops below threshold</li>
+<li><strong>Student fatigue</strong>: Detected through response time patterns</li>
+</ul>
+<h2 id="suggested-microsims">Suggested MicroSims</h2>
+<p>Use the vis-network-microsim skill</p>
+<h3 id="1-learning-graph-adaptive-assessment-coloring-simulator">1. Learning Graph Adaptive Assessment Coloring Simulator</h3>
+<p>The following interactive simulations would effectively illustrate adaptive assessment concepts:
+Use the vis-network-microsim skill to generate a new microsim called 'question-color-update' that
+  will update a personal learning graph for a student based on how they answer a specific question.
+  Use the @docs/sims/three-color-dfs/ as your layout template.<br />
+  We want sample Algebra 1 topics that most readers will be familiar with
+  Get a sample of about 17 nodes from the
+  algebra-1 learning graph at
+  /Users/dan/Documents/ws/algebra-1/docs/learning-graph/learning-graph.json
+  Create short names since they will be labels inside of an ellipse in a graph with a narrow width.
+  Place the nodes in a graph that is connected.  Make sure there are no orphan nodes.</p>
+<p>Context: Understanding the role of answering an assessment in building a personal student learning graph
+where concepts they know are green, concepts they are "ready to learn" are orange, and their stated learning
+goals are red.  Nodes are only marked "ready to learn" if all their dependant concepts are green</p>
+<p><strong>Concept</strong>: Visualize how answering questions changes node colors</p>
+<p><strong>Features</strong>:
+- Interactive learning graph with 15-20 nodes
+- all nodes are initially gray
+- Suggest a node by making it the current node
+- When a user clicks on any node a radio button appears on the right side panel with a radio control
+- The radio buttons values are "correct" and "incorrect"
+- The user selects a correct/incorrect responses
+- A correct responses turn a node green
+- An incorrect response turns the node red
+- Watch dependency propagation in real-time as each question is answered
+- Display certainty scores on hover over each node</p>
+<p><strong>Learning objective</strong>: Understand how single answers affect multiple concepts through dependencies</p>
+<h3 id="2-binary-search-assessment-demo">2. Binary Search Assessment Demo</h3>
+<p><strong>Concept</strong>: Compare naive vs. adaptive questioning strategies</p>
+<p><strong>Features</strong>:
+- Linear concept chain (10 nodes)
+- Side-by-side comparison of sequential vs. binary search
+- Question counter for each approach
+- Visualization of "search space" narrowing</p>
+<p><strong>Learning objective</strong>: Appreciate efficiency gains from adaptive algorithms</p>
+<h3 id="3-information-gain-visualizer">3. Information Gain Visualizer</h3>
+<p><strong>Concept</strong>: Show entropy calculations for question selection</p>
+<p><strong>Features</strong>:
+- Scatter plot of concepts by current certainty
+- Highlight concept with maximum information gain
+- Show entropy values updating after each answer
+- Compare random vs. optimal question selection</p>
+<p><strong>Learning objective</strong>: Understand information-theoretic basis for question selection</p>
+<h3 id="4-student-journey-simulator">4. Student Journey Simulator</h3>
+<p><strong>Concept</strong>: Follow a simulated student through adaptive assessment</p>
+<p><strong>Features</strong>:
+- Animated avatar moving through learning graph
+- Path visualization showing assessment decisions
+- Comparison with "ideal" student and "struggling" student
+- Time-lapse of mastery development</p>
+<p><strong>Learning objective</strong>: See the student experience of adaptive assessment</p>
+<h3 id="5-irt-parameter-explorer">5. IRT Parameter Explorer</h3>
+<p><strong>Concept</strong>: Understand question quality parameters</p>
+<p><strong>Features</strong>:
+- Interactive sliders for difficulty, discrimination, guessing
+- Real-time Item Characteristic Curve (ICC) updates
+- Simulation of student population responses
+- Optimal question selection demonstration</p>
+<p><strong>Learning objective</strong>: Learn how question design affects assessment quality</p>
+<h2 id="privacy-and-ethical-considerations">Privacy and Ethical Considerations</h2>
+<p>Adaptive assessments collect detailed student performance data:</p>
+<h3 id="data-minimization">Data Minimization</h3>
+<ul>
+<li>Collect only what's necessary for adaptation</li>
+<li>Aggregate when individual data isn't required</li>
+<li>Set retention limits appropriate to educational purpose</li>
+</ul>
+<h3 id="algorithmic-transparency">Algorithmic Transparency</h3>
+<ul>
+<li>Explain to students how questions are selected</li>
+<li>Provide access to personal mastery maps</li>
+<li>Allow students to contest assessments</li>
+</ul>
+<h3 id="avoiding-negative-labels">Avoiding Negative Labels</h3>
+<ul>
+<li>Frame results as "learning opportunities" not "failures"</li>
+<li>Emphasize growth mindset: current state is not permanent</li>
+<li>Prevent self-fulfilling prophecies from premature labeling</li>
+</ul>
+<h3 id="bias-auditing">Bias Auditing</h3>
+<ul>
+<li>Test assessment fairness across demographic groups</li>
+<li>Monitor for questions with differential item functioning</li>
+<li>Regular review of algorithm decisions</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Adaptive assessment transforms the traditional testing paradigm from "measure everything" to "measure efficiently." By leveraging the structure of learning graphs, dependency relationships, and information theory, intelligent textbooks can:</p>
+<ol>
+<li><strong>Minimize assessment burden</strong>: Fewer questions, more learning time</li>
+<li><strong>Maximize accuracy</strong>: Target uncertainty, not known quantities</li>
+<li><strong>Personalize placement</strong>: Every student starts at their optimal frontier</li>
+<li><strong>Enable mastery-based progression</strong>: Green-yellow-red visualization makes progress tangible</li>
+</ol>
+<p>The traffic-light model—green for mastered, yellow for ready-to-learn, red for not-yet-ready—provides an intuitive framework for both students and educators to understand where learning should focus next.</p>
+<h2 id="review-questions">Review Questions</h2>
+<ol>
+<li>
+<p>Explain the difference between the three-state (green/yellow/red) model and the continuous certainty score. When might you prefer one over the other?</p>
+</li>
+<li>
+<p>Why does the adaptive assessment algorithm target concepts with maximum uncertainty rather than testing randomly?</p>
+</li>
+<li>
+<p>A student correctly answers a question about "integration by parts." What can you infer about their knowledge of prerequisite concepts like "basic integration" and "product rule"?</p>
+</li>
+<li>
+<p>Describe three strategies for handling the "cold start" problem when a new student begins adaptive assessment.</p>
+</li>
+<li>
+<p>What ethical considerations arise when using detailed learning analytics for adaptive assessment? How can these be addressed?</p>
+</li>
+</ol>
+<h2 id="practical-exercise">Practical Exercise</h2>
+<p>Design an adaptive assessment strategy for a 10-concept learning graph in your subject area:</p>
+<ol>
+<li>Draw the concept dependency graph</li>
+<li>Identify 2-3 "decision point" concepts that would divide the graph efficiently</li>
+<li>Write diagnostic questions for each decision point</li>
+<li>Specify your stopping criteria (when is assessment complete?)</li>
+<li>Plan your cold-start strategy for new students</li>
+</ol>
+<h2 id="references">References</h2>
+<h3 id="foundational-works">Foundational Works</h3>
+<ol>
+<li>
+<p>Lord, F. M. (1980). <em>Applications of Item Response Theory to Practical Testing Problems</em>. Lawrence Erlbaum Associates. — The foundational text on IRT and its application to adaptive testing.</p>
+</li>
+<li>
+<p>van der Linden, W. J., &amp; Glas, C. A. W. (Eds.). (2010). <em>Elements of Adaptive Testing</em>. Springer. — Comprehensive overview of computerized adaptive testing theory and practice.</p>
+</li>
+<li>
+<p>Wainer, H. (Ed.). (2000). <em>Computerized Adaptive Testing: A Primer</em> (2nd ed.). Lawrence Erlbaum Associates. — Accessible introduction to CAT fundamentals.</p>
+</li>
+</ol>
+<h3 id="knowledge-space-theory">Knowledge Space Theory</h3>
+<ol>
+<li>
+<p>Doignon, J.-P., &amp; Falmagne, J.-C. (1999). <em>Knowledge Spaces</em>. Springer-Verlag. — Mathematical foundations for modeling knowledge states and learning paths.</p>
+</li>
+<li>
+<p>Falmagne, J.-C., Albert, D., Doble, C., Eppstein, D., &amp; Hu, X. (Eds.). (2013). <em>Knowledge Spaces: Applications in Education</em>. Springer. — Applications of knowledge space theory to educational assessment.</p>
+</li>
+</ol>
+<h3 id="bayesian-approaches">Bayesian Approaches</h3>
+<ol>
+<li>
+<p>Corbett, A. T., &amp; Anderson, J. R. (1994). Knowledge tracing: Modeling the acquisition of procedural knowledge. <em>User Modeling and User-Adapted Interaction</em>, 4(4), 253-278. — Foundational paper on Bayesian knowledge tracing.</p>
+</li>
+<li>
+<p>Piech, C., et al. (2015). Deep knowledge tracing. <em>Advances in Neural Information Processing Systems</em>, 28. — Modern deep learning approach to knowledge tracing.</p>
+</li>
+</ol>
+<h3 id="adaptive-learning-systems">Adaptive Learning Systems</h3>
+<ol>
+<li>
+<p>Brusilovsky, P., &amp; Peylo, C. (2003). Adaptive and intelligent web-based educational systems. <em>International Journal of Artificial Intelligence in Education</em>, 13(2-4), 159-172. — Survey of adaptive educational technology.</p>
+</li>
+<li>
+<p>Desmarais, M. C., &amp; Baker, R. S. (2012). A review of recent advances in learner and skill modeling in intelligent learning environments. <em>User Modeling and User-Adapted Interaction</em>, 22(1-2), 9-38. — Comprehensive review of learner modeling techniques.</p>
+</li>
+</ol>
+<h3 id="learning-analytics">Learning Analytics</h3>
+<ol>
+<li>
+<p>Siemens, G., &amp; Baker, R. S. (2012). Learning analytics and educational data mining: Towards communication and collaboration. <em>Proceedings of the 2nd International Conference on Learning Analytics and Knowledge</em>, 252-254. — Framework for learning analytics in education.</p>
+</li>
+<li>
+<p>Lang, C., Siemens, G., Wise, A., &amp; Gasevic, D. (Eds.). (2017). <em>Handbook of Learning Analytics</em>. Society for Learning Analytics Research. — Comprehensive handbook on learning analytics methods and applications.</p>
+</li>
+</ol>
+<h3 id="ethical-considerations">Ethical Considerations</h3>
+<ol>
+<li>
+<p>Slade, S., &amp; Prinsloo, P. (2013). Learning analytics: Ethical issues and dilemmas. <em>American Behavioral Scientist</em>, 57(10), 1510-1529. — Critical examination of ethics in learning analytics.</p>
+</li>
+<li>
+<p>Drachsler, H., &amp; Greller, W. (2016). Privacy and analytics: It's a DELICATE issue—A checklist for trusted learning analytics. <em>Proceedings of the 6th International Conference on Learning Analytics &amp; Knowledge</em>, 89-98. — Framework for ethical learning analytics implementation.</p>
+</li>
+</ol>
+<h3 id="implementation-resources">Implementation Resources</h3>
+<ol>
+<li>
+<p>Barla, M., et al. (2010). Rule-based approach to adaptive course generation. <em>Journal of Intelligent Information Systems</em>, 35(3), 437-461. — Practical approaches to adaptive content delivery.</p>
+</li>
+<li>
+<p>Chrysafiadi, K., &amp; Virvou, M. (2013). Student modeling approaches: A literature review for the last decade. <em>Expert Systems with Applications</em>, 40(11), 4715-4729. — Comprehensive review of student modeling techniques.</p>
+</li>
+</ol>
+<h3 id="standards-and-interoperability">Standards and Interoperability</h3>
+<ol>
+<li>
+<p>IMS Global Learning Consortium. (2020). <em>Question and Test Interoperability (QTI) Specification</em>. Retrieved from https://www.imsglobal.org/question/index.html — Industry standard for assessment interoperability.</p>
+</li>
+<li>
+<p>IEEE Learning Technology Standards Committee. (2020). <em>IEEE Standard for Learning Object Metadata</em>. IEEE Std 1484.12.1-2020. — Standards for educational content metadata.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../learning-graph/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Learning Graph">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Learning Graph
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../best-practices/" class="md-footer__link md-footer__link--next" aria-label="Next: Best Practices">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Best Practices
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
