@@ -1,6 +1,7 @@
 # Adaptive Assessments
 
-Placing students at the optimal "ready-to-learn" position on their personal learning graph through intelligent, minimal questioning.
+This section covers the process of recommending content for a student based on the the assessment
+questions they have answered.  Adaptive assessment are an optimized method for placing students at the optimal "ready-to-learn" position on their personal learning graph through intelligent, minimal questioning.
 
 ## Introduction
 
