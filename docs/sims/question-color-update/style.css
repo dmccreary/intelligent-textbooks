@@ -58,6 +58,7 @@ body {
     color: black;
     background-color: aliceblue;
     padding: 4px 12px;
+    white-space: nowrap;
     z-index: 10;
 }
 
