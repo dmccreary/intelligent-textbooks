@@ -22,8 +22,15 @@ fi
 if [ "$1" == "clean" ]; then
     echo "Cleaning build artifacts..."
     rm -f main.pdf main.aux main.log main.out main.bbl main.blg
+    rm -f arxiv-upload.zip
     echo "Clean complete."
     exit 0
+fi
+
+# ArXiv packaging option
+ARXIV_PACKAGE=false
+if [ "$1" == "-a" ]; then
+    ARXIV_PACKAGE=true
 fi
 
 # Run tectonic
@@ -40,6 +47,31 @@ if [ -f "main.pdf" ]; then
     echo ""
     echo "To view the PDF:"
     echo "  open main.pdf"
+
+    # Create ArXiv zip package if -a option was used
+    if [ "$ARXIV_PACKAGE" == "true" ]; then
+        echo ""
+        echo "Creating ArXiv upload package..."
+        echo "================================="
+
+        # Remove old zip if exists
+        rm -f arxiv-upload.zip
+
+        # Create zip with all LaTeX source files and figures
+        zip -r arxiv-upload.zip \
+            main.tex \
+            sections/*.tex \
+            sections/references.bib \
+            figures/*.png \
+            -x "*.DS_Store"
+
+        echo ""
+        echo "ArXiv package created: arxiv-upload.zip"
+        echo "Package size: $(du -h arxiv-upload.zip | cut -f1)"
+        echo ""
+        echo "Contents:"
+        unzip -l arxiv-upload.zip | grep -E "^\s+[0-9]+" | awk '{print $4}'
+    fi
 else
     echo ""
     echo "Error: PDF generation failed!"

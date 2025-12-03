@@ -42,6 +42,7 @@ nav:
     - Bloom's Taxonomy: concepts/bloom-taxonomy.md
     - Scaffolding: concepts/scaffolding.md
     - Learning Graph: concepts/learning-graph.md
+    - Adaptive Assessments: concepts/adaptive-assessments.md
     - Best Practices: concepts/best-practices.md
     - Learning Theory: concepts/learning-theory.md
     - Levels of Interactivity: concepts/levels-of-interactivity.md
@@ -49,6 +50,7 @@ nav:
     - Open Educational Resources: concepts/open-educational-resources.md
     - Instructional Design: concepts/instructional-design.md
     - Levels of Interactivity: concepts/levels-of-interactivity-v1.md
+    - From Sage to Guide: concepts/from-sage-to-guide.md
     - Quality Metrics: concepts/quality-metrics.md
     - Book Metadata:
       - Book Metadata Intro: concepts/book-metadata/index.md
@@ -193,10 +195,14 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
+  - pymdownx.arithmatex:
+      generic: true
 extra_css:
    - css/extra.css
 extra_javascript:
     - js/extra.js
+    # needed for mathjax to work
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
   generator: false
