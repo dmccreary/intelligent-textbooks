@@ -58,6 +58,10 @@ nav:
       - Book Metadata Summary: concepts/book-metadata/book-metadata-summary.md
       - Book Metadata Quickstart: concepts/book-metadata/book-metadata-quickstart.md
   
+  - Stories:
+    - Introduction: stories/index.md
+    - Hadi's Story: stories/hadi/index.md
+
   - Workflows:
     - Introduction: workflow/index.md
     - Course Description: workflow/course-description.md
