@@ -167,3 +167,13 @@ The jungle has been paved. The only thing standing between a child in a Surabaya
 
 *Warm Regards,*
 *Hadi*
+
+## References
+
+- [History of Education in Indonesia](https://en.wikipedia.org/wiki/Education_in_Indonesia#Post_independence) - Wikipedia
+
+-   [Buku Ajar (Indonesian School Textbooks)](https://id.wikipedia.org/wiki/Buku_ajar) -- n.d. -- Wikipedia (Indonesian) -- Overview of the government textbook system.  Note that in the 1990 the government issued *Buku Paket* textbook system in Indonesia. Textbooks were owned by the state, loaned to students, reused annually, and often shared. This directly grounds the story's depiction of moldy, heavily reused books and the idea that students "rented" knowledge rather than owning it.
+
+-   **[Policy on Government-Provided Textbooks (Buku Sekolah Elektronik / Buku Paket)](https://pusbuk.kemdikbud.go.id/)** -- updated periodically -- Indonesian Ministry of Education and Culture (Kemendikbud) -- Official documentation and policy background on state-provided textbooks, including procurement, distribution, and reuse. This reference explains the institutional context behind why physical textbooks were scarce, standardized, and reused across generations of students, as portrayed in the early panels.
+
+-   **[Textbook Provision and Quality Challenges in Indonesian Basic Education](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/)** -- 2008 -- World Bank -- Analysis of Indonesia's basic education system, including textbook availability, quality, logistics, and environmental challenges such as humidity and storage. This report helps explain why physical decay, mold, and uneven access were persistent problems---conditions that shaped Hadi's early learning environment and motivated the story's emphasis on digital alternatives.
