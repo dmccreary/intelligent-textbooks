@@ -1,3 +1,10 @@
+---
+title: "From Moldy Books to a PhD: The Great Information Reincarnation"
+description: "A 12-panel graphic novel following Hadi's journey from sharing moldy textbooks in 1990s Indonesia to leading data science at a Fortune-50 company—and his vision for AI-powered education to transform learning for the next generation."
+image: stories/hadi/cover.png
+og:image: stories/hadi/cover.png
+---
+
 # From Moldy Books to a PhD: The Great Information Reincarnation
 
 ![](./cover.png)
