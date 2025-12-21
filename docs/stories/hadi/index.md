@@ -18,7 +18,7 @@ Use a graphic-novel style rendering with a dark palette dominated by deep forest
 A cramped Indonesian elementary school classroom in 1990. The walls are water-stained concrete painted a faded institutional green. Humidity visibly hangs in the air like a mist. Wooden desks are packed tightly together. In the foreground, a young boy of about ten years old stands behind a seated teacher, his small hands pressing into the teacher's shoulders in a massage. The boy's eyes, however, are not on the teacher—they are fixed intensely on a single weathered textbook lying on a nearby desk. Ceiling fans spin slowly overhead but do nothing against the oppressive heat. Condensation drips down the windows. Other students sit cramped together, two or three to a desk, all sharing worn books.
 </details>
 
-Surabaya, 1990. The air was so thick with humidity you could taste the monsoon before it arrived. Young Hadi stood behind his teacher, small fingers kneading tired shoulders—this was respect, this was how you earned the right to learn. But his eyes never left the desk. There, between him and three other students, sat the most precious object in the room: the textbook. It wasn't just old. It was alive.
+[Surabaya Indonesia](https://en.wikipedia.org/wiki/Surabaya), 1990. The air was so thick with humidity you could taste the monsoon before it arrived. Young Hadi stood behind his teacher, small fingers kneading tired shoulders—this was respect, this was how you earned the right to learn. But his eyes never left the desk. There, between him and three other students, sat the most precious object in the room: the textbook. It wasn't just old. It was alive.
 
 ---
 
