@@ -1,8 +1,6 @@
 # From Moldy Books to a PhD: The Great Information Reincarnation
 
-*A 12-Panel Graphic Novel*
-
----
+![](./cover.png)
 
 ## Panel 1: The Humid Classroom
 ![](./panel-01.png)
