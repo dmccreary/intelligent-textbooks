@@ -12,7 +12,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
 
-    ![AI Assisted Geometry](./img/geometry-course.png)
+    ![AI Assisted Geometry](./img/geometry-course.jpg)
 
     An online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims. Features a detailed learning graph and about a dozen MicroSims.
 
@@ -20,7 +20,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[AI Based Data Science with Python](https://dmccreary.github.io/data-science-course)**
 
-    ![AI Based Data Science](./img/data-science-course.png)
+    ![AI Based Data Science](./img/data-science-course.jpg)
 
     An AI-based course that helps undergraduate college students learn data science with Python. Includes a detailed learning graph.
 
@@ -28,7 +28,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[AI Circuits Course](https://dmccreary.github.io/circuits/)**
 
-    ![AI Circuits Course](./img/circuits.png)
+    ![AI Circuits Course](./img/circuits.jpg)
 
     Designing circuits using AI. Created to support Dr. Sharat Bhatra's circuits course at the University of Minnesota. Early stage development.
 
@@ -44,7 +44,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Algebra I](https://dmccreary.github.io/algebra-1)**
 
-    ![Algebra I](./img/algebra-1.png)
+    ![Algebra I](./img/algebra-1.jpg)
 
     An introductory course to Algebra covering fundamental concepts and skills with many interactive simulations. Designed for high school students.
 
@@ -64,7 +64,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Architectural Tradeoff Analysis Method](https://dmccreary.github.io/atam/)**
 
-    ![ATAM](./img/atam.png)
+    ![ATAM](./img/atam.jpg)
 
     ATAM is a method for evaluating software architecture, applied to database selection. Companion to 'Making Sense of NoSQL'.
 
@@ -80,7 +80,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Beginning Electronics with AI](https://dmccreary.github.io/beginning-electronics)**
 
-    ![Beginning Electronics](./img/beginning-electronics.png)
+    ![Beginning Electronics](./img/beginning-electronics.jpg)
 
     An online course using MicroSims to help junior high and high school students learn the basics of electronics.
 
@@ -88,7 +88,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Building AI Agents with Python](https://dmccreary.github.io/agents-course/)**
 
-    ![Building AI Agents](./img/agents-course.png)
+    ![Building AI Agents](./img/agents-course.jpg)
 
     Creating intelligent agents with Python and LLMs. Early stage development focused on modern agent architectures.
 
@@ -96,7 +96,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Conversational AI](https://dmccreary.github.io/conversational-ai)**
 
-    ![Conversational AI](./img/conversational-ai.png)
+    ![Conversational AI](./img/conversational-ai.jpg)
 
     A college-level course on creating chatbots. Covers NLP foundations, semantic search, LLMs, embeddings, and vector databases.
 
@@ -104,7 +104,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
-    ![Deep Learning](./img/deep-learning-course.png)
+    ![Deep Learning](./img/deep-learning-course.jpg)
 
     Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota.
 
@@ -112,7 +112,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Clocks and Watches with AI](https://dmccreary.github.io/clocks-and-watches)**
 
-    ![Clocks and Watches](./img/clocks-and-watches.png)
+    ![Clocks and Watches](./img/clocks-and-watches.jpg)
 
     Learn to design and build clocks and watches using breadboards, microcontrollers, RTCs, and displays. Ready for classroom testing.
 
@@ -120,7 +120,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/claude-skills/)**
 
-    ![Claude Skills](./img/claude-skills.png)
+    ![Claude Skills](./img/claude-skills.jpg)
 
     A collection of skills and techniques for building intelligent textbooks using Claude AI. Includes prompts, workflows, and best practices.
 
@@ -128,7 +128,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Clan MacQuarrie](https://dmccreary.github.io/clan-macquarrie/)**
 
-    ![Clan MacQuarrie](./img/clan-macquarrie.png)
+    ![Clan MacQuarrie](./img/clan-macquarrie.jpg)
 
     Educational resources on the history of the Scottish clan system with a focus on Clan MacQuarrie heritage and traditions.
 
@@ -156,7 +156,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[FFT Benchmarking](https://dmccreary.github.io/fft-benchmarking/)**
 
-    ![FFT Benchmarking](./img/fft-benchmarking.png)
+    ![FFT Benchmarking](./img/fft-benchmarking.jpg)
 
     A collection of resources for learning about Fast Fourier Transforms and benchmarking techniques across platforms.
 
@@ -170,7 +170,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Generative AI Architecture Patterns](https://dmccreary.github.io/genai-arch-patterns)**
 
-    ![GenAI Architecture Patterns](./img/genai-arch-patterns.png)
+    ![GenAI Architecture Patterns](./img/genai-arch-patterns.jpg)
 
     Helps software architects understand how to use generative AI to create and maintain AI architecture patterns.
 
@@ -198,7 +198,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Graph Data Modeling with AI](https://dmccreary.github.io/graph-data-modeling-course)**
 
-    ![Graph Data Modeling](./img/graph-data-modeling-course.png)
+    ![Graph Data Modeling](./img/graph-data-modeling-course.jpg)
 
     MicroSims for graph data modeling. Example models created for a variety of domains using vis.js.
 
@@ -220,7 +220,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Intelligent Textbooks](https://dmccreary.github.io/intelligent-textbooks)**
 
-    ![Intelligent Textbooks](./img/intelligent-textbooks.png)
+    ![Intelligent Textbooks](./img/intelligent-textbooks.jpg)
 
     Tutorial for building intelligent textbooks using mkdocs-material. Contains detailed tutorials and best practices.
 
@@ -228,7 +228,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[AI Infographics](https://dmccreary.github.io/infographics/)**
 
-    ![AI Infographics](./img/infographics.png)
+    ![AI Infographics](./img/infographics.jpg)
 
     A collection of resources for creating interactive infographics using AI tools. Includes templates and examples.
 
@@ -236,7 +236,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Introduction to Graph Databases](https://dmccreary.github.io/intro-to-graph)**
 
-    ![Intro to Graph](./img/intro-to-graph.png)
+    ![Intro to Graph](./img/intro-to-graph.jpg)
 
     Interactive textbook covering graph databases: graph thinking, data modeling, NoSQL, labeled property graphs, and query languages.
 
@@ -256,7 +256,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Introduction to Physics](https://dmccreary.github.io/intro-to-physics-course)**
 
-    ![Intro to Physics](./img/intro-to-physics-course.png)
+    ![Intro to Physics](./img/intro-to-physics-course.jpg)
 
     Year-long intro physics course covering motion, forces, energy, waves, optics, and electricity with MicroSims.
 
@@ -270,7 +270,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[IT Management with Graphs](https://dmccreary.github.io/it-management-graph)**
 
-    ![IT Management with Graphs](./img/it-management-graph.png)
+    ![IT Management with Graphs](./img/it-management-graph.jpg)
 
     IT management using graph databases. Covers ITIL, configuration management, asset management, and IT operations.
 
@@ -278,7 +278,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Learning Graphs](https://dmccreary.github.io/learning-graphs)**
 
-    ![Learning Graphs](./img/learning-graphs.png)
+    ![Learning Graphs](./img/learning-graphs.jpg)
 
     Creation and maintenance of learning graphs. Extensive examples using vis.js for visualization.
 
@@ -286,7 +286,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Learning Linux](https://dmccreary.github.io/learning-linux/)**
 
-    ![Learning Linux](./img/learning-linux.png)
+    ![Learning Linux](./img/learning-linux.jpg)
 
     A comprehensive 15-week course teaching high school students Linux fundamentals including command line, file systems, and scripting.
 
@@ -302,7 +302,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
 
-    ![McCreary Heritage](./img/mccreary-heritage.png)
+    ![McCreary Heritage](./img/mccreary-heritage.jpg)
 
     Educational resources for teaching Scottish, Irish, and immigration history with a focus on building critical thinking skills.
 
@@ -316,7 +316,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[MicroSims](https://dmccreary.github.io/microsims)**
 
-    ![MicroSims](./img/microsims.png)
+    ![MicroSims](./img/microsims.jpg)
 
     Showcase for creating MicroSims using JavaScript and p5.js across diverse subjects.
 
@@ -324,7 +324,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Modeling Healthcare Data with Graphs](https://dmccreary.github.io/modeling-healthcare-data)**
 
-    ![Modeling Healthcare Data](./img/modeling-healthcare-data.png)
+    ![Modeling Healthcare Data](./img/modeling-healthcare-data.jpg)
 
     Undergraduate textbook on graph-based healthcare data modeling: patient-centric models, provider operations, clinical workflows.
 
@@ -332,7 +332,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Moving Rainbow](https://dmccreary.github.io/moving-rainbow)**
 
-    ![Moving Rainbow](./img/moving-rainbow.png)
+    ![Moving Rainbow](./img/moving-rainbow.jpg)
 
     Using colorful addressable LED strips and noodles for hands-on computational thinking projects with MicroPython.
 
@@ -346,7 +346,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Personal Finance](https://dmccreary.github.io/personal-finance/)**
 
-    ![Personal Finance](./img/personal-finance.png)
+    ![Personal Finance](./img/personal-finance.jpg)
 
     Helps high school students learn personal finance with MicroSims, infographics, and graphic novel storytelling.
 
@@ -354,7 +354,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Prompt Engineering Class](https://dmccreary.github.io/prompt-class)**
 
-    ![Prompt Engineering](./img/prompt-class.png)
+    ![Prompt Engineering](./img/prompt-class.jpg)
 
     Hands-on labs covering lists, Mermaid diagrams, markdown tables, p5.js visualizations, and data science applications.
 
@@ -376,7 +376,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Semiconductor Physics Course](https://dmccreary.github.io/semiconductor-physics-course)**
 
-    ![Semiconductor Physics](./img/semiconductor-physics-course.png)
+    ![Semiconductor Physics](./img/semiconductor-physics-course.jpg)
 
     College-level semiconductor physics with interactive simulations including PN Junction visualization.
 
@@ -408,7 +408,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[STEM Classroom Administration](https://dmccreary.github.io/stem-classroom-admin/)**
 
-    ![STEM Classroom Admin](./img/stem-classroom-admin.png)
+    ![STEM Classroom Admin](./img/stem-classroom-admin.jpg)
 
     Helps teachers use AI to setup and administer a STEM classroom with a focus on computational thinking and microcontrollers.
 
@@ -424,7 +424,7 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Tracking AI](https://dmccreary.github.io/tracking-ai-course)**
 
-    ![Tracking AI](./img/tracking-ai-course.png)
+    ![Tracking AI](./img/tracking-ai-course.jpg)
 
     Tracking AI progress for strategy consulting in education and knowledge management organizations.
 
