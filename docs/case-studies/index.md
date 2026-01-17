@@ -1,6 +1,8 @@
 ---
 title: "Case Studies"
-description: A list of case studies about intelligent textbooks created by myself and others.
+description: Case studies about intelligent textbooks created by myself and others.
+image: /case-studies/img/case-studies.png
+og:image: /case-studies/img/case-studies.png
 hide:
     - toc
 ---
