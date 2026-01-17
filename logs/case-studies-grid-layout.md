@@ -182,10 +182,21 @@ The following directories have `mkdocs.yml` but were not added as they are perso
 
 ---
 
+## Session Update: Added Heritage Sites
+
+Added 2 family heritage/history educational sites:
+
+| Book Title | Repository | Cover Image |
+|------------|------------|-------------|
+| Clan MacQuarrie | dmccreary/clan-macquarrie | clan-macquarrie.png |
+| McCreary Family Heritage | dmccreary/mccreary-heritage | mccreary-heritage.png |
+
+---
+
 ## Updated Totals
 
-- **55 case studies** listed on the page (was 47)
-- **40 with cover images** from local repositories (was 33)
+- **57 case studies** listed on the page (was 47)
+- **42 with cover images** from local repositories (was 33)
 - **15 without images** (external repositories or no cover available)
 
 ## Files Modified (Complete List)
@@ -196,4 +207,4 @@ The following directories have `mkdocs.yml` but were not added as they are perso
 
 ## Files Created
 
-1. `docs/case-studies/img/` directory with 40 cover images total
+1. `docs/case-studies/img/` directory with 42 cover images total

@@ -126,6 +126,14 @@ This document provides a sample of some of the intelligent textbooks that have b
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/claude-skills)
 
+- **[Clan MacQuarrie](https://dmccreary.github.io/clan-macquarrie/)**
+
+    ![Clan MacQuarrie](./img/clan-macquarrie.png)
+
+    Educational resources on the history of the Scottish clan system with a focus on Clan MacQuarrie heritage and traditions.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clan-macquarrie)
+
 - **[Digital Design With Programmable Logic](https://mcbasken.github.io/umn-senior-design/)**
 
     Digital design course focusing on programmable logic devices and FPGAs.
@@ -291,6 +299,14 @@ This document provides a sample of some of the intelligent textbooks that have b
     Helps kids learn MicroPython on microcontrollers using fun low-cost projects. Thousands of monthly users worldwide.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words
+
+- **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
+
+    ![McCreary Heritage](./img/mccreary-heritage.png)
+
+    Educational resources for teaching Scottish, Irish, and immigration history with a focus on building critical thinking skills.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mccreary-heritage)
 
 - **[MicroSims for Electrical Engineering](https://kenn0727.github.io/ee-microsims)**
 
