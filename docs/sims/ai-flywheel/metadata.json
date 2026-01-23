@@ -39,5 +39,11 @@
     "diagram",
     "interactive-demo",
     "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of the ai flywheel",
+    "Apply the ai flywheel to solve problems",
+    "Visualize and interpret the ai flywheel relationships",
+    "Experiment with parameters to observe their effects on the ai flywheel"
   ]
 }

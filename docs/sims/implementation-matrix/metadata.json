@@ -35,5 +35,11 @@
   "visualizationType": [
     "graph",
     "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of implementation decision matrix",
+    "Apply implementation decision matrix to solve problems",
+    "Visualize and interpret implementation decision matrix relationships",
+    "Test understanding of implementation decision matrix through interactive exercises"
   ]
 }

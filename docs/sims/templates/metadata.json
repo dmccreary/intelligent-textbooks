@@ -35,5 +35,11 @@
   "visualizationType": [
     "graph",
     "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of workflow for generating intelligent textbooks",
+    "Apply workflow for generating intelligent textbooks to solve problems",
+    "Visualize and interpret workflow for generating intelligent textbooks relationships",
+    "Experiment with parameters to observe their effects on workflow for generating intelligent textbooks"
   ]
 }
