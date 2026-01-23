@@ -1,0 +1,45 @@
+{
+  "title": "Terms to Enterprise Knowledge Graph",
+  "description": "Interactive infographic MicroSim of the ten steps to move from a simple list of business terms to an agentic EKG",
+  "subject": "Mathematics",
+  "topic": "Terms to Enterprise Knowledge Graph",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/terms-to-ekg/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/terms-to-ekg/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "terms-to-ekg",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/terms-to-ekg",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ]
+}
