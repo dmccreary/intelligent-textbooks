@@ -39,5 +39,11 @@
     "diagram",
     "interactive-demo",
     "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of book levels",
+    "Apply book levels to solve problems",
+    "Visualize and interpret book levels relationships",
+    "Experiment with parameters to observe their effects on book levels"
   ]
 }
