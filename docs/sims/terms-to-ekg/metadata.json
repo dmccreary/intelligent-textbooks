@@ -47,5 +47,29 @@
     "Apply terms to enterprise knowledge graph to solve problems",
     "Visualize and interpret terms to enterprise knowledge graph relationships",
     "Experiment with parameters to observe their effects on terms to enterprise knowledge graph"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "exploration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "define",
+      "list",
+      "recognize",
+      "state",
+      "classify"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

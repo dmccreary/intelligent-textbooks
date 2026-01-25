@@ -49,5 +49,28 @@
     "Apply intelligent textbook ecosystem dynamics to solve problems",
     "Visualize and interpret intelligent textbook ecosystem dynamics relationships",
     "Experiment with parameters to observe their effects on intelligent textbook ecosystem dynamics"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "summarize",
+      "illustrate",
+      "experiment",
+      "investigate",
+      "test"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }

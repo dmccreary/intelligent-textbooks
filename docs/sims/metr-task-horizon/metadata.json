@@ -46,5 +46,24 @@
     "Apply metr task horizon growth to solve problems",
     "Visualize and interpret metr task horizon growth relationships",
     "Test understanding of metr task horizon growth through interactive exercises"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "summarize",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "delayed"
+    ],
+    "interactionStyle": "observe"
+  }
 }
