@@ -45,5 +45,27 @@
     "Understand the mathematical concept of educational technology standards ecosystem",
     "Apply educational technology standards ecosystem to solve problems",
     "Visualize and interpret educational technology standards ecosystem relationships"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "exploration",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "illustrate",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "observe"
+  }
 }

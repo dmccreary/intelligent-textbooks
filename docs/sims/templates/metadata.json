@@ -41,5 +41,25 @@
     "Apply workflow for generating intelligent textbooks to solve problems",
     "Visualize and interpret workflow for generating intelligent textbooks relationships",
     "Experiment with parameters to observe their effects on workflow for generating intelligent textbooks"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "exploration",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "apply",
+      "calculate",
+      "use",
+      "experiment"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "none"
+    ],
+    "interactionStyle": "construct"
+  }
 }
