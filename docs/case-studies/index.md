@@ -33,9 +33,9 @@ frequently.
 
     ![AI Circuits Course](./img/circuits.jpg)
 
-    Designing circuits using AI. Created to support Dr. Sharat Bhatra's circuits course at the University of Minnesota. Early stage development.
+    Learn electronic circuits with AI-powered simulations and knowledge graphs. Created to support the circuits course at the University of Minnesota.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits) · 113 Files · 154K Words · 23 MicroSims
 
 - **[AI Racing League](https://coderdojotc.github.io/ai-racing-league)**
 
@@ -157,7 +157,7 @@ frequently.
 
     ![Digital Electronics](./img/digital-electronics.jpg)
 
-    MicroSims for high school students learning digital electronics with breadboards, LEDs, buttons, and logic gates (~$50 in parts).
+    Undergraduate course with MicroSims for learning digital electronics using breadboards, LEDs, buttons, and logic gates (~$50 in parts).
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-electronics) · 86 Files · 171K Words · 8 MicroSims
 
