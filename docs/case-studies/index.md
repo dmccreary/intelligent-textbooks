@@ -333,6 +333,14 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words
 
+- **[Machine Learning: Algorithms and Applications](https://anvithpothula.github.io/machine-learning-textbook/)**
+
+    ![Machine Learning Textbook](./img/machine-learning-textbook.png)
+
+    Comprehensive intelligent textbook on machine learning for college undergraduates. Covers supervised learning, unsupervised learning, neural networks, CNNs, and transfer learning with Python code examples.
+
+    [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/machine-learning-textbook) · 60 Files · 103K Words · 18 MicroSims · 199 Glossary Terms
+
 - **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
 
     ![McCreary Heritage](./img/mccreary-heritage.jpg)
