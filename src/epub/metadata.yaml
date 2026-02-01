@@ -1,0 +1,22 @@
+# EPUB Metadata for Kindle Direct Publishing
+# See: https://pandoc.org/MANUAL.html#epub-metadata
+
+title: Building Intelligent Textbooks with AI
+author: Dan McCreary
+language: en-US
+rights: © 2026 Dan McCreary. All rights reserved.
+publisher: Self-published via Amazon KDP
+description: |
+  A practical guide to creating intelligent textbooks using AI tools.
+  Learn how to build interactive educational content with MicroSims,
+  learning graphs, and AI-powered content generation workflows.
+
+# Cover image (2560x1600 recommended for Kindle)
+# Uncomment when you have a cover image:
+# cover-image: cover.jpg
+
+# Optional: Add subject categories for Amazon
+# subject:
+#   - Education
+#   - Artificial Intelligence
+#   - Educational Technology
