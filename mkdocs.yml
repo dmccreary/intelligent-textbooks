@@ -165,6 +165,7 @@ nav:
   - License: license.md
   - FAQ: faq.md
   - How We Built This Site: how-we-built-this-site.md
+  - URI Scheme: uri-scheme.md
   - References: references.md
   - Contact: contact.md
  
@@ -214,6 +215,7 @@ extra_javascript:
     - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
   generator: false
   analytics:
     provider: google
