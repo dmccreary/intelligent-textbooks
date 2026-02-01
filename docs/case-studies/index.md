@@ -52,11 +52,13 @@ This document provides a sample of some of the intelligent textbooks that have b
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/algebra-1) · Active Development
 
-- **[Applied Linear Algebra](https://artemispearson.github.io/learning-graphs/)**
+- **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
 
-    Applied Linear Algebra for Computer Science and Electrical Engineering. Uses learning graphs to structure concept dependencies.
+    ![Linear Algebra for AI and Machine Learning](./img/linear-algebra.jpg)
 
-    [:octicons-mark-github-16: Repository](https://github.com/artemispearson/learning-graphs)
+    A college-level course bridging abstract linear algebra with real-world AI applications. Covers vectors, matrices, eigenvalues, neural networks, computer vision, and autonomous systems.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/linear-algebra) · 206 Files · 195K Words · 126 MicroSims · 299 Glossary Terms
 
 - **[ASL Book](https://Olufsonc-hub.github.io/asl-book/)**
 
