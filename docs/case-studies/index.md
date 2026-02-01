@@ -195,9 +195,11 @@ frequently.
 
 - **[Fluid Power Systems](https://dmccreary.github.io/fluid-power-systems/)**
 
-    Fluid power systems course created in conjunction with Peter Vinck at Inflow Corporation. Early stage development.
+    ![Fluid Power Systems](./img/fluid-power-systems.jpg)
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fluid-power-systems)
+    Interactive textbook for technicians working with HVAC, vacuum, compressed air, cooling water, dust collection, hydraulics, pumping, and fan systems. Created with Peter Vinck at Inflow Corporation.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fluid-power-systems) · 36 Files · 20K Words · 3 MicroSims · 103 Glossary Terms
 
 - **[Generative AI Architecture Patterns](https://dmccreary.github.io/genai-arch-patterns)**
 
