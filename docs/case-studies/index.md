@@ -154,9 +154,11 @@ This document provides a sample of some of the intelligent textbooks that have b
 
 - **[Digital Electronics with AI](https://dmccreary.github.io/digital-electronics)**
 
+    ![Digital Electronics](./img/digital-electronics.jpg)
+
     MicroSims for high school students learning digital electronics with breadboards, LEDs, buttons, and logic gates (~$50 in parts).
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-electronics) · 15 Files · 3K Words · 3 MicroSims
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-electronics) · 86 Files · 171K Words · 8 MicroSims
 
 - **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
