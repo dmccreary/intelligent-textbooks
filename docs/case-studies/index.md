@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 62 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 63 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -470,6 +470,14 @@ frequently.
     Tracking AI progress for strategy consulting in education and knowledge management organizations.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/tracking-ai-course) · 47 Files · 18K Words · 3 MicroSims
+
+- **[Understanding Dementia](https://rtanler.github.io/Dementia/)**
+
+    ![Understanding Dementia](./img/dementia.jpg)
+
+    AI-generated intelligent textbook on dementia and cognitive decline for patients, caregivers, families, and healthcare professionals. Features 200 interconnected concepts in a learning graph. By rtanler.
+
+    [:octicons-mark-github-16: Repository](https://github.com/rtanler/Dementia) · 34 Files · 44K Words · 1 MicroSim · 200 Concepts
 
 - **[US Geography](https://dmccreary.github.io/us-geography)**
 
