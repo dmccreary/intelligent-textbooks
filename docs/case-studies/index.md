@@ -8,7 +8,8 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides a sample of some of the intelligent textbooks that have been created with our workflows.
+This document provides 62 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+frequently.
 
 <div class="grid cards grid-3-col" markdown>
 
