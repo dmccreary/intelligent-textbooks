@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 63 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 64 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -332,6 +332,14 @@ frequently.
     Helps kids learn MicroPython on microcontrollers using fun low-cost projects. Thousands of monthly users worldwide.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words
+
+- **[Machine Learning: Algorithms and Applications](https://anvithpothula.github.io/machine-learning-textbook/)**
+
+    ![Machine Learning Textbook](./img/machine-learning-textbook.png)
+
+    Comprehensive intelligent textbook on machine learning for college undergraduates. Covers supervised learning, unsupervised learning, neural networks, CNNs, and transfer learning with Python code examples.
+
+    [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/machine-learning-textbook) · 60 Files · 103K Words · 18 MicroSims · 199 Glossary Terms
 
 - **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
 
