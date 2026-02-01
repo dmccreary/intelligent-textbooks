@@ -82,3 +82,37 @@ docs/sims/[name]/
 ## Python Environment
 
 The project uses conda for environment management rather than venv to support potential future multi-language dependencies. All Python utilities are in `src/` subdirectories with specific purposes (analytics, CSV processing, etc.).
+
+## Available Skills
+
+### case-study-generator
+
+**Location:** `skills/case-study-generator/SKILL.md`
+
+**Purpose:** Generates case study entries for the case studies page from GitHub repositories.
+
+**When to use:** When the user provides a GitHub repo URL and wants to add it to `docs/case-studies/index.md`.
+
+**Usage:**
+```
+Add a case study for https://github.com/username/repo-name
+```
+
+**Workflow:**
+1. Clone the repo (shallow) and extract: title, description, file count, word count, MicroSim count, glossary terms
+2. Find or copy a thumbnail image from the repo's `docs/img/` directory
+3. Compress thumbnail to ~70KB using `python3 src/compress-thumbnails.py docs/case-studies/img 70`
+4. Generate the markdown entry with metrics
+5. Insert alphabetically into `docs/case-studies/index.md` inside the `<div class="grid cards grid-3-col" markdown>` block
+6. Clean up temp files and backups
+
+**Entry format:**
+```markdown
+- **[Project Title](https://username.github.io/repo-name)**
+
+    ![Alt Text](./img/repo-name.jpg)
+
+    Brief 1-2 sentence description.
+
+    [:octicons-mark-github-16: Repository](https://github.com/username/repo-name) · XX Files · XXK Words · X MicroSims
+```
