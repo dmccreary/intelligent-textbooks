@@ -106,6 +106,14 @@ This document provides a sample of some of the intelligent textbooks that have b
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/conversational-ai) · Active Development
 
+- **[Control Systems](https://dmccreary.github.io/control-systems)**
+
+    ![Control Systems](./img/control-systems.jpg)
+
+    Upper-division undergraduate course on classical control theory. Covers feedback, Laplace transforms, Bode plots, root locus, Nyquist stability, and PID design with Gyra the balancing robot.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/control-systems) · 70 Files · 152K Words · 6 MicroSims · 297 Glossary Terms
+
 - **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
     ![Deep Learning](./img/deep-learning-course.jpg)
