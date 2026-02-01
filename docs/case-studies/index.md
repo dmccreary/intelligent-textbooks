@@ -160,6 +160,22 @@ This document provides a sample of some of the intelligent textbooks that have b
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-electronics) · 86 Files · 171K Words · 8 MicroSims
 
+- **[Digital Transformation 2.0 with Generative AI](https://yarmoluk.github.io/Digital-Transformation-with-AI-Spring-2026/)**
+
+    ![Digital Transformation with AI](./img/digital-transformation-ai.png)
+
+    Graduate course (SEIS 666) at University of St. Thomas exploring how generative AI reshapes digital transformation, business models, and workforce dynamics. By Daniel Yarmoluk.
+
+    [:octicons-mark-github-16: Repository](https://github.com/Yarmoluk/Digital-Transformation-with-AI-Spring-2026) · 81 Files · 109K Words · 33 MicroSims · 223 Glossary Terms
+
+- **[Economics Course](https://dmccreary.github.io/economics-course/)**
+
+    ![Economics Course](./img/economics-course.jpg)
+
+    Interactive intelligent textbook on Introduction to Economics for high school students covering microeconomics, macroeconomics, personal finance, and the digital economy.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/economics-course) · 29 Files · 82K Words · Early Stage
+
 - **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
     ![Ethics Course](./img/ethics-course.jpg)
@@ -321,6 +337,14 @@ This document provides a sample of some of the intelligent textbooks that have b
     Educational resources for teaching Scottish, Irish, and immigration history with a focus on building critical thinking skills.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mccreary-heritage)
+
+- **[MicroSim Search](https://dmccreary.github.io/search-microsims/)**
+
+    ![MicroSim Search](./img/search-microsims.jpg)
+
+    Client-side faceted search system for educational MicroSims. Crawls GitHub repositories to collect metadata and provides browser-based search with filtering by subject, grade level, Bloom's Taxonomy, and framework.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/search-microsims) · 125 Files · 138K Words · 58 MicroSims
 
 - **[MicroSims for Electrical Engineering](https://kenn0727.github.io/ee-microsims)**
 
