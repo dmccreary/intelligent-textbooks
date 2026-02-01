@@ -83,6 +83,32 @@ docs/sims/[name]/
 
 The project uses conda for environment management rather than venv to support potential future multi-language dependencies. All Python utilities are in `src/` subdirectories with specific purposes (analytics, CSV processing, etc.).
 
+## Startup Message Hook
+
+This project uses a Claude Code `SessionStart` hook to display available skills when a new conversation begins. The hook is configured in `.claude/settings.json`:
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '📚 You can use the case-study-generator skill to add a case study. Just pass the local directory or the repo URL.'"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This is an ideal place to document project-specific skills that are available but might not be installed globally. The message appears as a `<system-reminder>` at the start of each new Claude Code session, helping users discover what's available in this repository.
+
+**Note:** The startup message does not appear when using the `--continue` option to resume a previous conversation, since that's resuming a session rather than starting a new one.
+
 ## Available Skills
 
 ### case-study-generator
