@@ -1,0 +1,69 @@
+{
+  "title": "METR Task Horizon Growth",
+  "description": "Interactive visualization of AI task completion capabilities from 2019-2030, showing the 7-month doubling time discovered by METR research.",
+  "subject": "Mathematics",
+  "topic": "METR Task Horizon Growth",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "chart.js",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/metr-task-horizon/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/metr-task-horizon/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "metr-task-horizon",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/metr-task-horizon",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Chemistry",
+    "Statistics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "simulation",
+    "chart",
+    "graph",
+    "interactive-demo",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of metr task horizon growth",
+    "Apply metr task horizon growth to solve problems",
+    "Visualize and interpret metr task horizon growth relationships",
+    "Test understanding of metr task horizon growth through interactive exercises"
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "summarize",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "delayed"
+    ],
+    "interactionStyle": "observe"
+  }
+}

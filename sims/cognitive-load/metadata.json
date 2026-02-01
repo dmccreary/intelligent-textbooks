@@ -203,7 +203,7 @@
     "references": [
       "Sweller, J., Ayres, P., & Kalyuga, S. (2011). Cognitive Load Theory. Springer.",
       "Mayer, R. E. (2021). Multimedia Learning (3rd ed.). Cambridge University Press.",
-      "van Merriënboer, J. J. G., & Sweller, J. (2005). Cognitive load theory and complex learning. Educational Psychology Review, 17(2), 147-177.",
+      "van Merri\u00ebnboer, J. J. G., & Sweller, J. (2005). Cognitive load theory and complex learning. Educational Psychology Review, 17(2), 147-177.",
       "Paas, F., Renkl, A., & Sweller, J. (2003). Cognitive load theory and instructional design: Recent developments. Educational Psychologist, 38(1), 1-4."
     ],
     "file_structure": {
@@ -212,5 +212,52 @@
       "documentation": "index.md",
       "metadata": "metadata.json"
     }
+  },
+  "visualizationType": [
+    "animation",
+    "data-visualization",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "interpret",
+      "summarize"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
   }
 }

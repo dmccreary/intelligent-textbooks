@@ -135,7 +135,7 @@
     "nine_elements": {
       "element_1": {
         "name": "Instructional Problems",
-        "icon": "❓",
+        "icon": "\u2753",
         "color": "#4A90E2",
         "description": "Identify what learners need to know or be able to do",
         "key_questions": [
@@ -151,7 +151,7 @@
       },
       "element_2": {
         "name": "Learner Characteristics",
-        "icon": "👥",
+        "icon": "\ud83d\udc65",
         "color": "#F5A623",
         "description": "Examine who your learners are and what they bring",
         "key_questions": [
@@ -167,7 +167,7 @@
       },
       "element_3": {
         "name": "Task Analysis",
-        "icon": "📋",
+        "icon": "\ud83d\udccb",
         "color": "#7ED321",
         "description": "Determine subject content and skills to be learned",
         "key_questions": [
@@ -183,7 +183,7 @@
       },
       "element_4": {
         "name": "Instructional Objectives",
-        "icon": "🎯",
+        "icon": "\ud83c\udfaf",
         "color": "#BD10E0",
         "description": "State specific, measurable learning outcomes",
         "key_questions": [
@@ -199,7 +199,7 @@
       },
       "element_5": {
         "name": "Content Sequencing",
-        "icon": "📊",
+        "icon": "\ud83d\udcca",
         "color": "#E94B3C",
         "description": "Arrange content in logical, effective order",
         "key_questions": [
@@ -215,7 +215,7 @@
       },
       "element_6": {
         "name": "Instructional Strategies",
-        "icon": "💡",
+        "icon": "\ud83d\udca1",
         "color": "#50E3C2",
         "description": "Design teaching methods and learning activities",
         "key_questions": [
@@ -231,7 +231,7 @@
       },
       "element_7": {
         "name": "Instructional Delivery",
-        "icon": "📱",
+        "icon": "\ud83d\udcf1",
         "color": "#F8E71C",
         "description": "Plan how instruction will be delivered",
         "key_questions": [
@@ -247,7 +247,7 @@
       },
       "element_8": {
         "name": "Evaluation Instruments",
-        "icon": "✅",
+        "icon": "\u2705",
         "color": "#9013FE",
         "description": "Develop assessments to measure learning",
         "key_questions": [
@@ -263,7 +263,7 @@
       },
       "element_9": {
         "name": "Support Services",
-        "icon": "🛠️",
+        "icon": "\ud83d\udee0\ufe0f",
         "color": "#4A4A4A",
         "description": "Select resources and support needed",
         "key_questions": [
@@ -357,5 +357,54 @@
       "documentation": "index.md",
       "metadata": "metadata.json"
     }
+  },
+  "visualizationType": [
+    "3d-model",
+    "animation",
+    "data-visualization",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "summarize",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
   }
 }

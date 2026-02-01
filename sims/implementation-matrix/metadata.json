@@ -1,0 +1,65 @@
+{
+  "title": "Implementation Decision Matrix",
+  "description": "A 2D matrix helping organizations choose the right intelligent textbook level based on technical capability and data readiness.",
+  "subject": "Mathematics",
+  "topic": "Implementation Decision Matrix",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vanilla-js",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/implementation-matrix/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/implementation-matrix/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "implementation-matrix",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/implementation-matrix",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Biology",
+    "Economics"
+  ],
+  "visualizationType": [
+    "graph",
+    "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of implementation decision matrix",
+    "Apply implementation decision matrix to solve problems",
+    "Visualize and interpret implementation decision matrix relationships",
+    "Test understanding of implementation decision matrix through interactive exercises"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "implement",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
+}

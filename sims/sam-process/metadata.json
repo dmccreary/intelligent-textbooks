@@ -175,7 +175,7 @@
       "preparation": {
         "name": "Preparation Phase",
         "color": "#4A90E2",
-        "icon": "📋",
+        "icon": "\ud83d\udccb",
         "duration": "1-2 days typically",
         "activities": [
           "Gather information about learners and context",
@@ -188,7 +188,7 @@
       "iterative_design": {
         "name": "Iterative Design Phase",
         "color": "#F5A623",
-        "icon": "✏️",
+        "icon": "\u270f\ufe0f",
         "duration": "Multiple 1-3 day cycles",
         "activities": [
           "Create rapid prototypes (paper, mockups, sketches)",
@@ -201,7 +201,7 @@
       "iterative_development": {
         "name": "Iterative Development Phase",
         "color": "#7ED321",
-        "icon": "🔧",
+        "icon": "\ud83d\udd27",
         "duration": "Multiple 1-2 week sprints",
         "activities": [
           "Build functional content incrementally",
@@ -307,5 +307,51 @@
       "documentation": "index.md",
       "metadata": "metadata.json"
     }
+  },
+  "visualizationType": [
+    "animation",
+    "data-visualization",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "explain",
+      "summarize"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
   }
 }
