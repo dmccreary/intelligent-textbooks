@@ -99,12 +99,15 @@ Add a case study for https://github.com/username/repo-name
 ```
 
 **Workflow:**
-1. Clone the repo (shallow) and extract: title, description, file count, word count, MicroSim count, glossary terms
-2. Find or copy a thumbnail image from the repo's `docs/img/` directory
-3. Compress thumbnail to ~70KB using `python3 src/compress-thumbnails.py docs/case-studies/img 70`
-4. Generate the markdown entry with metrics
-5. Insert alphabetically into `docs/case-studies/index.md` inside the `<div class="grid cards grid-3-col" markdown>` block
-6. Clean up temp files and backups
+1. Check if repo exists in `~/Documents/ws/{repo-name}` first - if found, run `git pull` to update it
+2. If not found locally, clone to `/tmp/{repo-name}` (shallow clone)
+3. Extract metrics: title, description, file count, word count, MicroSim count, glossary terms
+4. Find or copy a thumbnail image from the repo's `docs/img/` directory
+5. Compress thumbnail to ~70KB using `python3 src/compress-thumbnails.py docs/case-studies/img 70`
+6. If PNG won't compress below 70KB, convert to JPEG: `python3 src/convert-png-to-jpg.py docs/case-studies/img 70`
+7. Generate the markdown entry with metrics
+8. Insert alphabetically into `docs/case-studies/index.md` inside the `<div class="grid cards grid-3-col" markdown>` block
+9. Clean up backup files; only clean up `/tmp` clone (not local workspace repos)
 
 **Entry format:**
 ```markdown

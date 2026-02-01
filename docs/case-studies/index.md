@@ -1,8 +1,8 @@
 ---
 title: "Case Studies"
 description: Case studies about intelligent textbooks created by myself and others.
-image: /case-studies/img/case-studies.png
-og:image: /case-studies/img/case-studies.png
+image: /case-studies/img/case-studies.jpg
+og:image: /case-studies/img/case-studies.jpg
 hide:
     - toc
 ---
@@ -433,6 +433,14 @@ This document provides a sample of some of the intelligent textbooks that have b
     Tracking AI progress for strategy consulting in education and knowledge management organizations.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/tracking-ai-course) · 47 Files · 18K Words · 3 MicroSims
+
+- **[US Geography](https://dmccreary.github.io/us-geography)**
+
+    ![US Geography](./img/us-geography.jpg)
+
+    Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms
 
 - **[Trigonometric Functions](https://stage03.iowerx.com:8443/)**
 
