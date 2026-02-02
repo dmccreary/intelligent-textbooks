@@ -12,9 +12,18 @@ This document contains the detailed chapter outline for the print book.
 - Features of intelligent textbook
 - MicroSims
 - Simplicity, Interactivity and AI
-- Embedding MicroSims
-- The role of a learning graph
-- Ground truth
+- Embedding MicroSims in Web Pages
+- The iframe superpower
+- The Learning Graph
+- Separating Concepts from Content
+- The Learning Graph as the Core Data Structure Supporting the Textbook
+- Generating Book Chapter Structure
+- The Graph as Ground Truth for content generation
+- Learning Paths
+- The Student Graph
+- Finding the Zone of Proximal Development for each Student
+- Recommending concepts
+- Recommending content
 - Avoiding hallucination
 - Open source
 - Creative Commons
@@ -111,6 +120,7 @@ This document contains the detailed chapter outline for the print book.
 - Analyzing Event Values
 
 ## Chapter 7: Learning Standards
+
 - Why relational databases fail
 - Modeling knowledge in a graph
 - Models of courses
@@ -134,6 +144,7 @@ This document contains the detailed chapter outline for the print book.
 - Intelligent textbook standards
 
 ## Chapter 8: Level 4 and 5 Textbooks
+
 - The intelligent book chatbot
 - Embeddings for FAQ
 - Matching questions to FAQ
@@ -158,6 +169,7 @@ This document contains the detailed chapter outline for the print book.
 - Using reinforcement learning
 
 ## Chapter 9: Generating Skills
+
 - What are AI Skills
 - Skills and Agents
 - Tasks, workflows and skill matching
@@ -178,6 +190,7 @@ This document contains the detailed chapter outline for the print book.
 - Embeddings and Ad-Hoc MicroSims
 
 ## Chapter 10: The Future of Intelligent Textbooks
+
 - Capabilities today
 - Key limitations
 - The layout challenge
@@ -189,3 +202,15 @@ This document contains the detailed chapter outline for the print book.
 - Keeping costs down
 - Building an energy-respectful architecture
 - Personalization without LLMs
+
+## References
+
+- Signal Processing Education
+- MicroSim Paper in ArXiv
+- Five Levels paper
+- Intelligent textbook
+- Intelligent textbook case studies
+- Claude Skills
+- MicroSims
+- MicroSim Search
+- Learning Graph

@@ -47,6 +47,13 @@ Level 3 introduces personalization through deterministic algorithms. The textboo
 
 Level 3 requires significant technical infrastructure including robust data management, graph algorithms, and persistent storage of student progress. It also crosses an important privacy threshold—the system must track individual learning histories to provide personalization.
 
+This privacy threshold carries significant regulatory consequences. In the United States, student data is protected by FERPA (Family Educational Rights and Privacy Act), which governs access to educational records and requires institutional safeguards. COPPA (Children's Online Privacy Protection Act) adds additional requirements when students are under 13. In the European Union, GDPR (General Data Protection Regulation) imposes strict requirements on collecting, processing, and storing personal data—including provisions like "the right to be forgotten," which requires organizations to delete personal data upon request. This means student records in databases, backups, and even log files must be completely removable, significantly complicating system architecture.
+
+For educators and institutions, these regulations create substantial compliance burdens. Organizations must demonstrate to auditors that student data is properly protected, access is controlled, and deletion requests can be honored. This increases risk for teachers and schools holding student records—a data breach or compliance failure can result in significant fines and reputational damage. The infrastructure required for compliant Level 3 systems drives up both development and operational costs, making the jump from Level 2 to Level 3 far more significant than simply adding personalization features.
+
+![Level Two to Level Three](../images/color/l2-l3-privacy-threshold-vertical-bar-chart.png)
+*Figure 1.3: The Privacy Threshold: Level 3 Inflection Point.*
+
 ### Level 4: Textbooks with Chatbots
 
 Level 4 integrates large language models as interactive tutoring assistants. Students can ask questions in natural language and receive contextually relevant answers. The chatbot draws on the textbook content, the student's learning history, and general knowledge to provide personalized explanations.
@@ -74,7 +81,7 @@ The capabilities available for intelligent textbooks are not static. Artificial 
 
 ![MMLU Benchmark: AI Model Performance Over Time](../images/color/ai-mmlu-benchmark-chart.jpg)
 
-*Figure 1.6: The MMLU (Massive Multitask Language Understanding) benchmark tracks AI performance across academic subjects. Multiple model families—GPT, Claude, Gemini, Llama, and others—show rapid convergence toward the human baseline of 89.9% (blue horizontal line) between 2020 and 2025.*
+*Figure 1.4: The MMLU (Massive Multitask Language Understanding) benchmark tracks AI performance across academic subjects. Multiple model families—GPT, Claude, Gemini, Llama, and others—show rapid convergence toward the human baseline of 89.9% (blue horizontal line) between 2020 and 2025.*
 
 ## The METR 7-Month Doubling Rate
 
@@ -82,13 +89,13 @@ Research from METR (Model Evaluation and Threat Research) has documented a strik
 
 ![AI Task Completion Time Horizons](../images/color/metr-task-completion-doubling-rate-log.jpg)
 
-*Figure 1.3: Logarithmic chart showing AI task completion time horizons from 2019 to 2025. The exponential growth from seconds to hours demonstrates the consistent 7-month doubling rate.*
+*Figure 1.5: Logarithmic chart showing AI task completion time horizons from 2019 to 2025. The exponential growth from seconds to hours demonstrates the consistent 7-month doubling rate.*
 
 The metric METR uses is "task horizon"—the duration of tasks that AI systems can reliably complete. In February 2019, GPT-2 could handle tasks lasting about 2.4 minutes. By March 2023, GPT-4 extended this to approximately 5.4 hours. Projections suggest that by late 2026, AI systems may reliably complete tasks spanning weeks.
 
 ![Projecting AI Task Completion to 2030](../images/color/metr-projection-time-vs-horizon-to-2030.png)
 
-*Figure 1.4: Extending the METR trend line to 2030 suggests AI systems may eventually handle tasks spanning nearly two years. Green dots represent frontier models; gray dots represent non-frontier models.*
+*Figure 1.6: Extending the METR trend line to 2030 suggests AI systems may eventually handle tasks spanning nearly two years. Green dots represent frontier models; gray dots represent non-frontier models.*
 
 For intelligent textbook authors, this trajectory has practical implications:
 
@@ -150,7 +157,7 @@ The creation of MicroSims has been transformed by AI. Previously, building even 
 
 The key insight is that MicroSims should be simple. A simulation with three sliders and a single visualization is far more effective than a complex environment with dozens of controls. This simplicity makes AI generation practical—the prompts remain focused, and the generated code is manageable.
 
-## Embedding MicroSims
+## Embedding MicroSims in Web Pages
 
 MicroSims are typically embedded in textbook pages using HTML iframes. This approach provides several benefits:
 
@@ -160,29 +167,155 @@ MicroSims are typically embedded in textbook pages using HTML iframes. This appr
 
 The standard pattern places each MicroSim in its own directory with an HTML file for standalone use and a markdown file for documentation.
 
-## The Role of a Learning Graph
+## The Iframe Superpower
+
+The HTML iframe element deserves special attention. It creates an independent browsing context—essentially a window within a window—that has proven remarkably powerful for educational content.
+
+Key benefits of iframe-based embedding:
+
+**Complete Isolation**: JavaScript variables, CSS styles, and DOM elements in the iframe cannot conflict with the parent page. A MicroSim can use any library versions without worrying about the host page's dependencies.
+
+**Security Boundaries**: Iframes provide controlled sandboxing. The parent page can restrict what the embedded content can do, protecting both the learner and the content.
+
+**Cross-Origin Capability**: MicroSims hosted on one domain can be embedded in textbooks hosted elsewhere. This enables sharing and reuse across projects.
+
+**Responsive Embedding**: Modern CSS makes it straightforward to create responsive iframe containers that adapt to different screen sizes while maintaining appropriate aspect ratios.
+
+The iframe has been called "the superpower of the web" for good reason—it enables composition of independent applications in ways that no other technology matches.
+
+## The Learning Graph
 
 A learning graph is a directed acyclic graph (DAG) representing concept dependencies. Each node represents a concept; each edge indicates that one concept depends on understanding another.
 
 ![Sample Learning Graph: Arithmetic](../images/color/sample-learning-graph-arithmetic.jpg)
 
-*Figure 1.5: A simple learning graph for arithmetic concepts. The orange "Numbers" node is the foundation, with brown operation nodes (Addition, Subtraction, Multiplication, Division) depending on it. The blue "Arithmetic" node connects all operations, showing how concepts build upon each other.*
+*Figure 1.7: A simple learning graph for arithmetic concepts. The orange "Numbers" node is the foundation, with brown operation nodes (Addition, Subtraction, Multiplication, Division) depending on it. The blue "Arithmetic" node connects all operations, showing how concepts build upon each other.*
 
-Learning graphs serve multiple purposes:
+The learning graph is not merely a visualization tool—it is the core data structure that supports the entire intelligent textbook.
 
-**Content Sequencing**: The graph ensures concepts are presented in valid order—prerequisites always come before dependent concepts.
 
-**Personalization**: Students who have already mastered certain concepts can skip to more advanced material along appropriate graph paths.
+![Complex Learning Graph: Circuits](../images/color/learning-graph-complex-circuits.jpg)
+<!-- TODO: Put Figure description here-->
+*Figure 1.8: A screen image of a learning graph for a circuits course.  This graph contains 300 concepts, 627 edges.
+The user interface created using the vis-network.js library supports search and category filters based on a
+taxonomy.  Each node is a concept that is colored based on the taxonomy class it belongs to.  The example above includes categories for Foundation Concepts, Circuit Analysis, Passive Components, Transient Analysis, AC Fundamentals, AC Power, Frequency Response, Filters, Operational Amplifiers and Signal Analysis.*
+
+The learning graph above is for a circuits course typically taught in a electrical engineering curriculum.  The graph has 300 concepts and 627 edges.  Each edge is a hint about the order that concepts should be presented when generating chapter content.
+
+## Separating Concepts from Content
+
+A crucial insight in intelligent textbook design is the separation of *concepts* from *content*. Concepts are the atomic units of knowledge—discrete ideas that can be learned, assessed, and connected. Content is the material (text, images, simulations) that teaches those concepts.
+
+This separation enables:
+
+- **Multiple representations**: A single concept can be taught through text, video, simulation, or examples
+- **Adaptive selection**: Different content can be presented based on learner needs
+- **Reuse**: Content modules can serve multiple textbooks covering overlapping concepts
+- **Assessment alignment**: Questions map to concepts, not to specific content pages
+
+The concept list becomes the stable foundation; content can evolve and improve while the conceptual structure remains consistent.
+
+## The Learning Graph as the Core Data Structure
+
+The learning graph serves as the backbone of the intelligent textbook architecture:
+
+**Content Sequencing**: The graph ensures concepts are presented in valid order—prerequisites always come before dependent concepts. A topological sort of the graph produces a valid teaching sequence.
+
+**Chapter Organization**: Clusters of related concepts naturally form chapters. Graph analysis reveals these clusters and suggests logical groupings.
+
+**Prerequisite Checking**: Before presenting advanced content, the system can verify that prerequisite concepts have been covered or mastered.
 
 **Gap Identification**: When students struggle, the graph helps identify which prerequisite concepts may need review.
 
 **Curriculum Design**: The graph structure reveals the overall shape of a domain—which concepts are foundational, which are terminal, and which form bridges between topic clusters.
 
-Chapter 2 describes how to generate and validate learning graphs for your content.
+## Generating Book Chapter Structure
 
-## Ground Truth
+The learning graph directly informs chapter structure. Concepts cluster into natural groupings based on:
 
-For an intelligent textbook to be trustworthy, it must be grounded in accurate information. This is particularly important when AI is involved in content generation, as language models can produce plausible-sounding but incorrect statements.
+- **Dependency proximity**: Concepts that share prerequisites or are prerequisites for the same advanced concepts
+- **Topical similarity**: Concepts dealing with related subject matter
+- **Pedagogical flow**: Natural teaching sequences that build understanding progressively
+
+AI can analyze a learning graph and propose chapter structures that respect dependencies while grouping related concepts. The author reviews and adjusts these suggestions, but the graph provides a principled starting point.
+
+## The Graph as Ground Truth for Content Generation
+
+When AI generates content, the learning graph serves as ground truth:
+
+**Concept Coverage**: Generated chapters must cover their assigned concepts—the graph defines what belongs in each chapter.
+
+**Prerequisite References**: Content can reference prerequisites because the graph declares them explicitly.
+
+**Forward References**: The graph identifies which advanced concepts build on current material, enabling appropriate foreshadowing.
+
+**Consistency Checking**: Generated content can be validated against the graph—are all concepts covered? Are prerequisites explained before use?
+
+The graph transforms content generation from open-ended writing to constrained generation with verifiable properties.
+
+## Learning Paths
+
+A learning path is a valid traversal through the concept graph. Multiple paths may exist from foundational concepts to learning goals, and different paths may suit different learners.
+
+Consider a graph where both "Algebra" and "Geometry" lead to "Trigonometry." A student stronger in visual reasoning might benefit from the Geometry path; a student comfortable with symbolic manipulation might prefer the Algebra path. Both are valid; the graph enables the choice.
+
+Adaptive textbooks (Level 3 and above) can recommend learning paths based on:
+
+- Assessed prior knowledge
+- Learning style preferences
+- Time constraints
+- Learning goals
+
+## The Student Graph
+
+While the learning graph represents domain knowledge, the *student graph* represents an individual learner's knowledge state. Each concept in the student graph carries:
+
+- **Mastery level**: Unknown, learning, or mastered
+- **Assessment history**: When and how the concept was evaluated
+- **Time spent**: Engagement metrics for related content
+
+The student graph is a personalized overlay on the domain graph. It enables the textbook to understand what each learner knows and what they're ready to learn next.
+
+## Finding the Zone of Proximal Development
+[](../images/color/learning-graph-zone-of-poximal-development.jpg)
+*Figure 1.8 - using a knowledge space and assessments to quickly find a the concepts that the student is ready to learn.  This is a simple graph traversal algorithm and no expensive LLMs are required.*
+
+Vygotsky's "zone of proximal development" describes knowledge just beyond what a learner can access independently but within reach with appropriate support. The learning graph operationalizes this concept.
+
+A concept is in the zone of proximal learning when:
+
+- All its prerequisites are mastered (or nearly mastered)
+- The concept itself is not yet mastered
+- The concept leads toward the learner's goals
+
+Graph traversal algorithms can efficiently identify concepts in this zone—the "frontier" of a student's expanding knowledge.
+
+## Recommending Concepts
+
+With the student graph and learning graph aligned, the system can recommend what to learn next:
+
+1. Identify the frontier: concepts whose prerequisites are mastered
+2. Rank by relevance: how directly does this concept lead to learning goals?
+3. Consider variety: balance between deepening and broadening
+4. Account for difficulty: don't overwhelm with too many challenging concepts simultaneously
+
+This recommendation is deterministic—no LLM required—making it suitable for Level 3 adaptive textbooks.
+
+## Recommending Content
+
+Once a concept is selected, the system recommends specific content:
+
+- Primary explanation (text with diagrams)
+- MicroSim for hands-on exploration
+- Worked examples
+- Practice problems
+- Alternative explanations if the primary doesn't succeed
+
+Content recommendation can consider the learner's demonstrated preferences—some students learn better from examples first, others from principles first.
+
+## Avoiding Hallucination
+
+For an intelligent textbook to be trustworthy, it must be grounded in accurate information. This is particularly important when AI is involved in content generation, as language models can produce plausible-sounding but incorrect statements—a phenomenon called hallucination.
 
 Ground truth for intelligent textbooks comes from:
 
@@ -191,9 +324,7 @@ Ground truth for intelligent textbooks comes from:
 - **Explicit citations**: Clear attribution enabling readers to verify claims
 - **Worked examples**: Demonstrations that can be independently checked
 
-## Avoiding Hallucination
-
-Large language models sometimes generate content that sounds authoritative but is factually incorrect—a phenomenon called hallucination. When using AI to assist with textbook creation, several practices help minimize this risk:
+Large language models sometimes generate content that sounds authoritative but is factually incorrect. When using AI to assist with textbook creation, several practices help minimize this risk:
 
 **Review all generated content**: AI output should be treated as a draft requiring verification, not final copy.
 
@@ -228,7 +359,7 @@ The CC BY-NC-SA license (Attribution-NonCommercial-ShareAlike) is popular for ed
 
 This license allows educators to freely use, adapt, and share materials while preventing unauthorized commercial exploitation.
 
-## Licensing Books
+## Licensing Books and MicroSims
 
 When creating an intelligent textbook, consider licensing carefully:
 
@@ -236,7 +367,10 @@ When creating an intelligent textbook, consider licensing carefully:
 - **Code license**: MIT or Apache for any software components
 - **Media licenses**: Ensure all images, videos, and other media have appropriate permissions
 
-Clear licensing removes ambiguity and enables the widest appropriate use of your materials.
+Clear licensing removes ambiguity and enables the widest appropriate use of your materials.  Our book on MicroSim search includes a MicroSim that guides you through the process of selecting the correct category of license based on how you answer specific questions.
+
+![License Selector MicroSim](../images/color/license-selector-microsim.jpg)
+*Figure 1.9
 
 ## Observing Copyright and Using External Images
 

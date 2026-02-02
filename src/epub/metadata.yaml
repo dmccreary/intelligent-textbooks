@@ -5,7 +5,8 @@ title: Building Intelligent Textbooks with AI
 author: Dan McCreary
 language: en-US
 rights: © 2026 Dan McCreary. All rights reserved.
-publisher: Self-published via Amazon KDP
+publisher: Kelly-McCreary & Associates
+date: 2026-01-15
 description: |
   A practical guide to creating intelligent textbooks using AI tools.
   Learn how to build interactive educational content with MicroSims,
@@ -15,7 +16,7 @@ description: |
 cover-image: print-book/images/color/cover-aws-epub-portrait.png
 
 # Optional: Add subject categories for Amazon
-# subject:
-#   - Education
-#   - Artificial Intelligence
-#   - Educational Technology
+subject:
+   - Education
+   - Artificial Intelligence
+   - Educational Technology
