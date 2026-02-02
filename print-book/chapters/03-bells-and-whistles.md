@@ -309,6 +309,64 @@ Both can be generated from AI prompts that describe the subject matter and desir
 
 The MkDocs Material theme displays the logo in the navigation header and uses the favicon for browser tabs.
 
+### Course Mascots
+
+Beyond logos, some intelligent textbooks feature mascot characters that guide students through the material. A well-designed mascot:
+
+- Provides a relatable perspective on abstract concepts
+- Creates narrative continuity across chapters
+- Offers opportunities for engaging callouts and asides
+- Makes the textbook more memorable and approachable
+
+![Course Mascot Features Checklist](../images/color/feature-list-content-mascot.jpg)
+
+*Figure 3.8: Features for implementing a course mascot. The example shows Gyra, a self-balancing robot mascot. A complete mascot system includes character specification, logo images, narrative "moments" where the character speaks, and custom CSS for styled callout boxes.*
+
+![Course Mascot Example: Meet Gyra](../images/color/feature-list-course-mascot-example.jpg)
+
+*Figure 3.9: An example mascot introduction page. Gyra is a two-wheel self-balancing robot who "lives at the edge of stability"—she wobbles, overcorrects, and tips over not because she's broken, but because physics is unforgiving. Students take on the role of Gyra's control engineer, learning concepts that help her react faster and recover more gracefully.*
+
+## Generating a Features Checklist
+
+As intelligent textbooks grow in sophistication, tracking which features are implemented becomes valuable. A features checklist:
+
+- Documents the current state of the textbook
+- Identifies gaps requiring attention
+- Estimates effort for remaining work
+- Communicates progress to stakeholders
+
+### Basic Features
+
+These features come by default with MkDocs Material or require minimal configuration:
+
+![Basic Features Checklist](../images/color/feature-list-basic.jpg)
+
+*Figure 3.10: Basic features that require Trivial effort. Navigation, search, table of contents, and branding elements are built into MkDocs Material and need only configuration in mkdocs.yml.*
+
+### Intermediate Features
+
+Features requiring plugins, extensions, or moderate configuration:
+
+![Intermediate Features Checklist](../images/color/feature-list-intermediate.jpg)
+
+*Figure 3.11: Intermediate features requiring plugins or Markdown extensions. GLightBox enables image zoom; KaTeX or MathJax render equations; admonitions create callout boxes. Most require Low effort—adding a plugin and a few lines of configuration.*
+
+### Site-Wide Resources
+
+Pages and files that support the entire textbook:
+
+![Site-Wide Resources Checklist](../images/color/feature-list-content.jpg)
+
+*Figure 3.12: Site-wide resources like Glossary (300 terms with ISO 11179 compliant definitions), FAQ pages, references, custom styling, and analytics. These require Medium effort as they involve AI-assisted content generation and review.*
+
+### Publishing Features
+
+Features that help the textbook look professional when shared:
+
+![Publishing Features Checklist](../images/color/feature-list-publishing.jpg)
+
+*Figure 3.13: Publishing features for professional appearance. Social media preview cards show attractive thumbnails when links are shared. The social override plugin enables custom preview images for specific pages.*
+
 ---
 
-With these supplementary elements in place—glossary, FAQs, quizzes, equations, admonitions, and branding—the intelligent textbook is well-rounded and professional. Chapter 4 turns to the heart of interactivity: designing and implementing effective MicroSims that bring concepts to life.
+With these supplementary elements in place—glossary, FAQs, quizzes, equations, admonitions, branding, and a comprehensive features checklist—the intelligent textbook is well-rounded and professional. Chapter 4 turns to the heart of interactivity: designing and implementing effective MicroSims that bring concepts to life.

@@ -81,3 +81,24 @@ Added 14 new images to the print book chapters, increasing the total image count
 
 - `print-book/cover-prompt.md` - Image generation prompt for cover
 - `logs/print-book-image-additions.md` - This log file
+
+## Bug Fix: Cover Image Path
+
+**Issue:** Pandoc failed with error:
+```
+pandoc: Uncaught exception ghc-internal:GHC.Internal.IO.Exception.IOException:
+color/cover-aws-epub-portrait.png: openBinaryFile: does not exist (No such file or directory)
+```
+
+**Cause:** The `cover-image` path in `metadata.yaml` was relative to the resource-path (`print-book/images/`), but pandoc resolves the cover-image path from the working directory (project root), not from the resource-path.
+
+**Fix:** Changed the cover-image path in `src/epub/metadata.yaml` from:
+```yaml
+cover-image: color/cover-aws-epub-portrait.png
+```
+to:
+```yaml
+cover-image: print-book/images/color/cover-aws-epub-portrait.png
+```
+
+This makes the path relative to the project root where the build script runs.

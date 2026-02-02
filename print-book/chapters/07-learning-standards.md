@@ -166,6 +166,10 @@ With proper metadata, MicroSims become searchable assets:
 
 A central MicroSim repository could serve multiple intelligent textbooks, reducing duplication and increasing quality.
 
+![MicroSim Faceted Search](../images/color/microsim-faceted-search-screen-image.jpg)
+
+*Figure 7.2: A faceted search interface for discovering MicroSims. The left sidebar provides filters by subject area, Bloom's Taxonomy level, and interaction type. The main area displays matching simulations with thumbnails and descriptions. This interface demonstrates how proper metadata enables discoverable educational resources.*
+
 ## Intelligent Textbook Standards
 
 Beyond individual specifications, the intelligent textbook ecosystem needs broader standards:

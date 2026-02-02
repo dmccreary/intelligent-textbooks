@@ -136,6 +136,10 @@ AI assists by suggesting likely dependencies based on domain knowledge, but huma
 
 The dependency graph makes concept relationships explicit and machine-readable. Each concept connects to concepts it depends on, forming a DAG that enables:
 
+![Learning Graph System Features Checklist](../images/color/feature-list-learning-graph.jpg)
+
+*Figure 2.9: A checklist of learning graph system features. Building a complete learning graph involves course description, concept enumeration, dependency mapping, and visualization tools. Most components require Medium to High effort but become foundational assets used throughout the textbook.*
+
 - Validation that content respects prerequisites
 - Adaptive learning paths that skip mastered concepts
 - Identification of foundational concepts (many dependents) vs. terminal concepts (no dependents)
@@ -250,7 +254,13 @@ When violations occur, either move concepts to respect dependencies or reconside
 
 ## Generating Chapter Content
 
-With structure defined, generate chapter content using AI assistance. Effective prompts include:
+With structure defined, generate chapter content using AI assistance.
+
+![Content Generation Features Checklist](../images/color/feature-list-content-generation.jpg)
+
+*Figure 2.10: Content generation features for intelligent textbooks. Chapter content requires Very High effort even with AI assistance due to review and refinement needs. Additional features like graphic novels and AI-generated infographics may require paid licensing for image generation tools.*
+
+Effective prompts include:
 
 - The chapter outline with concept list
 - Learning objectives for the chapter
