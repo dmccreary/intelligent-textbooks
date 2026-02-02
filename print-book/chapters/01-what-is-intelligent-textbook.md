@@ -277,7 +277,7 @@ While the learning graph represents domain knowledge, the *student graph* repres
 The student graph is a personalized overlay on the domain graph. It enables the textbook to understand what each learner knows and what they're ready to learn next.
 
 ## Finding the Zone of Proximal Development
-[](../images/color/learning-graph-zone-of-poximal-development.jpg)
+![Zone of Proximal Learning](../images/color/learning-graph-zone-of-proximal-development.jpg)
 *Figure 1.8 - using a knowledge space and assessments to quickly find a the concepts that the student is ready to learn.  This is a simple graph traversal algorithm and no expensive LLMs are required.*
 
 Vygotsky's "zone of proximal development" describes knowledge just beyond what a learner can access independently but within reach with appropriate support. The learning graph operationalizes this concept.
