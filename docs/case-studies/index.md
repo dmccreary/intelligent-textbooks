@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 64 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 65 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -192,6 +192,14 @@ frequently.
     A collection of resources for learning about Fast Fourier Transforms and benchmarking techniques across platforms.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking)
+
+- **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
+
+    ![GED Science Prep](./img/ged-science-prep.jpg)
+
+    Intelligent textbook for GED Science test preparation covering Life Science, Physical Science, and Earth & Space Science. Aligned with the official GED Science Assessment Targets and eight Science Practices.
+
+    [:octicons-mark-github-16: Repository](https://github.com/camgross/GED-Science-prep) · 27 Files · 12K Words · 7 MicroSims
 
 - **[Fluid Power Systems](https://dmccreary.github.io/fluid-power-systems/)**
 
