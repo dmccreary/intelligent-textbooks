@@ -146,6 +146,10 @@ With optional caption and sizing (pandoc extensions):
 - Notes, quotes and callouts
 - Generating a cover from the course description
 - Generating logos and favicons
+- Getting feedback
+- Simple sentiment feedback
+- Complex feedback forms
+- Generating a Features Checklist
 
 ### Chapter 4: MicroSims
 - Instructional design
@@ -193,26 +197,49 @@ With optional caption and sizing (pandoc extensions):
 - Analyzing Event Values
 
 ### Chapter 7: Learning Standards
+- Why relational databases fail
+- Modeling knowledge in a graph
+- Models of courses
+- Models of student knowledge
+- Protecting student records
 - xAPI
 - Learning Record Stores
 - Skills
-- MicroSim metadata
+- MicroSim metadata standard
+- Example of MicroSim metadata
+- The MicroSim metadata schema
+- Dublin Core
+- Semantic metadata
+- Pedagogical Metadata
+- Question 1: what is the microsim about
+- Question 2: what is the learning objective
+- Question 3: how was was the microsim created
 - MicroSim faceted search
+- Metadata quality reports
+- Generating embeddings of metadata
 - Intelligent textbook standards
 
 ### Chapter 8: Level 4 and 5 Textbooks
 - The intelligent book chatbot
-- Embeddings
-- Vector stores
-- Nearness measures
-- Similarity
+- Embeddings for FAQ
+- Matching questions to FAQ
+- Vector stores for storing question embeddings
+- Nearness measures for questions
+- Similarity for recommendations
+- Similar subject
+- Similar learning objectives
+- Similar technical implementation
+- Injecting similar microsims into the context window
 - Cost of LLMs
 - Preventing misuse
 - Classifying questions
 - Starting with FAQs
 - Monitoring the chat history
 - Logging chat events
-- Getting feedback
+- Issues and bug reporting feedback
+- Using Github Kanban
+- Using AI to write stories
+- Using AI to write acceptance tests
 - Using feedback for improvement
 - Using reinforcement learning
 
@@ -224,11 +251,23 @@ With optional caption and sizing (pandoc extensions):
 - Case study: Claude Code Skills
 - Skills as a standard
 - Book Generation Skills
+- The /generate-learning-graph skill
+- The /book-installer skill
+- The /quiz-generator skill
+- The /faq-generator skill
+- The /references-generator skill
 - MicroSim Generation Skills
+- The /microsim-generator skill
+- The /microsim-util skill and standardization
+- Limits to Concurrent Skill
 - Search and Reuse
 - Embeddings and Ad-Hoc MicroSims
 
-### Chapter 10: The Future
+### Chapter 10: The Future of Intelligent Textbooks
+- Capabilities today
+- Key limitations
+- The layout challenge
+- Limits to 3D MicroSims
 - AI growth trends
 - Tracking capabilities
 - The METR studies

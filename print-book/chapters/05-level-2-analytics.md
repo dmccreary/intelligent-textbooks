@@ -29,6 +29,10 @@ extra:
 
 MkDocs Material automatically includes the tracking code on all pages.
 
+![Google Analytics Dashboard](../images/color/google-analytics-active-users-events-screen-image.jpg)
+
+*Figure 5.2: Google Analytics 4 dashboard showing real-time usage data for an intelligent textbook. The interface displays active users, event counts, page views, and engagement metrics that help authors understand how students interact with content.*
+
 ### Privacy Considerations
 
 Google Analytics collects usage data that, while anonymized, raises privacy considerations:

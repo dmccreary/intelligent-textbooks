@@ -66,6 +66,10 @@ Controls are the interface between learner and simulation. Well-designed control
 
 Different concepts call for different simulation types. The following categories cover most educational needs.
 
+![Interactive Learning Features Checklist](../images/color/feature-list-interactive.jpg)
+
+*Figure 4.3: Interactive learning features for intelligent textbooks. MicroSims require High effort to create but provide hands-on learning that static content cannot match. A MicroSim index catalog helps students discover available simulations, while per-chapter quizzes assess understanding.*
+
 ## Infographics and Infoboxes
 
 Static visualizations become interactive when elements respond to user interaction:

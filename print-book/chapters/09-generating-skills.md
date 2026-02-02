@@ -13,6 +13,10 @@ A skill is a reusable capability that:
 
 Skills differ from one-off prompts in their structure and reusability. Rather than crafting a new prompt each time, invoke a skill that encapsulates best practices.
 
+![Effort Levels: Manual vs GenAI vs Skills](../images/color/feature-effor-levels-manual-genai-skills.jpg)
+
+*Figure 9.3: Comparison of effort levels across three approaches. Trivial tasks (config changes) take minutes manually but seconds with GenAI. High-effort tasks (significant content generation) drop from days to hours with GenAI, and to minutes with specialized skills. The multiplicative time savings justify the investment in skill development.*
+
 ### Skill Components
 
 A well-defined skill includes:
@@ -96,6 +100,10 @@ A full textbook won't fit in context. Instead:
 4. Reference concept list but not full dependency graph
 
 This selective context enables high-quality generation within limits.
+
+![Managing the Context Window](../images/color/skill-context-window.jpg)
+
+*Figure 9.2: Diagram showing how skills selectively include relevant information within the limited context window. Only the necessary elements—course description, chapter outline, relevant glossary terms—are included, while extraneous content is excluded to stay within token limits.*
 
 ## Case Study: Claude Code Skills
 

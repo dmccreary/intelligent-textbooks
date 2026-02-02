@@ -57,6 +57,10 @@ def get_embedding(text):
 
 Process all textbook content to create an embedding for each chunk.
 
+![Embeddings Similarity Map](../images/color/microsims-2d-embeddings-map.jpg)
+
+*Figure 8.2: A 2D projection of MicroSim embeddings showing semantic similarity. Each point represents a MicroSim, with similar simulations clustered together. This visualization demonstrates how embeddings capture meaning—simulations about related concepts appear near each other in the vector space.*
+
 ## Vector Stores
 
 Vector stores are databases optimized for similarity search over embeddings.
@@ -238,6 +242,10 @@ Explicit feedback improves the chatbot:
 **Follow-up Questions**: Requests for clarification indicate confusion.
 
 Make feedback easy to provide; most users won't make effort.
+
+![Giscus Feedback Integration](../images/color/mkdocs-giscus-feedback-screen-image.jpg)
+
+*Figure 8.3: Giscus comment system integrated into an intelligent textbook page. This GitHub-based discussion system allows readers to ask questions and provide feedback directly on textbook pages, creating a community-driven improvement loop.*
 
 ## Using Feedback for Improvement
 
