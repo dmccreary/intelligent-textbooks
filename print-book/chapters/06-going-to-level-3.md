@@ -20,6 +20,10 @@ True personalization requires knowing where each learner stands, which means tra
 
 Each learner has a personal learning graph—a copy of the course's concept dependency graph annotated with their individual mastery state.
 
+![Adaptive Assessment: Learning Graph Update](../images/color/learning-graph-colored-by-mastered-ready-to-learn.jpg)
+
+*Figure 6.1: An interactive learning graph showing personal mastery state for algebra concepts. Nodes are color-coded: Gray (Unknown), Green (Mastered), Orange (Ready to Learn), Red (Incorrect), and Purple (Learning Goal). This visualization shows 5 of 17 concepts mastered, with clear indication of which concepts the learner should tackle next.*
+
 For each concept, track:
 
 **Mastery Level**: Unknown, In Progress, or Mastered
@@ -35,6 +39,10 @@ This personal graph enables adaptive recommendations. A learner who has demonstr
 ## Graph Traversal
 
 Navigating the learning graph requires algorithms that respect dependency constraints while optimizing learning efficiency.
+
+![Learning Graph: Foundation to Goal Progression](../images/color/learning-graph-foundation-to-goal.jpg)
+
+*Figure 6.2: Abstract learning graph showing concept progression from foundations to goals. Blue nodes represent foundation concepts (Level 1), yellow nodes are intermediate concepts (Level 2), coral nodes are advanced concepts (Level 3), and green nodes are learning goals. Numbers in parentheses indicate concept counts at each level. Arrows show dependencies flowing left to right.*
 
 ### Topological Sort
 
@@ -225,7 +233,11 @@ Statistical models can predict mastery from event patterns more accurately than 
 
 ## Privacy Considerations
 
-Level 3 personalization requires individual tracking, crossing significant privacy thresholds:
+Level 3 personalization requires individual tracking, crossing significant privacy thresholds.
+
+![The Privacy Threshold: Level 3 Inflection Point](../images/color/l2-l3-privacy-threshold-vertical-bar-chart.png)
+
+*Figure 6.3: Data collection intensity across the five textbook levels. Level 1 (Static) collects no data. Level 2 (Interactive) collects minimal anonymous analytics. At Level 3 and beyond, data collection requirements escalate dramatically, crossing the "Privacy Threshold" marked by the vertical dashed line. This threshold represents where regulatory compliance (FERPA, GDPR) becomes mandatory.*
 
 **Data Minimization**: Collect only what's necessary for personalization.
 

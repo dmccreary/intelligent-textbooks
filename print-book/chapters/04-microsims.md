@@ -8,6 +8,12 @@ Effective MicroSims don't just display information; they are carefully designed 
 
 ### Design Principles
 
+MicroSims succeed when they balance three essential qualities:
+
+![MicroSim Design Philosophy: Three Principles](../images/color/microsim-venn-simplicity-acessibility-ai-generation.png)
+
+*Figure 4.1: The three principles of MicroSim design. Simplicity keeps interactions focused and learnable. Accessibility ensures all students can engage with the content. AI Generation enables rapid creation and iteration. MicroSims sit at the intersection of all three.*
+
 **Single Concept Focus**: Each MicroSim should illustrate one specific concept. Attempting to cover multiple concepts in a single simulation creates confusion and dilutes learning.
 
 **Clear Learning Objective**: Before building, articulate exactly what the student should understand after interacting with the MicroSim.
@@ -15,6 +21,14 @@ Effective MicroSims don't just display information; they are carefully designed 
 **Appropriate Complexity**: The simulation should be complex enough to be meaningful but simple enough to be understood. When in doubt, simplify.
 
 **Immediate Feedback**: Every input change should produce visible output change without delay. Laggy simulations frustrate learners.
+
+### Standard Layout
+
+Most MicroSims follow a two-region layout that separates visualization from controls:
+
+![MicroSim Layout: Drawing and Control Regions](../images/color/microsim-layout-drawing-control-regions.png)
+
+*Figure 4.2: The standard MicroSim layout. The upper drawing region (light blue background, blue border) displays the visualization with fixed height. The lower control region contains sliders and buttons with responsive width. This separation keeps the interface predictable and accessible.*
 
 ## How Humans Learn
 
@@ -200,6 +214,14 @@ Each level requires progressively more sophisticated simulation design.
 
 With design principles established, implementation follows. The p5.js library provides an excellent foundation for educational simulations.
 
+### Technology Stack
+
+MicroSims build on standard web technologies, with optional integration to learning analytics systems:
+
+![MicroSim Technology Stack Architecture](../images/color/microsim-architecture.png)
+
+*Figure 4.3: The MicroSim technology stack. At the top, the MicroSim connects through xAPI to a Learner Record Store for analytics. The MicroSim itself runs on JavaScript libraries (p5.js, vis.js, Chart.js), which build on HTML5/Canvas, which runs in standard web browsers, ultimately leveraging WebGL/WebGPU for hardware-accelerated graphics.*
+
 ### p5.js Overview
 
 p5.js is a JavaScript library for creative coding. Key characteristics:
@@ -274,6 +296,152 @@ Embed MicroSims using iframes:
 ```
 
 Iframes provide isolation, preventing style conflicts between the simulation and surrounding content.
+
+---
+
+## The Diversity of MicroSims
+
+One of the most remarkable aspects of MicroSims is their versatility. The same fundamental approach—focused interactivity with immediate feedback—applies across radically different domains and educational objectives. The examples below illustrate this diversity, ranging from simple physics animations to complex systems thinking visualizations.
+
+### Simple Animations
+
+The simplest MicroSims animate a single concept with minimal controls:
+
+![MicroSim Example: Bouncing Ball Simulation](../images/color/bouncing-ball-simulation-simple-microsim-p5.jpg)
+
+*Figure 4.4: A bouncing ball simulation—perhaps the simplest meaningful MicroSim. A Start button and Speed slider provide the only controls. Despite its simplicity, this MicroSim demonstrates fundamental concepts: animation, state, and parameter adjustment.*
+
+### Physics Simulations
+
+Physics concepts become tangible when students can manipulate variables:
+
+![MicroSim Example: Projectile Motion](../images/color/microsim-screen-image-projectile-motion.jpg)
+
+*Figure 4.5: Projectile motion MicroSim with adjustable angle and power. Multiple trajectory traces show how changing parameters affects the parabolic path. Students can predict outcomes before firing, building intuition about kinematics.*
+
+![MicroSim Example: Temperature and Pressure](../images/color/temperature-and-pressure-microsim-screen-image.jpg)
+
+*Figure 4.6: A gas laws simulation showing the relationship between temperature and pressure. Adjusting the temperature slider changes molecular motion and pressure readings, demonstrating the ideal gas law in action.*
+
+![MicroSim Example: Sine Wave](../images/color/sine-wave-microsim-3-sliders-screen-image.jpg)
+
+*Figure 4.7: A sine wave explorer with three sliders controlling amplitude, frequency, and phase. Students see how each parameter affects the wave shape, building intuition for trigonometric functions and wave physics.*
+
+### Geometry and Mathematics
+
+Abstract mathematical relationships become concrete through visualization:
+
+![MicroSim Example: Pythagorean Theorem](../images/color/pythagorian-theorum-microsim-screen-image.jpg)
+
+*Figure 4.6: The Pythagorean theorem visualized with colored squares on each side of a right triangle. As students adjust sides a and b, they watch c² equal a² + b² in real-time. The abstract formula becomes a visible, manipulable relationship.*
+
+![MicroSim Example: Least Squares Regression](../images/color/least-squares-microsim-screen-image.jpg)
+
+*Figure 4.7: A least squares regression MicroSim where colored squares visualize the residuals being minimized. Students can manually adjust slope and intercept to understand why the regression line minimizes total squared error.*
+
+### Algebra and Expression Analysis
+
+Even symbolic mathematics benefits from interactive exploration:
+
+![MicroSim Example: Expression Parts Explorer](../images/color/algebra-expression-parts-explorer.jpg)
+
+*Figure 4.8: An algebra expression explorer that color-codes terms, coefficients, variables, and constants. Hovering over parts reveals their classification. Quiz mode lets students test their understanding of expression structure.*
+
+### Fractals and Mathematical Art
+
+MicroSims can reveal the beauty in mathematical systems:
+
+![MicroSim Example: Barnsley's Fern Fractal](../images/color/barnsleys-fern-microsim-screen-image.jpg)
+
+*Figure 4.9: Barnsley's Fern generated through an iterated function system. Parameters control the fern's shape, demonstrating how simple rules produce complex, natural-looking patterns. Mathematical art meets computational thinking.*
+
+### Cellular Automata and Emergence
+
+Complex behavior emerging from simple rules:
+
+![MicroSim Example: Conway's Game of Life](../images/color/conways-game-of-life-microsim-screen-image.jpg)
+
+*Figure 4.10: Conway's Game of Life, a cellular automaton where cells live or die based on their neighbors. Students discover gliders, oscillators, and other emergent patterns from just four simple rules.*
+
+### Educational Games
+
+Gamification makes practice engaging:
+
+![MicroSim Example: Letter Matching Game](../images/color/letter-matching-game-microsim-screen-image.jpg)
+
+*Figure 4.11: A letter matching game for early literacy. Students match uppercase letters to their lowercase equivalents. Score tracking and adjustable difficulty make practice feel like play.*
+
+### Energy and Systems
+
+Physical systems with multiple interacting components:
+
+![MicroSim Example: Solar Cell Charging](../images/color/solar-cell-charging-microsim-screenshot.jpg)
+
+*Figure 4.12: A solar cell charging simulation showing energy flow from sun to battery to light bulb. Time-of-day, sunshine intensity, and power drain controls let students explore energy balance and renewable power concepts.*
+
+### Audio and Signal Processing
+
+Real-time data processing visualization:
+
+![MicroSim Example: FFT Microphone Visualizer](../images/color/sound-spectrum-visualization-with-p5-fft.jpg)
+
+*Figure 4.13: A real-time FFT visualizer analyzing microphone input. Students see sound decomposed into frequency components—a concrete demonstration of Fourier analysis with their own voice as input.*
+
+### Economics and Systems Thinking
+
+Complex social systems made visible:
+
+![MicroSim Example: Tragedy of the Commons](../images/color/tragedy-of-the-common-simulator-screen-image.jpg)
+
+*Figure 4.14: The tragedy of the commons simulated with grazing cattle. Green pasture degrades to gray and purple as individual cows (each acting rationally) collectively deplete the shared resource. Systems thinking concepts become viscerally clear.*
+
+![MicroSim Example: Causal Loop Diagram](../images/color/causal-loop-diagram-microsim-screen-image.jpg)
+
+*Figure 4.15: A causal loop diagram showing reinforcing feedback in intelligent textbook adoption. As more MicroSims become available, more teachers use them, driving more demand—a virtuous cycle visualization.*
+
+![MicroSim Example: Supply and Demand](../images/color/supply-and-demand-profit-microsim-screen-image.jpg)
+
+*Figure 4.16: A supply and demand MicroSim showing how price affects profit margins. Students can adjust supply curves, demand curves, and costs to see how market equilibrium changes—making abstract economic principles tangible.*
+
+### Financial Literacy
+
+Real-world applications with personal relevance:
+
+![MicroSim Example: College Loan Payback Calculator](../images/color/college-loan-payback-estimator-microsim-screen-image.jpg)
+
+*Figure 4.16: A student loan calculator that makes compound interest viscerally real. Students see how loan amount, interest rate, and monthly payment interact to determine payback time and total cost.*
+
+### Computing Education
+
+Making abstract computing concepts concrete:
+
+![MicroSim Example: Unix Command Syntax Guide](../images/color/unix-shell-command-explorer.jpg)
+
+*Figure 4.20: A Unix command syntax visualizer that color-codes commands, paths, options, and arguments. Students learn command structure patterns rather than memorizing individual commands.*
+
+![MicroSim Example: Recursion Tree](../images/color/simple-recursion-tree-depth-microsim-screen-image.jpg)
+
+*Figure 4.21: A recursion tree visualization showing how recursive function calls branch and resolve. Adjusting the depth parameter reveals how quickly recursive structures grow, making abstract computer science concepts visible.*
+
+### Geographic Data Visualization
+
+Maps that reveal patterns in data:
+
+![MicroSim Example: US State Quality of Life Index](../images/color/us-states-quality-of-life-map.jpg)
+
+*Figure 4.18: An interactive choropleth map showing quality of life metrics across US states. Hovering reveals detailed statistics. Students learn to read geographic data visualizations while exploring real social data.*
+
+### Historical Timelines
+
+Temporal data with interactive exploration:
+
+![MicroSim Example: Historical Timeline](../images/color/mccreary-family-heritage-timeline-screen-image.jpg)
+
+*Figure 4.19: An interactive timeline built with vis-timeline showing historical events filterable by category. Students can zoom, pan, and filter to explore relationships between concurrent events.*
+
+---
+
+This diversity demonstrates that MicroSims are not limited to STEM subjects or any particular domain. Any concept that benefits from interaction, visualization, or exploration can become a MicroSim. The consistent design principles—simplicity, immediate feedback, single concept focus—apply regardless of subject matter.
 
 ---
 

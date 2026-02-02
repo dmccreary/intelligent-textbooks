@@ -2,6 +2,10 @@
 
 Level 2 intelligent textbooks include usage analytics—the ability to understand how students interact with the content. This data enables continuous improvement and provides insight into learning patterns.
 
+![Levels of Interactivity](../images/color/levels-of-interactivity-level-chart.jpg)
+
+*Figure 5.1: A chart showing the spectrum of interactivity levels in educational content. From passive reading (Level 1) through interactive simulations (Level 2) to personalized adaptive systems (Levels 3-5). Level 2 analytics provide the foundation for understanding how students engage with interactive elements.*
+
 ## Google Analytics
 
 Google Analytics is the most widely used web analytics platform, and it integrates easily with MkDocs-based textbooks. The free tier provides sufficient capability for most educational projects.

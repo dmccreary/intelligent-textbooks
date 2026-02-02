@@ -241,7 +241,11 @@ Make feedback easy to provide; most users won't make effort.
 
 ## Using Feedback for Improvement
 
-Feedback drives improvement cycles:
+Feedback drives improvement cycles.
+
+![AI Flywheel for Continuous Improvement](../images/color/ai-flywheel-for-chatlog-analysis.jpg)
+
+*Figure 8.1: The AI improvement flywheel with four stages: Data (collected from user interactions) is used to create the Model, which produces Predictions (responses), which generate Feedback from users, providing more Data. This virtuous cycle drives continuous improvement in chatbot quality.*
 
 **Identify Weak Spots**: Questions with negative feedback or repeated rephrasing.
 
