@@ -12,6 +12,10 @@ The process divides into distinct phases:
 4. **Validation**: Ensure quality and pedagogical soundness
 5. **Publication**: Deploy and maintain the finished textbook
 
+![Intelligent Textbook Generation Workflow](../images/color/intelligent-book-generation-workflow.jpg)
+
+*Figure 2.1: The complete intelligent textbook generation workflow. Starting from the Course Description (top left), the process flows through concept enumeration, dependency analysis, and learning graph creation, then expands into chapter content, glossaries, and interactive elements.*
+
 Each phase builds on the previous, and AI assistance accelerates every step. The key is maintaining quality through systematic validation rather than blind trust in generated content.
 
 ## Generating HTML from Markdown
@@ -41,6 +45,10 @@ Key features include:
 
 A basic MkDocs project requires only a configuration file (`mkdocs.yml`) and a `docs/` directory containing Markdown files. The `mkdocs serve` command provides live preview during development, and `mkdocs build` generates the final HTML site.
 
+![MkDocs Material Intelligent Textbook Example](../images/color/mkdocs-basic-intelligent-textbook-geometry-screen-image.jpg)
+
+*Figure 2.7: A geometry intelligent textbook built with MkDocs Material. The left sidebar shows chapter navigation, the main content area displays text with an embedded MicroSim, and the right sidebar provides a table of contents for the current page.*
+
 ## The Course Description
 
 Every intelligent textbook begins with a course description—a structured document that defines the educational scope and objectives. A complete course description includes:
@@ -59,9 +67,23 @@ Every intelligent textbook begins with a course description—a structured docum
 
 The course description serves as the prompt for subsequent AI-assisted generation. A well-crafted description produces better learning graphs, more coherent chapters, and more relevant assessments.
 
+![Sample Course Description](../images/color/sample-course-description-screen-image-deep-learning.jpg)
+
+*Figure 2.8: A course description page for a deep learning course. The structured format includes title, audience, prerequisites, duration, learning outcomes, and topic outline—all elements that guide subsequent AI-assisted content generation.*
+
 ## Bloom's Taxonomy of Learning Objectives
 
-Learning objectives should be written using Bloom's Taxonomy, a framework that classifies cognitive skills from basic to advanced:
+Learning objectives should be written using Bloom's Taxonomy, a framework that classifies cognitive skills from basic to advanced.
+
+![Bloom's Taxonomy: RUAAEC Pyramid](../images/color/blooms-taxonomy-six-level-pyramid.jpg)
+
+*Figure 2.2: The six levels of Bloom's Taxonomy arranged as a pyramid. From the base: Remember, Understand, Apply, Analyze, Evaluate, Create. The mnemonic "RUAAEC" helps recall the sequence. Each level represents increasing cognitive complexity.*
+
+Each level has associated action verbs that help write measurable learning objectives:
+
+![Bloom's Taxonomy Action Verb Wheel](../images/color/bloom-wheel-with-verbs-by-level.jpg)
+
+*Figure 2.3: An interactive verb wheel showing action verbs organized by Bloom's Taxonomy level. Each colored section contains verbs appropriate for that cognitive level—from "recall" and "identify" at the Remember level to "design" and "invent" at the Create level. This reference helps authors write precise learning objectives.*
 
 **Level 1 - Remember**: Recall facts and basic concepts. Verbs: define, list, memorize, recall.
 
@@ -118,6 +140,16 @@ The dependency graph makes concept relationships explicit and machine-readable. 
 - Adaptive learning paths that skip mastered concepts
 - Identification of foundational concepts (many dependents) vs. terminal concepts (no dependents)
 - Cluster detection revealing natural topic groupings
+
+![Learning Graph: Economics Course](../images/color/learning-graph-sample-economics.jpg)
+
+*Figure 2.4: An interactive learning graph viewer showing approximately 200 economics concepts. The left sidebar provides category filters (Foundation Concepts, Microeconomics, Market Structures, etc.). The main area displays a force-directed graph with color-coded nodes representing different concept categories and arrows showing dependencies.*
+
+The learning graph concept applies across all domains. Here's an example from computer science:
+
+![Concept Dependencies Graph for Programming](../images/color/concept-dependencies-for-programming.jpg)
+
+*Figure 2.5: A programming concept dependency graph showing how foundational concepts (Variables, Data Types, Operators) flow through intermediate concepts (Expressions, Conditionals, Loops, Functions) to advanced topics (Algorithms, Data Structures, Recursion). Color coding distinguishes prerequisites (green), the selected concept (orange), and concepts that lead to others (pink). Solid lines indicate hard prerequisites; dashed lines indicate supporting relationships.*
 
 A simple CSV format captures dependencies:
 
@@ -278,6 +310,12 @@ Diagrams work well for:
 - Illustrating structure
 - Depicting processes
 - Visualizing data
+
+Choosing the right chart type depends on the data and the story you want to tell:
+
+![Chart Type Selection Guide](../images/color/chart-selection-driven-by-datatype.jpg)
+
+*Figure 2.6: A reference guide for selecting chart types. Line charts show trends over time; bar charts compare categories; pie charts show parts of a whole (limit to 6 segments); scatter plots reveal correlations; function plots display mathematical relationships; radar charts enable multi-variable comparison. Each type serves different communication needs.*
 
 AI can generate all three formats. For diagrams, tools like Mermaid enable text-based diagram definitions that can be AI-generated and version-controlled.
 

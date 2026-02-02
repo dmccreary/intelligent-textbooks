@@ -4,7 +4,13 @@ The capabilities available for intelligent textbooks are expanding rapidly. Unde
 
 ## AI Growth Trends
 
-Artificial intelligence capabilities have grown exponentially over the past decade, with acceleration in recent years. Key trends:
+Artificial intelligence capabilities have grown exponentially over the past decade, with acceleration in recent years.
+
+![Predicted Rates of AI Improvement](../images/color/four-futures-decline-flat-linear-exponential.jpg)
+
+*Figure 10.1: Four possible scenarios for AI capability growth over time. Red curve shows "Peaking & Declining" (rises then falls), Green shows "Flattening" (levels off), Blue shows "Slow Linear Growth" (steady rise), and Purple shows "Exponential Growth" (dramatic upward curve). Current evidence strongly supports the exponential trajectory.*
+
+Key trends:
 
 **Model Size and Capability**: Each generation of language models demonstrates significantly improved reasoning, knowledge, and task completion.
 
@@ -15,6 +21,10 @@ Artificial intelligence capabilities have grown exponentially over the past deca
 **Multimodal Expansion**: Models increasingly handle text, images, code, audio, and video together.
 
 **Reasoning Enhancement**: Chain-of-thought and similar techniques improve complex problem-solving.
+
+![Moore's Law: Transistor Count (1965-2025)](../images/color/moores-law-time-vs-transistor-count-log-scale.jpg)
+
+*Figure 10.2: Sixty years of transistor count growth on a logarithmic scale, from 10² to 10¹² transistors. Blue dots represent CPUs, green dots GPUs, orange dots SoCs, and red dots AI chips. The dashed trend line shows Moore's Law prediction. This sustained exponential growth provides historical precedent for expecting continued AI capability improvements.*
 
 These trends compound, meaning capabilities that seem distant may arrive sooner than expected.
 

@@ -6,6 +6,16 @@ The term "intelligent textbook" encompasses a wide range of capabilities, from s
 
 Inspired by the SAE J3016 standard for autonomous vehicles, which defines six levels from "no automation" to "full automation," we can classify textbooks into five distinct levels of intelligence. Each level builds upon the previous, adding capabilities that enhance the learning experience.
 
+![The Five Levels of Intelligent Textbooks](../images/color/five-levels-of-intelligent-textbooks-stairstep.png)
+
+*Figure 1.1: Stairstep diagram showing five levels of intelligent textbooks from static to autonomous AI. Levels 3-5 cross the "Privacy Threshold" where personal data collection becomes necessary.*
+
+The parallel to autonomous vehicles is instructive. Just as vehicle automation ranges from basic driver assistance to full self-driving capability, textbook intelligence ranges from static content to fully autonomous AI tutoring.
+
+![Autonomous Vehicles vs Intelligent Textbooks Comparison](../images/color/automotive-sae-vs-intelligent-textbook-side-by-side-comparison.png)
+
+*Figure 1.2: Side-by-side comparison of SAE J3016 vehicle automation levels and corresponding intelligent textbook levels. The "Data Collection Threshold" between Levels 2 and 3 marks where privacy considerations become significant.*
+
 ### Level 1: Static Textbooks
 
 Level 1 represents traditional textbooks in printed or basic digital format. These books contain text and static images, presenting content in a fixed linear sequence. There is no interactivity, no personalization, and no digital features beyond basic navigation.
@@ -62,11 +72,23 @@ For practical purposes, most intelligent textbook projects should target Levels 
 
 The capabilities available for intelligent textbooks are not static. Artificial intelligence, particularly large language models, has demonstrated consistent exponential improvement over recent years. Understanding this trajectory helps authors make informed decisions about which capabilities to incorporate and when.
 
+![MMLU Benchmark: AI Model Performance Over Time](../images/color/ai-mmlu-benchmark-chart.jpg)
+
+*Figure 1.6: The MMLU (Massive Multitask Language Understanding) benchmark tracks AI performance across academic subjects. Multiple model families—GPT, Claude, Gemini, Llama, and others—show rapid convergence toward the human baseline of 89.9% (blue horizontal line) between 2020 and 2025.*
+
 ## The METR 7-Month Doubling Rate
 
 Research from METR (Model Evaluation and Threat Research) has documented a striking pattern: AI task completion capabilities have been doubling approximately every seven months. This means that tasks which were impossible for AI systems in early 2023 became routine by late 2024, and capabilities continue expanding rapidly.
 
+![AI Task Completion Time Horizons](../images/color/metr-task-completion-doubling-rate-log.jpg)
+
+*Figure 1.3: Logarithmic chart showing AI task completion time horizons from 2019 to 2025. The exponential growth from seconds to hours demonstrates the consistent 7-month doubling rate.*
+
 The metric METR uses is "task horizon"—the duration of tasks that AI systems can reliably complete. In February 2019, GPT-2 could handle tasks lasting about 2.4 minutes. By March 2023, GPT-4 extended this to approximately 5.4 hours. Projections suggest that by late 2026, AI systems may reliably complete tasks spanning weeks.
+
+![Projecting AI Task Completion to 2030](../images/color/metr-projection-time-vs-horizon-to-2030.png)
+
+*Figure 1.4: Extending the METR trend line to 2030 suggests AI systems may eventually handle tasks spanning nearly two years. Green dots represent frontier models; gray dots represent non-frontier models.*
 
 For intelligent textbook authors, this trajectory has practical implications:
 
@@ -141,6 +163,10 @@ The standard pattern places each MicroSim in its own directory with an HTML file
 ## The Role of a Learning Graph
 
 A learning graph is a directed acyclic graph (DAG) representing concept dependencies. Each node represents a concept; each edge indicates that one concept depends on understanding another.
+
+![Sample Learning Graph: Arithmetic](../images/color/sample-learning-graph-arithmetic.jpg)
+
+*Figure 1.5: A simple learning graph for arithmetic concepts. The orange "Numbers" node is the foundation, with brown operation nodes (Addition, Subtraction, Multiplication, Division) depending on it. The blue "Arithmetic" node connects all operations, showing how concepts build upon each other.*
 
 Learning graphs serve multiple purposes:
 

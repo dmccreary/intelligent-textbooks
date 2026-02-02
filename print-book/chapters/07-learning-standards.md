@@ -6,6 +6,10 @@ As intelligent textbooks mature, interoperability becomes important. Standards e
 
 The Experience API (xAPI, formerly Tin Can API) is a specification for learning technology that enables tracking learning experiences across different systems.
 
+![Learning Standards Ecosystem](../images/color/learning-standards-ecosystem-xapi-lrs-textbooks.png)
+
+*Figure 7.1: Network diagram showing relationships between learning technology standards and regulations. Central nodes include xAPI and Learning Record Stores (LRS), which connect to LMS platforms, intelligent textbooks, and regulatory frameworks (FERPA, GDPR). Labeled edges show relationships: "defines," "connects," "describes," and "must comply."*
+
 ### Core Concepts
 
 xAPI uses a simple statement structure:
