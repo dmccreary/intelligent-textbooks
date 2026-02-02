@@ -2,7 +2,7 @@
   "version": "1.0",
   "description": "Image manifest for Building Intelligent Textbooks with AI",
   "lastUpdated": "2026-02-01",
-  "imageCount": 68,
+  "imageCount": 72,
   "instructions": {
     "adding_images": "1. Place color version in color/ directory, 2. Place B&W version in bw/ directory, 3. Add entry to images array below",
     "naming": "Use lowercase with hyphens, e.g., five-level-model.png",
@@ -86,6 +86,32 @@
       "altText": "Directed graph showing concept dependencies for basic arithmetic operations",
       "source": "Original",
       "keywords": ["learning graph", "arithmetic", "dependencies", "DAG", "simple", "example"],
+      "status": "has_color"
+    },
+    {
+      "id": "learning-graph-complex-circuits",
+      "title": "Complex Learning Graph: Circuits Course",
+      "description": "Large-scale interactive learning graph viewer showing 300 concepts and 627 edges for an electrical engineering circuits course. Left sidebar shows category filters with node counts: Foundation Concepts, Circuit Analysis, Passive Components, Transient Analysis, AC Fundamentals, AC Power, Frequency Response, Filters, Operational Amplifiers, and Signal Analysis. Statistics panel displays: Visible Nodes: 300, Visible Edges: 627, Foundational: 4. Main area shows force-directed graph with color-coded nodes organized by category and directed edges showing concept dependencies.",
+      "color": "color/learning-graph-complex-circuits.jpg",
+      "bw": "bw/learning-graph-complex-circuits.jpg",
+      "chapter": 1,
+      "section": "The Learning Graph as the Core Data Structure",
+      "altText": "Interactive learning graph viewer showing 300 circuit concepts with 627 dependency edges organized by category",
+      "source": "Screenshot from circuits-course textbook",
+      "keywords": ["learning graph", "circuits", "complex", "300 concepts", "categories", "interactive", "large scale", "electrical engineering"],
+      "status": "has_color"
+    },
+    {
+      "id": "learning-graph-zone-of-proximal-development",
+      "title": "Knowledge Spaces: Zone of Learning",
+      "description": "Conceptual diagram illustrating personalized knowledge spaces and the zone of proximal learning. Shows a directed graph of concepts with three color-coded states: green nodes represent Known Concepts (already mastered), yellow nodes represent Ready to Learn Concepts (within the Zone of Learning marked by dashed vertical lines), and red nodes represent Unknown Concepts (depend on unmastered prerequisites). Demonstrates how adaptive systems identify the optimal next concepts for each student based on their current mastery state.",
+      "color": "color/learning-graph-zone-of-poximal-development.jpg",
+      "bw": "bw/learning-graph-zone-of-poximal-development.jpg",
+      "chapter": 1,
+      "section": "Zone of Proximal Learning",
+      "altText": "Knowledge space diagram showing mastered concepts in green, ready-to-learn concepts in yellow, and unknown concepts in red",
+      "source": "Original",
+      "keywords": ["knowledge space", "zone of proximal development", "ZPD", "mastery", "adaptive", "personalized", "Vygotsky", "ready to learn"],
       "status": "has_color"
     },
     {
@@ -432,8 +458,8 @@
       "description": "Vertical bar chart showing data collection intensity across five textbook levels. X-axis: Level 1 Static through Level 5 Autonomous. Y-axis: Data Collection Intensity from None to Very High. Level 1 has no bar, Level 2 shows minimal (green), Levels 3-5 show escalating bars (yellow, orange, red). Vertical dashed red line marks 'Privacy Threshold' between Level 2 and 3. Subtitle: 'Data collection requirements escalate dramatically at Level 3+'.",
       "color": "color/l2-l3-privacy-threshold-vertical-bar-chart.png",
       "bw": "bw/l2-l3-privacy-threshold-vertical-bar-chart.png",
-      "chapter": 6,
-      "section": "Privacy Considerations",
+      "chapter": 1,
+      "section": "Level 3: Adaptive Textbooks",
       "altText": "Bar chart showing data collection requirements increasing dramatically at Level 3 and above",
       "source": "Original",
       "keywords": ["privacy", "threshold", "data collection", "Level 3", "GDPR", "FERPA"],
@@ -892,6 +918,32 @@
       "altText": "Table comparing effort levels for manual work vs GenAI vs GenAI skills",
       "source": "Screenshot from intelligent textbook features page",
       "keywords": ["effort levels", "skills", "GenAI", "comparison", "time savings", "automation"],
+      "status": "has_color"
+    },
+    {
+      "id": "relational-vs-graph-linear",
+      "title": "Multi-Hop Query Performance: Relational vs Graph (Linear Scale)",
+      "description": "Line chart comparing query response time between RDBMS (JOIN operations) and Graph DB (index-free adjacency) as relationship hops increase from 1 to 6. Linear y-axis shows time in milliseconds/minutes. RDBMS performance degrades exponentially, reaching 13+ minutes at 5 hops with queries timing out beyond 4 hops. Graph DB maintains near-constant performance throughout. Based on healthcare dependency analysis with 100,000 patient records.",
+      "color": "color/relational-vs-graph-hops-linear.jpg",
+      "bw": "bw/relational-vs-graph-hops-linear.jpg",
+      "chapter": 7,
+      "section": "Why Relational Databases Fail",
+      "altText": "Linear scale chart showing RDBMS query time exploding while graph DB stays constant as hops increase",
+      "source": "Original",
+      "keywords": ["relational", "graph database", "performance", "JOIN", "hops", "query time"],
+      "status": "has_color"
+    },
+    {
+      "id": "relational-vs-graph-log",
+      "title": "Multi-Hop Query Performance: Relational vs Graph (Log Scale)",
+      "description": "Line chart comparing query response time between RDBMS and Graph DB on logarithmic y-axis, making performance differences visible at all hop counts. Shows RDBMS starting at ~15ms for 1 hop and growing to ~1000 seconds at 5 hops. Graph DB grows from ~3ms to ~20ms over the same range. The 1-second threshold line highlights when queries become unacceptably slow for interactive use.",
+      "color": "color/relational-vs-graph-hops-log.jpg",
+      "bw": "bw/relational-vs-graph-hops-log.jpg",
+      "chapter": 7,
+      "section": "Why Relational Databases Fail",
+      "altText": "Logarithmic scale chart showing orders-of-magnitude difference between RDBMS and graph DB query performance",
+      "source": "Original",
+      "keywords": ["relational", "graph database", "performance", "logarithmic", "comparison", "scalability"],
       "status": "has_color"
     }
   ]

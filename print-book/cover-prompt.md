@@ -11,7 +11,7 @@
 ## Prompt
 
 ```
-Professional book cover design, portrait orientation 1.6:1 aspect ratio.
+Please generate an image.  The image is a professional book cover design, portrait orientation 1.6:1 aspect ratio.
 
 CENTER: Title "BUILDING INTELLIGENT TEXTBOOKS WITH AI" in bold, clean sans-serif typography (white or cream text with subtle shadow for legibility). Subtitle below in smaller text: "A Practical Guide to AI-Powered Learning Experiences". Author name "Dan McCreary" at bottom in elegant lighter weight font.
 
@@ -32,6 +32,8 @@ BOTTOM RIGHT: An upward-curving exponential growth line chart glowing in gold, r
 BACKGROUND: Rich deep navy blue gradient transitioning to dark purple at edges. Subtle geometric hexagonal pattern suggesting neural networks and digital connectivity. Soft ambient glow radiating from behind the title text.
 
 STYLE: Modern, professional educational technology aesthetic. Clean flat design with subtle gradients and soft drop shadows. Color palette: deep blues, teals, purples, with gold and white accents. High contrast ensuring thumbnail readability. No photorealistic people. Polished, authoritative, contemporary.
+
+Verify that there are no misspellings in the text.
 ```
 
 ## Tool-Specific Parameters

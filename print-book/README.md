@@ -22,7 +22,8 @@ print-book/
 │   ├── 07-learning-standards.md
 │   ├── 08-level-4-and-5.md
 │   ├── 09-generating-skills.md
-│   └── 10-the-future.md
+│   ├── 10-the-future.md
+│   └── 11-references.md
 ├── images/                # All images for the book
 │   └── (image files)
 └── output/                # Generated EPUB files (gitignored)
