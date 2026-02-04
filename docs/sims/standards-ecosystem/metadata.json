@@ -1,0 +1,71 @@
+{
+  "title": "Educational Technology Standards Ecosystem",
+  "description": "Interactive diagram showing how xAPI, LRS, LTI, IEEE, and IMS standards interrelate for intelligent textbooks.",
+  "subject": "Mathematics",
+  "topic": "Educational Technology Standards Ecosystem",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vis-network",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/standards-ecosystem/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/standards-ecosystem/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "standards-ecosystem",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/standards-ecosystem",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Chemistry",
+    "Biology",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of educational technology standards ecosystem",
+    "Apply educational technology standards ecosystem to solve problems",
+    "Visualize and interpret educational technology standards ecosystem relationships"
+  ],
+  "pedagogical": {
+    "pattern": "exploration",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "illustrate",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "observe"
+  }
+}

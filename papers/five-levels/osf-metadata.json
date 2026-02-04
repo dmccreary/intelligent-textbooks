@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "cedar": "https://schema.metadatacenter.org/core/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "pav": "http://purl.org/pav/",
+    "oslc": "http://open-services.net/ns/core#",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@type": "schema:ScholarlyArticle",
+  "schema:name": "A Five-Level Classification Framework for Intelligent Textbooks: Lessons from Autonomous Vehicle Standards",
+  "schema:author": [
+    {
+      "@type": "schema:Person",
+      "schema:name": "Dan McCreary",
+      "schema:url": "https://www.linkedin.com/in/danmccreary/",
+      "schema:identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0009-3542-8828"
+      }
+    }
+  ],
+  "schema:dateCreated": "2024-12-17",
+  "schema:version": "0.04",
+  "schema:abstract": "The rapid advancement of artificial intelligence is transforming educational content, yet the field lacks a standardized framework for classifying intelligent textbook capabilities. Inspired by automotive industry standards for autonomous vehicles, we propose a five-level classification: (1) Static textbooks; (2) Interactive textbooks with multimedia and assessments; (3) Adaptive textbooks that adjust to individual performance; (4) Chatbot-integrated textbooks using large language models; and (5) Autonomous AI textbooks with comprehensive real-time personalization. Evidence from METR research shows AI task capabilities doubling every seven months. Extrapolating to 2030, the cost of producing Level 2 content approaches zero—pennies per student per day. This commoditization challenges publishers whose value rests on content production alone. A critical finding is the identification of Level 3 as a privacy inflection point. Below this threshold, textbooks require minimal student data. At Level 3 and above, systems require detailed learning histories and behavioral patterns, raising concerns under FERPA, COPPA, and GDPR. We argue this threshold demands differentiated governance, with higher levels requiring stronger privacy protections. Educational standards including xAPI and Learning Record Stores can enable both personalization and student-controlled data portability. The strategic implication: as Level 1-2 content becomes freely available, educational organizations must focus on Level 3+ capabilities to remain viable. Our framework provides a common vocabulary for evaluating products, establishing procurement criteria, and developing level-specific regulations.",
+  "schema:keywords": [
+    "intelligent textbooks",
+    "educational technology",
+    "artificial intelligence",
+    "adaptive learning",
+    "privacy",
+    "classification framework",
+    "autonomous systems",
+    "large language models",
+    "xAPI",
+    "Learning Record Store",
+    "METR",
+    "exponential growth"
+  ],
+  "schema:about": [
+    {
+      "@type": "schema:DefinedTerm",
+      "schema:name": "Education",
+      "schema:inDefinedTermSet": "https://bepress.com/reference_guide_dc/disciplines/"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "schema:name": "Educational Technology",
+      "schema:inDefinedTermSet": "https://bepress.com/reference_guide_dc/disciplines/"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "schema:name": "Artificial Intelligence and Robotics",
+      "schema:inDefinedTermSet": "https://bepress.com/reference_guide_dc/disciplines/"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "schema:name": "Curriculum and Instruction",
+      "schema:inDefinedTermSet": "https://bepress.com/reference_guide_dc/disciplines/"
+    }
+  ],
+  "schema:license": {
+    "@type": "schema:CreativeWork",
+    "schema:name": "CC BY-NC-SA 4.0",
+    "schema:url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  },
+  "schema:inLanguage": "en",
+  "schema:citation": [
+    {
+      "@type": "schema:CreativeWork",
+      "schema:name": "SAE J3016 Standard for Autonomous Vehicles"
+    },
+    {
+      "@type": "schema:CreativeWork",
+      "schema:name": "METR AI Task Completion Research"
+    }
+  ],
+  "dcterms:subject": [
+    "Educational Technology",
+    "Artificial Intelligence in Education",
+    "Adaptive Learning Systems",
+    "Privacy in Education",
+    "Learning Analytics"
+  ],
+  "bibo:status": "Preprint",
+  "pav:createdBy": "Dan McCreary",
+  "pav:version": "0.04",
+  "cedar:templateId": "osf-preprints-metadata",
+  "cedar:generatedBy": "CEDAR Template Editor 2.6.54 compatible format"
+}

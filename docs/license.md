@@ -6,7 +6,7 @@ All content in this repository is governed by the following license agreement:
 
 ## License Type
 
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
 
 ## Link to License Agreement
 
@@ -35,4 +35,6 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
     This deed highlights only some of the key features and terms of the actual license. It is not a license and has no legal value. You should carefully review all of the terms and conditions of the actual license before using the licensed material.
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+## Commercial Licensing
+
+Commercial rights are reserved by the copyright holder. For commercial licensing, publication inquiries, or permission to use this work in commercial contexts, please contact [Dan McCreary on LinkedIn](https://www.linkedin.com/in/danmccreary/).

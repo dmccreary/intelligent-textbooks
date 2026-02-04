@@ -1,0 +1,315 @@
+dublin_core:
+  title: 'Designing and Building Intelligent Textbooks: A Step-by-Step Guide'
+  creator: Dan McCreary
+  subject: Educational Technology, AI-Assisted Content Creation, Instructional Design
+  description: A 10-week college level course for students that would like to create
+    intelligent textbooks using generative AI
+  publisher: ''
+  date: ''
+  type: Interactive Textbook
+  format: text/html
+  identifier: ''
+  language: en
+  contributor: []
+  rights: Creative Commons
+  coverage: ''
+  source: ''
+  relation: ''
+book_info:
+  intelligence_level: 2
+  target_level: 2
+  academic_level: college
+  duration_weeks: 10
+  estimated_hours: 100
+  suggested_weekly_hours: 6-10
+  estimated_chapters: 12
+  estimated_concepts: 200
+  estimated_microsims: 5-10
+  mkdocs_material_version: ''
+  python_version: 3.x
+  requires_conda: true
+  site_url: https://dmccreary.github.io/intelligent-textbooks/
+  repo_url: https://github.com/dmccreary/intelligent-textbooks
+  deployed: false
+  last_deploy_date: ''
+skills:
+  course_description_analyzer:
+    status: completed
+    quality_score: 85
+    date_run: '2025-11-03T20:19:58.925139Z'
+    version: null
+    dependencies: []
+    outputs:
+      file_path: docs/course-description.md
+      validation_passed: false
+      issues: []
+    notes: First skill to run - validates or creates course description
+  learning_graph_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: course_description_analyzer
+      min_quality_score: 70
+    outputs:
+      concept_count: 0
+      files:
+      - docs/sims/learning-graph/intelligent-textbooks.csv
+      - docs/sims/learning-graph/intelligent-textbooks.json
+      - docs/sims/learning-graph/concept-labels.csv
+      - docs/sims/learning-graph/dependencies.csv
+      - docs/sims/learning-graph/topic-headers.csv
+      validation_passed: false
+      issues: []
+    notes: Generates concept graph with dependencies and taxonomy
+  glossary_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: learning_graph_generator
+      min_quality_score: 70
+    outputs:
+      file_path: docs/glossary.md
+      term_count: 0
+      iso_11179_compliant: false
+      validation_passed: false
+      issues: []
+    notes: Generates glossary from learning graph concepts using ISO 11179 standards
+  chapter_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: learning_graph_generator
+      min_quality_score: 70
+    outputs:
+      chapters_generated: 0
+      chapters_list: []
+      completion_percentage: 0
+      validation_passed: false
+      issues: []
+    notes: Generates chapter content based on learning graph
+  quiz_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: learning_graph_generator
+      min_quality_score: 70
+    - skill: chapter_generator
+      min_completion_percentage: 30
+    outputs:
+      quizzes_generated: 0
+      quiz_list: []
+      total_questions: 0
+      blooms_distribution: {}
+      validation_passed: false
+      issues: []
+    notes: Generates quizzes after chapter content exists
+  faq_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: course_description_analyzer
+      min_quality_score: 70
+    - skill: learning_graph_generator
+      min_quality_score: 70
+    - skill: glossary_generator
+      min_quality_score: 70
+    - skill: chapter_generator
+      min_completion_percentage: 30
+    outputs:
+      file_path: docs/faq.md
+      faq_count: 0
+      validation_passed: false
+      issues: []
+    notes: Generates FAQs after substantial content exists
+  reference_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: course_description_analyzer
+      min_quality_score: 70
+    outputs:
+      file_path: docs/references.md
+      reference_count: 0
+      target_count: 30
+      validation_passed: false
+      issues: []
+    notes: Generates curated reference list based on academic level
+  microsim_p5:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: learning_graph_generator
+      min_quality_score: 70
+    outputs:
+      microsims_created: 0
+      microsim_list: []
+      validation_passed: false
+      issues: []
+    notes: Creates p5.js interactive simulations
+  concept_validator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: learning_graph_generator
+      min_quality_score: 70
+    outputs:
+      validation_passed: false
+      issues: []
+    notes: Validates concept completeness and consistency
+  quality_metrics_analyzer:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies: []
+    outputs:
+      report_path: ''
+      metrics: {}
+      validation_passed: false
+      issues: []
+    notes: Analyzes overall book quality metrics
+  social_media_generator:
+    status: not_started
+    quality_score: null
+    date_run: null
+    version: null
+    dependencies:
+    - skill: chapter_generator
+      min_completion_percentage: 50
+    outputs:
+      assets_generated: 0
+      validation_passed: false
+      issues: []
+    notes: Generates social media preview images and content
+workflow:
+  current_phase: planning
+  phases:
+    planning:
+      status: in_progress
+      completion_percentage: 50
+      tasks:
+      - name: Create course description
+        completed: true
+      - name: Validate course description
+        completed: false
+      - name: Set up book structure
+        completed: true
+    foundation:
+      status: not_started
+      completion_percentage: 0
+      tasks:
+      - name: Generate learning graph
+        completed: false
+      - name: Validate learning graph
+        completed: false
+      - name: Create glossary
+        completed: false
+    content_generation:
+      status: not_started
+      completion_percentage: 0
+      tasks:
+      - name: Generate chapter outlines
+        completed: false
+      - name: Write chapter content
+        completed: false
+      - name: Create MicroSims
+        completed: false
+    enhancement:
+      status: not_started
+      completion_percentage: 0
+      tasks:
+      - name: Generate quizzes
+        completed: false
+      - name: Generate FAQs
+        completed: false
+      - name: Add references
+        completed: false
+    quality_assurance:
+      status: not_started
+      completion_percentage: 0
+      tasks:
+      - name: Run quality metrics
+        completed: false
+      - name: Validate all content
+        completed: false
+      - name: Review and revise
+        completed: false
+    deployment:
+      status: not_started
+      completion_percentage: 0
+      tasks:
+      - name: Generate social media assets
+        completed: false
+      - name: Build site
+        completed: false
+      - name: Deploy to GitHub Pages
+        completed: false
+content:
+  chapters:
+    count: 0
+    list: []
+  microsims:
+    count: 9
+    list:
+    - addie-workflow
+    - book-levels
+    - blooms-taxonomy
+    - cognitive-load
+    - kemp-model
+    - learning-graph
+    - levels-of-interactivity
+    - book-gen-workflow
+    - word-cloud
+  concepts:
+    count: 0
+    taxonomy_complete: false
+    dependencies_complete: false
+  glossary:
+    exists: true
+    term_count: 0
+  faq:
+    exists: true
+    question_count: 0
+  references:
+    exists: true
+    reference_count: 0
+validation:
+  min_quality_scores:
+    course_description: 70
+    learning_graph: 70
+    glossary: 70
+    chapters: 60
+    quizzes: 60
+    faqs: 60
+    references: 60
+  min_completion:
+    chapters_for_quizzes: 30
+    chapters_for_faqs: 30
+    chapters_for_social: 50
+  required_files:
+  - docs/course-description.md
+  - docs/glossary.md
+  - docs/faq.md
+  - docs/references.md
+  - mkdocs.yml
+metadata:
+  schema_version: 1.0.0
+  last_updated: '2025-11-03T20:19:58.925428Z'
+  updated_by: skill:course_description_analyzer
+  notes: ''

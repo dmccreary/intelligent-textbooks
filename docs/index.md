@@ -1,14 +1,17 @@
 ---
 title: Building Intelligent Textbooks
-description: A step-by-step building intelligent textbooks using LLMs, graphs and agents.
-image: /img/cover-preview.png
-og:image: /img/cover-preview.png
-twitter:image: /img/cover-preview.png
+description: A step-by-step guide to building intelligent textbooks using LLMs, graphs and agents.
+image: /img/cover-social-media-preview.png
+og:image: /img/cover-social-media-preview.png
+twitter:image: /img/cover-social-media-preview.png
 social:
    cards: false
 hide:
   - toc
 ---
+<style>
+.md-content__inner h1 {display: none !important;}
+</style>
 # Building Intelligent Textbooks With AI
 
 ![Cover Image](./img/cover.png){ width="750" }
@@ -17,6 +20,12 @@ hide:
 on their quest for knowledge.*
 
 Welcome to the website for a step-by-step guide to building [intelligent textbooks](./glossary.md#intelligent-textbook) using open standards.
+
+!!! Announcement
+    We now have dozens of Claude Code Skills that automate over
+    90% of the tasks required to build level-2 textbooks from a course
+    description.  See our [Claud Skills](https://dmccreary.github.io/claude-skills/)
+    intelligent textbook for more information.  It rocks!!
 
 Most of the examples on this website use the [mkdocs](http://mkdocs.com) build system 
 paired with generative AI to create and maintain intelligent textbooks.  We also

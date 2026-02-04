@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "title": "Algebra 1 Learning Graph Sample",
+    "description": "17 foundational Algebra 1 concepts for adaptive assessment demonstration",
+    "version": "1.0"
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Number",
+      "x": -234,
+      "y": -204
+    },
+    {
+      "id": 2,
+      "label": "Variable",
+      "x": -236,
+      "y": -133
+    },
+    {
+      "id": 3,
+      "label": "Constant",
+      "x": -384,
+      "y": -138
+    },
+    {
+      "id": 5,
+      "label": "Term",
+      "x": -237,
+      "y": -58
+    },
+    {
+      "id": 6,
+      "label": "Expression",
+      "x": -321,
+      "y": 22
+    },
+    {
+      "id": 7,
+      "label": "Equation",
+      "x": -303,
+      "y": 131
+    },
+    {
+      "id": 9,
+      "label": "Order Ops",
+      "x": -396,
+      "y": -22
+    },
+    {
+      "id": 12,
+      "label": "Distribute",
+      "x": -83,
+      "y": -24
+    },
+    {
+      "id": 36,
+      "label": "Evaluate",
+      "x": -406,
+      "y": 130
+    },
+    {
+      "id": 38,
+      "label": "Like Terms",
+      "x": -227,
+      "y": 83
+    },
+    {
+      "id": 39,
+      "label": "Combine",
+      "x": -220,
+      "y": 171
+    },
+    {
+      "id": 40,
+      "label": "Simplify",
+      "x": -190,
+      "y": 243
+    },
+    {
+      "id": 41,
+      "label": "Expand",
+      "x": -146,
+      "y": 53
+    },
+    {
+      "id": 71,
+      "label": "Solve Eqns",
+      "x": -333,
+      "y": 236
+    },
+    {
+      "id": 72,
+      "label": "One-Step",
+      "x": -244,
+      "y": 289
+    },
+    {
+      "id": 73,
+      "label": "Two-Step",
+      "x": -139,
+      "y": 324
+    },
+    {
+      "id": 74,
+      "label": "Multi-Step",
+      "x": -21,
+      "y": 363
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1,
+      "comment": "Variable depends on Number"
+    },
+    {
+      "from": 3,
+      "to": 1,
+      "comment": "Constant depends on Number"
+    },
+    {
+      "from": 5,
+      "to": 2,
+      "comment": "Term depends on Variable"
+    },
+    {
+      "from": 5,
+      "to": 3,
+      "comment": "Term depends on Constant"
+    },
+    {
+      "from": 6,
+      "to": 5,
+      "comment": "Expression depends on Term"
+    },
+    {
+      "from": 7,
+      "to": 6,
+      "comment": "Equation depends on Expression"
+    },
+    {
+      "from": 9,
+      "to": 1,
+      "comment": "Order of Ops depends on Number"
+    },
+    {
+      "from": 12,
+      "to": 1,
+      "comment": "Distributive depends on Number"
+    },
+    {
+      "from": 12,
+      "to": 5,
+      "comment": "Distributive depends on Term"
+    },
+    {
+      "from": 36,
+      "to": 6,
+      "comment": "Evaluate depends on Expression"
+    },
+    {
+      "from": 36,
+      "to": 9,
+      "comment": "Evaluate depends on Order of Ops"
+    },
+    {
+      "from": 38,
+      "to": 5,
+      "comment": "Like Terms depends on Term"
+    },
+    {
+      "from": 39,
+      "to": 38,
+      "comment": "Combine depends on Like Terms"
+    },
+    {
+      "from": 40,
+      "to": 36,
+      "comment": "Simplify depends on Evaluate"
+    },
+    {
+      "from": 40,
+      "to": 39,
+      "comment": "Simplify depends on Combine"
+    },
+    {
+      "from": 41,
+      "to": 12,
+      "comment": "Expand depends on Distributive"
+    },
+    {
+      "from": 41,
+      "to": 6,
+      "comment": "Expand depends on Expression"
+    },
+    {
+      "from": 71,
+      "to": 7,
+      "comment": "Solving Eqns depends on Equation"
+    },
+    {
+      "from": 72,
+      "to": 71,
+      "comment": "One-Step depends on Solving Eqns"
+    },
+    {
+      "from": 73,
+      "to": 72,
+      "comment": "Two-Step depends on One-Step"
+    },
+    {
+      "from": 74,
+      "to": 73,
+      "comment": "Multi-Step depends on Two-Step"
+    },
+    {
+      "from": 74,
+      "to": 12,
+      "comment": "Multi-Step depends on Distributive"
+    }
+  ]
+}

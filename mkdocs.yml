@@ -9,6 +9,7 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - About ths Site: about.md
+  - Course Description: course-description.md
   - Table of Contents: book-table-of-contents.md
   - Mission and Values: mission-and-values.md
   
@@ -26,39 +27,41 @@ nav:
     - Testing: tutorial/testing.md
     - Feedback: tutorial/feedback.md
     - Logging: tutorial/logging.md
-    - Search: tutorial/search.md
     - Social: tutorial/social.md
     - Open Graph: tutorial/open-graph.md
     - Google Analytics: tutorial/google-analytics.md
     - Logo and Favicon: tutorial/logo-and-favicon.md
-  
-  - Educational concepts:
+    - CSS: tutorial/css-tips.md
+    - Disable Titles: tutorial/disable-title.md
+    - Hiding Content: tutorial/hiding-content.md
+
+
+  - Educational Concepts:
     - Introduction: concepts/index.md
-    - Intelligence Levels: concepts/five-levels-of-intelligent-textbooks.md
+    - Five Levels of Intelligent Textbooks: concepts/five-levels-of-intelligent-textbooks.md
     - Bloom's Taxonomy: concepts/bloom-taxonomy.md
     - Scaffolding: concepts/scaffolding.md
     - Learning Graph: concepts/learning-graph.md
+    - Adaptive Assessments: concepts/adaptive-assessments.md
     - Best Practices: concepts/best-practices.md
+    - Learning Theory: concepts/learning-theory.md
     - Levels of Interactivity: concepts/levels-of-interactivity.md
     - Ontology Questions: concepts/ontology-questions.md
     - Open Educational Resources: concepts/open-educational-resources.md
+    - Instructional Design: concepts/instructional-design.md
+    - Levels of Interactivity: concepts/levels-of-interactivity-v1.md
+    - From Sage to Guide: concepts/from-sage-to-guide.md
+    - Quality Metrics: concepts/quality-metrics.md
+    - Book Metadata:
+      - Book Metadata Intro: concepts/book-metadata/index.md
+      - Book Metadata Guide: concepts/book-metadata/book-metadata-guide.md
+      - Book Metadata Summary: concepts/book-metadata/book-metadata-summary.md
+      - Book Metadata Quickstart: concepts/book-metadata/book-metadata-quickstart.md
   
-  - Prompts:
-    - Introduction: prompts/index.md
-    - Feature Mapping: prompts/feature-mapping.md
-    - Learning Graph:
-      - Introduction: prompts/learning-graph/index.md
-      - Enumerate Concepts: prompts/learning-graph/02-enumerate-concepts.md
-      - Dependency Graph: prompts/learning-graph/03-dependency.md
-      - Concept Taxonomy: prompts/learning-graph/04-taxonomy.md
-    - Generate Logo: prompts/generate-logo.md
-    - Generate Cover Image: prompts/generate-cover-image.md
-    - Intelligence Level Questions: prompts/level-questions.md
-    - Semantic Search: prompts/semantic-search.md
-    - Word Cloud: prompts/word-cloud.md
-    - Quality Metrics: prompts/quality-metrics.md
-    - Discord Admin: prompts/discord-admin.md
-  
+  - Stories:
+    - Introduction: stories/index.md
+    - From Moldy Books to PhD: stories/hadi/index.md
+
   - Workflows:
     - Introduction: workflow/index.md
     - Course Description: workflow/course-description.md
@@ -74,24 +77,79 @@ nav:
     - Interactive Infographics: workflow/interactive-infographics.md
     - MicroSims: workflow/microsim.md
     - Graphic Novel: workflow/graphic-novel.md
+    - Infographics: workflow/infographics.md
+    - Lists, Tables and Charts: workflow/lists-tables-charts--plots.md
   
   - MicroSims:
     - Introduction: sims/index.md
-    - Book Levels: sims/book-levels/index.md
+    - Addie Workflow: sims/addie-workflow/index.md
+    - AI Flywheel: sims/ai-flywheel/index.md
+    - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
     - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
+    - Book Generation Workflow: sims/book-gen-workflow/index.md
+    - Book Levels: sims/book-levels/index.md
+    - Cognitive Load: sims/cognitive-load/index.md
+    - High School Courses: sims/high-school-courses/index.md
+    - Implementation Decision Matrix: sims/implementation-matrix/index.md
+    - Kemp Model: sims/kemp-model/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Levels of Interactivity: sims/levels-of-interactivity/index.md
-    - Book Generation Workflow: sims/book-gen-workflow/index.md
-    - Word Cloud: sims/word-cloud/index.md
-    - Gallery: sims/index.md
+    - METR Task Horizon Growth: sims/metr-task-horizon/index.md
+    - Privacy Threshold Chart: sims/privacy-threshold-chart/index.md
+    - Question Color Update: sims/question-color-update/index.md
+    - SAE vs Textbook Levels: sims/sae-comparison/index.md
+    - Sam Process: sims/sam-process/index.md
     - Sine Wave: sims/sine-wave/index.md
-    - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
-    - AI Flywheel: sims/ai-flywheel/index.md
+    - Standards Ecosystem: sims/standards-ecosystem/index.md
+    - Terms to EKG: sims/terms-to-ekg/index.md
+    - Textbook Ecosystem CLD: sims/textbook-ecosystem-cld/index.md
+    - Three Color DFS: sims/three-color-dfs/index.md
+    - Word Cloud: sims/word-cloud/index.md
     - Templates: sims/templates/index.md
   
   - Case Studies:
     - Intro: case-studies/index.md
   
+  - Prompts:
+    - Introduction: prompts/index.md
+    - Feature Mapping: prompts/feature-mapping.md
+    - Learning Graph:
+      - Introduction: prompts/learning-graph/index.md
+      - Course Description: prompts/learning-graph/00-course-description.md
+      - Personas: prompts/learning-graph/01-personas.md
+      - Enumerate Concepts: prompts/learning-graph/02-enumerate-concepts.md
+      - Dependency Graph: prompts/learning-graph/03-dependency.md
+      - Concept Taxonomy: prompts/learning-graph/04-taxonomy.md
+    - Generating Chapter Content:
+      - Introduction: prompts/chapter-content/index.md
+    - Generate Logo: prompts/generate-logo.md
+    - Generate Cover Image: prompts/generate-cover-image.md
+    - Intelligence Level Questions: prompts/level-questions.md
+    - Semantic Search: prompts/semantic-search.md
+    - Generate README.md: prompts/generate-readme.md
+    - Word Cloud: prompts/word-cloud.md
+    - Quality Metrics: prompts/quality-metrics.md
+    - Discord Admin: prompts/discord-admin.md
+    - Terms to EKG: prompts/terms-to-ekg/index.md
+    - Suggest Skills: prompts/suggest-skills.md
+    - Generate Glosssary Skill: prompts/generate-glossary-skill.md
+    - Generate FAQ Skill: prompts/generate-faq-skill.md
+    - Generate Quiz Skill: prompts/generate-quiz-skill.md
+
+  
+  - Skills:
+    - Introduction: skills/index.md
+    - Learning Graph: skills/learning-graph.md
+    - MicroSims: skills/microsim-p5.md
+    - Chapter Generator: skills/chapter-generator.md
+    - Concept Validator: skills/concept-validator.md
+    - FAQ Generator: skills/faq-generator.md
+    - Glossary Generator: skills/glossary-generator.md
+    - Quality Metrics Analyzer: skills/quality-metrics-analyzer.md
+    - Quiz Generator: skills/quiz-generator.md
+    - Recommended Skill Summary: skills/recommended-skills-summary.md
+    - Social Media Generator: skills/social-media-generator.md
+    - Template: skills/template.md
   - Formatting Tests:
     - Introduction: formatting-tests/index.md
     - Code Highlighting: formatting-tests/code-highlight-test.md
@@ -107,6 +165,7 @@ nav:
   - License: license.md
   - FAQ: faq.md
   - How We Built This Site: how-we-built-this-site.md
+  - URI Scheme: uri-scheme.md
   - References: references.md
   - Contact: contact.md
  
@@ -143,12 +202,21 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra_css:
    - css/extra.css
 extra_javascript:
     - js/extra.js
+    # needed for mathjax to work
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
+  generator: false
   analytics:
     provider: google
-    # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
     property: G-D7X1XT7Z19

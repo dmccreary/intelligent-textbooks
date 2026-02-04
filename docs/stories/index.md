@@ -1,0 +1,6 @@
+# List of Stories
+
+# [From Moldy Books to a PhD: The Great Information Reincarnation](./hadi/index.md)
+![](./hadi/cover.png)
+
+Born in a humid Indonesian classroom where textbooks rotted with mold and knowledge was something borrowed rather than owned, Hadi learned early that curiosity required ingenuity, collaboration, and perseverance. From piecing together lessons across damaged pages and carefully wrapping books at home, he carried a fierce hunger for learning beyond his village, across oceans, and into the unfamiliar world of American academia, enduring isolation, exhaustion, and relentless late-night study. His journey led from graduate-school struggle to doctoral triumph and onward to leadership in a global technology company, yet his success never severed his connection to the past. Instead, it crystallized a vision: that no child should have to fight decay, scarcity, or circumstance to learn. By harnessing connectivity and intelligent textbooks, Hadi helps transform muddy paths into digital highways, ensuring that children everywhere can run toward knowledge with joy, confidence, and possibility.
