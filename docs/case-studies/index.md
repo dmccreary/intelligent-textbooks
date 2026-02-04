@@ -1,543 +1,512 @@
 ---
 title: "Case Studies"
+description: Case studies about intelligent textbooks created by myself and others.
+image: /case-studies/img/case-studies.jpg
+og:image: /case-studies/img/case-studies.jpg
+hide:
+    - toc
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides a sample of some of the intelligent textbooks that
-have been created with our workflows.
+This document provides 65 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+frequently.
 
-## AI Assisted Geometry
+<div class="grid cards grid-3-col" markdown>
 
-* **Site URL:** [https://dmccreary.github.io/geometry-course](https://dmccreary.github.io/geometry-course)
-* **GitHub Repository:** [https://github.com/dmccreary/geometry-course](https://github.com/dmccreary/geometry-course)
+- **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
 
-**Description:** AI Assisted Geometry is an online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims.
+    ![AI Assisted Geometry](./img/geometry-course.jpg)
 
-**Status:** We have created a detailed learning graph and about a dozen MicroSims.  We are looking for schools, teachers students to give us feedback.
+    An online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims. Features a detailed learning graph and about a dozen MicroSims.
 
-**Statistics:**
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course) · 47 Files · 18K Words · 3 MicroSims
 
-* Markdown Files: 47
-* Images: 25
-* Word Count: 18093
-* MicroSims: 3
-* Glossary Terms: 38
+- **[AI Based Data Science with Python](https://dmccreary.github.io/data-science-course)**
 
----
+    ![AI Based Data Science](./img/data-science-course.jpg)
 
-## AI Based Data Science with Python
+    An AI-based course that helps undergraduate college students learn data science with Python. Includes a detailed learning graph.
 
-* **Site URL:** [https://dmccreary.github.io/data-science-course](https://dmccreary.github.io/data-science-course)
-* **GitHub Repository:** [https://github.com/dmccreary/data-science-course](https://github.com/dmccreary/data-science-course)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/data-science-course) · 21 Files · 23K Words · 143 Glossary Terms
 
-**Description:** An AI based data science course that uses AI to help undergraduate college learn data science with Python.
+- **[AI Circuits Course](https://dmccreary.github.io/circuits/)**
 
-**Status:** We have created a detailed learning graph.  We are looking for feedback on the priorities of the next steps.
+    ![AI Circuits Course](./img/circuits.jpg)
 
-**Statistics:**
+    Learn electronic circuits with AI-powered simulations and knowledge graphs. Created to support the circuits course at the University of Minnesota.
 
-* Markdown Files: 21
-* Images: 3
-* Word Count: 22992
-* MicroSims: 1
-* Glossary Terms: 143
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits) · 113 Files · 154K Words · 23 MicroSims
 
----
+- **[AI Racing League](https://coderdojotc.github.io/ai-racing-league)**
 
-## AI Circuits Course
+    ![AI Racing League](./img/ai-racing-league.png)
 
-* **Site URL:** [https://dmccreary.github.io/circuits/](https://dmccreary.github.io/circuits/)
-* **GitHub Repository:** [https://dmccreary.github.io/circuits/](https://dmccreary.github.io/circuits/)
+    A fun way of teaching AI and machine learning using a $300 RC car with a Raspberry Pi and Camera. Supports DonkeyCar projects.
 
-**Description:** Designing circuits using AI.  Created to support Dr. Sharat Bhatra's circuits course at the University of Minnesota.
+    [:octicons-mark-github-16: Repository](https://github.com/CoderDojoTC/ai-racing-league) · 107 Files · 39K Words
 
-**Status:** Early stage.
+- **[Algebra I](https://dmccreary.github.io/algebra-1)**
 
----
+    ![Algebra I](./img/algebra-1.jpg)
 
-## AI Racing League
+    An introductory course to Algebra covering fundamental concepts and skills with many interactive simulations. Designed for high school students.
 
-* **Site URL:** [https://coderdojotc.github.io/ai-racing-league](https://coderdojotc.github.io/ai-racing-league)
-* **GitHub Repository:** [https://github.com/CoderDojoTC/ai-racing-league](https://github.com/CoderDojoTC/ai-racing-league)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/algebra-1) · Active Development
 
-**Description:** The AI Racing League is a project to support a fun way of teaching of AI and machine learning using a $300 RC car with a Raspberry Pi and a Camera.
+- **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
 
-**Status:** We have created extensive content based on the recent upgrades from the NVIDIA Nano to the Raspberry Pi.  We plan to continue to evolve the site to support the DonkeyCar projects.
+    ![Linear Algebra for AI and Machine Learning](./img/linear-algebra.jpg)
 
-**Statistics:**
+    A college-level course bridging abstract linear algebra with real-world AI applications. Covers vectors, matrices, eigenvalues, neural networks, computer vision, and autonomous systems.
 
-* Markdown Files: 107
-* Images: 70
-* Word Count: 39402
-* MicroSims: 0
-* Glossary Terms: 20
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/linear-algebra) · 206 Files · 195K Words · 126 MicroSims · 299 Glossary Terms
 
----
+- **[ASL Book](https://Olufsonc-hub.github.io/asl-book/)**
 
-## Applied Linear Algebra for Computer Science and Electrical Engineering
+    An intelligent textbook on American Sign Language designed to help students learn ASL through interactive content.
 
-* **Site URL:** [https://artemispearson.github.io/learning-graphs/](https://artemispearson.github.io/learning-graphs/)
-* **GitHub Repository:** [https://artemispearson.github.io/learning-graphs/](https://artemispearson.github.io/learning-graphs/)
+    [:octicons-mark-github-16: Repository](https://github.com/Olufsonc-hub/asl-book)
 
----
+- **[Architectural Tradeoff Analysis Method](https://dmccreary.github.io/atam/)**
 
-## Architectural Tradeoff Analysis Method
+    ![ATAM](./img/atam.jpg)
 
-* **Site URL:** [https://dmccreary.github.io/atam/](https://dmccreary.github.io/atam/)
-* **GitHub Repository:** [https://github.com/dmccreary/atam](https://github.com/dmccreary/atam)
+    ATAM is a method for evaluating software architecture, applied to database selection. Companion to 'Making Sense of NoSQL'.
 
-**Description:** ATAM is a method for evaluating software architecture.  We apply ATAM to the database selection process.  This book is a companion to the book 'Making Sense of NoSQL'.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/atam) · Early Stage
 
-**Status:** Early stage.
+- **[Automating Instructional Design](https://dmccreary.github.io/automating-instructional-design/)**
 
----
+    ![Automating Instructional Design](./img/automating-instructional-design.jpg)
 
-## Beginning Electronics with AI
+    A hands-on guide to automating instructional design tasks using AI and other tools. Covers workflows for course development.
 
-* **Site URL:** [https://dmccreary.github.io/beginning-electronics](https://dmccreary.github.io/beginning-electronics)
-* **GitHub Repository:** [https://github.com/dmccreary/beginning-electronics](https://github.com/dmccreary/beginning-electronics)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/automating-instructional-design)
 
-**Description:** An online course that uses MicroSims to help junior high and high students learn the basics of electronics.
+- **[Beginning Electronics with AI](https://dmccreary.github.io/beginning-electronics)**
 
-**Status:** Very minimal content and a few example MicroSims.  We are looking for feedback on the priorities of the next steps.
+    ![Beginning Electronics](./img/beginning-electronics.jpg)
 
-**Statistics:**
+    An online course using MicroSims to help junior high and high school students learn the basics of electronics.
 
-* Markdown Files: 40
-* Images: 89
-* Word Count: 15771
-* MicroSims: 6
-* Glossary Terms: 0
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/beginning-electronics) · 40 Files · 16K Words · 6 MicroSims
 
----
+- **[Building AI Agents with Python](https://dmccreary.github.io/agents-course/)**
 
-## Building AI Agents with Python
+    ![Building AI Agents](./img/agents-course.jpg)
 
-* **Site URL:** [https://dmccreary.github.io/agents-course/](https://dmccreary.github.io/agents-course/)
-* **GitHub Repository:** [https://dmccreary.github.io/agents-course/](https://dmccreary.github.io/agents-course/)
+    Creating intelligent agents with Python and LLMs. Early stage development focused on modern agent architectures.
 
-**Description:** Creating intelligent agents with Python and LLMs.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/agents-course)
 
-**Status:** Early stage.
+- **[Conversational AI](https://dmccreary.github.io/conversational-ai)**
 
----
+    ![Conversational AI](./img/conversational-ai.jpg)
 
-## Deep Learning with AI
+    A college-level course on creating chatbots. Covers NLP foundations, semantic search, LLMs, embeddings, and vector databases.
 
-* **Site URL:** [https://dmccreary.github.io/deep-learning-course](https://dmccreary.github.io/deep-learning-course)
-* **GitHub Repository:** [https://github.com/dmccreary/deep-learning-course](https://github.com/dmccreary/deep-learning-course)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/conversational-ai) · Active Development
 
-**Description:** Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota.
+- **[Control Systems](https://dmccreary.github.io/control-systems)**
 
----
+    ![Control Systems](./img/control-systems.jpg)
 
-## Designing and Building and Clocks and Watches with AI
+    Upper-division undergraduate course on classical control theory. Covers feedback, Laplace transforms, Bode plots, root locus, Nyquist stability, and PID design with Gyra the balancing robot.
 
-* **Site URL:** [https://dmccreary.github.io/clocks-and-watches](https://dmccreary.github.io/clocks-and-watches)
-* **GitHub Repository:** [https://github.com/dmccreary/clocks-and-watches](https://github.com/dmccreary/clocks-and-watches)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/control-systems) · 70 Files · 152K Words · 6 MicroSims · 297 Glossary Terms
 
-**Description:** An online course that uses MicroSims to help high school students learn how to design and build clocks and watches.  We focus on using a breadboard, microcontrollers, displays, real-time clocks and displays.
+- **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
-**Status:** We have a lot of content, a detailed learning graph and are considering testing the content in a live classroom setting.
+    ![Deep Learning](./img/deep-learning-course.jpg)
 
-**Statistics:**
+    Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota.
 
-* Markdown Files: 124
-* Images: 105
-* Word Count: 37325
-* MicroSims: 11
-* Glossary Terms: 149
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/deep-learning-course)
 
----
+- **[Clocks and Watches with AI](https://dmccreary.github.io/clocks-and-watches)**
 
-## Digital Design With Programmable Logic
+    ![Clocks and Watches](./img/clocks-and-watches.jpg)
 
-* **Site URL:** [https://mcbasken.github.io/umn-senior-design/](https://mcbasken.github.io/umn-senior-design/)
-* **GitHub Repository:** [https://mcbasken.github.io/umn-senior-design/](https://mcbasken.github.io/umn-senior-design/)
+    Learn to design and build clocks and watches using breadboards, microcontrollers, RTCs, and displays. Ready for classroom testing.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clocks-and-watches) · 124 Files · 37K Words · 11 MicroSims
 
-## Digital Electronics with AI
+- **[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/claude-skills/)**
 
-* **Site URL:** [https://dmccreary.github.io/digital-electronics](https://dmccreary.github.io/digital-electronics)
-* **GitHub Repository:** [https://github.com/dmccreary/digital-electronics](https://github.com/dmccreary/digital-electronics)
+    ![Claude Skills](./img/claude-skills.jpg)
 
-**Description:** An online course that uses MicroSims to help high school students learn basic digital electronics.  We focus on using a breadboard, simple LEDs, buttons and logic gates.  We assume students have access to about $50 worth of parts.  We do not cover microcontrollers.
+    A collection of skills and techniques for building intelligent textbooks using Claude AI. Includes prompts, workflows, and best practices.
 
-**Status:** We have created a simple framework and we are adding new MicroSims as needed.  We are looking for schools, teachers and students to give us feedback on what content to create next.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/claude-skills)
 
-**Statistics:**
+- **[Clan MacQuarrie](https://dmccreary.github.io/clan-macquarrie/)**
 
-* Markdown Files: 15
-* Images: 15
-* Word Count: 2708
-* MicroSims: 3
-* Glossary Terms: 0
+    ![Clan MacQuarrie](./img/clan-macquarrie.jpg)
 
----
+    Educational resources on the history of the Scottish clan system with a focus on Clan MacQuarrie heritage and traditions.
 
-## Fluid Power Systems
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clan-macquarrie)
 
-* **Site URL:** [https://dmccreary.github.io/fluid-power-systems/](https://dmccreary.github.io/fluid-power-systems/)
-* **GitHub Repository:** [https://dmccreary.github.io/fluid-power-systems/](https://dmccreary.github.io/fluid-power-systems/)
+- **[Digital Design With Programmable Logic](https://mcbasken.github.io/umn-senior-design/)**
 
-**Description:** Done in conjunction with Peter Vinck at Inflow Corporation
+    Digital design course focusing on programmable logic devices and FPGAs.
 
-**Status:** Early stage.
+    [:octicons-mark-github-16: Repository](https://github.com/mcbasken/umn-senior-design)
 
----
+- **[Digital Electronics with AI](https://dmccreary.github.io/digital-electronics)**
 
-## Generative AI Architecture Patterns
+    ![Digital Electronics](./img/digital-electronics.jpg)
 
-* **Site URL:** [https://dmccreary.github.io/genai-arch-patterns](https://dmccreary.github.io/genai-arch-patterns)
-* **GitHub Repository:** [https://github.com/dmccreary/genai-arch-patterns](https://github.com/dmccreary/genai-arch-patterns)
+    Undergraduate course with MicroSims for learning digital electronics using breadboards, LEDs, buttons, and logic gates (~$50 in parts).
 
-**Description:** An online course that uses AI to help software architects understand how to use generative AI to create and maintain their AI architecture patterns.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-electronics) · 86 Files · 171K Words · 8 MicroSims
 
-**Status:** Minimal content and slides.  Use to support an AI architecture consulting practice and presentation at the MACC conferences in 2023 and 2024.
+- **[Digital Transformation 2.0 with Generative AI](https://yarmoluk.github.io/Digital-Transformation-with-AI-Spring-2026/)**
 
-**Statistics:**
+    ![Digital Transformation with AI](./img/digital-transformation-ai.png)
 
-* Markdown Files: 34
-* Images: 5
-* Word Count: 7283
-* MicroSims: 1
-* Glossary Terms: 16
+    Graduate course (SEIS 666) at University of St. Thomas exploring how generative AI reshapes digital transformation, business models, and workforce dynamics. By Daniel Yarmoluk.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/Yarmoluk/Digital-Transformation-with-AI-Spring-2026) · 81 Files · 109K Words · 33 MicroSims · 223 Glossary Terms
 
-## Generative AI Strategy
+- **[Economics Course](https://dmccreary.github.io/economics-course/)**
 
-* **Site URL:** [https://dmccreary.github.io/cmm-for-genai](https://dmccreary.github.io/cmm-for-genai)
-* **GitHub Repository:** [https://github.com/dmccreary/cmm-for-genai](https://github.com/dmccreary/cmm-for-genai)
+    ![Economics Course](./img/economics-course.jpg)
 
-**Description:** Generative AI Strategy is an online course that uses AI to help business leaders understand how to use generative AI to create and maintain their AI business strategy.
+    Interactive intelligent textbook on Introduction to Economics for high school students covering microeconomics, macroeconomics, personal finance, and the digital economy.
 
-**Status:** Minimal content and slides.  Use to support an AI strategy development consulting practice.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/economics-course) · 29 Files · 82K Words · Early Stage
 
-**Statistics:**
+- **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
-* Markdown Files: 22
-* Images: 10
-* Word Count: 6972
-* MicroSims: 3
-* Glossary Terms: 0
+    ![Ethics Course](./img/ethics-course.jpg)
 
----
+    Ethical issues backed by critical thinking and data science. Covers harm measurement, impact analysis, and systems thinking.
 
-## Generative AI for Teachers
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ethics-course) · MicroSims included
 
-* **Site URL:** [https://coderdojotc.github.io/chatgpt-for-teachers](https://coderdojotc.github.io/chatgpt-for-teachers)
-* **GitHub Repository:** [https://github.com/CoderDojoTC/chatgpt-for-teachers](https://github.com/CoderDojoTC/chatgpt-for-teachers)
+- **[FFT Benchmarking](https://dmccreary.github.io/fft-benchmarking/)**
 
-**Description:** An online course that uses AI to help teachers understand how to use generative AI to create and maintain their AI teaching materials.
+    ![FFT Benchmarking](./img/fft-benchmarking.jpg)
 
-**Status:** Minimal content and slides but many sample prompts and MicroSims.  Use to support a talks given in 2023 and 2024.
+    A collection of resources for learning about Fast Fourier Transforms and benchmarking techniques across platforms.
 
-**Statistics:**
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking)
 
-* Markdown Files: 98
-* Images: 47
-* Word Count: 19019
-* MicroSims: 100
-* Glossary Terms: 15
+- **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
 
----
+    ![GED Science Prep](./img/ged-science-prep.jpg)
 
-## Graph Algorithms with AI
+    Intelligent textbook for GED Science test preparation covering Life Science, Physical Science, and Earth & Space Science. Aligned with the official GED Science Assessment Targets and eight Science Practices.
 
-* **Site URL:** [https://dmccreary.github.io/graph-algorithms](https://dmccreary.github.io/graph-algorithms)
-* **GitHub Repository:** [https://github.com/dmccreary/graph-algorithms](https://github.com/dmccreary/graph-algorithms)
+    [:octicons-mark-github-16: Repository](https://github.com/camgross/GED-Science-prep) · 27 Files · 12K Words · 7 MicroSims
 
-**Description:** An online course that uses MicroSims to help undergraduate college students learn the basics of graph algorithms.
+- **[Fluid Power Systems](https://dmccreary.github.io/fluid-power-systems/)**
 
-**Status:** Many MicroSims created using a variety of JavaScript libraries.  We are looking for feedback on the priorities of the next steps.
+    ![Fluid Power Systems](./img/fluid-power-systems.jpg)
 
-**Statistics:**
+    Interactive textbook for technicians working with HVAC, vacuum, compressed air, cooling water, dust collection, hydraulics, pumping, and fan systems. Created with Peter Vinck at Inflow Corporation.
 
-* Markdown Files: 71
-* Images: 49
-* Word Count: 30360
-* MicroSims: 15
-* Glossary Terms: 84
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fluid-power-systems) · 36 Files · 20K Words · 3 MicroSims · 103 Glossary Terms
 
----
+- **[Generative AI Architecture Patterns](https://dmccreary.github.io/genai-arch-patterns)**
 
-## Graph Data Modeling with AI
+    ![GenAI Architecture Patterns](./img/genai-arch-patterns.jpg)
 
-* **Site URL:** [https://dmccreary.github.io/graph-data-modeling-course](https://dmccreary.github.io/graph-data-modeling-course)
-* **GitHub Repository:** [https://github.com/dmccreary/graph-data-modeling-course](https://github.com/dmccreary/graph-data-modeling-course)
+    Helps software architects understand how to use generative AI to create and maintain AI architecture patterns.
 
-**Description:** An online course that uses MicroSims to help undergraduate college students learn the basics of graph data modeling.  Example graph data models created for a variety of domains.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/genai-arch-patterns) · 34 Files · 7K Words
 
-**Status:** Many MicroSims created using mostly vis.js.  We are looking for feedback on the priorities of the next steps.
+- **[Generative AI Strategy](https://dmccreary.github.io/cmm-for-genai)**
 
-**Statistics:**
+    Helps business leaders understand how to use generative AI to create and maintain their AI business strategy.
 
-* Markdown Files: 49
-* Images: 10
-* Word Count: 13491
-* MicroSims: 3
-* Glossary Terms: 156
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cmm-for-genai) · 22 Files · 7K Words · 3 MicroSims
 
----
+- **[Generative AI for Teachers](https://coderdojotc.github.io/chatgpt-for-teachers)**
 
-## Graph Learning Management Systems
+    Helps teachers understand how to use generative AI to create and maintain AI teaching materials. Many sample prompts.
 
-* **Site URL:** [https://dmccreary.github.io/graph-lms](https://dmccreary.github.io/graph-lms)
-* **GitHub Repository:** [https://github.com/dmccreary/graph-lms](https://github.com/dmccreary/graph-lms)
+    [:octicons-mark-github-16: Repository](https://github.com/CoderDojoTC/chatgpt-for-teachers) · 98 Files · 19K Words · 100 MicroSims
 
-**Description:** An online course that uses MicroSims to helps data architects learn how of graphs are used to build AI learning management systems.  Used to help various startups interested in the integrating AI into production learning management systems.
+- **[Graph Algorithms with AI](https://dmccreary.github.io/graph-algorithms)**
 
-**Status:** Several MicroSims created using mostly vis.js.  We are looking for feedback on the priorities of the next steps.
+    ![Graph Algorithms](./img/graph-algorithms.webp)
 
-**Statistics:**
+    MicroSims to help undergraduate college students learn graph algorithms using various JavaScript libraries.
 
-* Markdown Files: 17
-* Images: 13
-* Word Count: 7877
-* MicroSims: 10
-* Glossary Terms: 52
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-algorithms) · 71 Files · 30K Words · 15 MicroSims
 
----
+- **[Graph Data Modeling with AI](https://dmccreary.github.io/graph-data-modeling-course)**
 
-## GraphRAG
+    ![Graph Data Modeling](./img/graph-data-modeling-course.jpg)
 
-* **Site URL:** [https://dmccreary.github.io/graph-rag](https://dmccreary.github.io/graph-rag)
-* **GitHub Repository:** [https://github.com/dmccreary/graph-rag](https://github.com/dmccreary/graph-rag)
+    MicroSims for graph data modeling. Example models created for a variety of domains using vis.js.
 
-**Description:** An online course that teaches the concepts around GraphRag.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-data-modeling-course) · 49 Files · 13K Words · 156 Glossary Terms
 
-**Status:** Used to support a talk on GraphRAG.  Minimal content.
+- **[Graph Learning Management Systems](https://dmccreary.github.io/graph-lms)**
 
-**Statistics:**
+    ![Graph LMS](./img/graph-lms.png)
 
-* Markdown Files: 14
-* Images: 3
-* Word Count: 7583
-* MicroSims: 0
-* Glossary Terms: 33
+    How graphs are used to build AI learning management systems. Created for startups integrating AI into production LMS.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-lms) · 17 Files · 8K Words · 10 MicroSims
 
-## Intelligent Textbooks
+- **[GraphRAG](https://dmccreary.github.io/graph-rag)**
 
-* **Site URL:** [https://dmccreary.github.io/intelligent-textbooks](https://dmccreary.github.io/intelligent-textbooks)
-* **GitHub Repository:** [https://github.com/dmccreary/intelligent-textbooks](https://github.com/dmccreary/intelligent-textbooks)
+    An online course teaching concepts around GraphRAG (Retrieval Augmented Generation with graphs).
 
-**Description:** An online course that uses helps participants build intelligent textbooks using the mkdocs-material documentation build system.  This site contains a detailed tutorial on how to get started and was that the mkdocs-material system can be extended to support intelligent textbooks.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-rag) · 14 Files · 8K Words · 33 Glossary Terms
 
-**Status:** Many best practices and detailed tutorial created.
+- **[Intelligent Textbooks](https://dmccreary.github.io/intelligent-textbooks)**
 
-**Statistics:**
+    ![Intelligent Textbooks](./img/intelligent-textbooks.jpg)
 
-* Images: 23
-* Word Count: 11914
-* MicroSims: 4
-* Glossary Terms: 31
+    Tutorial for building intelligent textbooks using mkdocs-material. Contains detailed tutorials and best practices.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intelligent-textbooks) · 12K Words · 4 MicroSims
 
-## Introduction to Microcontrollers with the PIC24
+- **[AI Infographics](https://dmccreary.github.io/infographics/)**
 
-* **Site URL:** [https://irvinggsea.github.io/i-book-v1/](https://irvinggsea.github.io/i-book-v1/)
-* **GitHub Repository:** [https://irvinggsea.github.io/i-book-v1/](https://irvinggsea.github.io/i-book-v1/)
+    ![AI Infographics](./img/infographics.jpg)
 
----
+    A collection of resources for creating interactive infographics using AI tools. Includes templates and examples.
 
-## Introduction to Operating Systems
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics)
 
-* **Site URL:** [https://btlepak.github.io/Intelligent_Textbook/](https://btlepak.github.io/Intelligent_Textbook/)
-* **GitHub Repository:** [https://btlepak.github.io/Intelligent_Textbook/](https://btlepak.github.io/Intelligent_Textbook/)
+- **[Introduction to Graph Databases](https://dmccreary.github.io/intro-to-graph)**
 
----
+    ![Intro to Graph](./img/intro-to-graph.jpg)
 
-## Learning Graphs
+    Interactive textbook covering graph databases: graph thinking, data modeling, NoSQL, labeled property graphs, and query languages.
 
-* **Site URL:** [https://dmccreary.github.io/learning-graphs](https://dmccreary.github.io/learning-graphs)
-* **GitHub Repository:** [https://github.com/dmccreary/learning-graphs](https://github.com/dmccreary/learning-graphs)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intro-to-graph) · Extensive MicroSims
 
-**Description:** Site focused on the creation and maintenance of learning graphs.  Extensive examples of how vis.js is used to create and maintain learning graphs.
+- **[Introduction to Microcontrollers with PIC24](https://irvinggsea.github.io/i-book-v1/)**
 
-**Status:** Many examples of how vis.js is used to create and maintain learning graphs.
+    Introduction to microcontrollers using the PIC24 platform for embedded systems education.
 
-**Statistics:**
+    [:octicons-mark-github-16: Repository](https://github.com/irvinggsea/i-book-v1)
 
-* Markdown Files: 74
-* Images: 46
-* Word Count: 33460
-* MicroSims: 2
-* Glossary Terms: 47
+- **[Introduction to Operating Systems](https://btlepak.github.io/Intelligent_Textbook/)**
 
----
+    Fundamentals of operating systems including process management, memory, and file systems.
 
-## Learning MicroPython with AI
+    [:octicons-mark-github-16: Repository](https://github.com/btlepak/Intelligent_Textbook)
 
-* **Site URL:** [https://dmccreary.github.io/learning-micropython](https://dmccreary.github.io/learning-micropython)
-* **GitHub Repository:** [https://github.com/dmccreary/learning-micropython](https://github.com/dmccreary/learning-micropython)
+- **[Introduction to Physics](https://dmccreary.github.io/intro-to-physics-course)**
 
-**Description:** An online course that helps kids learn MicroPython on microcontrollers using fun low-cost projects.
+    ![Intro to Physics](./img/intro-to-physics-course.jpg)
 
-**Status:** Extensive content and Google Analytics shows we are getting thousands of hits per month from users all over the world.
+    Year-long intro physics course covering motion, forces, energy, waves, optics, and electricity with MicroSims.
 
-**Statistics:**
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intro-to-physics-course) · Active Development
 
-* Markdown Files: 204
-* Images: 232
-* Word Count: 63428
-* MicroSims: 2
-* Glossary Terms: 0
+- **[Investor Relations](https://dberglu.github.io/ir-textbook/)**
 
----
+    Executive-level course on AI-powered IR modernization by David Berglund. 15 chapters with full content.
 
-## Micro Simulations for Electrical Engineering
+    [:octicons-mark-github-16: Repository](https://github.com/dberglu/ir-textbook) · Glossary, FAQs, Quizzes, MicroSims
 
-* **Site URL:** [https://kenn0727.github.io/ee-microsims](https://kenn0727.github.io/ee-microsims)
-* **GitHub Repository:** [https://github.com/kenn0727/ee-microsims](https://github.com/kenn0727/ee-microsims)
+- **[IT Management with Graphs](https://dmccreary.github.io/it-management-graph)**
 
-**Description:** A site that contains 11 MicroSims created in 2024 by a group of six students at the University of Minnesota during their Senior Project in the Department of Electrical Engineering an Computer Design.  The MicroSims were designed to help students learn the basics of electrical engineering.
+    ![IT Management with Graphs](./img/it-management-graph.jpg)
 
-**Status:** Some good examples of MicroSims created in p5.js by students learning how to do prompt engineering using ChatGPT.
+    IT management using graph databases. Covers ITIL, configuration management, asset management, and IT operations.
 
-**Statistics:**
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/it-management-graph) · Active Development
 
-* Markdown Files: 14
-* Images: 23
-* Word Count: 1105
-* MicroSims: 12
-* Glossary Terms: 0
+- **[Learning Graphs](https://dmccreary.github.io/learning-graphs)**
 
----
+    ![Learning Graphs](./img/learning-graphs.jpg)
 
-## MicroSims
+    Creation and maintenance of learning graphs. Extensive examples using vis.js for visualization.
 
-* **Site URL:** [https://dmccreary.github.io/microsims](https://dmccreary.github.io/microsims)
-* **GitHub Repository:** [https://github.com/dmccreary/microsims](https://github.com/dmccreary/microsims)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-graphs) · 74 Files · 33K Words · 47 Glossary Terms
 
-**Description:** An online course that helps participants learn how to create MicroSims using JavaScript and the p5.js library.  The site is used as a showcase for the diversity of subjects MicroSims can be used to teach.
+- **[Learning Linux](https://dmccreary.github.io/learning-linux/)**
 
-**Status:** Many sample MicroSims and detailed tutorials created.
+    ![Learning Linux](./img/learning-linux.jpg)
 
-**Statistics:**
+    A comprehensive 15-week course teaching high school students Linux fundamentals including command line, file systems, and scripting.
 
-* Markdown Files: 88
-* Images: 85
-* Word Count: 17582
-* MicroSims: 66
-* Glossary Terms: 20
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-linux)
 
----
+- **[Learning MicroPython with AI](https://dmccreary.github.io/learning-micropython)**
 
-## Moving Rainbow
+    ![Learning MicroPython](./img/learning-micropython.png)
 
-* **Site URL:** [https://dmccreary.github.io/moving-rainbow](https://dmccreary.github.io/moving-rainbow)
-* **GitHub Repository:** [https://github.com/dmccreary/moving-rainbow](https://github.com/dmccreary/moving-rainbow)
+    Helps kids learn MicroPython on microcontrollers using fun low-cost projects. Thousands of monthly users worldwide.
 
-**Description:** An online course that colorful addressable LED strips and LED noodles to create fun hands on projects for students learning computational thinking.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words
 
-**Status:** The site is used by schools that teach coding and have the right hardware.  Many examples of how to use addressable LED strips and LED noodles to create fun projects using MicroPython.
+- **[Machine Learning: Algorithms and Applications](https://anvithpothula.github.io/machine-learning-textbook/)**
 
-**Statistics:**
+    ![Machine Learning Textbook](./img/machine-learning-textbook.png)
 
-* Markdown Files: 49
-* Images: 104
-* Word Count: 16849
-* MicroSims: 0
-* Glossary Terms: 6
+    Comprehensive intelligent textbook on machine learning for college undergraduates. Covers supervised learning, unsupervised learning, neural networks, CNNs, and transfer learning with Python code examples.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/machine-learning-textbook) · 60 Files · 103K Words · 18 MicroSims · 199 Glossary Terms
 
-## Neurodiversity Course
+- **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
 
-* **Site URL:** [https://dmccreary.github.io/neurodiversity-course/](https://dmccreary.github.io/neurodiversity-course/)
-* **GitHub Repository:** [https://dmccreary.github.io/neurodiversity-course/](https://dmccreary.github.io/neurodiversity-course/)
+    ![McCreary Heritage](./img/mccreary-heritage.jpg)
 
----
+    Educational resources for teaching Scottish, Irish, and immigration history with a focus on building critical thinking skills.
 
-## Personal Finance
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mccreary-heritage)
 
-* **Site URL:** [https://dmccreary.github.io/personal-finance/](https://dmccreary.github.io/personal-finance/)
-* **GitHub Repository:** [https://dmccreary.github.io/personal-finance/](https://dmccreary.github.io/personal-finance/)
+- **[MicroSim Search](https://dmccreary.github.io/search-microsims/)**
 
-**Description:** An online course that helps high school students learn personal finance.  Many MicroSims and Infographics with graphic novel storytelling.
+    ![MicroSim Search](./img/search-microsims.jpg)
 
----
+    Client-side faceted search system for educational MicroSims. Crawls GitHub repositories to collect metadata and provides browser-based search with filtering by subject, grade level, Bloom's Taxonomy, and framework.
 
-## Robot Day
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/search-microsims) · 125 Files · 138K Words · 58 MicroSims
 
-* **Site URL:** [https://dmccreary.github.io/robot-day](https://dmccreary.github.io/robot-day)
-* **GitHub Repository:** [https://github.com/dmccreary/robot-day](https://github.com/dmccreary/robot-day)
+- **[MicroSims for Electrical Engineering](https://kenn0727.github.io/ee-microsims)**
 
-**Description:** An online resources for single-day events at schools that want to get students excited about STEM by doing fun interactive hands-on projects on a series of tables that drive the students to understand all the components of a collision-avoidance robot.
+    11 MicroSims created by University of Minnesota EE students using p5.js and prompt engineering.
 
-**Status:** The site is used by schools that want to get students excited about STEM by doing fun interactive hands-on projects on a series of tables that drive the students to understand all the components of a collision-avoidance robot.
+    [:octicons-mark-github-16: Repository](https://github.com/kenn0727/ee-microsims) · 14 Files · 12 MicroSims
 
-**Statistics:**
+- **[MicroSims](https://dmccreary.github.io/microsims)**
 
-* Markdown Files: 52
-* Images: 64
-* Word Count: 25930
-* MicroSims: 1
-* Glossary Terms: 4
+    ![MicroSims](./img/microsims.jpg)
 
----
+    Showcase for creating MicroSims using JavaScript and p5.js across diverse subjects.
 
-## STEM Robots
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/microsims) · 88 Files · 18K Words · 66 MicroSims
 
-* **Site URL:** [https://dmccreary.github.io/stem-robots](https://dmccreary.github.io/stem-robots)
-* **GitHub Repository:** [https://github.com/dmccreary/stem-robots](https://github.com/dmccreary/stem-robots)
+- **[Modeling Healthcare Data with Graphs](https://dmccreary.github.io/modeling-healthcare-data)**
 
-**Description:** An online course that helps high school students learn the basics of STEM and robotics.  THe site is built around using the Raspberry Pi RP2040 chip on low-cost robotics kits to teach fun and engaging projects that teach computational thinking
+    ![Modeling Healthcare Data](./img/modeling-healthcare-data.jpg)
 
-**Statistics:**
+    Undergraduate textbook on graph-based healthcare data modeling: patient-centric models, provider operations, clinical workflows.
 
-* Markdown Files: 74
-* Images: 80
-* Word Count: 18244
-* MicroSims: 5
-* Glossary Terms: 46
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/modeling-healthcare-data) · Active Development
 
----
+- **[Moving Rainbow](https://dmccreary.github.io/moving-rainbow)**
 
-## Signal Processing
+    ![Moving Rainbow](./img/moving-rainbow.jpg)
 
-* **Site URL:** [https://dmccreary.github.io/signal-processing](https://dmccreary.github.io/signal-processing)
-* **GitHub Repository:** [https://github.com/dmccreary/signal-processing](https://github.com/dmccreary/signal-processing)
+    Using colorful addressable LED strips and noodles for hands-on computational thinking projects with MicroPython.
 
-**Description:** An online course demonstrates how generative AI tools can be used to create undergraduate college courses about on the topic of signal processing.
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/moving-rainbow) · 49 Files · 17K Words
 
-**Statistics:**
+- **[Neurodiversity Course](https://dmccreary.github.io/neurodiversity-course/)**
 
-* Markdown Files: 53
-* Images: 17
-* Word Count: 28485
-* MicroSims: 6
-* Glossary Terms: 105
+    Course on neurodiversity awareness and inclusion strategies.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/neurodiversity-course)
 
-## Spectrum Analyzer
+- **[Personal Finance](https://dmccreary.github.io/personal-finance/)**
 
-* **Site URL:** [https://dmccreary.github.io/spectrum-analyzer/](https://dmccreary.github.io/spectrum-analyzer/)
-* **GitHub Repository:** [https://dmccreary.github.io/spectrum-analyzer/](https://dmccreary.github.io/spectrum-analyzer/)
+    ![Personal Finance](./img/personal-finance.jpg)
 
-**Description:** Create a spectrum analyzer using a Raspberry Pi Pico and a microphone.  The site contains a detailed tutorial on how to build the hardware and software.
+    Helps high school students learn personal finance with MicroSims, infographics, and graphic novel storytelling.
 
----
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/personal-finance)
 
-## Tracking AI
+- **[Prompt Engineering Class](https://dmccreary.github.io/prompt-class)**
 
-* **Site URL:** [https://dmccreary.github.io/tracking-ai-course](https://dmccreary.github.io/tracking-ai-course)
-* **GitHub Repository:** [https://github.com/dmccreary/tracking-ai-course](https://github.com/dmccreary/tracking-ai-course)
+    ![Prompt Engineering](./img/prompt-class.jpg)
 
-**Description:** An online course that teaches how to track the progress of AI.  The site was designed to support strategy consulting within education and knowledge management organizations.  The site also includes sample MicroSims and infographics.
+    Hands-on labs covering lists, Mermaid diagrams, markdown tables, p5.js visualizations, and data science applications.
 
-**Statistics:**
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/prompt-class) · Active Development
 
-* Markdown Files: 47
-* Images: 25
-* Word Count: 18093
-* MicroSims: 3
-* Glossary Terms: 38
+- **[Reading for Kindergarten](https://dmccreary.github.io/reading-for-kindergarten/)**
 
+    ![Reading for Kindergarten](./img/reading-for-kindergarten.jpg)
 
+    An intelligent textbook for teaching reading skills to kindergarten students with age-appropriate interactive content.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/reading-for-kindergarten)
+
+- **[Robot Day](https://dmccreary.github.io/robot-day)**
+
+    Resources for single-day STEM events with hands-on projects leading to understanding collision-avoidance robots.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/robot-day) · 52 Files · 26K Words
+
+- **[Semiconductor Physics Course](https://dmccreary.github.io/semiconductor-physics-course)**
+
+    ![Semiconductor Physics](./img/semiconductor-physics-course.jpg)
+
+    College-level semiconductor physics with interactive simulations including PN Junction visualization.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/semiconductor-physics-course) · Early Stage
+
+- **[STEM Robots](https://dmccreary.github.io/stem-robots)**
+
+    ![STEM Robots](./img/stem-robots.png)
+
+    STEM and robotics using the Raspberry Pi RP2040 on low-cost robotics kits for computational thinking.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-robots) · 74 Files · 18K Words · 5 MicroSims
+
+- **[Signal Processing](https://dmccreary.github.io/signal-processing)**
+
+    ![Signal Processing](./img/signal-processing.jpg)
+
+    Demonstrates using generative AI to create undergraduate signal processing courses.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/signal-processing) · 53 Files · 28K Words · 6 MicroSims
+
+- **[Spectrum Analyzer](https://dmccreary.github.io/spectrum-analyzer/)**
+
+    ![Spectrum Analyzer](./img/spectrum-analyzer.png)
+
+    Build a spectrum analyzer using Raspberry Pi Pico and a microphone with detailed hardware and software tutorials.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/spectrum-analyzer)
+
+- **[STEM Classroom Administration](https://dmccreary.github.io/stem-classroom-admin/)**
+
+    ![STEM Classroom Admin](./img/stem-classroom-admin.jpg)
+
+    Helps teachers use AI to setup and administer a STEM classroom with a focus on computational thinking and microcontrollers.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-classroom-admin)
+
+- **[Systems Thinking in the Age of AI](https://dmccreary.github.io/systems-thinking)**
+
+    ![Systems Thinking](./img/systems-thinking.jpg)
+
+    Interactive resources for teaching systems thinking from high school to executive level. Multiple course descriptions.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking) · MicroSims included
+
+- **[Tracking AI](https://dmccreary.github.io/tracking-ai-course)**
+
+    ![Tracking AI](./img/tracking-ai-course.jpg)
+
+    Tracking AI progress for strategy consulting in education and knowledge management organizations.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/tracking-ai-course) · 47 Files · 18K Words · 3 MicroSims
+
+- **[Understanding Dementia](https://rtanler.github.io/Dementia/)**
+
+    ![Understanding Dementia](./img/dementia.jpg)
+
+    AI-generated intelligent textbook on dementia and cognitive decline for patients, caregivers, families, and healthcare professionals. Features 200 interconnected concepts in a learning graph. By rtanler.
+
+    [:octicons-mark-github-16: Repository](https://github.com/rtanler/Dementia) · 34 Files · 44K Words · 1 MicroSim · 200 Concepts
+
+- **[US Geography](https://dmccreary.github.io/us-geography)**
+
+    ![US Geography](./img/us-geography.jpg)
+
+    Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms
+
+- **[Trigonometric Functions](https://stage03.iowerx.com:8443/)**
+
+    Foundational course on relationships between angles and sides in right triangles by Hank Ratzesberger. 200 concepts.
+
+    High School · Bridges algebra and geometry
+
+</div>

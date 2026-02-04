@@ -1,0 +1,75 @@
+{
+  "title": "Terms to Enterprise Knowledge Graph",
+  "description": "Interactive infographic MicroSim of the ten steps to move from a simple list of business terms to an agentic EKG",
+  "subject": "Mathematics",
+  "topic": "Terms to Enterprise Knowledge Graph",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/terms-to-ekg/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/terms-to-ekg/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "terms-to-ekg",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/terms-to-ekg",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of terms to enterprise knowledge graph",
+    "Apply terms to enterprise knowledge graph to solve problems",
+    "Visualize and interpret terms to enterprise knowledge graph relationships",
+    "Experiment with parameters to observe their effects on terms to enterprise knowledge graph"
+  ],
+  "pedagogical": {
+    "pattern": "exploration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "define",
+      "list",
+      "recognize",
+      "state",
+      "classify"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
+}

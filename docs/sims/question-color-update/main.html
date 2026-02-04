@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-Based Learning Graph Update</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Adaptive Assessment: Learning Graph Update</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color color-gray"></div>
+                <span><strong>Gray</strong> - Unknown</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-green"></div>
+                <span><strong>Green</strong> - Mastered</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-orange"></div>
+                <span><strong>Orange</strong> - Ready to Learn</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-red"></div>
+                <span><strong>Red</strong> - Incorrect</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-purple"></div>
+                <span><strong>Purple</strong> - Learning Goal</span>
+            </div>
+        </div>
+
+        <!-- Right panel with controls and question area -->
+        <div class="right-panel">
+            <div class="controls">
+                <div class="stats" id="stats">Concepts Mastered: 0 / 17</div>
+                <button class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+
+            <div class="question-container" id="question-container">
+                <div class="question-title" id="question-title">Click a node to assess</div>
+                <div class="answer-section" id="answer-section" style="display: none;">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="answer" value="correct" id="radio-correct">
+                            <span class="radio-text correct-text">Correct</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="answer" value="incorrect" id="radio-incorrect">
+                            <span class="radio-text incorrect-text">Incorrect</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" id="submit-btn">Submit</button>
+                </div>
+            </div>
+
+            <div class="certainty-display" id="certainty-display" style="display: none;">
+                <div class="certainty-title">Node Details:</div>
+                <div class="certainty-content" id="certainty-content"></div>
+            </div>
+
+            <div class="status-info" id="status-info">
+                <div class="status-title">How It Works:</div>
+                <div class="status-text">
+                    <ul>
+                        <li><strong>Correct</strong> = green + infer prerequisites (90% decay)</li>
+                        <li><strong>Incorrect</strong> = red (needs review)</li>
+                        <li><strong>Purple</strong> = learning goal</li>
+                        <li><strong>Orange</strong> = ready to learn</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Save button - only visible when enable-save=true -->
+        <button class="btn btn-save" id="save-btn" style="display: none;">Save Node Positions</button>
+    </div>
+
+    <script src="question-color-update.js"></script>
+</body>
+</html>

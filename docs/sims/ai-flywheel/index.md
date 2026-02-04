@@ -21,7 +21,7 @@ You can include this MicroSim infographic in your web page by adding the followi
   style="overflow: hidden;"></iframe>
 ```
 
-[Run the AI Flywheel MicroSim](./main.html){ .md-button .md-button--primary }
+[Run the AI Flywheel MicroSim](https://dmccreary.github.io/intelligent-textbooks/sims/ai-flywheel/main.html){ .md-button .md-button--primary }
 [Edit the AI Flywheel MicroSim](https://editor.p5js.org/dmccreary/sketches/HC-HjkNpm)
 
 !!! prompt

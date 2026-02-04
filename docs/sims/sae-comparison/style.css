@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+    padding: 15px;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.comparison-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.header-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    background: #2c3e50;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-row > div {
+    padding: 12px 10px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.header-row > div:last-child {
+    border-right: none;
+}
+
+.data-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    border-bottom: 1px solid #eee;
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.level-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+.level-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.level-0 .level-badge { background: #95a5a6; }
+.level-2 .level-badge { background: #3498db; }
+.level-3 .level-badge { background: #f39c12; }
+.level-4 .level-badge { background: #e67e22; }
+.level-5 .level-badge { background: #e74c3c; }
+
+.sae-col, .textbook-col {
+    padding: 12px 15px;
+    border-right: 1px solid #eee;
+}
+
+.textbook-col {
+    border-right: none;
+}
+
+.data-row strong {
+    display: block;
+    color: #2c3e50;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.data-row p {
+    color: #666;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.threshold-row {
+    background: linear-gradient(90deg, #fff5f5 0%, #ffe5e5 50%, #fff5f5 100%);
+    border-top: 2px dashed #e74c3c;
+    border-bottom: 2px dashed #e74c3c;
+}
+
+.threshold-label {
+    text-align: center;
+    padding: 8px;
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.threshold-icon {
+    margin: 0 8px;
+}
+
+.level-3, .level-4, .level-5 {
+    background: linear-gradient(90deg, #fff 0%, #fff5f5 100%);
+}
+
+.key-insight {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: #e8f6f3;
+    border-left: 4px solid #1abc9c;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    .header-row, .data-row {
+        grid-template-columns: 45px 1fr 1fr;
+    }
+
+    .level-badge {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .sae-col, .textbook-col {
+        padding: 10px;
+    }
+
+    .data-row strong {
+        font-size: 11px;
+    }
+
+    .data-row p {
+        font-size: 10px;
+    }
+}

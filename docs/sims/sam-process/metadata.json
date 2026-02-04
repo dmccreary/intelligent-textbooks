@@ -1,0 +1,357 @@
+{
+  "microsim": {
+    "title": "SAM: Successive Approximation Model Process",
+    "description": "Interactive visualization of the Successive Approximation Model (SAM), an agile instructional design approach. Watch how quality improves through iterative cycles of design and development, with rapid prototyping and continuous stakeholder feedback replacing traditional linear processes.",
+    "subject": "Instructional Design",
+    "grade_level": "Undergraduate",
+    "topic": "SAM Model",
+    "keywords": [
+      "SAM",
+      "Successive Approximation Model",
+      "agile instructional design",
+      "iterative design",
+      "rapid prototyping",
+      "instructional design",
+      "Michael Allen",
+      "design iteration",
+      "continuous improvement",
+      "stakeholder collaboration"
+    ],
+    "learning_objectives": [
+      "Identify the three phases of the SAM process (Preparation, Iterative Design, Iterative Development)",
+      "Explain how SAM differs from traditional ADDIE approach",
+      "Understand the value of rapid prototyping and iteration",
+      "Recognize how product quality improves through successive iterations",
+      "Apply SAM principles to real instructional design projects"
+    ],
+    "prerequisites": [
+      "Basic understanding of instructional design",
+      "Familiarity with ADDIE model recommended",
+      "Understanding of project development workflows"
+    ],
+    "estimated_time": "12-15 minutes",
+    "language": "en-US",
+    "author": "Intelligent Textbooks Project",
+    "version": "1.0",
+    "created_date": "2025-10-21",
+    "last_modified": "2025-10-21",
+    "license": "CC BY-SA 4.0",
+    "framework": "p5.js",
+    "canvas_dimensions": {
+      "width": 800,
+      "height": 670,
+      "responsive": true
+    },
+    "controls": [
+      {
+        "type": "checkbox",
+        "name": "Auto-play Iterations",
+        "description": "Automatically progress through all iterations without manual clicking",
+        "default": false
+      },
+      {
+        "type": "button",
+        "name": "Next Iteration",
+        "description": "Manually advance to the next phase in the SAM process",
+        "action": "advance_phase"
+      },
+      {
+        "type": "button",
+        "name": "Reset Process",
+        "description": "Return to the beginning of the SAM process",
+        "action": "reset"
+      },
+      {
+        "type": "slider",
+        "name": "Iteration Speed",
+        "description": "Control how fast the iterations progress in auto-play mode",
+        "min": 0.005,
+        "max": 0.03,
+        "default": 0.015,
+        "step": 0.005,
+        "unit": ""
+      }
+    ],
+    "educational_features": {
+      "interactive_elements": [
+        "Step-through iteration control",
+        "Auto-play mode for full process",
+        "Adjustable animation speed",
+        "Visual spiral path showing progress",
+        "Clickable phase advancement"
+      ],
+      "visual_representations": [
+        "Spiral path visualization showing iterative cycles",
+        "Color-coded phases (blue/orange/green)",
+        "Quality meter showing improvement",
+        "Phase indicator boxes",
+        "Iteration counter with progress dots",
+        "Current activities panel",
+        "Particle effects for phase transitions"
+      ],
+      "feedback_mechanisms": [
+        "Real-time quality score updates",
+        "Visual iteration progress tracking",
+        "Phase-specific activity descriptions",
+        "Diminishing returns demonstration",
+        "Completion status indicators"
+      ]
+    },
+    "bloom_taxonomy_levels": [
+      "Remember",
+      "Understand",
+      "Apply",
+      "Analyze",
+      "Evaluate"
+    ],
+    "assessment_suggestions": [
+      "Ask students to compare SAM and ADDIE for a specific project scenario",
+      "Have students identify which phase specific activities belong to",
+      "Request students to explain when to use SAM vs. ADDIE",
+      "Ask students to describe how quality improves through iterations",
+      "Have students plan a SAM project with specific iteration goals"
+    ],
+    "extension_activities": [
+      "Design a Savvy Start workshop agenda for a real project",
+      "Create rapid prototypes using paper or digital tools",
+      "Analyze a failed project and propose how SAM could have helped",
+      "Compare time and cost estimates for ADDIE vs. SAM approaches",
+      "Interview practitioners about their experiences with SAM"
+    ],
+    "theoretical_foundation": {
+      "model": "Successive Approximation Model (SAM)",
+      "developer": "Michael Allen",
+      "year_introduced": "2012",
+      "key_principles": [
+        "Rapid prototyping over extensive planning",
+        "Iteration leads to better outcomes",
+        "Collaboration beats documentation",
+        "Test early and often with real learners",
+        "Embrace change as part of the process",
+        "Continuous improvement through feedback"
+      ],
+      "influences": [
+        "Agile software development methodologies",
+        "Design thinking processes",
+        "Lean development principles",
+        "Rapid prototyping practices"
+      ]
+    },
+    "sam_vs_addie": {
+      "approach": {
+        "sam": "Cyclical and iterative",
+        "addie": "Linear and sequential"
+      },
+      "planning": {
+        "sam": "Minimal upfront, evolve through iterations",
+        "addie": "Extensive upfront analysis and design"
+      },
+      "prototyping": {
+        "sam": "Early and frequent from day one",
+        "addie": "Late, typically in development phase"
+      },
+      "stakeholder_involvement": {
+        "sam": "Continuous throughout process",
+        "addie": "Primarily at analysis and evaluation phases"
+      },
+      "testing": {
+        "sam": "Throughout every iteration",
+        "addie": "Primarily at implementation/evaluation"
+      },
+      "changes": {
+        "sam": "Expected and welcomed",
+        "addie": "Expensive and discouraged after development"
+      },
+      "time_to_first_version": {
+        "sam": "Days to weeks",
+        "addie": "Weeks to months"
+      },
+      "best_for": {
+        "sam": "Unclear requirements, need speed, innovation valued",
+        "addie": "Clear requirements, compliance needs, fixed scope"
+      }
+    },
+    "three_phases": {
+      "preparation": {
+        "name": "Preparation Phase",
+        "color": "#4A90E2",
+        "icon": "\ud83d\udccb",
+        "duration": "1-2 days typically",
+        "activities": [
+          "Gather information about learners and context",
+          "Identify instructional problems and needs",
+          "Define project scope and constraints",
+          "Brainstorm potential solutions with team"
+        ],
+        "deliverable": "Project brief and initial design ideas"
+      },
+      "iterative_design": {
+        "name": "Iterative Design Phase",
+        "color": "#F5A623",
+        "icon": "\u270f\ufe0f",
+        "duration": "Multiple 1-3 day cycles",
+        "activities": [
+          "Create rapid prototypes (paper, mockups, sketches)",
+          "Review with stakeholders in collaborative sessions",
+          "Gather immediate feedback and insights",
+          "Refine design based on stakeholder input"
+        ],
+        "deliverable": "Validated design ready for development"
+      },
+      "iterative_development": {
+        "name": "Iterative Development Phase",
+        "color": "#7ED321",
+        "icon": "\ud83d\udd27",
+        "duration": "Multiple 1-2 week sprints",
+        "activities": [
+          "Build functional content incrementally",
+          "Test with actual target learners",
+          "Collect performance data and feedback",
+          "Implement improvements in next iteration"
+        ],
+        "deliverable": "Production-ready learning solution"
+      }
+    },
+    "savvy_start_workshop": {
+      "description": "Intensive collaborative design workshop that kicks off SAM projects",
+      "duration": "1-3 days typically",
+      "participants": [
+        "Subject matter experts",
+        "Instructional designers",
+        "Project stakeholders",
+        "Technical developers",
+        "Representative learners (when possible)"
+      ],
+      "activities": [
+        "Brainstorm solutions collaboratively",
+        "Create rough prototypes immediately",
+        "Test ideas in real-time",
+        "Build team consensus",
+        "Define iteration goals"
+      ],
+      "outcome": "Aligned team with validated design direction and working prototypes"
+    },
+    "quality_progression": {
+      "description": "Quality improves with each iteration but with diminishing returns",
+      "iteration_1": {
+        "quality_range": "40-55%",
+        "descriptor": "Initial rough draft, functional but unpolished"
+      },
+      "iteration_2": {
+        "quality_range": "55-70%",
+        "descriptor": "Improved based on feedback, clearer direction"
+      },
+      "iteration_3": {
+        "quality_range": "70-80%",
+        "descriptor": "More polished and effective, refined features"
+      },
+      "iteration_4": {
+        "quality_range": "80-90%",
+        "descriptor": "Fine-tuned with user input, near production quality"
+      },
+      "iteration_5": {
+        "quality_range": "90-98%",
+        "descriptor": "High-quality finished product, ready for deployment"
+      }
+    },
+    "common_pitfalls": [
+      {
+        "pitfall": "Insufficient stakeholder involvement",
+        "solution": "Schedule regular review sessions with all stakeholders"
+      },
+      {
+        "pitfall": "Analysis paralysis in preparation phase",
+        "solution": "Set strict time limits and move to prototyping quickly"
+      },
+      {
+        "pitfall": "Over-iteration (perfectionism)",
+        "solution": "Define 'good enough' criteria upfront and stick to them"
+      },
+      {
+        "pitfall": "Skipping learner testing",
+        "solution": "Make testing with real learners mandatory in each cycle"
+      },
+      {
+        "pitfall": "Using slow prototyping tools",
+        "solution": "Invest in rapid prototyping tools and train team members"
+      }
+    ],
+    "technical_requirements": {
+      "libraries": [
+        "p5.js v1.11.2"
+      ],
+      "browser_compatibility": [
+        "Chrome",
+        "Firefox",
+        "Safari",
+        "Edge"
+      ],
+      "responsive": true,
+      "mobile_friendly": true
+    },
+    "accessibility": {
+      "screen_reader_support": true,
+      "keyboard_navigation": false,
+      "color_blind_safe": true,
+      "described_content": "Interactive SAM process visualizer showing three phases with spiral path, quality improvement tracking, and iterative progression through design and development cycles"
+    },
+    "references": [
+      "Allen, M. W., & Sites, R. (2012). Leaving ADDIE for SAM: An Agile Model for Developing the Best Learning Experiences. ASTD Press.",
+      "Allen, M. W. (2016). Designing Successful e-Learning: Forget What You Know About Instructional Design and Do Something Interesting. Pfeiffer.",
+      "Hnatiuk, J. (2021). SAM for Instructional Designers. ATD Press.",
+      "Branch, R. M. (2009). Instructional Design: The ADDIE Approach. Springer."
+    ],
+    "file_structure": {
+      "main_html": "main.html",
+      "javascript": "sam-process.js",
+      "documentation": "index.md",
+      "metadata": "metadata.json"
+    }
+  },
+  "visualizationType": [
+    "animation",
+    "data-visualization",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "explain",
+      "summarize"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
+}

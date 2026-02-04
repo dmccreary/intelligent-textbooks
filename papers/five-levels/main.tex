@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+
+% ArXiv-compatible packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+
+% Page geometry
+\usepackage[margin=1in]{geometry}
+
+% Table formatting
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Title and authors
+\title{A Five-Level Classification Framework for Intelligent Textbooks: Lessons from Autonomous Vehicle Standards}
+
+\author{
+    Dan McCreary \\
+    \texttt{https://www.linkedin.com/in/danmccreary/}
+}
+
+\date{Version 0.04 \\ \today}
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\input{sections/01-abstract}
+
+% Main content sections
+\input{sections/02-introduction}
+\input{sections/03-economics}
+\input{sections/04-related-work}
+\input{sections/05-sae-analogy}
+\input{sections/06-five-levels}
+\input{sections/07-privacy-threshold}
+\input{sections/08-standards}
+\input{sections/09-implementation}
+\input{sections/10-discussion}
+\input{sections/11-recommendations}
+\input{sections/12-conclusion}
+
+% Acknowledgments
+\section*{Acknowledgments}
+The author would like to thank the educational technology research community and the developers of open educational resources whose work has informed this framework.
+
+% References
+\bibliographystyle{ieeetr}
+\bibliography{sections/references}
+
+\end{document}

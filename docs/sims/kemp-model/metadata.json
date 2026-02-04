@@ -1,0 +1,410 @@
+{
+  "microsim": {
+    "title": "Kemp Design Model Interactive Visualization",
+    "description": "Interactive visualization of the Kemp Design Model, a flexible instructional design framework with nine interconnected elements arranged in a circle. Users can click any element to explore details and see connections, emphasizing the model's non-linear, holistic approach where designers can start anywhere and move in any direction.",
+    "subject": "Instructional Design",
+    "grade_level": "Undergraduate",
+    "topic": "Kemp Model",
+    "keywords": [
+      "Kemp model",
+      "Kemp design model",
+      "instructional design",
+      "flexible design",
+      "circular model",
+      "holistic design",
+      "non-linear design",
+      "Jerrold Kemp",
+      "nine elements",
+      "systems thinking"
+    ],
+    "learning_objectives": [
+      "Identify the nine elements of the Kemp Design Model",
+      "Explain how Kemp differs from linear models like ADDIE",
+      "Understand the flexible, non-sequential nature of the model",
+      "Recognize how all elements interconnect and influence each other",
+      "Apply Kemp's holistic approach to instructional design projects",
+      "Determine appropriate starting points for different project types"
+    ],
+    "prerequisites": [
+      "Basic understanding of instructional design",
+      "Familiarity with at least one other design model (ADDIE recommended)",
+      "Understanding of learning objectives and assessment"
+    ],
+    "estimated_time": "10-15 minutes",
+    "language": "en-US",
+    "author": "Intelligent Textbooks Project",
+    "version": "1.0",
+    "created_date": "2025-10-21",
+    "last_modified": "2025-10-21",
+    "license": "CC BY-SA 4.0",
+    "framework": "p5.js",
+    "canvas_dimensions": {
+      "width": 800,
+      "height": 650,
+      "responsive": true
+    },
+    "controls": [
+      {
+        "type": "clickable_elements",
+        "name": "Nine Element Circles",
+        "description": "Click any of the nine colored circles to view detailed information about that element",
+        "interaction": "click"
+      },
+      {
+        "type": "checkbox",
+        "name": "Show All Connections",
+        "description": "Toggle to display lines showing how all elements interconnect",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "name": "Animate Connections",
+        "description": "Animate the connection lines to show data flow",
+        "default": false
+      },
+      {
+        "type": "button",
+        "name": "Reset Selection",
+        "description": "Clear the selected element and close the details panel",
+        "action": "reset"
+      }
+    ],
+    "educational_features": {
+      "interactive_elements": [
+        "Clickable element circles (9 total)",
+        "Expandable details panel",
+        "Connection visualization",
+        "Animated relationship flows",
+        "Hover effects on elements"
+      ],
+      "visual_representations": [
+        "Circular arrangement of elements",
+        "Color-coded elements with icons",
+        "Connection lines between elements",
+        "Central Kemp indicator",
+        "Details panel with examples"
+      ],
+      "feedback_mechanisms": [
+        "Element highlighting on hover",
+        "Selected element visual emphasis",
+        "Details panel with descriptions",
+        "Connection visualization",
+        "Flexibility reminder message"
+      ]
+    },
+    "bloom_taxonomy_levels": [
+      "Remember",
+      "Understand",
+      "Apply",
+      "Analyze",
+      "Evaluate"
+    ],
+    "assessment_suggestions": [
+      "Ask students to identify which element they would start with for different projects",
+      "Have students explain how changing one element affects others",
+      "Request comparison of Kemp with ADDIE or SAM for specific scenarios",
+      "Ask students to sequence elements for a given project and justify the order",
+      "Have students identify which elements are most interconnected"
+    ],
+    "extension_activities": [
+      "Map a real project to the nine Kemp elements",
+      "Create a Kemp-based project plan showing element interdependencies",
+      "Compare Kemp to other circular/systems models",
+      "Develop checklists for each Kemp element",
+      "Interview instructional designers about which elements they address first"
+    ],
+    "theoretical_foundation": {
+      "model": "Kemp Design Model",
+      "developer": "Jerrold Kemp",
+      "year_introduced": "1977",
+      "key_principles": [
+        "Holistic systems perspective on instructional design",
+        "Flexible, non-sequential approach to design",
+        "All elements are interconnected and interdependent",
+        "Designers can start at any point based on project needs",
+        "Continuous revision of elements as information emerges",
+        "Learner-centered focus throughout design"
+      ],
+      "theoretical_bases": [
+        "Systems theory",
+        "Holistic design thinking",
+        "Learner-centered design",
+        "Flexible project management"
+      ]
+    },
+    "nine_elements": {
+      "element_1": {
+        "name": "Instructional Problems",
+        "icon": "\u2753",
+        "color": "#4A90E2",
+        "description": "Identify what learners need to know or be able to do",
+        "key_questions": [
+          "What gaps exist in current performance?",
+          "What learning needs must be addressed?",
+          "What problems will instruction solve?"
+        ],
+        "examples": [
+          "Performance gaps",
+          "Learning needs",
+          "Skill deficiencies"
+        ]
+      },
+      "element_2": {
+        "name": "Learner Characteristics",
+        "icon": "\ud83d\udc65",
+        "color": "#F5A623",
+        "description": "Examine who your learners are and what they bring",
+        "key_questions": [
+          "What prior knowledge do learners have?",
+          "What are their learning preferences?",
+          "What motivates them to learn?"
+        ],
+        "examples": [
+          "Prior knowledge",
+          "Learning preferences",
+          "Motivation levels"
+        ]
+      },
+      "element_3": {
+        "name": "Task Analysis",
+        "icon": "\ud83d\udccb",
+        "color": "#7ED321",
+        "description": "Determine subject content and skills to be learned",
+        "key_questions": [
+          "What specific content must be covered?",
+          "What skills need to be developed?",
+          "What knowledge domains are involved?"
+        ],
+        "examples": [
+          "Content topics",
+          "Skill requirements",
+          "Knowledge domains"
+        ]
+      },
+      "element_4": {
+        "name": "Instructional Objectives",
+        "icon": "\ud83c\udfaf",
+        "color": "#BD10E0",
+        "description": "State specific, measurable learning outcomes",
+        "key_questions": [
+          "What will learners be able to do after instruction?",
+          "How will success be measured?",
+          "What performance criteria apply?"
+        ],
+        "examples": [
+          "Performance criteria",
+          "Observable behaviors",
+          "Success measures"
+        ]
+      },
+      "element_5": {
+        "name": "Content Sequencing",
+        "icon": "\ud83d\udcca",
+        "color": "#E94B3C",
+        "description": "Arrange content in logical, effective order",
+        "key_questions": [
+          "In what order should concepts be taught?",
+          "What are the prerequisites?",
+          "How should complexity progress?"
+        ],
+        "examples": [
+          "Simple to complex",
+          "Prerequisites first",
+          "Logical progression"
+        ]
+      },
+      "element_6": {
+        "name": "Instructional Strategies",
+        "icon": "\ud83d\udca1",
+        "color": "#50E3C2",
+        "description": "Design teaching methods and learning activities",
+        "key_questions": [
+          "What teaching methods will be most effective?",
+          "What learning activities support objectives?",
+          "How will learners engage with content?"
+        ],
+        "examples": [
+          "Teaching methods",
+          "Learning activities",
+          "Engagement tactics"
+        ]
+      },
+      "element_7": {
+        "name": "Instructional Delivery",
+        "icon": "\ud83d\udcf1",
+        "color": "#F8E71C",
+        "description": "Plan how instruction will be delivered",
+        "key_questions": [
+          "What delivery format is most appropriate?",
+          "What technology will be used?",
+          "How will content be distributed?"
+        ],
+        "examples": [
+          "Delivery format",
+          "Technology tools",
+          "Distribution method"
+        ]
+      },
+      "element_8": {
+        "name": "Evaluation Instruments",
+        "icon": "\u2705",
+        "color": "#9013FE",
+        "description": "Develop assessments to measure learning",
+        "key_questions": [
+          "How will learning be assessed?",
+          "What evaluation methods align with objectives?",
+          "When will assessment occur?"
+        ],
+        "examples": [
+          "Tests and quizzes",
+          "Performance tasks",
+          "Rubrics and criteria"
+        ]
+      },
+      "element_9": {
+        "name": "Support Services",
+        "icon": "\ud83d\udee0\ufe0f",
+        "color": "#4A4A4A",
+        "description": "Select resources and support needed",
+        "key_questions": [
+          "What resources are required?",
+          "What budget and timeline constraints exist?",
+          "What support services are needed?"
+        ],
+        "examples": [
+          "Materials needed",
+          "Technical support",
+          "Budget and time"
+        ]
+      }
+    },
+    "model_characteristics": {
+      "structure": "Circular with nine interconnected elements",
+      "sequencing": "Non-sequential, flexible starting point",
+      "iteration": "Continuous revision of any element at any time",
+      "perspective": "Holistic systems view",
+      "emphasis": "Learner-centered throughout",
+      "unique_features": [
+        "Explicit support services element",
+        "No implied element hierarchy",
+        "Maximum design flexibility",
+        "All elements equally important"
+      ]
+    },
+    "comparison_with_other_models": {
+      "vs_addie": {
+        "kemp_advantage": "Flexible starting point and sequence",
+        "addie_advantage": "Clear structure and milestones",
+        "when_kemp_better": "Complex projects with multiple stakeholders",
+        "when_addie_better": "Clear requirements and regulatory compliance"
+      },
+      "vs_sam": {
+        "kemp_advantage": "Holistic view of all factors simultaneously",
+        "sam_advantage": "Rapid prototyping and quick delivery",
+        "when_kemp_better": "Projects needing comprehensive planning",
+        "when_sam_better": "Unclear requirements needing discovery"
+      }
+    },
+    "practical_applications": {
+      "best_for": [
+        "Complex projects with interdependent factors",
+        "Ongoing programs requiring continuous revision",
+        "Projects with multiple stakeholder groups",
+        "Situations where information emerges gradually",
+        "Teams comfortable with non-linear processes"
+      ],
+      "challenges": [
+        "Can feel less structured than ADDIE",
+        "Requires discipline to address all elements",
+        "May confuse stakeholders expecting linear process",
+        "Easy to neglect elements due to flexibility"
+      ],
+      "success_factors": [
+        "Regular reviews of all nine elements",
+        "Clear documentation of element status",
+        "Alignment checks between elements",
+        "Stakeholder education about model flexibility"
+      ]
+    },
+    "technical_requirements": {
+      "libraries": [
+        "p5.js v1.11.2"
+      ],
+      "browser_compatibility": [
+        "Chrome",
+        "Firefox",
+        "Safari",
+        "Edge"
+      ],
+      "responsive": true,
+      "mobile_friendly": true
+    },
+    "accessibility": {
+      "screen_reader_support": true,
+      "keyboard_navigation": false,
+      "color_blind_safe": true,
+      "described_content": "Interactive Kemp Design Model with nine clickable elements arranged in a circle, showing descriptions, examples, and interconnections between all elements"
+    },
+    "references": [
+      "Kemp, J. E., Morrison, G. R., & Ross, S. M. (1998). Designing Effective Instruction (3rd ed.). Prentice Hall.",
+      "Morrison, G. R., Ross, S. J., Morrison, J. R., & Kalman, H. K. (2019). Designing Effective Instruction (8th ed.). Wiley.",
+      "Branch, R. M., & Dousay, T. A. (2015). Survey of Instructional Design Models (5th ed.). AECT.",
+      "Gustafson, K. L., & Branch, R. M. (2002). Survey of Instructional Development Models (4th ed.). ERIC."
+    ],
+    "file_structure": {
+      "main_html": "main.html",
+      "javascript": "kemp-model.js",
+      "documentation": "index.md",
+      "metadata": "metadata.json"
+    }
+  },
+  "visualizationType": [
+    "3d-model",
+    "animation",
+    "data-visualization",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "summarize",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
+}

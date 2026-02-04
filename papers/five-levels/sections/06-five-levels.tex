@@ -1,0 +1,124 @@
+\section{The Five Levels of Intelligent Textbooks}
+
+We propose a five-level classification framework for intelligent textbooks, ranging from static content to fully autonomous AI-driven learning systems. Figure~\ref{fig:five-levels} provides a visual overview of this framework.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/f1-book-levels.png}
+\caption{The Five Levels of Intelligent Textbooks. Each level represents increasing capabilities in personalization, interactivity, and AI integration, with corresponding increases in data requirements and privacy considerations.}
+\label{fig:five-levels}
+\end{figure}
+
+\subsection{Level 1: Static Textbooks}
+
+\textbf{Definition}: Traditional printed or digital formats with fixed content and no interactive elements.
+
+\textbf{Characteristics}:
+\begin{itemize}
+    \item Composed of text and static images
+    \item Linear progression through material
+    \item No digital interactivity or personalization
+    \item Content does not adapt to the learner
+\end{itemize}
+
+\textbf{Data Requirements}: None. Level 1 textbooks collect no student data.
+
+\textbf{Current Status}: Over 90\% of textbooks used by college students today remain at Level 1, including both physical books and static PDFs.
+
+\subsection{Level 2: Interactive Content Textbooks}
+
+\textbf{Definition}: Digital textbooks incorporating interactive elements that engage readers beyond passive consumption.
+
+\textbf{Characteristics}:
+\begin{itemize}
+    \item Keyword search functionality
+    \item Internal and external hyperlinks
+    \item Embedded videos and multimedia content
+    \item Simple self-assessment quizzes with immediate feedback
+    \item Interactive simulations (MicroSims) for concept visualization
+    \item Learning graphs showing concept dependencies and prerequisites
+    \item Detailed glossary with contextual linking
+    \item Social sharing capabilities
+    \item Optional anonymous usage analytics
+\end{itemize}
+
+\textbf{Data Requirements}: Minimal. Anonymous aggregate analytics may be collected (page views, time on page), but no individual student tracking is required for core functionality.
+
+\textbf{Evidence of Effectiveness}: Research on interactive simulations demonstrates significant learning gains. The MicroSims framework~\cite{lockhart2025microsims} reports that interactive simulations can enhance conceptual understanding by 30--40\% compared to conventional teaching methods, while AI-assisted creation tools dramatically reduce development costs.
+
+\textbf{Implementation}: Can be achieved with static site generators (e.g., MkDocs), embedded JavaScript simulations, and optional analytics platforms.
+
+\subsection{Level 3: Adaptive Textbooks}
+
+\textbf{Definition}: Textbooks that dynamically adjust content presentation based on individual learner performance and behavior.
+
+\textbf{Characteristics}:
+\begin{itemize}
+    \item Personalized learning pathways through deterministic rules
+    \item Algorithmic traversal of learning graphs (present at Level 2) combined with individual performance data
+    \item Selection of content based on assessment performance
+    \item Spaced repetition for knowledge reinforcement
+    \item Continuous recording of concept mastery
+    \item Prerequisite enforcement and remediation
+\end{itemize}
+
+\textbf{Data Requirements}: Significant. Systems must maintain individual learning histories including assessment results, time spent on concepts, error patterns, and mastery estimates.
+
+\textbf{Technical Requirements}: Learning management system integration, graph databases for concept relationships, student authentication systems.
+
+\subsection{Level 4: Textbooks with Chatbots}
+
+\textbf{Definition}: Textbooks integrating intelligent conversational interfaces that provide real-time, personalized assistance.
+
+\textbf{Characteristics}:
+\begin{itemize}
+    \item Large Language Model (LLM) integration for tutoring
+    \item Natural language question answering about content
+    \item GraphRAG architecture combining retrieval and generation
+    \item Real-time feedback on student questions
+    \item Socratic dialogue capabilities
+    \item Content recommendations based on conversation analysis
+\end{itemize}
+
+\textbf{Data Requirements}: High. Systems log complete conversation histories, including potentially sensitive questions students might not ask human instructors.
+
+\textbf{Technical Requirements}: LLM infrastructure (cloud or local), embedding models, vector databases, careful prompt engineering to ensure accuracy.
+
+\subsection{Level 5: Autonomous AI Textbooks}
+
+\textbf{Definition}: Systems where AI fully understands individual learner needs and autonomously generates personalized learning experiences across all contexts.
+
+\textbf{Characteristics}:
+\begin{itemize}
+    \item Deep understanding of individual student knowledge states
+    \item Real-time generation of customized lessons and explanations
+    \item Autonomous assessment creation tailored to learner gaps
+    \item Complete adaptability to learning styles and preferences
+    \item Proactive intervention when confusion is detected
+    \item Human-like tutoring capabilities without human oversight
+\end{itemize}
+
+\textbf{Data Requirements}: Very high. Systems require comprehensive learner profiles including cognitive patterns, behavioral indicators, and potentially affective states.
+
+\textbf{Current Status}: Aspirational. No current systems reliably achieve Level 5 across all educational contexts. This level requires advances in AI reliability, interpretability, and privacy-preserving computation.
+
+\subsection{Summary Comparison}
+
+Table~\ref{tab:level-comparison} summarizes the key distinctions between levels.
+
+\begin{table}[h]
+\centering
+\caption{Comparison of Intelligent Textbook Levels}
+\begin{tabular}{@{}clccc@{}}
+\toprule
+Level & Type & Personalization & Data Required & AI Dependency \\
+\midrule
+1 & Static & None & None & None \\
+2 & Interactive & None & Minimal & Optional \\
+3 & Adaptive & Rule-based & Individual history & Algorithms \\
+4 & Chatbot & Conversational & Conversation logs & LLM \\
+5 & Autonomous & Full & Comprehensive & Advanced AI \\
+\bottomrule
+\end{tabular}
+\label{tab:level-comparison}
+\end{table}

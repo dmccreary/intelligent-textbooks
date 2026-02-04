@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Textbook Implementation Decision Matrix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Implementation Decision Matrix</h1>
+        <p class="subtitle">Choosing the right level based on capability and investment</p>
+
+        <div class="matrix">
+            <div class="y-axis">
+                <span class="axis-label">Technical Capability & Investment</span>
+                <div class="axis-scale">
+                    <span>High</span>
+                    <span>Medium</span>
+                    <span>Low</span>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="x-axis">
+                    <span>Low</span>
+                    <span>Medium</span>
+                    <span>High</span>
+                </div>
+                <div class="x-label">Data Infrastructure & Privacy Readiness</div>
+
+                <div class="grid">
+                    <!-- Row 1: High capability -->
+                    <div class="cell level-4">
+                        <div class="cell-content">
+                            <span class="level-badge">L4</span>
+                            <strong>Chatbot Path</strong>
+                            <p>Add LLM to L2 content; skip data-heavy L3</p>
+                        </div>
+                    </div>
+                    <div class="cell level-4">
+                        <div class="cell-content">
+                            <span class="level-badge">L4</span>
+                            <strong>Full L4</strong>
+                            <p>Complete chatbot integration with data logging</p>
+                        </div>
+                    </div>
+                    <div class="cell level-5">
+                        <div class="cell-content">
+                            <span class="level-badge">L5</span>
+                            <strong>Future-Ready</strong>
+                            <p>Build toward autonomous systems</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Medium capability -->
+                    <div class="cell level-2">
+                        <div class="cell-content">
+                            <span class="level-badge">L2</span>
+                            <strong>Enhanced L2</strong>
+                            <p>Rich interactivity; no student tracking</p>
+                        </div>
+                    </div>
+                    <div class="cell level-3">
+                        <div class="cell-content">
+                            <span class="level-badge">L3</span>
+                            <strong>Adaptive</strong>
+                            <p>Rule-based personalization</p>
+                        </div>
+                    </div>
+                    <div class="cell level-3">
+                        <div class="cell-content">
+                            <span class="level-badge">L3+</span>
+                            <strong>Advanced L3</strong>
+                            <p>Full adaptive with GraphRAG prep</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Low capability -->
+                    <div class="cell level-1">
+                        <div class="cell-content">
+                            <span class="level-badge">L1</span>
+                            <strong>Static</strong>
+                            <p>PDF/print equivalent</p>
+                        </div>
+                    </div>
+                    <div class="cell level-2">
+                        <div class="cell-content">
+                            <span class="level-badge">L2</span>
+                            <strong>Basic Interactive</strong>
+                            <p>MicroSims, quizzes, search</p>
+                        </div>
+                    </div>
+                    <div class="cell level-2">
+                        <div class="cell-content">
+                            <span class="level-badge">L2</span>
+                            <strong>L2 + Analytics</strong>
+                            <p>Anonymous usage data only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <div class="rec-item">
+                <div class="rec-header level-1-bg">Start Here</div>
+                <div class="rec-body">Most organizations should begin with <strong>Level 2</strong> - it's cost-effective, requires no student data, and provides significant educational value.</div>
+            </div>
+            <div class="rec-item">
+                <div class="rec-header level-3-bg">Leapfrog Option</div>
+                <div class="rec-body">High-capability organizations with limited data infrastructure can go directly to <strong>Level 4</strong> (chatbots) without building Level 3 data systems.</div>
+            </div>
+            <div class="rec-item">
+                <div class="rec-header level-5-bg">Strategic Investment</div>
+                <div class="rec-body">Building <strong>Level 3 infrastructure now</strong> positions you for Level 4-5 capabilities as AI matures—but requires privacy compliance investment.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

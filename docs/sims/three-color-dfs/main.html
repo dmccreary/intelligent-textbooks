@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Color DFS Cycle Detection</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Three-Color DFS Algorithm</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color color-white"></div>
+                <span><strong>Gray</strong> - Unvisited</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-gray"></div>
+                <span><strong>Yellow</strong> - In Progress</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-black"></div>
+                <span><strong>Green</strong> - Completed</span>
+            </div>
+        </div>
+
+        <!-- Right panel with controls, stack, and status -->
+        <div class="right-panel">
+            <div class="controls">
+                <div class="step-counter" id="step-counter">Step 0 / 19</div>
+                <button class="btn btn-primary" id="next-btn">Next Step</button>
+                <button class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+
+            <div class="stack-container">
+                <div class="stack-title">DFS Stack:</div>
+                <div class="stack" id="dfs-stack">
+                    <div class="stack-empty">Empty - Click "Next Step"</div>
+                </div>
+                <div class="stack-label">Top of Stack</div>
+            </div>
+
+            <div class="status-info" id="status-info">
+                <div class="status-title">Current Action:</div>
+                <div class="status-text" id="status-text">
+                    Click "Next Step" to begin DFS traversal.
+                </div>
+            </div>
+
+            <div class="cycle-alert" id="cycle-alert">
+                <div class="cycle-alert-title">Cycle Detected!</div>
+                <div class="cycle-alert-text">
+                    Back edge: <strong>Recursion → Loops</strong><br>
+                    Cycle: <strong>Loops → Recursion → Loops</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="three-color-dfs.js"></script>
+</body>
+</html>

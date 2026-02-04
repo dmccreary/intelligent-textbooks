@@ -1,0 +1,200 @@
+{
+  "microsim": {
+    "title": "ADDIE Workflow Interactive Model",
+    "description": "Interactive visualization of the ADDIE instructional design model showing the five phases (Analysis, Design, Development, Implementation, Evaluation) and their iterative relationships. Users can click phases to explore details and see how designers cycle through the process.",
+    "subject": "Instructional Design",
+    "grade_level": "Undergraduate",
+    "topic": "ADDIE Model",
+    "keywords": [
+      "ADDIE",
+      "instructional design",
+      "analysis",
+      "design",
+      "development",
+      "implementation",
+      "evaluation",
+      "workflow",
+      "iterative design",
+      "educational design"
+    ],
+    "learning_objectives": [
+      "Identify the five phases of the ADDIE instructional design model",
+      "Explain the purpose and key tasks of each ADDIE phase",
+      "Understand that instructional design is an iterative process",
+      "Recognize when to cycle back to earlier phases based on findings"
+    ],
+    "prerequisites": [
+      "Basic understanding of educational content creation",
+      "Familiarity with learning objectives"
+    ],
+    "estimated_time": "10-15 minutes",
+    "language": "en-US",
+    "author": "Intelligent Textbooks Project",
+    "version": "1.0",
+    "created_date": "2025-10-21",
+    "last_modified": "2025-10-21",
+    "license": "CC BY-SA 4.0",
+    "framework": "p5.js",
+    "canvas_dimensions": {
+      "width": 800,
+      "height": 720,
+      "responsive": true
+    },
+    "controls": [
+      {
+        "type": "clickable_nodes",
+        "name": "Phase Nodes",
+        "description": "Click on any of the five colored circles to view detailed tasks for that phase",
+        "interaction": "click"
+      },
+      {
+        "type": "checkbox",
+        "name": "Show Iteration Arrows",
+        "description": "Toggle display of arrows showing how designers can return to earlier phases",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "name": "Show Task Checkboxes",
+        "description": "Display individual tasks within each phase as checkable items",
+        "default": false
+      },
+      {
+        "type": "button",
+        "name": "Animate Flow",
+        "description": "Start/stop animation showing progression through ADDIE phases",
+        "action": "toggle_animation"
+      },
+      {
+        "type": "button",
+        "name": "Reset All",
+        "description": "Reset all selections and animations to initial state",
+        "action": "reset"
+      },
+      {
+        "type": "slider",
+        "name": "Animation Speed",
+        "description": "Control the speed of the flow animation",
+        "min": 0.005,
+        "max": 0.05,
+        "default": 0.02,
+        "step": 0.005,
+        "unit": ""
+      }
+    ],
+    "educational_features": {
+      "interactive_elements": [
+        "Clickable phase nodes",
+        "Expandable detail panels",
+        "Animated workflow visualization",
+        "Toggle switches for different views"
+      ],
+      "visual_representations": [
+        "Pentagon workflow diagram",
+        "Color-coded phases",
+        "Iteration arrows",
+        "Flow animation"
+      ],
+      "feedback_mechanisms": [
+        "Hover effects on phases",
+        "Selected phase highlighting",
+        "Detail panel display",
+        "Visual flow animation"
+      ]
+    },
+    "bloom_taxonomy_levels": [
+      "Remember",
+      "Understand",
+      "Apply"
+    ],
+    "assessment_suggestions": [
+      "Ask students to identify which phase specific tasks belong to",
+      "Have students describe scenarios requiring iteration back to earlier phases",
+      "Request examples of how each phase would apply to a specific project",
+      "Ask students to sequence the phases and explain the rationale"
+    ],
+    "extension_activities": [
+      "Compare ADDIE to other instructional design models (SAM, Agile)",
+      "Create a detailed project plan using ADDIE for a specific learning objective",
+      "Analyze case studies showing successful and unsuccessful use of ADDIE",
+      "Develop checklists for each phase customized to your content area"
+    ],
+    "technical_requirements": {
+      "libraries": [
+        "p5.js v1.11.2"
+      ],
+      "browser_compatibility": [
+        "Chrome",
+        "Firefox",
+        "Safari",
+        "Edge"
+      ],
+      "responsive": true,
+      "mobile_friendly": true
+    },
+    "accessibility": {
+      "screen_reader_support": true,
+      "keyboard_navigation": false,
+      "color_blind_safe": true,
+      "described_content": "Interactive ADDIE workflow diagram with clickable phases showing Analysis, Design, Development, Implementation, and Evaluation"
+    },
+    "references": [
+      "Branch, R. M. (2009). Instructional Design: The ADDIE Approach. Springer.",
+      "Morrison, G. R., Ross, S. J., Morrison, J. R., & Kalman, H. K. (2019). Designing Effective Instruction (8th ed.). Wiley.",
+      "Dick, W., Carey, L., & Carey, J. O. (2014). The Systematic Design of Instruction (8th ed.). Pearson."
+    ],
+    "file_structure": {
+      "main_html": "main.html",
+      "javascript": "addie-workflow.js",
+      "documentation": "index.md",
+      "metadata": "metadata.json"
+    }
+  },
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of this concept",
+    "Explore this concept through interactive visualization",
+    "Apply knowledge of this concept to solve problems",
+    "Experiment with parameters to observe their effects on this concept"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "summarize",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
+}

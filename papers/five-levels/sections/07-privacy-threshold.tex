@@ -1,0 +1,89 @@
+\section{The Privacy Threshold: Level 3 and Above}
+
+A critical finding of our analysis is the identification of Level 3 as a privacy inflection point. This section examines why this threshold matters and what it implies for governance. Figure~\ref{fig:privacy-threshold} visualizes the dramatic escalation in data collection requirements that occurs at Level 3.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/f3-privacy-threshold.png}
+\caption{The Privacy Threshold: Data collection intensity by intelligent textbook level. Levels 1--2 (green) require minimal or no student data, while Levels 3--5 (yellow to red) require progressively more extensive data collection, triggering regulatory requirements under FERPA, COPPA, and GDPR.}
+\label{fig:privacy-threshold}
+\end{figure}
+
+\subsection{The Nature of the Threshold}
+
+Below Level 3, intelligent textbooks can function with minimal or no student-specific data:
+
+\begin{itemize}
+    \item \textbf{Level 1} textbooks are static artifacts that collect nothing.
+    \item \textbf{Level 2} textbooks may collect anonymous usage analytics, but personalization does not depend on individual tracking.
+\end{itemize}
+
+At Level 3 and above, the fundamental value proposition changes. Adaptivity \textit{requires} knowing how individual students are performing:
+
+\begin{itemize}
+    \item \textbf{Level 3} systems track every assessment result, every wrong answer, every moment of hesitation.
+    \item \textbf{Level 4} systems log complete conversations, including questions students might never ask a human.
+    \item \textbf{Level 5} systems would require comprehensive cognitive profiling.
+\end{itemize}
+
+\subsection{Regulatory Implications}
+
+This threshold has immediate regulatory consequences:
+
+\textbf{FERPA} (Family Educational Rights and Privacy Act): In the United States, student education records are protected under FERPA. Level 3+ systems generate extensive education records, triggering compliance requirements around access, disclosure, and retention.
+
+\textbf{COPPA} (Children's Online Privacy Protection Act): For K-12 education, COPPA imposes additional requirements on collecting data from children under 13, including parental consent mechanisms.
+
+\textbf{GDPR} (General Data Protection Regulation): In the European Union, GDPR requires explicit consent, data minimization, and the right to erasure. Level 3+ systems must be designed with these requirements from inception.
+
+\textbf{State Laws}: Emerging state-level student privacy laws (e.g., California's SOPIPA) add additional compliance layers.
+
+\subsection{Institutional Responsibilities}
+
+When institutions adopt Level 3+ textbooks, they assume new responsibilities:
+
+\begin{enumerate}
+    \item \textbf{Data Custodianship}: The institution becomes responsible for protecting student learning data, requiring investment in security infrastructure.
+
+    \item \textbf{Vendor Management}: Contracts with textbook providers must address data ownership, retention, and breach notification.
+
+    \item \textbf{Audit Capabilities}: Institutions must be able to demonstrate compliance, requiring logging and reporting systems.
+
+    \item \textbf{Student Rights}: Students must be informed about data collection and provided mechanisms to access or delete their data.
+\end{enumerate}
+
+\subsection{Algorithmic Concerns}
+
+Beyond data privacy, Level 3+ systems raise algorithmic concerns:
+
+\textbf{Bias}: Adaptive algorithms may perpetuate or amplify biases present in training data. A system that routes struggling students to easier content might create self-fulfilling prophecies.
+
+\textbf{Transparency}: Students and instructors should understand why the system is making particular recommendations. Black-box adaptivity undermines trust and pedagogical autonomy.
+
+\textbf{Manipulation}: Systems optimized for engagement metrics might prioritize addictive patterns over genuine learning.
+
+\subsection{The Trust Paradox}
+
+Level 4 systems present a particular trust challenge. Students may share vulnerabilities with an AI tutor that they would never reveal to a human instructor. Questions like ``I don't understand anything in this chapter'' or searches for basic concepts can feel exposing. This candor enables better tutoring but creates sensitive records.
+
+Institutions must earn this trust through transparent policies, robust security, and genuine commitment to using data only for educational benefit.
+
+\subsection{Recommendations for Governance}
+
+We recommend differentiated governance based on level:
+
+\begin{table}[h]
+\centering
+\caption{Recommended Governance by Level}
+\begin{tabular}{@{}cL{10cm}@{}}
+\toprule
+Level & Governance Requirements \\
+\midrule
+1--2 & Standard content review; no special data governance required \\
+3 & Privacy impact assessment; data retention policy; student notification; bias auditing \\
+4 & All Level 3 requirements plus: conversation data protections; AI accuracy monitoring; human oversight mechanisms \\
+5 & All Level 4 requirements plus: comprehensive ethical review; ongoing algorithmic auditing; clear human override capabilities \\
+\bottomrule
+\end{tabular}
+\label{tab:governance}
+\end{table}

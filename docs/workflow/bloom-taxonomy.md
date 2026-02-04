@@ -1,6 +1,6 @@
 # Using the 2001 Bloom Taxonomy
 
-<iframe src="../sims/blooms-taxonomy/main.html" height="600px" width="600px" scrolling="no" style="overflow: hidden"></iframe>
+<iframe src="../../sims/blooms-taxonomy/main.html" height="600px" width="600px" scrolling="no" style="overflow: hidden"></iframe>
 
 We use the 2001 Bloom's Taxonomy to categorize learning objectives across six cognitive levels: Remember, Understand, Apply, Analyze, Evaluate, and Create. This scaffolds progressive skill development.
 

@@ -1,0 +1,76 @@
+{
+  "title": "Intelligent Textbook Ecosystem Dynamics",
+  "description": "A causal loop diagram showing how AI capabilities, MicroSims, faceted search, and teacher adoption interact to transform educational publishing.",
+  "subject": "Mathematics",
+  "topic": "Intelligent Textbook Ecosystem Dynamics",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vis-network",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/textbook-ecosystem-cld/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/textbook-ecosystem-cld/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "textbook-ecosystem-cld",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/textbook-ecosystem-cld",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of intelligent textbook ecosystem dynamics",
+    "Apply intelligent textbook ecosystem dynamics to solve problems",
+    "Visualize and interpret intelligent textbook ecosystem dynamics relationships",
+    "Experiment with parameters to observe their effects on intelligent textbook ecosystem dynamics"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "summarize",
+      "illustrate",
+      "experiment",
+      "investigate",
+      "test"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
+}

@@ -82,3 +82,54 @@ docs/sims/[name]/
 ## Python Environment
 
 The project uses conda for environment management rather than venv to support potential future multi-language dependencies. All Python utilities are in `src/` subdirectories with specific purposes (analytics, CSV processing, etc.).
+
+## Startup Message
+
+This project uses `companyAnnouncements` in `.claude/settings.local.json` to display available skills when a new conversation begins:
+
+```json
+{
+  "companyAnnouncements": [
+    "📚 Use the case-study-generator skill to add a case study. Just pass the local directory or repo URL."
+  ]
+}
+```
+
+This message appears at the start of each new Claude Code session, helping users discover project-specific skills. The message does not appear when using the `--continue` option to resume a previous conversation.
+
+## Available Skills
+
+### case-study-generator
+
+**Location:** `skills/case-study-generator/SKILL.md`
+
+**Purpose:** Generates case study entries for the case studies page from GitHub repositories.
+
+**When to use:** When the user provides a GitHub repo URL and wants to add it to `docs/case-studies/index.md`.
+
+**Usage:**
+```
+Add a case study for https://github.com/username/repo-name
+```
+
+**Workflow:**
+1. Check if repo exists in `~/Documents/ws/{repo-name}` first - if found, run `git pull` to update it
+2. If not found locally, clone to `/tmp/{repo-name}` (shallow clone)
+3. Extract metrics: title, description, file count, word count, MicroSim count, glossary terms
+4. Find or copy a thumbnail image from the repo's `docs/img/` directory
+5. Compress thumbnail to ~70KB using `python3 src/compress-thumbnails.py docs/case-studies/img 70`
+6. If PNG won't compress below 70KB, convert to JPEG: `python3 src/convert-png-to-jpg.py docs/case-studies/img 70`
+7. Generate the markdown entry with metrics
+8. Insert alphabetically into `docs/case-studies/index.md` inside the `<div class="grid cards grid-3-col" markdown>` block
+9. Clean up backup files; only clean up `/tmp` clone (not local workspace repos)
+
+**Entry format:**
+```markdown
+- **[Project Title](https://username.github.io/repo-name)**
+
+    ![Alt Text](./img/repo-name.jpg)
+
+    Brief 1-2 sentence description.
+
+    [:octicons-mark-github-16: Repository](https://github.com/username/repo-name) · XX Files · XXK Words · X MicroSims
+```

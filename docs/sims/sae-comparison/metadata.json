@@ -1,0 +1,67 @@
+{
+  "title": "SAE J3016 vs Intelligent Textbook Levels",
+  "description": "Side-by-side comparison of autonomous vehicle and intelligent textbook classification frameworks.",
+  "subject": "Physics",
+  "topic": "SAE J3016 vs Intelligent Textbook Levels",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vanilla-js",
+  "url": "https://dmccreary.github.io/intelligent-textbooks/sims/sae-comparison/",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/sae-comparison/",
+  "_source": {
+    "repo": "intelligent-textbooks",
+    "sim": "sae-comparison",
+    "github_url": "https://github.com/dmccreary/intelligent-textbooks/tree/main/docs/sims/sae-comparison",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Physics",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "simulation",
+    "interactive-demo",
+    "map"
+  ],
+  "learningObjectives": [
+    "Observe and understand sae j3016 vs intelligent textbook levels in action",
+    "Explore how changing parameters affects sae j3016 vs intelligent textbook levels",
+    "Apply physics principles to predict sae j3016 vs intelligent textbook levels behavior",
+    "Test understanding of sae j3016 vs intelligent textbook levels through interactive exercises"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "define",
+      "identify",
+      "state",
+      "classify",
+      "compare"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
+}
