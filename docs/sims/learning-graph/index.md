@@ -1,3 +1,4 @@
-# Learning Graph MicroSim
+# MicroSims and Infographics to Support Intelligent Textbooks
 
-[Graph Viewer](./graph-viewer.html)
+[Learning Graph Viewer](./graph-viewer.html)
+
