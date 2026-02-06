@@ -37,6 +37,14 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits) · 113 Files · 154K Words · 23 MicroSims
 
+- **[AI Infographics](https://dmccreary.github.io/infographics/)**
+
+    ![AI Infographics](./img/infographics.jpg)
+
+    A collection of resources for creating interactive infographics using AI tools. Includes templates and examples.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics)
+
 - **[AI Racing League](https://coderdojotc.github.io/ai-racing-league)**
 
     ![AI Racing League](./img/ai-racing-league.png)
@@ -53,14 +61,6 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/algebra-1) · Active Development
 
-- **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
-
-    ![Linear Algebra for AI and Machine Learning](./img/linear-algebra.jpg)
-
-    A college-level course bridging abstract linear algebra with real-world AI applications. Covers vectors, matrices, eigenvalues, neural networks, computer vision, and autonomous systems.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/linear-algebra) · 206 Files · 195K Words · 126 MicroSims · 299 Glossary Terms
-
 - **[AP Calculus](https://dmccreary.github.io/calculus)**
 
     ![AP Calculus](./img/calculus.jpg)
@@ -69,12 +69,6 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/calculus) · 208 Files · 248K Words · 100 MicroSims · 230 Glossary Terms
 
-- **[ASL Book](https://Olufsonc-hub.github.io/asl-book/)**
-
-    An intelligent textbook on American Sign Language designed to help students learn ASL through interactive content.
-
-    [:octicons-mark-github-16: Repository](https://github.com/Olufsonc-hub/asl-book)
-
 - **[Architectural Tradeoff Analysis Method](https://dmccreary.github.io/atam/)**
 
     ![ATAM](./img/atam.jpg)
@@ -82,6 +76,12 @@ frequently.
     ATAM is a method for evaluating software architecture, applied to database selection. Companion to 'Making Sense of NoSQL'.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/atam) · Early Stage
+
+- **[ASL Book](https://Olufsonc-hub.github.io/asl-book/)**
+
+    An intelligent textbook on American Sign Language designed to help students learn ASL through interactive content.
+
+    [:octicons-mark-github-16: Repository](https://github.com/Olufsonc-hub/asl-book)
 
 - **[Automating Instructional Design](https://dmccreary.github.io/automating-instructional-design/)**
 
@@ -107,37 +107,13 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/agents-course)
 
-- **[Conversational AI](https://dmccreary.github.io/conversational-ai)**
+- **[Clan MacQuarrie](https://dmccreary.github.io/clan-macquarrie/)**
 
-    ![Conversational AI](./img/conversational-ai.jpg)
+    ![Clan MacQuarrie](./img/clan-macquarrie.jpg)
 
-    A college-level course on creating chatbots. Covers NLP foundations, semantic search, LLMs, embeddings, and vector databases.
+    Educational resources on the history of the Scottish clan system with a focus on Clan MacQuarrie heritage and traditions.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/conversational-ai) · Active Development
-
-- **[Control Systems](https://dmccreary.github.io/control-systems)**
-
-    ![Control Systems](./img/control-systems.jpg)
-
-    Upper-division undergraduate course on classical control theory. Covers feedback, Laplace transforms, Bode plots, root locus, Nyquist stability, and PID design with Gyra the balancing robot.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/control-systems) · 70 Files · 152K Words · 6 MicroSims · 297 Glossary Terms
-
-- **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
-
-    ![Deep Learning](./img/deep-learning-course.jpg)
-
-    Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/deep-learning-course)
-
-- **[Clocks and Watches with AI](https://dmccreary.github.io/clocks-and-watches)**
-
-    ![Clocks and Watches](./img/clocks-and-watches.jpg)
-
-    Learn to design and build clocks and watches using breadboards, microcontrollers, RTCs, and displays. Ready for classroom testing.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clocks-and-watches) · 124 Files · 37K Words · 11 MicroSims
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clan-macquarrie)
 
 - **[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/claude-skills/)**
 
@@ -147,13 +123,37 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/claude-skills)
 
-- **[Clan MacQuarrie](https://dmccreary.github.io/clan-macquarrie/)**
+- **[Clocks and Watches with AI](https://dmccreary.github.io/clocks-and-watches)**
 
-    ![Clan MacQuarrie](./img/clan-macquarrie.jpg)
+    ![Clocks and Watches](./img/clocks-and-watches.jpg)
 
-    Educational resources on the history of the Scottish clan system with a focus on Clan MacQuarrie heritage and traditions.
+    Learn to design and build clocks and watches using breadboards, microcontrollers, RTCs, and displays. Ready for classroom testing.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clan-macquarrie)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clocks-and-watches) · 124 Files · 37K Words · 11 MicroSims
+
+- **[Control Systems](https://dmccreary.github.io/control-systems)**
+
+    ![Control Systems](./img/control-systems.jpg)
+
+    Upper-division undergraduate course on classical control theory. Covers feedback, Laplace transforms, Bode plots, root locus, Nyquist stability, and PID design with Gyra the balancing robot.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/control-systems) · 70 Files · 152K Words · 6 MicroSims · 297 Glossary Terms
+
+- **[Conversational AI](https://dmccreary.github.io/conversational-ai)**
+
+    ![Conversational AI](./img/conversational-ai.jpg)
+
+    A college-level course on creating chatbots. Covers NLP foundations, semantic search, LLMs, embeddings, and vector databases.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/conversational-ai) · Active Development
+
+- **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
+
+    ![Deep Learning](./img/deep-learning-course.jpg)
+
+    Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/deep-learning-course)
 
 - **[Digital Design With Programmable Logic](https://mcbasken.github.io/umn-senior-design/)**
 
@@ -201,14 +201,6 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking)
 
-- **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
-
-    ![GED Science Prep](./img/ged-science-prep.jpg)
-
-    Intelligent textbook for GED Science test preparation covering Life Science, Physical Science, and Earth & Space Science. Aligned with the official GED Science Assessment Targets and eight Science Practices.
-
-    [:octicons-mark-github-16: Repository](https://github.com/camgross/GED-Science-prep) · 27 Files · 12K Words · 7 MicroSims
-
 - **[Fluid Power Systems](https://dmccreary.github.io/fluid-power-systems/)**
 
     ![Fluid Power Systems](./img/fluid-power-systems.jpg)
@@ -216,6 +208,14 @@ frequently.
     Interactive textbook for technicians working with HVAC, vacuum, compressed air, cooling water, dust collection, hydraulics, pumping, and fan systems. Created with Peter Vinck at Inflow Corporation.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fluid-power-systems) · 36 Files · 20K Words · 3 MicroSims · 103 Glossary Terms
+
+- **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
+
+    ![GED Science Prep](./img/ged-science-prep.jpg)
+
+    Intelligent textbook for GED Science test preparation covering Life Science, Physical Science, and Earth & Space Science. Aligned with the official GED Science Assessment Targets and eight Science Practices.
+
+    [:octicons-mark-github-16: Repository](https://github.com/camgross/GED-Science-prep) · 27 Files · 12K Words · 7 MicroSims
 
 - **[Generative AI Architecture Patterns](https://dmccreary.github.io/genai-arch-patterns)**
 
@@ -225,17 +225,17 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/genai-arch-patterns) · 34 Files · 7K Words
 
-- **[Generative AI Strategy](https://dmccreary.github.io/cmm-for-genai)**
-
-    Helps business leaders understand how to use generative AI to create and maintain their AI business strategy.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cmm-for-genai) · 22 Files · 7K Words · 3 MicroSims
-
 - **[Generative AI for Teachers](https://coderdojotc.github.io/chatgpt-for-teachers)**
 
     Helps teachers understand how to use generative AI to create and maintain AI teaching materials. Many sample prompts.
 
     [:octicons-mark-github-16: Repository](https://github.com/CoderDojoTC/chatgpt-for-teachers) · 98 Files · 19K Words · 100 MicroSims
+
+- **[Generative AI Strategy](https://dmccreary.github.io/cmm-for-genai)**
+
+    Helps business leaders understand how to use generative AI to create and maintain their AI business strategy.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cmm-for-genai) · 22 Files · 7K Words · 3 MicroSims
 
 - **[Graph Algorithms with AI](https://dmccreary.github.io/graph-algorithms)**
 
@@ -274,14 +274,6 @@ frequently.
     Tutorial for building intelligent textbooks using mkdocs-material. Contains detailed tutorials and best practices.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intelligent-textbooks) · 12K Words · 4 MicroSims
-
-- **[AI Infographics](https://dmccreary.github.io/infographics/)**
-
-    ![AI Infographics](./img/infographics.jpg)
-
-    A collection of resources for creating interactive infographics using AI tools. Includes templates and examples.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics)
 
 - **[Introduction to Graph Databases](https://dmccreary.github.io/intro-to-graph)**
 
@@ -349,6 +341,14 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words
 
+- **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
+
+    ![Linear Algebra for AI and Machine Learning](./img/linear-algebra.jpg)
+
+    A college-level course bridging abstract linear algebra with real-world AI applications. Covers vectors, matrices, eigenvalues, neural networks, computer vision, and autonomous systems.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/linear-algebra) · 206 Files · 195K Words · 126 MicroSims · 299 Glossary Terms
+
 - **[Machine Learning: Algorithms and Applications](https://anvithpothula.github.io/machine-learning-textbook/)**
 
     ![Machine Learning Textbook](./img/machine-learning-textbook.png)
@@ -373,12 +373,6 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/search-microsims) · 125 Files · 138K Words · 58 MicroSims
 
-- **[MicroSims for Electrical Engineering](https://kenn0727.github.io/ee-microsims)**
-
-    11 MicroSims created by University of Minnesota EE students using p5.js and prompt engineering.
-
-    [:octicons-mark-github-16: Repository](https://github.com/kenn0727/ee-microsims) · 14 Files · 12 MicroSims
-
 - **[MicroSims](https://dmccreary.github.io/microsims)**
 
     ![MicroSims](./img/microsims.jpg)
@@ -386,6 +380,12 @@ frequently.
     Showcase for creating MicroSims using JavaScript and p5.js across diverse subjects.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/microsims) · 88 Files · 18K Words · 66 MicroSims
+
+- **[MicroSims for Electrical Engineering](https://kenn0727.github.io/ee-microsims)**
+
+    11 MicroSims created by University of Minnesota EE students using p5.js and prompt engineering.
+
+    [:octicons-mark-github-16: Repository](https://github.com/kenn0727/ee-microsims) · 14 Files · 12 MicroSims
 
 - **[Modeling Healthcare Data with Graphs](https://dmccreary.github.io/modeling-healthcare-data)**
 
@@ -447,14 +447,6 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/semiconductor-physics-course) · Early Stage
 
-- **[STEM Robots](https://dmccreary.github.io/stem-robots)**
-
-    ![STEM Robots](./img/stem-robots.png)
-
-    STEM and robotics using the Raspberry Pi RP2040 on low-cost robotics kits for computational thinking.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-robots) · 74 Files · 18K Words · 5 MicroSims
-
 - **[Signal Processing](https://dmccreary.github.io/signal-processing)**
 
     ![Signal Processing](./img/signal-processing.jpg)
@@ -479,6 +471,14 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-classroom-admin)
 
+- **[STEM Robots](https://dmccreary.github.io/stem-robots)**
+
+    ![STEM Robots](./img/stem-robots.png)
+
+    STEM and robotics using the Raspberry Pi RP2040 on low-cost robotics kits for computational thinking.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-robots) · 74 Files · 18K Words · 5 MicroSims
+
 - **[Systems Thinking in the Age of AI](https://dmccreary.github.io/systems-thinking)**
 
     ![Systems Thinking](./img/systems-thinking.jpg)
@@ -495,6 +495,12 @@ frequently.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/tracking-ai-course) · 47 Files · 18K Words · 3 MicroSims
 
+- **[Trigonometric Functions](https://stage03.iowerx.com:8443/)**
+
+    Foundational course on relationships between angles and sides in right triangles by Hank Ratzesberger. 200 concepts.
+
+    High School · Bridges algebra and geometry
+
 - **[Understanding Dementia](https://rtanler.github.io/Dementia/)**
 
     ![Understanding Dementia](./img/dementia.jpg)
@@ -510,11 +516,5 @@ frequently.
     Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms
-
-- **[Trigonometric Functions](https://stage03.iowerx.com:8443/)**
-
-    Foundational course on relationships between angles and sides in right triangles by Hank Ratzesberger. 200 concepts.
-
-    High School · Bridges algebra and geometry
 
 </div>
