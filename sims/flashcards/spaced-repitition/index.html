@@ -1,0 +1,1843 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/sims/flashcards/spaced-repitition/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Spaced Repetition Algorithms for Flashcard Programs: A Complete Tutorial - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Spaced Repetition Algorithms for Flashcard Programs: A Complete Tutorial - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/sims/flashcards/spaced-repitition.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/sims/flashcards/spaced-repitition/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Spaced Repetition Algorithms for Flashcard Programs: A Complete Tutorial - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/sims/flashcards/spaced-repitition.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spaced-repetition-algorithms-for-flashcard-programs-a-complete-tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spaced Repetition Algorithms for Flashcard Programs: A Complete Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational Concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uri-scheme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    URI Scheme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-memory-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Memory Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Memory Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-forgetting-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Forgetting Curve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-component-model-of-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Component Model of Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-component-model-of-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three-Component Model of Memory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sm-2-algorithm-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SM-2 Algorithm: The Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SM-2 Algorithm: The Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sm-2-advantages-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      SM-2 Advantages and Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsrs-algorithm-modern-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      FSRS Algorithm: Modern Approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FSRS Algorithm: Modern Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-state-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory State Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interval Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supermemo-sm-17sm-18-advanced-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      SuperMemo SM-17/SM-18: Advanced Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SuperMemo SM-17/SM-18: Advanced Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-component-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three-Component Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stability-increase-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability Increase Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-storage-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Storage Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-scheduling-with-delays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interval Scheduling with Delays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-interference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Interference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-implementation-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Implementation Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Implementation Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#starting-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Interface Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Assurance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/sims/flashcards/spaced-repitition.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="spaced-repetition-algorithms-for-flashcard-programs-a-complete-tutorial">Spaced Repetition Algorithms for Flashcard Programs: A Complete Tutorial</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Spaced repetition is a learning technique that leverages the psychological spacing effect to optimize memory retention. Instead of cramming information all at once, spaced repetition schedules reviews at increasing intervals to reinforce memory just before forgetting occurs.</p>
+<p>The core principle is based on Hermann Ebbinghaus's <strong>forgetting curve</strong>, which demonstrates that memory retention follows a predictable decay pattern. By reviewing information at strategic moments, we can:</p>
+<ul>
+<li>Improve long-term retention</li>
+<li>Reduce total study time</li>
+<li>Focus effort on difficult material</li>
+<li>Achieve more efficient learning</li>
+</ul>
+<h2 id="basic-memory-models">Basic Memory Models</h2>
+<h3 id="the-forgetting-curve">The Forgetting Curve</h3>
+<p>The forgetting curve describes how quickly we lose information over time without reinforcement. Ebbinghaus found that retention follows an exponential decay:</p>
+<div class="arithmatex">\[
+R(t) = e^{-\frac{t}{S}}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(R(t)\)</span> = probability of recall at time <span class="arithmatex">\(t\)</span>
+- <span class="arithmatex">\(t\)</span> = time elapsed since learning
+- <span class="arithmatex">\(S\)</span> = memory stability (how long the memory lasts)</p>
+<h3 id="two-component-model-of-memory">Two-Component Model of Memory</h3>
+<p>Modern algorithms often use a two-component model with:</p>
+<ol>
+<li><strong>Memory Stability (S)</strong>: How long a memory can last if undisturbed</li>
+<li><strong>Memory Retrievability (R)</strong>: The current probability of successful recall</li>
+</ol>
+<h3 id="three-component-model-of-memory">Three-Component Model of Memory</h3>
+<p>Advanced systems like FSRS add a third component:</p>
+<ol>
+<li><strong>Retrievability (R)</strong>: Probability of recall at any given moment</li>
+<li><strong>Stability (S)</strong>: Memory durability over time</li>
+<li><strong>Difficulty (D)</strong>: Inherent difficulty of the material</li>
+</ol>
+<h2 id="sm-2-algorithm-the-foundation">SM-2 Algorithm: The Foundation</h2>
+<p>The SM-2 algorithm, developed by Piotr Woźniak in 1987, remains the most widely used spaced repetition algorithm. It's the foundation for systems like Anki (in modified form).</p>
+<h3 id="core-components">Core Components</h3>
+<p>SM-2 tracks three properties for each flashcard:</p>
+<ol>
+<li><strong>Repetition number (n)</strong>: Number of successful reviews in a row</li>
+<li><strong>Ease Factor (EF)</strong>: Difficulty multiplier (1.1 to 2.5)</li>
+<li><strong>Interval (I)</strong>: Days until next review</li>
+</ol>
+<h3 id="the-algorithm">The Algorithm</h3>
+<p><strong>Input</strong>: User grade <span class="arithmatex">\(q\)</span> (0-5 scale), current values of <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(EF\)</span>, and <span class="arithmatex">\(I\)</span></p>
+<p><strong>Grading Scale</strong>:</p>
+<ul>
+<li>5: Perfect response</li>
+<li>4: Correct after hesitation  </li>
+<li>3: Correct with difficulty</li>
+<li>2: Incorrect but familiar</li>
+<li>1: Incorrect but remembered</li>
+<li>0: Complete blackout</li>
+</ul>
+<p><strong>Algorithm Steps</strong>:</p>
+<p>If <span class="arithmatex">\(q \geq 3\)</span> (correct response):</p>
+<div class="arithmatex">\[I = \begin{cases}
+1 &amp; \text{if } n = 0 \\
+6 &amp; \text{if } n = 1 \\
+\text{round}(I \times EF) &amp; \text{if } n &gt; 1
+\end{cases}\]</div>
+<p>Then increment: <span class="arithmatex">\(n = n + 1\)</span></p>
+<p>If <span class="arithmatex">\(q &lt; 3\)</span> (incorrect response):
+<span class="arithmatex">\(<span class="arithmatex">\(n = 0, \quad I = 1\)</span>\)</span></p>
+<p><strong>Ease Factor Update</strong> (applied regardless of correctness):</p>
+<div class="arithmatex">\[EF_{new} = EF + 0.1 - (5-q) \times (0.08 + (5-q) \times 0.02)\]</div>
+<p>With constraints: <span class="arithmatex">\(EF_{new} \geq 1.3\)</span></p>
+<h3 id="sm-2-advantages-and-limitations">SM-2 Advantages and Limitations</h3>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Simple and robust</li>
+<li>Well-tested over decades</li>
+<li>Resistant to data corruption</li>
+<li>Easy to implement</li>
+</ul>
+<p><strong>Limitations</strong>:</p>
+<ul>
+<li>Fixed interval progression</li>
+<li>Doesn't account for review timing variations</li>
+<li>Limited adaptability to individual differences</li>
+<li>No consideration for item similarity</li>
+</ul>
+<h2 id="fsrs-algorithm-modern-approach">FSRS Algorithm: Modern Approach</h2>
+<p>The Free Spaced Repetition Scheduler (FSRS) represents a modern approach based on the three-component model of memory.</p>
+<h3 id="core-concepts">Core Concepts</h3>
+<p>FSRS uses machine learning to predict optimal review timing based on:</p>
+<div class="arithmatex">\[
+P(\text{recall}) = e^{\frac{\ln(R)}{S} \times t}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(R\)</span> = current retrievability
+- <span class="arithmatex">\(S\)</span> = memory stability<br />
+- <span class="arithmatex">\(t\)</span> = time since last review</p>
+<h3 id="memory-state-updates">Memory State Updates</h3>
+<p>When a card is reviewed, FSRS updates the three components:</p>
+<p><strong>Stability Update</strong>:
+<span class="arithmatex">\(<span class="arithmatex">\(S_{new} = S \times (1 + f(D, S, R, G))\)</span>\)</span></p>
+<p><strong>Retrievability Update</strong>:
+<span class="arithmatex">\(<span class="arithmatex">\(R_{new} = e^{\frac{\ln(0.9) \times t}{S}}\)</span>\)</span></p>
+<p><strong>Difficulty Update</strong>:
+<span class="arithmatex">\(<span class="arithmatex">\(D_{new} = D + w \times (G - 3)\)</span>\)</span></p>
+<p>Where:
+- <span class="arithmatex">\(G\)</span> = grade given by user (1-4 scale)
+- <span class="arithmatex">\(w\)</span> = weight parameter learned from data
+- <span class="arithmatex">\(f(D, S, R, G)\)</span> = stability increase function</p>
+<h3 id="interval-calculation">Interval Calculation</h3>
+<p>The next review interval is calculated to achieve target retrievability (typically 90%):</p>
+<div class="arithmatex">\[
+I = S \times \ln\left(\frac{R_{target}}{R_{current}}\right) / \ln(R_{target})
+\]</div>
+<h2 id="supermemo-sm-17sm-18-advanced-algorithms">SuperMemo SM-17/SM-18: Advanced Algorithms</h2>
+<p>The latest SuperMemo algorithms represent the cutting edge of spaced repetition research.</p>
+<h3 id="three-component-definitions">Three-Component Definitions</h3>
+<p><strong>Memory Stability (S)</strong>:
+$$
+S = \text{interval where } P(\text{recall}) = 0.9
+$$</p>
+<p><strong>Memory Retrievability (R)</strong>:
+<span class="arithmatex">\(<span class="arithmatex">\(R(t) = e^{-\frac{t \ln(0.9)}{S}}\)</span>\)</span></p>
+<p><strong>Item Difficulty (D)</strong>:
+<span class="arithmatex">\(<span class="arithmatex">\(D = \frac{S_{increase}}{S_{max}} \text{ (normalized to 0-1)}\)</span>\)</span></p>
+<h3 id="stability-increase-function">Stability Increase Function</h3>
+<p>The heart of SM-17/18 is the stability increase function:</p>
+<div class="arithmatex">\[
+\text{SInc}(D, S, R, G) = w_1 \times D^{w_2} \times S^{w_3} \times e^{w_4 \times (1-R)} \times G^{w_5}
+\]</div>
+<p>Where <span class="arithmatex">\(w_1\)</span> through <span class="arithmatex">\(w_5\)</span> are parameters optimized from user data.</p>
+<h3 id="optimization-process">Optimization Process</h3>
+<p>SM-17/18 continuously optimizes parameters using:</p>
+<div class="arithmatex">\[
+\min \sum_{i=1}^{n} (G_i - \hat{G_i})^2
+\]</div>
+<p>Where <span class="arithmatex">\(G_i\)</span> is the actual grade and <span class="arithmatex">\(\hat{G_i}\)</span> is the predicted grade based on retrievability.</p>
+<h2 id="implementation-considerations">Implementation Considerations</h2>
+<h3 id="algorithm-selection">Algorithm Selection</h3>
+<p><strong>Choose SM-2 when</strong>:
+- Building a simple system
+- Limited computational resources
+- Need proven stability
+- Open-source requirements</p>
+<p><strong>Choose FSRS when</strong>:
+- Want modern performance
+- Can collect user data
+- Need better delay handling
+- Optimize for efficiency</p>
+<p><strong>Choose SM-17/18 when</strong>:
+- Maximum sophistication required
+- Large dataset available
+- Advanced features needed
+- Commercial application</p>
+<h3 id="data-storage-requirements">Data Storage Requirements</h3>
+<p><strong>SM-2 per card</strong>:
+- Repetition count (integer)
+- Ease factor (float)
+- Last interval (integer)
+- Due date (timestamp)</p>
+<p><strong>FSRS per card</strong>:
+- Stability (float)
+- Retrievability (float) 
+- Difficulty (float)
+- Review history (for optimization)</p>
+<h3 id="performance-metrics">Performance Metrics</h3>
+<p><strong>Log Loss</strong> (primary metric for probabilistic algorithms):</p>
+<div class="arithmatex">\[
+\text{LogLoss} = -\frac{1}{N}\sum_{i=1}^{N}[y_i \ln(p_i) + (1-y_i)\ln(1-p_i)]
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(y_i\)</span> = actual outcome (0 or 1)
+- <span class="arithmatex">\(p_i\)</span> = predicted probability
+- <span class="arithmatex">\(N\)</span> = number of predictions</p>
+<p><strong>Calibration</strong> measures how well predicted probabilities match actual outcomes.</p>
+<h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="interval-scheduling-with-delays">Interval Scheduling with Delays</h3>
+<p>When reviews are delayed, algorithms must account for extra forgetting:</p>
+<p><strong>FSRS Delay Handling</strong>:
+$$
+R_{delayed} = R \times e^{\frac{-\text{delay}}{S \times \ln(0.9)}}
+$$</p>
+<p><strong>SM-17 Delay Compensation</strong>:
+Uses retrievability calculation to determine new stability after delayed review.</p>
+<h3 id="batch-optimization">Batch Optimization</h3>
+<p>For systems with large datasets, parameters can be optimized using gradient descent:</p>
+<div class="arithmatex">\[
+\theta_{new} = \theta_{old} - \alpha \nabla_\theta L(\theta)
+\]</div>
+<p>Where <span class="arithmatex">\(L(\theta)\)</span> is the loss function (typically log loss) and <span class="arithmatex">\(\alpha\)</span> is the learning rate.</p>
+<h3 id="memory-interference">Memory Interference</h3>
+<p>Advanced algorithms account for interference between similar items:</p>
+<div class="arithmatex">\[
+S_{effective} = S \times (1 - \text{interference\_factor})
+\]</div>
+<h2 id="practical-implementation-tips">Practical Implementation Tips</h2>
+<h3 id="starting-parameters">Starting Parameters</h3>
+<p><strong>SM-2 defaults</strong>:
+- Initial ease factor: 2.5
+- First interval: 1 day
+- Second interval: 6 days</p>
+<p><strong>FSRS initialization</strong>:
+- Use pre-trained weights from research
+- Adapt parameters after collecting ~1000 reviews
+- Implement fallback to SM-2 for new users</p>
+<h3 id="user-interface-integration">User Interface Integration</h3>
+<p><strong>Grade Mapping</strong>:
+Map user-friendly buttons to algorithm grades:
+- "Again" → 1 (FSRS) or 0-2 (SM-2)
+- "Hard" → 2 (FSRS) or 3 (SM-2)<br />
+- "Good" → 3 (FSRS) or 4 (SM-2)
+- "Easy" → 4 (FSRS) or 5 (SM-2)</p>
+<h3 id="quality-assurance">Quality Assurance</h3>
+<p>Implement bounds checking:</p>
+<div class="arithmatex">\[1 \leq I \leq I_{max}$$
+$$EF_{min} \leq EF \leq EF_{max}$$
+$$0 \leq R \leq 1\]</div>
+<h2 id="conclusion">Conclusion</h2>
+<p>Spaced repetition algorithms have evolved significantly since the original SM-2. While SM-2 remains reliable and widely used, modern approaches like FSRS offer improved efficiency and adaptability. The choice of algorithm should balance complexity, performance requirements, and implementation constraints.</p>
+<p>Key takeaways:</p>
+<ol>
+<li><strong>SM-2</strong> provides a solid foundation with proven reliability</li>
+<li><strong>FSRS</strong> offers modern efficiency with machine learning optimization  </li>
+<li><strong>SM-17/18</strong> represents the current state-of-the-art for advanced applications</li>
+<li><strong>Implementation details</strong> often matter more than algorithm choice</li>
+<li><strong>Continuous optimization</strong> from user data improves all approaches</li>
+</ol>
+<p>The future of spaced repetition lies in personalized algorithms that adapt to individual learning patterns while maintaining the core principle of strategic timing for optimal memory consolidation.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
