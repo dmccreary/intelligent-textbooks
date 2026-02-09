@@ -1,9 +1,6 @@
----
-title: Pedagogical Agents
-description: A pedagogical agent is a visual mascot character embedded in a textbook or learning environment that guides students through activities, provides encouragement, and makes abstract content feel more approachable.
-image: /concepts/pedagogical-agents-infographic.jpg
-og:image: /concepts/pedagogical-agents-infographic.jpg
----
+Please create an infographic that describes why Pedagogical Agents increase the effectiveness of intelligent textbooks and how we can add them to an intelligent textbook.
+
+Here is some background information
 # Pedagogical Agents
 
 A **pedagogical agent** is a visual mascot character embedded in
@@ -13,8 +10,6 @@ feel more approachable. Research on the **persona effect** (coined
 by James Lester) shows that the mere presence of a lifelike
 character improves learner engagement and perception of the
 learning experience.
-
-![](./pedagogical-agents-infographic.jpg)
 
 ## Related Terms
 
