@@ -1,0 +1,3173 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/concepts/pedagogical-agent/">
+      
+      
+        <link rel="prev" href="../from-sage-to-guide/">
+      
+      
+        <link rel="next" href="../quality-metrics/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Pedagogical Agent - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Pedagogical Agent - Building Intelligent Textbooks With AI" >
+      
+        <meta  property="og:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/pedagogical-agent.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/intelligent-textbooks/concepts/pedagogical-agent/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Pedagogical Agent - Building Intelligent Textbooks With AI" >
+      
+        <meta  name="twitter:description"  content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme." >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/concepts/pedagogical-agent.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pedagogical-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pedagogical Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Educational Concepts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Educational Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../five-levels-of-intelligent-textbooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Five Levels of Intelligent Textbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bloom-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloom's Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scaffolding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaffolding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adaptive-assessments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Assessments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../levels-of-interactivity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Interactivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-educational-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Educational Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructional-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instructional Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../levels-of-interactivity-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levels of Interactivity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../from-sage-to-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Sage to Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pedagogical Agent
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pedagogical Agent
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#related-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-a-pedagogical-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use a Pedagogical Agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-a-pedagogical-agent-in-mkdocs-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing a Pedagogical Agent in MkDocs Material
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing a Pedagogical Agent in MkDocs Material">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-inline-image-with-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Inline Image with Markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-custom-admonition-with-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Custom Admonition with CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2: Custom Admonition with CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuning-the-icon-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning the Icon Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-automatic-detection-with-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: Automatic Detection with JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 3: Automatic Detection with JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-sylvia-the-squirrel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Sylvia the Squirrel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study: Sylvia the Squirrel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#character-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site-wide-color-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Site-Wide Color Theme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-admonition-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Admonition CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-javascript-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic JavaScript Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sylvia-faq-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sylvia FAQ Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-three-layer-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of the Three-Layer Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-the-agent-into-content-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating the Agent into Content Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating the Agent into Content Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-claudemd-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why CLAUDE.md Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to Include
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-statistics-course-claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Statistics Course CLAUDE.md
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Statistics Course CLAUDE.md">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#narrative-anchor-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrative Anchor Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement-rules-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Placement Rules Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dos-and-donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do's and Don'ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-structure-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Structure Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-theme-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Theme Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-claudemd-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimal CLAUDE.md Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-skills-use-these-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Skills Use These Instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iframe-guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iframe Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scroll-hijacking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scroll Hijacking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../book-metadata/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Book Metadata
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uri-scheme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    URI Scheme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#related-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-a-pedagogical-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use a Pedagogical Agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-a-pedagogical-agent-in-mkdocs-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing a Pedagogical Agent in MkDocs Material
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing a Pedagogical Agent in MkDocs Material">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-inline-image-with-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Inline Image with Markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-custom-admonition-with-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Custom Admonition with CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2: Custom Admonition with CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuning-the-icon-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuning the Icon Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-automatic-detection-with-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: Automatic Detection with JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 3: Automatic Detection with JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-sylvia-the-squirrel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Sylvia the Squirrel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study: Sylvia the Squirrel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#character-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#site-wide-color-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Site-Wide Color Theme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-admonition-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Admonition CSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-javascript-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic JavaScript Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sylvia-faq-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sylvia FAQ Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-three-layer-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of the Three-Layer Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-the-agent-into-content-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating the Agent into Content Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating the Agent into Content Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-claudemd-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why CLAUDE.md Matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to Include
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-statistics-course-claudemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Statistics Course CLAUDE.md
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Statistics Course CLAUDE.md">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#narrative-anchor-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrative Anchor Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placement-rules-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Placement Rules Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dos-and-donts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do's and Don'ts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter-structure-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Structure Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-theme-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Theme Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-claudemd-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimal CLAUDE.md Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-skills-use-these-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Skills Use These Instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/concepts/pedagogical-agent.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="pedagogical-agent">Pedagogical Agent</h1>
+<p>A <strong>pedagogical agent</strong> is a visual mascot character embedded in
+a textbook or learning environment that guides students through
+activities, provides encouragement, and makes abstract content
+feel more approachable. Research on the <strong>persona effect</strong> (coined
+by James Lester) shows that the mere presence of a lifelike
+character improves learner engagement and perception of the
+learning experience.</p>
+<h2 id="related-terms">Related Terms</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Emphasis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Animated pedagogical agent</strong></td>
+<td>Character with visual movement or animation</td>
+</tr>
+<tr>
+<td><strong>Learning companion</strong></td>
+<td>Character that learns alongside the student rather than acting as authority</td>
+</tr>
+<tr>
+<td><strong>Motivational agent</strong></td>
+<td>Primary role is encouragement rather than direct instruction</td>
+</tr>
+<tr>
+<td><strong>Margin character</strong></td>
+<td>Print-textbook tradition of illustrated characters in margins with tips</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-use-a-pedagogical-agent">Why Use a Pedagogical Agent?</h2>
+<ol>
+<li><strong>Engagement</strong> — A consistent character gives the textbook a personality that students connect with</li>
+<li><strong>Wayfinding</strong> — The agent signals special content types (tips, challenges, reflections) at a glance</li>
+<li><strong>Encouragement</strong> — Phrases from the agent normalize struggle and celebrate progress</li>
+<li><strong>Branding</strong> — A distinctive mascot makes the course memorable and builds community identity</li>
+</ol>
+<h2 id="implementing-a-pedagogical-agent-in-mkdocs-material">Implementing a Pedagogical Agent in MkDocs Material</h2>
+<p>There are three progressively richer ways to bring a pedagogical
+agent into an intelligent textbook built with MkDocs Material.</p>
+<h3 id="method-1-inline-image-with-markdown">Method 1: Inline Image with Markdown</h3>
+<p><img _="," align="right" alt="Nell using her intelligent textbook" src="../../img/nell-colored.png" width="100" /></p>
+<p>The simplest approach is to place the agent image directly
+in a page using the <code>attr_list</code> Markdown extension
+(which must be enabled in <code>mkdocs.yml</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>![Nell using her intelligent textbook]
+(../img/nell-colored.png)
+{ 
+  width=&quot;100&quot;, 
+  align=&quot;right&quot;
+}
+</code></pre></div></td></tr></table></div>
+<p>This renders the image floated to the right of the surrounding
+text. The <code>width="100"</code> attribute constrains the image size, and
+<code>align="right"</code> wraps the text around it. This is the technique
+used on the <a href="../../about/">About</a> page of this site, where our
+mascot <strong>Nell</strong> appears beside the introductory text:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>![](./img/nell-colored.png){ width=&quot;200&quot;, align=&quot;right&quot; }
+This website is part of a series of resources to help teachers
+from around the world create the foundation for free and open
+intelligent textbooks.
+
+Our character to the right is <span class="gs">**Nell**</span>. She is using an
+intelligent textbook that adapts lessons to her needs.
+</code></pre></div></td></tr></table></div>
+<p>This method requires no custom CSS or JavaScript — only the
+image file and the <code>attr_list</code> Markdown extension.</p>
+<h3 id="method-2-custom-admonition-with-css">Method 2: Custom Admonition with CSS</h3>
+<p>For a richer experience, you can create a <strong>custom admonition
+type</strong> that automatically displays the agent's icon in the
+corner of a callout box. This lets content authors simply write
+a standard admonition and have the mascot appear without manually
+inserting images.</p>
+<h4 id="css">CSS</h4>
+<p>Add the following to your <code>docs/css/extra.css</code>. This example
+uses a class called <code>companion-agent</code> and references the
+agent icon at <code>docs/img/nell-colored.png</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">/* Companion Agent admonitions — Nell mascot in upper-right corner */</span>
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">companion-agent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1565C0</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">companion-agent</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding-top</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">192</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">companion-agent</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">-4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;../img/nell-colored.png&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">contain</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">  </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Scale down on mobile */</span>
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">600px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">companion-agent</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Note that the <code>::after</code> pseudo-element is placed on the
+<strong><code>.admonition-title</code></strong> rather than the admonition container
+itself. MkDocs Material applies <code>overflow: hidden</code> to the
+admonition body, which clips absolutely positioned children.
+Attaching the icon to the title element avoids this problem.</p>
+<h4 id="tuning-the-icon-position">Tuning the Icon Position</h4>
+<p>The exact placement of the mascot icon depends on your image
+dimensions and how much of the title bar you want it to
+overlap. Here are the key CSS properties to adjust:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it controls</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>padding-top</code> on <code>.admonition-title</code></td>
+<td>Height of the title bar — increase to give the icon more vertical room</td>
+<td><code>14px</code> makes the title bar taller</td>
+</tr>
+<tr>
+<td><code>top</code> on <code>::after</code></td>
+<td>Vertical offset of the icon within the title bar — positive moves down, negative moves up</td>
+<td><code>1px</code> sits just inside the top edge</td>
+</tr>
+<tr>
+<td><code>right</code> on <code>::after</code></td>
+<td>Horizontal offset from the right edge — smaller (or negative) moves the icon closer to the edge</td>
+<td><code>-4px</code> pushes the icon to the far right</td>
+</tr>
+<tr>
+<td><code>width</code> / <code>height</code> on <code>::after</code></td>
+<td>Size of the icon — keep equal to preserve aspect ratio</td>
+<td><code>48px</code> is a good default; use <code>32px</code> on mobile</td>
+</tr>
+<tr>
+<td><code>opacity</code> on <code>::after</code></td>
+<td>Transparency of the icon — <code>1.0</code> is fully opaque, lower values fade it into the background</td>
+<td><code>0.9</code> is slightly transparent</td>
+</tr>
+</tbody>
+</table>
+<p>A typical tuning workflow:</p>
+<ol>
+<li>Start with the defaults above</li>
+<li>Adjust <code>padding-top</code> on the title until the bar is tall enough for your icon</li>
+<li>Adjust <code>top</code> and <code>right</code> on the <code>::after</code> to position the icon where you want it</li>
+<li>Use your browser's developer tools (right-click the icon area, Inspect) to live-edit values before committing them to <code>extra.css</code></li>
+<li>Check the mobile breakpoint (<code>@media max-width: 600px</code>) — you will usually want a smaller icon and tighter margins on small screens</li>
+</ol>
+<h4 id="markdown-usage">Markdown Usage</h4>
+<p>With the CSS in place, content authors write a standard
+MkDocs Material admonition using the custom type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! companion-agent &quot;Nell Says&quot;
+    Remember, the best way to learn a new concept is to
+    connect it to something you already know. Check the
+    learning graph to see what prerequisites you&#39;ve
+    already mastered!
+</code></pre></div></td></tr></table></div>
+<h4 id="live-example">Live Example</h4>
+<p>The admonition below is rendered using the CSS above, which
+is active on this site. Note how Nell's icon appears in the
+upper-right corner of the title bar:</p>
+<div class="admonition companion-agent">
+<p class="admonition-title">Nell Says</p>
+<p>Remember, the best way to learn a new concept is to
+connect it to something you already know. Check the
+learning graph to see what prerequisites you've
+already mastered!</p>
+</div>
+<div class="admonition companion-agent">
+<p class="admonition-title">Nell's Study Tip</p>
+<p>Try explaining this concept to a friend. Teaching is
+one of the most powerful ways to solidify your own
+understanding!</p>
+</div>
+<h3 id="method-3-automatic-detection-with-javascript">Method 3: Automatic Detection with JavaScript</h3>
+<p>The most flexible approach adds JavaScript that <strong>automatically</strong>
+applies the mascot styling whenever an admonition title mentions
+the agent's name or catchphrases. This means authors never need
+to remember a special admonition type — they just write naturally
+and the mascot appears.</p>
+<h4 id="javascript">JavaScript</h4>
+<p>Add the following to <code>docs/js/extra.js</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Phrases that trigger the companion-agent styling</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">agentPhrases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;nell&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;nell says&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;nell&#39;s tip&quot;</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.admonition&quot;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">admonition</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admonition</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.admonition-title&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">titleText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">title</span><span class="p">.</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">agentPhrases</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">phrase</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">titleText</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">phrase</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">admonition</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;companion-agent&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>Now any admonition whose title contains the word "Nell" will
+automatically receive the mascot icon:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! tip &quot;Nell Says&quot;
+    Don&#39;t skip the practice problems — retrieval practice is
+    one of the strongest ways to move knowledge into long-term
+    memory!
+
+!!! note &quot;Nell&#39;s Tip&quot;
+    Try explaining this concept to a friend. If you can teach
+    it, you truly understand it.
+</code></pre></div></td></tr></table></div>
+<p>Both admonitions above will display the agent icon in the
+upper-right corner, even though they use standard admonition
+types (<code>tip</code> and <code>note</code>).</p>
+<h2 id="case-study-sylvia-the-squirrel">Case Study: Sylvia the Squirrel</h2>
+<p><img alt="Sylvia Learning Assistant" src="../sylvia-learning-assistent.jpg" /></p>
+<p>The <a href="https://dmccreary.github.io/statistics-course/">AP Statistics Course</a>
+provides an excellent real-world example of a fully integrated
+pedagogical agent. The mascot is <strong>Sylvia</strong>, a friendly red
+squirrel whose visual identity is woven into every layer of the
+site.</p>
+<h3 id="character-design">Character Design</h3>
+<p>Sylvia has a detailed persona that reinforces the course theme:</p>
+<ul>
+<li>A red squirrel who became interested in statistics through optimizing her acorn collection</li>
+<li>Wears a forest-green cardigan and round glasses</li>
+<li>Catchphrase: <em>"Let's crack this nut!"</em></li>
+<li>Additional signature phrases: <em>"Acorn for your thoughts"</em>, <em>"Squirrel away"</em>, <em>"My tail's tingling"</em></li>
+</ul>
+<h3 id="site-wide-color-theme">Site-Wide Color Theme</h3>
+<p>The entire MkDocs Material color palette is derived from
+Sylvia's appearance, defined as CSS custom properties:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--sylvia-green</span><span class="p">:</span><span class="w"> </span><span class="mh">#2E7D32</span><span class="p">;</span><span class="w">       </span><span class="c">/* cardigan */</span>
+<span class="w">  </span><span class="nv">--sylvia-auburn</span><span class="p">:</span><span class="w"> </span><span class="mh">#B5651D</span><span class="p">;</span><span class="w">      </span><span class="c">/* fur */</span>
+<span class="w">  </span><span class="nv">--sylvia-cream</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFF8E1</span><span class="p">;</span><span class="w">       </span><span class="c">/* belly */</span>
+<span class="w">  </span><span class="nv">--sylvia-hazel</span><span class="p">:</span><span class="w"> </span><span class="mh">#8B7355</span><span class="p">;</span><span class="w">       </span><span class="c">/* eyes/glasses */</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>These variables override the Material theme defaults so that
+links use her auburn fur color, iframes get a green cardigan
+border, and the primary header matches her green cardigan.</p>
+<h3 id="custom-admonition-css">Custom Admonition CSS</h3>
+<p>Sylvia has her own admonition class that places a 48x48 image
+of her in the upper-right corner of the callout box:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">sylvia</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--sylvia-green</span><span class="p">)</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">sylvia</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">admonition-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">46</span><span class="p">,</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">admonition</span><span class="p">.</span><span class="nc">sylvia</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;../img/sylvia-192.png&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">contain</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">  </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="automatic-javascript-detection">Automatic JavaScript Detection</h3>
+<p>The JavaScript scans every admonition title for Sylvia's name
+or any of her catchphrases and adds the <code>sylvia</code> class
+automatically:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">sylviaPhrases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;sylvia&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;acorn for your thoughts&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;let&#39;s crack this nut&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;squirrel away&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;my tail&#39;s tingling&quot;</span>
+<span class="p">];</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.admonition&quot;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">admonition</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">admonition</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.admonition-title&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">titleText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">title</span><span class="p">.</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sylviaPhrases</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">phrase</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">titleText</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">phrase</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">admonition</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;sylvia&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>This means a content author simply writes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>!!! quote &quot;Sylvia Says&quot;
+    A p-value less than 0.05 doesn&#39;t mean the result is
+    important — it means the result is unlikely under the
+    null hypothesis. Let&#39;s crack this nut!
+</code></pre></div></td></tr></table></div>
+<p>And Sylvia's icon and green styling appear automatically.</p>
+<h3 id="sylvia-faq-reference">Sylvia FAQ Reference</h3>
+<p>The statistics course FAQ includes a dedicated section
+explaining who Sylvia is and why she appears throughout
+the textbook:
+<a href="https://dmccreary.github.io/statistics-course/faq/#who-is-sylvia-the-squirrel">Who is Sylvia the Squirrel?</a></p>
+<h2 id="summary-of-the-three-layer-pattern">Summary of the Three-Layer Pattern</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Files</th>
+<th>Author Effort</th>
+<th>Flexibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inline image</td>
+<td>Markdown only</td>
+<td>Add image tag per page</td>
+<td>Low — manual placement</td>
+</tr>
+<tr>
+<td>Custom admonition CSS</td>
+<td><code>extra.css</code></td>
+<td>Use custom admonition type</td>
+<td>Medium — consistent styling</td>
+</tr>
+<tr>
+<td>Auto-detect JavaScript</td>
+<td><code>extra.css</code> + <code>extra.js</code></td>
+<td>Write naturally, agent appears</td>
+<td>High — zero author overhead</td>
+</tr>
+</tbody>
+</table>
+<p>For most intelligent textbook projects, we recommend implementing
+all three layers. The inline image works well for the About page
+and chapter introductions. The custom admonition CSS provides
+consistent branding for tips and encouragement callouts. The
+JavaScript auto-detection ensures the agent appears whenever
+authors mention the character, even if they forget the custom
+admonition type.</p>
+<h2 id="integrating-the-agent-into-content-generation">Integrating the Agent into Content Generation</h2>
+<p>Once the CSS and JavaScript layers are in place, the final
+step is to ensure that AI-powered content generation tools
+consistently include the pedagogical agent. When using
+Claude Code skills to generate chapter content, the agent's
+personality, voice, and placement rules must be documented
+in the project's <code>CLAUDE.md</code> file so that every skill
+invocation produces content with the agent woven in.</p>
+<h3 id="why-claudemd-matters">Why CLAUDE.md Matters</h3>
+<p>The <code>CLAUDE.md</code> file is the single source of truth that
+Claude Code reads at the start of every session. Any
+instruction placed here applies automatically to all
+skills — chapter generation, quiz generation, FAQ generation,
+and more. By encoding the agent's character, voice, and
+placement rules in <code>CLAUDE.md</code>, you guarantee consistent
+agent presence across hundreds of generated pages without
+repeating instructions in every prompt.</p>
+<h3 id="what-to-include">What to Include</h3>
+<p>A complete pedagogical agent section in <code>CLAUDE.md</code> should
+cover five areas:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Character overview</strong></td>
+<td>Name, species/form, backstory, role in the book</td>
+<td>"Sylvia is a red squirrel who discovered statistics while optimizing her acorn collection"</td>
+</tr>
+<tr>
+<td><strong>Appearance</strong></td>
+<td>Visual details so image prompts stay consistent</td>
+<td>"Round tortoiseshell glasses, green cardigan with elbow patches, fluffy tail"</td>
+</tr>
+<tr>
+<td><strong>Voice and signature phrases</strong></td>
+<td>Tone, speech patterns, catchphrases that trigger the CSS/JS styling</td>
+<td>"Let's crack this nut!", "Acorn for your thoughts?"</td>
+</tr>
+<tr>
+<td><strong>Placement rules</strong></td>
+<td>Where the agent appears in each chapter and how often</td>
+<td>"Chapter openings, difficult concepts, margin notes, after hard sections, chapter summaries"</td>
+</tr>
+<tr>
+<td><strong>Do's and don'ts</strong></td>
+<td>Guardrails to prevent overuse or tone-breaking content</td>
+<td>"She's a seasoning, not the main dish — 1-2 appearances per major section"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-statistics-course-claudemd">Example: Statistics Course CLAUDE.md</h3>
+<p>The <a href="https://github.com/dmccreary/statistics-course/blob/main/CLAUDE.md">Statistics Course CLAUDE.md</a>
+is a real-world example of this pattern. Here is how the
+key sections are structured:</p>
+<h4 id="narrative-anchor-section">Narrative Anchor Section</h4>
+<p>The file begins with a <code>## Narrative Anchor: Sylvia the Statistical Squirrel</code>
+section containing:</p>
+<ul>
+<li><strong>Character Overview</strong> — a short paragraph establishing
+  Sylvia as the book's mascot and guide</li>
+<li><strong>Appearance</strong> — a bullet list of species, signature
+  features, outfit, accessories, and expressions</li>
+<li><strong>Personality Traits</strong> — a table mapping traits like
+  "Curious", "Encouraging", and "Self-deprecating" to
+  descriptions</li>
+<li><strong>Backstory</strong> — a paragraph about how Sylvia optimized
+  her acorn collection, referenced occasionally in content</li>
+<li><strong>Voice &amp; Language</strong> — tone description, speech patterns,
+  and a list of signature phrases</li>
+</ul>
+<h4 id="placement-rules-table">Placement Rules Table</h4>
+<p>A table tells the content generator exactly when Sylvia
+should appear:</p>
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chapter openings</td>
+<td>Introduces the topic with enthusiasm</td>
+</tr>
+<tr>
+<td>Difficult concepts</td>
+<td>Offers reassurance and reframes the challenge</td>
+</tr>
+<tr>
+<td>Margin notes</td>
+<td>Quick tips, puns, or encouragement</td>
+</tr>
+<tr>
+<td>Common mistakes</td>
+<td>Gently warns without shaming</td>
+</tr>
+<tr>
+<td>After hard sections</td>
+<td>Celebrates progress</td>
+</tr>
+<tr>
+<td>Practice problems</td>
+<td>Encourages engagement</td>
+</tr>
+<tr>
+<td>Chapter summaries</td>
+<td>Reinforces key takeaways</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dos-and-donts">Do's and Don'ts</h4>
+<p>Explicit guardrails prevent the generator from overusing
+the character:</p>
+<ul>
+<li><strong>Do:</strong> Use the agent to make emotional connections, ask
+  guiding questions, celebrate milestones</li>
+<li><strong>Don't:</strong> Overuse her, make her annoying or interruptive,
+  have her explain things condescendingly, force jokes</li>
+</ul>
+<h4 id="chapter-structure-template">Chapter Structure Template</h4>
+<p>The chapter content structure section explicitly references
+the agent at two points:</p>
+<ol>
+<li><strong>Introduction</strong> — "engaging hook with Sylvia quote"</li>
+<li><strong>Summary</strong> — "Let's squirrel away..." wrap-up</li>
+</ol>
+<p>This ensures every generated chapter begins and ends with
+the agent's voice.</p>
+<h4 id="color-theme-section">Color Theme Section</h4>
+<p>A <code>## Sylvia Color Theme</code> section defines CSS variables
+derived from the character's appearance and maps them to
+site elements. This gives the content generator context
+for why specific colors are used in MicroSim templates:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--sylvia-green</span><span class="p">:</span><span class="w"> </span><span class="mh">#2E7D32</span><span class="p">;</span><span class="w">   </span><span class="c">/* Cardigan - primary */</span>
+<span class="w">  </span><span class="nv">--sylvia-auburn</span><span class="p">:</span><span class="w"> </span><span class="mh">#B5651D</span><span class="p">;</span><span class="w">  </span><span class="c">/* Fur - accent */</span>
+<span class="w">  </span><span class="nv">--sylvia-cream</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFF8E1</span><span class="p">;</span><span class="w">   </span><span class="c">/* Belly - backgrounds */</span>
+<span class="w">  </span><span class="nv">--sylvia-hazel</span><span class="p">:</span><span class="w"> </span><span class="mh">#8B7355</span><span class="p">;</span><span class="w">   </span><span class="c">/* Eyes/glasses - decorative */</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="minimal-claudemd-template">Minimal CLAUDE.md Template</h3>
+<p>For a new project, start with this minimal template and
+expand as needed:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Narrative Anchor: [Agent Name]</span>
+
+<span class="gu">### Character Overview</span>
+
+<span class="gs">**[Name]**</span> is the book&#39;s mascot and guide — [1-2 sentence
+description of who they are and why they appear in the book].
+
+<span class="gu">### Voice</span>
+
+<span class="gs">**Tone:**</span> [e.g., warm, encouraging, playful]
+
+<span class="gs">**Signature phrases:**</span>
+<span class="k">-</span><span class="w"> </span>&quot;[Phrase 1]&quot; (used when [context])
+<span class="k">-</span><span class="w"> </span>&quot;[Phrase 2]&quot; (used when [context])
+
+<span class="gu">### Placement Rules</span>
+
+| Context | Role |
+|---|---|
+| Chapter openings | Introduces the topic |
+| Difficult concepts | Offers reassurance |
+| Chapter summaries | Reinforces key takeaways |
+
+<span class="gu">### Do&#39;s and Don&#39;ts</span>
+
+<span class="gs">**Do:**</span> Use [Name] to encourage, ask guiding questions,
+celebrate milestones. Limit to 1-2 appearances per section.
+
+<span class="gs">**Don&#39;t:**</span> Overuse, interrupt flow, be condescending, or
+force humor.
+
+<span class="gu">### Custom Admonition</span>
+
+Any admonition with &quot;[Name]&quot; in the title will automatically
+display the mascot icon via CSS/JS. Use any standard
+admonition type:
+
+    !!! tip &quot;[Name] Says&quot;
+        [Content here]
+</code></pre></div></td></tr></table></div>
+<h3 id="how-skills-use-these-instructions">How Skills Use These Instructions</h3>
+<p>When a Claude Code skill like <code>chapter-content-generator</code>
+runs, it reads <code>CLAUDE.md</code> before generating any content.
+The skill does not need special logic for the agent — it
+simply follows the instructions it finds:</p>
+<ol>
+<li>The <strong>character overview</strong> tells it who the agent is</li>
+<li>The <strong>voice section</strong> tells it how the agent speaks</li>
+<li>The <strong>placement rules</strong> tell it where to insert agent
+   dialogue</li>
+<li>The <strong>do's and don'ts</strong> prevent overuse</li>
+<li>The <strong>custom admonition</strong> format tells it the exact
+   Markdown syntax to use</li>
+</ol>
+<p>The CSS and JavaScript layers then handle rendering
+automatically — the skill only needs to produce the
+correct Markdown, and the agent icon and styling appear
+on the published site.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Pedagogical_agent">Persona Effect — James Lester research on animated pedagogical agents</a></li>
+<li><a href="https://dmccreary.github.io/statistics-course/faq/#who-is-sylvia-the-squirrel">Statistics Course — Sylvia the Squirrel FAQ</a></li>
+<li><a href="https://github.com/dmccreary/statistics-course/blob/main/docs/css/extra.css">Statistics Course CSS</a></li>
+<li><a href="https://github.com/dmccreary/statistics-course/blob/main/docs/js/extra.js">Statistics Course JavaScript</a></li>
+<li><a href="https://github.com/dmccreary/statistics-course/blob/main/CLAUDE.md">Statistics Course CLAUDE.md</a></li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../from-sage-to-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: From Sage to Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                From Sage to Guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../quality-metrics/" class="md-footer__link md-footer__link--next" aria-label="Next: Quality Metrics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quality Metrics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -48,6 +48,41 @@
   background-color: #0041a4; /* Darker blue on hover */
 }
 
+/* Companion Agent admonitions — Nell mascot in upper-right corner */
+.admonition.companion-agent {
+  position: relative;
+  border-left-color: #1565C0 !important;
+}
+
+.admonition.companion-agent > .admonition-title {
+  position: relative;
+  padding-top: 14px;
+  background-color: rgba(21, 101, 192, 0.1) !important;
+}
+
+.admonition.companion-agent > .admonition-title::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -4px;
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/nell-colored.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+/* Scale down on mobile */
+@media (max-width: 600px) {
+  .admonition.companion-agent > .admonition-title::after {
+    width: 32px;
+    height: 32px;
+    top: 1px;
+    right: 4px;
+  }
+}
+
 /* Grid layout for cards - 3 column */
 .grid.cards.grid-3-col {
   grid-template-columns: repeat(3, minmax(0, 1fr));
