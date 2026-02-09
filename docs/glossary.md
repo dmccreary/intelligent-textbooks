@@ -244,9 +244,17 @@ Allow multiple-choice questions in a list to use the ordered-list labels A. B. C
 
 #### Scaffolding
 
-An instructional strategy where support is provided to learners at the beginning of a learning process and then gradually removed as they gain confidence and competence. 
+An instructional strategy where support is provided to learners at the beginning of a learning process and then gradually removed as they gain confidence and competence.
 
 Scaffolding allows students to build on what they already know and reach higher levels of understanding.
+
+#### Scroll Hijacking
+
+The unintentional capture of a reader's scroll events by an embedded iframe, causing the page to stop scrolling when the pointer enters the iframe boundary.
+
+In intelligent textbooks, scroll hijacking most commonly occurs when a MicroSim iframe consumes scroll events instead of passing them through to the parent chapter page. This can be mitigated by disabling `pointer-events` on iframes by default and enabling interaction only when the reader clicks on the simulation.
+
+See: [Scroll Hijacking and MicroSim Iframes](./concepts/scroll-hijacking.md)
 
 #### Search
 

@@ -52,6 +52,8 @@ nav:
     - Levels of Interactivity: concepts/levels-of-interactivity-v1.md
     - From Sage to Guide: concepts/from-sage-to-guide.md
     - Quality Metrics: concepts/quality-metrics.md
+    - Iframe Guidelines: concepts/iframe-guidelines.md
+    - Scroll Hijacking: concepts/scroll-hijacking.md
     - Book Metadata:
       - Book Metadata Intro: concepts/book-metadata/index.md
       - Book Metadata Guide: concepts/book-metadata/book-metadata-guide.md
