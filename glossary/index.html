@@ -484,6 +484,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1374,6 +1378,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scroll-hijacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scroll Hijacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#search" class="md-nav__link">
     <span class="md-ellipsis">
       Search
@@ -1957,6 +1970,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scroll-hijacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scroll Hijacking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#search" class="md-nav__link">
     <span class="md-ellipsis">
       Search
@@ -2294,8 +2316,12 @@ as simulating graph traversal algorithms.</p>
 clicks on a "Show Answer" control.</p>
 <p>Allow multiple-choice questions in a list to use the ordered-list labels A. B. C. D.</p>
 <h4 id="scaffolding">Scaffolding</h4>
-<p>An instructional strategy where support is provided to learners at the beginning of a learning process and then gradually removed as they gain confidence and competence. </p>
+<p>An instructional strategy where support is provided to learners at the beginning of a learning process and then gradually removed as they gain confidence and competence.</p>
 <p>Scaffolding allows students to build on what they already know and reach higher levels of understanding.</p>
+<h4 id="scroll-hijacking">Scroll Hijacking</h4>
+<p>The unintentional capture of a reader's scroll events by an embedded iframe, causing the page to stop scrolling when the pointer enters the iframe boundary.</p>
+<p>In intelligent textbooks, scroll hijacking most commonly occurs when a MicroSim iframe consumes scroll events instead of passing them through to the parent chapter page. This can be mitigated by disabling <code>pointer-events</code> on iframes by default and enabling interaction only when the reader clicks on the simulation.</p>
+<p>See: <a href="../concepts/scroll-hijacking/">Scroll Hijacking and MicroSim Iframes</a></p>
 <h4 id="search">Search</h4>
 <p>Create a search function as part of the build process.</p>
 <p>The mkdocs material theme generates a reverse index JSON file that is used to

@@ -484,6 +484,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1207,6 +1211,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-scroll-hijacking-and-how-does-it-affect-microsim-iframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is scroll hijacking and how does it affect MicroSim iframes?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-features-like-quiz-management-and-feedback-mechanisms-contribute-to-the-intelligence-of-these-textbooks" class="md-nav__link">
     <span class="md-ellipsis">
       How do features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks?
@@ -1393,6 +1406,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-scroll-hijacking-and-how-does-it-affect-microsim-iframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is scroll hijacking and how does it affect MicroSim iframes?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-features-like-quiz-management-and-feedback-mechanisms-contribute-to-the-intelligence-of-these-textbooks" class="md-nav__link">
     <span class="md-ellipsis">
       How do features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks?
@@ -1442,6 +1464,9 @@ just giving it the URL of the book.  Amazing! -->
 <p>Utilizing open standards is important for several reasons. It promotes interoperability, allowing different tools and platforms to work together seamlessly. It also fosters transparency and accessibility, making the resources potentially more widely available and adaptable. Furthermore, open standards can encourage collaboration and community contributions to the development and improvement of intelligent textbooks.</p>
 <h2 id="how-does-the-integration-with-platforms-like-github-enhance-the-development-and-maintenance-process">How does the integration with platforms like GitHub enhance the development and maintenance process?</h2>
 <p>Integration with GitHub provides several key benefits. It enables version control, allowing for tracking changes and reverting to previous versions if needed. It also facilitates collaboration among multiple contributors, making it easier to develop and maintain the textbook collectively. Additionally, the "Edit from GitHub" feature allows for direct contributions and updates to the content, fostering a dynamic and evolving resource. The "Automatic Build" functionality further streamlines the process by automatically deploying changes made on GitHub to the live textbook.</p>
+<h2 id="what-is-scroll-hijacking-and-how-does-it-affect-microsim-iframes">What is scroll hijacking and how does it affect MicroSim iframes?</h2>
+<p>Scroll hijacking occurs when an embedded iframe captures the reader's scroll events, causing the chapter page to stop scrolling when the pointer enters the iframe boundary. Because iframes are independent browsing contexts, the browser routes scroll input to whichever document the pointer is over. A tall MicroSim can occupy enough of the viewport that the reader gets stuck and must move their pointer outside the iframe to resume scrolling.</p>
+<p>The recommended solution is to set <code>pointer-events: none</code> on MicroSim iframes by default so scroll events pass through to the chapter, then enable interaction when the reader deliberately clicks on the simulation. A visible "Click to interact" overlay can make this behavior clear. Additional best practices include placing iframes at natural section breaks, introducing the simulation with a sentence before the iframe, and avoiding <code>mouseWheel()</code> handlers in p5.js unless guarded by a focus check. See the full guide at <a href="../concepts/scroll-hijacking/">Scroll Hijacking and MicroSim Iframes</a>.</p>
 <h2 id="how-do-features-like-quiz-management-and-feedback-mechanisms-contribute-to-the-intelligence-of-these-textbooks">How do features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks?</h2>
 <p>Features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks by making them more adaptive and responsive to student learning. Quizzes can help students assess their understanding and identify areas where they need further study. Automated feedback, potentially powered by generative AI, can provide immediate guidance and explanations, helping students learn from their mistakes. This iterative process of learning, assessment, and feedback makes the textbook more than just a repository of information; it becomes an active tool in the learning process, capable of responding to the student's progress and needs.</p>
 
