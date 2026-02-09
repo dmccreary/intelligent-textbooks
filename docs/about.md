@@ -1,8 +1,13 @@
 # About This Site
 
+![](./img/nell-colored.png){ width="200", align="right" }
 This website is part of a series of resources to help teachers from around the world create the foundation for free and open intelligent textbooks.
 
-Our focus today is to help instructors create [Level 2](./sims/book-levels/index.md) textbooks that have a [learning graph](./glossary.md#learning-graph) as their core data structure to ground content generation and guide learning agents.
+Our character to the right is **Nell**.  She is using
+an intelligent textbook that adapts lessons to her needs.
+
+Our focus today is to help instructors create [Level 2.9](./sims/book-levels/index.md) textbooks that have a [learning graph](./glossary.md#learning-graph) as their core data structure to ground content generation and guide learning agents.  Although Level 2.9 textbooks are interactive, they do not
+store any student personal data so the text can adaptive to their needs.
 
 ## Our Book Generation Workflow
 
