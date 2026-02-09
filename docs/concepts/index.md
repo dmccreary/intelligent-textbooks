@@ -53,6 +53,11 @@ Helps authors choose appropriate interactivity levels for different learning obj
 The shifting role of teachers from knowledge transmitters to learning facilitators.
 Explores how AI-augmented textbooks transform the relationship between teachers, students, and content.
 
+## [Pedagogical Agent](pedagogical-agent.md)
+
+A visual mascot character that guides students through activities and provides encouragement.
+Covers implementation patterns from simple inline images to auto-detected custom admonitions with CSS and JavaScript.
+
 ## [Open Educational Resources](open-educational-resources.md)
 
 Freely accessible, openly licensed educational materials that can be used, adapted, and redistributed.
