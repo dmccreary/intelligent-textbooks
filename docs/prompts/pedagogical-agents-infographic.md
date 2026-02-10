@@ -34,7 +34,7 @@ agent into an intelligent textbook built with MkDocs Material.
 
 ### Method 1: Inline Image with Markdown
 
-![Nell using her intelligent textbook](../img/nell-colored.png){ width="100", align="right" }
+![Nell using her intelligent textbook](../img/nell-colored.png){ width="100px", align="right" }
 
 
 The simplest approach is to place the agent image directly
@@ -232,7 +232,7 @@ types (`tip` and `note`).
 
 ## Case Study: Sylvia the Squirrel
 
-![Sylvia Learning Assistant](./sylvia-learning-assistent.jpg)
+![Sylvia Learning Assistant](./sylvia.png){ width="150px", align="right" }
 
 The [AP Statistics Course](https://dmccreary.github.io/statistics-course/)
 provides an excellent real-world example of a fully integrated
