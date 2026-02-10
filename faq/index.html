@@ -1222,6 +1222,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-the-persona-effect-and-why-do-intelligent-textbooks-use-pedagogical-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the persona effect and why do intelligent textbooks use pedagogical agents?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-features-like-quiz-management-and-feedback-mechanisms-contribute-to-the-intelligence-of-these-textbooks" class="md-nav__link">
     <span class="md-ellipsis">
       How do features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks?
@@ -1417,6 +1426,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-the-persona-effect-and-why-do-intelligent-textbooks-use-pedagogical-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the persona effect and why do intelligent textbooks use pedagogical agents?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-features-like-quiz-management-and-feedback-mechanisms-contribute-to-the-intelligence-of-these-textbooks" class="md-nav__link">
     <span class="md-ellipsis">
       How do features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks?
@@ -1469,6 +1487,8 @@ just giving it the URL of the book.  Amazing! -->
 <h2 id="what-is-scroll-hijacking-and-how-does-it-affect-microsim-iframes">What is scroll hijacking and how does it affect MicroSim iframes?</h2>
 <p>Scroll hijacking occurs when an embedded iframe captures the reader's scroll events, causing the chapter page to stop scrolling when the pointer enters the iframe boundary. Because iframes are independent browsing contexts, the browser routes scroll input to whichever document the pointer is over. A tall MicroSim can occupy enough of the viewport that the reader gets stuck and must move their pointer outside the iframe to resume scrolling.</p>
 <p>The recommended solution is to set <code>pointer-events: none</code> on MicroSim iframes by default so scroll events pass through to the chapter, then enable interaction when the reader deliberately clicks on the simulation. A visible "Click to interact" overlay can make this behavior clear. Additional best practices include placing iframes at natural section breaks, introducing the simulation with a sentence before the iframe, and avoiding <code>mouseWheel()</code> handlers in p5.js unless guarded by a focus check. See the full guide at <a href="../concepts/scroll-hijacking/">Scroll Hijacking and MicroSim Iframes</a>.</p>
+<h2 id="what-is-the-persona-effect-and-why-do-intelligent-textbooks-use-pedagogical-agents">What is the persona effect and why do intelligent textbooks use pedagogical agents?</h2>
+<p>The persona effect, coined by James C. Lester in 1997, is the finding that the mere presence of a lifelike character in a learning environment improves learner engagement and perception of the experience. Lester's study of 100 middle school students showed that even a non-expressive animated agent had a strong positive effect. Social agency theory explains this: social cues from an agent trigger a sense of interaction in learners, increasing motivation. Intelligent textbooks apply this research by embedding pedagogical agents — mascot characters that guide students, offer encouragement, and signal special content like tips or challenges. For example, the AP Statistics Course uses Sylvia the Squirrel, with custom CSS and JavaScript that automatically display her icon whenever an admonition title mentions her name. See the full guide at <a href="../concepts/pedagogical-agent/">Pedagogical Agents</a>.</p>
 <h2 id="how-do-features-like-quiz-management-and-feedback-mechanisms-contribute-to-the-intelligence-of-these-textbooks">How do features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks?</h2>
 <p>Features like quiz management and feedback mechanisms contribute to the "intelligence" of these textbooks by making them more adaptive and responsive to student learning. Quizzes can help students assess their understanding and identify areas where they need further study. Automated feedback, potentially powered by generative AI, can provide immediate guidance and explanations, helping students learn from their mistakes. This iterative process of learning, assessment, and feedback makes the textbook more than just a repository of information; it becomes an active tool in the learning process, capable of responding to the student's progress and needs.</p>
 
