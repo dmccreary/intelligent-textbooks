@@ -198,6 +198,17 @@ plugins:
   - search
   - social
   - social_override
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
 markdown_extensions:
   - admonition
   - md_in_html # required for multiple-choice question numbering
