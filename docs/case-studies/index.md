@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 66 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 67 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -408,6 +408,14 @@ frequently.
     Course on neurodiversity awareness and inclusion strategies.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/neurodiversity-course)
+
+- **[Organizational Analytics with AI](https://dmccreary.github.io/organizational-analytics)**
+
+    ![Organizational Analytics with AI](./img/organizational-analytics.jpg)
+
+    Interactive textbook teaching how to use graph databases, AI, and NLP to unlock hidden insights in HR data including influence, collaboration, sentiment, and organizational health.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/organizational-analytics) · 151 Files · 203K Words · 73 MicroSims · 201 Glossary Terms
 
 - **[Personal Finance](https://dmccreary.github.io/personal-finance/)**
 
