@@ -153,6 +153,7 @@ nav:
     - Recommended Skill Summary: skills/recommended-skills-summary.md
     - Social Media Generator: skills/social-media-generator.md
     - Template: skills/template.md
+  
   - Formatting Tests:
     - Introduction: formatting-tests/index.md
     - Code Highlighting: formatting-tests/code-highlight-test.md
