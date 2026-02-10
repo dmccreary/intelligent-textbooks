@@ -219,6 +219,18 @@ are the default navigation system and they are both intuitive and
 familiar by our users.  Our users also tend to be using
 screens that are wide landscape displays.  We discourage top navigation.
 
+#### Pedagogical Agent
+
+A visual mascot character embedded in a textbook or learning environment that guides students through activities, provides encouragement, and makes abstract content feel more approachable.
+
+See: [Pedagogical Agents](./concepts/pedagogical-agent.md)
+
+#### Persona Effect
+
+The finding that the mere presence of a lifelike character in an interactive learning environment improves learner engagement and perception of the learning experience, even when the character is not expressive. Coined by James C. Lester in a 1997 CHI study of 100 middle school students interacting with an animated pedagogical agent.
+
+See: [Pedagogical Agents](./concepts/pedagogical-agent.md)
+
 #### p5.js
 
 The JavaScript library most commonly used to render MicroSims.
