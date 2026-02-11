@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 67 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 68 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -146,6 +146,14 @@ frequently.
     A college-level course on creating chatbots. Covers NLP foundations, semantic search, LLMs, embeddings, and vector databases.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/conversational-ai) · Active Development
+
+- **[Computer Science with Python](https://dmccreary.github.io/computer-science)**
+
+    ![Computer Science with Python](./img/computer-science.jpg)
+
+    An interactive, AI-assisted textbook for AP Computer Science using Python. Features 400 mapped concepts, 20 chapters, and MicroSims to make abstract computing ideas concrete for high school and early college learners.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/computer-science) · 58 Files · 153K Words · 17 MicroSims · 400 Glossary Terms
 
 - **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
