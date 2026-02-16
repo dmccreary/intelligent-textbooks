@@ -278,6 +278,13 @@ list the pages that match search keywords.
 Note that standard mkdocs search does not use embeddings and there is no
 way to find similar documents.
 
+#### Seed Prompt
+
+A formally structured generative instruction that specifies the foundational scope, conceptual domain, audience characteristics, learning objectives, and structural constraints required to produce a complete textbook artifact.
+
+Within AI-assisted textbook generation systems as the authoritative initiating specification from which all subsequent content, structures, and derivative prompts are derived.
+
+
 #### Semantic Search
 
 A retrieval method that interprets the contextual meaning of search terms to improve the relevance of search results.
