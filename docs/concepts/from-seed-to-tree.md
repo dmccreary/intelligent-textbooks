@@ -70,7 +70,7 @@ Generative AI:
 * Expands vague themes into structured outlines
 * Balances breadth and depth
 
-It fills in what is implied but not explicitly stated.
+It fills in what is **implied** but not explicitly stated.
 
 If the Seed Prompt specifies “Bloom alignment,” the AI knows to include:
 
@@ -85,8 +85,6 @@ The expansion is not random — it follows learned academic structure.
 
 The output becomes the formal contract for the rest of the book.
 
----
-
 ## 3. Step Two: Expanding into a 300-Concept Learning Graph
 
 ### 3.1 From Description to Concept Network
@@ -95,32 +93,35 @@ Once the course description is stable, the next instruction might be:
 
 > Extract and expand all domain concepts into a 300-node learning graph with dependency relationships.
 
+or
+
+> Run the /learning-graph-generator skill
+
 The system generates:
 
 * Core foundational concepts
 * Intermediate structural concepts
 * Advanced synthesis concepts
-* Cross-cutting themes
-* Assessment nodes
-* Simulation nodes
+* A 12-element taxonomy of concepts for a colorful display
 
-Each concept becomes a node with properties such as:
+Each concept is a node with properties such as:
 
-* Definition
-* Bloom level
-* Difficulty rating
-* Prerequisites
-* Related simulations
-* Associated glossary terms
+* Concept label
+* Prerequisite Concepts
+* Enabling Concepts
+* Primary Classification with the taxonomy
+
 
 ### 3.2 Why AI Excels at Concept Expansion
 
 Generative AI:
 
-* Identifies latent conceptual clusters
+* Identifies latent concepts
 * Infers missing prerequisite chains
 * Detects likely subtopics
 * Adds bridging concepts to maintain continuity
+* Determines when a concept needs to be subdivided into multiple concepts
+* Decides when concepts should be grouped together
 
 For example, if the topic includes “Graph Algorithms,” the AI will naturally expand into:
 
@@ -134,8 +135,6 @@ For example, if the topic includes “Graph Algorithms,” the AI will naturally
 Even if these were not explicitly listed in the Seed Prompt.
 
 AI fills structural gaps by recognizing what must exist between two related concepts.
-
----
 
 ## 4. Step Three: Generating Chapter Structure, Tone, and Mascot
 
@@ -152,12 +151,17 @@ The instruction:
 
 > Cluster the learning graph into pedagogically coherent chapters.
 
+or
+
+> Run the /book-chapter-generator skill
+
 The AI performs:
 
 * Concept grouping
 * Foundational layering
 * Narrative sequencing
 * Assessment insertion
+* Chapter sizing and concept shuffling for balanced chapter lengths
 
 ### 4.2 Tone Generation
 
@@ -177,6 +181,13 @@ A simple instruction such as:
 
 > Create a narrative mascot aligned with the subject domain.
 
+or
+
+> Run the /book-installer skill and use the add a mascot guide
+
+This will lead the user through many questions about possible options
+and allow the user to combine concepts from different characters.
+
 Produces:
 
 * A character
@@ -194,8 +205,6 @@ The mascot serves:
 
 Generative AI excels at maintaining character consistency across chapters once the mascot profile is defined.
 
----
-
 ## 5. Step Four: Generating Chapter Content
 
 ### 5.1 Structured Chapter Template
@@ -204,15 +213,26 @@ Each chapter can follow a structured template:
 
 1. Hook or narrative introduction
 2. Concept exposition
-3. Visual diagrams
-4. MicroSim integration
+3. Visual diagrams and infographics
+4. MicroSim specification #### Diagram placeholders
 5. Worked examples
 6. Reflection questions
 7. Summary
 
+The key is to break up the large amount of pure-text "walls of text" that 
+make it difficult for readers to pay attention.  Chapter content generation
+rules are complex and include voice, tone, pace, complexity and
+take into account cognitive load and how users can gain an deep understanding
+of a concept through the lens of the Bloom Taxonomy learning objectives
+and their mapping to MicroSims.
+
 The instruction:
 
-> Generate Chapter 4 based on concepts 72–94 in the learning graph.
+> Generate Chapter 1 based on concepts 1-20 in the learning graph.
+
+Would not be sufficient to embody all the rules.  Instead the following is used:
+
+> Run the /chapter-content-generator on chapter 1
 
 The AI:
 
@@ -232,15 +252,14 @@ AI is particularly strong at:
 
 When two adjacent concepts lack connective explanation, the AI supplies narrative continuity.
 
----
-
 ## 6. Step Five: Generating MicroSims
 
 MicroSims are interactive simulations embedded in the textbook.
 
 Instruction:
 
-> Generate a MicroSim for concept 143 (PageRank Centrality).
+> Use the /microsim-generator to generate MicroSim #### Diagram XXX.
+
 
 The AI produces:
 
