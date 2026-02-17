@@ -114,6 +114,14 @@ nav:
   - Case Studies:
     - Intro: case-studies/index.md
   
+  - Learning Graph:
+    - Introduction: learning-graph/index.md
+    - Axiom Mascot Test: learning-graph/axiom-mascot-test.md
+    - learning-graph/axiom-mascot-guide.md
+    - learning-graph/axiom-prompts.md
+    - learning-graph/axiom-style-guide.md
+    - learning-graph/book-mascot-linkedin-announcement.md
+    - learning-graph/trim-mascot-padding.md
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
@@ -225,6 +233,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra_css:
    - css/extra.css
+   - css/axiom-mascot.css
 extra_javascript:
     - js/extra.js
     # needed for mathjax to work
