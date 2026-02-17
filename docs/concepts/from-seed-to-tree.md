@@ -1,5 +1,7 @@
 # From Seed to Tree: Growing an Intelligent Textbook from a Seed Prompt
 
+![](../img/seed-to-tree.png)
+
 !!! prompt
     This is a great start!  Now write an entire chapter of a book on how to generate an intelligent textbook from a small seed prompt that generates a course description into a 300-concept learning graph and then generates chapter structure, tone and a mascot, and then generates chapter content and then generates the microsims for that chapter.  After that describe the process of generating the supplementary material including a glossary of terms, FAQ, Quizzes, slides, references and a teacher's guilde.  Focus on how generative AI is excellent at filling in the gaps and asking the book generator to fill in the key details of the book.
 
