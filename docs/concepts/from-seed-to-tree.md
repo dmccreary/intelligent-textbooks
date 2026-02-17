@@ -328,7 +328,7 @@ It can also generate answer keys and rationales.
 
 Instruction:
 
-> Convert Chapter 5 into a 25-slide lecture deck outline.
+> Convert Chapter 5 into a 25-slide lecture deck using embedded microsims from the chapter.
 
 AI:
 
@@ -412,8 +412,6 @@ This ensures:
 * Version control
 * Reproducibility
 * Framework independence
-
----
 
 ## 10. Conclusion: From Seed to Forest
 
