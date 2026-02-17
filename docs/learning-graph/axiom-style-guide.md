@@ -2,23 +2,17 @@
 
 ## Intelligent Textbooks Mascot Style Guide
 
----
+## 1. Core Identity
 
-# 1. Core Identity
+**Name:** Axiom the Owl
 
-### Name
+Role: Narrative guide and pedagogical support asset for the Intelligent Textbooks ecosystem.
 
-**Axiom the Owl**
-
-### Role
-
-Narrative guide and pedagogical support asset for the Intelligent Textbooks ecosystem.
-
-### Archetype
+Archetype
 
 The Wise Mentor + Encouraging Coach
 
-### Emotional Tone
+Emotional Tone
 
 * Cheerful
 * Positive
@@ -30,11 +24,9 @@ The Wise Mentor + Encouraging Coach
 
 Axiom never appears sarcastic, dismissive, anxious, or overly comedic.
 
----
+## 2. Visual Identity
 
-# 2. Visual Identity
-
-## 2.1 Silhouette and Form
+### 2.1 Silhouette and Form
 
 * Compact, rounded body
 * Large expressive eyes
@@ -45,9 +37,7 @@ Axiom never appears sarcastic, dismissive, anxious, or overly comedic.
 
 The silhouette must be recognizable even in monochrome.
 
----
-
-## 2.2 Color Palette
+### 2.2 Color Palette
 
 Primary Palette:
 
@@ -65,9 +55,7 @@ Color Principles:
 * No neon or gradient-heavy treatments
 * Flat or softly shaded illustration preferred
 
----
-
-## 2.3 Expression Guidelines
+### 2.3 Expression Guidelines
 
 Eyes:
 
@@ -87,68 +75,100 @@ Beak:
 * Open gently when speaking
 * Never exaggerated into cartoonish laughter
 
----
-
-# 3. Standard Pose Library
+## 3. Standard Pose Library
 
 To ensure consistency, Axiom appears in defined canonical poses.
 
-## 3.1 Neutral Guide Pose
+### 3.1 Neutral Guide Pose
 
-Use: Introductory explanations
+**Use:** Introductory explanations
 
-* Wings relaxed
-* Slight smile
-* Eyes attentive
+* Wings relaxed at sides
+* Gentle closed-beak smile
+* Eyes attentive and open
+* Upright posture
 
-## 3.2 Explaining Pose
+Tone: Calm, steady, reliable.
 
-Use: Concept clarification
+### 3.2 Explaining Pose
+
+**Use:** Concept clarification
 
 * One wing slightly raised
-* Slight forward lean
-* Eyes focused
+* Subtle forward lean
+* Focused eyes
+* Slight open beak as if speaking
 
-## 3.3 Thinking Pose
+Tone: Clear, instructional, confident.
 
-Use: Analytical sections
+### 3.3 Thinking Pose
+
+**Use:** Analytical or reflective sections
 
 * Wing to chin
 * Head slightly tilted
-* Eyebrows slightly furrowed but not stern
+* Eyebrows gently angled inward
+* Soft contemplative expression
 
-## 3.4 Encouragement Pose
+Tone: Curious, analytical, patient.
 
-Use: Challenging content
+### 3.4 Encouragement Pose
+
+**Use:** Challenging content
 
 * Wing thumbs-up gesture
 * Warm smile
 * Slight lean toward reader
 
-## 3.5 Warning Pose (Gentle)
+Tone: Supportive, reassuring.
 
-Use: Common mistakes
+### 3.5 Warning Pose (Gentle)
+
+**Use:** Highlighting common mistakes
 
 * Both wings slightly raised
 * Concerned but calm expression
 * No alarm or panic visuals
 
-## 3.6 Celebration Pose
+Tone: Protective, caring, steady.
 
-Use: End-of-chapter mastery
+### 3.6 Celebration Pose
+
+**Use:** End-of-chapter mastery
 
 * Wings fully spread
-* Bright eyes
-* Confetti, sparkles, or checkmark allowed
-* Expression joyful but dignified
+* Bright, wide eyes
+* Joyful expression
+* Optional subtle confetti or sparkle accents
 
-Celebration must reinforce achievement, not trivialize learning.
+Tone: Proud, celebratory, affirming.
 
----
+### 3.7 Welcome Pose
 
-# 4. Placement Rules
+**Use:** Start of book, chapter, module, or major transition
 
-## 4.1 Margins
+* Wings open outward in a gentle, inviting arc
+* Upright, confident posture
+* Bright, friendly eyes
+* Warm smile and slight forward lean
+* Optional small glow or sunrise motif (keep subtle)
+
+Tone: Inviting, warm, optimistic. Establishes psychological safety.
+
+### 3.8 Tip Pose
+
+**Use:** Highlighting insights, study strategies, or best practices
+
+* One wing raised with a single feather extended upward
+* Slight knowing smile
+* Eyes slightly narrowed in insight (not suspicious)
+* Optional sparkle or lightbulb icon near the raised feather
+
+Tone: Insightful, helpful, strategic. Signals high-value advice.
+
+## 4. Placement Rules
+
+### 4.1 Margins
 
 Axiom typically appears:
 
@@ -159,9 +179,7 @@ Axiom typically appears:
 
 He should never obscure core instructional content.
 
----
-
-## 4.2 Scale Guidelines
+### 4.2 Scale Guidelines
 
 For print:
 
@@ -175,17 +193,13 @@ For social:
 
 * May be scaled larger but should not dominate title hierarchy
 
----
-
-## 4.3 Background
+### 4.3 Background
 
 * Transparent background preferred
 * No busy scene behind Axiom
 * If background is used, it must be subtle and flat
 
----
-
-# 5. Typography Interaction
+## 5. Typography Interaction
 
 Axiom callouts use consistent formatting:
 
@@ -198,14 +212,13 @@ Text tone must match personality:
 
 Example:
 
----
 
-# 6. Admonition Layout Implementation
+## 6. Admonition Layout Implementation
 
 We ship a dedicated stylesheet (`docs/css/axiom-mascot.css`) so Axiom appears inside
-Material for MkDocs admonitions without covering the copy.
+Material for MkDocs admonitions on the left side without covering the copy.
 
-## 6.1 Layout Mechanics
+### 6.1 Layout Mechanics
 
 * Every `.axiom-*` admonition uses a two-column CSS grid.  
   `grid-template-columns: calc(var(--axiom-badge-size) - 24px) minmax(0, 1fr)`
@@ -218,7 +231,7 @@ Material for MkDocs admonitions without covering the copy.
 * The mascot image is drawn via a `::before` pseudo-element anchored to column 1.
   Each pose points to a pose-specific PNG under `docs/img/mascot`.
 
-## 6.2 Asset Preparation
+### 6.2 Asset Preparation
 
 * All mascot PNGs were trimmed with a Pillow script (see
   `docs/learning-graph/trim-mascot-padding.md`) to remove transparent borders.
@@ -226,7 +239,7 @@ Material for MkDocs admonitions without covering the copy.
 * We keep a 4px buffer around the artwork to prevent clipping when the owl feels
   animated.
 
-## 6.3 Design Tradeoffs and Alternatives
+### 6.3 Design Tradeoffs and Alternatives
 
 * **Overlapping badge (old design)**  
   Pros: visually dramatic. Cons: required negative offsets, complicated
@@ -252,9 +265,7 @@ Never:
 
 > “You should already know this.”
 
----
-
-# 6. Behavioral Consistency
+## 7. Behavioral Consistency
 
 Axiom must:
 
@@ -275,22 +286,20 @@ Recommended frequency:
 
 * 3–6 appearances per chapter
 
----
 
-# 7. Bloom Taxonomy Alignment
+## 8. Bloom Taxonomy Alignment
 
 Axiom’s pose correlates with cognitive level:
 
-Remember → Gentle reminder pose
-Understand → Explaining pose
-Apply → Guiding pose
-Analyze → Thinking pose
-Evaluate → Reflective pose
-Create → Celebration pose
+* Remember → Gentle reminder pose
+* Understand → Explaining pose
+* Apply → Guiding pose
+* Analyze → Thinking pose
+* Evaluate → Reflective pose
+* Create → Celebration pose
 
----
 
-# 8. Animation (Optional for Web)
+## 9. Animation (Optional for Web)
 
 If animated:
 
@@ -303,18 +312,15 @@ Animation duration:
 
 * 0.5–1.5 seconds max
 
----
-
-# 9. Accessibility
+## 10. Accessibility
 
 * Provide alt-text for all appearances
 * Ensure sufficient contrast
 * Avoid relying solely on color to convey meaning
 * Maintain legibility at small sizes
 
----
 
-# 10. Governance
+## 11. Governance
 
 All future renderings must:
 
@@ -326,9 +332,8 @@ All future renderings must:
 Versioning recommended:
 Axiom v1.0 – Initial Intelligent Textbooks Edition
 
----
 
-# 11. Emotional Contract with the Reader
+## 12. Emotional Contract with the Reader
 
 Axiom represents:
 
@@ -337,185 +342,7 @@ Axiom represents:
 * Structured curiosity
 * Celebrated mastery
 
-He is not a decoration.
-
-He is a cognitive companion.
-
----
-
-If you would like next, I can:
-
-* Create a downloadable Mascot Asset Kit specification
-* Generate a JSON metadata schema for Axiom states
-* Design a cross-book mascot governance model for 70+ courses
-* Create a visual layout grid showing exact placement examples
-
-This level of consistency will make your Intelligent Textbooks ecosystem feel cohesive and professional across every book.
-
-Below is the updated addition to the **Axiom Mascot Style Guide** including the new **Welcome Pose** and **Tip Pose**, written in the same structured format for governance consistency.
-
----
-
-# 3. Standard Pose Library (Extended)
-
-To ensure visual and behavioral consistency, Axiom appears only in defined canonical poses.
-
----
-
-## 3.1 Neutral Guide Pose
-
-**Use:** Introductory explanations
-
-* Wings relaxed at sides
-* Gentle closed-beak smile
-* Eyes attentive and open
-* Upright posture
-
-Tone: Calm, steady, reliable.
-
----
-
-## 3.2 Explaining Pose
-
-**Use:** Concept clarification
-
-* One wing slightly raised
-* Subtle forward lean
-* Focused eyes
-* Slight open beak as if speaking
-
-Tone: Clear, instructional, confident.
-
----
-
-## 3.3 Thinking Pose
-
-**Use:** Analytical or reflective sections
-
-* Wing to chin
-* Head slightly tilted
-* Eyebrows gently angled inward
-* Soft contemplative expression
-
-Tone: Curious, analytical, patient.
-
----
-
-## 3.4 Encouragement Pose
-
-**Use:** Challenging material
-
-* Wing thumbs-up gesture
-* Warm smile
-* Slight lean toward reader
-
-Tone: Supportive, reassuring.
-
----
-
-## 3.5 Warning Pose (Gentle)
-
-**Use:** Highlighting common mistakes
-
-* Both wings slightly raised
-* Concerned but calm eyes
-* No exaggerated alarm
-
-Tone: Protective, caring, steady.
-
----
-
-## 3.6 Celebration Pose
-
-**Use:** End-of-chapter mastery
-
-* Wings fully spread
-* Bright, wide eyes
-* Joyful expression
-* Optional subtle confetti or sparkle accents
-
-Tone: Proud, celebratory, affirming.
-
----
-
-# NEW POSES
-
----
-
-## 3.7 Welcome Pose
-
-**Use:** Start of book, new chapter, new module, or major transition
-
-### Visual Characteristics
-
-* Wings open outward in a gentle, inviting arc
-* Upright, confident posture
-* Bright, friendly eyes
-* Warm smile
-* Slight forward lean as if greeting the reader
-
-Optional Elements:
-
-* Small glow behind Axiom
-* Subtle rising sun motif (very minimal)
-* No large celebratory elements
-
-### Tone
-
-Inviting, warm, optimistic.
-
-### Sample Dialogue
-
-> “Welcome! Let’s grow something remarkable together.”
-> “You’re about to explore a new branch of knowledge.”
-
-### Usage Frequency
-
-* First page of book
-* Beginning of each chapter
-* Major section transitions
-
-This pose establishes psychological safety and momentum.
-
----
-
-## 3.8 Tip Pose
-
-**Use:** Highlighting insights, study strategies, best practices, or subtle conceptual clarifications
-
-### Visual Characteristics
-
-* One wing raised with a single feather extended upward
-* Slight knowing smile
-* Eyes slightly narrowed in insight (not suspicious)
-* Upright posture
-
-Optional Elements:
-
-* Small sparkle or star near raised feather
-* Lightbulb icon (minimal and flat)
-
-### Tone
-
-Insightful, helpful, strategic.
-
-### Sample Dialogue
-
-> “Here’s a helpful pattern to watch for…”
-> “Pro tip: Try adjusting one variable at a time.”
-> “Notice the relationship between structure and outcome.”
-
-### Usage Frequency
-
-* 2–4 times per chapter
-* Adjacent to MicroSims
-* In margin callouts
-
-This pose signals high-value insight.
-
----
-
-# Pose Governance Matrix
+## 13. Pose Governance Matrix
 
 | Pose          | Emotional Function | Bloom Alignment       | Placement            |
 | ------------- | ------------------ | --------------------- | -------------------- |
@@ -528,17 +355,13 @@ This pose signals high-value insight.
 | Warning       | Error Prevention   | Evaluate              | Pitfall boxes        |
 | Celebration   | Mastery            | Create                | Chapter conclusion   |
 
----
-
-# Visual Hierarchy Rule
+## 14. Visual Hierarchy Rule
 
 Welcome and Celebration poses may be slightly larger than other poses.
 
 Tip and Warning poses should be slightly smaller and placed in margins or side panels.
 
----
-
-# Behavioral Consistency Rule
+## 15. Behavioral Consistency Rule
 
 Axiom must never:
 
@@ -546,9 +369,7 @@ Axiom must never:
 * Use the Welcome pose mid-chapter
 * Use the Celebration pose before mastery checkpoints
 
----
-
-# Final Emotional Arc per Chapter
+## 16. Final Emotional Arc per Chapter
 
 1. Welcome
 2. Guide
@@ -559,8 +380,6 @@ Axiom must never:
 7. Celebrate
 
 This progression mirrors the learning graph growth metaphor.
-
----
 
 If you’d like next, I can:
 
