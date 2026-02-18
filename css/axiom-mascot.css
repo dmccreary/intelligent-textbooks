@@ -1,0 +1,225 @@
+/* ============================================================
+   Mascot: Axiom the Owl
+   Purpose: Place Axiom in the UPPER-LEFT corner of custom MkDocs
+            Material admonitions (like your computer-science site).
+   Image files expected (rename paths as needed):
+     docs/img/mascot/axiom-welcome.png
+     docs/img/mascot/axiom-neutral.png
+     docs/img/mascot/axiom-explain.png
+     docs/img/mascot/axiom-thinking.png
+     docs/img/mascot/axiom-tip.png
+     docs/img/mascot/axiom-encourage.png
+     docs/img/mascot/axiom-warning.png
+     docs/img/mascot/axiom-celebrate.png
+   ============================================================ */
+
+:root {
+  /* Axiom color system (blue + gold + red accents) */
+  --axiom-blue: #1976d2;
+  --axiom-blue-dark: #0d47a1;
+  --axiom-gold: #f9a825;
+  --axiom-red: #e53935;
+
+  --axiom-radius: 0.2rem;
+
+  /* Mascot badge sizing/placement */
+  --axiom-badge-size: 156px;     /* icon height/width */
+  --axiom-grid-gap: 0.5rem;      /* spacing between icon + text */
+}
+
+/* ---------- Base: any Axiom admonition ---------- */
+.md-typeset .admonition[class*="axiom-"],
+.md-typeset details[class*="axiom-"] {
+  display: grid;
+  grid-template-columns: calc(var(--axiom-badge-size) - 24px) minmax(0, 1fr);
+  column-gap: 0;
+  row-gap: 0.35rem;
+  align-items: start;
+  padding: 0 0 0.7rem;
+  border-radius: var(--axiom-radius);
+}
+
+/* Title spans both columns for consistent width */
+.md-typeset .admonition[class*="axiom-"] > .admonition-title,
+.md-typeset details[class*="axiom-"] > summary {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0.25rem 0;
+  padding-left: 10px;
+  font-weight: 600;
+  border-top-left-radius: var(--axiom-radius);
+  border-top-right-radius: var(--axiom-radius);
+  position: relative;
+}
+
+/* Remove Material's default icon marker in the title bar */
+.md-typeset .admonition[class*="axiom-"] > .admonition-title::before,
+.md-typeset details[class*="axiom-"] > summary::before {
+  display: none;
+  content: none;
+}
+
+/* Body text lives in second column so mascot can sit to the left */
+.md-typeset .admonition[class*="axiom-"] > :not(.admonition-title),
+.md-typeset details[class*="axiom-"] > :not(summary) {
+  grid-column: 2 / 3;
+  margin: 0;
+  padding-left: var(--axiom-grid-gap);
+  padding-right: var(--axiom-grid-gap);
+}
+
+/* Mascot badge now sits beneath the title, aligned with body text */
+.md-typeset .admonition[class*="axiom-"]::before,
+.md-typeset details[class*="axiom-"]::before {
+  content: "";
+  grid-column: 1 / 2;
+  grid-row: 2 / span 10;
+  width: 100%;
+  height: calc(var(--axiom-badge-size) - 24px);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+/* Hide the mascot when the details block is collapsed */
+.md-typeset details[class*="axiom-"]:not([open])::before {
+  display: none;
+}
+
+/* ---------- WELCOME ---------- */
+.md-typeset .admonition.axiom-welcome,
+.md-typeset details.axiom-welcome {
+  border-color: var(--axiom-blue);
+  background-color: rgba(25, 118, 210, 0.10);
+}
+.md-typeset .axiom-welcome > .admonition-title,
+.md-typeset .axiom-welcome > summary {
+  background-color: var(--axiom-blue);
+  color: #fff;
+}
+.md-typeset .admonition.axiom-welcome::before,
+.md-typeset details.axiom-welcome::before {
+  background-image: url("../img/mascot/axiom-welcome.png");
+}
+
+/* ---------- NEUTRAL ---------- */
+.md-typeset .admonition.axiom-neutral,
+.md-typeset details.axiom-neutral {
+  border-color: var(--axiom-blue-dark);
+  background-color: rgba(13, 71, 161, 0.08);
+}
+.md-typeset .axiom-neutral > .admonition-title,
+.md-typeset .axiom-neutral > summary {
+  background-color: var(--axiom-blue-dark);
+  color: #fff;
+}
+.md-typeset .admonition.axiom-neutral::before,
+.md-typeset details.axiom-neutral::before {
+  background-image: url("../img/mascot/axiom-neutral.png");
+}
+
+/* ---------- EXPLAIN ---------- */
+.md-typeset .admonition.axiom-explain,
+.md-typeset details.axiom-explain {
+  border-color: var(--axiom-gold);
+  background-color: rgba(249, 168, 37, 0.14);
+}
+.md-typeset .axiom-explain > .admonition-title,
+.md-typeset .axiom-explain > summary {
+  background-color: var(--axiom-gold);
+  color: #fff;
+}
+.md-typeset .admonition.axiom-explain::before,
+.md-typeset details.axiom-explain::before {
+  background-image: url("../img/mascot/axiom-explain.png");
+}
+
+/* ---------- THINKING ---------- */
+.md-typeset .admonition.axiom-thinking,
+.md-typeset details.axiom-thinking {
+  border-color: #6a1b9a;
+  background-color: rgba(106, 27, 154, 0.10);
+}
+.md-typeset .axiom-thinking > .admonition-title,
+.md-typeset .axiom-thinking > summary {
+  background-color: #6a1b9a;
+  color: #fff;
+}
+.md-typeset .admonition.axiom-thinking::before,
+.md-typeset details.axiom-thinking::before {
+  background-image: url("../img/mascot/axiom-thinking.png");
+}
+
+/* ---------- TIP ---------- */
+.md-typeset .admonition.axiom-tip,
+.md-typeset details.axiom-tip {
+  border-color: #2e7d32;
+  background-color: rgba(46, 125, 50, 0.10);
+}
+.md-typeset .axiom-tip > .admonition-title,
+.md-typeset .axiom-tip > summary {
+  background-color: #2e7d32;
+  color: #fff;
+}
+.md-typeset .admonition.axiom-tip::before,
+.md-typeset details.axiom-tip::before {
+  background-image: url("../img/mascot/axiom-tip.png");
+}
+
+/* ---------- ENCOURAGE ---------- */
+.md-typeset .admonition.axiom-encourage,
+.md-typeset details.axiom-encourage {
+  border-color: #0097a7;
+  background-color: rgba(0, 151, 167, 0.10);
+}
+.md-typeset .axiom-encourage > .admonition-title,
+.md-typeset .axiom-encourage > summary {
+  background-color: #0097a7;
+  color: #fff;
+}
+.md-typeset .admonition.axiom-encourage::before,
+.md-typeset details.axiom-encourage::before {
+  background-image: url("../img/mascot/axiom-encourage.png");
+}
+
+/* ---------- WARNING ---------- */
+.md-typeset .admonition.axiom-warning,
+.md-typeset details.axiom-warning {
+  border-color: var(--axiom-red);
+  background-color: rgba(229, 57, 53, 0.10);
+}
+.md-typeset .axiom-warning > .admonition-title,
+.md-typeset .axiom-warning > summary {
+  background-color: var(--axiom-red);
+  color: #fff;
+}
+.md-typeset .admonition.axiom-warning::before,
+.md-typeset details.axiom-warning::before {
+  background-image: url("../img/mascot/axiom-warning.png");
+}
+
+/* ---------- CELEBRATE ---------- */
+.md-typeset .admonition.axiom-celebrate,
+.md-typeset details.axiom-celebrate {
+  border-color: #8e24aa;
+  background-color: rgba(142, 36, 170, 0.10);
+}
+.md-typeset .axiom-celebrate > .admonition-title,
+.md-typeset .axiom-celebrate > summary {
+  background-color: #8e24aa;
+  color: #fff;
+}
+.md-typeset .admonition.axiom-celebrate::before,
+.md-typeset details.axiom-celebrate::before {
+  background-image: url("../img/mascot/axiom-celebrate.png");
+}
+
+/* ---------- Optional: tighten title spacing if desired ---------- */
+.md-typeset .admonition[class*="axiom-"] > .admonition-title,
+.md-typeset details[class*="axiom-"] > summary {
+  border-top-left-radius: var(--axiom-radius);
+  border-top-right-radius: var(--axiom-radius);
+}

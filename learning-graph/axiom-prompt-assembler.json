@@ -1,0 +1,108 @@
+{
+  "library_name": "axiom-mascot-prompt-library",
+  "version": "1.0.0",
+  "description": "Structured prompt library for automated generation of Axiom the Owl mascot poses for the 'Intelligent Textbooks' ecosystem.",
+  "defaults": {
+    "model_family": "image-generation",
+    "render_style": "clean vector-style illustration, soft shading, flat colors, professional educational tone",
+    "background": "transparent",
+    "transparent_background": true,
+    "quality": "high",
+    "output_format": "png",
+    "recommended_sizes": [
+      "1024x1024",
+      "1536x1024",
+      "1024x1536"
+    ],
+    "negative_prompt": "photorealistic, 3D render, noisy, blurry, low-resolution, harsh gradients, neon colors, complex background, scenery, text, watermark, logo, extra characters, distorted anatomy, extra wings, extra eyes, extra beak, deformed tie, inconsistent colors",
+    "character_lock": "A friendly academic owl mascot named Axiom. Compact rounded body. Deep academic blue feathers with cream face and chest. Large golden-yellow eyes framed by dark brow markings resembling scholarly glasses. Warm amber-orange beak and talons. Small gold collar with a bright red tie. Clean vector-style illustration. Soft shading. Flat colors. Professional educational tone. Transparent background. Maintain identical character proportions, facial structure, color palette, and accessory placement as previous approved Axiom mascot renderings."
+  },
+  "poses": [
+    {
+      "pose_id": "axiom-welcome",
+      "pose_name": "Welcome",
+      "intent": "Start of book, start of chapter, new module, major transitions.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: Wings open outward in a gentle welcoming arc. Upright posture. Slight forward lean. Bright friendly eyes. Warm confident smile.\n\nEmotion: Cheerful, encouraging, welcoming, supportive.\n\nLighting: Soft, even lighting. No dramatic shadows.\n\nBackground: Transparent. No scenery. No props.\n\nStyle: Consistent mascot rendering for an intelligent textbook. High resolution. Clean edges.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-neutral",
+      "pose_name": "Neutral",
+      "intent": "Standard instructional guidance within chapter body text and callouts.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: Wings relaxed at sides. Upright balanced stance. Gentle closed-beak smile. Eyes attentive and calm.\n\nEmotion: Steady, wise, patient, supportive.\n\nLighting: Soft, neutral lighting.\n\nBackground: Transparent.\n\nStyle: Clean educational vector illustration. Consistent proportions.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-explain",
+      "pose_name": "Explain",
+      "intent": "Concept clarification sections, walkthrough steps, key ideas.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: One wing slightly raised as if explaining. Slight forward lean. Beak slightly open as if speaking. Focused eyes.\n\nEmotion: Clear, confident, instructional.\n\nLighting: Soft academic lighting.\n\nBackground: Transparent.\n\nStyle: Clean vector educational mascot. No props.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-thinking",
+      "pose_name": "Thinking",
+      "intent": "Analysis, reflection prompts, metacognitive coaching moments.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: One wing touching chin thoughtfully. Head slightly tilted. Eyebrows gently angled inward. Soft contemplative expression.\n\nEmotion: Curious, reflective, analytical, patient.\n\nLighting: Soft directional lighting from upper left.\n\nBackground: Transparent.\n\nStyle: Educational vector mascot illustration. No exaggerated cartoon effects.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-tip",
+      "pose_name": "Tip",
+      "intent": "Pro tips, best practices, insights, MicroSim exploration guidance.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: One wing raised with a single feather extended upward as if giving a helpful tip. Slight knowing smile. Eyes slightly narrowed in insight. Upright posture.\n\nOptional element: Small subtle sparkle OR tiny lightbulb icon near raised feather (minimal, flat).\n\nEmotion: Insightful, strategic, helpful, confident.\n\nLighting: Soft and bright.\n\nBackground: Transparent.\n\nStyle: Clean educational vector style. Minimal decorative elements.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-encourage",
+      "pose_name": "Encourage",
+      "intent": "Hard parts of the chapter, reassurance, persistence messaging.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: Wing giving a thumbs-up gesture. Warm supportive smile. Slight lean toward viewer.\n\nEmotion: Encouraging, optimistic, reassuring.\n\nLighting: Warm soft lighting.\n\nBackground: Transparent.\n\nStyle: Consistent clean educational mascot rendering.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-warning",
+      "pose_name": "Warning",
+      "intent": "Common mistakes, misconceptions, safety checks, pitfalls.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: Both wings slightly raised in a gentle caution gesture. Calm but concerned expression. Eyes focused.\n\nOptional element: Small minimal exclamation mark icon floating near one wing (flat, not alarming).\n\nEmotion: Caring, protective, steady — not alarmist.\n\nLighting: Neutral lighting.\n\nBackground: Transparent.\n\nStyle: Clean vector mascot illustration.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    },
+    {
+      "pose_id": "axiom-celebrate",
+      "pose_name": "Celebrate",
+      "intent": "End-of-chapter mastery, completion acknowledgements, milestones.",
+      "prompt": "{CHARACTER_LOCK}\n\nPose: Wings fully spread wide. Upright confident posture. Bright joyful eyes. Big dignified smile.\n\nOptional elements: Subtle gold confetti OR small sparkles around wings (minimal). No excessive cartoon effects.\n\nEmotion: Proud, celebratory, affirming.\n\nLighting: Warm golden glow accent.\n\nBackground: Transparent.\n\nStyle: Clean high-resolution vector educational illustration.",
+      "tokens": {
+        "CHARACTER_LOCK": "{{defaults.character_lock}}"
+      }
+    }
+  ],
+  "automation_hints": {
+    "naming_convention": "{pose_id}.png",
+    "recommended_generation_order": [
+      "axiom-welcome",
+      "axiom-neutral",
+      "axiom-explain",
+      "axiom-thinking",
+      "axiom-tip",
+      "axiom-encourage",
+      "axiom-warning",
+      "axiom-celebrate"
+    ],
+    "consistency_policy": "Use the same character_lock in all renders. Prefer image-to-image with a canonical reference for lowest drift."
+  }
+}
