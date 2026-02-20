@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 68 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 69 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -68,6 +68,14 @@ frequently.
     Interactive AP Calculus textbook for high school students with 23 chapters, 100 MicroSims, and Delta the robot mascot. Covers both AB and BC curricula.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/calculus) · 208 Files · 248K Words · 100 MicroSims · 230 Glossary Terms
+
+- **[AP Chemistry](https://dmccreary.github.io/chemistry/)**
+
+    ![AP Chemistry](./img/chemistry.jpg)
+
+    Interactive intelligent textbook for AP Chemistry designed for high school students seeking college credit. Features 18 chapters, SMILES molecule rendering, mhchem equation support, and an interactive learning graph.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/chemistry) · 45 Files · 23K Words · 5 MicroSims
 
 - **[Architectural Tradeoff Analysis Method](https://dmccreary.github.io/atam/)**
 
