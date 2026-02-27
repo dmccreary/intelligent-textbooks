@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 69 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 70 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <div class="grid cards grid-3-col" markdown>
@@ -60,6 +60,14 @@ frequently.
     An introductory course to Algebra covering fundamental concepts and skills with many interactive simulations. Designed for high school students.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/algebra-1) · Active Development
+
+- **[AP Biology: An Interactive Course](https://dmccreary.github.io/biology/)**
+
+    ![AP Biology](./img/biology.jpg)
+
+    Interactive intelligent textbook for AP Biology designed for advanced high school students preparing for the AP exam. Covers all eight College Board units with MicroSims, a 375+ concept learning graph, and AP exam strategies.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/biology) · 65 Files · 84K Words · 16 MicroSims
 
 - **[AP Calculus](https://dmccreary.github.io/calculus)**
 
