@@ -100,11 +100,59 @@ This section ensures spacing behaves correctly with longer content.
 
 ---
 
+## Image Boundary Test
+
+These tests draw a blue dashed border around each image to test
+if the padding is minimal.  In this test, all images are
+forced to render with a height of 100px by the custom CSS rule
+in the markdown text.
+
+<style>
+    .grid.cards.columns-3 img {
+      border: dashed blue 2px;
+      height: 150px !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+    .grid.cards.columns-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+  }
+</style>
+
+<div class="grid cards columns-3" markdown>
+- **Neutral**
+    <br/>
+    ![Axiom Neutral](../img/mascot/axiom-neutral.png)
+- **Welcome**
+    <br/>
+    ![Axiom Welcome](../img/mascot/axiom-welcome.png)
+- **Tip**
+    <br/>
+    ![Axiom Tip](../img/mascot/axiom-tip.png)
+- **Encourage**
+    <br/>
+    ![Axiom Encourage](../img/mascot/axiom-encourage.png)
+- **Thinking**
+    <br/>
+    ![Axiom Thinking](../img/mascot/axiom-thinking.png)
+- **Warning**
+    <br/>
+    ![Axiom Warning](../img/mascot/axiom-warning.png)
+- **Celebrate**
+    <br/>
+    ![Axiom Celebration](../img/mascot/axiom-celebrate.png)
+</div>
+
 # End of Test
 
 If everything is configured correctly:
 
-- The owl appears partially outside the upper-left corner
+- The owl appears on the left edge of the admonition
 - Text does not overlap the mascot
 - Collapsible admonitions still render correctly
 - Each pose matches the correct image file
+- There is not excessive padding around the image
