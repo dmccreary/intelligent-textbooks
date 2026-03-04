@@ -1755,13 +1755,60 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 <hr>
+<h2 id="image-boundary-test">Image Boundary Test</h2>
+<p>These tests draw a blue dashed border around each image to test
+if the padding is minimal.  In this test, all images are
+forced to render with a height of 100px by the custom CSS rule
+in the markdown text.</p>
+<style>
+    .grid.cards.columns-3 img {
+      border: dashed blue 2px;
+      height: 150px !important;
+      width: auto !important;
+      object-fit: contain;
+    }
+    .grid.cards.columns-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+  }
+</style>
+
+<div class="grid cards columns-3">
+<ul>
+<li><strong>Neutral</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-neutral.png" data-desc-position="bottom"><img alt="Axiom Neutral" src="../../img/mascot/axiom-neutral.png"></a></li>
+<li><strong>Welcome</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-welcome.png" data-desc-position="bottom"><img alt="Axiom Welcome" src="../../img/mascot/axiom-welcome.png"></a></li>
+<li><strong>Tip</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-tip.png" data-desc-position="bottom"><img alt="Axiom Tip" src="../../img/mascot/axiom-tip.png"></a></li>
+<li><strong>Encourage</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-encourage.png" data-desc-position="bottom"><img alt="Axiom Encourage" src="../../img/mascot/axiom-encourage.png"></a></li>
+<li><strong>Thinking</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-thinking.png" data-desc-position="bottom"><img alt="Axiom Thinking" src="../../img/mascot/axiom-thinking.png"></a></li>
+<li><strong>Warning</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-warning.png" data-desc-position="bottom"><img alt="Axiom Warning" src="../../img/mascot/axiom-warning.png"></a></li>
+<li><strong>Celebrate</strong>
+    <br>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/axiom-celebrate.png" data-desc-position="bottom"><img alt="Axiom Celebration" src="../../img/mascot/axiom-celebrate.png"></a></li>
+</ul>
+</div>
 <h1 id="end-of-test">End of Test</h1>
 <p>If everything is configured correctly:</p>
 <ul>
-<li>The owl appears partially outside the upper-left corner</li>
+<li>The owl appears on the left edge of the admonition</li>
 <li>Text does not overlap the mascot</li>
 <li>Collapsible admonitions still render correctly</li>
 <li>Each pose matches the correct image file</li>
+<li>There is not excessive padding around the image</li>
 </ul>
 
 
