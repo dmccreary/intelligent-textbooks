@@ -3,7 +3,9 @@
 Here is a list of MicroSims and Interactive Infographics that are used
 in our intelligent textbooks.
 
-## Learning Graph
+<div class="grid cards" markdown>
+<!-- TODO run the textbook-installer skill with the update MicroSim index.md --->
+- **Learning Graph**
 
 [Go to the Learning Graph](./learning-graph/index.md)
 
@@ -30,3 +32,4 @@ in our intelligent textbooks.
 ## Templates
 
 [Go to the MicroSim Templates](./templates/index.md)
+</div>
