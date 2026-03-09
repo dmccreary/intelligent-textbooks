@@ -67,7 +67,7 @@ frequently.
 
     Interactive intelligent textbook for AP Biology designed for advanced high school students preparing for the AP exam. Covers all eight College Board units with MicroSims, a 375+ concept learning graph, and AP exam strategies.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/biology) · 65 Files · 84K Words · 16 MicroSims
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/biology) · 20 Chapters · 213K Words · 89 MicroSims - many complex biological drawings
 
 - **[AP Calculus](https://dmccreary.github.io/calculus)**
 
