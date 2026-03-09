@@ -17,9 +17,9 @@ frequently.
 
     ![AI Assisted Geometry](./img/geometry-course.jpg)
 
-    An online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims. Features a detailed learning graph and about a dozen MicroSims.
+    An online interactive intelligent textbook for high-school geometry using MicroSims. Features a detailed learning graph and over 130 interactive geometry MicroSims.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course) · 47 Files · 18K Words · 3 MicroSims
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course) · 12 Chapters · 171K Words · 138 MicroSims
 
 - **[AI Based Data Science with Python](https://dmccreary.github.io/data-science-course)**
 
