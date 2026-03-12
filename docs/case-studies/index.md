@@ -41,9 +41,9 @@ frequently.
 
     ![AI Infographics](./img/infographics.jpg)
 
-    An AI-assisted guide that teaches non-programmers how to design interactive infographic MicroSims with prompts, templates, and workflow examples for intelligent textbooks.
+    An AI-assisted guide that teaches non-programmers how to design high-quality detailed interactive infographic MicroSims with many examples, prompts, templates, and workflow examples for intelligent textbooks.  Many examples from the Biology textbook.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics) · 61 Files · 41K Words · 8 MicroSims
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics) · 20 Chapters ·  · Learning Mascot
 
 - **[AI Racing League](https://coderdojotc.github.io/ai-racing-league)**
 
