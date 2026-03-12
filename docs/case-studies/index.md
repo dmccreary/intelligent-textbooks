@@ -41,9 +41,9 @@ frequently.
 
     ![AI Infographics](./img/infographics.jpg)
 
-    A collection of resources for creating interactive infographics using AI tools. Includes templates and examples.
+    An AI-assisted guide that teaches non-programmers how to design interactive infographic MicroSims with prompts, templates, and workflow examples for intelligent textbooks.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics)
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics) · 61 Files · 41K Words · 8 MicroSims
 
 - **[AI Racing League](https://coderdojotc.github.io/ai-racing-league)**
 
