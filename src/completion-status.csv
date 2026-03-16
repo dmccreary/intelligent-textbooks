@@ -1,0 +1,91 @@
+project,level,label,learning_graph,chapters,chapter_count,sim_count,glossary,faq,quizzes
+agents-course,1,Early Development,False,False,0,5,True,False,False
+ai-racing-league,1,Early Development,False,False,0,0,True,True,True
+algebra-1,5,Complete,True,True,13,10,True,True,False
+atam,1,Early Development,False,False,0,0,True,False,False
+automating-instructional-design,5,Complete,True,True,13,92,True,True,False
+beginning-electronics,1,Early Development,False,False,0,6,False,False,False
+biology,5,Complete,True,True,20,86,True,True,False
+calculus,5,Complete,True,True,23,123,True,True,False
+chatgpt-for-teachers,1,Early Development,False,False,0,0,True,False,False
+chemistry,5,Complete,True,True,18,46,True,True,False
+circuitikz,1,Early Development,False,False,0,0,False,False,False
+circuits,1,Early Development,False,False,0,20,True,True,False
+clan-macquarrie,1,Early Development,False,False,0,5,True,True,False
+claude-skills,5,Complete,True,True,18,94,True,True,False
+clocks-and-watches,1,Early Development,False,False,0,12,True,True,False
+cmm-for-genai,1,Early Development,False,False,0,3,False,False,False
+CoderDojoTC,1,Early Development,False,False,0,0,True,False,False
+computer-science,5,Complete,True,True,20,30,True,True,False
+conversational-ai,3,In Progress,True,True,14,6,True,True,False
+dans-writings,1,Early Development,False,False,0,0,True,False,False
+data-science-course,5,Complete,True,True,14,91,True,True,False
+deep-learning-course,1,Early Development,False,False,0,12,True,False,False
+Dementia,3,In Progress,True,True,15,1,True,True,False
+digital-electronics,3,In Progress,True,True,15,8,True,True,False
+dmccreary,1,Early Development,False,False,0,0,False,False,False
+ee-microsims,1,Early Development,False,False,0,12,False,False,False
+embeddings-course,1,Early Development,False,False,0,0,False,False,False
+ethics-course,5,Complete,True,True,8,11,True,True,False
+fft-benchmarking,3,In Progress,True,True,3,2,True,False,False
+fluid-power-systems,3,In Progress,False,True,12,3,True,False,False
+genai-arch-patterns,1,Early Development,False,False,0,3,True,False,False
+geography-of-mexico,3,In Progress,False,True,1,3,False,False,False
+geometry-course,5,Complete,True,True,12,161,True,True,False
+giscus-template,2,Initial Content,True,False,0,0,True,False,False
+gql-course,1,Early Development,False,False,0,0,True,False,False
+graph-algorithms,1,Early Development,False,False,0,16,True,False,False
+graph-data-modeling-course,3,In Progress,False,True,27,3,True,False,False
+graph-lms,1,Early Development,False,False,0,4,True,False,False
+graph-rag,1,Early Development,False,False,0,0,True,False,False
+i-book-v1,1,Early Development,False,False,0,0,False,False,False
+infographics,5,Complete,True,True,14,81,True,True,False
+intelligent-book-template,1,Early Development,False,False,0,6,True,True,False
+intelligent-textbooks,3,In Progress,True,False,0,25,True,True,False
+intro-to-graph,3,In Progress,True,True,13,9,True,True,False
+intro-to-physics-course,5,Complete,True,True,13,106,True,True,False
+iot-course,1,Early Development,False,False,0,0,False,False,False
+it-management-graph,3,In Progress,True,True,12,9,True,False,False
+lambda-graph-visualization,1,Early Development,False,False,0,2,True,False,False
+learn-langchain,1,Early Development,False,False,0,5,True,False,False
+learning-graph-editor,1,Early Development,False,False,0,0,False,False,False
+learning-graphs,3,In Progress,True,False,0,8,True,False,False
+learning-linux,5,Complete,True,True,27,14,True,True,False
+learning-micropython,1,Early Development,False,False,0,3,False,False,False
+linear-algebra,5,Complete,True,True,15,126,True,True,False
+machine-learning-textbook,5,Complete,True,True,12,18,True,True,False
+mccreary-heritage,1,Early Development,False,False,0,8,True,True,False
+microsims,5,Complete,True,True,14,119,True,True,False
+mkdocs-for-intelligent-textbooks,1,Early Development,False,False,0,4,True,False,False
+mkdocs-material-social,1,Early Development,False,False,0,7,False,False,False
+mkdocs-template,1,Early Development,False,False,0,0,True,False,False
+modeling-healthcare-data,3,In Progress,True,True,12,9,True,True,False
+moving-rainbow,4,Nearly Complete,False,True,4,11,True,False,False
+neurodiversity-course,1,Early Development,False,False,0,5,True,False,False
+nosql,1,Early Development,False,False,0,0,True,False,False
+openai-demos,1,Early Development,False,False,0,1,True,False,False
+organizational-analytics,5,Complete,True,True,15,70,True,True,False
+personal-finance,5,Complete,True,True,12,18,True,True,False
+prompt-class,1,Early Development,False,False,0,1,True,False,False
+prostate-research-analysis,1,Early Development,False,False,0,0,True,False,False
+python,1,Early Development,False,False,0,0,False,False,False
+reading-for-kindergarten,5,Complete,True,True,11,26,True,True,False
+robot-day,1,Early Development,False,False,0,2,True,False,False
+robot-faces,1,Early Development,False,False,0,0,True,False,False
+scratch,1,Early Development,False,False,0,0,False,False,False
+search-microsims,1,Early Development,False,False,0,0,True,False,False
+semiconductor-physics-course,1,Early Development,False,False,0,1,True,False,False
+signal-processing,5,Complete,True,True,15,34,True,True,False
+spectrum-analyzer,1,Early Development,False,False,0,5,True,False,False
+statistics-course,5,Complete,True,True,19,111,True,True,False
+stem-classroom-admin,1,Early Development,False,False,0,0,True,False,False
+stem-robots,1,Early Development,False,False,0,5,True,True,False
+superfences,1,Early Development,False,False,0,0,False,False,False
+systems-thinking,1,Early Development,False,False,0,13,True,False,False
+t,1,Early Development,False,False,0,0,True,False,False
+tour-maps,1,Early Development,False,False,0,2,True,False,False
+tracking-ai-course,3,In Progress,True,False,0,26,True,False,False
+u-of-mn-senior-projects,1,Early Development,False,False,0,0,True,False,False
+us-geography,5,Complete,True,True,12,34,True,True,False
+visualizing-data-movement,1,Early Development,False,False,0,0,False,False,False
+xai,1,Early Development,False,False,0,0,True,False,False
