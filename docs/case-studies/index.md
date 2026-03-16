@@ -155,11 +155,11 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits) · 113 Files · 154K Words · 23 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
-- **[AI Infographics](https://dmccreary.github.io/infographics/)**
+- **[Interactive Infographics with AI](https://dmccreary.github.io/infographics/)**
 
     ![AI Infographics](./img/infographics.jpg)
 
-    An AI-assisted guide that teaches non-programmers how to design high-quality detailed interactive infographic MicroSims with many examples, prompts, templates, and workflow examples for intelligent textbooks.  Many examples from the Biology textbook.
+    An AI-assisted guide that teaches non-programmers how to design high-quality detailed interactive infographic MicroSims with many examples, prompts, templates, and workflow examples for intelligent textbooks.  Many examples come from the [Biology](ttps://github.com/dmccreary/biology) textbook.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/infographics) · 20 Chapters ·  · Learning Mascot · <span class="completion completion-5" title="Complete (5/5)"></span>
 
