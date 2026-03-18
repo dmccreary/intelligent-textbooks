@@ -13,6 +13,14 @@ frequently.
 
 <div class="grid cards grid-3-col" markdown>
 
+- **[A Skeptic's Guide to Quantum Computing](https://dmccreary.github.io/quantum-computing/)**
+
+    ![A Skeptic's Guide to Quantum Computing](./img/quantum-computing.jpg)
+
+    An evidence-based intelligent textbook examining why quantum computing may never be economically viable, covering physics constraints, hardware realities, investment risk, and cognitive biases. Designed for upper-division undergraduates, graduate students, technology investors, and policymakers.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing) · 128 Files · 200K Words · 241 Glossary Terms · 53 MicroSims
+
 - **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
 
     ![AI Assisted Geometry](./img/geometry-course.jpg)
