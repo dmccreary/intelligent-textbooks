@@ -179,27 +179,27 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/algebra-1) · Active Development · <span class="completion completion-5" title="Complete (5/5)"></span>
 
-- **[AP Biology: An Interactive Course](https://dmccreary.github.io/biology/)**
+- **[Biology: An Interactive Course](https://dmccreary.github.io/biology/)**
 
-    ![AP Biology](./img/biology.jpg)
+    ![Biology](./img/biology.jpg)
 
-    Interactive intelligent textbook for AP Biology designed for advanced high school students preparing for the AP exam. Covers all eight College Board units with MicroSims, a 375+ concept learning graph, and AP exam strategies.
+    Interactive intelligent textbook for Biology designed for advanced high school students preparing for a college credit exam. Covers all eight College Board units with MicroSims, a 375+ concept learning graph, and college credit exam strategies.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/biology) · 20 Chapters · 213K Words · 89 MicroSims - many complex biological drawings · <span class="completion completion-5" title="Complete (5/5)"></span>
 
-- **[AP Calculus](https://dmccreary.github.io/calculus)**
+- **[Calculus](https://dmccreary.github.io/calculus)**
 
-    ![AP Calculus](./img/calculus.jpg)
+    ![Calculus](./img/calculus.jpg)
 
-    Interactive AP Calculus textbook for high school students with 23 chapters, 100 MicroSims, and Delta the robot mascot. Covers both AB and BC curricula.
+    Interactive Calculus textbook for high school students with 23 chapters, 100 MicroSims, and Delta the robot mascot. Covers both AB and BC curricula.  Designed to help you get college credit.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/calculus) · 208 Files · 248K Words · 100 MicroSims · 230 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
 
-- **[AP Chemistry](https://dmccreary.github.io/chemistry/)**
+- **[Chemistry](https://dmccreary.github.io/chemistry/)**
 
-    ![AP Chemistry](./img/chemistry.jpg)
+    ![Chemistry](./img/chemistry.jpg)
 
-    Interactive intelligent textbook for AP Chemistry designed for high school students seeking college credit. Features 18 chapters, SMILES molecule rendering, mhchem equation support, and an interactive learning graph.
+    Interactive intelligent textbook for Chemistry designed for high school students seeking college credit. Features 18 chapters, SMILES molecule rendering, mhchem equation support, and an interactive learning graph.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/chemistry) · 45 Files · 23K Words · 5 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
@@ -285,7 +285,7 @@ document.addEventListener('click', function(e) {
 
     ![Computer Science with Python](./img/computer-science.jpg)
 
-    An interactive, AI-assisted textbook for AP Computer Science using Python. Features 400 mapped concepts, 20 chapters, and MicroSims to make abstract computing ideas concrete for high school and early college learners.
+    An interactive, AI-assisted textbook for college credit Computer Science using Python. Features 400 mapped concepts, 20 chapters, and MicroSims to make abstract computing ideas concrete for high school and early college learners.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/computer-science) · 58 Files · 153K Words · 17 MicroSims · 400 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
 
