@@ -345,6 +345,10 @@ explaining who Sylvia is and why she appears throughout
 the textbook:
 [Who is Sylvia the Squirrel?](https://dmccreary.github.io/statistics-course/faq/#who-is-sylvia-the-squirrel)
 
+## Axiom the Owl
+
+[Axiom the Owl Test File](../learning-graph/axiom-mascot-test.md)
+
 ## Summary of the Three-Layer Pattern
 
 | Layer | Files | Author Effort | Flexibility |

@@ -154,5 +154,4 @@ learning graph tools, and data visualizations.
 - **[Templates](./templates/index.md)**
 
     Starter templates for creating new MicroSims.
-
 </div>

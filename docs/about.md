@@ -20,7 +20,8 @@ If you are new to the book generation process, we strongly suggest you use the f
 
 After you get an overview of the steps to generate guided content around a learning graph, the next step is to understand the basic mechanics of getting your LLM content into a website.  Although there are are many ways to store intelligent textbooks on a website, this guide focuses on the best practices of using LLMs to generate Markdown and then convert that Markdown to a beautiful website built with HTML, CSS and JavaScript.
 
-Many of our teachers can't afford expense service for hosting their intelligent textbooks.  Since GitHub Pages is a free service for public
+Many of our teachers can't afford expense service for hosting their intelligent textbooks.
+Since GitHub Pages is a free service for public
 website, we show how to use GitHub Pages and publishing tools that support Markdown, code highlighting and equations on GitHub.
 
 ## Why Mkdos Material?
