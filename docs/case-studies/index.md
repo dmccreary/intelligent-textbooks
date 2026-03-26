@@ -129,7 +129,7 @@ document.addEventListener('click', function(e) {
 
     An evidence-based interactive intelligent textbook examining why quantum computing may never be economically viable, covering physics constraints, hardware realities, investment risk, and cognitive biases. Designed for upper-division undergraduates, graduate students, technology investors, and policymakers.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing) · 241 Concepts · 17 Chapters · 200K Words · 241 Glossary Terms · 53 MicroSims
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing) · 241 Concepts · 17 Chapters · 200K Words · 241 Glossary Terms · 53 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
 
@@ -232,6 +232,14 @@ document.addEventListener('click', function(e) {
     An online course using MicroSims to help junior high and high school students learn the basics of electronics.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/beginning-electronics) · 40 Files · 16K Words · 6 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+
+- **[Bioinformatics](https://dmccreary.github.io/bioinformatics/)**
+
+    ![Bioinformatics](./img/bioinformatics.jpg)
+
+    Interactive intelligent textbook for bioinformatics covering sequence analysis, structural biology, network analysis, knowledge graphs, and multi-omics integration with graph-based approaches throughout.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/bioinformatics) · 137 Files · 188K Words · 57 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Building AI Agents with Python](https://dmccreary.github.io/agents-course/)**
 
