@@ -7,3 +7,5 @@
 [Axiom Mascot Guide](axiom-mascot-guide.md)
 
 [Axiom Style Guide](./axiom-style-guide.md)
+
+[Sponsorship Plan](./sponsorship-plan.md)
