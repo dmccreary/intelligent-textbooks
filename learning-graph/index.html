@@ -1451,6 +1451,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-graph-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Graph Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axiom-the-owl-mascot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axiom the Owl Mascot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-sustainability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Sustainability
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1474,10 +1509,40 @@
 
 <h1 id="learning-graph">Learning Graph</h1>
 <p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../img/mascot/axiom-welcome.png" data-desc-position="bottom"><img _="," align="right" alt="" src="../img/mascot/axiom-welcome.png" width="200px"></a></p>
-<p><a href="axiom-mascot-test/">Axiom Mascot Test</a></p>
-<p><a href="axiom-mascot-guide/">Axiom Mascot Guide</a></p>
-<p><a href="axiom-style-guide/">Axiom Style Guide</a></p>
-<p><a href="sponsorship-plan/">Sponsorship Plan</a></p>
+<p>This section contains the learning graph for this textbook. A learning graph is
+a graph of concepts used in this textbook. Each concept is represented by a
+node in a network graph. Concepts are connected by directed edges that indicate
+what concepts each node depends on before that concept is understood by the student.</p>
+<p>A learning graph is the foundational data structure for intelligent textbooks
+that can recommend learning paths. A learning graph is like a roadmap of
+concepts to help students arrive at their learning goals.</p>
+<p>At the left of the learning graph are prerequisite or foundational concepts. They
+have no outbound edges. They only have inbound edges for other concepts that depend on
+understanding these foundational prerequisite concepts. At the far right
+we have the most advanced concepts in the course. To master these concepts you
+must understand all the concepts that they point to.</p>
+<h2 id="learning-graph-data">Learning Graph Data</h2>
+<ul>
+<li><a href="intelligent-textbooks.csv">Intelligent Textbooks CSV</a> — The concept dependency list in CSV format with columns for ConceptID, ConceptName, Dependencies, and TaxonomyID. This is the source of truth for the graph data and is easy to edit in a spreadsheet.</li>
+<li><a href="intelligent-textbooks.json">Intelligent Textbooks JSON</a> — The same concept dependency graph in the vis-network JavaScript library format, using <code>nodes</code>, <code>edges</code>, and <code>metadata</code> elements. This file is consumed by the interactive learning graph viewer.</li>
+</ul>
+<h2 id="axiom-the-owl-mascot">Axiom the Owl Mascot</h2>
+<p>Axiom the Owl is the narrative mascot for the Intelligent Textbooks ecosystem.
+These files describe his visual identity, pose library, and how to integrate
+him into a textbook.</p>
+<ul>
+<li><a href="axiom-mascot-guide/">Axiom Mascot Guide</a> — Narrative description of Axiom the Owl, including his visual design, personality traits, and pedagogical role as a learning companion.</li>
+<li><a href="axiom-style-guide/">Axiom Style Guide</a> — Formal style guide covering Axiom's core identity, color palette, proportions, and usage rules to keep mascot renderings consistent across textbooks.</li>
+<li><a href="axiom-mascot-test/">Axiom Mascot Test</a> — Test page that verifies all Axiom mascot admonitions render correctly with the owl positioned in the upper-left corner.</li>
+<li><a href="axiom-prompts/">Axiom Prompts</a> — Collection of image-generation prompts used to produce Axiom mascot artwork in a consistent style.</li>
+<li><a href="axiom-prompt-assembler.json">Axiom Prompt Assembler (JSON)</a> — Structured prompt library for automated generation of Axiom mascot poses, with defaults for render style, background, and recommended sizes.</li>
+<li><a href="trim-mascot-padding/">Trim Mascot Padding</a> — Step-by-step notes for removing excess transparent borders from mascot PNGs using Pillow, so the admonition layout has consistent spacing.</li>
+<li><a href="book-mascot-linkedin-announcement/">Book Mascot LinkedIn Announcement</a> — Draft LinkedIn post announcing the Book Mascot feature in the Claude Code Skills for Intelligent Textbooks.</li>
+</ul>
+<h2 id="project-sustainability">Project Sustainability</h2>
+<ul>
+<li><a href="sponsorship-plan/">Sponsorship Plan</a> — Practical, values-aligned sponsorship plan for keeping every intelligent textbook free and open while covering the real costs of creating them.</li>
+</ul>
 
 
 
