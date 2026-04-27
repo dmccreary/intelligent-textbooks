@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "Bash(curl -s https://raw.githubusercontent.com/anthropics/skills/main/algorithmic-art/SKILL.md)",
+      "Bash(curl:*)",
+      "Bash(~/bin/list-skills.sh:*)",
+      "Skill(skill-creator)",
+      "Bash(python /Users/dan/.claude/skills/skill-creator/scripts/init_skill.py:*)",
+      "Bash(python /Users/dan/.claude/skills/skill-creator/scripts/package_skill.py:*)",
+      "Bash(python src/book_metadata_helper.py:*)",
+      "Read(//Users/dan/Documents/ws/claude-skills/skills/learning-graph-generator/**)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(mkdocs gh-deploy:*)",
+      "Bash(cp /Users/dan/Documents/ws/token-efficiency/docs/img/cover.png /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/token-efficiency.png)",
+      "Bash(python3 src/compress-thumbnails.py docs/case-studies/img 70)",
+      "Bash(python3 src/convert-png-to-jpg.py docs/case-studies/img 70)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "companyAnnouncements": [
+    "📚 Use the case-study-generator skill to add a case study. Just pass the local directory or repo URL."
+  ]
+}

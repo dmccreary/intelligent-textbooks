@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 70 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 85 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -241,6 +241,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/bioinformatics) · 137 Files · 188K Words · 57 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
+- **[Blockchain: A Skeptic's Guide to Trust Technologies](https://dmccreary.github.io/blockchain/)**
+
+    ![Blockchain](./img/blockchain.jpg)
+
+    An interactive intelligent textbook examining blockchain, certificate authorities, cost analysis, architecture tradeoffs, and cognitive biases in technology decisions.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/blockchain) · 74 Files · 105K Words · 36 MicroSims · 200 Glossary Terms
+
 - **[Building AI Agents with Python](https://dmccreary.github.io/agents-course/)**
 
     ![Building AI Agents](./img/agents-course.jpg)
@@ -297,6 +305,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/computer-science) · 58 Files · 153K Words · 17 MicroSims · 400 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
 
+- **[Cybersecurity: Foundations, Practice, and Professional Responsibility](https://dmccreary.github.io/cybersecurity/)**
+
+    ![Cybersecurity](./img/cybersecurity.jpg)
+
+    An ABET CAC-aligned intelligent textbook covering cryptography, software security, network defense, system hardening, governance, and ethics for undergraduate students of cybersecurity, computer science, and information systems.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cybersecurity) · 36 Files · 152K Words · 390 Glossary Terms
+
 - **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
     ![Deep Learning](./img/deep-learning-course.jpg)
@@ -304,6 +320,14 @@ document.addEventListener('click', function(e) {
     Undergraduate Deep Learning Course with Dr. Sang-Hyun Oh at the University of Minnesota.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/deep-learning-course) · <span class="completion completion-2" title="Early Development (2/5)"></span>
+
+- **[Digital Citizenship: Building Safe, Kind and Balanced Lives Online](https://dmccreary.github.io/digital-citizenship/)**
+
+    ![Digital Citizenship](./img/digital-citizenship.jpg)
+
+    An interactive intelligent textbook for grades 5-9 on building safe, kind, and balanced lives online, aligned to the ISTE Student Standards.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-citizenship) · 115 Files · 199K Words · 11 MicroSims · 267 Glossary Terms
 
 - **[Digital Design With Programmable Logic](https://mcbasken.github.io/umn-senior-design/)**
 
@@ -334,6 +358,14 @@ document.addEventListener('click', function(e) {
     Interactive intelligent textbook on Introduction to Economics for high school students covering microeconomics, macroeconomics, personal finance, and the digital economy.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/economics-course) · 29 Files · 82K Words · Early Stage · <span class="completion completion-2" title="Initial Content (2/5)"></span>
+
+- **[Ecology: Systems Thinking for a Changing Planet](https://dmccreary.github.io/ecology/)**
+
+    ![Ecology](./img/ecology.jpg)
+
+    An interactive intelligent textbook for high school students (grades 9-12) on ecosystems, biodiversity, populations, climate change, and environmental policy, with a focus on systems thinking and scientific literacy.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ecology) · 191 Files · 350K Words · 87 MicroSims · 381 Glossary Terms
 
 - **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
@@ -386,6 +418,14 @@ document.addEventListener('click', function(e) {
     Helps business leaders understand how to use generative AI to create and maintain their AI business strategy.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cmm-for-genai) · 22 Files · 7K Words · 3 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+
+- **[Genetics: Analysis, Genomics, and Modern Inference](https://dmccreary.github.io/genetics/)**
+
+    ![Genetics](./img/genetics.jpg)
+
+    An interactive intelligent textbook for advanced high school and early undergraduate students covering genetic analysis, genomics, and modern inference.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/genetics) · 93 Files · 118K Words · 60 MicroSims · 450 Glossary Terms
 
 - **[Graph Algorithms with AI](https://dmccreary.github.io/graph-algorithms)**
 
@@ -491,6 +531,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
+- **[Learning Sciences for Intelligent Textbook Design](https://dmccreary.github.io/learning-sciences/)**
+
+    ![Learning Sciences](./img/learning-sciences.jpg)
+
+    An intelligent textbook on the Seven Domains of the Learning Sciences — motivation, understanding, retention, application, expertise, measurement, and learning conditions — applied to authoring AI-augmented textbooks for educators and AI researchers.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-sciences) · 117 Files · 193K Words · 64 MicroSims · 221 Glossary Terms
+
 - **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
 
     ![Linear Algebra for AI and Machine Learning](./img/linear-algebra.jpg)
@@ -506,6 +554,14 @@ document.addEventListener('click', function(e) {
     Comprehensive intelligent textbook on machine learning for college undergraduates. Covers supervised learning, unsupervised learning, neural networks, CNNs, and transfer learning with Python code examples.
 
     [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/machine-learning-textbook) · 60 Files · 103K Words · 18 MicroSims · 199 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[Mathematics Functions](https://dmccreary.github.io/functions/)**
+
+    ![Mathematics Functions](./img/functions.jpg)
+
+    An interactive intelligent textbook for high school students mastering the unifying theme of functions in mathematics through mathematical models, coordinate geometry, and real-world applications.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/functions) · 97 Files · 148K Words · 31 MicroSims · 208 Glossary Terms
 
 - **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
 
@@ -545,6 +601,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/modeling-healthcare-data) · Active Development · <span class="completion completion-3" title="In Progress (3/5)"></span>
 
+- **[Moss](https://dmccreary.github.io/moss/)**
+
+    ![Moss](./img/moss.jpg)
+
+    An interactive intelligent textbook exploring the biology, ecology, design, and sustainability of moss, with simulations and a learning graph for curious learners and naturalists.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/moss) · 104 Files · 163K Words · 34 MicroSims · 400 Glossary Terms
+
 - **[Moving Rainbow](https://dmccreary.github.io/moving-rainbow)**
 
     ![Moving Rainbow](./img/moving-rainbow.jpg)
@@ -574,6 +638,14 @@ document.addEventListener('click', function(e) {
     Helps high school students learn personal finance with MicroSims, infographics, and graphic novel storytelling.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/personal-finance) · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[Pre-Calculus](https://dmccreary.github.io/pre-calc/)**
+
+    ![Pre-Calculus](./img/pre-calc.jpg)
+
+    An interactive intelligent textbook for pre-calculus designed to prepare high school students for advanced math coursework.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/pre-calc) · 43 Files · 100K Words · 307 Glossary Terms · 1 MicroSim
 
 - **[Prompt Engineering Class](https://dmccreary.github.io/prompt-class)**
 
@@ -621,6 +693,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/spectrum-analyzer) · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
+- **[Statistics](https://dmccreary.github.io/statistics-course/)**
+
+    ![Statistics](./img/statistics-course.jpg)
+
+    A simulation-filled interactive intelligent statistics textbook designed to help high school students earn college credit, hosted by Sylvia the Squirrel.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/statistics-course) · 194 Files · 237K Words · 112 MicroSims · 295 Glossary Terms
+
 - **[STEM Classroom Administration](https://dmccreary.github.io/stem-classroom-admin/)**
 
     ![STEM Classroom Admin](./img/stem-classroom-admin.jpg)
@@ -645,6 +725,22 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking) · MicroSims included · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
+- **[Theory of Knowledge](https://dmccreary.github.io/theory-of-knowledge/)**
+
+    ![Theory of Knowledge](./img/theory-of-knowledge.jpg)
+
+    A free, open-source intelligent textbook for the IB Theory of Knowledge (TOK) course, exploring how knowledge is produced, validated, and communicated through interactive MicroSimulations and a learning graph of 275 interconnected concepts.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/theory-of-knowledge) · 129 Files · 235K Words · 72 MicroSims · 275 Glossary Terms
+
+- **[Token Efficiency](https://dmccreary.github.io/token-efficiency/)**
+
+    ![Token Efficiency](./img/token-efficiency.jpg)
+
+    A vendor-pluralistic intelligent textbook on measuring, analyzing, and reducing the cost of generative AI across Anthropic Claude, OpenAI, and Google Gemini for software engineers, ML engineers, and engineering managers.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/token-efficiency) · 109 Files · 182K Words · 475 Glossary Terms · 47 MicroSims
+
 - **[Tracking AI](https://dmccreary.github.io/tracking-ai-course)**
 
     ![Tracking AI](./img/tracking-ai-course.jpg)
@@ -666,6 +762,14 @@ document.addEventListener('click', function(e) {
     AI-generated intelligent textbook on dementia and cognitive decline for patients, caregivers, families, and healthcare professionals. Features 200 interconnected concepts in a learning graph. By rtanler.
 
     [:octicons-mark-github-16: Repository](https://github.com/rtanler/Dementia) · 34 Files · 44K Words · 1 MicroSim · 200 Concepts · <span class="completion completion-3" title="In Progress (3/5)"></span>
+
+- **[Unicorns and Other Mythical Beasts](https://dmccreary.github.io/unicorns/)**
+
+    ![Unicorns and Other Mythical Beasts](./img/unicorns.jpg)
+
+    A satirical interactive intelligent textbook about unicorns, mythical beasts, and the AI technologies that will improve them — exploring AI hype, education resistance, and technology fantasies.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/unicorns) · 142 Files · 267K Words · 34 MicroSims · 145 Glossary Terms
 
 - **[US Geography](https://dmccreary.github.io/us-geography)**
 
