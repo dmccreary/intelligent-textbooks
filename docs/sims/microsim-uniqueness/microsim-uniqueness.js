@@ -4,7 +4,7 @@
 // Canvas dimensions
 let canvasWidth = 400;
 let drawHeight = 370;
-let controlHeight = 80;
+let controlHeight = 110;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 25;
 let defaultTextSize = 16;
@@ -199,7 +199,7 @@ function drawTooltip() {
   if (hoveredRegion && tooltips[hoveredRegion]) {
     fill('black');
     noStroke();
-    textSize(13);
+    textSize(20);
     textAlign(LEFT, TOP);
 
     // Word wrap the tooltip text
@@ -209,7 +209,7 @@ function drawTooltip() {
     let lines = [];
     let currentLine = '';
 
-    textSize(13);
+    textSize(20);
     for (let word of words) {
       let testLine = currentLine + word + ' ';
       if (textWidth(testLine) > maxWidth) {
@@ -225,7 +225,7 @@ function drawTooltip() {
     let yPos = drawHeight + 25;
     for (let line of lines) {
       text(line.trim(), 10, yPos);
-      yPos += 16;
+      yPos += 24;
     }
   }
 }

@@ -13,13 +13,14 @@ Dan McCreary
 - Every lesson the girl needs is customized to her context
 
 <!--Image: Cover of Diamond Age book -->
-<img src="./diamond-age-cover.png" width="300px" align="right"></img>
+<img src="./diamond-age-cover.png" width="300px" align="left"></img>
+<img src="../../img/cover.png" width="300px" align="right"></img>
 
 ## Dan's Quest
 
 - How would I build such a device?
 
-<img src="./dan-thinking-about-intelligent-textbooks-1995.png" width="500px"></img>
+<img src="./dan-thinking-about-intelligent-textbooks-1995.png" height="600px"></img>
 
 ## The Problem With Paper Textbooks
 
@@ -29,6 +30,8 @@ Dan McCreary
 - The engagement crisis (passive reading vs. active learning)
 - Teachers are drowning (no time to personalize)
 
+"Generate a 1,000 page textbook on information systems with 100 MicroSims"
+<img src="./is-cover.png" height="700px" align="right"></img>
 
 
 ## My Journey Infographic
@@ -58,13 +61,24 @@ Dan McCreary
 
 ## MicroSim Uniqueness
 
-<iframe src="../../sims/microsim-uniqueness/main.html" height="432px" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/microsim-uniqueness/main.html" height="485px" width="100%" scrolling="no"></iframe>
 [MicroSim Uniqueness](../../sims/microsim-uniqueness/index.md)
 
 ## The Five Levels of Intelligent Textbooks
 
 <iframe src="../../sims/book-levels/main.html" height="600px" width="100%" scrolling="no"></iframe>
 [Book Levels Fullscreen](../../sims/book-levels/main.html)
+
+## Current Status (this is real now)
+
+- 88 level 2.99 Books
+- Getting ready to go to level 2 (cost effectively)
+- 1,200 MicroSims
+- 100s of Mini Graphic Novels
+- Ongoing research on [Automating Instructional Design](https://dmccreary.github.io/automating-instructional-design/)
+- Continued integration of [The Learning Sciences](https://dmccreary.github.io/learning-sciences/)
+
+[Case Studies](https://dmccreary.github.io/intelligent-textbooks/case-studies/)
 
 ## The Bouncing Ball MicroSim Example
 
@@ -87,11 +101,11 @@ Dan McCreary
 ## Challenges Getting LLMs to Generate Consistent Content
 
 - Getting LLMs to generate consistent simulation interfaces
-- Every diagram MUST be interactive
+- Every diagram MUST be interactive (for level 3 xAPI enabled)
 - No static images or drawing
 - Complex infographics are great, but overlay interactive region hovers
 
-## How it works
+## How I Generate Intelligent Textbooks
 
 1. Course description (100 point scale)
 2. Learning graph
@@ -111,8 +125,10 @@ Dan McCreary
         width="100%"
         scrolling="no"></iframe>
 
+[Computer Science (400)](https://dmccreary.github.io/computer-science/sims/graph-viewer/main.html)
+[Information Systems (580)](https://dmccreary.github.io/information-systems/sims/graph-viewer/main.html)
 
-## Level 2 Intelligent Book Content
+## Level 2 Intelligent Book Components
 
 - Chapters
 - Pedagogical Agents [Book Mascots](https://dmccreary.github.io/book-mascots/list-mascots/)
@@ -129,18 +145,8 @@ Dan McCreary
 
 ## Book Mascots
 
-[Mascot Gallery](https://dmccreary.github.io/book-mascots/list-mascots/)
-
-## Current Status
-
-- 88 level 2 Books
-- Getting ready to go to level 2 (cost effectively)
-- 1,200 MicroSims
-- 100s of Mini Graphic Novels
-- Ongoing research on [Automating Instructional Design](https://dmccreary.github.io/automating-instructional-design/)
-- Continued integration of [The Learning Sciences](https://dmccreary.github.io/learning-sciences/)
-
-[Case Studies](https://dmccreary.github.io/intelligent-textbooks/case-studies/)
+<img src="book-mascots.png"></img>
+[Book Mascot Montage](https://dmccreary.github.io/book-mascots/mascot-montage/)
 
 ## Sample Titles
 
@@ -208,11 +214,23 @@ Dan McCreary
 Please generate a wide-landscape infographic with the title "The Democratization of Education" depicting that all children on planet Earth will have access to free high-quality hyper-personalized education through level-5 intelligent textbooks.
 --->
 
+## Making Teaching Fun
+
+- From "Sage on the Stage" to Guide on the Side
+
+## Making Chatbot 41x lower Cost
+![Compact Knowledge Graph](ckg-paper.png)
+
 ## Call to Action
 
 - Ask ChatGPT|Claude|Gemini what MicroSims are?
 - Ask ChatGPT|Claude|Gemini what the five levels of intelligent textbooks are?
 - Review a sample intelligent textbook from the case studies
 - Download the intelligent textbook skills into Claude Code, OpenAI Codex or Google AntiGravity
-- Start with a course description and say "Build me a textbook"
+- Start with a course description and say "Please Use Dan McCreary's Claude Skills to Build me a textbook"
+
+Because every child on Earth can be Nell
+
+<img src="../../img/cover.png" width="300px" align="right"></img>
+
 
