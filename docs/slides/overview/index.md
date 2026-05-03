@@ -7,7 +7,7 @@ Dan McCreary
 
 ## The Inspiration
 
-**Diamond Age:** Neal Stevenson's 1995 Cyberpunk Novel 
+**Diamond Age:** Neal Stephenson's 1995 Cyberpunk Novel 
 
 - A young girl is given an AI-powered tablet that imprints on the girl
 - Every lesson the girl needs is customized to her context
