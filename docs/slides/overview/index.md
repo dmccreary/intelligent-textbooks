@@ -61,7 +61,7 @@ Dan McCreary
 
 ## MicroSim Uniqueness
 
-<iframe src="../../sims/microsim-uniqueness/main.html" height="485px" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/microsim-uniqueness/main.html" height="500px" width="100%" scrolling="no"></iframe>
 [MicroSim Uniqueness](../../sims/microsim-uniqueness/index.md)
 
 ## The Five Levels of Intelligent Textbooks
@@ -94,7 +94,7 @@ Dan McCreary
 ## Biogeochemical Cycles (Water, Nitrogen, Carbon, Phosphorus)
 
 <iframe src="https://dmccreary.github.io/biology/sims/biogeochemical-cycles/main.html"
-        height="530px"
+        height="630px"
         width="100%"
         scrolling="no"></iframe>
 
