@@ -61,7 +61,7 @@ Dan McCreary
 <iframe src="../../sims/microsim-uniqueness/main.html" height="432px" width="100%" scrolling="no"></iframe>
 [MicroSim Uniqueness](../../sims/microsim-uniqueness/index.md)
 
-## The Five-Levels fo Intelligent Textbooks
+## The Five Levels of Intelligent Textbooks
 
 <iframe src="../../sims/book-levels/main.html" height="600px" width="100%" scrolling="no"></iframe>
 [Book Levels Fullscreen](../../sims/book-levels/main.html)
