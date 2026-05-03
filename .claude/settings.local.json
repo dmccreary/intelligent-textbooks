@@ -18,7 +18,10 @@
       "Bash(mkdocs gh-deploy:*)",
       "Bash(cp /Users/dan/Documents/ws/token-efficiency/docs/img/cover.png /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/token-efficiency.png)",
       "Bash(python3 src/compress-thumbnails.py docs/case-studies/img 70)",
-      "Bash(python3 src/convert-png-to-jpg.py docs/case-studies/img 70)"
+      "Bash(python3 src/convert-png-to-jpg.py docs/case-studies/img 70)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(tee /tmp/to-delete.txt)"
     ],
     "deny": [],
     "ask": []
