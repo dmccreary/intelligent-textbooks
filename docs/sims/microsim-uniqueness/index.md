@@ -10,7 +10,7 @@ social:
 ---
 # MicroSim Uniqueness Interactive Venn Diagram
 
-<iframe src="main.html" height="460px" scrolling="no"></iframe>
+<iframe src="main.html" height="485px" scrolling="no"></iframe>
 
 [Run the MicroSim Uniqueness Interactive Venn Diagram Fullscreen](main.html){ .md-button .md-button--primary }
 [Edit the MicroSim Uniqueness Interactive Venn Diagram MicroSim in the p5.js editor](https://editor.p5js.org/dmccreary/sketches/h-6-1s-qr)

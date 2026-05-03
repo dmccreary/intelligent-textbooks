@@ -85,31 +85,37 @@ nav:
     - Lists, Tables and Charts: workflow/lists-tables-charts--plots.md
   
   - MicroSims:
-    - Introduction: sims/index.md
-    - Addie Workflow: sims/addie-workflow/index.md
-    - AI Flywheel: sims/ai-flywheel/index.md
-    - AI Pace Accelerating: sims/ai-pace-accelerating/index.md
-    - Bloom's Taxonomy: sims/blooms-taxonomy/index.md
-    - Book Generation Workflow: sims/book-gen-workflow/index.md
-    - Book Levels: sims/book-levels/index.md
-    - Cognitive Load: sims/cognitive-load/index.md
-    - High School Courses: sims/high-school-courses/index.md
+    - List of MicroSims: sims/index.md
+    - ADDIE Workflow Interactive MicroSim: sims/addie-workflow/index.md
+    - Book Concept Count Histogram: sims/concept-count-histogram/index.md
+    - Book Levels MicroSim: sims/book-levels/index.md
+    - Bouncing Ball: sims/bouncing-ball/index.md
+    - Cognitive Load Visualizer MicroSims: sims/cognitive-load/index.md
+    - Educational Technology Standards Ecosystem: sims/standards-ecosystem/index.md
+    - Flashcards: sims/flashcards/index.md
+    - High School Courses Dependency Graph: sims/high-school-courses/index.md
     - Implementation Decision Matrix: sims/implementation-matrix/index.md
-    - Kemp Model: sims/kemp-model/index.md
-    - Learning Graph: sims/learning-graph/index.md
-    - Levels of Interactivity: sims/levels-of-interactivity/index.md
+    - Intelligent Textbook Ecosystem Dynamics: sims/textbook-ecosystem-cld/index.md
+    - Kemp Instructional Design Model MicroSim: sims/kemp-model/index.md
+    - Levels of Interactivity MicroSim: sims/levels-of-interactivity/index.md
     - METR Task Horizon Growth: sims/metr-task-horizon/index.md
+    - MicroSim Folder index.md Template: sims/blooms-taxonomy/index.md
+    - MicroSim Uniqueness Interactive Venn Diagram: sims/microsim-uniqueness/index.md
+    - MicroSims and Infographics to Support Intelligent Textbooks: sims/learning-graph/index.md
     - Privacy Threshold Chart: sims/privacy-threshold-chart/index.md
-    - Question Color Update: sims/question-color-update/index.md
-    - SAE vs Textbook Levels: sims/sae-comparison/index.md
-    - Sam Process: sims/sam-process/index.md
+    - Question-Based Learning Graph Update: sims/question-color-update/index.md
+    - SAE J3016 vs Intelligent Textbook Levels: sims/sae-comparison/index.md
     - Sine Wave: sims/sine-wave/index.md
-    - Standards Ecosystem: sims/standards-ecosystem/index.md
-    - Terms to EKG: sims/terms-to-ekg/index.md
-    - Textbook Ecosystem CLD: sims/textbook-ecosystem-cld/index.md
-    - Three Color DFS: sims/three-color-dfs/index.md
-    - Word Cloud: sims/word-cloud/index.md
-    - Templates: sims/templates/index.md
+    - Successive Approximation Model MicroSim: sims/sam-process/index.md
+    - Terms to Enterprise Knowledge Graph: sims/terms-to-ekg/index.md
+    - The Accelerating Pace of AI: sims/ai-pace-accelerating/index.md
+    - The AI Flywheel: sims/ai-flywheel/index.md
+    - Three-Color DFS Cycle Detection: sims/three-color-dfs/index.md
+    - Word Cloud MicroSim: sims/word-cloud/index.md
+    - Workflow for Generating Intelligent Textbooks: sims/book-gen-workflow/index.md
+    - Workflow for Generating Intelligent Textbooks: sims/templates/index.md
+
+
   
   - Case Studies:
     - Intro: case-studies/index.md
