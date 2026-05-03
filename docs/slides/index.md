@@ -3,6 +3,7 @@
 ## Intelligent Textbooks
 
 [Overview in 15 Minutes](slide-viewer.html?input=overview/index.md)
+[Single Page](./overview/index.md)
 
 ## Tracking AI in 30 Minutes
 
