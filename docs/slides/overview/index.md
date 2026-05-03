@@ -3,7 +3,11 @@
 ## Intelligent Textbooks
 
 Using Claude Code Skills to generate intelligent textbooks.<br/>
-Dan McCreary
+
+- Dan McCreary
+- Shiphaus MSP #1 Event
+- May 3rd, 2026
+
 
 ## The Inspiration
 
