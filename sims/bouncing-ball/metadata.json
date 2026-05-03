@@ -1,0 +1,84 @@
+{
+  "title": "Bouncing Ball",
+  "description": "Interactive simulation demonstrating basic physics concepts of motion, velocity, and collision detection. Features a ball bouncing within boundaries with user-controllable speed parameter.",
+  "creator": "Dan McCreary",
+  "date": "2024-07-10",
+  "subject": [
+    "Physics",
+    "Motion",
+    "Velocity",
+    "Collision Detection",
+    "Kinematics"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "contributor": [
+    "ChatGPT",
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/microsims/sims/bouncing-ball/",
+  "publisher": "MicroSims Educational Platform",
+  "educationalLevel": "Middle School, High School",
+  "learningResourceType": "simulation",
+  "audience": "Students, Educators",
+  "version": "1.0.0",
+  "bloomLevel": [
+    "Understand",
+    "Apply"
+  ],
+  "concepts": [
+    "Motion",
+    "Velocity",
+    "Collision",
+    "Boundary Detection",
+    "Interactive Controls"
+  ],
+  "prerequisites": [
+    "Basic understanding of motion",
+    "Coordinate systems"
+  ],
+  "library": "p5.js",
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Observe and understand bouncing ball in action",
+    "Explore how changing parameters affects bouncing ball",
+    "Apply physics principles to predict bouncing ball behavior",
+    "Experiment with parameters to observe their effects on bouncing ball"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "calculate",
+      "use",
+      "experiment",
+      "assess"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "manipulate"
+  }
+}
