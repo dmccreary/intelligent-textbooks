@@ -1,0 +1,76 @@
+{
+  "title": "MicroSim Uniqueness Interactive Venn Diagram",
+  "description": "An interactive three-circle Venn diagram demonstrating what makes MicroSims unique at the intersection of Simplicity, Accessibility, and AI Generation.",
+  "creator": "Dan McCreary",
+  "date": "2025-11-24",
+  "subject": [
+    "MicroSim"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "contributor": [
+    "Claude Code"
+  ],
+  "identifier": "https://dmccreary.github.io/microsims/sims/microsim-uniqueness/",
+  "publisher": "MicroSims Educational Platform",
+  "educationalLevel": "High School, College",
+  "learningResourceType": "simulation",
+  "audience": "Students, Educators",
+  "version": "1.0.0",
+  "bloomLevel": [
+    "Understand",
+    "Apply"
+  ],
+  "concepts": [
+    "MicroSim Uniqueness Interactive Venn Diagram"
+  ],
+  "prerequisites": [
+    "Basic understanding of the subject"
+  ],
+  "library": "p5.js",
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of uniqueness interactive venn diagram",
+    "Explore uniqueness interactive venn diagram through interactive visualization",
+    "Apply knowledge of uniqueness interactive venn diagram to solve problems",
+    "Experiment with parameters to observe their effects on uniqueness interactive venn diagram"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
+}

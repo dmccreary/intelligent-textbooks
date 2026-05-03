@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .slide-container {
+            flex: 1;
+            min-width: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            /* the top-bottom and left-right padding around the slides */
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slide-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #64b5f6;
+            border-bottom: 2px solid #64b5f6;
+            padding-bottom: 0px;
+        }
+
+        .slide-content h2 {
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #81c784;
+        }
+
+        .slide-content h3 {
+            font-size: 1.5em;
+            margin: 20px 0 15px 0;
+            color: #fff;
+        }
+
+        .slide-content a {
+            color: #fdd835;
+            text-decoration: underline;
+        }
+
+        .slide-content a:hover {
+            color: #fff176;
+        }
+
+        .slide-content p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .slide-content ul, .slide-content ol {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin: 15px 0 15px 30px;
+        }
+
+        .slide-content li {
+            margin-bottom: 10px;
+        }
+
+        .slide-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .slide-content iframe {
+            width: 100%;
+            min-height: 400px;
+            border: none;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .slide-content code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+        }
+
+        .slide-content pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .slide-content pre code {
+            padding: 0;
+            background: none;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        .nav-btn {
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .nav-btn.prev {
+            background: #5c6bc0;
+            color: white;
+        }
+
+        .nav-btn.prev:hover:not(:disabled) {
+            background: #7986cb;
+            transform: translateX(-3px);
+        }
+
+        .nav-btn.next {
+            background: #26a69a;
+            color: white;
+        }
+
+        .nav-btn.next:hover:not(:disabled) {
+            background: #4db6ac;
+            transform: translateX(3px);
+        }
+
+        .nav-btn.contents {
+            background: #ff7043;
+            color: white;
+        }
+
+        .nav-btn.contents:hover {
+            background: #ff8a65;
+            transform: translateY(-2px);
+        }
+
+        .slide-indicator {
+            font-size: 0.9em;
+            color: #90a4ae;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .contents-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .contents-modal.active {
+            display: flex;
+        }
+
+        .contents-list {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .contents-list h2 {
+            color: #64b5f6;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contents-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contents-item:hover {
+            background: rgba(100, 181, 246, 0.2);
+        }
+
+        .contents-item.active {
+            background: rgba(100, 181, 246, 0.3);
+            border-left: 3px solid #64b5f6;
+        }
+
+        .contents-item .slide-num {
+            color: #64b5f6;
+            font-weight: 600;
+            min-width: 30px;
+        }
+
+        .close-contents {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2em;
+            color: #90a4ae;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-contents:hover {
+            color: #fff;
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 60px;
+            color: #ef5350;
+        }
+
+        .error-message h2 {
+            margin-bottom: 20px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #90a4ae;
+        }
+
+        /* Editor panel styles */
+        .editor-panel {
+            display: none;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .editor-panel.active {
+            display: flex;
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .editor-header h3 {
+            color: #64b5f6;
+            margin: 0;
+        }
+
+        .editor-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .editor-btn {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #455a64;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .editor-btn:hover {
+            background: #546e7a;
+        }
+
+        .editor-btn.primary {
+            background: #26a69a;
+        }
+
+        .editor-btn.primary:hover {
+            background: #4db6ac;
+        }
+
+        #markdown-editor {
+            width: 100%;
+            min-height: 300px;
+            max-height: 50vh;
+            padding: 15px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            background: rgba(0, 0, 0, 0.3);
+            color: #e8e8e8;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            resize: vertical;
+        }
+
+        #markdown-editor:focus {
+            outline: none;
+            border-color: #64b5f6;
+        }
+
+        .edit-toggle {
+            background: #7e57c2 !important;
+        }
+
+        .edit-toggle:hover {
+            background: #9575cd !important;
+        }
+
+        /* Side navigation arrows */
+        .slide-area {
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .side-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            width: 50px;
+            min-width: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #90a4ae;
+            font-size: 1.8em;
+            user-select: none;
+        }
+
+        .side-nav:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+
+        .side-nav:disabled {
+            opacity: 0.15;
+            cursor: not-allowed;
+        }
+
+        .side-nav-prev:hover:not(:disabled) {
+            background: rgba(92, 107, 192, 0.3);
+            color: #7986cb;
+        }
+
+        .side-nav-next:hover:not(:disabled) {
+            background: rgba(38, 166, 154, 0.3);
+            color: #4db6ac;
+        }
+
+        .side-nav .key-hint {
+            display: block;
+            font-size: 0.35em;
+            margin-top: 4px;
+            opacity: 0.6;
+            letter-spacing: 0;
+        }
+
+        @media (max-width: 768px) {
+            .side-nav {
+                width: 36px;
+                min-width: 36px;
+                font-size: 1.3em;
+            }
+
+            .side-nav .key-hint {
+                display: none;
+            }
+            .slide-container {
+                padding: 20px;
+            }
+
+            .slide-content h1 {
+                font-size: 1.8em;
+            }
+
+            .slide-content h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .navigation {
+                gap: 10px;
+            }
+
+            .editor-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Editor panel for local mode -->
+        <div class="editor-panel" id="editor-panel">
+            <div class="editor-header">
+                <h3>Local Edit Mode</h3>
+                <div class="editor-actions">
+                    <button class="editor-btn" onclick="loadFromGitHub()">Load from GitHub</button>
+                    <button class="editor-btn" onclick="loadFromFile()">Load from File</button>
+                    <button class="editor-btn primary" onclick="previewSlides()">Preview Slides</button>
+                    <button class="editor-btn" onclick="clearLocalCache()">Clear Cache</button>
+                    <button class="editor-btn" onclick="closeEditor()">Close</button>
+                </div>
+            </div>
+            <textarea id="markdown-editor" placeholder="Paste your markdown content here..."></textarea>
+            <input type="file" id="file-input" accept=".md,.txt" style="display: none;" onchange="handleFileSelect(event)">
+        </div>
+
+        <div class="slide-area">
+            <button class="side-nav side-nav-prev" id="side-prev-btn" onclick="prevSlide()" title="Previous slide (Left Arrow)">
+                &#9664;
+            </button>
+            <div class="slide-container">
+                <div id="slide-content" class="slide-content">
+                    <div class="loading">Loading slides...</div>
+                </div>
+            </div>
+            <button class="side-nav side-nav-next" id="side-next-btn" onclick="nextSlide()" title="Next slide (Right Arrow)">
+                &#9654;
+            </button>
+        </div>
+        <div class="navigation">
+            <button class="nav-btn prev" id="prev-btn" onclick="prevSlide()">PREV</button>
+            <span class="slide-indicator" id="slide-indicator">0 / 0</span>
+            <button class="nav-btn contents" onclick="showContents()">CONTENTS</button>
+            <button class="nav-btn edit-toggle" onclick="toggleEditor()">EDIT</button>
+            <button class="nav-btn next" id="next-btn" onclick="nextSlide()">NEXT</button>
+        </div>
+    </div>
+
+    <div class="contents-modal" id="contents-modal">
+        <span class="close-contents" onclick="hideContents()">&times;</span>
+        <div class="contents-list">
+            <h2>Table of Contents</h2>
+            <div id="contents-items"></div>
+        </div>
+    </div>
+
+    <script>
+        // GitHub repository configuration
+        const GITHUB_CONFIG = {
+            owner: 'dmccreary',
+            repo: 'tracking-ai-course',
+            branch: 'main',
+            docsPath: 'docs/slides'
+        };
+
+        let slides = [];
+        let currentSlide = 0;
+        let presentationTitle = '';
+        let isLocalMode = false;
+        let localMarkdown = '';
+
+        // Local storage key for persisting editor content
+        function getStorageKey() {
+            const inputFile = getInputFile();
+            return `slide-viewer-local-${inputFile || 'default'}`;
+        }
+
+        // Toggle editor panel visibility
+        function toggleEditor() {
+            const panel = document.getElementById('editor-panel');
+            const editor = document.getElementById('markdown-editor');
+
+            if (panel.classList.contains('active')) {
+                panel.classList.remove('active');
+            } else {
+                panel.classList.add('active');
+                // Load saved content from localStorage
+                const saved = localStorage.getItem(getStorageKey());
+                if (saved) {
+                    editor.value = saved;
+                } else if (localMarkdown) {
+                    editor.value = localMarkdown;
+                }
+            }
+        }
+
+        // Close editor panel
+        function closeEditor() {
+            document.getElementById('editor-panel').classList.remove('active');
+        }
+
+        // Load content from GitHub into editor
+        async function loadFromGitHub() {
+            const inputFile = getInputFile();
+            if (!inputFile) {
+                alert('No input file specified in URL');
+                return;
+            }
+
+            const editor = document.getElementById('markdown-editor');
+            editor.value = 'Loading from GitHub...';
+
+            try {
+                const fetchUrl = getRawGitHubUrl(inputFile);
+                const response = await fetch(fetchUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const markdown = await response.text();
+                editor.value = markdown;
+                localStorage.setItem(getStorageKey(), markdown);
+            } catch (error) {
+                editor.value = `Error loading from GitHub: ${error.message}`;
+            }
+        }
+
+        // Trigger file input for loading local file
+        function loadFromFile() {
+            document.getElementById('file-input').click();
+        }
+
+        // Handle file selection
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                const editor = document.getElementById('markdown-editor');
+                editor.value = content;
+                localStorage.setItem(getStorageKey(), content);
+                previewSlides();
+            };
+            reader.readAsText(file);
+        }
+
+        // Preview slides from editor content
+        function previewSlides() {
+            const editor = document.getElementById('markdown-editor');
+            const markdown = editor.value;
+
+            if (!markdown.trim()) {
+                alert('Editor is empty. Paste or load markdown content first.');
+                return;
+            }
+
+            // Save to localStorage
+            localStorage.setItem(getStorageKey(), markdown);
+
+            // Parse and display slides
+            localMarkdown = markdown;
+            isLocalMode = true;
+            slides = parseSlides(markdown);
+            currentSlide = 0;
+            renderSlide();
+
+            // Close editor
+            closeEditor();
+        }
+
+        // Clear local cache and reload from GitHub
+        function clearLocalCache() {
+            if (confirm('Clear local cache and reload from GitHub?')) {
+                localStorage.removeItem(getStorageKey());
+                document.getElementById('markdown-editor').value = '';
+                isLocalMode = false;
+                localMarkdown = '';
+                closeEditor();
+                init(); // Reload from GitHub
+            }
+        }
+
+        // Auto-save editor content
+        document.addEventListener('DOMContentLoaded', function() {
+            const editor = document.getElementById('markdown-editor');
+            if (editor) {
+                editor.addEventListener('input', function() {
+                    localStorage.setItem(getStorageKey(), editor.value);
+                });
+            }
+        });
+
+        // Get input file from URL parameter
+        function getInputFile() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('input');
+        }
+
+        // Convert relative path to raw GitHub URL
+        function getRawGitHubUrl(relativePath) {
+            const { owner, repo, branch, docsPath } = GITHUB_CONFIG;
+            return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${docsPath}/${relativePath}`;
+        }
+
+        // Fix relative URLs in rendered HTML based on source file location
+        function fixRelativeUrls(html, inputFile) {
+            // Get the directory of the source file relative to slides/
+            // e.g., "tracking-ai/index.md" -> "tracking-ai/"
+            const sourceDir = inputFile.substring(0, inputFile.lastIndexOf('/') + 1);
+
+            // Create a temporary element to parse HTML
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+
+            // Fix iframe src attributes
+            temp.querySelectorAll('iframe[src]').forEach(iframe => {
+                const src = iframe.getAttribute('src');
+                if (src && !src.startsWith('http') && !src.startsWith('/')) {
+                    // Resolve the relative path from the source file's location
+                    // Source is in slides/[sourceDir], viewer is in slides/
+                    // So we need to resolve from slides/[sourceDir] perspective
+                    const resolvedPath = resolveRelativePath(sourceDir, src);
+                    iframe.setAttribute('src', resolvedPath);
+                }
+            });
+
+            // Fix img src attributes
+            temp.querySelectorAll('img[src]').forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('http') && !src.startsWith('/')) {
+                    const resolvedPath = resolveRelativePath(sourceDir, src);
+                    img.setAttribute('src', resolvedPath);
+                }
+            });
+
+            // Fix anchor href attributes
+            temp.querySelectorAll('a[href]').forEach(a => {
+                const href = a.getAttribute('href');
+                if (href && !href.startsWith('http') && !href.startsWith('/') && !href.startsWith('#')) {
+                    const resolvedPath = resolveRelativePath(sourceDir, href);
+                    a.setAttribute('href', resolvedPath);
+                }
+            });
+
+            return temp.innerHTML;
+        }
+
+        // Resolve a relative path from a source directory
+        function resolveRelativePath(sourceDir, relativePath) {
+            // Combine sourceDir with relativePath and normalize
+            // sourceDir: "tracking-ai/"
+            // relativePath: "../../sims/four-futures/main.html"
+            // Result should be: "../sims/four-futures/main.html" (relative to slides/)
+
+            const parts = (sourceDir + relativePath).split('/');
+            const resolved = [];
+            let parentDirs = 0; // Track how many ".." we need to keep
+
+            for (const part of parts) {
+                if (part === '..') {
+                    if (resolved.length > 0 && resolved[resolved.length - 1] !== '..') {
+                        resolved.pop();
+                    } else {
+                        // Can't go up further, need to preserve this ".."
+                        parentDirs++;
+                    }
+                } else if (part && part !== '.') {
+                    resolved.push(part);
+                }
+            }
+
+            // Prepend the necessary ".." segments
+            const prefix = '../'.repeat(parentDirs);
+            return prefix + resolved.join('/') || '.';
+        }
+
+        // Parse frontmatter from markdown
+        function parseFrontmatter(content) {
+            const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
+            if (frontmatterMatch) {
+                const frontmatter = frontmatterMatch[1];
+                const body = content.slice(frontmatterMatch[0].length);
+
+                // Parse title from frontmatter
+                const titleMatch = frontmatter.match(/title:\s*(.+)/);
+                if (titleMatch) {
+                    presentationTitle = titleMatch[1].trim();
+                    document.title = presentationTitle + ' - Slide Viewer';
+                }
+
+                return body;
+            }
+            return content;
+        }
+
+        // Parse markdown into slides based on ## headers
+        function parseSlides(markdown) {
+            const content = parseFrontmatter(markdown);
+
+            // Split by ## headers
+            const parts = content.split(/^## /m);
+
+            const parsedSlides = [];
+
+            // First part might contain intro content with # header
+            if (parts[0].trim()) {
+                const introContent = parts[0].trim();
+                // Check if there's a # header (title slide)
+                const titleMatch = introContent.match(/^# (.+)\n/);
+                if (titleMatch) {
+                    parsedSlides.push({
+                        title: titleMatch[1],
+                        content: introContent
+                    });
+                }
+            }
+
+            // Process ## sections
+            for (let i = 1; i < parts.length; i++) {
+                const part = parts[i];
+                const lines = part.split('\n');
+                const title = lines[0].trim();
+                const slideContent = '## ' + part;
+
+                parsedSlides.push({
+                    title: title,
+                    content: slideContent
+                });
+            }
+
+            return parsedSlides;
+        }
+
+        // Render current slide
+        function renderSlide() {
+            const slideContent = document.getElementById('slide-content');
+            const slideIndicator = document.getElementById('slide-indicator');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            if (slides.length === 0) {
+                slideContent.innerHTML = '<div class="error-message"><h2>No slides found</h2><p>The input file could not be parsed.</p></div>';
+                return;
+            }
+
+            // Render markdown to HTML and fix relative URLs
+            const rawHtml = marked.parse(slides[currentSlide].content);
+            const inputFile = getInputFile();
+            slideContent.innerHTML = fixRelativeUrls(rawHtml, inputFile);
+
+            // Update indicator
+            slideIndicator.textContent = `${currentSlide + 1} / ${slides.length}`;
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+
+            // Update side navigation buttons
+            document.getElementById('side-prev-btn').disabled = currentSlide === 0;
+            document.getElementById('side-next-btn').disabled = currentSlide === slides.length - 1;
+
+            // Update URL hash for bookmarking
+            window.location.hash = `slide-${currentSlide + 1}`;
+        }
+
+        // Navigation functions
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                renderSlide();
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                renderSlide();
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            renderSlide();
+            hideContents();
+        }
+
+        // Contents modal functions
+        function showContents() {
+            const modal = document.getElementById('contents-modal');
+            const itemsContainer = document.getElementById('contents-items');
+
+            itemsContainer.innerHTML = slides.map((slide, index) => `
+                <div class="contents-item ${index === currentSlide ? 'active' : ''}" onclick="goToSlide(${index})">
+                    <span class="slide-num">${index + 1}</span>
+                    <span>${slide.title}</span>
+                </div>
+            `).join('');
+
+            modal.classList.add('active');
+        }
+
+        function hideContents() {
+            document.getElementById('contents-modal').classList.remove('active');
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'Escape') {
+                hideContents();
+            } else if (e.key === 'c' || e.key === 'C') {
+                const modal = document.getElementById('contents-modal');
+                if (modal.classList.contains('active')) {
+                    hideContents();
+                } else {
+                    showContents();
+                }
+            }
+        });
+
+        // Close modal on outside click
+        document.getElementById('contents-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'contents-modal') {
+                hideContents();
+            }
+        });
+
+        // Load and initialize
+        async function init() {
+            const inputFile = getInputFile();
+
+            if (!inputFile) {
+                document.getElementById('slide-content').innerHTML = `
+                    <div class="error-message">
+                        <h2>No input file specified</h2>
+                        <p>Please provide an input file using the URL parameter:</p>
+                        <p><code>slide-viewer.html?input=tracking-ai/index.md</code></p>
+                        <p style="margin-top: 20px; color: #90a4ae;">Files are fetched from raw.githubusercontent.com</p>
+                        <p style="color: #90a4ae;">Click EDIT to load local files or paste content directly.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Check for saved local content first
+            const savedContent = localStorage.getItem(getStorageKey());
+            if (savedContent) {
+                localMarkdown = savedContent;
+                isLocalMode = true;
+                slides = parseSlides(savedContent);
+
+                // Show indicator that we're using local content
+                document.getElementById('slide-content').innerHTML = `
+                    <div class="loading" style="color: #81c784;">
+                        Loading from local cache...<br>
+                        <small style="color: #90a4ae;">Click EDIT to modify or load fresh from GitHub</small>
+                    </div>
+                `;
+            }
+
+            try {
+                let markdown;
+
+                if (savedContent) {
+                    // Use saved local content
+                    markdown = savedContent;
+                } else {
+                    // Fetch from raw GitHub to get the .md file directly
+                    const fetchUrl = getRawGitHubUrl(inputFile);
+                    const response = await fetch(fetchUrl);
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    markdown = await response.text();
+                }
+
+                slides = parseSlides(markdown);
+
+                // Check for hash to restore position
+                const hash = window.location.hash;
+                if (hash) {
+                    const match = hash.match(/slide-(\d+)/);
+                    if (match) {
+                        const slideNum = parseInt(match[1], 10) - 1;
+                        if (slideNum >= 0 && slideNum < slides.length) {
+                            currentSlide = slideNum;
+                        }
+                    }
+                }
+
+                renderSlide();
+            } catch (error) {
+                const fetchUrl = getRawGitHubUrl(inputFile);
+                document.getElementById('slide-content').innerHTML = `
+                    <div class="error-message">
+                        <h2>Error loading slides</h2>
+                        <p>Input path: <code>${inputFile}</code></p>
+                        <p>Fetching from: <code>${fetchUrl}</code></p>
+                        <p>${error.message}</p>
+                        <p style="margin-top: 20px;">
+                            <button class="nav-btn edit-toggle" onclick="toggleEditor()" style="font-size: 1em;">
+                                Open Editor to Load Local File
+                            </button>
+                        </p>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize on page load
+        init();
+    </script>
+</body>
+</html>

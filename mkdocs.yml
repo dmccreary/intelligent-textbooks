@@ -114,6 +114,9 @@ nav:
   - Case Studies:
     - Intro: case-studies/index.md
   
+  - Slides:
+    - List of Slides: slides/index.md
+    - Overview of Intelligent Textbooks: slides/overview.md
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Axiom Mascot Test: learning-graph/axiom-mascot-test.md
@@ -123,6 +126,8 @@ nav:
     - learning-graph/book-mascot-linkedin-announcement.md
     - learning-graph/trim-mascot-padding.md
     - Sponsorship Plan: learning-graph/sponsorship-plan.md
+  
+  
   - Prompts:
     - Introduction: prompts/index.md
     - Feature Mapping: prompts/feature-mapping.md
@@ -225,6 +230,7 @@ hooks:
 markdown_extensions:
   - admonition
   - md_in_html # required for multiple-choice question numbering
+  - attr_list
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
