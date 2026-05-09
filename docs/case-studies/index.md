@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 85 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 91 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -224,6 +224,12 @@ document.addEventListener('click', function(e) {
     A hands-on guide to automating instructional design tasks using AI and other tools. Covers workflows for course development.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/automating-instructional-design) · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[Ancient History](https://dmccreary.github.io/ancient-history/)**
+
+    An interactive intelligent textbook covering ancient world history from cosmic origins through post-classical civilizations (to ~1200 CE). Organized around the UCLA "World History for Us All" Big Era framework with a learning graph of 297 concepts.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ancient-history) · 31 Files · 107K Words · 1 MicroSim · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[Beginning Electronics with AI](https://dmccreary.github.io/beginning-electronics)**
 
@@ -457,6 +463,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-rag) · 14 Files · 8K Words · 33 Glossary Terms · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
+- **[Information Systems](https://dmccreary.github.io/information-systems/)**
+
+    ![Information Systems](./img/information-systems.jpg)
+
+    An ABET CAC-aligned, AI-forward intelligent textbook on Information Systems for college sophomores and juniors — from "what is data?" to "what is an Enterprise Nervous System?"
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/information-systems) · 143 Files · 279K Words · 45 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
+
 - **[Intelligent Textbooks](https://dmccreary.github.io/intelligent-textbooks)**
 
     ![Intelligent Textbooks](./img/intelligent-textbooks.jpg)
@@ -464,6 +478,14 @@ document.addEventListener('click', function(e) {
     Tutorial for building intelligent textbooks using mkdocs-material. Contains detailed tutorials and best practices.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intelligent-textbooks) · 12K Words · 4 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
+
+- **[Introduction to 3D Printing](https://dmccreary.github.io/3d-printing-course/)**
+
+    ![Introduction to 3D Printing](./img/3d-printing-course.jpg)
+
+    An interactive intelligent textbook with MicroSims to teach high-school students about 3D printing, designed to maximize the probability of college credit.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/3d-printing-course) · 123 Files · 194K Words · 47 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
 
 - **[Introduction to Graph Databases](https://dmccreary.github.io/intro-to-graph)**
 
@@ -498,6 +520,14 @@ document.addEventListener('click', function(e) {
     Executive-level course on AI-powered IR modernization by David Berglund. 15 chapters with full content.
 
     [:octicons-mark-github-16: Repository](https://github.com/dberglu/ir-textbook) · Glossary, FAQs, Quizzes, MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[Investor Relations Textbook](https://dmccreary.github.io/ir-textbook/)**
+
+    ![Investor Relations Textbook](./img/ir-textbook.jpg)
+
+    An executive-level intelligent textbook on AI-powered investor relations modernization, equipping CDAOs, CFOs, and strategic advisors with frameworks and governance models drawn from Fortune 100 best practices.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ir-textbook) · 56 Files · 179K Words · 5 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
 
 - **[IT Management with Graphs](https://dmccreary.github.io/it-management-graph)**
 
@@ -616,6 +646,14 @@ document.addEventListener('click', function(e) {
     Using colorful addressable LED strips and noodles for hands-on computational thinking projects with MicroPython.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/moving-rainbow) · 49 Files · 17K Words · <span class="completion completion-4" title="Nearly Complete (4/5)"></span>
+
+- **[Networking and Communication](https://dmccreary.github.io/networking/)**
+
+    ![Networking and Communication](./img/networking.jpg)
+
+    An ABET CAC-aligned intelligent textbook covering the foundations of networking and communication — layered architecture, routing, reliable transport, wireless, network security, and modern programmable networks.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/networking) · 41 Files · 130K Words · 1 MicroSim · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[Neurodiversity Course](https://dmccreary.github.io/neurodiversity-course/)**
 
@@ -778,5 +816,13 @@ document.addEventListener('click', function(e) {
     Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[xAPI for Intelligent Textbooks](https://dmccreary.github.io/xapi-course/)**
+
+    ![xAPI for Intelligent Textbooks](./img/xapi-course.jpg)
+
+    An interactive intelligent textbook on the xAPI (Experience API) standard for software professionals implementing xAPI in Level 3 intelligent textbooks and learning systems. Features 50 MicroSims built with p5.js and vis-network.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/xapi-course) · 113 Files · 154K Words · 50 MicroSims · <span class="completion completion-4" title="Nearly Complete (4/5)"></span>
 
 </div>
