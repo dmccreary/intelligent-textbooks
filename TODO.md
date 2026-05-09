@@ -1,5 +1,27 @@
 # TODO
 
+## Run /init-textbook on new high-school textbook repos
+
+The following repos were created and cloned but still need the `/init-textbook`
+skill run to scaffold the mkdocs-material project structure:
+
+- [ ] `~/Documents/ws/english-language-arts`
+- [ ] `~/Documents/ws/us-government`
+- [ ] `~/Documents/ws/algebra-2`
+- [ ] `~/Documents/ws/psychology`
+- [ ] `~/Documents/ws/sociology`
+- [ ] `~/Documents/ws/spanish-language`
+- [ ] `~/Documents/ws/health-education`
+- [ ] `~/Documents/ws/graphic-design`
+- [ ] `~/Documents/ws/accounting`
+
+Already done:
+- [x] `~/Documents/ws/business`
+- [x] `~/Documents/ws/marketing`
+- [x] `~/Documents/ws/us-history`
+
+---
+
 Future cleanup tasks for this project and related textbooks.
 
 ## Concept-list metadata vs body drift
