@@ -153,7 +153,7 @@ document.addEventListener('click', function(e) {
 
     Learn electronic circuits with AI-powered simulations and knowledge graphs. Created to support the circuits course at the University of Minnesota.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits) · 113 Files · 154K Words · 23 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits) · 113 Files · 154K Words · 23 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Interactive Infographics with AI](https://dmccreary.github.io/infographics/)**
 
@@ -169,7 +169,7 @@ document.addEventListener('click', function(e) {
 
     A fun way of teaching AI and machine learning using a $300 RC car with a Raspberry Pi and Camera. Supports DonkeyCar projects.
 
-    [:octicons-mark-github-16: Repository](https://github.com/CoderDojoTC/ai-racing-league) · 107 Files · 39K Words · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/CoderDojoTC/ai-racing-league) · 107 Files · 39K Words · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[Algebra I](https://dmccreary.github.io/algebra-1)**
 
@@ -229,7 +229,7 @@ document.addEventListener('click', function(e) {
 
     An interactive intelligent textbook covering ancient world history from cosmic origins through post-classical civilizations (to ~1200 CE). Organized around the UCLA "World History for Us All" Big Era framework with a learning graph of 297 concepts.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ancient-history) · 31 Files · 107K Words · 1 MicroSim · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ancient-history) · 31 Files · 107K Words · 1 MicroSim · <span class="completion completion-4" title="Early Development (4/5)"></span>
 
 - **[Beginning Electronics with AI](https://dmccreary.github.io/beginning-electronics)**
 
@@ -254,6 +254,7 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook examining blockchain, certificate authorities, cost analysis, architecture tradeoffs, and cognitive biases in technology decisions.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/blockchain) · 74 Files · 105K Words · 36 MicroSims · 200 Glossary Terms
+    <span class="completion completion-1" title="Complete (1/5)"></span>
 
 - **[Building AI Agents with Python](https://dmccreary.github.io/agents-course/)**
 
@@ -318,6 +319,7 @@ document.addEventListener('click', function(e) {
     An ABET CAC-aligned intelligent textbook covering cryptography, software security, network defense, system hardening, governance, and ethics for undergraduate students of cybersecurity, computer science, and information systems.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cybersecurity) · 36 Files · 152K Words · 390 Glossary Terms
+    <span class="completion completion-4" title="Complete (4/5)"></span>
 
 - **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
@@ -333,7 +335,8 @@ document.addEventListener('click', function(e) {
 
     An interactive intelligent textbook for grades 5-9 on building safe, kind, and balanced lives online, aligned to the ISTE Student Standards.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-citizenship) · 115 Files · 199K Words · 11 MicroSims · 267 Glossary Terms
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/digital-citizenship) · 265 Concepts · 199K Words · 11 MicroSims · 267 Glossary Terms · 15 Mini Graphic Novels
+    <span class="completion completion-5" title="Complete (5/5) - The Mini Graphic Novels are awesome!"></span>
 
 - **[Digital Design With Programmable Logic](https://mcbasken.github.io/umn-senior-design/)**
 
@@ -363,7 +366,7 @@ document.addEventListener('click', function(e) {
 
     Interactive intelligent textbook on Introduction to Economics for high school students covering microeconomics, macroeconomics, personal finance, and the digital economy.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/economics-course) · 29 Files · 82K Words · Early Stage · <span class="completion completion-2" title="Initial Content (2/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/economics-course) · 29 Files · 82K Words · Early Stage · <span class="completion completion-4" title="Initial Content (4/5)"></span>
 
 - **[Ecology: Systems Thinking for a Changing Planet](https://dmccreary.github.io/ecology/)**
 
@@ -372,6 +375,7 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook for high school students (grades 9-12) on ecosystems, biodiversity, populations, climate change, and environmental policy, with a focus on systems thinking and scientific literacy.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ecology) · 191 Files · 350K Words · 87 MicroSims · 381 Glossary Terms
+    <span class="completion completion-5" title="Initial Content (5/5)"></span>
 
 - **[English Language Arts](https://dmccreary.github.io/english-language-arts)**
 
@@ -380,6 +384,7 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook for US high school students (grades 9–12) covering the complete Common Core ELA curriculum: reading literature, informational text, writing, speaking, listening, and language conventions.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/english-language-arts) · 81 Files · 251K Words · 21 MicroSims · 295 Glossary Terms · 295 Concepts
+    <span class="completion completion-5" title="Initial Content (5/5)"></span>
 
 - **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
@@ -395,7 +400,7 @@ document.addEventListener('click', function(e) {
 
     A collection of resources for learning about Fast Fourier Transforms and benchmarking techniques across platforms.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking) · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking) · <span class="completion completion-2" title="In Progress (2/5)"></span>
 
 - **[Fluid Power Systems](https://dmccreary.github.io/fluid-power-systems/)**
 
@@ -431,7 +436,8 @@ document.addEventListener('click', function(e) {
 
     Helps business leaders understand how to use generative AI to create and maintain their AI business strategy.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cmm-for-genai) · 22 Files · 7K Words · 3 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cmm-for-genai) · 22 Files · 7K Words · 3 MicroSims · 
+    <span class="completion completion-1" title="Early Development (1/5)"></span>
 
 - **[Genetics: Analysis, Genomics, and Modern Inference](https://dmccreary.github.io/genetics/)**
 
@@ -440,6 +446,8 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook for advanced high school and early undergraduate students covering genetic analysis, genomics, and modern inference.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/genetics) · 93 Files · 118K Words · 60 MicroSims · 450 Glossary Terms
+    <span class="completion completion-5" title="Early Development (5/5)"></span>
+
 
 - **[Graph Algorithms with AI](https://dmccreary.github.io/graph-algorithms)**
 
@@ -447,7 +455,7 @@ document.addEventListener('click', function(e) {
 
     MicroSims to help undergraduate college students learn graph algorithms using various JavaScript libraries.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-algorithms) · 71 Files · 30K Words · 15 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-algorithms) · 71 Files · 30K Words · 15 MicroSims · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[Graph Data Modeling with AI](https://dmccreary.github.io/graph-data-modeling-course)**
 
@@ -477,7 +485,7 @@ document.addEventListener('click', function(e) {
 
     An ABET CAC-aligned, AI-forward intelligent textbook on Information Systems for college sophomores and juniors — from "what is data?" to "what is an Enterprise Nervous System?"
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/information-systems) · 143 Files · 279K Words · 45 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/information-systems) · 143 Files · 279K Words · 45 MicroSims · <span class="completion completion-5" title="In Progress (5/5)"></span>
 
 - **[Intelligent Textbooks](https://dmccreary.github.io/intelligent-textbooks)**
 
@@ -485,7 +493,7 @@ document.addEventListener('click', function(e) {
 
     Tutorial for building intelligent textbooks using mkdocs-material. Contains detailed tutorials and best practices.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intelligent-textbooks) · 12K Words · 4 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intelligent-textbooks) · 12K Words · 4 MicroSims · <span class="completion completion-4" title="In Progress (4/5)"></span>
 
 - **[Introduction to 3D Printing](https://dmccreary.github.io/3d-printing-course/)**
 
@@ -493,7 +501,7 @@ document.addEventListener('click', function(e) {
 
     An interactive intelligent textbook with MicroSims to teach high-school students about 3D printing, designed to maximize the probability of college credit.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/3d-printing-course) · 123 Files · 194K Words · 47 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/3d-printing-course) · 123 Files · 194K Words · 47 MicroSims · <span class="completion completion-5" title="In Progress (5/5)"></span>
 
 - **[Introduction to Graph Databases](https://dmccreary.github.io/intro-to-graph)**
 
@@ -529,14 +537,6 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dberglu/ir-textbook) · Glossary, FAQs, Quizzes, MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
-- **[Investor Relations Textbook](https://dmccreary.github.io/ir-textbook/)**
-
-    ![Investor Relations Textbook](./img/ir-textbook.jpg)
-
-    An executive-level intelligent textbook on AI-powered investor relations modernization, equipping CDAOs, CFOs, and strategic advisors with frameworks and governance models drawn from Fortune 100 best practices.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ir-textbook) · 56 Files · 179K Words · 5 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
-
 - **[IT Management with Graphs](https://dmccreary.github.io/it-management-graph)**
 
     ![IT Management with Graphs](./img/it-management-graph.jpg)
@@ -567,7 +567,8 @@ document.addEventListener('click', function(e) {
 
     Helps kids learn MicroPython on microcontrollers using fun low-cost projects. Thousands of monthly users worldwide.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython) · 204 Files · 63K Words · 
+    <span class="completion completion-3" title="Early Development (3/5)"></span>
 
 - **[Learning Sciences for Intelligent Textbook Design](https://dmccreary.github.io/learning-sciences/)**
 
@@ -576,6 +577,8 @@ document.addEventListener('click', function(e) {
     An intelligent textbook on the Seven Domains of the Learning Sciences — motivation, understanding, retention, application, expertise, measurement, and learning conditions — applied to authoring AI-augmented textbooks for educators and AI researchers.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-sciences) · 117 Files · 193K Words · 64 MicroSims · 221 Glossary Terms
+    <span class="completion completion-4" title="Early Development (4/5)"></span>
+
 
 - **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
 
@@ -591,7 +594,8 @@ document.addEventListener('click', function(e) {
 
     Comprehensive intelligent textbook on machine learning for college undergraduates. Covers supervised learning, unsupervised learning, neural networks, CNNs, and transfer learning with Python code examples.
 
-    [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/machine-learning-textbook) · 60 Files · 103K Words · 18 MicroSims · 199 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/machine-learning-textbook) · 60 Files · 103K Words · 18 MicroSims · 199 Glossary Terms · 
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Mathematics Functions](https://dmccreary.github.io/functions/)**
 
@@ -600,6 +604,8 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook for high school students mastering the unifying theme of functions in mathematics through mathematical models, coordinate geometry, and real-world applications.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/functions) · 97 Files · 148K Words · 31 MicroSims · 208 Glossary Terms
+    <span class="completion completion-5" title="Complete (5/5)"></span>
+
 
 - **[McCreary Family Heritage](https://dmccreary.github.io/mccreary-heritage/)**
 
@@ -607,7 +613,7 @@ document.addEventListener('click', function(e) {
 
     Educational resources for teaching Scottish, Irish, and immigration history with a focus on building critical thinking skills.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mccreary-heritage) · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mccreary-heritage) · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[MicroSim Search](https://dmccreary.github.io/search-microsims/)**
 
@@ -615,7 +621,7 @@ document.addEventListener('click', function(e) {
 
     Client-side faceted search system for educational MicroSims. Crawls GitHub repositories to collect metadata and provides browser-based search with filtering by subject, grade level, Bloom's Taxonomy, and framework.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/search-microsims) · 125 Files · 138K Words · 58 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/search-microsims) · 125 Files · 138K Words · 58 MicroSims · <span class="completion completion-3" title="Ongoing Development (3/5)"></span>
 
 - **[MicroSims](https://dmccreary.github.io/microsims)**
 
@@ -637,7 +643,8 @@ document.addEventListener('click', function(e) {
 
     Undergraduate textbook on graph-based healthcare data modeling: patient-centric models, provider operations, clinical workflows.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/modeling-healthcare-data) · Active Development · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/modeling-healthcare-data) · Active Development · 
+    <span class="completion completion-3" title="In Progress (3/5)"></span>
 
 - **[Moss](https://dmccreary.github.io/moss/)**
 
@@ -646,6 +653,8 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook exploring the biology, ecology, design, and sustainability of moss, with simulations and a learning graph for curious learners and naturalists.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/moss) · 104 Files · 163K Words · 34 MicroSims · 400 Glossary Terms
+    <span class="completion completion-4" title="In Progress (4/5)"></span>
+
 
 - **[Moving Rainbow](https://dmccreary.github.io/moving-rainbow)**
 
@@ -661,7 +670,7 @@ document.addEventListener('click', function(e) {
 
     An ABET CAC-aligned intelligent textbook covering the foundations of networking and communication — layered architecture, routing, reliable transport, wireless, network security, and modern programmable networks.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/networking) · 41 Files · 130K Words · 1 MicroSim · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/networking) · 41 Files · 130K Words · 1 MicroSim · <span class="completion completion-4" title="Early Development (4/5)"></span>
 
 - **[Neurodiversity Course](https://dmccreary.github.io/neurodiversity-course/)**
 
@@ -683,7 +692,8 @@ document.addEventListener('click', function(e) {
 
     Helps high school students learn personal finance with MicroSims, infographics, and graphic novel storytelling.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/personal-finance) · <span class="completion completion-5" title="Complete (5/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/personal-finance) · 
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Pre-Calculus](https://dmccreary.github.io/pre-calc/)**
 
@@ -692,6 +702,8 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook for pre-calculus designed to prepare high school students for advanced math coursework.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/pre-calc) · 43 Files · 100K Words · 307 Glossary Terms · 1 MicroSim
+    <span class="completion completion-1" title="Complete (1/5)"></span>
+
 
 - **[Prompt Engineering Class](https://dmccreary.github.io/prompt-class)**
 
@@ -699,7 +711,7 @@ document.addEventListener('click', function(e) {
 
     Hands-on labs covering lists, Mermaid diagrams, markdown tables, p5.js visualizations, and data science applications.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/prompt-class) · Active Development · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/prompt-class) · Active Development · <span class="completion completion-5" title="Early Development (5/5)"></span>
 
 - **[Reading for Kindergarten](https://dmccreary.github.io/reading-for-kindergarten/)**
 
@@ -737,7 +749,8 @@ document.addEventListener('click', function(e) {
 
     Build a spectrum analyzer using Raspberry Pi Pico and a microphone with detailed hardware and software tutorials.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/spectrum-analyzer) · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/spectrum-analyzer) · 
+    <span class="completion completion-1" title="Early Development (1/5)"></span>
 
 - **[Statistics](https://dmccreary.github.io/statistics-course/)**
 
@@ -746,6 +759,8 @@ document.addEventListener('click', function(e) {
     A simulation-filled interactive intelligent statistics textbook designed to help high school students earn college credit, hosted by Sylvia the Squirrel.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/statistics-course) · 194 Files · 237K Words · 112 MicroSims · 295 Glossary Terms
+    <span class="completion completion-5" title="Early Development (5/5)"></span>
+
 
 - **[STEM Classroom Administration](https://dmccreary.github.io/stem-classroom-admin/)**
 
@@ -761,7 +776,7 @@ document.addEventListener('click', function(e) {
 
     STEM and robotics using the Raspberry Pi RP2040 on low-cost robotics kits for computational thinking.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-robots) · 74 Files · 18K Words · 5 MicroSims · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-robots) · 74 Files · 18K Words · 5 MicroSims · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[Systems Thinking in the Age of AI](https://dmccreary.github.io/systems-thinking)**
 
@@ -769,7 +784,7 @@ document.addEventListener('click', function(e) {
 
     Interactive resources for teaching systems thinking from high school to executive level. Multiple course descriptions.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking) · MicroSims included · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking) · MicroSims included · <span class="completion completion-2" title="Early Development (2/5)"></span>
 
 - **[Theory of Knowledge](https://dmccreary.github.io/theory-of-knowledge/)**
 
@@ -778,6 +793,8 @@ document.addEventListener('click', function(e) {
     A free, open-source intelligent textbook for the IB Theory of Knowledge (TOK) course, exploring how knowledge is produced, validated, and communicated through interactive MicroSimulations and a learning graph of 275 interconnected concepts.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/theory-of-knowledge) · 129 Files · 235K Words · 72 MicroSims · 275 Glossary Terms
+    <span class="completion completion-5" title="Mature (5/5)"></span>
+
 
 - **[Token Efficiency](https://dmccreary.github.io/token-efficiency/)**
 
@@ -786,6 +803,7 @@ document.addEventListener('click', function(e) {
     A vendor-pluralistic intelligent textbook on measuring, analyzing, and reducing the cost of generative AI across Anthropic Claude, OpenAI, and Google Gemini for software engineers, ML engineers, and engineering managers.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/token-efficiency) · 109 Files · 182K Words · 475 Glossary Terms · 47 MicroSims
+    <span class="completion completion-5" title="Mature (5/5)"></span>
 
 - **[Tracking AI](https://dmccreary.github.io/tracking-ai-course)**
 
@@ -793,13 +811,15 @@ document.addEventListener('click', function(e) {
 
     Tracking AI progress for strategy consulting in education and knowledge management organizations.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/tracking-ai-course) · 47 Files · 18K Words · 3 MicroSims · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/tracking-ai-course) · 47 Files · 18K Words · 3 MicroSims · <span class="completion completion-5" title="In Progress (5/5)"></span>
 
 - **[Trigonometric Functions](https://stage03.iowerx.com:8443/)**
 
     Foundational course on relationships between angles and sides in right triangles by Hank Ratzesberger. 200 concepts.
 
     High School · Bridges algebra and geometry
+    <span class="completion completion-1" title="Mature (1/5)"></span>
+
 
 - **[Understanding Dementia](https://rtanler.github.io/Dementia/)**
 
@@ -807,7 +827,7 @@ document.addEventListener('click', function(e) {
 
     AI-generated intelligent textbook on dementia and cognitive decline for patients, caregivers, families, and healthcare professionals. Features 200 interconnected concepts in a learning graph. By rtanler.
 
-    [:octicons-mark-github-16: Repository](https://github.com/rtanler/Dementia) · 34 Files · 44K Words · 1 MicroSim · 200 Concepts · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/rtanler/Dementia) · 34 Files · 44K Words · 1 MicroSim · 200 Concepts · <span class="completion completion-5" title="In Progress (5/5)"></span>
 
 - **[Unicorns and Other Mythical Beasts](https://dmccreary.github.io/unicorns/)**
 
@@ -816,6 +836,8 @@ document.addEventListener('click', function(e) {
     A satirical interactive intelligent textbook about unicorns, mythical beasts, and the AI technologies that will improve them — exploring AI hype, education resistance, and technology fantasies.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/unicorns) · 142 Files · 267K Words · 34 MicroSims · 145 Glossary Terms
+    <span class="completion completion-5" title="Mature (5/5) - Fun satire!"></span>
+
 
 - **[US Geography](https://dmccreary.github.io/us-geography)**
 
@@ -823,7 +845,8 @@ document.addEventListener('click', function(e) {
 
     Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms · 
+    <span class="completion completion-4" title="Complete (4/5)"></span>
 
 - **[U.S. History](https://dmccreary.github.io/us-history)**
 
@@ -832,6 +855,8 @@ document.addEventListener('click', function(e) {
     An interactive intelligent textbook for AP-level U.S. History covering major eras from Colonial America through the present, featuring primary source analysis, historical reasoning skills, and interactive MicroSims for understanding cause and effect across key events.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-history) · 227 Files · 301K Words · 38 MicroSims · 450 Glossary Terms · 450 Concepts
+    <span class="completion completion-5" title="Mostly Complete (5/5) - a few MicroSims need reviewing"></span>
+
 
 - **[xAPI for Intelligent Textbooks](https://dmccreary.github.io/xapi-course/)**
 
@@ -839,6 +864,6 @@ document.addEventListener('click', function(e) {
 
     An interactive intelligent textbook on the xAPI (Experience API) standard for software professionals implementing xAPI in Level 3 intelligent textbooks and learning systems. Features 50 MicroSims built with p5.js and vis-network.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/xapi-course) · 113 Files · 154K Words · 50 MicroSims · <span class="completion completion-4" title="Nearly Complete (4/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/xapi-course) · 113 Files · 154K Words · 50 MicroSims · <span class="completion completion-5" title="Nearly Complete (5/5)"></span>
 
 </div>
