@@ -22,7 +22,14 @@
       "Bash(gh auth *)",
       "Bash(gh repo *)",
       "Bash(tee /tmp/to-delete.txt)",
-      "Bash(bk-capture-screenshot /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/concept-count-histogram 3 542)"
+      "Bash(bk-capture-screenshot /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/concept-count-histogram 3 542)",
+      "Bash(\n# Check english-language-arts path \\(with possible typo\\)\nls /Users/danmccreary/Documents/ws/ | grep -i english\n)",
+      "Bash(git -C /Users/danmccreary/Documents/ws/us-history remote get-url origin)",
+      "Bash(git -C /Users/danmccreary/Documents/ws/english-language-arts remote get-url origin)",
+      "Bash(cp /Users/danmccreary/Documents/ws/us-history/docs/img/cover.png /Users/danmccreary/Documents/ws/intelligent-textbooks/docs/case-studies/img/us-history.png)",
+      "Bash(cp /Users/danmccreary/Documents/ws/english-language-arts/docs/img/cover.png /Users/danmccreary/Documents/ws/intelligent-textbooks/docs/case-studies/img/english-language-arts.png)",
+      "Bash(git commit -m ' *)",
+      "Bash(export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib)"
     ],
     "deny": [],
     "ask": []
