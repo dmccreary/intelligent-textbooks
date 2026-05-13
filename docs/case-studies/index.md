@@ -373,6 +373,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ecology) · 191 Files · 350K Words · 87 MicroSims · 381 Glossary Terms
 
+- **[English Language Arts](https://dmccreary.github.io/english-language-arts)**
+
+    ![English Language Arts](./img/english-language-arts.jpg)
+
+    An interactive intelligent textbook for US high school students (grades 9–12) covering the complete Common Core ELA curriculum: reading literature, informational text, writing, speaking, listening, and language conventions.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/english-language-arts) · 81 Files · 251K Words · 21 MicroSims · 295 Glossary Terms · 295 Concepts
+
 - **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
     ![Ethics Course](./img/ethics-course.jpg)
@@ -816,6 +824,14 @@ document.addEventListener('click', function(e) {
     Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[U.S. History](https://dmccreary.github.io/us-history)**
+
+    ![U.S. History](./img/us-history.jpg)
+
+    An interactive intelligent textbook for AP-level U.S. History covering major eras from Colonial America through the present, featuring primary source analysis, historical reasoning skills, and interactive MicroSims for understanding cause and effect across key events.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-history) · 227 Files · 301K Words · 38 MicroSims · 450 Glossary Terms · 450 Concepts
 
 - **[xAPI for Intelligent Textbooks](https://dmccreary.github.io/xapi-course/)**
 
