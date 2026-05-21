@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 91 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 93 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -286,6 +286,14 @@ document.addEventListener('click', function(e) {
     Learn to design and build digital clocks and watches using breadboards, microcontrollers, RTCs, and displays. Many complete sample clocks and watches ready for classroom testing.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clocks-and-watches) · 124 Files · 37K Words · 11 MicroSims · <span class="completion completion-3" title="Many examples of clocks and watches (3/5)"></span>
+
+- **[Context Graph: How Organizations Use LLMs Cost Effectively](https://dmccreary.github.io/context-graph/)**
+
+    ![Context Graph](./img/context-graph.jpg)
+
+    An intelligent textbook for enterprise architects, AI/ML practitioners, and technical product managers on building context graphs — enterprise graph structures that get the right organizational knowledge into an LLM's prompt in the fewest tokens. Features 22 chapters, 496 concepts, 47 MicroSims, and Nexus the Spider as the pedagogical mascot.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/context-graph) · 496 Concepts · 22 Chapters · 245K Words · 498 Glossary Terms · 47 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Control Systems](https://dmccreary.github.io/control-systems)**
 
@@ -707,6 +715,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/robot-day) · 52 Files · 26K Words · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
+- **[Selecting the Right Database](https://dmccreary.github.io/right-database/)**
+
+    ![Selecting the Right Database](./img/right-database.jpg)
+
+    An intelligent textbook for software architects, senior engineers, and database administrators on making real-world database selection decisions using the CMU SEI Architecture Tradeoff Analysis Method (ATAM). Covers six database paradigms, CAP theorem, consensus, distributed scaling, vector search, and LLM embeddings.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/right-database) · 254 Concepts · 16 Chapters · 163K Words · 251 Glossary Terms · 5 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
+
 - **[Semiconductor Physics Course](https://dmccreary.github.io/semiconductor-physics-course)**
 
     ![Semiconductor Physics](./img/semiconductor-physics-course.jpg)
@@ -816,6 +832,14 @@ document.addEventListener('click', function(e) {
     Interactive intelligent geography for grade school students (3rd-6th grade). Explore all 50 states with clickable maps, zoomable regions, and discovery challenges.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-geography) · 85 Files · 81K Words · 34 MicroSims · 200 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[US Government](https://dmccreary.github.io/us-government/)**
+
+    ![US Government](./img/us-government.jpg)
+
+    An interactive intelligent textbook aligned with the AP US Government and Politics curriculum for high school students (grades 9–12). Covers constitutional foundations, the three branches, federalism, civil rights, and the impact of AI on democracy.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-government) · 86 Files · 132K Words · 23 MicroSims · 200 Glossary Terms
 
 - **[xAPI for Intelligent Textbooks](https://dmccreary.github.io/xapi-course/)**
 
