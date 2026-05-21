@@ -5,7 +5,6 @@
 The following repos were created and cloned but still need the `/init-textbook`
 skill run to scaffold the mkdocs-material project structure:
 
-- [ ] `~/Documents/ws/english-language-arts`
 - [ ] `~/Documents/ws/us-government`
 - [ ] `~/Documents/ws/algebra-2`
 - [ ] `~/Documents/ws/psychology`
@@ -16,8 +15,10 @@ skill run to scaffold the mkdocs-material project structure:
 - [ ] `~/Documents/ws/accounting`
 
 Already done:
-- [x] `~/Documents/ws/business`
-- [x] `~/Documents/ws/marketing`
+- [ ] `~/Documents/ws/business`
+- [ ] `~/Documents/ws/marketing`
+
+- [x] `~/Documents/ws/english-language-arts`
 - [x] `~/Documents/ws/us-history`
 
 ---
