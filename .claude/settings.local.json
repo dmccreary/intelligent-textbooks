@@ -45,7 +45,12 @@
       "Bash(ls /Users/dan/Documents/ws/right-database/docs/img/ 2>/dev/null | head -30)",
       "Bash(cd /Users/dan/Documents/ws/right-database && echo \"=== Glossary headings ===\" && grep -c \"^## \" docs/glossary.md && echo \"=== Chapter count ===\" && ls -d docs/chapters/*/ | wc -l && echo \"=== Image sizes ===\" && ls -la docs/img/cover.png docs/img/cover-v2.png docs/img/six-db-types.png 2>/dev/null)",
       "Bash(cp /Users/dan/Documents/ws/right-database/docs/img/cover-v2.png /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/right-database.png && python3 src/compress-thumbnails.py docs/case-studies/img 70 2>&1 | tail -20 && ls -la docs/case-studies/img/right-database*)",
-      "Bash(cp /Users/dan/Documents/ws/context-graph/docs/img/cover.png /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/context-graph.png && python3 src/convert-png-to-jpg.py docs/case-studies/img 70 2>&1 | grep -A5 \"context-graph\" && ls -la docs/case-studies/img/context-graph*)"
+      "Bash(cp /Users/dan/Documents/ws/context-graph/docs/img/cover.png /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/context-graph.png && python3 src/convert-png-to-jpg.py docs/case-studies/img 70 2>&1 | grep -A5 \"context-graph\" && ls -la docs/case-studies/img/context-graph*)",
+      "Bash(git -C /Users/danmccreary/Documents/ws/us-history remote get-url origin)",
+      "Bash(git -C /Users/danmccreary/Documents/ws/english-language-arts remote get-url origin)",
+      "Bash(cp /Users/danmccreary/Documents/ws/us-history/docs/img/cover.png /Users/danmccreary/Documents/ws/intelligent-textbooks/docs/case-studies/img/us-history.png)",
+      "Bash(cp /Users/danmccreary/Documents/ws/english-language-arts/docs/img/cover.png /Users/danmccreary/Documents/ws/intelligent-textbooks/docs/case-studies/img/english-language-arts.png)",
+      "Bash(export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib)"
     ],
     "deny": [],
     "ask": []
