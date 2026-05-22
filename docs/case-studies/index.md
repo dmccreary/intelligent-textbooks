@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 93 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 96 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -720,6 +720,14 @@ document.addEventListener('click', function(e) {
     Hands-on labs covering lists, Mermaid diagrams, markdown tables, p5.js visualizations, and data science applications.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/prompt-class) · Active Development · <span class="completion completion-5" title="Early Development (5/5)"></span>
+
+- **[Psychology](https://dmccreary.github.io/psychology/)**
+
+    ![Psychology](./img/psychology.jpg)
+
+    An AP-level intelligent textbook covering biological bases of behavior, sensation and perception, development, social influence, and psychological disorders for high school students preparing for the AP Psychology exam.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/psychology) · 17 Chapters · 100K Words · 5 MicroSims · <span class="completion completion-3" title="Active Development (3/5)"></span>
 
 - **[Reading for Kindergarten](https://dmccreary.github.io/reading-for-kindergarten/)**
 

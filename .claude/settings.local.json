@@ -50,7 +50,13 @@
       "Bash(git -C /Users/danmccreary/Documents/ws/english-language-arts remote get-url origin)",
       "Bash(cp /Users/danmccreary/Documents/ws/us-history/docs/img/cover.png /Users/danmccreary/Documents/ws/intelligent-textbooks/docs/case-studies/img/us-history.png)",
       "Bash(cp /Users/danmccreary/Documents/ws/english-language-arts/docs/img/cover.png /Users/danmccreary/Documents/ws/intelligent-textbooks/docs/case-studies/img/english-language-arts.png)",
-      "Bash(export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib)"
+      "Bash(export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib)",
+      "Bash(ls -d /Users/dan/Documents/ws/*/ | head -200)",
+      "Bash(sed -E 's|.*github.com/[^/]+/\\([^\\)]+\\)\\\\\\)|\\\\1|')",
+      "Read(//tmp/**)",
+      "Bash(cat /tmp/case_repos.txt | sed -E 's|.*github.com/[^/]+/\\([^\\)]+\\)\\\\\\)|\\\\1|' | sort | uniq -c | sort -rn | head -10)",
+      "Bash(cat /tmp/case_repos.txt | sed -E 's|.*github.com/[^/]+/\\([^\\)]+\\)\\\\\\)|\\\\1|' | sort -u > /tmp/case_repos_clean.txt; wc -l /tmp/case_repos_clean.txt)",
+      "Bash(cp /Users/dan/Documents/ws/psychology/docs/img/cover.png /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/psychology.png && ls -la /Users/dan/Documents/ws/intelligent-textbooks/docs/case-studies/img/psychology.png)"
     ],
     "deny": [],
     "ask": []
