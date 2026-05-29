@@ -418,6 +418,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fluid-power-systems) · 36 Files · 20K Words · 3 MicroSims · 103 Glossary Terms · <span class="completion completion-3" title="In Progress (3/5)"></span>
 
+- **[Food Science for 9th Grade](https://dmccreary.github.io/food-science)**
+
+    ![Food Science for 9th Grade](./img/food-science.jpg)
+
+    Year-long intelligent textbook for 9th graders exploring the chemistry, biology, and physics of food through virtual MicroSim labs and hands-on kitchen experiments. Covers 15 chapters from kitchen chemistry to food engineering.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/food-science) · 113 Files · 211K Words · 33 MicroSims · 241 Glossary Terms
+
 - **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
 
     ![GED Science Prep](./img/ged-science-prep.jpg)
@@ -538,6 +546,14 @@ document.addEventListener('click', function(e) {
     Year-long intro physics course covering motion, forces, energy, waves, optics, and electricity with MicroSims.
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intro-to-physics-course) · Active Development · <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[Introduction to Public Health](https://dmccreary.github.io/public-health)**
+
+    ![Introduction to Public Health](./img/public-health.jpg)
+
+    Interactive intelligent textbook covering the five CEPH core public health domains — epidemiology, biostatistics, environmental health, health policy, and social and behavioral sciences — with embedded simulations and a systems-thinking focus. Designed for undergraduate and graduate students.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/public-health) · 84 Files · 136K Words · 48 MicroSims
 
 - **[Investor Relations](https://dberglu.github.io/ir-textbook/)**
 
