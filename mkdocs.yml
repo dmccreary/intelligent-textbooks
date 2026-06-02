@@ -94,6 +94,7 @@ nav:
     - Educational Technology Standards Ecosystem: sims/standards-ecosystem/index.md
     - Flashcards: sims/flashcards/index.md
     - High School Courses Dependency Graph: sims/high-school-courses/index.md
+    - History of Intelligent Textbooks & Interactive Learning Timeline: sims/intelligent-textbook-timeline/index.md
     - Implementation Decision Matrix: sims/implementation-matrix/index.md
     - Intelligent Textbook Ecosystem Dynamics: sims/textbook-ecosystem-cld/index.md
     - Kemp Instructional Design Model MicroSim: sims/kemp-model/index.md
@@ -114,6 +115,8 @@ nav:
     - Word Cloud MicroSim: sims/word-cloud/index.md
     - Workflow for Generating Intelligent Textbooks: sims/book-gen-workflow/index.md
     - Workflow for Generating Intelligent Textbooks: sims/templates/index.md
+
+
 
 
   

@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 96 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 100 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -426,6 +426,14 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/food-science) · 113 Files · 211K Words · 33 MicroSims · 241 Glossary Terms
 
+- **[Forensic Science](https://dmccreary.github.io/forensic-science/)**
+
+    ![Forensic Science](./img/forensic-science.jpg)
+
+    Open-source intelligent textbook for high school students (grades 9–12) covering 19 chapters across six forensic modules — from trace evidence and biological analysis to digital forensics and OSINT. Features a learning graph of 278 concepts, guided by the mascot Trace the Raccoon.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/forensic-science) · 135 Files · 261K Words · 40 MicroSims · 258 Glossary Terms
+
 - **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
 
     ![GED Science Prep](./img/ged-science-prep.jpg)
@@ -494,6 +502,14 @@ document.addEventListener('click', function(e) {
     An online course teaching concepts around GraphRAG (Retrieval Augmented Generation with graphs).
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-rag) · 14 Files · 8K Words · 33 Glossary Terms · <span class="completion completion-1" title="Early Development (1/5)"></span>
+
+- **[Hydroponics: From Mason Jar to Vertical Farm](https://dmccreary.github.io/hydroponics)**
+
+    ![Hydroponics: From Mason Jar to Vertical Farm](./img/hydroponics.jpg)
+
+    An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/hydroponics) · 70 Files · 102K Words · 32 MicroSims
 
 - **[Information Systems](https://dmccreary.github.io/information-systems/)**
 
