@@ -63,6 +63,12 @@ learning graph tools, and data visualizations.
 
     Interactive visualization of prerequisite relationships between typical high school courses.
 
+- **[History of Intelligent Textbooks](./intelligent-textbook-timeline/index.md)**
+
+    ![History of Intelligent Textbooks Timeline](./intelligent-textbook-timeline/intelligent-textbook-timeline.png)
+
+    Filterable timeline from Piaget and knowledge spaces to generative AI, tracing the ideas behind intelligent textbooks and interactive learning.
+
 - **[Implementation Decision Matrix](./implementation-matrix/index.md)**
 
     ![Implementation Decision Matrix](./implementation-matrix/implementation-matrix.png)
