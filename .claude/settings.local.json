@@ -78,7 +78,12 @@
       "Bash(bk-capture-screenshot /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/intelligent-textbook-timeline 3 862)",
       "Bash(bk-capture-screenshot /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/intelligent-textbook-timeline 3 812)",
       "Bash(node --check /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/intelligent-textbook-timeline/intelligent-textbook-timeline.js)",
-      "Bash(bk-capture-screenshot /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/intelligent-textbook-timeline 3 726)"
+      "Bash(bk-capture-screenshot /Users/dan/Documents/ws/intelligent-textbooks/docs/sims/intelligent-textbook-timeline 3 726)",
+      "Bash(cp __TRACKED_VAR__/local.css docs/sims/graph-viewer/local.css)",
+      "Bash(cp __TRACKED_VAR__/script.js docs/sims/graph-viewer/script.js)",
+      "Bash(cp __TRACKED_VAR__/index.md docs/sims/graph-viewer/index.md)",
+      "Bash(cp __TRACKED_VAR__/main.html docs/sims/graph-viewer/main.html)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
     ],
     "deny": [],
     "ask": []
