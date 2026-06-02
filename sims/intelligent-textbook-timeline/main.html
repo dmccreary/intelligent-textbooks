@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>History of Intelligent Textbooks &amp; Interactive Learning</title>
+    <link href="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.css" rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1e293b;
+        }
+        #wrap { max-width: 1100px; margin: 0 auto; padding: 10px 14px 14px; }
+        h1 { font-size: 19px; margin: 0 0 2px; color: #1a3a6c; }
+        .subtitle { font-size: 12px; color: #64748b; margin: 0 0 10px; }
+
+        #controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+        /* The category filter buttons carry the category colors, so they double
+           as the legend — no separate swatch legend is needed. */
+        .filter-btn {
+            border: 1.5px solid rgba(0,0,0,0.22); border-radius: 18px;
+            padding: 6px 14px; font-size: 12px; cursor: pointer;
+            color: #1e293b; font-weight: 600; transition: all 0.15s ease;
+        }
+        .filter-btn.all    { background: #e2e8f0; }
+        .filter-btn.theory { background: #90caf9; }
+        .filter-btn.graphs { background: #a5d6a7; }
+        .filter-btn.genai  { background: #ffcc80; }
+        .filter-btn.scifi  { background: #ce93d8; }
+        .filter-btn:hover  { filter: brightness(0.95); }
+        .filter-btn.active { box-shadow: 0 0 0 3px #1a3a6c; border-color: #1a3a6c; }
+        .nav-btn {
+            border: 1px solid #94a3b8; background: #fff; color: #475569;
+            border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; margin-left: auto;
+        }
+        .nav-btn:hover { background: #f1f5f9; border-color: #1a3a6c; color: #1a3a6c; }
+
+        #timeline {
+            border: 1px solid #d8e0ea; border-radius: 8px; background: #fff;
+            padding: 10px 32px; min-height: 360px;
+        }
+
+        /* Category colors for timeline boxes */
+        .vis-item.theory { background: #90caf9; border-color: #0d47a1; color: #001233; }
+        .vis-item.graphs { background: #a5d6a7; border-color: #1b5e20; color: #002200; }
+        .vis-item.genai  { background: #ffcc80; border-color: #ef6c00; color: #2a1500; }
+        .vis-item.scifi  { background: #ce93d8; border-color: #6a1b9a; color: #1a0033; }
+        .vis-item { border-radius: 6px; font-size: 12px; }
+        .vis-item.vis-selected { box-shadow: 0 0 0 3px #f59e0b; }
+        .vis-item .vis-item-content {
+            white-space: normal !important;
+            overflow-wrap: break-word !important;
+            word-wrap: break-word !important;
+            max-width: 118px !important;
+            line-height: 1.2 !important;
+            padding: 4px 6px !important;
+        }
+        /* Prevent vis-timeline from clipping item labels at the panel edge */
+        .vis-timeline { border: none !important; }
+        .vis-panel.vis-center { overflow: visible !important; }
+        .vis-item .vis-item-overflow { overflow: visible !important; }
+        .vis-time-axis .vis-text { color: #475569 !important; font-size: 12px !important; }
+
+        #info {
+            margin-top: 10px; padding: 12px 14px; background: #fff;
+            border: 1px solid #d8e0ea; border-radius: 8px; font-size: 13px;
+            line-height: 1.5; min-height: 92px; color: #475569;
+        }
+        #info h3 { margin: 6px 0 4px; font-size: 15px; color: #1a3a6c; }
+        #info .meta { color: #64748b; font-size: 11px; margin-bottom: 6px; }
+        #info .conn {
+            margin-top: 8px; font-style: italic; color: #475569;
+            padding: 8px 10px; background: #f8fafc; border-left: 3px solid #1a3a6c; border-radius: 4px;
+        }
+        #info .src { margin-top: 8px; font-size: 12px; }
+        #info .src a { color: #1d4ed8; text-decoration: none; }
+        #info .src a:hover { text-decoration: underline; }
+        #info .badge {
+            display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.4px; padding: 2px 8px; border-radius: 10px; color: #1e293b;
+        }
+        #info .badge.theory { background: #90caf9; }
+        #info .badge.graphs { background: #a5d6a7; }
+        #info .badge.genai  { background: #ffcc80; }
+        #info .badge.scifi  { background: #ce93d8; }
+    </style>
+</head>
+<body>
+    <main id="wrap">
+        <h1>History of Intelligent Textbooks &amp; Interactive Learning</h1>
+        <p class="subtitle">From learning theory and knowledge spaces to generative AI &mdash; 1936 to 2026. Each colored button filters to one track; click any event for details.</p>
+
+        <div id="controls">
+            <button class="filter-btn all active" data-cat="all">All Events</button>
+            <button class="filter-btn theory" data-cat="Theory of Learning">Theory of Learning</button>
+            <button class="filter-btn graphs" data-cat="Learning Graphs">Learning Graphs</button>
+            <button class="filter-btn genai" data-cat="Generative AI">Generative AI</button>
+            <button class="filter-btn scifi" data-cat="Science Fiction">Science Fiction</button>
+            <button id="fitBtn" class="nav-btn">Fit All</button>
+        </div>
+
+        <div id="timeline"></div>
+        <div id="info">Click any event on the timeline to see details.</div>
+    </main>
+
+    <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="intelligent-textbook-timeline.js"></script>
+</body>
+</html>
