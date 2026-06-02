@@ -93,6 +93,7 @@ nav:
     - Cognitive Load Visualizer MicroSims: sims/cognitive-load/index.md
     - Educational Technology Standards Ecosystem: sims/standards-ecosystem/index.md
     - Flashcards: sims/flashcards/index.md
+    - Graph Viewer: sims/graph-viewer/index.md
     - High School Courses Dependency Graph: sims/high-school-courses/index.md
     - History of Intelligent Textbooks & Interactive Learning Timeline: sims/intelligent-textbook-timeline/index.md
     - Implementation Decision Matrix: sims/implementation-matrix/index.md
