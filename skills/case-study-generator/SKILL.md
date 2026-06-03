@@ -21,10 +21,14 @@ Extract the following from the GitHub repository:
 4. **Project title** - Check for a clear title in README.md or use repo name
 5. **Description** - Extract from README.md (first paragraph or project description)
 6. **Metrics** (if available):
+   - Concept count: `find docs -name learning-graph.csv | wc -l` and subtract 1 for header
+   - Chapter count: Count directories in `docs/chapters/`
+   - Glossary term count the number of level 4 headers in  `docs/glossary.md`
+   - FAQ count: Count level 3 or level 4 headers in `docs/faq.md`
    - File count: `find docs -type f -name "*.md" | wc -l`
    - Word count: `find docs -type f -name "*.md" -exec cat {} \; | wc -w`
    - MicroSim count: Count directories in `docs/sims/`
-   - Glossary term count: Parse `docs/glossary.md` if exists
+7. `docs/learning-graph/metadata.json` may also contain useful metadata title, author, date, and license.
 
 Use the `gh` CLI or direct GitHub API to fetch repository information:
 
@@ -146,24 +150,14 @@ Create the markdown entry using the format in `references/entry-format.md`.
 
     Brief 1-2 sentence description of the project, its purpose, and target audience.
 
-    [:octicons-mark-github-16: Repository](https://github.com/username/repo-name) · XX Files · XXK Words · X MicroSims
+    · XX Concepts · XX Chapters · XX MicroSims · XX Stories · XX Quizzes · XXK Words · XXX Glossary Terms · XX FAQs · XX Appendices
+    · <span class="completion completion-4" title="Almost Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/username/repo-name) 
 ```
 
 #### Entry Guidelines
 
-1. **Title**: Use the full descriptive project title, not the repo name
-2. **Image alt text**: Match the project title or use a descriptive phrase
-3. **Description**:
-   - Keep to 1-2 sentences
-   - Mention target audience (high school, college, etc.)
-   - Highlight key features (MicroSims, learning graph, etc.)
-4. **Metrics line**: Include available metrics separated by ` · `
-   - Repository link with GitHub icon
-   - File count (if significant)
-   - Word count (rounded to K)
-   - Glossary term count
-   - MicroSim count
-   - Development stage (if early: "Early Stage", "Active Development")
+See `references/entry-format.md` for examples of different entry styles, including entries with and without glossary terms, and with varying levels of detail in the description and metrics.
 
 ### Step 6: Insert Entry in Alphabetical Order
 
@@ -184,26 +178,21 @@ Insert the new entry into `docs/case-studies/index.md` in alphabetical order by 
 
 ## Example Usage
 
+### Local Filesystem Example:
+**User request**: "Add a case study for ../xapi-course"
+
+### Remote GitHub Repository Example:
 **User request**: "Add a case study for https://github.com/dmccreary/systems-thinking"
 
 **Process**:
-1. Clone repo, extract: title="Systems Thinking in the Age of AI", description from README
+1. For lone repo, extract: title="Systems Thinking in the Age of AI", description from README
 2. Find existing image or generate thumbnail
 3. Compress to `docs/case-studies/img/systems-thinking.jpg` (~31KB)
 4. Generate entry:
+5. Insert new entry alphabetically into `docs/case-studies/index.md`:
+6. Suggest to the user that they verify the entry with the following URL with `mkdocs serve` running:
 
-```markdown
-- **[Systems Thinking in the Age of AI](https://dmccreary.github.io/systems-thinking)**
-
-    ![Systems Thinking](./img/systems-thinking.jpg)
-
-    Interactive resources for teaching systems thinking from high school to executive level. Multiple course descriptions.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking) · MicroSims included
-```
-
-5. Insert alphabetically after "STEM Robots" entry
-6. Verify with `mkdocs serve`
+`http://127.0.0.1:8000/intelligent-textbooks/case-studies/`
 
 ## Resources
 

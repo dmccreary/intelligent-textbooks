@@ -9,7 +9,8 @@
 
     Brief 1-2 sentence description of the project, its purpose, and target audience.
 
-    [:octicons-mark-github-16: Repository](https://github.com/username/repo-name) · XX Files · XXK Words · X MicroSims
+     XX Concepts · X Chapters · X MicroSims · X Stories · XX Quizzes · XX Glossary Terms · XX FAQ 
+     · [:octicons-mark-github-16: Repository](https://github.com/username/repo-name)
 ```
 
 ## Formatting Rules
@@ -25,33 +26,60 @@
 - Alt text should be descriptive but concise
 
 ### Metrics Line Format
-- Start with GitHub icon link: `[:octicons-mark-github-16: Repository](URL)`
+
 - Separate metrics with ` · ` (space-dot-space)
 - Round word counts to K (e.g., "18K Words" not "18,234 Words")
 - Common metrics in order:
-  1. Repository link (required)
-  2. File count (optional)
-  3. Word count (optional)
-  4. Glossary term count (optional)
-  5. MicroSim count (optional)
-  6. Development stage (optional)
+  1. Concepts (required)
+  2. Chapters (required)
+  3. MicroSims (recommended)
+  4. Stories (optional)
+  5. Chapter Quizzes (recommended)
+  6. Chapter References (recommended)
+  7. Glossary Terms (recommended)
+  8. FAQs (recommended)
+  9. Words (required)
+  10. Mascot (optional)
+  11. Appendices (optional)
+  12. Development stage (required)
+  13. (Final) End with GitHub icon link for public sites: `[:octicons-mark-github-16: Repository](URL)`
 
-### Development Stage Tags
-- `Early Stage` - Just started, minimal content
-- `Active Development` - Ongoing work, content growing
+### Development Maturity Stage Tags
+
+There are five levels of 
+
+- `Early Stage` - Just started, minimal content, just a learning graph and chapters
+- `Preliminary` - Includes at least 2 supplementary from the metrics lines from above
+- `Developing` - Includes at least 5 supplementary from the metrics from above
+- `Almost Complete` - Only missing 5-6 items from the list above
+- `Content Complete` - Only missing 2-3 items
 - (No tag) - Mature/stable project
 
 ## Example Entries
 
-### Full Featured Entry
+### Full Featured Entry Examples
+
 ```markdown
+- **[A Skeptic's Guide to Quantum Computing](https://dmccreary.github.io/quantum-computing/)**
+
+    ![A Skeptic's Guide to Quantum Computing](./img/quantum-computing.jpg)
+
+    An evidence-based interactive intelligent textbook examining why quantum computing may never be economically viable, covering physics constraints, hardware realities, investment risk, and cognitive biases.  Designed for upper-division undergraduates, graduate students, technology investors, and policymakers.
+
+    241 Concepts · 17 Chapters · 53 MicroSims · 16 Stories · 200K Words · 241 Glossary Terms  
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing)
+
 - **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
 
     ![AI Assisted Geometry](./img/geometry-course.jpg)
 
-    An online intelligent textbook that uses AI to help high-school students learn geometry using MicroSims. Features a detailed learning graph and about a dozen MicroSims.
+    An online interactive intelligent textbook for high-school geometry using MicroSims. Features a detailed learning graph and over 130 interactive geometry MicroSims.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course) · 47 Files · 18K Words · 3 MicroSims
+    200 Concepts · 12 Chapters · 138 MicroSims · 171K Words · 200 Glossary Terms · 200 FAQs
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course)
+
 ```
 
 ### Minimal Entry (No Image)
@@ -60,6 +88,8 @@
 
     Applied Linear Algebra for Computer Science and Electrical Engineering. Uses learning graphs to structure concept dependencies.
 
+    200 Concepts · 21 Chapters
+    · <span class="completion completion-1" title="Complete (1/5)"></span>
     [:octicons-mark-github-16: Repository](https://github.com/artemispearson/learning-graphs)
 ```
 
@@ -85,7 +115,8 @@
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-data-modeling-course) · 49 Files · 13K Words · 156 Glossary Terms
 ```
 
-### Entry with Only MicroSims Mentioned
+### Entry with Only Concepts, Chapters and MicroSims Mentioned
+
 ```markdown
 - **[Ethics in Modern Society](https://dmccreary.github.io/ethics-course)**
 
@@ -93,10 +124,12 @@
 
     Ethical issues backed by critical thinking and data science. Covers harm measurement, impact analysis, and systems thinking.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ethics-course) · MicroSims included
+    200 Concepts · 12 Chapters · 40 MicroSims
+    · <span class="completion completion-3" title="Developing (3/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ethics-course)
 ```
 
-## Page Structure Context
+## Page Structure Context· 18K Words 
 
 Entries are placed inside this wrapper in `docs/case-studies/index.md`:
 
