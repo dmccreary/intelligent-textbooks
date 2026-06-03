@@ -1,0 +1,82 @@
+{
+  "title": "Productivity Jumps Stair-Step Infographic",
+  "creator": "Dan McCreary",
+  "subject": "Intelligent Textbooks / AI-Assisted Content Creation",
+  "description": "An interactive stair-step infographic showing how each new AI tool reduces the person-hours needed to build an intelligent textbook: Manual (3,000 hrs), ChatGPT (1,000 hrs), Claude Code (100 hrs), and Claude Code Skills (10 hrs). Click a step to reveal a detailed description of that tool.",
+  "date": "2026-06-02",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Professional"
+    ],
+    "subjectArea": "Educational Technology",
+    "topic": "AI-Assisted Authoring Productivity",
+    "learningObjectives": [
+      "Illustrate how each generation of AI tooling reduces the effort needed to author an intelligent textbook",
+      "Compare the person-hours required across four authoring approaches on a log productivity scale",
+      "Explain why reusable Claude Code Skills produce an order-of-magnitude productivity jump over earlier tools"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "5-10 minutes",
+    "prerequisites": [
+      "Familiarity with the idea of authoring digital educational content"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 595
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js CDN"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "click",
+        "label": "Step bars",
+        "purpose": "Click any step in the staircase to display its detailed description"
+      },
+      {
+        "type": "button",
+        "label": "Prev / Next",
+        "purpose": "Move the selection one step down or up the staircase"
+      },
+      {
+        "type": "button",
+        "label": "Reset",
+        "purpose": "Return the selection to the Manual baseline step"
+      }
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration with progressive disclosure",
+    "keyQuestions": [
+      "How many person-hours does each authoring approach require?",
+      "Which transition produces the largest single productivity jump?",
+      "Why does encoding workflows as Skills outperform prompting individual pages?"
+    ],
+    "commonMisconceptions": [
+      "Productivity gains from AI tooling are incremental rather than order-of-magnitude",
+      "All AI assistance offers the same speed-up regardless of how it is applied"
+    ],
+    "assessmentOpportunities": [
+      "Ask students to rank the four approaches by person-hours and justify the ordering",
+      "Have students estimate the speed-up multiplier between adjacent steps"
+    ]
+  },
+  "chapter": ""
+}
