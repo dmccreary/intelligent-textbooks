@@ -11,10 +11,12 @@ skill run to scaffold the mkdocs-material project structure:
 - [ ] `~/Documents/ws/health-education`
 - [ ] `~/Documents/ws/graphic-design`
 - [ ] `~/Documents/ws/accounting`
-
-Already done:
 - [ ] `~/Documents/ws/business`
 - [ ] `~/Documents/ws/marketing`
+
+Already done:
+- [x] `~/Documents/ws/english-language-arts`
+- [x] `~/Documents/ws/us-history`
 
 ---
 
