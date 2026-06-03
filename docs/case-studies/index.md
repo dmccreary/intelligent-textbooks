@@ -129,8 +129,8 @@ document.addEventListener('click', function(e) {
 
     An evidence-based interactive intelligent textbook examining why quantum computing may never be economically viable, covering physics constraints, hardware realities, investment risk, and cognitive biases.  Designed for upper-division undergraduates, graduate students, technology investors, and policymakers.
 
-    241 Concepts · 17 Chapters · 200K Words · 241 Glossary Terms · 53 MicroSims · 
-    <span class="completion completion-5" title="Complete (5/5)"></span>
+    241 Concepts · 17 Chapters · 53 MicroSims · 16 Stories · 200K Words · 241 Glossary Terms  
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing)
 
 - **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
@@ -139,7 +139,8 @@ document.addEventListener('click', function(e) {
 
     An online interactive intelligent textbook for high-school geometry using MicroSims. Features a detailed learning graph and over 130 interactive geometry MicroSims.
 
-    200 Concepts · 12 Chapters · 171K Words · 138 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
+    200 Concepts · 12 Chapters · 138 MicroSims · 171K Words 
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course)
 
 - **[AI Based Data Science with Python](https://dmccreary.github.io/data-science-course)**
@@ -148,7 +149,7 @@ document.addEventListener('click', function(e) {
 
     An AI-based course that helps undergraduate college students learn data science with Python. Includes a detailed learning graph.
 
-    300 Concepts · 21 Files · 23K Words · 143 Glossary Terms 
+    300 Concepts · 21 Chapters · 40 MicroSims · 23K Words · 143 Glossary Terms 
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/data-science-course) 
 
@@ -658,6 +659,13 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/public-health) · 84 Files · 136K Words · 48 MicroSims
     <span class="completion completion-5" title="Complete (5/5)"></span>
+
+- **[Inverting the Impossible](https://dhquimby.github.io/inverting-the-impossible/)**
+
+    Systematic Thinking for Innovation Radiation
+
+    200 Concepts · 12 Chapters · 12 MicroSims
+    <span class="completion completion-1" title="Early (1/5)"></span>
 
 - **[Investor Relations](https://dberglu.github.io/ir-textbook/)**
 
