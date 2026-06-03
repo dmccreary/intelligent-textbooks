@@ -486,10 +486,9 @@ document.addEventListener('click', function(e) {
 
     Year-long intelligent textbook for 9th graders exploring the chemistry, biology, and physics of food through virtual MicroSim labs and hands-on kitchen experiments. Covers 15 chapters from kitchen chemistry to food engineering.
 
-    Concepts: 241
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/food-science) · 113 Files · 211K Words · 33 MicroSims · 241 Glossary Terms
-    <span class="completion completion-5" title="Complete (5/5)"></span>
+    241 Concepts · 15 Chapters · 31 MicroSims · 12 Stories · 193K Words · 241 Glossary Terms · 89 FAQs
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/food-science)
 
 - **[Forensic Science](https://dmccreary.github.io/forensic-science/)**
 
@@ -636,8 +635,12 @@ document.addEventListener('click', function(e) {
 - **[Introduction to Operating Systems](https://btlepak.github.io/Intelligent_Textbook/)**
 
     Fundamentals of operating systems including process management, memory, and file systems.
+    Created by University of Minnesota student Benjamin Lepak in 2025 as part of the
+    EE/CD Senior Design project.
 
-    [:octicons-mark-github-16: Repository](https://github.com/btlepak/Intelligent_Textbook) · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    30 Concepts · 10 Chapters · 7 MicroSims
+    · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/btlepak/Intelligent_Textbook)
 
 - **[Introduction to Physics](https://dmccreary.github.io/intro-to-physics-course)**
 
@@ -645,9 +648,10 @@ document.addEventListener('click', function(e) {
 
     Year-long intro physics course covering motion, forces, energy, waves, optics, and electricity with MicroSims.
 
-    Concepts: 200
+    200 Concepts · 13 Chapters · 107 MicroSims · 123 Quizzes
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intro-to-physics-course) · Active Development · <span class="completion completion-5" title="Complete (5/5)"></span>
+     · Active Development · <span class="completion completion-4" title="Complete (4/5)"></span>
+     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/intro-to-physics-course)
 
 - **[Introduction to Public Health](https://dmccreary.github.io/public-health)**
 
@@ -655,10 +659,9 @@ document.addEventListener('click', function(e) {
 
     Interactive intelligent textbook covering the five CEPH core public health domains — epidemiology, biostatistics, environmental health, health policy, and social and behavioral sciences — with embedded simulations and a systems-thinking focus. Designed for undergraduate and graduate students.
 
-    Concepts: 500
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/public-health) · 84 Files · 136K Words · 48 MicroSims
-    <span class="completion completion-5" title="Complete (5/5)"></span>
+    500 Concepts · 20 Chapters · 59 MicroSims · 157K Words · 200 Quiz Questions
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/public-health)
 
 - **[Inverting the Impossible](https://dhquimby.github.io/inverting-the-impossible/)**
 

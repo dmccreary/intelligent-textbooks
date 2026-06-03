@@ -83,6 +83,13 @@ My Journey to Democratize Education for All.<br/>
 <iframe src="../../sims/productivity-jumps/main.html" height="700px" width="100%" scrolling="no"></iframe>
 [Productivity Jumps Fullscreen](../../sims/productivity-jumps/main.html)
 
+## Final 10 Hours
+
+- Most time-consuming tasks was user interface layout cleanup of the MicroSims
+- New Claude Vision tool now "sees" UI and will apply layout fixes
+- Saves and additional 3-4 hours per book
+- Automation of mascot design and cover design also saves 1 hour
+
 ## Current Status (this is real now)
 
 - 100 level 2.99 Books
@@ -144,17 +151,19 @@ My Journey to Democratize Education for All.<br/>
 
 ## Level 2 Intelligent Book Components
 
+- Search
+- Navigation
 - Chapters
 - Pedagogical Agents [Book Mascots](https://dmccreary.github.io/book-mascots/list-mascots/)
 - Glossary of Terms
 - FAQs
-- Quizzes
+- Quizzes for each chapter (Multiple choice with high quality plausible distractors)
+- Annotated references (detailed analysis of each reference from students perspective)
 - MicroSims - physics, chemistry, biology, infographics, charts
 - Systems Thinking - Causal Loop Diagrams
 - Stories (mini-graphic novels)
 - Teacher Guides/Instructor Guides
-- Search
-- Navigation
+
 - Quality Reports (reading level etc.)
 
 ## Book Mascots
@@ -174,16 +183,20 @@ My Journey to Democratize Education for All.<br/>
     - Deep Learning
     - Signal Processing (University of Minnesota)
     - Functions
-    - Calculus
-    - Chemistry
-    - Biology
-    - Ecology
+    - AP Calculus
+    - AP Chemistry
+    - AP Biology
+    - Ecology (AP Natural Sciences)
     - Moss
     - Quantum Computing (a skeptics guide)
     - Dementia (with Rick Tanler)
-    - Investor Relations (with David Berg)
+    - Investor Relations (with David Berglund)
     - Digital Transformation (with Daniel Yarmoluk)
-    - Digital Citizenship
+    - Digital Citizenship (ISD 197)
+    - Personal Finance
+    - Cooking Science
+    - Public Health
+    - Forensic Science
 </div>
 
 ## Leveling Up Your Intelligent Textbooks
