@@ -127,11 +127,11 @@ document.addEventListener('click', function(e) {
 
     ![A Skeptic's Guide to Quantum Computing](./img/quantum-computing.jpg)
 
-    An evidence-based interactive intelligent textbook examining why quantum computing may never be economically viable, covering physics constraints, hardware realities, investment risk, and cognitive biases. Designed for upper-division undergraduates, graduate students, technology investors, and policymakers.
+    An evidence-based interactive intelligent textbook examining why quantum computing may never be economically viable, covering physics constraints, hardware realities, investment risk, and cognitive biases.  Designed for upper-division undergraduates, graduate students, technology investors, and policymakers.
 
-    Concepts: 241
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing) · 17 Chapters · 200K Words · 241 Glossary Terms · 53 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
+    241 Concepts · 17 Chapters · 200K Words · 241 Glossary Terms · 53 MicroSims · 
+    <span class="completion completion-5" title="Complete (5/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/quantum-computing)
 
 - **[AI Assisted Geometry](https://dmccreary.github.io/geometry-course)**
 
@@ -139,9 +139,8 @@ document.addEventListener('click', function(e) {
 
     An online interactive intelligent textbook for high-school geometry using MicroSims. Features a detailed learning graph and over 130 interactive geometry MicroSims.
 
-    Concepts: 200
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course) · 12 Chapters · 171K Words · 138 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
+    200 Concepts · 12 Chapters · 171K Words · 138 MicroSims · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/geometry-course)
 
 - **[AI Based Data Science with Python](https://dmccreary.github.io/data-science-course)**
 
@@ -149,9 +148,9 @@ document.addEventListener('click', function(e) {
 
     An AI-based course that helps undergraduate college students learn data science with Python. Includes a detailed learning graph.
 
-    Concepts: 300
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/data-science-course) · 21 Files · 23K Words · 143 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
+    300 Concepts · 21 Files · 23K Words · 143 Glossary Terms 
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/data-science-course) 
 
 - **[AI Circuits Course](https://dmccreary.github.io/circuits/)**
 
@@ -191,6 +190,18 @@ document.addEventListener('click', function(e) {
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/algebra-1) · Active Development · <span class="completion completion-5" title="Complete (5/5)"></span>
 
+- **[Architecture Tradeoff Analysis Method (ATAM)](https://dmccreary.github.io/atam/)**
+
+    ![ATAM](./img/atam.jpg)
+
+    ATAM is a method for evaluating software architectures.  This is a 14-week
+    course for senior undergraduate or graduate school software engineering students
+    that are focused on software and hardware architectures.  This method
+    is used in other textbooks such as the Selecting the Right Database textbook.
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/atam) · 18 Files · 11K Words · 1 MicroSim · Early Stage · <span class="completion completion-1" title="Early Development (1/5)"></span>
+
+
 - **[Biology: An Interactive Course](https://dmccreary.github.io/biology/)**
 
     ![Biology](./img/biology.jpg)
@@ -220,14 +231,6 @@ document.addEventListener('click', function(e) {
     Concepts: 500
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/chemistry) · 124 Files · 223K Words · 48 MicroSims · 472 Glossary Terms · <span class="completion completion-5" title="Complete (5/5)"></span>
-
-- **[Architectural Tradeoff Analysis Method](https://dmccreary.github.io/atam/)**
-
-    ![ATAM](./img/atam.jpg)
-
-    ATAM is a method for evaluating software architecture, applied to database selection. Companion to 'Making Sense of NoSQL'.
-
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/atam) · Early Stage · <span class="completion completion-1" title="Early Development (1/5)"></span>
 
 - **[ASL Book](https://Olufsonc-hub.github.io/asl-book/)**
 
@@ -485,6 +488,7 @@ document.addEventListener('click', function(e) {
     Concepts: 241
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/food-science) · 113 Files · 211K Words · 33 MicroSims · 241 Glossary Terms
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Forensic Science](https://dmccreary.github.io/forensic-science/)**
 
@@ -495,6 +499,7 @@ document.addEventListener('click', function(e) {
     Concepts: 278
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/forensic-science) · 135 Files · 261K Words · 40 MicroSims · 258 Glossary Terms
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[GED Science Prep](https://camgross.github.io/GED-Science-prep/)**
 
@@ -502,7 +507,8 @@ document.addEventListener('click', function(e) {
 
     Intelligent textbook for GED Science test preparation covering Life Science, Physical Science, and Earth & Space Science. Aligned with the official GED Science Assessment Targets and eight Science Practices.
 
-    [:octicons-mark-github-16: Repository](https://github.com/camgross/GED-Science-prep) · 27 Files · 12K Words · 7 MicroSims · <span class="completion completion-2" title="Initial Content (2/5)"></span>
+    [:octicons-mark-github-16: Repository](https://github.com/camgross/GED-Science-prep) · 27 Files · 12K Words · 7 MicroSims · 
+    <span class="completion completion-2" title="Initial Content (2/5)"></span>
 
 - **[Generative AI Architecture Patterns](https://dmccreary.github.io/genai-arch-patterns)**
 
@@ -578,6 +584,7 @@ document.addEventListener('click', function(e) {
     Concepts: 500
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/hydroponics) · 70 Files · 102K Words · 32 MicroSims
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Information Systems](https://dmccreary.github.io/information-systems/)**
 
@@ -650,6 +657,7 @@ document.addEventListener('click', function(e) {
     Concepts: 500
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/public-health) · 84 Files · 136K Words · 48 MicroSims
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[Investor Relations](https://dberglu.github.io/ir-textbook/)**
 
@@ -903,7 +911,9 @@ document.addEventListener('click', function(e) {
 
     College-level semiconductor physics with interactive simulations including PN Junction visualization.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/semiconductor-physics-course) · Early Stage · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    Concepts: 600
+
+    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/semiconductor-physics-course) · Early Stage · <span class="completion completion-3" title="Early Development (3/5)"></span>
 
 - **[Signal Processing](https://dmccreary.github.io/signal-processing)**
 
@@ -1055,6 +1065,7 @@ document.addEventListener('click', function(e) {
     Concepts: 200
 
     [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-government) · 86 Files · 132K Words · 23 MicroSims · 200 Glossary Terms
+    <span class="completion completion-5" title="Complete (5/5)"></span>
 
 - **[xAPI for Intelligent Textbooks](https://dmccreary.github.io/xapi-course/)**
 
