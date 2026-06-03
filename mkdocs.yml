@@ -105,6 +105,7 @@ nav:
     - MicroSim Uniqueness Interactive Venn Diagram: sims/microsim-uniqueness/index.md
     - MicroSims and Infographics to Support Intelligent Textbooks: sims/learning-graph/index.md
     - Privacy Threshold Chart: sims/privacy-threshold-chart/index.md
+    - Productivity Jumps Stair-Step Infographic: sims/productivity-jumps/index.md
     - Question-Based Learning Graph Update: sims/question-color-update/index.md
     - SAE J3016 vs Intelligent Textbook Levels: sims/sae-comparison/index.md
     - Sine Wave: sims/sine-wave/index.md
@@ -116,6 +117,8 @@ nav:
     - Word Cloud MicroSim: sims/word-cloud/index.md
     - Workflow for Generating Intelligent Textbooks: sims/book-gen-workflow/index.md
     - Workflow for Generating Intelligent Textbooks: sims/templates/index.md
+
+
 
 
 
