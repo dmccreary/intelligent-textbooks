@@ -129,7 +129,7 @@ My Journey to Democratize Education for All.<br/>
 - Core data structure behind content generation and hyper-personalization.
 - Directed Acyclic Graph of concepts and their learning order
 
-<iframe src="../../sims/learning-graph/graph-viewer.html"
+<iframe src="../../sims/graph-viewer/main.html"
         height="700px"
         width="100%"
         scrolling="no"></iframe>

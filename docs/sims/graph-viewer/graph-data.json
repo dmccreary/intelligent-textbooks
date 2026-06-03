@@ -10,70 +10,70 @@
         "color": "white"
       }
     },
-    "1": {
+    "g1": {
       "classifierName": "Development Environment",
       "color": "firebrick",
       "font": {
         "color": "white"
       }
     },
-    "2": {
+    "g2": {
       "classifierName": "Terms and Definitions",
       "color": "orange",
       "font": {
         "color": "black"
       }
     },
-    "3": {
+    "g3": {
       "classifierName": "MkDocs",
       "color": "gold",
       "font": {
         "color": "black"
       }
     },
-    "4": {
+    "g4": {
       "classifierName": "Material Theme",
       "color": "green",
       "font": {
         "color": "white"
       }
     },
-    "5": {
+    "g5": {
       "classifierName": "Markdown",
       "color": "blue",
       "font": {
         "color": "white"
       }
     },
-    "6": {
+    "g6": {
       "classifierName": "Interactivity and Media",
       "color": "indigo",
       "font": {
         "color": "white"
       }
     },
-    "7": {
+    "g7": {
       "classifierName": "Advanced Features and Integration",
       "color": "violet",
       "font": {
         "color": "black"
       }
     },
-    "8": {
+    "g8": {
       "classifierName": "Deployment and Publishing",
       "color": "brown",
       "font": {
         "color": "white"
       }
     },
-    "9": {
+    "g9": {
       "classifierName": "Analytics, Personalization & UX",
       "color": "gray",
       "font": {
         "color": "white"
       }
     },
-    "10": {
+    "g10": {
       "classifierName": "Accessibility, Localization & Future",
       "color": "black",
       "font": {
@@ -107,602 +107,602 @@
     {
       "id": 4,
       "label": "Docs Directory",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 5,
       "label": "Mkdocs",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 6,
       "label": "Markdown Basics",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 7,
       "label": "Markdown Images",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 8,
       "label": "Image Directory",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 9,
       "label": "Markdown Links",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 10,
       "label": "Deep Linking",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 11,
       "label": "GitHub Pages",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 12,
       "label": "Mkdocs Material",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 13,
       "label": "Mkdocs Yaml",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 14,
       "label": "Theme Features",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 15,
       "label": "Navigation Config",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 16,
       "label": "Top Navigation",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 17,
       "label": "Footer Navigation",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 18,
       "label": "Navigation Options",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 19,
       "label": "Previous Page",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 20,
       "label": "Next Page",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 21,
       "label": "Logo Setup",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 22,
       "label": "Favicon Setup",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 23,
       "label": "Color Palette",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 24,
       "label": "Primary Color",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 25,
       "label": "Accent Color",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 26,
       "label": "Code Copy",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 27,
       "label": "Edit Links",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 28,
       "label": "Screen Layout",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 29,
       "label": "Site Search",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 30,
       "label": "Advanced Linking",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 31,
       "label": "Yaml Config",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 32,
       "label": "Admonitions",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 33,
       "label": "Equations",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 34,
       "label": "LaTeX",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 35,
       "label": "MathJax",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 36,
       "label": "Code Highlighting",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 37,
       "label": "Interactive Content",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 38,
       "label": "Simulations",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 39,
       "label": "Animations",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 40,
       "label": "MicroSims",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 41,
       "label": "Iframes",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 42,
       "label": "Glossary",
-      "group": "2"
+      "group": "g2"
     },
     {
       "id": 43,
       "label": "Glossary Linking",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 44,
       "label": "Table Of Contents",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 45,
       "label": "Quizzes",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 46,
       "label": "Multiple Choice",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 47,
       "label": "Mk_In_Html",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 48,
       "label": "Logo CSS",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 49,
       "label": "Favicon Generation",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 50,
       "label": "Custom CSS",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 51,
       "label": "HTML Templates",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 52,
       "label": "Social Previews",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 53,
       "label": "Open Graph",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 54,
       "label": "Preview Testing",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 55,
       "label": "Image Standards",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 56,
       "label": "Page Metadata",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 57,
       "label": "Social Testing",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 58,
       "label": "Feedback Forms",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 59,
       "label": "Google Analytics",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 60,
       "label": "Visual Studio Code",
-      "group": "1"
+      "group": "g1"
     },
     {
       "id": 61,
       "label": "Markdown Plugins",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 62,
       "label": "GitHub Integration",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 63,
       "label": "Git Commands",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 64,
       "label": "Conda Setup",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 65,
       "label": "Conda Commands",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 66,
       "label": "Semantic Search",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 67,
       "label": "Embeddings",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 68,
       "label": "Vector Stores",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 69,
       "label": "Concept Graph",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 70,
       "label": "Custom Lessons",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 71,
       "label": "Chatbots",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 72,
       "label": "Graph Database",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 73,
       "label": "Concept Expansion",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 74,
       "label": "Content Graph",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 75,
       "label": "Personalization",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 76,
       "label": "Cookies",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 77,
       "label": "Data Privacy",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 78,
       "label": "Recommendations",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 79,
       "label": "Cloud APIs",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 80,
       "label": "Future Outlook",
-      "group": "10"
+      "group": "g10"
     },
     {
       "id": 81,
       "label": "Repo Structure",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 82,
       "label": "Content Folders",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 83,
       "label": "Naming Conventions",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 84,
       "label": "Link Management",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 85,
       "label": "Broken Links",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 86,
       "label": "GitHub Actions",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 87,
       "label": "Mkdocs Plugins",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 88,
       "label": "Theme Extensions",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 89,
       "label": "Homepage Layout",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 90,
       "label": "Landing Page",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 91,
       "label": "Hero Images",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 92,
       "label": "Navigation Sections",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 93,
       "label": "External JS",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 94,
       "label": "Env Variables",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 95,
       "label": "Local Builds",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 96,
       "label": "Large Media",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 97,
       "label": "Doc Versioning",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 98,
       "label": "Multiple Languages",
-      "group": "10"
+      "group": "g10"
     },
     {
       "id": 99,
       "label": "Print To PDF",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 100,
       "label": "Mobile Responsive",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 101,
       "label": "Keyboard Shortcuts",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 102,
       "label": "Mermaid Diagrams",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 103,
       "label": "Data Charts",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 104,
       "label": "Index Pages",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 105,
       "label": "YAML Frontmatter",
-      "group": "3"
+      "group": "g3"
     },
     {
       "id": 106,
       "label": "Search Plugins",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 107,
       "label": "Audio Embeds",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 108,
       "label": "Video Embeds",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 109,
       "label": "Collapsible Sections",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 110,
       "label": "Hints Tooltips",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 111,
       "label": "Code Diffs",
-      "group": "5"
+      "group": "g5"
     },
     {
       "id": 112,
       "label": "Comments",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 113,
       "label": "User Behavior",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 114,
       "label": "Heatmaps",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 115,
       "label": "A/B Testing",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 116,
       "label": "User Logins",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 117,
       "label": "Preference Storage",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 118,
       "label": "Auto Recommendations",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 119,
       "label": "Content Scheduling",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 120,
       "label": "Feature Flags",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 121,
       "label": "Offline Access",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 122,
       "label": "Full-Text Search",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 123,
       "label": "NLP",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 124,
@@ -712,122 +712,122 @@
     {
       "id": 125,
       "label": "Flashcards",
-      "group": "6"
+      "group": "g6"
     },
     {
       "id": 126,
       "label": "Spaced Repetition",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 127,
       "label": "Related Reading",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 128,
       "label": "Adaptive Quizzes",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 129,
       "label": "LMS Integration",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 130,
       "label": "Data Exports",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 131,
       "label": "Webhooks",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 132,
       "label": "Vector Databases",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 133,
       "label": "Chatbot Tuning",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 134,
       "label": "LLM Usage",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 135,
       "label": "Auto Glossaries",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 136,
       "label": "Quiz Mastery",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 137,
       "label": "Concept Visualization",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 138,
       "label": "Adaptive Difficulty",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 139,
       "label": "Progress Tracking",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 140,
       "label": "Instant Feedback",
-      "group": "9"
+      "group": "g9"
     },
     {
       "id": 141,
       "label": "Voice Assistants",
-      "group": "7"
+      "group": "g7"
     },
     {
       "id": 142,
       "label": "Custom Domains",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 143,
       "label": "CDN",
-      "group": "8"
+      "group": "g8"
     },
     {
       "id": 144,
       "label": "Dark Mode",
-      "group": "4"
+      "group": "g4"
     },
     {
       "id": 145,
       "label": "WCAG",
-      "group": "10"
+      "group": "g10"
     },
     {
       "id": 146,
       "label": "Assistive Tech",
-      "group": "10"
+      "group": "g10"
     },
     {
       "id": 147,
       "label": "Localization",
-      "group": "10"
+      "group": "g10"
     },
     {
       "id": 148,
       "label": "Machine Translation",
-      "group": "10"
+      "group": "g10"
     },
     {
       "id": 149,
@@ -837,7 +837,7 @@
     {
       "id": 150,
       "label": "Refinement Cycle",
-      "group": "10"
+      "group": "g10"
     }
   ],
   "edges": [
