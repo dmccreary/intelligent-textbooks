@@ -83,7 +83,9 @@
       "Bash(cp __TRACKED_VAR__/script.js docs/sims/graph-viewer/script.js)",
       "Bash(cp __TRACKED_VAR__/index.md docs/sims/graph-viewer/index.md)",
       "Bash(cp __TRACKED_VAR__/main.html docs/sims/graph-viewer/main.html)",
-      "mcp__Claude_in_Chrome__tabs_context_mcp"
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(xargs -n1 basename)",
+      "Bash(grep -cE '^    Concepts: [0-9]+$' docs/case-studies/index.md)"
     ],
     "deny": [],
     "ask": []
