@@ -20,15 +20,32 @@ Extract the following from the GitHub repository:
 3. **GitHub Pages URL** - Derive from repo: `https://{username}.github.io/{repo-name}`
 4. **Project title** - Check for a clear title in README.md or use repo name
 5. **Description** - Extract from README.md (first paragraph or project description)
-6. **Metrics** (if available):
-   - Concept count: `find docs -name learning-graph.csv | wc -l` and subtract 1 for header
-   - Chapter count: Count directories in `docs/chapters/`
-   - Glossary term count the number of level 4 headers in  `docs/glossary.md`
-   - FAQ count: Count level 3 or level 4 headers in `docs/faq.md`
-   - File count: `find docs -type f -name "*.md" | wc -l`
-   - Word count: `find docs -type f -name "*.md" -exec cat {} \; | wc -w`
-   - MicroSim count: Count directories in `docs/sims/`
-7. `docs/learning-graph/metadata.json` may also contain useful metadata title, author, date, and license.
+6. **Metrics** — read the canonical metrics file FIRST, do not re-count:
+   - **Preferred source:** `docs/learning-graph/book-metrics.json` (produced by
+     the book-metrics tool, validated against `book-metrics.schema.json`). Its
+     `metrics` object is the single source of truth shared with the README and
+     LinkedIn skills, so the case-study card shows identical numbers:
+
+     ```bash
+     # After cloning the repo for analysis:
+     python3 -c "import json; m=json.load(open('docs/learning-graph/book-metrics.json'))['metrics']; \
+print(m['concepts'], m['chapters'], m['microsims'], m['glossaryTerms'], m['faqs'], m['words'])"
+     ```
+
+     Available keys: `concepts`, `chapters`, `microsims`, `stories`,
+     `glossaryTerms`, `faqs`, `quizQuestions`, `references`, `diagrams`,
+     `equations`, `words`, `links`, `equivalentPages`, `developmentStage`.
+   - **Fallback only if `book-metrics.json` is absent** (older repos that have
+     not run the metrics tool):
+     - Concept count: `find docs -name learning-graph.csv | wc -l` and subtract 1 for header
+     - Chapter count: Count directories in `docs/chapters/`
+     - Glossary term count: number of level 4 headers in `docs/glossary.md`
+     - FAQ count: Count level 3 or level 4 headers in `docs/faq.md`
+     - File count: `find docs -type f -name "*.md" | wc -l`
+     - Word count: `find docs -type f -name "*.md" -exec cat {} \; | wc -w`
+     - MicroSim count: Count directories in `docs/sims/`
+7. `docs/learning-graph/book-metadata.json` (or the older `metadata.json`) may
+   also contain useful identity metadata: title, author, date, and license.
 
 Use the `gh` CLI or direct GitHub API to fetch repository information:
 

@@ -20,11 +20,26 @@ Extract the following from the GitHub repository:
 3. **GitHub Pages URL** - Derive from repo: `https://{username}.github.io/{repo-name}`
 4. **Project title** - Check for a clear title in README.md or use repo name
 5. **Description** - Extract from README.md (first paragraph or project description)
-6. **Metrics** (if available):
-   - File count: `find docs -type f -name "*.md" | wc -l`
-   - Word count: `find docs -type f -name "*.md" -exec cat {} \; | wc -w`
-   - MicroSim count: Count directories in `docs/sims/`
-   - Glossary term count: Parse `docs/glossary.md` if exists
+6. **Metrics** — read the canonical metrics file FIRST, do not re-count:
+   - **Preferred source:** `docs/learning-graph/book-metrics.json` (produced by
+     the book-metrics tool, validated against `book-metrics.schema.json`). Its
+     `metrics` object is the single source of truth shared with the README and
+     LinkedIn skills, so the case-study card shows identical numbers:
+
+     ```bash
+     # After cloning the repo for analysis:
+     python3 -c "import json; m=json.load(open('docs/learning-graph/book-metrics.json'))['metrics']; \
+print(m['concepts'], m['chapters'], m['microsims'], m['glossaryTerms'], m['faqs'], m['words'])"
+     ```
+
+     Available keys include `concepts`, `chapters`, `microsims`, `stories`,
+     `glossaryTerms`, `faqs`, `quizQuestions`, `references`, `diagrams`,
+     `equations`, `words`, `links`, `equivalentPages`, `developmentStage`.
+   - **Fallback only if `book-metrics.json` is absent:**
+     - File count: `find docs -type f -name "*.md" | wc -l`
+     - Word count: `find docs -type f -name "*.md" -exec cat {} \; | wc -w`
+     - MicroSim count: Count directories in `docs/sims/`
+     - Glossary term count: Parse `docs/glossary.md` if exists
 
 Use the `gh` CLI or direct GitHub API to fetch repository information:
 
