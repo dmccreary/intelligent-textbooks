@@ -78,6 +78,11 @@ My Journey to Democratize Education for All.<br/>
 <iframe src="../../sims/intelligent-textbook-timeline/main.html" height="700px" width="100%" scrolling="no"></iframe>
 [Timelines Fullscreen](../../sims/intelligent-textbook-timeline/main.html)
 
+## Productivity Jumps
+
+<iframe src="../../sims/productivity-jumps/main.html" height="700px" width="100%" scrolling="no"></iframe>
+[Productivity Jumps Fullscreen](../../sims/productivity-jumps/main.html)
+
 ## Current Status (this is real now)
 
 - 100 level 2.99 Books
