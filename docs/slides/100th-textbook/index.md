@@ -17,7 +17,7 @@ My Journey to Democratize Education for All.<br/>
 
 <!--Image: Cover of Diamond Age book -->
 <img src="./diamond-age-cover.png" width="300px" align="left"></img>
-<img src="../../img/cover.png" width="300px" align="right"></img>
+<img src="../../img/cover.png" width="500px" align="right"></img>
 
 ## Dan's Quest
 
@@ -40,7 +40,6 @@ My Journey to Democratize Education for All.<br/>
 
 ![Dan's Journey](./dans-journey.png)
 
-<!--
 ## My Journey Text
 
 - Studied AI since graduate school
@@ -53,10 +52,10 @@ My Journey to Democratize Education for All.<br/>
 - Helped build the world's largest healthcare graph at UHG/Optum
 - Designed "learning graphs"
 - Used Claude Code Skills to intelligent textbooks
--->
 
 ## MicroSims
 
+![DC Motors](dc-motors.png){ align="right" width="300px"}
 - Worked as a volunteer with a local coding club starting in 2014
 - Worked with Valarie Lockhart on teaching prompt engineering to teachers
 - Valarie Lockhart coined the term "MicroSim" after using ChatGPT to generate p5.js
