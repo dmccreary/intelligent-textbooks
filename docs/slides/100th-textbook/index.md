@@ -27,7 +27,7 @@ My Journey to Democratize Education for All.<br/>
 
 ## The Problem With Paper Textbooks
 
-<ul style="font-size: 1em; margin: 8px 0 8px 30px;">
+<ul style="font-size: 1.1em; margin: 4px 0 4px 30px;">
 <li style="margin-bottom: 2px;">The static textbook problem (printed in 2019, used in 2026)</li>
 <li style="margin-bottom: 2px;">One-size-fits-all "Direct Instruction" model fails the 80% - the advanced bored, the struggling get lost</li>
 <li style="margin-bottom: 2px;">Cost & access gap: US college students pay $1,300 per year on out-of-date printed textbooks</li>
@@ -57,7 +57,7 @@ Prompt Goal: *"Generate a 1,000 page textbook on information systems with 100 Mi
 
 ## MicroSims
 
-![](.)
+<img src="./dc-motors.png" width="250px" align="right"></img>
 - Worked as a volunteer with a local coding club starting in 2014
 - Worked with Valarie Lockhart on teaching prompt engineering to teachers
 - Valarie Lockhart coined the term "MicroSim" after using ChatGPT to generate p5.js
@@ -86,7 +86,7 @@ Prompt Goal: *"Generate a 1,000 page textbook on information systems with 100 Mi
 
 ## Final 10 Hours
 
-- Most time-consuming tasks was user interface layout cleanup of the MicroSims
+- Most time-consuming tasks was user interface layout cleanup of the MicroSims (placement)
 - New Claude Vision tool now "sees" UI and will apply layout fixes
 - Saves and additional 3-4 hours per book
 - Automation of mascot design and cover design also saves 1 hour
@@ -96,7 +96,7 @@ Prompt Goal: *"Generate a 1,000 page textbook on information systems with 100 Mi
 - 100 level 2.99 Books
 - Getting ready to go to level 3 (cost effectively) using xAPI and LRS
 - 3,300 MicroSims
-- 308s of Mini Graphic Novels
+- 308 of Mini Graphic Novels
 - Ongoing research on [Automating Instructional Design](https://dmccreary.github.io/automating-instructional-design/)
 - Continued integration of [The Learning Sciences](https://dmccreary.github.io/learning-sciences/)
 
@@ -130,12 +130,12 @@ Prompt Goal: *"Generate a 1,000 page textbook on information systems with 100 Mi
 ## How I Generate Intelligent Textbooks
 
 1. Course description (100 point scale)
-2. Learning graph
-3. Chapter design
-4. Chapter content generation (with microsim specifications)
-5. MicroSim generation
-6. Supplementary content generations (glossary, faq, quizzes, lesson plans)
-7. Automated quality assessment (coverage, metrics, scaffolding)
+2. => Learning graph
+3. => Chapter design
+4. => Chapter content generation (with mascot and microsim specifications)
+5. => MicroSim generation
+6. => Supplementary content generations (glossary, faq, quizzes, lesson plans, references)
+7. => Automated quality assessment (coverage, metrics, scaffolding)
 
 ## Learning Graph
 
