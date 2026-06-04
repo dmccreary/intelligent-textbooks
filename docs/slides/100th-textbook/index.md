@@ -16,47 +16,48 @@ My Journey to Democratize Education for All.<br/>
 - Every lesson the girl needs is customized to her context
 
 <!--Image: Cover of Diamond Age book -->
-<img src="./diamond-age-cover.png" width="300px" align="left"></img>
-<img src="../../img/cover.png" width="300px" align="right"></img>
+<img src="./diamond-age-cover.png" width="450px" align="left"></img>
+<img src="../../img/cover.png" width="450px" align="right"></img>
 
 ## Dan's Quest
 
 - How would I build such a device?
 
-<img src="./dan-thinking-about-intelligent-textbooks-1995.png" height="600px"></img>
+<img src="./dan-thinking-about-intelligent-textbooks-1995.png" height="500px"></img>
 
 ## The Problem With Paper Textbooks
 
-- The static textbook problem (printed in 2019, used in 2026)
-- One-size-fits-all fails the 80% (advanced bored, struggling lost)
-- Cost & access gap (US $200 textbooks vs. global learners)
-- The engagement crisis (passive reading vs. active learning)
-- Teachers are drowning (no time to personalize)
+<ul style="font-size: 1em; margin: 8px 0 8px 30px;">
+<li style="margin-bottom: 2px;">The static textbook problem (printed in 2019, used in 2026)</li>
+<li style="margin-bottom: 2px;">One-size-fits-all "Direct Instruction" model fails the 80% - the advanced bored, the struggling get lost</li>
+<li style="margin-bottom: 2px;">Cost & access gap: US college students pay $1,300 per year on out-of-date printed textbooks</li>
+<li style="margin-bottom: 2px;">The engagement crisis (passive reading vs. active learning)</li>
+<li style="margin-bottom: 2px;">Teachers are drowning (no time to personalize)</li>
+</ul>
 
-"Generate a 1,000 page textbook on information systems with 100 MicroSims"
-<img src="./is-cover.png" height="700px" align="right"></img>
+Prompt Goal: *"Generate a 1,000 page textbook on information systems with 100 MicroSims"*
+<img src="./is-cover.png" height="600px"></img>
 
-## My Journey Infographic
+## Dan's Journey - Bullet List Version
+
+1. Studied AI since graduate school
+2. Worked on DSP hardware at Bell Labs
+3. Worked for Steve Jobs at NeXT Computer
+4. Focused on knowledge representation of adaptive textbooks
+5. Realized that RDBMS were not suited for the task
+6. Started the **NoSQL Now!** conferences in 2011
+7. Focused on graph databases
+8. Helped build the world's largest healthcare graph at UHG/Optum
+9. Designed "learning graphs" for generating intelligent textbooks
+10. Used Claude Code Skills to intelligent textbooks
+
+## My Journey Infographic Version
 
 ![Dan's Journey](./dans-journey.png)
 
-<!--
-## My Journey Text
-
-- Studied AI since graduate school
-- Worked on DSP hardware at Bell Labs
-- Worked for Steve Jobs at NeXT Computer
-- Focused on knowledge representation of adaptive textbooks
-- Realized that RDBMS were not suited for the task
-- Started the **NoSQL Now!** conferences in 2011
-- Focused on graph databases
-- Helped build the world's largest healthcare graph at UHG/Optum
-- Designed "learning graphs"
-- Used Claude Code Skills to intelligent textbooks
--->
-
 ## MicroSims
 
+![](.)
 - Worked as a volunteer with a local coding club starting in 2014
 - Worked with Valarie Lockhart on teaching prompt engineering to teachers
 - Valarie Lockhart coined the term "MicroSim" after using ChatGPT to generate p5.js
@@ -175,6 +176,7 @@ My Journey to Democratize Education for All.<br/>
 
 <div class="grid cards grid-3-col" markdown>
     - Intro to Python
+    - Linux
     - MicroPython
     - Clocks and Watches
     - Physics

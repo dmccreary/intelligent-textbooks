@@ -87,7 +87,9 @@
       "Bash(xargs -n1 basename)",
       "Bash(grep -cE '^    Concepts: [0-9]+$' docs/case-studies/index.md)",
       "Bash(cd /Users/dan/Documents/ws *)",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(bash /tmp/book-metrics-deploy.sh)",
+      "Bash(awk '/=== \\\\[[0-9]+\\\\] __TRACKED_VAR__ ===/{flag=1} flag{print} /RESULT __TRACKED_VAR__:/{flag=0}' /tmp/book-metrics-deploy.log)"
     ],
     "deny": [],
     "ask": []
