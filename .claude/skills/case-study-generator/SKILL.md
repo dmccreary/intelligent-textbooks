@@ -161,8 +161,12 @@ Create the markdown entry using the format in `references/entry-format.md`.
 
     Brief 1-2 sentence description of the project, its purpose, and target audience.
 
-    [:octicons-mark-github-16: Repository](https://github.com/username/repo-name) · XX Files · XXK Words · X MicroSims
+    XXX Concepts · XX Chapters · XX MicroSims · XXK Words · XX Glossary Terms · XX FAQs
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/username/repo-name)
 ```
+
+> **CRITICAL — blank lines between entries**: The `<div class="grid cards grid-3-col" markdown>` block requires a **blank line between every list item**. If blank lines are missing, MkDocs Material renders all cards as a single-column list instead of a 3-column grid. Always ensure there is an empty line after the `· [:octicons...]` repo line before the next `- **[` entry.
 
 #### Entry Guidelines
 
@@ -172,13 +176,13 @@ Create the markdown entry using the format in `references/entry-format.md`.
    - Keep to 1-2 sentences
    - Mention target audience (high school, college, etc.)
    - Highlight key features (MicroSims, learning graph, etc.)
-4. **Metrics line**: Include available metrics separated by ` · `
-   - Repository link with GitHub icon
-   - File count (if significant)
-   - Word count (rounded to K)
-   - Glossary term count
-   - MicroSim count
-   - Development stage (if early: "Early Stage", "Active Development")
+4. **Metrics line**: Use values from `docs/learning-graph/book-metrics.json` (canonical source). Format metrics separated by ` · ` on one line, then the completion span and repo link each on their own `· ` continuation lines:
+   - Concepts, Chapters, MicroSims, Stories (omit any with count 0)
+   - Word count rounded to K (e.g. `157K Words`)
+   - Glossary Terms, FAQs, Quiz Questions, References (omit any with count 0)
+   - Completion span: `<span class="completion completion-X" title="..."></span>`
+   - Repository link with GitHub octicon icon
+5. **Never use "Files" count** — it is not a meaningful metric in the new format
 
 ### Step 6: Insert Entry in Alphabetical Order
 
@@ -214,11 +218,14 @@ Insert the new entry into `docs/case-studies/index.md` in alphabetical order by 
 
     Interactive resources for teaching systems thinking from high school to executive level. Multiple course descriptions.
 
-    [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking) · MicroSims included
+    200 Concepts · 15 Chapters · 13 MicroSims · 120K Words · 41 Glossary Terms
+    · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking)
+
 ```
 
-5. Insert alphabetically after "STEM Robots" entry
-6. Verify with `mkdocs serve`
+5. Insert alphabetically after "STEM Robots" entry — ensure a blank line before and after the new entry
+6. Verify with `mkdocs serve` that the page still shows 3 columns
 
 ## Resources
 
