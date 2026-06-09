@@ -586,6 +586,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-1" title="Early Development (1/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-lms)
 
+- **[Graph Neural Networks](https://AnvithPothula.github.io/graph-neural-networks-textbook/)**
+
+    ![Graph Neural Networks](./img/graph-neural-networks-textbook.png)
+
+    A comprehensive interactive textbook on Graph Neural Networks for graduate and advanced undergraduate students, spanning graph theory through modern architectures like graph transformers and LLM+GNN integration with runnable PyTorch Geometric code.
+
+    300 Concepts · 27 Chapters · 37 MicroSims · 302K Words · 300 Glossary Terms · 82 FAQs · 270 Quiz Questions
+    · <span class="completion completion-4" title="Near Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/AnvithPothula/graph-neural-networks-textbook)
+
 - **[GraphRAG](https://dmccreary.github.io/graph-rag)**
 
     An online course teaching concepts around GraphRAG (Retrieval Augmented Generation with graphs).
