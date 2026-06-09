@@ -468,7 +468,7 @@
             <div class="editor-header">
                 <h3>Local Edit Mode</h3>
                 <div class="editor-actions">
-                    <button class="editor-btn" onclick="loadFromGitHub()">Load from GitHub</button>
+                    <button class="editor-btn" onclick="loadFromSource()">Reload from Source</button>
                     <button class="editor-btn" onclick="loadFromFile()">Load from File</button>
                     <button class="editor-btn primary" onclick="previewSlides()">Preview Slides</button>
                     <button class="editor-btn" onclick="clearLocalCache()">Clear Cache</button>
@@ -510,14 +510,6 @@
     </div>
 
     <script>
-        // GitHub repository configuration
-        const GITHUB_CONFIG = {
-            owner: 'dmccreary',
-            repo: 'tracking-ai-course',
-            branch: 'main',
-            docsPath: 'docs/slides'
-        };
-
         let slides = [];
         let currentSlide = 0;
         let presentationTitle = '';
@@ -554,8 +546,8 @@
             document.getElementById('editor-panel').classList.remove('active');
         }
 
-        // Load content from GitHub into editor
-        async function loadFromGitHub() {
+        // Load content from the published source file into the editor
+        async function loadFromSource() {
             const inputFile = getInputFile();
             if (!inputFile) {
                 alert('No input file specified in URL');
@@ -563,10 +555,10 @@
             }
 
             const editor = document.getElementById('markdown-editor');
-            editor.value = 'Loading from GitHub...';
+            editor.value = 'Loading from source...';
 
             try {
-                const fetchUrl = getRawGitHubUrl(inputFile);
+                const fetchUrl = getSlideUrl(inputFile);
                 const response = await fetch(fetchUrl);
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}`);
@@ -575,7 +567,7 @@
                 editor.value = markdown;
                 localStorage.setItem(getStorageKey(), markdown);
             } catch (error) {
-                editor.value = `Error loading from GitHub: ${error.message}`;
+                editor.value = `Error loading from source: ${error.message}`;
             }
         }
 
@@ -626,7 +618,7 @@
 
         // Clear local cache and reload from GitHub
         function clearLocalCache() {
-            if (confirm('Clear local cache and reload from GitHub?')) {
+            if (confirm('Clear local cache and reload from source?')) {
                 localStorage.removeItem(getStorageKey());
                 document.getElementById('markdown-editor').value = '';
                 isLocalMode = false;
@@ -652,10 +644,12 @@
             return params.get('input');
         }
 
-        // Convert relative path to raw GitHub URL
-        function getRawGitHubUrl(relativePath) {
-            const { owner, repo, branch, docsPath } = GITHUB_CONFIG;
-            return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${docsPath}/${relativePath}`;
+        // Resolve the slide markdown path relative to this viewer's location.
+        // The viewer lives in docs/slides/ and the ?input= path is relative to
+        // that folder, so the deck always loads from the same site the viewer
+        // is deployed on — no hardcoded repo, no dependency on GitHub raw.
+        function getSlideUrl(relativePath) {
+            return new URL(relativePath, window.location.href).href;
         }
 
         // Fix relative URLs in rendered HTML based on source file location
@@ -894,44 +888,25 @@
                         <h2>No input file specified</h2>
                         <p>Please provide an input file using the URL parameter:</p>
                         <p><code>slide-viewer.html?input=tracking-ai/index.md</code></p>
-                        <p style="margin-top: 20px; color: #90a4ae;">Files are fetched from raw.githubusercontent.com</p>
+                        <p style="margin-top: 20px; color: #90a4ae;">Files are loaded from this site, relative to the slides/ folder.</p>
                         <p style="color: #90a4ae;">Click EDIT to load local files or paste content directly.</p>
                     </div>
                 `;
                 return;
             }
 
-            // Check for saved local content first
-            const savedContent = localStorage.getItem(getStorageKey());
-            if (savedContent) {
-                localMarkdown = savedContent;
-                isLocalMode = true;
-                slides = parseSlides(savedContent);
-
-                // Show indicator that we're using local content
-                document.getElementById('slide-content').innerHTML = `
-                    <div class="loading" style="color: #81c784;">
-                        Loading from local cache...<br>
-                        <small style="color: #90a4ae;">Click EDIT to modify or load fresh from GitHub</small>
-                    </div>
-                `;
-            }
-
             try {
-                let markdown;
-
-                if (savedContent) {
-                    // Use saved local content
-                    markdown = savedContent;
-                } else {
-                    // Fetch from raw GitHub to get the .md file directly
-                    const fetchUrl = getRawGitHubUrl(inputFile);
-                    const response = await fetch(fetchUrl);
-                    if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                    }
-                    markdown = await response.text();
+                // Always load the live source file from the same site the
+                // viewer is deployed on. The editor (EDIT button) still keeps a
+                // local draft in localStorage, but it never silently overrides
+                // the published deck on load — so every visitor sees the same
+                // slides the author published.
+                const fetchUrl = getSlideUrl(inputFile);
+                const response = await fetch(fetchUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
+                const markdown = await response.text();
 
                 slides = parseSlides(markdown);
 
@@ -949,7 +924,7 @@
 
                 renderSlide();
             } catch (error) {
-                const fetchUrl = getRawGitHubUrl(inputFile);
+                const fetchUrl = getSlideUrl(inputFile);
                 document.getElementById('slide-content').innerHTML = `
                     <div class="error-message">
                         <h2>Error loading slides</h2>
