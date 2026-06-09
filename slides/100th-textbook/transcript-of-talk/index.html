@@ -1,0 +1,2223 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/intelligent-textbooks/slides/100th-textbook/transcript-of-talk/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>100 Intelligent Textbook Celebration - Building Intelligent Textbooks With AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/axiom-mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-D7X1XT7Z19"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-D7X1XT7Z19",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-D7X1XT7Z19",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="100 Intelligent Textbook Celebration - Building Intelligent Textbooks With AI">
+      
+        <meta property="og:description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/slides/100th-textbook/transcript-of-talk.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/intelligent-textbooks/slides/100th-textbook/transcript-of-talk/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="100 Intelligent Textbook Celebration - Building Intelligent Textbooks With AI">
+      
+        <meta name="twitter:description" content="Designing and building intelligent textbooks use open source tools.  Examples with mkdocs build system with the material theme.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/intelligent-textbooks/assets/images/social/slides/100th-textbook/transcript-of-talk.png">
+      
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#100-intelligent-textbook-celebration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Building Intelligent Textbooks With AI" class="md-header__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Intelligent Textbooks With AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              100 Intelligent Textbook Celebration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Building Intelligent Textbooks With AI" class="md-nav__button md-logo" aria-label="Building Intelligent Textbooks With AI" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Building Intelligent Textbooks With AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/intelligent-textbooks" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About ths Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../book-table-of-contents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Table of Contents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mission-and-values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mission and Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../tutorial/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../concepts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Educational Concepts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../workflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Workflows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../case-studies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Case Studies
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../skills/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../formatting-tests/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Formatting Tests
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../uri-scheme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    URI Scheme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/intelligent-textbooks/blob/master/docs/slides/100th-textbook/transcript-of-talk.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="100-intelligent-textbook-celebration">100 Intelligent Textbook Celebration</h1>
+<p>First of all, I just want to thank Justin.</p>
+<p>I want to tell a quick story about Justin to set the stage.
+In 2014, I believe, Justin was running this thing called the Minnesota Arduino user group.
+Anybody remember that at all?</p>
+<p>Yeah.</p>
+<p>A few members, right?</p>
+<p>And Justin and I were talking one day and I said, "Yeah, I really like Arduino.
+I want to want to teach kids how to write code on Arduino." and he said, "Dan, you're in the wrong group.  You should be at this CoderDojo group." And so he sent me over there and that's really how I got started building educational content was through that experience with kids.</p>
+<p>So give a big hand to Justin.</p>
+<p>We just need more leadership like Justin in the Twin Cities.</p>
+<p>I don't want to be the bringer of doom and gloom because we are doing great things but we have to keep an eye on the ball.  In China things are moving much much faster.
+We'll talk a little bit about what's happening there.  When you go to graduation commencements here and the commencement speaker says that AI is the future and the crowd "Boos".</p>
+<p>That's not a good sign when we see videos of a classroom of 30 high school kids in China and each one of them has a robot arm that they're controlling the seven degree of freedom $1,200 robot arm.
+They're using OpenClaw to talk to it and they're teaching it how to do things reproducibly and at the end of the class they send them out to all the companies to automate all their processes with these things.</p>
+<p>Right? High school students!</p>
+<p>So, we are not leaders in using AI here.  We are followers and I'm challenging everybody here to step up like Justin to be leaders.</p>
+<p>So, all right. So what I'm going to do is just going to go through my journey here, uh, and, uh, give you a little background.</p>
+<p>In 1995, this science fiction writer named Neil Stevenson wrote this book called Diamond Age.</p>
+<p>Has anybody heard about this book before?</p>
+<p>Okay, two people, three people, right?
+The genre is cyberpunk.
+The rules of the genre is nothing that's impossible according to the laws of physics.
+Uh, no warp drive, no time travel.
+But nanotechnology is good, networks are good.</p>
+<p>All these other things.
+And what Neil envisioned was an age where a little girl could find this AI powered tablet.
+And the tablet is programmed to imprint on the little girl.
+And every single lesson that the girl needs is customized to her environment.
+Right.
+She has a little dinosaur pet.</p>
+<p>So the dinosaur becomes a character to teach her lessons.
+It uses the context of her environment to build customized lesson plans.
+So that's setting the stage.
+So this is me AI rendered in 1995.
+I gave it an old photo from the 1995.
+And so my quest has been "How do I build such a thing?"</p>
+<p>31 years ago.
+So I've had some time to think about it, and I had kids at the time and I wanted them to grow up in a world where they could engage in a joyful way, right?</p>
+<p>In the best of all.</p>
+<p>Now AI is just like a tool.</p>
+<p>any other technology tool just like a knife can be used for good or can be used for evil, right?</p>
+<p>Why don't we focus on bringing out the best that we can in China?</p>
+<p>And to me, this is democratization of education so that every child on planet earth has the same opportunities as the best MIT graduate.</p>
+<p>Right?</p>
+<p>We should be able to do that today.</p>
+<p>now one of the things that I I have observed is that textbooks are especially today are problematic at the University of Minnesota we have textbooks that have been used and we have some professors here to to justify their this they've used the same textbook for 15 years right they know every page in every lab and every exercise they're very familiar with it it's kind of hard to get them to jump on this new bandwag you're not where you teach a class to the lowest third of the class.</p>
+<p>Uh, some of the kids that don't get it are lost, but you often lose and the best students are born, right?</p>
+<p>So, we lose most of our students.</p>
+<p>Uh, that's called direct instruction.</p>
+<p>you stand up sage on the stage and that's how you learn.</p>
+<p>Um, uh, it's expensive, $1,300 a year, the average cost of textbooks for a college student.</p>
+<p>Uh, and it's passive reading, right?</p>
+<p>In the age where our students are using Tik Tok and imagine they're sitting in their bedroom and they have videos.</p>
+<p>What are they going to do, right?</p>
+<p>they're going to go to their Tik Tok place.</p>
+<p>so we have this crisis of engagement.</p>
+<p>Our kids are not engaging in the textbooks.</p>
+<p>and there's no time to personalize, right?</p>
+<p>you do one sizefits-all.</p>
+<p>Imagine a world where you could type in generate a thousandpage textbook on information systems with 100 micro simulations in it and it would do it.</p>
+<p>Okay, we're not that far away.</p>
+<p>Uh, and I'll show you how close we This is actually a book that I generated.</p>
+<p>Uh, it was about 10 hours for me to create it.</p>
+<p>And, uh, most of the time was tweaking it, user interface stuff.</p>
+<p>So, uh, and you'll see some of those things.</p>
+<p>Um, all right.</p>
+<p>So, uh, I gave, um, Claude a bullet list of how I got there, and I asked it to create the textual description, an image prompt, uh, of my journey.</p>
+<p>Right now, Claude doesn't have a text to image generator, but I could have it generate a very detailed description.</p>
+<p>And I just gave this to OpenAI's image in two and it it created this journey map which is a lot by the way too much information.</p>
+<p>It's a I squint but you can kind of see that when I started graduate school at the University of Minnesota I had to learn lisp.</p>
+<p>It wasn't really the the the great AI experience.</p>
+<p>I worked at Bell Labs on hardware.</p>
+<p>I worked for Steve Jobs at Next.</p>
+<p>I realized very soon that in order to build this thing, I needed a knowledge representation that would work.</p>
+<p>I realized that relational databases, tab, tables and spreadsheets were not an ideal way to store the knowledge to back this up.</p>
+<p>I started a conference called the NoSQL now conference.</p>
+<p>I focused on graph databases.</p>
+<p>I built the world's largest healthcare knowledge graph with a team of about 150 people at United Health Group.</p>
+<p>and then we started to after I left there I started to really focus on and I designed a structure called a learning graph.</p>
+<p>You'll be seeing some of that.</p>
+<p>That's the core of all the textbooks.</p>
+<p>The difference between a dumb textbook and a smart textbook is the knowledge representation that's accessible to the the agents that are trying to build the textbook.</p>
+<p>Right?</p>
+<p>So it's about storing information that you can be queried quickly and then understand how those things are linked.</p>
+<p>and then eventually it's actually crazy.</p>
+<p>It's almost one year ago today that Anthropic announced Cloud Code.</p>
+<p>It was May of last year and then it was only last October that they released Claude Code skills.</p>
+<p>Only last October.</p>
+<p>And each of those gave me a tenfold increase in productivity.</p>
+<p>Right?</p>
+<p>So it has changed very quickly.</p>
+<p>Justin can tell you that when we when we were volunteering, the kids would rip the wires off all the motors.</p>
+<p>and so we'd have all these motors, but the wires weren't hooked up.</p>
+<p>So, somebody had to go in and solder them on and then create a textbook on how to use those things.</p>
+<p>And so, I started to do all that.</p>
+<p>Um, I worked with the fabulous Valerie Lockheart.</p>
+<p>She can't be here tonight.</p>
+<p>Uh, anybody else work with Valerie here?</p>
+<p>Yeah, a couple people, right?</p>
+<p>Uh, she brilliant.</p>
+<p>She was doing yoga one day and she realized that there was one library that was perfect for pairing with AI and that was called the processing library or pine.</p>
+<p>And what she did is she showed that by giving Claude or it was chat GBT at the time just giving them enough hints use this processing library pulled these sliders that you could build interactively simulations on the fly.</p>
+<p>and so that was called micro sims.</p>
+<p>It's kind of the heart of everything we do.</p>
+<p>And then we extended that.</p>
+<p>and Micros offers a unique thing the combination of simplicity right one concept per simulation ideally AI generation.</p>
+<p>So we have lots P p P P P P P P P P P P P P P P P P P P P5 is a very common library.</p>
+<p>There are hundreds and hundreds of thousands of sample p5 code out there.</p>
+<p>Not all of it good, but that's another story.</p>
+<p>and sometimes AI picks up the coding errors that young that new students make and then accessibility.</p>
+<p>So I had to figure out how to embed these sim micro sims in any page and the secret is using an I frame and then standards around those iframes.</p>
+<p>So that was another chapter that really started to get me to think about.</p>
+<p>and then I started to build textbooks and I wanted to do this hyperpersonalization and I started to realize that the process of putting information about an individual student inside the web browser was dangerous, right?</p>
+<p>and so I came up with this model.</p>
+<p>if you know autonomous vehicles are also a highly regulated system.</p>
+<p>There's five levels of atomic autonom autonomous vehicles from you know cruise control is level one all the way to punch in a destination and it drives there in any condition that's level five.</p>
+<p>so we created a fivelevel model from static textbooks to interactive content but then adaptive means you're adapting the content on the fly to the needs of the student.</p>
+<p>What do they know today?</p>
+<p>What are they prepared to know?</p>
+<p>What are the prerequisites that they know?</p>
+<p>What are their learning objectives?</p>
+<p>And how do you get them to their learning objectives without distracting them with things they don't care about?</p>
+<p>And that's a graph traversal.</p>
+<p>then in western cultures we have $20 a month that we can buy chat things.</p>
+<p>So then we want to cost effectively do that.</p>
+<p>and Dan Yarmok and I have published papers on token efficiency.</p>
+<p>so if you are interested in token efficiency, we have a whole textbook on it.</p>
+<p>Dan is your guy.</p>
+<p>He's amazing at figuring out how to cut the costs of building chatbot down and he's extended my framework in ways I absolutely had no idea it could be done.</p>
+<p>So it's great to work with brilliant people like Dan.</p>
+<p>and then eventually autonomous AI, right?</p>
+<p>Autonomous AI is really where every time the student comes to their book, it will generate new concepts on the fly.</p>
+<p>Custom lesson plans with their interests, their interest in baseball.</p>
+<p>We're going to create a projectile motion that has baseball and batters and it will be interesting to them because it's personalized to their interests and their needs.</p>
+<p>Right?</p>
+<p>We're a long way away from autonomous AI.</p>
+<p>Uh, I keep saying that I keep thinking that I would never do this while I was alive and then look what happened.</p>
+<p>Uh, so we may be.</p>
+<p>But what I'm going to show you today is intentionally pegged at what I call the 2.99 level.</p>
+<p>Highly interactive.</p>
+<p>everything I possibly can do to make it interactive, but nothing that will endanger my teachers getting sued because they leak student data.</p>
+<p>Right?</p>
+<p>So, I have lots of frameworks to do this.</p>
+<p>By the way, everything I'm doing, I should just mention, is all open source.</p>
+<p>It's all free and licensed under Creative Commons.</p>
+<p>You can build your own textbooks on your own and resell them.</p>
+<p>but all the textbooks I generate are available for every teacher in the world and the only thing is they can't resell it for money right so that's things but there are moving up to this level most important thing you know we are in the content generation revolution right all these tools generate content so what does that do to the cost of creating content.</p>
+<p>It drives it to zero.</p>
+<p>Right?</p>
+<p>If you are in a business today that is generating content, you should really think about that.</p>
+<p>Right?</p>
+<p>If you want to start up a new company that your sole value is I'm going to generate this book, you should think about that.</p>
+<p>Right?</p>
+<p>On the other hand, if you assume that there will be 10,000 textbooks by two years from now, I have 100.</p>
+<p>If I can get each group of teachers to create 10 variations of each of these textbooks, we can get to 10,000.</p>
+<p>And then we can train the models on that and they can cost effectively using even small models running on a local GPU.</p>
+<p>Uh they could probably customize those, right?</p>
+<p>So the value is in these three layers right it's hyperpersonalizing content to the needs of every student and once you gather all this information building analytical dashboards for the teachers.</p>
+<p>If you are building a playbook for new hires at a company, you can use these same tools and you can say, "How well are my new students doing at understanding the logging standards for Python as they write code, right?</p>
+<p>Those are all things that I wish I had when I was managing a team.</p>
+<p>And now I could build a textbook in 10 hours and I could monitor how my team is doing learning those tools and I could build a chatbot where they could ask questions and say, "Dan, you weren't clear on this.</p>
+<p>I want you to expand on that." Right.</p>
+<p>Feedback is so important.</p>
+<p>Steve, do you want to take questions now or?</p>
+<p>Yeah.</p>
+<p>Yeah, absolutely.</p>
+<p>So, I'm curious because Khan Academy already does adapt, right?</p>
+<p>It makes you pass five math questions and then says, "Okay, now you can go on." Are are you doing that or is that does that you consider that level three or anything that changes the behavior based on the student responses is level three by definition?</p>
+<p>Level three.</p>
+<p>Okay.</p>
+<p>Y So what's keeping you out?</p>
+<p>I mean they're doing it today.</p>
+<p>I I don't want to take the risk.</p>
+<p>I I I'm tired.</p>
+<p>I I would rather just play around.</p>
+<p>Wake up every day.</p>
+<p>do what's most curious to me and turn this over to people who want to accept the risk and will build secure hardened autobutal.</p>
+<p>By the way, the the stream of data that comes out of these books is called the experience API that goes into a standardized system called an LRS.</p>
+<p>These are all ILE E standards for learning management.</p>
+<p>learning LRS is a learning record store.</p>
+<p>there are really bad ugly learning LRS systems that don't scale and are super hard.</p>
+<p>They're written in old Java and relational databases.</p>
+<p>It's great opportunity to build a graph-based uh system to do this.</p>
+<p>So plenty of opportunities to build learning record stores that integrate AI.</p>
+<p>That's the future.</p>
+<p>I tell them all my friends, you you can expect thousands of textbooks by the end of next year.</p>
+<p>Yeah.</p>
+<p>Question I was going to ask with that learning record store would that or could that develop into some type of individual student based embedding representation?</p>
+<p>Abs.</p>
+<p>Absolutely.</p>
+<p>I'm I I'm not going to spend too much time today on how we represent a student's journey map, but I'll show you some maps that if you use your imagination, you can figure it out.</p>
+<p>there is a textbook out there which is not not haven't updated in six months about the exact data structures that you use in an LR LRS and the AI algorithms you use data science to predict things and it has to take into force the basian probability that people forget right and how do how often do you reinforce so it's pretty complicated but the algorithms are all there and you can ask claude how to do that right so okay so this is the the the the key this layered architecture question.</p>
+<p>I had a great question.</p>
+<p>So what's stopping you from skipping level three and going straight to level four because you don't need to store everything on level four.</p>
+<p>Yeah, you you could do that.</p>
+<p>Yeah, you can go to pretty much the the key thing is this red box is the area that you have to accept risk and and that means that you have to build a system that is auditable by outside auditors because when you say I want this textbook to run in my college they're not going to ask you is it a good textbook they're going to ask you is it safely guarded right so you're going going to be presenting to AI security risk committees for most of the sales process.</p>
+<p>Most of the sales process is risk mitigation and not skip all that and just connect directly with learners who are interested in learning.</p>
+<p>Oh, that that's that's another another business plan, right?</p>
+<p>So, we can store up to 10 megabytes of data inside of every browser today and we can buy a sync tool to sync it all to S3 and give them the keys.</p>
+<p>So they only the students can get to that data.</p>
+<p>So yes, that is a possible learning path.</p>
+<p>Yeah.</p>
+<p>Very very good.</p>
+<p>David, just in this area of navigating risk and privacy, you are gen when you generate a textbook, you're generating from content that's in the public domain, right?</p>
+<p>And you're navigating copyright, right?</p>
+<p>You're making sure you don't assimilate.</p>
+<p>Yes, that's correct.</p>
+<p>Um, so just to be really clear, all the people that I work with, I forbid them to use any copyrighted text anywhere in the book, including the course description.</p>
+<p>Okay?</p>
+<p>And the reason is that if you are original and authentic with the seed prompt, right?</p>
+<p>If you think of a tree as building an intelligent textbook, it's about 10,000 branches.</p>
+<p>About 10,000 branches.</p>
+<p>We're going to put one seed and if anything in that includes copyright and stuff you could get take down notices but if you are original and do this then you can own the copyright and then you can give it away and then sell it to corporations currently.</p>
+<p>But Dan is the more the risk that you are being adaptive to that individual and you are taking things that you start to know about that individual into context.</p>
+<p>So I'm going to make something because I know data about you about your behaviors about what you how you act.</p>
+<p>Yes.</p>
+<p>So to me that seems like bigger risk than copyright.</p>
+<p>well copyright is a is a is a is a small risk.</p>
+<p>Privacy is a big risk.</p>
+<p>Right.</p>
+<p>And that's why companies that build at this level can charge something for it.</p>
+<p>Sure.</p>
+<p>Right.</p>
+<p>most most most colleges and universities today think they can make money at owning the content for the textbooks and the curriculum.</p>
+<p>Right.</p>
+<p>And what they're going to have to realize is that context content will be free and the strength of any learning organization will be dependent on its ability to use analytics of the data stream coming out of the experience of the educ of the students on that content.</p>
+<p>Okay, cool.</p>
+<p>All right, good.</p>
+<p>This is so important.</p>
+<p>I'm glad everybody had a night.</p>
+<p>Dan, what's that?</p>
+<p>Put a quote on that bit that you just said.</p>
+<p>That might be the quote of the night.</p>
+<p>Yes.</p>
+<p>Don't make money on content, make it on the analysis of the content, right?</p>
+<p>Or who's using it.</p>
+<p>Okay.</p>
+<p>I just wanted to uh show you a little bit about these tools.</p>
+<p>this is the the timeline of intelligent textbooks.</p>
+<p>so you can see that the diamond age was published about 1995.</p>
+<p>Isaac Azimov wrote a very interesting book back in 1951 that really the fun they had was kind of a precursor for a lot of that.</p>
+<p>So anybody who's read Isaac Azimma really knows a lot of this.</p>
+<p>I had to study Pia's constructionism to really understand how students learn.</p>
+<p>So this is really important thing.</p>
+<p>Um, if you have never heard of Bloom's taxonomy, I had heard about it.</p>
+<p>I had no idea how important it was.</p>
+<p>Bloom's taxonomy, by the way, is just a sixle thing of the complexity of what you try to teach.</p>
+<p>At the base of it is what you can remember.</p>
+<p>Memorization of facts.</p>
+<p>At the top is what you create.</p>
+<p>Uh, and then it's what you have to remember.</p>
+<p>It's what you understand, how you apply it.</p>
+<p>can you analyze it?</p>
+<p>Can you create other things?</p>
+<p>And so Bloom's taxonomy is the heart of everything I build.</p>
+<p>Right.</p>
+<p>All of the micro Sims I I design through the lens of Bloom's taxonomy.</p>
+<p>Actually, the heart of education.</p>
+<p>It is the heart of education.</p>
+<p>Yeah.</p>
+<p>So, thank you.</p>
+<p>that is very true.</p>
+<p>So, that was 19 56 things.</p>
+<p>Uh and then the Gutsky's zone of proximal proximal development or CPD.</p>
+<p>this this was the first time that I could visualize a graph of concepts.</p>
+<p>color the ones green that the students know, color the ones red, which is their goals, and color them orange in the areas that they're ready to learn.</p>
+<p>Right?</p>
+<p>And so that's really how I started to visualize graphs is concepts depend on other concepts and then how to color that.</p>
+<p>So that this all this this theory is really important.</p>
+<p>and then you see a couple of other things the the Alex system here done by University of Irvine knowledge spaces really groundbreaking thing about representation knowledge.</p>
+<p>but then you see this huge cluster of things and I put these are the things that really helped me increase my productivity and they've all just happened in the last couple years, right?</p>
+<p>I I wrote blogs on GPT2 generating the simplest possible lesson plans.</p>
+<p>My prompts were huge and I got I got a list of things to cover, right?</p>
+<p>What are the topics in algebra?</p>
+<p>Right?</p>
+<p>you can get that on YouTube, but it was painful, right?</p>
+<p>and then all of these things happen and they're getting closer and closer and closer, but as you can see, the capabilities have gone up dramatically.</p>
+<p>So, this is kind of a graph that probably should have been reversed, but this is how I I think about it.</p>
+<p>I want you to think of productivity on the left axis, and this is an log scale.</p>
+<p>And if you think of a typical textbook like I wrote a book on making sense of NoSQL, 3,000 hours of work, roughly 3,000 hours, about 1.6 full-time years of my life gone writing a book.</p>
+<p>Uh which which was fun and I learned a lot about the publishing process.</p>
+<p>didn't make much money off of it.</p>
+<p>But it was a labor of love because I was so frustrated that people didn't take a careful time to think about which database to use for the right business application.</p>
+<p>and then when I really started using chat GPT I would honestly think I could generate an entire page of quality text with chat GPT at a time, right?</p>
+<p>These little fragments.</p>
+<p>Then I had to assemble them all together.</p>
+<p>and that that was a big savings, right?</p>
+<p>Instead of 3,000 hours, it g cut it down by a third, a thousand hours, right?</p>
+<p>and then last spring, cloud code.</p>
+<p>Oh my god.</p>
+<p>Has how many people here have used cloud code?</p>
+<p>Almost everybody in the room.</p>
+<p>I am so glad.</p>
+<p>And Shannon, you are amazing.</p>
+<p>You've helped so many other people learn cla code and through your inspiration work other people Justin so I'm so glad you guys are all in the cloud code.</p>
+<p>I had several of my friends who stopped talking to me because I was so insistent they learn I don't know if you remember Arun but she was one of my best friends was insistent that cursor was going to come back.</p>
+<p>We're still waiting for that to happen.</p>
+<p>Claude Enthropics just got the formula.</p>
+<p>He's all about cloud code now.</p>
+<p>Yeah.</p>
+<p>Yeah.</p>
+<p>He's he's he's seemed to like he seemed to like took him a while.</p>
+<p>but some you know this is what a good engineer good engineer learns a framework and then they they want to get the most out of that learning.</p>
+<p>and sometimes you have to make a decision to switch horses and that's that's sometimes hard.</p>
+<p>I kept trying all three and there's this weird thing that you use Claude code and you get in this flow and it's Dan Yarmmak is probably the best Claude code programmer I've ever seen.</p>
+<p>It's like he does the Vulcan mind meld with Claude and it's just like you can see him talking to Claude and Claude just and of course he's got this big wide ultra widecreen monitor and he types 100 words per minute and uh doesn't hurt.</p>
+<p>So, uh, that that really made a difference, right?</p>
+<p>So, then, uh, instead of 3,000 hours, I could kind of generate a textbook in two weeks, right?</p>
+<p>Um, and then skills came out last October, right?</p>
+<p>Uh, and if you haven't learned what skills are, skills are just a package of rules.</p>
+<p>And what's amazing about Anthropic is they they were the one who really championed skills, although everybody's copying them now.</p>
+<p>There's something about the claude model that follows the rules.</p>
+<p>So a skill is just a folder.</p>
+<p>It has a skills.md file that it reads.</p>
+<p>There's a title and a description.</p>
+<p>130 tokens goes into your context window.</p>
+<p>So it's very small.</p>
+<p>And then figures out when to use those rules when it breaks things down into tasks.</p>
+<p>And then it loads that skill.md file.</p>
+<p>And then that has all the resources, the the rules files, the template files, the Python code, things like that.</p>
+<p>Uh, and so cloud code skills just to be it takes a while to learn how to use them, but it's just amazing.</p>
+<p>Textbooks need to have consistency.</p>
+<p>Consistency of writing style, consistency of quizzes, consistency of FAQs, consistency of glossery definitions, precise, concise, distinct, non-circular, uh, unencumbered definitions for all the terms in the context when they're needed, all that stuff.</p>
+<p>Claude just follows rules better than anything else.</p>
+<p>And every month I say, "Okay, I'm going to go out.</p>
+<p>I'm going to try be open-minded try codecs and try antioraphy and and it can do some things.</p>
+<p>It can generate the glosseries and a few other things and you look at the content it generates in the micros and it's just it just I don't know what it is.</p>
+<p>it's just they'll get there eventually but they're not good at falling loose.</p>
+<p>My biggest complaint is Gemini has this u ego that it thinks it knows better than I do.</p>
+<p>And when it says I want you to create this micro sim and here's 15 rules to follow it says ah screw those rules I'm going to cheat myself and it's inconsistent and it adds new functions and I can't maintain it and I can't go through and do quality checks and I can't automate the layout and I can't upgrade them.</p>
+<p>Right.</p>
+<p>So, uh, anthropic is humble because it follows the rules and that's why I, that's why my productivity is gone so much.</p>
+<p>Okay.</p>
+<p>So, um, by the way, I should just mention I'm not using PowerPoint.</p>
+<p>Uh, I actually had Claude just generate and I literally spent 20 minutes on this uh, just generate a u a tool that just, uh, displays micros text.</p>
+<p>A question back there.</p>
+<p>Um, yeah.</p>
+<p>Yeah.</p>
+<p>I was wondering from your first textbook, I think it's hard to read, but I think it's 3,000 hours.</p>
+<p>Is that what you said?</p>
+<p>Yeah, that's right.</p>
+<p>to the most recent iteration where it was 10 hours.</p>
+<p>Y can you confidently say that the quality of the content is either comparable or the same to your first attempt?</p>
+<p>the quality is much higher.</p>
+<p>Much much higher.</p>
+<p>Now I when I present this to teachers they say how do you know that there are no errors?</p>
+<p>How do you know there's no hallucination?</p>
+<p>How do you know that every formula is correct?</p>
+<p>And the answer is I don't.</p>
+<p>There's no guarantees.</p>
+<p>But what I can say with pretty good confidence that I haven't seen any major errors and the errors that I've seen are a lot of them in the the design textbooks for merging things where there's not a lot for the geometry textbooks.</p>
+<p>It's like there's so many geometry doesn't geometry doesn't change much, right?</p>
+<p>But if I say here's I want you to generate a new textbook on the context window and all of the hubwla about enterprises adopting an enterprise context window to put in I argue with clock quite a bit about what is best practices right because things are popular does not mean they're suitable and sometimes LLMs will pick a popular but unsuit question.</p>
+<p>So I want to bring up the topic of order in which you present the content in the text.</p>
+<p>I think among different textbooks on the same topic, how it's presented can be more fruitful, more effective.</p>
+<p>So I would imagine that your textbooks AI informed are you consciously trying the content in such a way that is most effective for the learner, for the reader, because older textbooks didn't necessarily do that.</p>
+<p>And to your point about it being like somewhat customized, right, and somewhat adapting to that individual, if I'm that individual and I go into one section and I do really well in this section, does it know that we can skip the next two sections and maybe go to the four section?</p>
+<p>Those type of things would be brilliant.</p>
+<p>Yes, exactly.</p>
+<p>Um, so just these are really good questions.</p>
+<p>Uh, I've been thinking about it for 31 years, so I think I have a little bit of insights on on how to do this.</p>
+<p>Um, all of these are backed by something called a learning graph.</p>
+<p>And the learning graph takes your course description and it builds a series of concepts and these arrows are concept dependencies.</p>
+<p>and so it when it builds the textbook it never introduces a concept before its dependent elements are are available.</p>
+<p>The other question you had is can I skip over concepts, right?</p>
+<p>And so that's a um what do you call that?</p>
+<p>Adaptive content presentation where you adapt as the learner indicates they ma they've mastered things very quickly.</p>
+<p>Maybe you just skim things and and and there are algorithms for doing that.</p>
+<p>Um these now get into basian probabilities, right?</p>
+<p>What's the probability you should spend five minutes on this concept?</p>
+<p>But you you nailed this other concept and they're very similar.</p>
+<p>We're just going to go over the next one and then we'll give you a quiz at the end of the chapter to see what you do.</p>
+<p>So adaptive is a little bit different but they're all they're all part of graph to person.</p>
+<p>Yeah.</p>
+<p>I'm actually not clear on something that's really based in here.</p>
+<p>When Microsoft comes to the user, is it already prepersonalized to that user or is it more like you're creating a choose your own adventure and then everybody gets that, but then they take their own pathway through the micro.</p>
+<p>Um, micro Sims are static programs that are generated once when the book is created and are the same for everyone.</p>
+<p>Okay.</p>
+<p>today.</p>
+<p>Um, future micros when students give their history may conditionally reveal certain features, right?</p>
+<p>So, for example, instead of one slider here, I could have this could be a a gas chamber and I could have pressure and temperature and speed and all this other stuff.</p>
+<p>So, uh, we call this cognitive load.</p>
+<p>for people that are new to things we give them simple interfaces as they show mastery we give them higher cognitive load micro sims and those can be enabled by a config file I don't have those today in most of these textbooks this one one for another question do you ask the questionnaire of the individual learner is there any data input on the individual learner going how is how is not not in the 2.9 level Okay.</p>
+<p>Anytime you ask a question of a student and it's persisted, it has to be stored in a secure way, that's 3.0.</p>
+<p>I don't have any of those in any of the textbooks yet.</p>
+<p>Those are perfect.</p>
+<p>I have quizzes, but they're self assessment where it gives you the question and then you see the answer, right?</p>
+<p>As soon as you start to but and by the way, there are quiz modules you could buy and there are quiz APIs and there are quiz things like that.</p>
+<p>So, you could have a textbook and then have it go into the qu an assessment system inside your LMS and a lot of LMS systems support this and there are standards for doing that.</p>
+<p>So assessment is a whole separate thing but this is a typical this is the hello world of a micro sim where we have an animation we have a control and and and the user can just change the behavior of one of those things.</p>
+<p>So okay I'm just going to go back.</p>
+<p>I'm working on the last 10 hours right now.</p>
+<p>that's my projects and the claude vision tool where you generate a UI and it actually sees the UI I have a database of about 1,400 UI errors that they make and they classify them and then they know the fix right so the ability for claude vision tool by the way claude doesn't generate images but it understands very well how to see your interfaces And that's been a big thing in the cloud and in the codecs and the thing to actually see the web screens in front of you.</p>
+<p>So that's been a really big thing.</p>
+<p>All right.</p>
+<p>So I I think I can get down to six hours by the end of the year.</p>
+<p>Okay.</p>
+<p>So do you do you use a lot integrate with the things that do create all the graphic designs?</p>
+<p>right.</p>
+<p>Because you would you could do that.</p>
+<p>Yeah.</p>
+<p>Let's talk about graphics and infographics in a little bit.</p>
+<p>Okay.</p>
+<p>I'm going to come to that.</p>
+<p>But the answer is yes.</p>
+<p>I Claude is the core, but Claude doesn't generate images in infographics, but it's very good at describing those.</p>
+<p>So, okay.</p>
+<p>All right.</p>
+<p>so, I have as of Tuesday, I got to level 100 2.99 books as interactive as I can make them.</p>
+<p>I am getting level ready to build tools to go to level three using X API and the LRS the IE standards for exchanging information.</p>
+<p>I have about 3,300 micro SIMs.</p>
+<p>I have a site that does embeddings for micros so you can find the most similar micros.</p>
+<p>I haven't used that yet but it's I've tested some of the stuff.</p>
+<p>I have 308 mini graphic novels which the young kids really like.</p>
+<p>I've been testing this with ISD 197 in the Nota Heights.</p>
+<p>and Justin also introduced me to them.</p>
+<p>Thank you again, Justin.</p>
+<p>You're my savior.</p>
+<p>and so I' I've been meeting with them to try to figure out what they and their big thing was digital citizenship.</p>
+<p>We'll show you some of that stuff.</p>
+<p>Very fun graphic novels targeting fifth grade students, right?</p>
+<p>How do you create a password that nobody else can guess, right?</p>
+<p>Something fifth graders learn.</p>
+<p>So, a lot of graphic stories about that.</p>
+<p>Um, a lot of I have a complete textbook on the process of automating instructional design.</p>
+<p>Are there anybody in that has experience in instructional design there?</p>
+<p>Yeah, a couple couple instructional designers.</p>
+<p>Great.</p>
+<p>So, that's that's hard instructal design really understands.</p>
+<p>you have to learn a lot about psychology and the way you lay things out and cognitive load and all that stuff.</p>
+<p>And then there's an entire just like we have a topic of data science there's a sister thing called the learning sciences and that really talks about the way people learn and it's a combination of psychology and vision and a lot of other things to to to you know eye tracking all this other stuff to do that and so I have a whole book on that that I'm doing and then more case studies I have So this is this is a typical what I call physics 101 simulation.</p>
+<p>when I started to do the biology textbooks they get much more complicated because they have to have these complex drawings.</p>
+<p>This is an animal cell.</p>
+<p>These are the different parts the nucleus the cell bendering mitochondria ribosome cytoplasm all that stuff.</p>
+<p>And what I found was that Claude was very good at describing this animal cell in text.</p>
+<p>This is a two-page description.</p>
+<p>Every shape, every color, every size, the positioning and stuff.</p>
+<p>And I found I could feed that to the text to image models.</p>
+<p>Chat GBT, Google's Nano Banana, truly amazing, super high quality.</p>
+<p>Um, and early on I didn't want it to generate any text.</p>
+<p>I wanted to control the text and where the text was positioned.</p>
+<p>So I created an architecture.</p>
+<p>This was about four months ago.</p>
+<p>We called this the infographic label overlay because these labels are actually a separate layer on top that have all the hovers.</p>
+<p>And as you click on them, uh, you can see different things and it and it highlights them and it and it then displays it down there.</p>
+<p>The key thing about this is I didn't want to have to redo this when it was quiz time, right?</p>
+<p>So, why not just add have it by default explore mode and then go into quiz and then and I have the hint showing here where you actually have to click on the right box to do that.</p>
+<p>So, you can use the drawings and use the overlay to label things and So this is a what we call a type of micro simul.</p>
+<p>So microsums it's not just quote physics simulation.</p>
+<p>It's really any interactive graphic where the learner uses the mouse to either hover over click that we can extract that to understand whether they understand the concepts.</p>
+<p>Is there a skill to generate these micros?</p>
+<p>I'm sorry.</p>
+<p>A skill.</p>
+<p>Oh yeah.</p>
+<p>Yeah.</p>
+<p>Absolutely.</p>
+<p>Absolutely.</p>
+<p>Every one of these types has its own skill within actually I should say sometimes there are separate skills.</p>
+<p>Sometimes I have a master micro generator guide and there's a rule base that picks the right type based on your thing.</p>
+<p>So if it's a biology representation or a plant or things like that that require drawing then there's things it it can put the description in.</p>
+<p>can call the APIs and do it.</p>
+<p>Uh, and sometimes I just copy and paste it because I just want to play around with it.</p>
+<p>So, a question.</p>
+<p>How accurate they can generates the pictures?</p>
+<p>How how accurate?</p>
+<p>That's that's a good question.</p>
+<p>I have biology textbooks and I've compared it I've also compared ChachiPT's images with Google's and I'd say for educational purposes where you're just learning the basic structure of the cell it's okay.</p>
+<p>I have tried more complicated medical school textbooks and I would say about 5050 that they are correct.</p>
+<p>for plant identification, Arun is not here.</p>
+<p>Arun is doing a book on native Minnesota native plants and his illustrations using the same frameworks are truly amazing.</p>
+<p>so yeah, it's it's it's pretty good for some things.</p>
+<p>and part of this is there's if you go online, you type Google sell.</p>
+<p>There's hundreds of hundreds and hundreds that come up and they just grab the Google picture and implement into your textbook rather than generate something really as long as those images are licensed consistent with the creative comments.</p>
+<p>If it's if they're on Wikipedia, no problem.</p>
+<p>Usually, right?</p>
+<p>But I never ever touch anything that has a little copyright or a name of a company.</p>
+<p>I can use it as a way to test, right?</p>
+<p>I can compare this with 10 other pictures of animal cell and see whether right but you know mitochondria those things are all all very very similar and those things.</p>
+<p>So yeah so that looks like almost any other things right.</p>
+<p>Okay.</p>
+<p>Are you integrating with are you using integrating the course with the no expert everything is just straight skills.</p>
+<p>Are you using skills reliably?</p>
+<p>Right.</p>
+<p>So Claude is infamous for not using a skill even if you strongly hint at it.</p>
+<p>Is each skill associated with an agent that just does that one skill?</p>
+<p>That's a really good point.</p>
+<p>You have these skills.</p>
+<p>The skills have a description and they're ignored by CL.</p>
+<p>So, by the way, this is a known bug and the discussion boards have lots of discussion.</p>
+<p>Claude used to have a opaque budget for skill descriptions of 130 tokens per skill description.</p>
+<p>And if you exceeded that, it just magically didn't.</p>
+<p>some of them and it wouldn't tell you which ones it didn't see.</p>
+<p>Yeah.</p>
+<p>All the latest versions in the last three months have a very clear skill budget and it's a configuration.</p>
+<p>It's set by default to be 1% of your context window and a 1 million token context window.</p>
+<p>You can have a lot of skills in sonnet which I use for most of my things.</p>
+<p>I have a much I have 200,000 token context much smaller token.</p>
+<p>So, I've had to refactor my skills multiple times where I find similar skills, I group them together into one and say, if you have something like this, go into this and then it's a big switch table that goes.</p>
+<p>So, it's it's an art form to know the bugs of these systems.</p>
+<p>But I will say that compared to Codeex and Gemini, Claude is still way way better at at following rules and finding There's another thing is if you know there's a skill and you put in slash in the skill named identify it.</p>
+<p>So usually when I'm building a book I know the names of my skills and so my my goal is still to make it easier for a teacher to do this and I think we have some people that have used my tools without any training and they've still figured out how to get it to work but they're not my focus hasn't been on ease of use but it will be in the future.</p>
+<p>I ask Matt N question.</p>
+<p>pass at it and make sure that everything is there.</p>
+<p>No, but I should great idea.</p>
+<p>You said it was good, right?</p>
+<p>Yeah.</p>
+<p>Yeah.</p>
+<p>I I should say I go back and forth.</p>
+<p>the ver I have I've all these verification steps when I build a book and especially early on when you have a course description I have a 100 point metric and I never let you go on till you get at least 85 out of 100 right so the quality is really important at the beginning as you go down and you build the micros I don't spend a lot of tokens double checking because there's a lot of micros and I'm very conscious that my teachers have $20 and they have a 5hour window to use 200,000 tokens with OBS.</p>
+<p>It's really effectively or Sonic it's effectively 2 million.</p>
+<p>so I'm very very Dan and I have spent a lot of time doing metrics.</p>
+<p>I have a friend who does nothing but dashboards for tokconomics.</p>
+<p>and so we're very by the way I'm running behind so I'm gonna pick it up so I get some of the other things.</p>
+<p>One more question.</p>
+<p>How much is it cost to for you to generate?</p>
+<p>My my goal is to have the average book for maybe 200 page something like that.</p>
+<p>Yeah.</p>
+<p>My goal is to generate a,200 page textbook in four fivehour token windows.</p>
+<p>How much that cost?</p>
+<p>it depends.</p>
+<p>But if I if you get Claude Pro, which is $20 a month if you get one month, 17 if you sign up for a year, you can generate a dozen textbooks a month for $20.</p>
+<p>So, and I'm working on trying to make it even better.</p>
+<p>Uh, and it your mileage varies based on the complexity of the microser content.</p>
+<p>It's it's pretty straightforward.</p>
+<p>And I have tables that show how to predict how many tokens you're going to need.</p>
+<p>Uh, but anthropic gives you free tokens if you do weekends and night.</p>
+<p>And that's really hard to figure out that stuff.</p>
+<p>So, okay.</p>
+<p>All right, I'm going to just go through to show you a couple more things on lesson learners.</p>
+<p>this is one from the ecology book.</p>
+<p>I don't know if you guys know about the cycles, the carbon cycle, nitrogen cycle, all this other stuff.</p>
+<p>phosphorus cycle, water cycle.</p>
+<p>and this also has a question, but I also added another one called what would be the human impact on these?</p>
+<p>And it shows you if there's pollution, what the impact of the things.</p>
+<p>So really really good interactive diagrams and and this the the diagram for this is four pages of text right that I had cla generate to do this one.</p>
+<p>all right I think I'm just going to skip through this.</p>
+<p>All of the stuff is online.</p>
+<p>There is a book on how to generate intell code skills.</p>
+<p>But basically start with course description, generate the learning graph, we generate the chapters.</p>
+<p>The chapter design is a very critical piece because it has to pick concepts and put them together.</p>
+<p>We want to make sure chapters are balanced.</p>
+<p>They're not too long.</p>
+<p>They're not too things typical chapters are 15 concepts that are explained for high school, maybe 20 to 25 for advanced graduate school, college things.</p>
+<p>and then once you have the the ch the the chapters designed then we start to put in the personality, what's the tone, what's the audience, what's the reading level, uh is it fun and humorous or is it other other things optimistic?</p>
+<p>Uh where do we put in the encourage critical thinking skills?</p>
+<p>Where do we put in thinking skills?</p>
+<p>Where do we put in understanding cognitive bias of the people around us?</p>
+<p>and where do we put in the ability to detect misinformation online.</p>
+<p>So those are all things and then these are just some samples.</p>
+<p>Just so you know all the books have these views.</p>
+<p>Some are a little bit older but what I encourage people do is do an uncheck all and then slowly do a build.</p>
+<p>Right?</p>
+<p>So I'm going to see what the foundation concepts are and then what's the development environment and then the terms and definitions and and so this is just building up and it shows you that this is these are related concepts.</p>
+<p>This is not chapter order though.</p>
+<p>this is how are concepts related and so if a student wants to get to some goal how what is the path to guidance?</p>
+<p>So if you imagine this whole thing as being gray and as the students learn they turn green and then the ones around the greens are orange those are the ready tolearn uh zone of proximal development.</p>
+<p>Right?</p>
+<p>So this is the guiding star for the book for hyperpersonalized learning.</p>
+<p>Okay.</p>
+<p>All right.</p>
+<p>So it's all about making sure you can represent that knowledge in a way book mascots.</p>
+<p>This is the biggest thing that has had an impact for my students retention is to and I asked Claude this right I didn't know this I said how do I increase my engagement and it gave me a list of 20 things and then I started experiment and the one things I did if you all all of my books have a Google analytics right so I can see when I give it to some sample students how long they engage and the engagement goes up by about 30% just by adding the mascots.</p>
+<p>I know that sounds silly, but it is a proven there's a lot of data that proves that if you anthropomize your friend online, and these are all friendly characters.</p>
+<p>They're designed by Claude.</p>
+<p>And then I give them to the other two that do this.</p>
+<p>the the Shrottier students at the University of Minnesota came up with the Spark Sparky the light bulb and that's their mascot for the intro circus class.</p>
+<p>Wonderful.</p>
+<p>Right.</p>
+<p>Seniors in high school love their stickers.</p>
+<p>Yeah.</p>
+<p>Yeah.</p>
+<p>Yeah.</p>
+<p>And so all the college books have these guys too by the way.</p>
+<p>So this is the fluffy soft pillow for the understanding dementia book that Rick Tandler has done who's traveling around the Minnesota showing the book to healthcare organizations.</p>
+<p>So so what I wanted to do is encourage you this is a lot.</p>
+<p>We're telling you a lot today.</p>
+<p>You don't have to do it all in one shot.</p>
+<p>Uh, but I want you to start to realize that there there is a staging area that you can start to do this.</p>
+<p>And once you get to these clawed skills, uh, I think you'll find that your productivity really does go up.</p>
+<p>Um, and uh, and I I just think the world is going to be very a much better place when you've educated students.</p>
+<p>Um, all right.</p>
+<p>So um all right so what's the goal?</p>
+<p>The goal here is the democratization of education for students around the world.</p>
+<p>Right?</p>
+<p>Every student on every country on every continent should be able to ex have this rich educational experience just like Nell did in the book Diamond Age.</p>
+<p>And the biggest problem I have is that when I show this to people, they don't believe me.</p>
+<p>they they simply don't believe that they can generate an intelligent textbook in 10 hours.</p>
+<p>So I asking everybody in the room to go tell two or three friends and hopefully they'll tell a few people and hopefully we'll get the word out that we can start to democratize education for everyone in All right.</p>
+<p>how early have you gone?</p>
+<p>How what age?</p>
+<p>Fifth grade.</p>
+<p>fifth grade is I I do have some stuff for kindergarten teaching things but it's mostly letter block games you know that don't read much but fifth grade is usually the things and then for the rest is it's mostly small things I have a teacher in St.</p>
+<p>Paul I built the reading for kindergarten and it it is fun but in general it's about fifth graders I just want to acknowledge Dan work on the paper which we submitted to archive a month ago and they still haven't gotten back to us.</p>
+<p>Obviously they've gotten flooded AI generated papers so it's much longer but it is all about not at at the level three and four it's not just can I build a chatbot can I do it cost effectively how do I minimize the use of tokens and Dan's brilliant work on that token minimization is just fantastic he's taking it in great directions all right so with that I guess we've been asking questions all along Okay.</p>
+<p>So, you're calling these textbooks, but they don't really seem like textbooks.</p>
+<p>Um, so like what is the kind of the scope of going with these things?</p>
+<p>Is it something that they teach in a year of class or do you know what I mean?</p>
+<p>It seems kind of limiting in a way.</p>
+<p>Yeah.</p>
+<p>so when I design the textbooks usually give a number of weeks in class and the audience and then the number of concepts changes based on that.</p>
+<p>Um, so, uh, I I wish I could have the resources to do studies of this, do AB testing, give two classes, one with the general textbook and one with the paper book, and then look at that.</p>
+<p>There there are uh, you big educational organizations that try to do that funding.</p>
+<p>but all I can tell you is that the teachers that I work with once they get engaged their students seem to like it and and they much prefer the the animated things.</p>
+<p>Uh, and just this idea that you have this welcoming character and you have all these micro sims and you know lots lots of lots of micros that tell you and you know lots of mini workflows where you hover over things and have to do those things.</p>
+<p>So there's all sorts of simulators that we can build and the simulators should be questioned, right?</p>
+<p>You should say, is this I one of the prompts I use is assume you're a senior instructional designer.</p>
+<p>Take a look at this micros and find out whether it's meeting all the guidelines for cognitive load for this student and should I take out controls?</p>
+<p>Should I add controls?</p>
+<p>how do I make it better?</p>
+<p>Um, so I I don't want you to think that anything here is pixel perfect and perfectly optimized for cognitive load.</p>
+<p>It's it's an experiment and the way you prove or disprove a hypothesis is to test it and we're not at that stage yet.</p>
+<p>So another question.</p>
+<p>Yeah.</p>
+<p>So it seems every student is getting the same sort of subunits here, right?</p>
+<p>Yes.</p>
+<p>In practice in the classroom, how personalized is it really?</p>
+<p>Right.</p>
+<p>I mean seems like everybody's actually getting the same thing traditionally what you want right so can you maybe how do two students get different things here maybe a two example of that well once again it's not my not my focus of level twos hyperpersonalization is a level three issue so I would say right now it's really one textbook and the instructor can say go through as many chapters as you Maybe you have five extra chapters for advanced students or special projects.</p>
+<p>Um, I should should mention one thing.</p>
+<p>Uh, there's this thing called the Alpha Schools.</p>
+<p>Alpha Schools is a forprofit school system, $65,000 per student per year.</p>
+<p>Uh, and they only spend two to two, three hours on the AI content.</p>
+<p>The rest of that is social interaction where they're in clubs and projects and robotics and things like that.</p>
+<p>So of the eight hour day, three hours is with the AI and the five hours are with social, right?</p>
+<p>To spend more time developing your interpersonal skills, right?</p>
+<p>Which is harder to do.</p>
+<p>So, so the idea is that we make it fun and engaging so that you can get more time working on sports teams and athletics and volunteer work in the community and all that stuff.</p>
+<p>Uh, so this is the Alpha Schools is the most we're hoping that that $65,000 price tag comes up, but they they spent $10 million building theirs and I think within a couple years every school could have the same AI that alpha schools had I was reading some research from before LLMs and interactive tutors and they had some impressive like full sigma improvement over you know one standard deviation over textbook reading which sounded really impressive and then I read in the the notes that they also then controlled for someone who did no textbook reading versus textbook reading and then there was like the teeniest apparently reading a textbook for two hours has no value right I'm wondering like what do you think the value of text is that links those together it's like the text supports the instructor but does it actually sports student or is there another way to do that?</p>
+<p>Um, what what I will say is that I'm very pro- teacher, right?</p>
+<p>All of my history and my family, my brother is a teacher, my sister is a teacher.</p>
+<p>Um, a great teacher can make a world of difference.</p>
+<p>You can have a really crappy textbook and a great learning experience if you have a great teacher.</p>
+<p>The problem is that not everybody in the world has access to great teachers.</p>
+<p>So I I just will say that the value of textbooks is minimal if you have an environment that is nurturing for you for learning.</p>
+<p>having kids going out on field trips and studying moss is much better than reading a textbook about moss.</p>
+<p>So makes me imagine that two one is a book for the teacher and then you actually Maybe half of the guide is actually about helping the teacher and the other half is about the classroom.</p>
+<p>Yeah.</p>
+<p>One one little anecdic science and she she didn't have a textbook.</p>
+<p>She just built it on her own.</p>
+<p>She found some research online, but she went to a hair salon and got different colors of hair and put them all in envelopes and kids had to figure out who had what color hair under the microscope, right?</p>
+<p>So she went out and figured out she had to get that sample in of hair.</p>
+<p>So that's an idea.</p>
+<p>Great teachers are very creative at finding ways for students to learn science and and whe and how do you make it fun and how do you make it engaging?</p>
+<p>By the way, I wanted to show you the this is one of the ones I generated this last week.</p>
+<p>This is semiconductor physics.</p>
+<p>and this has 600 concepts in it, right?</p>
+<p>600 concepts.</p>
+<p>and the quality of the text is still pretty good.</p>
+<p>and we've started to share some of this with people at the University of Minnesota.</p>
+<p>but the key thing about this in in semiconductor physics is that you really have to have a great background in a lot of areas and if you don't have the background this book has some of the background material and pointers to the other books and things so so that that that we can really get students at the University of Minnesota that are globally competitive.</p>
+<p>I really believe that lack of really good interactive fun textbooks is what I have a question.</p>
+<p>Yes.</p>
+<p>So how would you integrate it into some kind of an system let's say canvas or something that we at university are using and this next question would be why not have some kind of a tailored homeworks right I mean you did not have homeworks here I would like to see if it was I mean if you Yes, you're you're absolutely right.</p>
+<p>I do not have homework in here.</p>
+<p>But what I wanted to do is just show you uh some of the anyway we do this this is a book uh on the XAPI system and it has all the workflows for getting data out of the intelligence systems and into the learning record stores.</p>
+<p>and it's it's relatively simple in theory.</p>
+<p>you have who did what to what object and that's serialized in a JSON data stream with standards and then you can pump that all into that and and do a lot of So when you enroll a student you assign them this book and then you can do simple things like have open the chapter, right?</p>
+<p>and you can do complicate things.</p>
+<p>Have they gone through and run simulation 25?</p>
+<p>And realize that if you boil the water too long, the water evaporates and the heat goes up, right?</p>
+<p>So those are all uh things that the these X APIs are designed they're designed for supporting simulations.</p>
+<p>Canvas charges $5,000 a year for them to list it in their system.</p>
+<p>I know that for to list to list what?</p>
+<p>whatever you're adding to your system because I just tried to do it the other day.</p>
+<p>So, maybe after I make money on Moodle is free, but it's not a very good user interface.</p>
+<p>Talk to me afterwards.</p>
+<p>Who cares?</p>
+<p>No, I'm seriously I can see Dan was going to answer the same way.</p>
+<p>I don't care about user interfaces anymore.</p>
+<p>My user interface is cloud code.</p>
+<p>But the student that that's for people generating interfaces, right?</p>
+<p>For the students, it's different.</p>
+<p>Yeah.</p>
+<p>Okay.</p>
+<p>Fair.</p>
+<p>But all of the things about assigning the students the projects the chapters work assignments.</p>
+<p>there are quizzes in these allowing them to hook when they do the quizzes have them go into the LMS storing this.</p>
+<p>Canvas also is known as a large grain system.</p>
+<p>they don't really recommend content in canvas whereas all the new AI based LMS that's what they should be doing they should be recommending canvas so so there's one one other thing I just wanted to mention real quick is um one of the keys about AI is to understand the idea of similarity similarity right the old world is about databases that are good at counting and totaling and amounts called the counts and amounts rule.</p>
+<p>AI is not about counting.</p>
+<p>It's about finding similar things.</p>
+<p>Right?</p>
+<p>So here I just ran a simple embedding on the images for the mascots.</p>
+<p>And you can see that the mascots up here that are kind of fox and raccoon like are all together.</p>
+<p>the bird mascots are here, the frogs and the turtles and things like that.</p>
+<p>and the the strange robots are down here.</p>
+<p>Right?</p>
+<p>So it's important that we realize that we have these tools to find similar things.</p>
+<p>So I've only just started to crack the thing about finding similar micros.</p>
+<p>I do have algorithms that do embeddings, but micros have two dimensions.</p>
+<p>It's the learning objective.</p>
+<p>it is p5 js but I have timelines I have flowcharts mermaid is everywhere now in a lot of the books mermaid is native to a lot of the book building tools so maintaining mermaid diagrams flowcharts things like that vin diagrams now with the lattice release so much easier to do it so we have to realize that we're only the tip of the iceberg of what can be done here.</p>
+<p>And I think if you start to understand embeddings and how we can store embeddings for learning things and it's not just similar mascots, it's similar micros, it's similar quizzes, it's similar exercises.</p>
+<p>All of this similarity will help us build better high quality textbooks faster with lower cost.</p>
+<p>this.</p>
+<p>All right, great.</p>
+<p>U we have a few more things.</p>
+<p>David, do you want to just mention real quick your progress?</p>
+<p>Yeah, just why don't you just talk a little bit about that?</p>
+<p>Yeah, you shared your pipeline really interesting process.</p>
+<p>I would say I can do it a t-shirt after the first step is what Dan will tell you is the course description is key.</p>
+<p>That's like the seed and that's not a trivial project.</p>
+<p>I I thought oh just follow the course description that was a significant effort.</p>
+<p>I did it in the area in which kind of created my own content as I have my own methodology.</p>
+<p>I thought oh why don't I write and so got to the course description and I was probably a little compulsive I knew nothing.</p>
+<p>I had an exposerated I actually got to 100 said, "Okay, that should be a good enough place to to start." And the other thing I did is I actually installed CL code on a Chromebook.</p>
+<p>Chromebook.</p>
+<p>First person I've ever seen install CLA code on a Chromebook because I didn't know I was supposed to do it.</p>
+<p>that's my discover stumble in that direction.</p>
+<p>So I figure that's got to be representative of maybe the toolkit that that a poor teacher in Africa might.</p>
+<p>So and then going back and past the course description generating the knowledge graph which is it's it's just like or the learning graph learning graph to me that's it's just an amazing amazing concept to say my my book has 200 concepts in it and to arrange them in predecessor successor order I think is just a fundamental approach that really changes is every the way the way we write I'm the nonlinear thinker I wanted to write the chapter in a nonlinear way Dan's got the pipeline is a real smooth operation and I guess the the other thing I'll mention is because it's in my context it's not like I could pull in other you know external sources you know it.</p>
+<p>So that makes it like a little bit of you know different adventure and may not be like standard cases you know we generate geometry textbook text I think I'm going to probably have to go back and validate some of the Dan you also have several students from your class that generated some textbooks I think that was Jessica, I think your your project was truly amazing.</p>
+<p>Would you be willing to just speak for a minute about what your impressions are?</p>
+<p>Absolutely.</p>
+<p>Yeah.</p>
+<p>Yeah.</p>
+<p>Seriously.</p>
+<p>Yeah.</p>
+<p>Yeah.</p>
+<p>You're you're turning around.</p>
+<p>You're a good example of a student that we wanted to show that can use it.</p>
+<p>So, yeah.</p>
+<p>Well, actually, there's a microphone.</p>
+<p>So, go ahead.</p>
+<p>Thank you.</p>
+<p>Um, good evening everyone.</p>
+<p>My name is Jessica Pup.</p>
+<p>I'm a STEM MBA student at the University of St.</p>
+<p>Thomas, a student of Dan Yamok and as you mentioned, we created amazing projects this semester off of the frameworks that both Dan's taught us in our classes.</p>
+<p>I didn't prepare anything to show but I do want to share my u a bit about my intelligent textbook that I created and the product that I was able to design using the intelligent textbook.</p>
+<p>so my project was strategic marketing in the AI age from brand management to autonomous growth engines.</p>
+<p>And so a little bit about the course description.</p>
+<p>This intelligent textbook transforms marketing professionals from tactical executors into strategic architects of AI powered growth systems.</p>
+<p>Moving far beyond basic prompt engineering, you'll learn to design autonomous marketing engines that blend brand strategy, ethical automation, and scalable personal personalization.</p>
+<p>This course bridges classical marketing frameworks with cutting edge AI capabilities, teaching you to build systems that learn, adapt, and optimize across customer life cycles while maintaining brand integrity and ethical standards.</p>
+<p>Um, so 200 topics, 20 chapters, um, about 3,000 pages.</p>
+<p>I used my own intelligent textbook to then create an agentic system.</p>
+<p>It's a brand strategy system called brand voice.</p>
+<p>and what that does it it uses agents to simulate real world or real life um rather consumer segments and competitor sets.</p>
+<p>it ingests real life data.</p>
+<p>you can actually have conversations with this system and it basically helps you create and stress test a brand strategy and your positioning using these agents that deliberate with each other.</p>
+<p>So, it's about five agents.</p>
+<p>Um, so far I've created three customer personas and three competitor personas.</p>
+<p>So, there's a conversational layer.</p>
+<p>You can actually It actually interviews you.</p>
+<p>This is so amazing.</p>
+<p>She's building simulators of customers and competitors.</p>
+<p>Truly amazing.</p>
+<p>really amazing and I'm glad you brought that up because I am looking for design partners and we're at a stage where we are demoing and stress testing the platform.</p>
+<p>So if anybody is in marketing let's connect and see where we can take this.</p>
+<p>I guess I know somebody that used to work for General.</p>
+<p>Okay.</p>
+<p>That would be great.</p>
+<p>Jessica, thank you.</p>
+<p>And yeah, that's my use case, I guess.</p>
+<p>Yeah.</p>
+<p>Thank you, Jessica.</p>
+<p>That's you're a great testimonial.</p>
+<p>Dan, you had what 13?</p>
+<p>Yeah, there were 13 students just like Jessica.</p>
+<p>What was interesting is the base of the knowledge graph taking directions obviously so you can traverse the graph you can see multicausal things introduction other ways but the learning adventure is great and don't reduce it to textbooks right so Jessica pointed at a problem set it's information that was what I did with it I pointed it elsewhere so Dan can point claude and a website effectively create a course description from the website and generate a knowledge graph of a company and generate the proposal with cla truly amazing very so the knowledge graph it's testimony to knowledge graph dag you know this is his handing subtask you're benefiting from some of the best computer science living that we So I take advantage of that because the accuracy is what's fantastic right it's the accuracy that lets you guys explore so even if you make a textbook remember if you point it over there don't need to use context you can point it summarizes so file it's really cool okay I think every one of the 13 students has a potential to start their own business based on their project thanks to your textbooks I I just want to say if you're able to break the strangle hold of the publisher cartels, this is what's going to ultimately happen here.</p>
+<p>You know, lipidot Thompson Reuters sell a $200 textbook that just reverses, you know, a couple of chapters and that's the new edition that now you have five student most people here were college students at one point, right?</p>
+<p>So you remember this West Publishing the more power to you.</p>
+<p>Yeah.</p>
+<p>that's yeah, that's a that's a great thing.</p>
+<p>I I think the world is going through disruption.</p>
+<p>I think remember Encyclopedia Britannica used to have this huge strangle hold until in Carta came out on seas.</p>
+<p>We're seeing going to see the same thing with intelligent textbooks but it's going to be a worldwide impact and what it means is that we're going to have a much much more educated and let's just hope that the ability to detect misinformation is front and center so we have less people that are easily duped by our politicians.</p>
+<p>Okay.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
