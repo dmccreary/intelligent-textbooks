@@ -21,28 +21,65 @@ directory containing a main HTML file, the simulation JavaScript, and
 supporting metadata, and are embedded into textbook pages via an inline frame.
 
 A useful design principle for intelligent textbooks is the
-\textit{five-level framework}, in which each level adds capability:
+\textit{five-level framework}, developed in detail by
+McCreary~\cite{mccreary2025fivelevels}. Table~\ref{tab:five-levels} presents
+the five levels, using the names established in that framework, together with
+two threshold columns that carry significant practical implications for
+institutional deployment.
 
 \begin{table}[h]
 \centering
-\caption{Five Levels of Intelligent Textbook Capability}
-\begin{tabular}{@{}clL{4.5cm}@{}}
+\small
+\caption{Five Levels of Intelligent Textbook Capability
+  (names after~\cite{mccreary2025fivelevels})}
+\begin{tabular}{@{}cL{2.1cm}L{4.7cm}C{1.4cm}C{1.4cm}@{}}
 \toprule
-Level & Capability & Example \\
+Level & Name & Key Institutional Requirements & Student Data & LLM Required \\
 \midrule
-1 & Static content & Text and images \\
-2 & Interactive elements & MicroSims, quizzes \\
-3 & Adaptive sequencing & Concept-graph-driven navigation \\
-4 & Generated content & AI-authored explanations and simulations \\
-5 & Self-improving content & Evolutionary refinement from analytics \\
+1 & Static      & Fixed content only; no institutional systems required          & No  & No  \\
+2 & Interactive & Static hosting; anonymous analytics optional                   & No  & No  \\
+3 & Adaptive    & Student authentication; institutional data infrastructure;
+                  ongoing relationship management                                & Yes & No  \\
+4 & Chatbot     & Integration with institutional systems; LLM oversight
+                  capabilities; trust relationships                              & Yes & Yes \\
+5 & Autonomous  & Deep institutional knowledge; comprehensive student
+                  support systems                                               & Yes & Yes \\
 \bottomrule
 \end{tabular}
 \label{tab:five-levels}
 \end{table}
 
-This paper is fundamentally concerned with the transition from Level~4 to
-Level~5---the point at which the textbook begins to improve its own content
-based on evidence.
+Two threshold boundaries emerge from Table~\ref{tab:five-levels} with
+significant practical implications. The first is a \textbf{data-privacy
+boundary} between Levels~2 and~3: Levels~1 and~2 require no student-specific
+data and can be served to completely anonymous users, while the Adaptive
+level (Level~3) and above demand student authentication, individual learning
+histories, assessment records, and ongoing institutional relationship
+management. This boundary triggers obligations under data-protection
+regulations such as FERPA, COPPA, and GDPR, and it is the threshold below
+which institutions can deploy intelligent textbooks with minimal governance
+overhead.
+
+The second is an \textbf{LLM-cost boundary} between Levels~3 and~4.
+Levels~1 through~3 can be implemented entirely with deterministic
+algorithms---graph traversal, rule-based sequencing, and spaced
+repetition---without any large language model inference. A well-constructed
+concept dependency graph, combined with per-learner mastery estimates, is
+sufficient to drive adaptive navigation without generative AI. The Chatbot
+level (Level~4) and the Autonomous level (Level~5), by contrast, require
+continuous LLM access---Level~4 for real-time conversational tutoring and
+Level~5 for autonomous content generation and self-modification. This
+dependency increases operating costs by one to two orders of magnitude
+relative to lower levels and introduces ongoing dependencies on third-party
+model providers.
+
+This paper is fundamentally concerned with the transition from the Chatbot
+level (Level~4) to the Autonomous level (Level~5)---the point at which the
+textbook begins to improve its own content based on empirical evidence from
+learning analytics. Because Level~5 inherits the LLM dependency of Level~4
+and adds the cost of continuous fitness evaluation and variant generation,
+the evolutionary loop proposed here must account for inference cost as a
+component of overall system viability.
 
 \subsection{The Darwin-G\"{o}del-Machine}
 
