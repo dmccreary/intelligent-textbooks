@@ -1,0 +1,63 @@
+\section{Introduction}
+
+\subsection{The Static-Content Problem}
+
+Educational content has historically been authored once and revised
+infrequently. A textbook chapter, a worked example, or an interactive diagram
+is designed using the author's best judgment about what will help students
+learn, and then deployed largely unchanged for years. This stands in stark
+contrast to how learning actually works: the effectiveness of any given
+explanation varies enormously across learners, contexts, and prior knowledge
+states.
+
+The emergence of \textit{intelligent textbooks}---interactive, AI-assisted
+learning materials that incorporate concept dependency graphs, learning-objective
+taxonomies, and embedded simulations---creates an opportunity to break this
+static mold. Because these textbooks are instrumented (they can record how
+students interact with content) and modular (individual components can be
+regenerated independently), they are uniquely positioned to support
+\textit{continuous, evidence-driven improvement} of their own pedagogical
+artifacts.
+
+\subsection{Learning from Self-Improving AI}
+
+A parallel revolution has been unfolding in artificial intelligence research.
+A class of systems has emerged that can improve their own performance through
+iterative self-modification, validated against empirical benchmarks rather than
+human design alone. The most relevant of these is the
+\textbf{Darwin-G\"{o}del-Machine (DGM)}, introduced in 2025 by researchers at
+Sakana AI, the University of British Columbia, and the Vector
+Institute~\cite{zhang2025dgm,sakana2025dgm}.
+
+The central insight of the DGM is a pragmatic relaxation. The original
+G\"{o}del Machine, proposed theoretically by J\"{u}rgen
+Schmidhuber~\cite{schmidhuber2007goedel}, required that any self-modification
+be \textit{provably} beneficial before adoption---a requirement that is
+intractable for complex systems. The DGM instead requires only
+\textit{empirical evidence} that a proposed modification improves performance
+on real benchmarks. This single shift transforms self-improvement from a
+theoretical impossibility into an engineering practice.
+
+This paper argues that the same shift can be applied to educational content.
+We do not need to \textit{prove} that a given MicroSim or explanation is
+pedagogically optimal. We need only gather empirical evidence---from learning
+analytics---that one variant outperforms another, and then let an archive of
+variants evolve over time. The remainder of this paper develops this analogy
+into a concrete, implementable framework.
+
+\subsection{Contributions}
+
+This paper makes the following contributions:
+
+\begin{enumerate}
+    \item A conceptual mapping between DGM mechanisms and intelligent textbook
+          architecture.
+    \item A survey of the current state of the art in self-improving AI systems
+          relevant to education.
+    \item A worked architecture using MkDocs, p5.js MicroSims, and an
+          xAPI/LRS analytics pipeline.
+    \item A proposed JSON schema standard for storing MicroSim performance
+          data.
+    \item A discussion of safety constraints and human oversight requirements
+          for evolving educational content.
+\end{enumerate}

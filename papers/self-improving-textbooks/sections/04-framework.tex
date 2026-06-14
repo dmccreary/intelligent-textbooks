@@ -1,0 +1,145 @@
+\section{A Framework for Self-Improving Intelligent Textbooks}
+
+\subsection{The Core Analogy}
+
+The mapping between DGM components and intelligent textbook components is
+direct enough to be productive. Table~\ref{tab:analogy} makes it explicit.
+
+\begin{table}[h]
+\centering
+\caption{DGM--Intelligent Textbook Component Mapping}
+\begin{tabular}{@{}L{4.5cm}L{7.5cm}@{}}
+\toprule
+DGM Concept & Intelligent Textbook Analog \\
+\midrule
+Coding agent codebase & MicroSim source files and content-generation skills \\
+Frozen foundation model & The code-generation language model (unchanged) \\
+Benchmark (SWE-bench) & Student learning outcomes and engagement metrics \\
+Archive of agents & Versioned library of MicroSim and explanation variants \\
+Parent selection & Choosing a high-performing variant to mutate \\
+Self-modification & Generating a content variant with a pedagogical hypothesis \\
+Fitness evaluation & Aggregating analytics into a per-variant score \\
+Open-ended exploration & Concept-graph traversal and Bloom's-level laddering \\
+\bottomrule
+\end{tabular}
+\label{tab:analogy}
+\end{table}
+
+\subsection{The Evolutionary Loop}
+
+The proposed system operates in a generational cycle analogous to the DGM's,
+but with pedagogical artifacts as the unit of evolution:
+
+\begin{enumerate}
+    \item \textbf{Selection.} From the archive of content variants for a given
+          concept node, select a parent. Selection favors variants with strong
+          measured outcomes but reserves probability mass for under-explored
+          variants, balancing exploitation against exploration just as the DGM
+          balances high-performing parents against those with few children.
+
+    \item \textbf{Mutation.} A code-generation tool produces one or more child
+          variants of the parent. Each mutation is driven by an explicit
+          \textit{pedagogical hypothesis}---for example, ``adding a real-time
+          graph of velocity over time will improve student ability to connect
+          the simulation to the underlying equation,'' or ``reducing the number
+          of simultaneous parameters from four to two will reduce cognitive
+          load for novices.''
+
+    \item \textbf{Deployment.} Child variants are deployed to a subset of
+          learners, either through randomized assignment (A/B testing) or
+          through a multi-armed bandit allocation that shifts traffic toward
+          better-performing variants over time.
+
+    \item \textbf{Evaluation.} Learning analytics are gathered for each variant
+          and aggregated into a fitness score (Section~\ref{sec:fitness}).
+
+    \item \textbf{Archival.} Variants meeting a quality threshold are retained
+          in the archive with their full performance record, becoming candidate
+          parents for future generations. Crucially, even underperforming
+          variants are retained as potential stepping stones, preserving the
+          open-endedness that the DGM ablation studies showed to be essential.
+\end{enumerate}
+
+\subsection{The Concept Dependency Graph as Search Space}
+
+In the DGM, the search space is the space of all computable agent programs.
+In an intelligent textbook, the concept dependency graph provides a far more
+structured and tractable search space. Each node is an independent
+evolutionary population. The graph topology supplies three useful signals:
+
+\begin{itemize}
+    \item \textbf{Prioritization.} Concepts where students show weak mastery,
+          or whose downstream dependents show degraded performance, are
+          prioritized for evolutionary effort.
+    \item \textbf{Diagnosis.} When learners consistently fail at a particular
+          prerequisite edge, the system can hypothesize that a
+          \textit{bridging concept} is missing and propose inserting a new
+          node---a structural mutation of the graph itself, not merely of
+          content within a node.
+    \item \textbf{Credit assignment.} Because the graph encodes prerequisites,
+          the system can partially attribute a student's failure on a downstream
+          concept to weaknesses in upstream content, focusing improvement where
+          it will have the greatest cascading benefit.
+\end{itemize}
+
+\subsection{The Fitness Function: From Analytics to Selection Pressure}
+\label{sec:fitness}
+
+The single most important design decision, as the AlphaEvolve experience makes
+clear, is the evaluator. A naive fitness function---for example, raw quiz
+score---invites perverse outcomes such as variants that make quizzes easier
+rather than instruction better. A robust pedagogical fitness function should be
+multi-dimensional and aligned with genuine learning.
+
+We propose a composite fitness function with the following components:
+
+\begin{itemize}
+    \item \textbf{Learning gain.} The improvement in assessment performance
+          from before to after engaging with the MicroSim, normalized by the
+          maximum possible gain. This is the primary signal and should dominate.
+    \item \textbf{Bloom's-level advancement.} Whether the student demonstrates
+          mastery at higher cognitive levels (\textit{Apply}, \textit{Analyze})
+          rather than mere recall. A variant that moves students up the taxonomy
+          is worth more than one that merely improves recall.
+    \item \textbf{Efficiency.} The number of attempts and the time required to
+          reach mastery. Faster mastery, all else equal, indicates clearer
+          instruction.
+    \item \textbf{Engagement quality.} Interaction depth with the MicroSim,
+          distinguishing meaningful exploration from disengagement or random
+          clicking.
+    \item \textbf{Retention.} Performance on the concept in later sessions,
+          capturing durable learning rather than transient performance.
+\end{itemize}
+
+These components are combined into a single scalar with weights that reflect
+institutional priorities, with learning gain and retention weighted most
+heavily to guard against optimizing for shallow proxies. The composite design
+directly echoes AlphaEvolve's requirement for an evaluation function with
+explicit metrics, adapted to the multi-objective reality of learning.
+
+\subsection{Two Deployment Phases}
+
+A practical deployment must account for the reality that most intelligent
+textbooks begin life on a static host such as GitHub Pages with anonymous
+users, and only later integrate identity-bearing learning analytics. The
+framework supports both phases.
+
+\textbf{Phase~1: Anonymous aggregate analytics.} With static hosting and no
+learner identity, the system relies on aggregate event analytics (for example,
+a web analytics platform) and browser-local storage for within-session
+continuity. This yields aggregate per-variant fitness signals sufficient to
+drive selection at the population level, though it cannot reconstruct
+individual learning trajectories.
+
+\textbf{Phase~2: Identity-bearing xAPI and LRS.} As the textbook integrates
+the Experience API and a Learning Record Store~\cite{adl2013xapi}, each
+interaction is recorded as a structured statement carrying a learner
+identifier, enabling per-learner trajectory analysis, retention measurement
+across sessions, and far richer fitness signals.
+
+The critical engineering recommendation is to \textbf{design the Phase~1
+analytics schema to match the Phase~2 xAPI schema from the outset}, using
+identical field names and concept identifiers. This makes the eventual
+migration a matter of swapping the data sink rather than re-instrumenting
+content, and allows fitness queries to run against either backend with minimal
+change.

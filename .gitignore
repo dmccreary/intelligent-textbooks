@@ -3,3 +3,5 @@ site
 ~$*
 .vscode/
 .cache
+__pycache__/
+*.pyc
