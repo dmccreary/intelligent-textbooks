@@ -1,0 +1,41 @@
+\section{Safety, Oversight, and Ethical Considerations}
+\label{sec:safety}
+
+The DGM authors are explicit that their experiments relied on sandboxing and
+human oversight, and they note that the broader safety challenges of recursively
+self-improving systems remain open~\cite{zhang2025dgm}. SEAL's authors
+similarly emphasize that human supervision is required to ensure improvements
+remain beneficial and aligned~\cite{zweiger2025seal}. Evolving educational
+content raises its own distinct concerns that demand comparable care.
+
+\textbf{Goodhart's Law and proxy gaming.} Any fitness function is a proxy for
+genuine learning, and optimizing a proxy can degrade the true objective. A
+variant that maximizes quiz scores by narrowing instruction to test items, or
+that maximizes engagement through manipulative design, would score well while
+harming learning. The multi-dimensional fitness function of
+Section~\ref{sec:fitness}, with heavy weight on retention and normalized gain
+rather than raw scores, is a partial defense, but human review of \textit{why}
+a variant performs well remains essential.
+
+\textbf{Human-in-the-loop gating.} No generated variant should reach learners
+without review. The \texttt{human\_review} block in the fitness schema enforces
+this structurally: a variant cannot become \texttt{active} without an approving
+reviewer. This mirrors the DGM's fixed, human-controlled parent-selection and
+archiving process, which the authors describe as an implicit safety constraint.
+
+\textbf{Equity across learner segments.} Because the framework supports
+audience-conditioned evolution, it risks optimizing well for majority segments
+while neglecting smaller ones. Fitness aggregation should monitor per-segment
+performance and flag variants that improve aggregate scores while harming any
+segment, particularly underserved populations such as rural or under-resourced
+learners.
+
+\textbf{Privacy.} The schema deliberately uses account-based identifiers rather
+than personal information and supports a fully anonymous mode. Learner data
+feeding the evolutionary loop should be governed by clear consent and
+data-minimization practices, and identifiers should never be embedded in URLs
+or query strings.
+
+\textbf{Sandboxed deployment.} Generated MicroSim code should be validated in
+an isolated preview environment before any public deployment, a practice that
+aligns naturally with a preview-branch workflow on a static host.

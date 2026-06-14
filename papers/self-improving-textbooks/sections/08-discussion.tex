@@ -1,0 +1,30 @@
+\section{Discussion and Future Work}
+
+The framework proposed here is, at present, a design rather than a validated
+system, and several questions remain open. The most pressing is empirical:
+does evolutionary refinement of MicroSims actually produce measurable learning
+gains over hand-authored content, and at what cost? The DGM and AlphaEvolve
+results in their respective domains are encouraging, but education is a noisier
+domain with smaller effect sizes and far greater measurement difficulty, so
+direct transfer of their success rates should not be assumed.
+
+Several avenues merit investigation. Transferable mutation operators---pedagogical
+strategies such as prediction prompts that win in one concept and propagate to
+others---could dramatically accelerate the search, echoing the general-purpose
+improvements the DGM discovered. The graph-structural mutations of
+Section~4.3, in which the system proposes new bridging concepts, represent a
+more ambitious form of self-improvement that modifies the search space itself.
+And the skill-level self-improvement of Section~4.4 raises the possibility of
+compounding second-order gains, though it also compounds the safety concerns
+and would require correspondingly stronger oversight.
+
+The convergence of three trends makes this an opportune moment for such work:
+foundation models capable of generating high-quality educational
+content~\cite{mccreary2025claudeskills}, mature learning-analytics standards
+in xAPI and cmi5 that provide the empirical grounding, and a body of
+demonstrated self-improvement systems that provide a proven architectural
+template. The central thesis of this paper is that intelligent textbooks
+possess all the structural ingredients---modular content, instrumented
+delivery, and a graph-organized search space---to become, in the DGM's phrase,
+capable of gathering their own stepping stones along a path that unfolds toward
+continuously improving instruction.

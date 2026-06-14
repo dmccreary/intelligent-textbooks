@@ -89,7 +89,21 @@
       "Bash(cd /Users/dan/Documents/ws *)",
       "Bash(git mv *)",
       "Bash(bash /tmp/book-metrics-deploy.sh)",
-      "Bash(awk '/=== \\\\[[0-9]+\\\\] __TRACKED_VAR__ ===/{flag=1} flag{print} /RESULT __TRACKED_VAR__:/{flag=0}' /tmp/book-metrics-deploy.log)"
+      "Bash(awk '/=== \\\\[[0-9]+\\\\] __TRACKED_VAR__ ===/{flag=1} flag{print} /RESULT __TRACKED_VAR__:/{flag=0}' /tmp/book-metrics-deploy.log)",
+      "Read(//Users/dan/Documents/ws/bioinformatics/**)",
+      "Bash(awk '/^ *)",
+      "Bash(node -e ' *)",
+      "Bash(awk '/^plugins:/{p=1} /^hooks:/{h=1} p||h{print NR\": \"$0} /^[a-z]/ && NR>1 && !/^plugins:|^hooks:/{if\\(p&&$0!~/^  /\\)p=0; if\\(h&&$0!~/^  /\\)h=0}' mkdocs.yml)",
+      "Bash(git check-ignore *)",
+      "Bash(cd /Users/dan/Documents/ws/intelligent-textbooks *)",
+      "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
+      "Bash(grep -nA3 \"^hooks:\" mkdocs.yml)",
+      "Bash(python3 -m http.server 8899 --bind 127.0.0.1)",
+      "Bash(echo \"started temp static server pid=$!\")",
+      "mcp__Claude_in_Chrome__tabs_create_mcp",
+      "Bash(pkill -f \"http.server 8899\")",
+      "Bash(lsof -nP -iTCP:8899 -sTCP:LISTEN)",
+      "Bash(ls -d ~/Documents/ws/graph-neural-networks-textbook 2>/dev/null && echo \"EXISTS LOCALLY\" || echo \"NOT LOCAL\")"
     ],
     "deny": [],
     "ask": []

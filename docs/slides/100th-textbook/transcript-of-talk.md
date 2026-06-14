@@ -58,13 +58,9 @@ And so my quest has been "How do I build such a thing?"
 31 years ago.
 So I've had some time to think about it, and I had kids at the time and I wanted them to grow up in a world where they could engage in a joyful way, right?
 
-In the best of all.
-
-Now AI is just like a tool.
-
-any other technology tool just like a knife can be used for good or can be used for evil, right?
-
-Why don't we focus on bringing out the best that we can in China?
+In the best of all ways.
+Now AI is just like any tool.  Any other technology tool just like a knife can be used for good or can be used for evil, right?
+Why don't we focus on bringing out the best that we can in AI?
 
 And to me, this is democratization of education so that every child on planet earth has the same opportunities as the best MIT graduate.
 
@@ -72,13 +68,13 @@ Right?
 
 We should be able to do that today.
 
-now one of the things that I I have observed is that textbooks are especially today are problematic at the University of Minnesota we have textbooks that have been used and we have some professors here to to justify their this they've used the same textbook for 15 years right they know every page in every lab and every exercise they're very familiar with it it's kind of hard to get them to jump on this new bandwag you're not where you teach a class to the lowest third of the class.
+Now one of the things that I have observed is that even today, textbooks are especially problematic. At the University of Minnesota we have textbooks professors used for 15 years. They know every page in every lab and every exercise they're very familiar with it it's kind of hard to get them to jump on this new bandwagon
+
+ you're not where you teach a class to the lowest third of the class.
 
 Uh, some of the kids that don't get it are lost, but you often lose and the best students are born, right?
 
-So, we lose most of our students.
-
-Uh, that's called direct instruction.
+So, we lose most of our best students.  That's called direct instruction.
 
 you stand up sage on the stage and that's how you learn.
 
@@ -92,15 +88,15 @@ What are they going to do, right?
 
 they're going to go to their Tik Tok place.
 
-so we have this crisis of engagement.
+So we have this crisis of engagement.
 
 Our kids are not engaging in the textbooks.
 
-and there's no time to personalize, right?
+And there's no time to personalize, right?
 
-you do one sizefits-all.
+The one size fits-all model does not work.
 
-Imagine a world where you could type in generate a thousandpage textbook on information systems with 100 micro simulations in it and it would do it.
+Imagine a world where you could type in generate a thousand page textbook on information systems with 100 micro simulations in it and it would do it.
 
 Okay, we're not that far away.
 

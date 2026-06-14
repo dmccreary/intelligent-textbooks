@@ -1,0 +1,68 @@
+\section{Worked Examples}
+
+\subsection{Example MicroSim: A Bouncing Ball for Newtonian Mechanics}
+
+Consider a MicroSim that visualizes a bouncing ball under gravity, targeting
+the concept \textit{Newton's Second Law} within a physics textbook. The base
+variant exposes a single control: initial drop height. Several evolutionary
+hypotheses can be generated and tested:
+
+\begin{itemize}
+    \item \textbf{Variant A (graph overlay):} Add a real-time plot of velocity
+          versus time alongside the animation. \textit{Hypothesis: connecting
+          the visual motion to its quantitative representation improves transfer
+          to symbolic problem-solving.}
+    \item \textbf{Variant B (parameter reduction):} For novice learners, hide
+          all controls except one, reducing extraneous cognitive load.
+          \textit{Hypothesis: fewer simultaneous variables improves initial
+          conceptual grasp.}
+    \item \textbf{Variant C (prediction prompt):} Before running the animation,
+          ask the learner to predict where the ball will be after one second.
+          \textit{Hypothesis: active prediction (a generative learning
+          strategy) improves retention.}
+\end{itemize}
+
+Each variant is deployed, its composite fitness measured, and the winner
+promoted. Note that Variant C tests a pedagogical strategy (prediction-based
+active learning) that generalizes across many MicroSims; a win here might
+propagate as a mutation operator applied to other concepts, mirroring how the
+DGM discovered general-purpose improvements such as solution-ranking that
+transferred across tasks.
+
+\subsection{Example MicroSim: Compound Interest for Personal Finance}
+
+A compound interest visualizer in a personal finance textbook lets learners
+adjust principal, interest rate, and time horizon, and observe the resulting
+growth curve. This MicroSim illustrates an important archival principle: a
+variant that performs poorly for one audience may be the ideal stepping stone
+for another. A visually dense variant showing multiple overlaid scenarios might
+overwhelm high-school learners but excel for adult learners with financial
+background. The archive retains both, and selection becomes
+audience-conditioned---a natural extension of the concept-graph search space
+into a learner-segment dimension.
+
+\subsection{Example Textbook Domains}
+
+The framework applies across the disciplinary breadth typical of an
+intelligent-textbook portfolio. MicroSim-rich quantitative domains such as
+physics and biology at the secondary and International Baccalaureate level are
+especially strong candidates, because the abundance of simulatable phenomena
+gives the evolutionary process a large space of meaningful mutations. Computing
+curricula such as algorithms and data structures are equally promising: an
+animated sorting or graph-traversal MicroSim has many tunable pedagogical
+dimensions (animation speed, step annotation, comparison highlighting) that
+map naturally onto evolutionary parameters. History and other narrative domains
+benefit less from simulation but can still evolve their explanatory text and
+concept-graph structure.
+
+\subsection{Skill-Level Self-Improvement}
+
+A subtle but powerful application targets not the MicroSims themselves but the
+\textit{content-generation skills} that produce them. Following the DGM's
+self-referential principle---that improving the codebase also improves the
+ability to improve the codebase---the prompts and templates used to generate
+MicroSims can themselves be treated as an evolving population. Variant prompts
+are scored by the average fitness of the MicroSims they produce, and
+high-performing prompts are retained and mutated. Over time, the generator
+improves, a genuine second-order effect that compounds the gains from
+content-level evolution.

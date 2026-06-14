@@ -1,0 +1,282 @@
+\section{Proposed JSON Standard for MicroSim Performance Data}
+
+This section proposes a concrete JSON schema for storing MicroSim performance
+data. The design has three goals: to capture the fields necessary to compute
+the fitness function of Section~\ref{sec:fitness}; to align with the
+Experience API so that the same instrumentation works in both deployment
+phases; and to support the archival, variant-centric data model that the
+evolutionary loop requires.
+
+\subsection{Design Principles}
+
+The schema follows several principles drawn from the xAPI and
+cmi5~\cite{aicc2015cmi5} specifications and from the requirements of the
+evolutionary loop:
+
+\begin{itemize}
+    \item \textbf{Variant-centric.} Every record identifies the specific
+          MicroSim variant, not merely the concept, so that fitness can be
+          computed per variant. This is the field that makes evolution possible
+          and is the most important addition over conventional analytics.
+    \item \textbf{xAPI-aligned.} Field names and structure mirror the xAPI
+          Actor--Verb--Object--Result pattern. The xAPI specification recommends
+          using built-in properties (such as the Result score) before resorting
+          to custom extensions, since custom extensions may be excluded from
+          standard LRS reports; the schema follows this guidance.
+    \item \textbf{Standard verbs.} The schema uses registered xAPI and cmi5
+          verbs such as \texttt{initialized}, \texttt{interacted},
+          \texttt{answered}, \texttt{completed}, \texttt{passed}, and
+          \texttt{failed} rather than inventing new ones, preserving
+          interoperability.
+    \item \textbf{Privacy-conscious.} Learner identity is carried in an
+          account-based identifier rather than personal information, and the
+          schema supports a fully anonymous mode for Phase~1.
+\end{itemize}
+
+\subsection{The MicroSim Event Record Schema}
+
+The following is the proposed per-event record. It can be emitted directly
+to a web analytics platform in Phase~1 (flattened) or wrapped in a full xAPI
+statement in Phase~2.
+
+\begin{lstlisting}[style=json]
+{
+  "$schema": "https://intelligenttextbooks.org/schemas/microsim-event/v1.json",
+  "event_id": "a7f3c918-b88b-4220-90a5-a4c32391a240",
+  "schema_version": "1.0.0",
+  "timestamp": "2026-06-14T15:42:08.000Z",
+
+  "actor": {
+    "mode": "identified",
+    "account_id": "student-uuid-or-anonymous-session-hash",
+    "segment": "ib-physics-sl"
+  },
+
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/completed",
+    "display": "completed"
+  },
+
+  "microsim": {
+    "sim_id": "bouncing-ball",
+    "variant_id": "bouncing-ball-v3-graph-overlay",
+    "parent_variant_id": "bouncing-ball-v2",
+    "generation": 3,
+    "hypothesis": "Real-time velocity graph improves transfer to symbolic problems",
+    "source_url": "https://example.github.io/sims/bouncing-ball-v3/main.html"
+  },
+
+  "concept": {
+    "concept_id": "newtons-second-law",
+    "graph_node": "phys.mechanics.dynamics.n2l",
+    "bloom_level": 2,
+    "bloom_label": "Apply"
+  },
+
+  "result": {
+    "score": {
+      "scaled": 0.75,
+      "raw": 15,
+      "min": 0,
+      "max": 20
+    },
+    "success": true,
+    "completion": true,
+    "duration_iso8601": "PT2M22S",
+    "duration_seconds": 142
+  },
+
+  "interaction": {
+    "attempts": 2,
+    "param_changes": 11,
+    "controls_used": ["drop_height", "gravity"],
+    "idle_seconds": 8,
+    "engagement_depth": 0.82
+  },
+
+  "learning": {
+    "pre_assessment_score": 0.40,
+    "post_assessment_score": 0.75,
+    "normalized_gain": 0.58,
+    "prediction_made": true,
+    "prediction_correct": false
+  },
+
+  "context": {
+    "textbook_id": "ib-physics-sl",
+    "chapter": "dynamics",
+    "registration": "ec231277-b27b-4c15-8291-d29225b2b8f7",
+    "platform": "mkdocs-material",
+    "client": "web",
+    "ab_test_group": "treatment-graph-overlay"
+  }
+}
+\end{lstlisting}
+
+\subsection{Field Reference}
+
+The schema's blocks correspond to the components of the fitness function and
+to xAPI's statement structure:
+
+\begin{itemize}
+    \item \textbf{\texttt{actor}} carries learner identity. The \texttt{mode}
+          field switches between \texttt{anonymous} (Phase~1) and
+          \texttt{identified} (Phase~2). The \texttt{segment} enables
+          audience-conditioned evolution as described in
+          Section~\ref{sec:compound-interest}.
+    \item \textbf{\texttt{verb}} uses a registered xAPI verb identifier and
+          display string, ensuring LRS interoperability.
+    \item \textbf{\texttt{microsim}} is the variant-centric core. The
+          \texttt{variant\_id}, \texttt{parent\_variant\_id}, and
+          \texttt{generation} fields encode the evolutionary lineage directly,
+          allowing the archive to be reconstructed as a tree. The
+          \texttt{hypothesis} field documents \textit{why} the variant was
+          created, paralleling the DGM's practice of recording what has been
+          tried and why.
+    \item \textbf{\texttt{concept}} ties the event to the dependency graph and
+          Bloom's level, supplying the structured search-space coordinates.
+    \item \textbf{\texttt{result}} uses xAPI's standard \texttt{score} object
+          (scaled, raw, min, max), \texttt{success}, \texttt{completion}, and
+          ISO~8601 duration, in keeping with the recommendation to prefer
+          built-in properties.
+    \item \textbf{\texttt{interaction}} captures engagement-quality signals
+          that distinguish meaningful exploration from disengagement.
+    \item \textbf{\texttt{learning}} carries the pre/post assessment and
+          normalized-gain fields that drive the primary fitness component.
+    \item \textbf{\texttt{context}} supplies textbook, chapter, A/B group, and
+          the cmi5-style \texttt{registration} identifier that groups statements
+          within a learning session.
+\end{itemize}
+
+\subsection{The Aggregated Variant Fitness Record}
+
+Individual events are periodically aggregated into a per-variant fitness
+record. This is the structure the selection step reads from, and it serves as
+the sidecar metadata stored alongside each MicroSim variant in the archive.
+
+\begin{lstlisting}[style=json]
+{
+  "$schema": "https://intelligenttextbooks.org/schemas/variant-fitness/v1.json",
+  "variant_id": "bouncing-ball-v3-graph-overlay",
+  "concept_id": "newtons-second-law",
+  "generation": 3,
+  "parent_variant_id": "bouncing-ball-v2",
+  "hypothesis": "Real-time velocity graph improves transfer to symbolic problems",
+  "window": {
+    "start": "2026-05-01T00:00:00Z",
+    "end": "2026-06-01T00:00:00Z"
+  },
+  "sample": {
+    "n_learners": 412,
+    "n_events": 1187,
+    "segments": {
+      "ib-physics-sl": 318,
+      "us-high-school": 94
+    }
+  },
+  "metrics": {
+    "avg_normalized_gain": 0.58,
+    "avg_post_score": 0.75,
+    "bloom_advancement_rate": 0.41,
+    "avg_attempts": 2.1,
+    "avg_time_seconds": 138,
+    "avg_engagement_depth": 0.79,
+    "retention_score": 0.68,
+    "completion_rate": 0.91
+  },
+  "fitness": {
+    "composite_score": 0.712,
+    "weights": {
+      "normalized_gain": 0.35,
+      "bloom_advancement": 0.20,
+      "efficiency": 0.10,
+      "engagement_quality": 0.10,
+      "retention": 0.25
+    },
+    "confidence_interval_95": [0.681, 0.743],
+    "rank_within_concept": 1
+  },
+  "status": "active",
+  "human_review": {
+    "approved": true,
+    "reviewer": "content-team",
+    "reviewed_at": "2026-05-02T10:15:00Z"
+  }
+}
+\end{lstlisting}
+
+The \texttt{fitness} block records both the composite score and the weights
+used to compute it, so that scoring remains auditable and reproducible as
+priorities change. The \texttt{confidence\_interval\_95} field is essential:
+selection should account for statistical uncertainty, preferring variants whose
+advantage is well-established over those with a high but noisy point estimate.
+The \texttt{human\_review} block enforces the oversight requirement discussed
+in Section~\ref{sec:safety}; a variant cannot reach \texttt{active} status
+without review.
+
+\subsection{The Full xAPI Statement Form (Phase~2)}
+
+For Phase~2, the event record maps onto a conformant xAPI statement. The
+MicroSim-specific fields move into result and context extensions, with custom
+extension identifiers under an organizational namespace, while standard fields
+use built-in properties~\cite{rustici2024cmi5}:
+
+\begin{lstlisting}[style=json]
+{
+  "id": "a7f3c918-b88b-4220-90a5-a4c32391a240",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://example.github.io",
+      "name": "student-uuid"
+    }
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/completed",
+    "display": { "en-US": "completed" }
+  },
+  "object": {
+    "id": "https://example.github.io/sims/bouncing-ball-v3",
+    "objectType": "Activity",
+    "definition": {
+      "name": { "en-US": "Bouncing Ball MicroSim v3 (graph overlay)" },
+      "type": "http://adlnet.gov/expapi/activities/simulation",
+      "extensions": {
+        "https://intelligenttextbooks.org/xapi/ext/variant-id":
+            "bouncing-ball-v3-graph-overlay",
+        "https://intelligenttextbooks.org/xapi/ext/concept-id":
+            "newtons-second-law",
+        "https://intelligenttextbooks.org/xapi/ext/bloom-level": 2
+      }
+    }
+  },
+  "result": {
+    "score": { "scaled": 0.75, "raw": 15, "min": 0, "max": 20 },
+    "success": true,
+    "completion": true,
+    "duration": "PT2M22S",
+    "extensions": {
+      "https://intelligenttextbooks.org/xapi/ext/normalized-gain": 0.58,
+      "https://intelligenttextbooks.org/xapi/ext/attempts": 2,
+      "https://intelligenttextbooks.org/xapi/ext/engagement-depth": 0.82
+    }
+  },
+  "context": {
+    "registration": "ec231277-b27b-4c15-8291-d29225b2b8f7",
+    "contextActivities": {
+      "category": [
+        { "id": "https://w3id.org/xapi/cmi5/context/categories/moveon" }
+      ],
+      "parent": [
+        { "id": "https://example.github.io/textbooks/ib-physics-sl/dynamics" }
+      ]
+    }
+  },
+  "timestamp": "2026-06-14T15:42:08.000Z"
+}
+\end{lstlisting}
+
+This statement is conformant with the xAPI data model and follows cmi5
+conventions for category context activities and the registration identifier,
+so it can be stored in any standards-compliant Learning Record Store and
+queried by the fitness-aggregation pipeline.
