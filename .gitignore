@@ -5,3 +5,8 @@ site
 .cache
 __pycache__/
 *.pyc
+
+# Google service account keys — never commit these
+*-key.json
+*service-account*.json
+application_default_credentials.json

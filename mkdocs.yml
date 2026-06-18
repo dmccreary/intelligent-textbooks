@@ -98,6 +98,7 @@ nav:
     - History of Intelligent Textbooks & Interactive Learning Timeline: sims/intelligent-textbook-timeline/index.md
     - Implementation Decision Matrix: sims/implementation-matrix/index.md
     - Intelligent Textbook Ecosystem Dynamics: sims/textbook-ecosystem-cld/index.md
+    - Intelligent Textbook Page Views: sims/site-analytics/index.md
     - Kemp Instructional Design Model MicroSim: sims/kemp-model/index.md
     - Levels of Interactivity MicroSim: sims/levels-of-interactivity/index.md
     - METR Task Horizon Growth: sims/metr-task-horizon/index.md
@@ -117,6 +118,8 @@ nav:
     - Word Cloud MicroSim: sims/word-cloud/index.md
     - Workflow for Generating Intelligent Textbooks: sims/book-gen-workflow/index.md
     - Workflow for Generating Intelligent Textbooks: sims/templates/index.md
+
+
 
   - Case Studies:
     - Intro: case-studies/index.md

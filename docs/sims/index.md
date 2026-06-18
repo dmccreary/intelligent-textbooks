@@ -6,7 +6,7 @@ hide:
 # MicroSims and Infographics
 
 Interactive simulations and infographics used in our intelligent textbooks.
-This site has 24 MicroSims covering instructional design models,
+This site has 26 MicroSims covering instructional design models,
 learning graph tools, and data visualizations.
 
 <div class="grid cards grid-3-col" markdown>
@@ -74,6 +74,12 @@ learning graph tools, and data visualizations.
     ![Implementation Decision Matrix](./implementation-matrix/implementation-matrix.png)
 
     2D matrix for deciding which intelligent textbook level to target based on capability and readiness.
+
+- **[Intelligent Textbook Page Views](./site-analytics/index.md)**
+
+    ![Intelligent Textbook Page Views](./site-analytics/site-analytics.png)
+
+    Horizontal bar chart of Google Analytics page views over the last 90 days across all intelligent textbooks.
 
 - **[Kemp Instructional Design Model](./kemp-model/index.md)**
 
