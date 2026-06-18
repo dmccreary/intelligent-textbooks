@@ -1,5 +1,9 @@
 # References
 
+## Video of Talk on Intelligent Textbooks
+
+[Applied AI Intelligent Textbooks](https://youtu.be/M59snXhAIgk?si=-XnrTmn4sLPd67-6) - a celebration of our 100th textbook.  Recorded on June 2026 at the Lab 651 offices in St. Paul Minnesota.
+
 ## Classification
 
 [Concepts for Classification of Adaptive Instructional Systems](https://ieeexplore.ieee.org/abstract/document/10127601)
