@@ -2,6 +2,12 @@
 
 Scripts for gathering metrics across all intelligent textbook repositories.
 
+> **Automated monthly refresh:** the page-views report below is regenerated and the
+> [Site Analytics MicroSim](https://dmccreary.github.io/intelligent-textbooks/sims/site-analytics/)
+> redeployed automatically on the 1st of each month via a **Claude Code Routine**.
+> See [this gist](https://gist.github.com/dmccreary/ca9a391bc781a3862fee62debb3f93ab)
+> for how that automation is configured.
+
 ---
 
 ## ga4-pageviews-report.py
