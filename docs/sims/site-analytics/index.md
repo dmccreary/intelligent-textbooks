@@ -11,7 +11,7 @@ quality_score: 0
 
 # Intelligent Textbook Page Views
 
-<iframe src="main.html" height="1322" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="1690" width="100%" scrolling="no"></iframe>
 
 [Run the Intelligent Textbook Page Views MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
@@ -38,7 +38,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/site-analytics/main.html"
-        height="1322px"
+        height="1690px"
         width="100%"
         scrolling="no"></iframe>
 ```
