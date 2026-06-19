@@ -937,15 +937,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-1" title="Early Development (1/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/robot-day)
 
-- **[Seizure-Safe Schools](https://fieryknight2010.github.io/seizure-safe-schools/)**
+- **[Seizure-Safe Schools](https://edanmn.github.io/)**
 
     ![Seizure-Safe Schools](./img/seizure-safe-schools.jpg)
 
     A plain-language interactive textbook from the Epilepsy Data & Advocacy Network (EDAN) covering epilepsy, seizure first aid, Minnesota's seizure-safety law, and school seizure-plan gap data. Designed for school staff and student advocates.
 
-    7 Chapters · 1 MicroSims · 6K Words · 19 Glossary Terms
+    7 Chapters · 1 MicroSim · 6K Words · 19 Glossary Terms
     · <span class="completion completion-3" title="Functional (3/5)"></span>
-    · [:octicons-mark-github-16: Repository](https://github.com/fieryknight2010/seizure-safe-schools)
+    · [:octicons-mark-github-16: Repository](https://github.com/edanmn/edanmn.github.io)
+    <!--  The old like was https://github.com/fieryknight2010/seizure-safe-schools -->
 
 - **[Selecting the Right Database](https://dmccreary.github.io/right-database/)**
 
