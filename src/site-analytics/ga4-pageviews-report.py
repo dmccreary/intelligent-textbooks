@@ -256,12 +256,13 @@ def main():
 
     # Optional CSV output
     if args.csv:
+        run_date = datetime.now().strftime("%Y-%m-%d")
         with open(CSV_OUT, "w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=["rank", "slug", "measurement_id",
-                                                    "numeric_id", "page_views"])
+                                                    "numeric_id", "page_views", "generated"])
             writer.writeheader()
             for rank, row in enumerate(rows, 1):
-                writer.writerow({"rank": rank, **row})
+                writer.writerow({"rank": rank, **row, "generated": run_date})
         print(f"CSV written → {CSV_OUT}")
 
 

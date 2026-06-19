@@ -153,7 +153,7 @@ python src/site-analytics/ga4-pageviews-report.py --refresh
 | File | Description |
 |------|-------------|
 | `ga4-property-map.json` | Cache of `G-XXXXX → numeric property ID` mappings built by the Admin API. A `null` value is a *negative* cache entry — an ID that could not be matched to any visible property (so it is not re-scanned every run). Delete this file to force a full re-scan, or use `--refresh`. |
-| `ga4-pageviews-results.csv` | Written only when `--csv` is passed. Columns: `rank, slug, measurement_id, numeric_id, page_views`. |
+| `ga4-pageviews-results.csv` | Written only when `--csv` is passed. Columns: `rank, slug, measurement_id, numeric_id, page_views, generated`. `generated` is the report run-date (`YYYY-MM-DD`), repeated on every row; the site-analytics MicroSim reads it to show its "Last Update" date. |
 
 ### Troubleshooting
 
