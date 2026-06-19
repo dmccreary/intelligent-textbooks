@@ -1,5 +1,5 @@
 // Intelligent Textbook Page Views - Chart.js (horizontal bar)
-// CANVAS_HEIGHT: 1320
+// CANVAS_HEIGHT: 1690
 //
 // Loads ga4-pageviews-results.csv (same directory) at runtime and renders a
 // ranked horizontal bar chart of GA4 page views over the last 90 days.
@@ -9,22 +9,32 @@
 const CSV_FILE = 'ga4-pageviews-results.csv';
 const ROW_PX = 20;   // vertical pixels allotted per bar
 
-// Parse simple CSV (no quoted commas in this data) into array of row objects.
+// Parse simple CSV (no quoted commas in this data). Returns { rows, generated }
+// where `generated` is the report run-date (ISO YYYY-MM-DD) from the CSV.
 function parseCsv(text) {
     const lines = text.trim().split(/\r?\n/);
     const header = lines[0].split(',');
     const iSlug = header.indexOf('slug');
     const iViews = header.indexOf('page_views');
+    const iGen = header.indexOf('generated');
     const rows = [];
+    let generated = '';
     for (let i = 1; i < lines.length; i++) {
         if (!lines[i].trim()) continue;
         const cols = lines[i].split(',');
+        if (!generated && iGen >= 0 && cols[iGen]) generated = cols[iGen].trim();
         rows.push({ slug: cols[iSlug], views: parseInt(cols[iViews], 10) || 0 });
     }
-    return rows;
+    return { rows, generated };
 }
 
-function renderChart(rows) {
+// Format an ISO date (YYYY-MM-DD) as DD/MM/YYYY. Returns '' if not parseable.
+function formatDate(iso) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
+    return m ? `${m[3]}/${m[2]}/${m[1]}` : '';
+}
+
+function renderChart(rows, generated) {
     // Sort descending by views so the most-visited textbook is at the top.
     rows.sort((a, b) => b.views - a.views);
 
@@ -35,6 +45,12 @@ function renderChart(rows) {
 
     const main = document.querySelector('main');
     const chartPx = labels.length * ROW_PX + 70;  // bars + x-axis room
+    const lastUpdate = formatDate(generated);
+    const lastUpdateHtml = lastUpdate
+        ? `<div style="font-size: 11px; color: #777; text-align: center; margin: 0 0 6px 0;">
+                Last Update: ${lastUpdate}
+            </div>`
+        : '';
     main.innerHTML = `
         <div style="padding: 8px 14px 6px 14px; font-family: Arial, Helvetica, sans-serif;">
             <div style="font-size: 17px; font-weight: 600; text-align: center;">
@@ -44,6 +60,7 @@ function renderChart(rows) {
                 Last 90 days &nbsp;·&nbsp; ${labels.length} textbooks &nbsp;·&nbsp;
                 ${total.toLocaleString()} total page views
             </div>
+            ${lastUpdateHtml}
             <div style="position: relative; height: ${chartPx}px;">
                 <canvas id="pageViews"></canvas>
             </div>
@@ -111,7 +128,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
             return resp.text();
         })
-        .then(text => renderChart(parseCsv(text)))
+        .then(text => {
+            const { rows, generated } = parseCsv(text);
+            renderChart(rows, generated);
+        })
         .catch(err => {
             const main = document.querySelector('main');
             main.innerHTML = `
