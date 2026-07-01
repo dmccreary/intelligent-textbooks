@@ -384,6 +384,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-4" title="Complete (4/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/cybersecurity)
 
+- **[Dakhotiyapi — Beginning Dakota Language](https://milesclawson.github.io/dakota-textbook/)**
+
+    ![Dakhotiyapi — Beginning Dakota Language](./img/dakota-textbook.jpg)
+
+    An introductory Dakota language course paired with AIS 112 American Indian Studies cultural history, covering 8 chapters at the Novice Low to Novice High proficiency level for high school and college students.
+
+    8 Chapters · 6 Games · 39K Words · 92 Glossary Terms
+    · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/milesclawson/dakota-textbook)
+
 - **[Deep Learning with AI](https://dmccreary.github.io/deep-learning-course)**
 
     ![Deep Learning](./img/deep-learning-course.jpg)
@@ -878,6 +888,16 @@ document.addEventListener('click', function(e) {
     200 Concepts · 15 Chapters · 71 MicroSims · 182K Words · 201 Glossary Terms · 93 FAQs · 150 Quiz Questions · 150 References
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/organizational-analytics)
+
+- **[Ojibwemowin — Beginning Ojibwe Language](https://milesclawson.github.io/ojibwe-textbook/)**
+
+    ![Ojibwemowin — Beginning Ojibwe Language](./img/ojibwe-textbook.jpg)
+
+    An introductory Ojibwe (Anishinaabemowin) language course paired with AIS 112 American Indian Studies cultural history, covering 8 chapters at the Novice Low to Novice High proficiency level for high school students.
+
+    8 Chapters · 6 Games · 31K Words · 178 Glossary Terms
+    · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/milesclawson/ojibwe-textbook)
 
 - **[Personal Finance](https://dmccreary.github.io/personal-finance/)**
 
