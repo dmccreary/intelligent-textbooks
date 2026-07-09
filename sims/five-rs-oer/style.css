@@ -1,0 +1,170 @@
+/* 5Rs of OER Workflow — Mermaid MicroSim Stylesheet
+   Layout: diagram panel (left, ~42%) + info panel (right, ~58%)
+   Designed for minimal padding in iframe embedding
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container: diagram left, info panel right */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left: Mermaid diagram */
+.diagram-panel {
+    width: 42%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 14px 10px;
+    overflow: hidden;
+}
+
+.mermaid {
+    width: 100%;
+    max-height: 100%;
+}
+
+.mermaid svg {
+    max-width: 100%;
+    max-height: calc(100% - 4px);
+}
+
+/* Right: Info panel for legend + click details */
+.info-panel {
+    width: 58%;
+    height: 100%;
+    background-color: #f8f9fa;
+    border-left: 1px solid #dee2e6;
+    padding: 16px 20px;
+    overflow: hidden;
+}
+
+.info-panel h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* Legend block, normal flow at top of info panel */
+.legend {
+    margin-bottom: 14px;
+    font-size: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #fff;
+}
+
+.legend-title {
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 3px 0;
+    color: #334155;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+}
+
+.legend-dot.dashed {
+    background: #fff;
+    border: 2px dashed #7c3aed;
+}
+
+/* Click-detail panel */
+#detail {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #334155;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 16px;
+}
+
+.detail-placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.detail-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.detail-title.sixth {
+    color: #7c3aed;
+}
+
+.detail-desc {
+    color: #334155;
+}
+
+/* Node cursor + hover brightness */
+.node {
+    cursor: pointer;
+}
+
+.node:hover rect,
+.node:hover polygon {
+    filter: brightness(1.12);
+}
+
+/* Persistent highlight applied on click via inline style/class toggle */
+.node.selected rect,
+.node.selected polygon {
+    stroke: #f59e0b !important;
+    stroke-width: 4px !important;
+}
+
+/* Floating short hover tooltip */
+#tooltip {
+    position: fixed;
+    background-color: #1e293b;
+    color: #fff;
+    padding: 7px 11px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    max-width: 260px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#tooltip.visible {
+    opacity: 1;
+}
