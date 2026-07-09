@@ -1,0 +1,54 @@
+{
+  "title": "5Rs of OER Workflow",
+  "creator": "Dan McCreary",
+  "subject": "Open Educational Resources",
+  "description": "Interactive Mermaid.js flowchart of David Wiley's 5Rs of Open Educational Resources (Retain, Reuse, Revise, Remix, Redistribute), plus a proposed 6th R (Regenerate) for AI-generated intelligent textbooks. Hover a step for a quick tip; click a step for a detailed narrative.",
+  "date": "2026-07-09",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate",
+      "Professional Development"
+    ],
+    "subjectArea": "Educational Technology",
+    "topic": "5Rs of OER Workflow",
+    "learningObjectives": [
+      "Identify and define each of Wiley's 5Rs of Open Educational Resources",
+      "Distinguish free access from open access using the 5Rs framework",
+      "Explain how the 5Rs extend to AI-generated intelligent textbooks",
+      "Evaluate the case for a proposed 6th R, Regenerate, in the AI era"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Mermaid.js",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 800
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration",
+    "keyQuestions": [
+      "What is the difference between free access and open access?",
+      "Why does each R build on the freedom granted by the R before it?",
+      "What would be lost if an intelligent textbook's learning graph and skills were not retained alongside its rendered chapters?"
+    ],
+    "commonMisconceptions": [
+      "Assuming any resource that is free to read is automatically 'open' under the OER definition.",
+      "Treating Regenerate as replacing the original 5Rs rather than extending them."
+    ],
+    "assessmentOpportunities": []
+  },
+  "chapter": "appendices/five-rs-of-intelligent-textbooks"
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>5Rs of OER Workflow</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="diagram-panel">
+            <div class="mermaid">
+flowchart TD
+    OER("Open Educational<br/>Resource"):::rootNode
+    Retain["Retain"]:::rNode
+    Reuse["Reuse"]:::rNode
+    Revise["Revise"]:::rNode
+    Remix["Remix"]:::rNode
+    Redistribute["Redistribute"]:::rNode
+    Regenerate["Regenerate<br/>(proposed 6th R)"]:::sixthNode
+
+    OER --> Retain --> Reuse --> Revise --> Remix --> Redistribute --> Regenerate
+
+    classDef rootNode fill:#334155,stroke:#1e293b,stroke-width:2px,color:#fff,font-size:16px
+    classDef rNode fill:#2563eb,stroke:#1e3a8a,stroke-width:2px,color:#fff,font-size:16px
+    classDef sixthNode fill:#f5f3ff,stroke:#7c3aed,stroke-width:3px,stroke-dasharray:6 4,color:#4c1d95,font-size:16px
+
+    linkStyle default stroke:#94a3b8,stroke-width:2px,font-size:13px
+            </div>
+        </div>
+        <div class="info-panel">
+            <div class="legend">
+                <div class="legend-title">Color Key</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#334155"></div>Licensed OER (starting point)</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div>Wiley's original 5Rs</div>
+                <div class="legend-item"><div class="legend-dot dashed"></div>Proposed 6th R (Regenerate)</div>
+            </div>
+            <h3>Step Details</h3>
+            <div id="detail">
+                <p class="detail-placeholder">Hover a step for a quick tip. Click a step in the diagram to read the full explanation here.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="tooltip"></div>
+
+    <!-- Node information data for this diagram -->
+    <script>
+        const nodeInfo = {
+            'OER': {
+                title: 'Open Educational Resource',
+                hover: 'The starting point: content under an open license.',
+                detail: 'An Open Educational Resource (OER) is content released under a license, such as Creative Commons, that grants the freedoms below. Without these freedoms, a resource may be free to read but is not truly open.',
+                sixth: false
+            },
+            'Retain': {
+                title: 'Retain',
+                hover: 'Make, own, and control copies of the content.',
+                detail: 'Retain means learners and educators can download, copy, and keep the content indefinitely, with no risk of it being revoked or paywalled later. Example: downloading a textbook and keeping it forever, even if the original source disappears.',
+                sixth: false
+            },
+            'Reuse': {
+                title: 'Reuse',
+                hover: 'Use the content in many different ways.',
+                detail: 'Reuse means the content can be used as-is in a wide variety of contexts without asking permission first. Example: teaching a class using the textbook, posting it on a learning management system, or printing copies for students.',
+                sixth: false
+            },
+            'Revise': {
+                title: 'Revise',
+                hover: 'Modify or adapt the content.',
+                detail: 'Revise means the content can be changed to better fit a given context. Example: updating outdated examples, correcting errors, or translating the book into Spanish.',
+                sixth: false
+            },
+            'Remix': {
+                title: 'Remix',
+                hover: 'Combine the content with other open resources.',
+                detail: 'Remix means the content can be combined with other openly licensed materials to create something new. Example: merging chapters from three different open textbooks into one custom course text.',
+                sixth: false
+            },
+            'Redistribute': {
+                title: 'Redistribute',
+                hover: 'Share copies of the original or modified version.',
+                detail: 'Redistribute means copies of the original work or your revised/remixed version can be shared with others. Example: giving students a customized version of the textbook, or publishing it online for others to use.',
+                sixth: false
+            },
+            'Regenerate': {
+                title: 'Regenerate (proposed 6th R)',
+                hover: 'Proposed 6th R: recreate the textbook from reusable agentic skills.',
+                detail: 'Regenerate is a proposed sixth freedom for the AI era: the right to recreate, update, or produce new versions of an intelligent textbook from its underlying reusable components — the course description, learning graph, and agentic skills — rather than only from the rendered book itself. This stays faithful to Wiley\'s original spirit: controlling the true source of an educational resource, which for an intelligent textbook is no longer just the rendered chapters.',
+                sixth: true
+            }
+        };
+    </script>
+    <!-- Load interaction script after nodeInfo is defined -->
+    <script src="five-rs-oer.js"></script>
+</body>
+</html>

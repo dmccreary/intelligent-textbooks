@@ -86,6 +86,7 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - 5Rs of OER Workflow: sims/five-rs-oer/index.md
     - ADDIE Workflow Interactive MicroSim: sims/addie-workflow/index.md
     - Book Concept Count Histogram: sims/concept-count-histogram/index.md
     - Book Levels MicroSim: sims/book-levels/index.md
@@ -118,6 +119,8 @@ nav:
     - Word Cloud MicroSim: sims/word-cloud/index.md
     - Workflow for Generating Intelligent Textbooks: sims/book-gen-workflow/index.md
     - Workflow for Generating Intelligent Textbooks: sims/templates/index.md
+
+
 
 
 
@@ -189,6 +192,10 @@ nav:
     - Equations: formatting-tests/equations-test.md
     - Social Media Preview: formatting-tests/social-test.md
     - Social Media Override Preview: formatting-tests/social-test-2.md
+
+  - Appendices:
+    - The 5Rs of Intelligent Textbooks: appendices/five-rs-of-intelligent-textbooks.md
+    - Nell Character Profile: appendices/nell-character-profile.md
 
   - Feedback: feedback.md
   - Glossary: glossary.md
