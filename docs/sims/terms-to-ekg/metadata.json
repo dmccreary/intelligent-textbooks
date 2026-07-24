@@ -43,10 +43,11 @@
     "network"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of terms to enterprise knowledge graph",
-    "Apply terms to enterprise knowledge graph to solve problems",
-    "Visualize and interpret terms to enterprise knowledge graph relationships",
-    "Experiment with parameters to observe their effects on terms to enterprise knowledge graph"
+    "Sequence the ten stages from a raw Terms List through Business Glossary, Controlled Vocabulary, Taxonomy, Ontology, and Semantic Ontology to a Real-Time EKG",
+    "Distinguish a Business Glossary's informal definitions from a Controlled Vocabulary's single authoritative ISO-11179 definitions",
+    "Compare a Taxonomy's broader/narrower hierarchy with an Ontology's richer synonym, related-term, and part-whole relationships",
+    "Explain how a Semantic Ontology's formally typed relationships (partOf, causedBy, requires) enable logical reasoning that earlier stages cannot support",
+    "Identify what an AI Enhanced EKG and a Real-Time EKG add beyond a static Enterprise Knowledge Graph"
   ],
   "pedagogical": {
     "pattern": "exploration",

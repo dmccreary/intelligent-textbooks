@@ -370,18 +370,15 @@
     "timeline"
   ],
   "learningObjectives": [
-    "Understand the key concepts of this concept",
-    "Explore this concept through interactive visualization",
-    "Apply knowledge of this concept to solve problems",
-    "Experiment with parameters to observe their effects on this concept"
+    "Identify the nine elements of the Kemp Design Model, from instructional problems and learner characteristics to evaluation instruments and support services",
+    "Explain how Kemp's circular, non-sequential structure differs from linear instructional design models such as ADDIE",
+    "Trace the interdependencies among the nine elements using the Show All Connections toggle",
+    "Determine an appropriate starting element for a given instructional design project and justify the choice using the model's flexibility principle"
   ],
   "bloomsTaxonomy": [
-    "Remember",
     "Understand",
     "Apply",
-    "Analyze",
-    "Evaluate",
-    "Create"
+    "Analyze"
   ],
   "pedagogical": {
     "pattern": "worked-example",

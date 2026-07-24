@@ -142,13 +142,14 @@ Seed → Learning Graph → Chapters → MicroSims → Mastery
 
 ## Mascot Usage Variations
 
-To maintain engagement, Axiom can appear in multiple states:
+To maintain engagement, Axiom can appear in multiple poses:
 
-* **Thinking Axiom** (tilted head, wing to chin)
-* **Explaining Axiom** (one wing raised)
-* **Encouraging Axiom** (gentle thumbs-up wing gesture)
-* **Warning Axiom** (concerned but calm expression)
-* **Celebration Axiom** (wings wide, joyful)
+* **Thinking Pose** (tilted head, wing to chin)
+* **Helpful Tip Pose** (one wing raised pointing to a lightbulb idea icon)
+* **Explaining Pose** (one wing raised)
+* **Encouraging Pose** (gentle thumbs-up wing gesture)
+* **Warning Pose** (concerned but calm expression)
+* **Celebration Pose** (wings wide, joyful)
 
 Each variation aligns with Bloom’s taxonomy levels:
 

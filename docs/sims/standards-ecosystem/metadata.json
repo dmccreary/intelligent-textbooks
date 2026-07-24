@@ -42,9 +42,11 @@
     "network"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of educational technology standards ecosystem",
-    "Apply educational technology standards ecosystem to solve problems",
-    "Visualize and interpret educational technology standards ecosystem relationships"
+    "Identify the role of xAPI in emitting learning activity statements and the LRS in storing those records",
+    "Distinguish IEEE standards (LTSC, LOM) from IMS Global standards (LTI, Caliper, CLR) by the function each serves",
+    "Trace the path of learning data from an intelligent textbook through xAPI to an institution-controlled or student-controlled LRS",
+    "Explain how LTI connects a textbook to an LMS while IEEE LOM metadata makes its content discoverable",
+    "Evaluate how FERPA and GDPR constrain the storage and transfer of student records in a Level 3+ system"
   ],
   "pedagogical": {
     "pattern": "exploration",

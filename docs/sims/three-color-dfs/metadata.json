@@ -35,10 +35,12 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Understand the key concepts of three-color dfs cycle detection",
-    "Explore three-color dfs cycle detection through interactive visualization",
-    "Apply knowledge of three-color dfs cycle detection to solve problems",
-    "Test understanding of three-color dfs cycle detection through interactive exercises"
+    "Identify the meaning of the White (unvisited), Gray (on the DFS stack), and Black (fully explored) node states",
+    "Explain why an edge pointing to a Gray node is a back edge that proves a cycle exists",
+    "Trace the DFS stack as it grows and shrinks, noting where each node is recolored Gray then Black",
+    "Predict whether a given directed graph is a DAG by locating back edges such as Recursion to Loops",
+    "Explain why a learning graph must be acyclic, using the Loops-requires-Recursion deadlock as a counterexample",
+    "Calculate the O(V + E) time and O(V) space cost of three-color DFS cycle detection"
   ],
   "bloomsTaxonomy": [
     "Remember",

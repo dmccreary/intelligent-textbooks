@@ -47,10 +47,10 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Observe and understand bouncing ball in action",
-    "Explore how changing parameters affects bouncing ball",
-    "Apply physics principles to predict bouncing ball behavior",
-    "Experiment with parameters to observe their effects on bouncing ball"
+    "Describe how the ball's position updates each animation frame by adding x and y velocity components",
+    "Predict the ball's new direction after it collides with a wall, recognizing that the boundary reverses the sign of one velocity component",
+    "Explain how the speed slider changes the magnitude of the velocity vector while the bounce angles stay the same",
+    "Trace the boundary-detection test that compares the ball's edge position against the canvas walls to trigger a bounce"
   ],
   "bloomsTaxonomy": [
     "Remember",

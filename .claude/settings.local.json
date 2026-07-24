@@ -103,7 +103,8 @@
       "mcp__Claude_in_Chrome__tabs_create_mcp",
       "Bash(pkill -f \"http.server 8899\")",
       "Bash(lsof -nP -iTCP:8899 -sTCP:LISTEN)",
-      "Bash(ls -d ~/Documents/ws/graph-neural-networks-textbook 2>/dev/null && echo \"EXISTS LOCALLY\" || echo \"NOT LOCAL\")"
+      "Bash(ls -d ~/Documents/ws/graph-neural-networks-textbook 2>/dev/null && echo \"EXISTS LOCALLY\" || echo \"NOT LOCAL\")",
+      "Bash(awk -F, 'NR>1 {sum+=$5} END {print sum}' src/site-analytics/ga4-pageviews-results.csv)"
     ],
     "deny": [],
     "ask": []
