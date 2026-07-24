@@ -41,10 +41,11 @@
     "network"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of the ai flywheel",
-    "Apply the ai flywheel to solve problems",
-    "Visualize and interpret the ai flywheel relationships",
-    "Experiment with parameters to observe their effects on the ai flywheel"
+    "Identify the four components of the AI flywheel: Data, Model, Prediction, and Feedback",
+    "Trace the causal loop in which data creates a model, the model creates predictions, predictions generate feedback, and feedback provides more data",
+    "Explain why the AI flywheel is a self-reinforcing cycle in which each pass through the loop improves the system",
+    "Describe the function of each component by hovering over its node and reading the infobox description",
+    "Predict how weakening one link, such as losing user feedback, would slow the entire flywheel"
   ],
   "pedagogical": {
     "pattern": "guided-discovery",

@@ -45,10 +45,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of intelligent textbook ecosystem dynamics",
-    "Apply intelligent textbook ecosystem dynamics to solve problems",
-    "Visualize and interpret intelligent textbook ecosystem dynamics relationships",
-    "Experiment with parameters to observe their effects on intelligent textbook ecosystem dynamics"
+    "Distinguish the three reinforcing loops (R1 adoption flywheel, R2 AI content virtuous cycle, R3 cost collapse) from the B1 publisher-resistance balancing loop",
+    "Trace the R1 causal chain from teacher adoption to student outcomes to demand and back to teacher awareness",
+    "Explain why faceted search engines act as a high-leverage point that accelerates the entire adoption cycle",
+    "Analyze how demand for intelligent textbooks threatens publisher revenue and feeds back as reluctance to invest in AI tools",
+    "Predict how the ecosystem behaves if AI capabilities plateau rather than continuing to double every 7 months"
   ],
   "pedagogical": {
     "pattern": "demonstration",

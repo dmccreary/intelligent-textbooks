@@ -41,10 +41,10 @@
     "network"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of book levels",
-    "Apply book levels to solve problems",
-    "Visualize and interpret book levels relationships",
-    "Experiment with parameters to observe their effects on book levels"
+    "Identify the five levels of intelligent textbooks, from static texts through interactive, adaptive, and chatbot-enabled books to autonomous AI textbooks",
+    "Compare the features added at each level, such as embedded videos and MicroSims at Level 2 versus personalized learning pathways at Level 3",
+    "Explain how student data collection and privacy concerns increase as textbooks advance from Level 1 to Level 5",
+    "Classify a given textbook or courseware product into one of the five levels based on its interactive and AI capabilities"
   ],
   "pedagogical": {
     "pattern": "guided-discovery",

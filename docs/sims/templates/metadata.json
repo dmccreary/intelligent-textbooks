@@ -37,10 +37,11 @@
     "interactive-demo"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of workflow for generating intelligent textbooks",
-    "Apply workflow for generating intelligent textbooks to solve problems",
-    "Visualize and interpret workflow for generating intelligent textbooks relationships",
-    "Experiment with parameters to observe their effects on workflow for generating intelligent textbooks"
+    "Identify the two canvas regions of the standard MicroSim template: a drawing area of fixed drawHeight and a control strip of controlHeight below it",
+    "Explain why updateCanvasSize() must run first in setup() so the canvas matches the parent container width",
+    "Trace how moving the radius slider changes the circle diameter drawn at the center of the drawing region",
+    "Design a new MicroSim by adapting the template's setup(), draw(), and windowResized() functions to a different parameter",
+    "Predict how windowResized() rescales the canvas and slider when the browser window width changes"
   ],
   "pedagogical": {
     "pattern": "exploration",

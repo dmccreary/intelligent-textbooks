@@ -317,18 +317,16 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Understand the key concepts of this concept",
-    "Explore this concept through interactive visualization",
-    "Apply knowledge of this concept to solve problems",
-    "Experiment with parameters to observe their effects on this concept"
+    "Identify the three phases of the SAM process, Preparation, Iterative Design, and Iterative Development, and the deliverable each produces",
+    "Compare SAM's cyclical rapid prototyping with ADDIE's linear sequence on planning depth, stakeholder involvement, cost of change, and time to first version",
+    "Trace the spiral path and quality meter through successive iterations to show quality rising from roughly 40% to over 90% with diminishing returns per cycle",
+    "Explain the role of the Savvy Start workshop in aligning subject matter experts, designers, and stakeholders before development begins",
+    "Evaluate a project scenario and justify choosing SAM or ADDIE based on requirement clarity, schedule pressure, and compliance needs"
   ],
   "bloomsTaxonomy": [
-    "Remember",
     "Understand",
     "Apply",
-    "Analyze",
-    "Evaluate",
-    "Create"
+    "Analyze"
   ],
   "pedagogical": {
     "pattern": "assessment",

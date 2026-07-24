@@ -159,18 +159,16 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Understand the key concepts of this concept",
-    "Explore this concept through interactive visualization",
-    "Apply knowledge of this concept to solve problems",
-    "Experiment with parameters to observe their effects on this concept"
+    "Identify the five phases of the ADDIE instructional design model: Analysis, Design, Development, Implementation, and Evaluation",
+    "Explain the purpose and key tasks of each ADDIE phase by clicking its node to open the detail panel",
+    "Trace the iteration arrows to describe when a designer should cycle back from Evaluation to earlier phases",
+    "Sequence the ADDIE phases using the flow animation and justify the order of the workflow",
+    "Apply the ADDIE model to plan the phases of a specific instructional design project"
   ],
   "bloomsTaxonomy": [
-    "Remember",
     "Understand",
     "Apply",
-    "Analyze",
-    "Evaluate",
-    "Create"
+    "Analyze"
   ],
   "pedagogical": {
     "pattern": "demonstration",

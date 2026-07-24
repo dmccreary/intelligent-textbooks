@@ -1,4 +1,13 @@
-# The 5Rs of Open Educational Resources — and a Sixth R for Intelligent Textbooks
+---
+title: The 6th "R" of Intelligent Textbooks
+image: appendices/five-rs-with-title.png
+---
+
+# The 6th "R" of Intelligent Textbooks
+
+![](./five-rs-with-title.png)
+
+*The 5Rs of Open Educational Resources — and a Sixth R for Intelligent Textbooks*
 
 ## Overview
 
