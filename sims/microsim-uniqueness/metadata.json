@@ -38,16 +38,16 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Understand the key concepts of uniqueness interactive venn diagram",
-    "Explore uniqueness interactive venn diagram through interactive visualization",
-    "Apply knowledge of uniqueness interactive venn diagram to solve problems",
-    "Experiment with parameters to observe their effects on uniqueness interactive venn diagram"
+    "Define the three defining characteristics of a MicroSim: simplicity of scope and parameters, accessibility through iframe embedding on any device, and generation by language models from standardized patterns",
+    "Interpret a three-circle Venn diagram by distinguishing single-circle regions, pairwise overlaps, and the central intersection where all three sets meet",
+    "Explain why MicroSims sit only at the center, so that dropping any one of the three characteristics yields ordinary educational software rather than a MicroSim",
+    "Compare the pairwise overlap regions to describe what a tool gains and lacks when it has just two of the three characteristics",
+    "Predict which region a given educational artifact belongs to based on its scope, embeddability, and how it was authored"
   ],
   "bloomsTaxonomy": [
     "Remember",
     "Understand",
-    "Apply",
-    "Create"
+    "Analyze"
   ],
   "pedagogical": {
     "pattern": "demonstration",

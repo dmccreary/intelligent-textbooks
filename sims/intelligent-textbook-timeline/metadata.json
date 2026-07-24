@@ -1,6 +1,6 @@
 {
   "title": "History of Intelligent Textbooks & Interactive Learning Timeline",
-  "description": "An interactive vis-timeline tracing the key ideas behind intelligent textbooks, MicroSims, and interactive digital learning — from Piaget's constructivism and knowledge spaces through generative AI, Claude Code, and the 100th open intelligent textbook — with filters for Theory of Learning, Learning Graphs, and Generative AI.",
+  "description": "An interactive vis-timeline tracing the key ideas behind intelligent textbooks, MicroSims, and interactive digital learning \u2014 from Piaget's constructivism and knowledge spaces through generative AI, Claude Code, and the 100th open intelligent textbook \u2014 with filters for Theory of Learning, Learning Graphs, and Generative AI.",
   "creator": "Dan McCreary",
   "date": "2026-06-02",
   "subject": [
@@ -14,7 +14,7 @@
   "format": "text/html",
   "language": "en-US",
   "rights": "CC BY-NC-SA 4.0",
-  "identifier": "intelligent-textbook-timeline",
+  "identifier": "https://dmccreary.github.io/intelligent-textbooks/sims/intelligent-textbook-timeline/",
   "library": "vis-timeline",
   "bloomLevel": "Analyze",
   "bloomVerb": "Trace, Analyze",

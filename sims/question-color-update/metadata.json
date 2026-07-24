@@ -60,17 +60,16 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Understand the key concepts of question-based learning graph update",
-    "Explore question-based learning graph update through interactive visualization",
-    "Apply knowledge of question-based learning graph update to solve problems",
-    "Experiment with parameters to observe their effects on question-based learning graph update"
+    "Distinguish the four mastery states of a personal learning graph node: unknown (gray), mastered (green), ready-to-learn (orange), and learning goal (red)",
+    "Explain backward inference, in which mastering Two-Step Equations marks its prerequisites as mastered with certainty decaying 90% per level to 90%, 81%, and 73%",
+    "Explain forward propagation, in which a concept becomes ready-to-learn only once every one of its prerequisites has turned green",
+    "Predict how the colors of the 17 Algebra 1 nodes change after a correct or incorrect answer on a given concept, then verify by clicking that node",
+    "Evaluate why an adaptive assessment can skip questions on foundation concepts such as Number and Variable once a downstream concept is answered correctly"
   ],
   "bloomsTaxonomy": [
-    "Remember",
     "Understand",
     "Apply",
-    "Evaluate",
-    "Create"
+    "Analyze"
   ],
   "pedagogical": {
     "pattern": "assessment",

@@ -36,10 +36,11 @@
     "map"
   ],
   "learningObjectives": [
-    "Observe and understand sae j3016 vs intelligent textbook levels in action",
-    "Explore how changing parameters affects sae j3016 vs intelligent textbook levels",
-    "Apply physics principles to predict sae j3016 vs intelligent textbook levels behavior",
-    "Test understanding of sae j3016 vs intelligent textbook levels through interactive exercises"
+    "Identify each SAE J3016 vehicle autonomy level and its counterpart level in the intelligent textbook framework",
+    "Explain why both frameworks define levels by system capability and by who holds responsibility, rather than by the underlying technology",
+    "Compare the Level 3 threshold in each domain: the vehicle system taking primary control raises liability questions, while a textbook tracking individual learners raises privacy questions",
+    "Evaluate how a shared level vocabulary such as J3016 improves communication, regulation, and expectation-setting in a field",
+    "Classify a given textbook or vehicle feature into the correct level using the capability criteria shown side by side"
   ],
   "pedagogical": {
     "pattern": "assessment",

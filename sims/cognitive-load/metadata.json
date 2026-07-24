@@ -223,18 +223,15 @@
     "simulation"
   ],
   "learningObjectives": [
-    "Understand the key concepts of this concept",
-    "Explore this concept through interactive visualization",
-    "Apply knowledge of this concept to solve problems",
-    "Experiment with parameters to observe their effects on this concept"
+    "Distinguish intrinsic, extraneous, and germane cognitive load and identify sources of each in instructional materials",
+    "Explain why the three cognitive load types are additive and what happens to learning when their sum exceeds working memory capacity",
+    "Predict whether a given combination of the three load sliders will overload the working memory capacity meter",
+    "Evaluate the good and bad design examples by comparing how much of their total load is extraneous versus germane"
   ],
   "bloomsTaxonomy": [
-    "Remember",
     "Understand",
     "Apply",
-    "Analyze",
-    "Evaluate",
-    "Create"
+    "Analyze"
   ],
   "pedagogical": {
     "pattern": "worked-example",

@@ -42,10 +42,10 @@
     "network"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of workflow for generating intelligent textbooks",
-    "Apply workflow for generating intelligent textbooks to solve problems",
-    "Visualize and interpret workflow for generating intelligent textbooks relationships",
-    "Test understanding of workflow for generating intelligent textbooks through interactive exercises"
+    "Trace the textbook-generation pipeline from course description through Bloom's Taxonomy alignment and concept enumeration to the learning graph",
+    "Identify the book-level and chapter-level outputs a learning graph powers, including chapters, glossary, FAQ, assessments, and MicroSims",
+    "Explain why a detailed course description (audience, prerequisites, objectives, scope) must come first in the workflow",
+    "Describe how the 2001 Bloom's Taxonomy is applied to categorize learning objectives across six cognitive levels early in the pipeline"
   ],
   "pedagogical": {
     "pattern": "assessment",

@@ -42,10 +42,10 @@
     "map"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of metr task horizon growth",
-    "Apply metr task horizon growth to solve problems",
-    "Visualize and interpret metr task horizon growth relationships",
-    "Test understanding of metr task horizon growth through interactive exercises"
+    "Explain the METR task-horizon metric: the duration of a human task an AI system can complete with 50% probability of success",
+    "Interpret the 7-month doubling time from data points spanning GPT-2 (2.4 minutes, 2019) to GPT-5 (137 hours, 2025)",
+    "Compare the linear and logarithmic scale views to explain why exponential growth appears as a straight line on a log axis",
+    "Predict task-horizon values through 2030 using the projection toggle and evaluate the assumptions behind extrapolating the trend"
   ],
   "pedagogical": {
     "pattern": "reference",

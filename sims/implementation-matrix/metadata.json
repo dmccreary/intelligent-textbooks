@@ -37,10 +37,10 @@
     "interactive-demo"
   ],
   "learningObjectives": [
-    "Understand the mathematical concept of implementation decision matrix",
-    "Apply implementation decision matrix to solve problems",
-    "Visualize and interpret implementation decision matrix relationships",
-    "Test understanding of implementation decision matrix through interactive exercises"
+    "Identify the two axes of the decision matrix: technical capability (AI expertise, LLM access) and data readiness (privacy compliance, student data infrastructure)",
+    "Explain why most organizations should begin at Level 2 interactive content before pursuing adaptive or chatbot-enabled textbooks",
+    "Evaluate an organization's position on the matrix to recommend a target intelligent textbook level",
+    "Compare upgrade paths, such as leapfrogging from Level 2 to Level 4 versus the Level 2-3-4 route, based on an organization's privacy compliance strength"
   ],
   "pedagogical": {
     "pattern": "assessment",
