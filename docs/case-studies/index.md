@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 100 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 113 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -162,6 +162,26 @@ document.addEventListener('click', function(e) {
     300 Concepts · 16 Chapters · 75 MicroSims · 193K Words · 55 Glossary Terms · 72 FAQs · 26 Quiz Questions
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits)
+
+- **[AI Persona Testing](https://dmccreary.github.io/ai-persona-testing/)**
+
+    ![AI Persona Testing](./img/ai-persona-testing.jpg)
+
+    An interactive intelligent textbook covering methods and best practices for testing AI personas.
+
+    400 Concepts · 20 Chapters · 82 MicroSims · 154K Words · 400 Glossary Terms · 82 FAQs · 200 Quiz Questions
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ai-persona-testing)
+
+- **[AI Strategy for Education](https://dmccreary.github.io/ai-strategy-for-education/)**
+
+    ![AI Strategy for Education](./img/ai-strategy-for-education.jpg)
+
+    Creating and deploying an AI strategy in educational organizations from K-12 to colleges and universities.
+
+    221 Concepts · 13 Chapters · 1 MicroSim · 143K Words · 214 Glossary Terms · 63 FAQs · 13 Quiz Questions
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ai-strategy-for-education)
 
 - **[Interactive Infographics with AI](https://dmccreary.github.io/infographics/)**
 
@@ -480,16 +500,6 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ethics-course)
 
-- **[FFT Benchmarking](https://dmccreary.github.io/fft-benchmarking/)**
-
-    ![FFT Benchmarking](./img/fft-benchmarking.jpg)
-
-    A collection of resources for learning about Fast Fourier Transforms and benchmarking techniques across platforms.
-
-    200 Concepts · 3 Chapters · 2 MicroSims · 4K Words · 2 Glossary Terms
-    · <span class="completion completion-2" title="In Progress (2/5)"></span>
-    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking)
-
 - **[Fluid Power Systems](https://dmccreary.github.io/fluid-power-systems/)**
 
     ![Fluid Power Systems](./img/fluid-power-systems.jpg)
@@ -613,6 +623,16 @@ document.addEventListener('click', function(e) {
     8K Words · 33 Glossary Terms
     · <span class="completion completion-1" title="Early Development (1/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/graph-rag)
+
+- **[Health Education](https://dmccreary.github.io/health-education/)**
+
+    ![Health Education](./img/health-education.jpg)
+
+    An interactive intelligent textbook covering health topics from Kindergarten through Grade 12, structured as eight parallel grade-band editions aligned to Minnesota's K-12 health academic standards, with hundreds of interactive MicroSims.
+
+    609 Concepts · 68 Chapters · 389 MicroSims · 678K Words · 547 Glossary Terms · 62 FAQs
+    · <span class="completion completion-3" title="Active Development (3/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/health-education)
 
 - **[Hydroponics: From Mason Jar to Vertical Farm](https://dmccreary.github.io/hydroponics)**
 
@@ -755,6 +775,26 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-3" title="Early Development (3/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython)
 
+- **[Learning Python](https://dmccreary.github.io/learning-python/)**
+
+    ![Learning Python](./img/learning-python.jpg)
+
+    Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.
+
+    450 Concepts · 38 Chapters · 31 MicroSims · 260K Words · 338 Glossary Terms · 83 FAQs · 380 Quiz Questions · 380 References
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-python)
+
+- **[Learning Record Store](https://dmccreary.github.io/learning-record-store/)**
+
+    ![Learning Record Store](./img/learning-record-store.jpg)
+
+    An intelligent textbook on Learning Record Stores: what they are, how xAPI statements work, and how to design, deploy, and query an LRS.
+
+    578 Concepts · 32 Chapters · 131 MicroSims · 348K Words
+    · <span class="completion completion-3" title="Active Development (3/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-record-store)
+
 - **[Learning Sciences for Intelligent Textbook Design](https://dmccreary.github.io/learning-sciences/)**
 
     ![Learning Sciences](./img/learning-sciences.jpg)
@@ -764,6 +804,16 @@ document.addEventListener('click', function(e) {
     230 Concepts · 15 Chapters · 65 MicroSims · 9 Stories · 235K Words · 222 Glossary Terms · 80 FAQs · 150 Quiz Questions
     · <span class="completion completion-4" title="Early Development (4/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-sciences)
+
+- **[Learning STEM with Raspberry Pi Hardware](https://dmccreary.github.io/raspberry-pi-stem/)**
+
+    ![Learning STEM with Raspberry Pi Hardware](./img/raspberry-pi-stem.jpg)
+
+    An interactive intelligent textbook for teaching STEM concepts and computational thinking with hardware created by the Raspberry Pi Foundation.
+
+    531 Concepts · 20 Chapters · 99 MicroSims · 239K Words · 531 Glossary Terms · 97 FAQs · 200 Quiz Questions · 200 References
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/raspberry-pi-stem)
 
 - **[Linear Algebra for AI and Machine Learning](https://dmccreary.github.io/linear-algebra)**
 
@@ -899,6 +949,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-2" title="Early Development (2/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/milesclawson/ojibwe-textbook)
 
+- **[Ole Cup Entrepreneurship: A Liberal Arts Guide to the St. Olaf Pitch Competition](https://dmccreary.github.io/mini-mba-for-startups/)**
+
+    ![Ole Cup Entrepreneurship](./img/mini-mba-for-startups.jpg)
+
+    An interactive intelligent textbook guiding St. Olaf students through ideation, Ikigai discovery, team formation, and the Ole Cup entrepreneurship pitch competition.
+
+    200 Concepts · 15 Chapters · 1 MicroSim · 63K Words
+    · <span class="completion completion-3" title="Active Development (3/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mini-mba-for-startups)
+
 - **[Personal Finance](https://dmccreary.github.io/personal-finance/)**
 
     ![Personal Finance](./img/personal-finance.jpg)
@@ -949,6 +1009,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/reading-for-kindergarten)
 
+- **[Real-Time DSP on a $5 Microcontroller](https://dmccreary.github.io/fft-benchmarking/)**
+
+    ![Real-Time DSP on a $5 Microcontroller](./img/fft-benchmarking.jpg)
+
+    A collection of resources for learning how to objectively benchmark Fast Fourier Transform algorithms on microcontrollers, built around real-time DSP on the $6 Raspberry Pi Pico 2.
+
+    574 Concepts · 27 Chapters · 61 MicroSims · 234K Words · 550 Glossary Terms · 91 FAQs
+    · <span class="completion completion-4" title="Near Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/fft-benchmarking)
+
 - **[Robot Day](https://dmccreary.github.io/robot-day)**
 
     Resources for single-day STEM events with hands-on projects leading to understanding collision-avoidance robots.
@@ -956,6 +1026,16 @@ document.addEventListener('click', function(e) {
     26K Words
     · <span class="completion completion-1" title="Early Development (1/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/robot-day)
+
+- **[Robot Faces](https://dmccreary.github.io/robot-faces/)**
+
+    ![Robot Faces](./img/robot-faces.jpg)
+
+    Resources for teaching robotics students to draw expressive robot face displays with microcontrollers and MicroPython.
+
+    293 Concepts · 16 Chapters · 47 MicroSims · 9 Stories · 275K Words · 293 Glossary Terms · 124 FAQs · 160 Quiz Questions · 160 References
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/robot-faces)
 
 - **[Seizure-Safe Schools](https://edanmn.github.io/)**
 
