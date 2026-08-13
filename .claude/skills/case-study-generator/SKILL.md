@@ -20,14 +20,16 @@ Extract the following from the GitHub repository:
 3. **GitHub Pages URL** - Derive from repo: `https://{username}.github.io/{repo-name}`
 4. **Project title** - Check for a clear title in README.md or use repo name
 5. **Description** - Extract from README.md (first paragraph or project description)
-6. **Metrics** — read the canonical metrics file FIRST, do not re-count:
-   - **Preferred source:** `docs/learning-graph/book-metrics.json` (produced by
+6. **Metrics** — ALWAYS check for `{BOOK_BASE}/docs/learning-graph/book-metrics.json`
+   first, in every repo, whether you're adding a brand-new case study or
+   refreshing an existing one. Do not re-count by hand if this file exists.
+   - **Canonical source:** `docs/learning-graph/book-metrics.json` (produced by
      the book-metrics tool, validated against `book-metrics.schema.json`). Its
      `metrics` object is the single source of truth shared with the README and
      LinkedIn skills, so the case-study card shows identical numbers:
 
      ```bash
-     # After cloning the repo for analysis:
+     # After cloning/locating the repo for analysis:
      python3 -c "import json; m=json.load(open('docs/learning-graph/book-metrics.json'))['metrics']; \
 print(m['concepts'], m['chapters'], m['microsims'], m['glossaryTerms'], m['faqs'], m['words'])"
      ```
@@ -35,6 +37,22 @@ print(m['concepts'], m['chapters'], m['microsims'], m['glossaryTerms'], m['faqs'
      Available keys include `concepts`, `chapters`, `microsims`, `stories`,
      `glossaryTerms`, `faqs`, `quizQuestions`, `references`, `diagrams`,
      `equations`, `words`, `links`, `equivalentPages`, `developmentStage`.
+   - **If working from a local workspace clone** (`~/Documents/ws/{repo-name}`),
+     check whether it's behind `origin/main` before trusting this file — a
+     stale checkout reports stale metrics:
+
+     ```bash
+     git rev-list --left-right --count HEAD...origin/main   # "0  N" = N commits behind
+     ```
+
+     If it's behind and the working tree is clean, just `git pull`. If there
+     are uncommitted local changes, don't discard them — `git stash push -u`,
+     pull, read `book-metrics.json`, then `git stash pop` to restore the local
+     work exactly as it was.
+   - **When updating an already-listed case study**, re-read this file rather
+     than reusing the numbers already on the card — the file exists precisely
+     because a book's metrics change between visits, so treat the existing
+     card's numbers as stale until confirmed otherwise.
    - **Fallback only if `book-metrics.json` is absent:**
      - File count: `find docs -type f -name "*.md" | wc -l`
      - Word count: `find docs -type f -name "*.md" -exec cat {} \; | wc -w`
