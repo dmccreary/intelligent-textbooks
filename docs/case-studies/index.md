@@ -187,7 +187,7 @@ document.addEventListener('click', function(e) {
 
     ![AI Infographics](./img/infographics.jpg)
 
-    An AI-assisted guide that teaches non-programmers how to design high-quality detailed interactive infographic MicroSims with many examples, prompts, templates, and workflow examples for intelligent textbooks.  Many examples come from the [Biology](ttps://github.com/dmccreary/biology) textbook.
+    An AI-assisted guide that teaches non-programmers how to design high-quality detailed interactive infographic MicroSims with many examples, prompts, templates, and workflow examples for intelligent textbooks.  Many examples come from the [Biology](https://github.com/dmccreary/biology) textbook.
 
     350 Concepts · 14 Chapters · 81 MicroSims · 2 Stories · 180K Words · 350 Glossary Terms · 72 FAQs · 140 Quiz Questions · 10 References
     · <span class="completion completion-5" title="Complete (5/5)"></span>
@@ -222,8 +222,8 @@ document.addEventListener('click', function(e) {
     that are focused on software and hardware architectures.  This method
     is used in other textbooks such as the Selecting the Right Database textbook.
 
-    350 Concepts · 18 Chapters · 1 MicroSim · 100K Words
-    · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    350 Concepts · 18 Chapters · 1 MicroSim · 198K Words · 350 Glossary Terms · 56 FAQs · 18 Quiz Questions
+    · <span class="completion completion-4" title="Near Complete (4/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/atam)
 
 - **[Biology: An Interactive Course](https://dmccreary.github.io/biology/)**
@@ -234,7 +234,7 @@ document.addEventListener('click', function(e) {
 
     380 Concepts · 20 Chapters · 86 MicroSims · 2 Stories · 219K Words · 378 Glossary Terms · 110 FAQs · 30 Quiz Questions
     · <span class="completion completion-5" title="Complete (5/5)"></span>
-    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/biology-textbook)
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/biology)
 
 - **[Calculus](https://dmccreary.github.io/calculus)**
 
@@ -340,7 +340,7 @@ document.addEventListener('click', function(e) {
 
     A collection of skills and techniques for building intelligent textbooks using Claude AI. Includes prompts, workflows, and best practices.
 
-    200 Concepts · 17 Chapters · 93 MicroSims · 178K Words · 208 Glossary Terms · 66 FAQs · 140 Quiz Questions
+    200 Concepts · 17 Chapters · 94 MicroSims · 179K Words · 208 Glossary Terms · 66 FAQs · 140 Quiz Questions
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/claude-skills)
 
@@ -751,8 +751,8 @@ document.addEventListener('click', function(e) {
 
     Creation and maintenance of learning graphs. Extensive examples using vis.js for visualization.
 
-    8 MicroSims · 33K Words · 47 Glossary Terms
-    · <span class="completion completion-3" title="In Progress (3/5)"></span>
+    400 Concepts · 27 Chapters · 73 MicroSims · 254K Words · 400 Glossary Terms · 84 FAQs · 270 Quiz Questions · 270 References
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-graphs)
 
 - **[Learning Linux](https://dmccreary.github.io/learning-linux/)**
@@ -771,8 +771,8 @@ document.addEventListener('click', function(e) {
 
     Helps kids learn MicroPython on microcontrollers using fun low-cost projects. Thousands of monthly users worldwide.
 
-    3 MicroSims · 81K Words
-    · <span class="completion completion-3" title="Early Development (3/5)"></span>
+    485 Concepts · 23 Chapters · 27 MicroSims · 212K Words · 78 FAQs · 230 Quiz Questions · 230 References
+    · <span class="completion completion-4" title="Near Complete (4/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/learning-micropython)
 
 - **[Learning Python](https://dmccreary.github.io/learning-python/)**
@@ -1114,8 +1114,8 @@ document.addEventListener('click', function(e) {
 
     STEM and robotics using the Raspberry Pi RP2040 on low-cost robotics kits for computational thinking.
 
-    5 MicroSims · 28K Words · 46 Glossary Terms
-    · <span class="completion completion-2" title="Early Development (2/5)"></span>
+    240 Concepts · 13 Chapters · 26 MicroSims · 118K Words · 266 Glossary Terms · 89 FAQs · 120 Quiz Questions
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/stem-robots)
 
 - **[Systems Thinking in the Age of AI](https://dmccreary.github.io/systems-thinking)**
