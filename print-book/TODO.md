@@ -14,7 +14,7 @@ The following repositories contain valid intelligent textbook schemas and will b
 - `intelligent-textbooks` - Primary source for concepts and workflows
 - `automating-instructional-design` - Instructional design concepts
 - `learning-graphs` - Learning graph theory and implementation
-- `claude-skills` - Skills framework and generation
+- `ibook-skills` - Skills framework and generation
 - `prompt-class` - Prompt engineering for education
 
 ### STEM Courses
@@ -215,7 +215,7 @@ The following repositories contain valid intelligent textbook schemas and will b
 ### Chapter 9: Generating Skills
 
 **Primary Sources:**
-- `claude-skills/` - Skills framework
+- `ibook-skills/` - Skills framework
 - `intelligent-textbooks/docs/skills/` - Skill documentation
 - `intelligent-textbooks/skills/` - Local skill implementations
 

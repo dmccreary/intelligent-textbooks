@@ -84,7 +84,7 @@ Boris Cherny said his desktop has 15 agents running concurrently.  10 are doing 
 - Gave me a 100x increase in the quality of MicroSimulations in interactive intelligent textbooks
 - Clearly shows that AI progress is a non-linear function
 
-[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/claude-skills/)
+[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/ibook-skills/)
 
 ## Small Language Models (SLMs)
 

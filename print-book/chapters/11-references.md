@@ -50,7 +50,7 @@ A catalog of intelligent textbooks generated using the methods described in this
 
 ### Claude Skills for Generating Intelligent Textbooks
 
-**URL:** https://dmccreary.github.io/claude-skills/
+**URL:** https://dmccreary.github.io/ibook-skills/
 
 Documentation for the AI skills (structured prompts and workflows) used to generate intelligent textbook components. Skills include learning graph generation, glossary creation, quiz generation, and MicroSim development. The site demonstrates how skills enable consistent, repeatable content generation.
 
