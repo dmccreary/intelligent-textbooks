@@ -2,7 +2,7 @@
 """
 Thumbnail Compression Script for Case Studies
 Compresses images to approximately 70KB for thumbnail use.
-Based on the compress-images.py script from claude-skills.
+Based on the compress-images.py script from ibook-skills.
 """
 
 import os

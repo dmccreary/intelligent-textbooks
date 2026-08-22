@@ -49,7 +49,7 @@ Known cases:
   `~/Documents/ws/genetics/docs/chapters/*/index.md`, compare totals.
 - [ ] Audit all 11 `concept-list.md` files that have a `**Total Concepts:**`
   header for metadata-vs-body drift:
-  asl-book, calculus, circuits, claude-skills, genetics,
+  asl-book, calculus, circuits, ibook-skills, genetics,
   graph-data-modeling-course, intro-to-graph, microsims, personal-finance,
   signal-processing, unicorns.
 - [ ] For each book in the portfolio, count concepts ACTUALLY covered in
