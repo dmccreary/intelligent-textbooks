@@ -1,6 +1,8 @@
 # Five Levels of Intelligent Textbooks - ArXiv Paper
 
-This directory contains the LaTeX source for an ArXiv paper proposing a five-level classification framework for intelligent textbooks.
+This directory contains the LaTeX source for an paper proposing a five-level classification framework for intelligent textbooks.
+
+[A Five-Level Classification Framework for Intelligent Textbooks:Lessons from Autonomous Vehicle Standards on EdarXiv](https://osf.io/preprints/edarxiv/sh2yu_v1)
 
 ## Abstract
 
