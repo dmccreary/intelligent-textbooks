@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 114 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 115 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -353,6 +353,16 @@ document.addEventListener('click', function(e) {
     12 MicroSims · 53K Words · 154 Glossary Terms
     · <span class="completion completion-3" title="Many examples of clocks and watches (3/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clocks-and-watches)
+
+- **[Coding Club: Start, Run and Sustain Your Coding Club](https://dmccreary.github.io/coding-club/)**
+
+    ![Coding Club](./img/coding-club.jpg)
+
+    A practical guide for teachers, librarians, parents, and engineers who want to create, promote, and run a sustainable coding club in a school, library, or community center. Covers charters and safety, mentor training, Scratch/Python and Raspberry Pi Pico physical computing, funding, and AI-assisted club operations.
+
+    657 Concepts · 35 Chapters · 129 MicroSims · 2 Stories · 307K Words · 657 Glossary Terms · 70 FAQs · 350 Quiz Questions
+    · <span class="completion completion-4" title="Nearly Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/coding-club)
 
 - **[Context Graph: How Organizations Use LLMs Cost Effectively](https://dmccreary.github.io/context-graph/)**
 
