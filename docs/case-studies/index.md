@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 115 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 117 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -360,7 +360,7 @@ document.addEventListener('click', function(e) {
 
     A practical guide for teachers, librarians, parents, and engineers who want to create, promote, and run a sustainable coding club in a school, library, or community center. Covers charters and safety, mentor training, Scratch/Python and Raspberry Pi Pico physical computing, funding, and AI-assisted club operations.
 
-    657 Concepts · 35 Chapters · 129 MicroSims · 2 Stories · 307K Words · 657 Glossary Terms · 70 FAQs · 350 Quiz Questions
+    657 Concepts · 35 Chapters · 129 MicroSims · 2 Stories · 307K Words · 657 Glossary Terms · 70 FAQs · 350 Quiz Questions · 350 References
     · <span class="completion completion-4" title="Nearly Complete (4/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/coding-club)
 
@@ -1009,6 +1009,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-3" title="Active Development (3/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/psychology)
 
+- **[Raspberry Pi Environmental Monitoring: Grades 6–12](https://iowerx.github.io/pi-env-monitor/)**
+
+    ![Raspberry Pi Environmental Monitoring](./img/pi-env-monitor.jpg)
+
+    A hands-on textbook for middle and high school students who build a Raspberry Pi station that measures temperature, pressure, and humidity, logs the readings unattended, and reports them from the field. No prior programming, Linux, or electronics experience is needed, and students learn to judge when their sensor data can't be trusted.
+
+    269 Concepts · 17 Chapters · 38 MicroSims · 147K Words · 289 Glossary Terms
+    · <span class="completion completion-3" title="Active Development (3/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/iowerx/pi-env-monitor)
+
 - **[Reading for Kindergarten](https://dmccreary.github.io/reading-for-kindergarten/)**
 
     ![Reading for Kindergarten](./img/reading-for-kindergarten.jpg)
@@ -1046,6 +1056,16 @@ document.addEventListener('click', function(e) {
     293 Concepts · 16 Chapters · 47 MicroSims · 9 Stories · 275K Words · 293 Glossary Terms · 124 FAQs · 160 Quiz Questions · 160 References
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/robot-faces)
+
+- **[Scratch Programming for Kids](https://dmccreary.github.io/scratch-textbook/)**
+
+    ![Scratch Programming for Kids](./img/scratch-textbook.jpg)
+
+    An interactive intelligent textbook that teaches visual programming to ages 8–12 through games, stories, and creative projects, following the Creative Computing framework (Imagine, Create, Play, Share, Reflect). Scratch the Cat guides students, and the content is aligned with the CSTA K–12 Computer Science Standards.
+
+    226 Concepts · 11 Chapters · 14 MicroSims · 101K Words · 227 Glossary Terms · 97 FAQs
+    · <span class="completion completion-3" title="Active Development (3/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/scratch-textbook)
 
 - **[Seizure-Safe Schools](https://edanmn.github.io/)**
 
