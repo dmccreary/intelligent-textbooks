@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 113 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 114 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -334,15 +334,15 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-1" title="Early Development (1/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/clan-macquarrie)
 
-- **[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/claude-skills/)**
+- **[Claude Skills for Intelligent Textbooks](https://dmccreary.github.io/ibook-skills/)**
 
-    ![Claude Skills](./img/claude-skills.jpg)
+    ![Claude Skills](./img/ibook-skills.jpg)
 
     A collection of skills and techniques for building intelligent textbooks using Claude AI. Includes prompts, workflows, and best practices.
 
     200 Concepts · 17 Chapters · 94 MicroSims · 179K Words · 208 Glossary Terms · 66 FAQs · 140 Quiz Questions
     · <span class="completion completion-5" title="Complete (5/5)"></span>
-    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/claude-skills)
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ibook-skills)
 
 - **[Clocks and Watches with AI](https://dmccreary.github.io/clocks-and-watches)**
 
@@ -1127,6 +1127,16 @@ document.addEventListener('click', function(e) {
     13 MicroSims · 7 Stories · 120K Words · 41 Glossary Terms · 25 References
     · <span class="completion completion-2" title="Early Development (2/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/systems-thinking)
+
+- **[The Art of Processing](https://dmccreary.github.io/p5-textbook/)**
+
+    ![The Art of Processing](./img/p5-textbook.jpg)
+
+    An intelligent textbook on creative coding with p5.js, bridging visual expression and computer science fundamentals for beginning-to-intermediate programmers and the educators who teach them.
+
+    600 Concepts · 25 Chapters · 73 MicroSims · 220K Words · 600 Glossary Terms · 89 FAQs · 250 Quiz Questions · 250 References
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/p5-textbook)
 
 - **[Theory of Knowledge](https://dmccreary.github.io/theory-of-knowledge/)**
 

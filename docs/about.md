@@ -6,7 +6,7 @@ This website is part of a series of resources to help teachers from around the w
 Our character to the right is **Nell**.  She is using
 an intelligent textbook that adapts lessons to her needs.
 
-Our focus today is to help instructors create [Level 2.9](./sims/book-levels/index.md) textbooks that have a [learning graph](./glossary.md#learning-graph) as their core data structure to ground content generation and guide learning agents.  Although Level 2.9 textbooks are interactive, they do not
+Our focus is to help instructors create [Level 2.9](./sims/book-levels/index.md) textbooks that have a [learning graph](./glossary.md#learning-graph) as their core data structure to ground content generation and guide learning agents.  Although Level 2.9 textbooks are interactive, they do not
 store any student personal data so the text can adaptive to their needs.
 
 ## Our Book Generation Workflow
@@ -16,6 +16,13 @@ If you are new to the book generation process, we strongly suggest you use the f
 <iframe src="../sims/book-gen-workflow/main.html" height="610px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
+## The Inspiration for the Intelligent Textbook Project
+
+![Nell Reading the Primer](./img/nell-reading-the-primer.png)
+
+The inspiration for this book originated in the 1995 Cyberpunk novel by Neal Stephenson *Diamond Age*.  In this book, a little girl name "Nell" acquires an AI powered tablet.  This tablet imprints on Nell and generates custom stories to meet everyone of Nell's learning needs.  For
+31+ years I have been thinking about how I could build such a device.  When I retired as an AI researcher I had time to explore this topic.  With the introduction of Claude Code and Claude Skills I have finally started to build the foundations we need for truly adaptive textbooks.
+
 ## The Mechanics of Book Building
 
 After you get an overview of the steps to generate guided content around a learning graph, the next step is to understand the basic mechanics of getting your LLM content into a website.  Although there are are many ways to store intelligent textbooks on a website, this guide focuses on the best practices of using LLMs to generate Markdown and then convert that Markdown to a beautiful website built with HTML, CSS and JavaScript.
@@ -24,7 +31,7 @@ Many of our teachers can't afford expense service for hosting their intelligent 
 Since GitHub Pages is a free service for public
 website, we show how to use GitHub Pages and publishing tools that support Markdown, code highlighting and equations on GitHub.
 
-## Why Mkdos Material?
+## Why Mkdocs Material?
 
 When we gave ChatGPT the following requirements:
 
