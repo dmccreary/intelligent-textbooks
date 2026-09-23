@@ -2503,7 +2503,7 @@ python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
 <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
 <span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">'your_skill_name'</span><span class="p">)</span>
@@ -2577,9 +2577,9 @@ python<span class="w"> </span>src/book_metadata_helper.py<span class="w"> </span
 <span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
 <span class="sd">"""Minimal skill with metadata integration."""</span>
 
-<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
     <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
 
     <span class="c1"># Check prerequisites</span>
@@ -2746,7 +2746,7 @@ ls<span class="w"> </span>book-metadata.yml
 <p>Or use Python:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
 <span class="n">metadata</span><span class="o">.</span><span class="n">update_skill_status</span><span class="p">(</span><span class="s1">'my_skill'</span><span class="p">,</span> <span class="s1">'not_started'</span><span class="p">,</span> <span class="n">quality_score</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>

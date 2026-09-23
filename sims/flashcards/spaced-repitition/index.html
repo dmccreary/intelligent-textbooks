@@ -1814,7 +1814,7 @@ R(t) = e^{-\frac{t}{S}}
 \end{cases}\]</div>
 <p>Then increment: <span class="arithmatex">\(n = n + 1\)</span></p>
 <p>If <span class="arithmatex">\(q &lt; 3\)</span> (incorrect response):
-<span class="arithmatex">\(<span class="arithmatex">\(n = 0, \quad I = 1\)</span>\)</span></p>
+$<span class="arithmatex">\(n = 0, \quad I = 1\)</span>$</p>
 <p><strong>Ease Factor Update</strong> (applied regardless of correctness):</p>
 <div class="arithmatex">\[EF_{new} = EF + 0.1 - (5-q) \times (0.08 + (5-q) \times 0.02)\]</div>
 <p>With constraints: <span class="arithmatex">\(EF_{new} \geq 1.3\)</span></p>
@@ -1847,11 +1847,11 @@ P(\text{recall}) = e^{\frac{\ln(R)}{S} \times t}
 <h3 id="memory-state-updates">Memory State Updates</h3>
 <p>When a card is reviewed, FSRS updates the three components:</p>
 <p><strong>Stability Update</strong>:
-<span class="arithmatex">\(<span class="arithmatex">\(S_{new} = S \times (1 + f(D, S, R, G))\)</span>\)</span></p>
+$<span class="arithmatex">\(S_{new} = S \times (1 + f(D, S, R, G))\)</span>$</p>
 <p><strong>Retrievability Update</strong>:
-<span class="arithmatex">\(<span class="arithmatex">\(R_{new} = e^{\frac{\ln(0.9) \times t}{S}}\)</span>\)</span></p>
+$<span class="arithmatex">\(R_{new} = e^{\frac{\ln(0.9) \times t}{S}}\)</span>$</p>
 <p><strong>Difficulty Update</strong>:
-<span class="arithmatex">\(<span class="arithmatex">\(D_{new} = D + w \times (G - 3)\)</span>\)</span></p>
+$<span class="arithmatex">\(D_{new} = D + w \times (G - 3)\)</span>$</p>
 <p>Where:
 - <span class="arithmatex">\(G\)</span> = grade given by user (1-4 scale)
 - <span class="arithmatex">\(w\)</span> = weight parameter learned from data
@@ -1869,9 +1869,9 @@ $$
 S = \text{interval where } P(\text{recall}) = 0.9
 $$</p>
 <p><strong>Memory Retrievability (R)</strong>:
-<span class="arithmatex">\(<span class="arithmatex">\(R(t) = e^{-\frac{t \ln(0.9)}{S}}\)</span>\)</span></p>
+$<span class="arithmatex">\(R(t) = e^{-\frac{t \ln(0.9)}{S}}\)</span>$</p>
 <p><strong>Item Difficulty (D)</strong>:
-<span class="arithmatex">\(<span class="arithmatex">\(D = \frac{S_{increase}}{S_{max}} \text{ (normalized to 0-1)}\)</span>\)</span></p>
+$<span class="arithmatex">\(D = \frac{S_{increase}}{S_{max}} \text{ (normalized to 0-1)}\)</span>$</p>
 <h3 id="stability-increase-function">Stability Increase Function</h3>
 <p>The heart of SM-17/18 is the stability increase function:</p>
 <div class="arithmatex">\[

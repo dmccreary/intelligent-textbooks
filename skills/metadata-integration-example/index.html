@@ -1771,12 +1771,12 @@
 <span class="sd">Generates interactive quizzes for textbook chapters</span>
 <span class="sd">"""</span>
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">"""Main entry point for quiz generator skill."""</span>
 
     <span class="c1"># Initialize metadata helper</span>
@@ -1829,7 +1829,7 @@
         <span class="k">raise</span>
 
 
-<span class="k">def</span> <span class="nf">generate_quizzes</span><span class="p">(</span><span class="n">metadata</span><span class="p">:</span> <span class="n">BookMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_quizzes</span><span class="p">(</span><span class="n">metadata</span><span class="p">:</span> <span class="n">BookMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Generate quizzes based on learning graph and chapter content.</span>
 
@@ -1905,7 +1905,7 @@
     <span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">generate_chapter_quiz</span><span class="p">(</span><span class="n">chapter</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">metadata</span><span class="p">:</span> <span class="n">BookMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_chapter_quiz</span><span class="p">(</span><span class="n">chapter</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">metadata</span><span class="p">:</span> <span class="n">BookMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Generate quiz for a specific chapter."""</span>
     <span class="c1"># Implementation would use Claude to generate questions</span>
     <span class="c1"># based on chapter content and learning objectives</span>
@@ -1915,7 +1915,7 @@
     <span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">validate_quizzes</span><span class="p">(</span><span class="n">quiz_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">question_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">blooms</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">validate_quizzes</span><span class="p">(</span><span class="n">quiz_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">question_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">blooms</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Validate quiz quality."""</span>
     <span class="n">issues</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -1943,7 +1943,7 @@
     <span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">calculate_quality_score</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_quality_score</span><span class="p">(</span>
     <span class="n">quiz_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">question_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">blooms</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
@@ -2139,7 +2139,7 @@ This skill generates interactive multiple-choice quizzes for each chapter of an 
 Before running this skill, execute the following Python code to verify prerequisites:
 
 <span class="sb">```python</span>
-<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
 <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
 <span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">'quiz_generator'</span><span class="p">)</span>
@@ -2351,10 +2351,10 @@ This skill is successful when:
 <span class="sd">Complete workflow example for running multiple skills in sequence</span>
 <span class="sd">"""</span>
 
-<span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
 
-<span class="k">def</span> <span class="nf">run_intelligent_textbook_workflow</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">run_intelligent_textbook_workflow</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">"""Run the complete textbook generation workflow."""</span>
 
     <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>

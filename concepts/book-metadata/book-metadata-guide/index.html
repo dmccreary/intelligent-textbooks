@@ -2812,7 +2812,7 @@
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
 <span class="c1"># Initialize</span>
 <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
@@ -3037,7 +3037,7 @@ SKILLS STATUS:
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">run_skill_with_checks</span><span class="p">(</span><span class="n">skill_name</span><span class="p">,</span> <span class="n">skill_function</span><span class="p">):</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">run_skill_with_checks</span><span class="p">(</span><span class="n">skill_name</span><span class="p">,</span> <span class="n">skill_function</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Wrapper to run skills with automatic dependency checking."""</span>
     <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
 
@@ -3158,7 +3158,7 @@ SKILLS STATUS:
 
 <span class="k">1.</span> <span class="gs">**Check Prerequisites**</span>
 <span class="sb">   ```python</span>
-   <span class="kn">from</span> <span class="nn">src.book_metadata_helper</span> <span class="kn">import</span> <span class="n">BookMetadata</span>
+   <span class="kn">from</span><span class="w"> </span><span class="nn">src.book_metadata_helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">BookMetadata</span>
 
    <span class="n">metadata</span> <span class="o">=</span> <span class="n">BookMetadata</span><span class="p">()</span>
    <span class="n">can_run</span><span class="p">,</span> <span class="n">reasons</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">can_skill_run</span><span class="p">(</span><span class="s1">'glossary_generator'</span><span class="p">)</span>
