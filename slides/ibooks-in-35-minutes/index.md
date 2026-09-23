@@ -6,9 +6,9 @@ Democratizing Education for Using Intelligent Textbooks<br/>
 
 - AI in Education Conference
 - St. Mary's University
-- September, 2026
+- September 23rd, 2026
 - Dan McCreary
-<img src="./qr-code.png" align="right"></img>
+<img src="./qr-code.png" width="300px" align="right"></img>
 
 ## My Original Inspiration
 
