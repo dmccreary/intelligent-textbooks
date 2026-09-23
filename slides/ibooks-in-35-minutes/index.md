@@ -8,6 +8,7 @@ Democratizing Education for Using Intelligent Textbooks<br/>
 - St. Mary's University
 - September, 2026
 - Dan McCreary
+- ![](./qr-code.png)
 
 ## The Inspiration
 
