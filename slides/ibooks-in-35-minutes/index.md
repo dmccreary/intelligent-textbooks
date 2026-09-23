@@ -8,9 +8,9 @@ Democratizing Education for Using Intelligent Textbooks<br/>
 - St. Mary's University
 - September, 2026
 - Dan McCreary
-- ![](./qr-code.png)
+<img src="./qr-code.png" align="right"></img>
 
-## The Inspiration
+## My Original Inspiration
 
 **Diamond Age:** Neal Stephenson's 1995 Cyberpunk Novel 
 
@@ -18,14 +18,14 @@ Democratizing Education for Using Intelligent Textbooks<br/>
 - Every lesson the girl needs is customized to her context
 
 <!--Image: Cover of Diamond Age book -->
-<img src="./diamond-age-cover.png" width="450px" align="left"></img>
+<img src="./diamond-age-cover.png" width="450px" align="left" width="300px"></img>
 <img src="../../img/cover.png" width="450px" align="right"></img>
 
 ## Dan's Quest
 
 - How would I build such a device?
 
-<img src="./dan-thinking-about-intelligent-textbooks-1995.png" height="500px"></img>
+<img src="./dan-thinking-about-intelligent-textbooks-1995.png" height="200px"></img>
 
 ## The Problem With Paper Textbooks
 
