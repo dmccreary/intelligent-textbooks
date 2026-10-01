@@ -6,6 +6,8 @@
 
 [TEXT: Intelligent Textbooks in 35 Minutes](./ibooks-in-35-minutes/)
 
+[PDF: Intelligent Textbooks in 35 Minutes](./ibooks-in-35-minutes/ibooks-in-35-minutes.pdf) - static snapshots only; use the SLIDES link to run the MicroSims
+
 ## 100 Intelligent Textbooks
 
 [100 Intelligent Textbooks Slides](slide-viewer.html?input=100th-textbook/index.md)
