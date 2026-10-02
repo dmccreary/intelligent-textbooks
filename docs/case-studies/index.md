@@ -490,6 +490,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-5" title="Initial Content (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ecology)
 
+- **[The Eight-Hour Entrepreneur](https://dmccreary.github.io/eight-hour-entrepreneur/)**
+
+    ![The Eight-Hour Entrepreneur](./img/eight-hour-entrepreneur.jpg)
+
+    An intelligent textbook for an intensive virtual learning lab that takes early-stage entrepreneurs from an unrefined idea to a validated, launch-ready venture in eight hours, built around the CO.STARTERS Canvas for adult professional-development cohorts.
+
+    300 Concepts · 17 Chapters · 20 MicroSims · 141K Words · 300 Glossary Terms · 92 FAQs · 300 Quiz Questions · 170 References
+    · <span class="completion completion-4" title="Nearly Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/eight-hour-entrepreneur)
+
 - **[English Language Arts](https://dmccreary.github.io/english-language-arts)**
 
     ![English Language Arts](./img/english-language-arts.jpg)
