@@ -1,17 +1,14 @@
 {
   "title": "Book Concept Count Histogram",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Building Intelligent Textbooks With AI",
   "description": "Interactive MicroSim for book concept count histogram",
   "date": "2026-05-03",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
+      "Undergraduate"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Computer Science",
     "topic": "Book Concept Count Histogram",
     "learningObjectives": [
       "TODO: Add learning objectives"
