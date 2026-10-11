@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 117 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 119 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -874,6 +874,16 @@ document.addEventListener('click', function(e) {
     8 MicroSims · 2 Stories · 53K Words
     · <span class="completion completion-2" title="Early Development (2/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mccreary-heritage)
+
+- **[Measuring GenAI ROI](https://Kschuman-aon.github.io/genai-roi/)**
+
+    ![Measuring GenAI ROI intelligent textbook](./img/genai-roi.jpg)
+
+    A practical intelligent textbook for IT professionals that teaches how to measure and communicate GenAI return on investment, from token economics and cost optimization to risk-adjusted financial analysis and executive reporting.
+
+    561 Concepts · 27 Chapters · 38 MicroSims · 218K Words · 561 Glossary Terms · 20 Quiz Questions · 20 References
+    · <span class="completion completion-4" title="In Progress (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/Kschuman-aon/genai-roi)
 
 - **[MicroSim Search](https://dmccreary.github.io/search-microsims/)**
 
