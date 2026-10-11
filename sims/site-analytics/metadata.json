@@ -1,17 +1,14 @@
 {
   "title": "Intelligent Textbook Page Views",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Building Intelligent Textbooks With AI",
   "description": "Interactive MicroSim for intelligent textbook page views",
   "date": "2026-06-18",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
+      "Undergraduate"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Computer Science",
     "topic": "Intelligent Textbook Page Views",
     "learningObjectives": [
       "TODO: Add learning objectives"
