@@ -2,6 +2,8 @@
 
 ## Our Mission
 
+Our primary mission is to democratize education for all children on earth.
+
 To democratize education through the creation, maintenance, and distribution of interactive, intelligent textbooks that adapt to learners' needs, leveraging open standards, generative AI, and interactive simulations to make high-quality education accessible to all.
 
 ## Our Vision
@@ -49,6 +51,10 @@ We believe that project-based learning and teaching students to work together ar
 ### 10. Storytelling as Pedagogy
 
 Great textbooks intertwine compelling storytelling with descriptive content. We believe in the power of narrative to make learning memorable and meaningful, and we incorporate relevant stories, case studies, and examples that bring educational content to life.
+
+### 11. You Can't Reuse What You Can't Find
+
+Reuse depends on discovery. We add high-quality metadata to every textbook, MicroSim, and other reusable asset, and we build tools for faceted search so people can quickly find exactly what they need. For example, our [Book Mascots](https://dmccreary.github.io/book-mascots/) collection lets teachers who can't afford to generate new mascot images find and reuse one that already exists.
 
 ## Our Approach
 
