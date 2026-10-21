@@ -2,7 +2,7 @@
 
 Betty's tracking list for intelligent textbook publishing tasks.
 (The project's own TODO.md is separate.)
-Last updated: 2026-10-15
+Last updated: 2026-10-18
 
 ## High Priority
 
@@ -10,7 +10,7 @@ _(none)_
 
 ## Medium Priority
 
-_(none)_
+- [ ] **Hardware purchasing guides** (new quality guideline, 2026-10-18). Every book that needs hardware ordered must have a high-quality purchasing guide. Hank owns writing them, and Betty checks each hardware book for one during quality reviews.
 
 ## Low Priority
 

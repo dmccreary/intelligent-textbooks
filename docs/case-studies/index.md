@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 119 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 121 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -162,6 +162,16 @@ document.addEventListener('click', function(e) {
     300 Concepts · 16 Chapters · 75 MicroSims · 193K Words · 55 Glossary Terms · 72 FAQs · 26 Quiz Questions
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/circuits)
+
+- **[AI for EE Research: From Researcher to Orchestrator](https://dmccreary.github.io/ai-for-ee-research/)**
+
+    ![AI for EE Research](./img/ai-for-ee-research.jpg)
+
+    A hands-on intelligent textbook for graduate students in electrical and computer engineering on using generative AI, agent skills, and teams of planning and execution agents for literature search, data analysis, coding, and manuscript preparation.
+
+    379 Concepts · 20 Chapters · 51 MicroSims · 290K Words · 379 Glossary Terms
+    · <span class="completion completion-4" title="Near Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/ai-for-ee-research)
 
 - **[AI Persona Testing](https://dmccreary.github.io/ai-persona-testing/)**
 
@@ -988,6 +998,16 @@ document.addEventListener('click', function(e) {
     200 Concepts · 15 Chapters · 1 MicroSim · 63K Words
     · <span class="completion completion-3" title="Active Development (3/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mini-mba-for-startups)
+
+- **[Open Study Buddy](https://dmccreary.github.io/open-study-buddy/)**
+
+    ![Open Study Buddy](./img/open-study-buddy.jpg)
+
+    An interactive intelligent textbook for high school students who build a low-cost, fully open personal AI agent device: a Raspberry Pi Pico 2 W with a round color display, I2S microphone and speaker, wake word detection, and a school-configured agent, all programmed in MicroPython.
+
+    326 Concepts · 18 Chapters · 46 MicroSims · 247K Words · 326 Glossary Terms
+    · <span class="completion completion-4" title="Near Complete (4/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/open-study-buddy)
 
 - **[Personal Finance](https://dmccreary.github.io/personal-finance/)**
 
