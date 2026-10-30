@@ -1295,6 +1295,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-5" title="Complete (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/us-government)
 
+- **[World History: Modern](https://dmccreary.github.io/world-history/)**
+
+    ![World History: Modern](./img/world-history.jpg)
+
+    An interactive intelligent textbook for AP World History: Modern, covering c. 1200 CE to the present. Aligned with the College Board AP framework, with course notes and a detailed course description.
+
+    2K Words
+    · <span class="completion completion-1" title="Early Development (1/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/world-history)
+
 - **[xAPI for Intelligent Textbooks](https://dmccreary.github.io/xapi-course/)**
 
     ![xAPI for Intelligent Textbooks](./img/xapi-course.jpg)
