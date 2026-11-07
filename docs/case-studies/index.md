@@ -606,6 +606,16 @@ document.addEventListener('click', function(e) {
     · <span class="completion completion-5" title="Early Development (5/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/genetics)
 
+- **[Good Enough Engineering](https://arunbatchu.github.io/good-enough-engineering/)**
+
+    ![Good Enough Engineering](./img/good-enough-engineering.jpg)
+
+    An intelligent textbook for builders who ship apps with AI coding agents but have no engineering training. Following one dating-safety app and Sawyer the Beaver's question "Gate or wall?", it shows which parts of an app must be built right the first time and which only need to be good enough for now.
+
+    393 Concepts · 18 Chapters · 57 MicroSims · 308K Words · 394 Glossary Terms · 105 FAQs · 180 Quiz Questions · 183 References
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/arunbatchu/good-enough-engineering)
+
 - **[Graph Algorithms with AI](https://dmccreary.github.io/graph-algorithms)**
 
     ![Graph Algorithms](./img/graph-algorithms.webp)
