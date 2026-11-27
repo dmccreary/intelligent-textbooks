@@ -8,7 +8,7 @@ hide:
 ---
 # Case Studies in Building Intelligent Textbooks
 
-This document provides 121 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
+This document provides 124 samples of some of the intelligent textbooks that have been created with our workflows.  This list is changing every day, so please check back
 frequently.
 
 <!-- This is inline CSS for the completion status icons at the end of each case study -->
@@ -904,6 +904,16 @@ document.addEventListener('click', function(e) {
     561 Concepts · 27 Chapters · 38 MicroSims · 218K Words · 561 Glossary Terms · 20 Quiz Questions · 20 References
     · <span class="completion completion-4" title="In Progress (4/5)"></span>
     · [:octicons-mark-github-16: Repository](https://github.com/Kschuman-aon/genai-roi)
+
+- **[Mediterranean Travels](https://dmccreary.github.io/mediterranean-travels/)**
+
+    ![Mediterranean Travels](./img/mediterranean-travels.jpg)
+
+    A day-by-day travel guide for a thirteen-day journey from Istanbul to Athens, with one chapter per day covering the history, culture, cuisine, and people of each place along the way.
+
+    598 Concepts · 21 Chapters · 68 MicroSims · 22 Stories · 704K Words · 666 Glossary Terms · 94 FAQs
+    · <span class="completion completion-5" title="Complete (5/5)"></span>
+    · [:octicons-mark-github-16: Repository](https://github.com/dmccreary/mediterranean-travels)
 
 - **[MicroSim Search](https://dmccreary.github.io/search-microsims/)**
 
